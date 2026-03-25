@@ -1,0 +1,14 @@
+/home/assistant/projects/archlint-repo/archlint-rs/target/release/deps/serde-f21d8e34b54930c4.d: /home/assistant/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/lib.rs /home/assistant/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/integer128.rs /home/assistant/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/mod.rs /home/assistant/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/de.rs /home/assistant/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/ser.rs /home/assistant/projects/archlint-repo/archlint-rs/target/release/build/serde-a463afe2f9a121c6/out/private.rs
+
+/home/assistant/projects/archlint-repo/archlint-rs/target/release/deps/libserde-f21d8e34b54930c4.rlib: /home/assistant/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/lib.rs /home/assistant/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/integer128.rs /home/assistant/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/mod.rs /home/assistant/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/de.rs /home/assistant/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/ser.rs /home/assistant/projects/archlint-repo/archlint-rs/target/release/build/serde-a463afe2f9a121c6/out/private.rs
+
+/home/assistant/projects/archlint-repo/archlint-rs/target/release/deps/libserde-f21d8e34b54930c4.rmeta: /home/assistant/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/lib.rs /home/assistant/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/integer128.rs /home/assistant/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/mod.rs /home/assistant/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/de.rs /home/assistant/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/ser.rs /home/assistant/projects/archlint-repo/archlint-rs/target/release/build/serde-a463afe2f9a121c6/out/private.rs
+
+/home/assistant/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/lib.rs:
+/home/assistant/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/integer128.rs:
+/home/assistant/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/mod.rs:
+/home/assistant/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/de.rs:
+/home/assistant/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/ser.rs:
+/home/assistant/projects/archlint-repo/archlint-rs/target/release/build/serde-a463afe2f9a121c6/out/private.rs:
+
+# env-dep:OUT_DIR=/home/assistant/projects/archlint-repo/archlint-rs/target/release/build/serde-a463afe2f9a121c6/out
