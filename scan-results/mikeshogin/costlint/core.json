@@ -1,0 +1,215 @@
+{
+  "status": "WARNING",
+  "summary": {
+    "total_checks": 11,
+    "passed": 10,
+    "failed": 0,
+    "warnings": 1,
+    "info": 0,
+    "skipped": 0,
+    "errors": 0
+  },
+  "graph": {
+    "nodes": 24,
+    "edges": 17
+  },
+  "checks": [
+    {
+      "name": "dag_check",
+      "description": "Граф должен быть ациклическим (без циклических зависимостей)",
+      "status": "PASSED",
+      "cycles": [],
+      "cycles_count": 0
+    },
+    {
+      "name": "max_fan_out",
+      "description": "Компонент не должен зависеть от более чем 10 других",
+      "status": "PASSED",
+      "threshold": 10,
+      "violations": [],
+      "violations_count": 0
+    },
+    {
+      "name": "coupling",
+      "description": "Ca <= 10, Ce <= 10",
+      "status": "PASSED",
+      "ca_threshold": 10,
+      "ce_threshold": 10,
+      "violations": [],
+      "violations_count": 0
+    },
+    {
+      "name": "instability",
+      "description": "Зависимости должны идти от нестабильных к стабильным",
+      "status": "PASSED",
+      "most_unstable": [
+        {
+          "node": "cmd::costlint::main",
+          "instability": 1.0,
+          "ca": 0,
+          "ce": 10
+        },
+        {
+          "node": "pkg::predict::predict",
+          "instability": 1.0,
+          "ca": 0,
+          "ce": 2
+        },
+        {
+          "node": "pkg::reporter::reporter",
+          "instability": 1.0,
+          "ca": 0,
+          "ce": 1
+        },
+        {
+          "node": "pkg::daily::daily",
+          "instability": 1.0,
+          "ca": 0,
+          "ce": 1
+        },
+        {
+          "node": "pkg::ab::ab",
+          "instability": 1.0,
+          "ca": 0,
+          "ce": 1
+        }
+      ],
+      "most_stable": [
+        {
+          "node": "pkg/feature",
+          "instability": 0.0,
+          "ca": 1,
+          "ce": 0
+        },
+        {
+          "node": "pkg/perf",
+          "instability": 0.0,
+          "ca": 1,
+          "ce": 0
+        },
+        {
+          "node": "pkg/pricing",
+          "instability": 0.0,
+          "ca": 6,
+          "ce": 0
+        },
+        {
+          "node": "pkg/reporter",
+          "instability": 0.0,
+          "ca": 1,
+          "ce": 0
+        },
+        {
+          "node": "pkg/telemetry",
+          "instability": 0.0,
+          "ca": 2,
+          "ce": 0
+        }
+      ],
+      "violations": [],
+      "violations_count": 0
+    },
+    {
+      "name": "layer_violations",
+      "description": "Зависимости должны идти только вниз по слоям",
+      "status": "PASSED",
+      "layers": {
+        "cmd": 0,
+        "api": 1,
+        "handler": 1,
+        "controller": 1,
+        "service": 2,
+        "usecase": 2,
+        "internal": 2,
+        "domain": 3,
+        "entity": 3,
+        "model": 3,
+        "repository": 4,
+        "storage": 4,
+        "infrastructure": 5,
+        "pkg": 6
+      },
+      "violations": [],
+      "violations_count": 0
+    },
+    {
+      "name": "forbidden_dependencies",
+      "description": "Проверка запрещенных зависимостей",
+      "status": "PASSED",
+      "rules": [
+        {
+          "from": "handler",
+          "to": "repository"
+        },
+        {
+          "from": "controller",
+          "to": "repository"
+        },
+        {
+          "from": "api",
+          "to": "storage"
+        },
+        {
+          "from": "model",
+          "to": "service"
+        },
+        {
+          "from": "entity",
+          "to": "repository"
+        }
+      ],
+      "violations": [],
+      "violations_count": 0
+    },
+    {
+      "name": "hub_nodes",
+      "description": "Компоненты с > 10 связей (потенциальные God Objects)",
+      "status": "PASSED",
+      "threshold": 10,
+      "hubs": [],
+      "hubs_count": 0
+    },
+    {
+      "name": "orphan_nodes",
+      "description": "Компоненты без связей (возможно мертвый код)",
+      "status": "WARNING",
+      "orphans": [
+        "pkg::pricing::pricing",
+        "pkg::pricing::subscription",
+        "pkg::counter::counter",
+        "pkg::counter::tiktoken",
+        "pkg::cache::cache",
+        "pkg::perf::perf",
+        "pkg::telemetry::telemetry"
+      ],
+      "orphans_count": 7
+    },
+    {
+      "name": "strongly_connected_components",
+      "description": "Группы с взаимными зависимостями (размер > 1)",
+      "status": "PASSED",
+      "total_sccs": 24,
+      "problematic_sccs": [],
+      "problematic_count": 0
+    },
+    {
+      "name": "graph_depth",
+      "description": "Глубина графа должна быть <= 10",
+      "status": "PASSED",
+      "depth": 1,
+      "max_depth": 10,
+      "longest_path": [
+        "cmd::costlint::main",
+        "pkg/ab"
+      ]
+    },
+    {
+      "name": "component_distance",
+      "description": "Расстояние между компонентами должно быть <= 5",
+      "status": "PASSED",
+      "max_distance": 5,
+      "long_paths": [],
+      "long_paths_count": 0
+    }
+  ]
+}
