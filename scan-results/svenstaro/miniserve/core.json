@@ -70,31 +70,31 @@
       "status": "PASSED",
       "most_unstable": [
         {
+          "node": "src::main",
+          "instability": 1.0,
+          "ca": 0,
+          "ce": 17
+        },
+        {
+          "node": "tests::bind",
+          "instability": 1.0,
+          "ca": 0,
+          "ce": 2
+        },
+        {
           "node": "tests::tls",
           "instability": 1.0,
           "ca": 0,
           "ce": 2
         },
         {
-          "node": "tests::header",
+          "node": "tests::auth",
           "instability": 1.0,
           "ca": 0,
           "ce": 2
         },
         {
-          "node": "tests::qrcode",
-          "instability": 1.0,
-          "ca": 0,
-          "ce": 3
-        },
-        {
-          "node": "tests::api",
-          "instability": 1.0,
-          "ca": 0,
-          "ce": 2
-        },
-        {
-          "node": "tests::webdav",
+          "node": "tests::upload_files",
           "instability": 1.0,
           "ca": 0,
           "ce": 2
@@ -102,31 +102,31 @@
       ],
       "most_stable": [
         {
-          "node": "tests",
-          "instability": 0.0,
-          "ca": 4,
-          "ce": 0
-        },
-        {
-          "node": "src::percent_encode_sets",
+          "node": "renderer",
           "instability": 0.0,
           "ca": 1,
           "ce": 0
         },
         {
-          "node": "percent_encode_sets",
+          "node": "webdav_fs",
           "instability": 0.0,
           "ca": 1,
           "ce": 0
         },
         {
-          "node": "RequiredAuthPassword",
+          "node": "fixtures",
           "instability": 0.0,
-          "ca": 2,
+          "ca": 18,
           "ce": 0
         },
         {
-          "node": "AuthParseError",
+          "node": "utils",
+          "instability": 0.0,
+          "ca": 1,
+          "ce": 0
+        },
+        {
+          "node": "fake_tty",
           "instability": 0.0,
           "ca": 1,
           "ce": 0

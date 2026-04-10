@@ -54,62 +54,6 @@
       "status": "PASSED",
       "packages": [
         {
-          "package": "stdlog",
-          "abstractness": 0.0,
-          "instability": 0.5,
-          "distance": 0.5,
-          "nodes_count": 1
-        },
-        {
-          "package": "context",
-          "abstractness": 0.0,
-          "instability": 0.5,
-          "distance": 0.5,
-          "nodes_count": 1
-        },
-        {
-          "package": "logger_121",
-          "abstractness": 0.0,
-          "instability": 0.5,
-          "distance": 0.5,
-          "nodes_count": 1
-        },
-        {
-          "package": "json_test",
-          "abstractness": 0.0,
-          "instability": 0.5,
-          "distance": 0.5,
-          "nodes_count": 1
-        },
-        {
-          "package": "level_test",
-          "abstractness": 0.0,
-          "instability": 0.5,
-          "distance": 0.5,
-          "nodes_count": 1
-        },
-        {
-          "package": "logger_no121",
-          "abstractness": 0.0,
-          "instability": 0.5,
-          "distance": 0.5,
-          "nodes_count": 1
-        },
-        {
-          "package": "options",
-          "abstractness": 0.0,
-          "instability": 0.5,
-          "distance": 0.5,
-          "nodes_count": 1
-        },
-        {
-          "package": "text",
-          "abstractness": 0.0,
-          "instability": 0.5,
-          "distance": 0.5,
-          "nodes_count": 1
-        },
-        {
           "package": "stdlog_test",
           "abstractness": 0.0,
           "instability": 0.5,
@@ -117,7 +61,63 @@
           "nodes_count": 1
         },
         {
-          "package": "pkg",
+          "package": "json",
+          "abstractness": 0.0,
+          "instability": 0.5,
+          "distance": 0.5,
+          "nodes_count": 1
+        },
+        {
+          "package": "context_test",
+          "abstractness": 0.0,
+          "instability": 0.5,
+          "distance": 0.5,
+          "nodes_count": 1
+        },
+        {
+          "package": "stdlog",
+          "abstractness": 0.0,
+          "instability": 0.5,
+          "distance": 0.5,
+          "nodes_count": 1
+        },
+        {
+          "package": "examples::error::error",
+          "abstractness": 0.0,
+          "instability": 0.5,
+          "distance": 0.5,
+          "nodes_count": 1
+        },
+        {
+          "package": "examples::temperature::temperature",
+          "abstractness": 0.0,
+          "instability": 0.5,
+          "distance": 0.5,
+          "nodes_count": 1
+        },
+        {
+          "package": "examples::batch2::batch2",
+          "abstractness": 0.0,
+          "instability": 0.5,
+          "distance": 0.5,
+          "nodes_count": 1
+        },
+        {
+          "package": "examples::chocolate-chips::chocolate-chips",
+          "abstractness": 0.0,
+          "instability": 0.5,
+          "distance": 0.5,
+          "nodes_count": 1
+        },
+        {
+          "package": "examples::format::format",
+          "abstractness": 0.0,
+          "instability": 0.5,
+          "distance": 0.5,
+          "nodes_count": 1
+        },
+        {
+          "package": "examples::styles::styles",
           "abstractness": 0.0,
           "instability": 0.5,
           "distance": 0.5,
@@ -183,43 +183,43 @@
       "central_nodes": [],
       "peripheral_nodes": [
         {
-          "node": "stdlog",
-          "closeness": 0.0
-        },
-        {
-          "node": "context",
-          "closeness": 0.0
-        },
-        {
-          "node": "logger_121",
-          "closeness": 0.0
-        },
-        {
-          "node": "json_test",
-          "closeness": 0.0
-        },
-        {
-          "node": "level_test",
-          "closeness": 0.0
-        },
-        {
-          "node": "logger_no121",
-          "closeness": 0.0
-        },
-        {
-          "node": "options",
-          "closeness": 0.0
-        },
-        {
-          "node": "text",
-          "closeness": 0.0
-        },
-        {
           "node": "stdlog_test",
           "closeness": 0.0
         },
         {
-          "node": "pkg",
+          "node": "json",
+          "closeness": 0.0
+        },
+        {
+          "node": "context_test",
+          "closeness": 0.0
+        },
+        {
+          "node": "stdlog",
+          "closeness": 0.0
+        },
+        {
+          "node": "examples::error::error",
+          "closeness": 0.0
+        },
+        {
+          "node": "examples::temperature::temperature",
+          "closeness": 0.0
+        },
+        {
+          "node": "examples::batch2::batch2",
+          "closeness": 0.0
+        },
+        {
+          "node": "examples::chocolate-chips::chocolate-chips",
+          "closeness": 0.0
+        },
+        {
+          "node": "examples::format::format",
+          "closeness": 0.0
+        },
+        {
+          "node": "examples::styles::styles",
           "closeness": 0.0
         }
       ],
@@ -234,23 +234,23 @@
       "influential_count": 0,
       "top_5": [
         {
+          "node": "stdlog_test",
+          "eigenvector": 0.164
+        },
+        {
+          "node": "json",
+          "eigenvector": 0.164
+        },
+        {
+          "node": "context_test",
+          "eigenvector": 0.164
+        },
+        {
           "node": "stdlog",
           "eigenvector": 0.164
         },
         {
-          "node": "context",
-          "eigenvector": 0.164
-        },
-        {
-          "node": "logger_121",
-          "eigenvector": 0.164
-        },
-        {
-          "node": "json_test",
-          "eigenvector": 0.164
-        },
-        {
-          "node": "level_test",
+          "node": "examples::error::error",
           "eigenvector": 0.164
         }
       ]
@@ -340,23 +340,23 @@
       "max_impact": 0,
       "top_impact": [
         {
+          "node": "stdlog_test",
+          "impact": 0
+        },
+        {
+          "node": "json",
+          "impact": 0
+        },
+        {
+          "node": "context_test",
+          "impact": 0
+        },
+        {
           "node": "stdlog",
           "impact": 0
         },
         {
-          "node": "context",
-          "impact": 0
-        },
-        {
-          "node": "logger_121",
-          "impact": 0
-        },
-        {
-          "node": "json_test",
-          "impact": 0
-        },
-        {
-          "node": "level_test",
+          "node": "examples::error::error",
           "impact": 0
         }
       ],

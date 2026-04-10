@@ -79,7 +79,7 @@
           "issue": "Зона боли: конкретный и стабильный"
         },
         {
-          "package": "auth_message_signature",
+          "package": "RequestItem",
           "abstractness": 0.0,
           "instability": 0.0,
           "distance": 1.0,
@@ -88,7 +88,43 @@
           "issue": "Зона боли: конкретный и стабильный"
         },
         {
-          "package": "compress_request_body",
+          "package": "auth",
+          "abstractness": 0.0,
+          "instability": 0.0,
+          "distance": 1.0,
+          "nodes_count": 1,
+          "zone": "pain",
+          "issue": "Зона боли: конкретный и стабильный"
+        },
+        {
+          "package": "buffer",
+          "abstractness": 0.0,
+          "instability": 0.0,
+          "distance": 1.0,
+          "nodes_count": 1,
+          "zone": "pain",
+          "issue": "Зона боли: конкретный и стабильный"
+        },
+        {
+          "package": "cli",
+          "abstractness": 0.0,
+          "instability": 0.0,
+          "distance": 1.0,
+          "nodes_count": 1,
+          "zone": "pain",
+          "issue": "Зона боли: конкретный и стабильный"
+        },
+        {
+          "package": "content_disposition",
+          "abstractness": 0.0,
+          "instability": 0.0,
+          "distance": 1.0,
+          "nodes_count": 1,
+          "zone": "pain",
+          "issue": "Зона боли: конкретный и стабильный"
+        },
+        {
+          "package": "decoder",
           "abstractness": 0.0,
           "instability": 0.0,
           "distance": 1.0,
@@ -106,43 +142,7 @@
           "issue": "Зона боли: конкретный и стабильный"
         },
         {
-          "package": "logging",
-          "abstractness": 0.0,
-          "instability": 0.0,
-          "distance": 1.0,
-          "nodes_count": 1,
-          "zone": "pain",
-          "issue": "Зона боли: конкретный и стабильный"
-        },
-        {
-          "package": "unix_socket",
-          "abstractness": 0.0,
-          "instability": 0.0,
-          "distance": 1.0,
-          "nodes_count": 1,
-          "zone": "pain",
-          "issue": "Зона боли: конкретный и стабильный"
-        },
-        {
-          "package": "xml",
-          "abstractness": 0.0,
-          "instability": 0.0,
-          "distance": 1.0,
-          "nodes_count": 1,
-          "zone": "pain",
-          "issue": "Зона боли: конкретный и стабильный"
-        },
-        {
-          "package": "cases",
-          "abstractness": 0.0,
-          "instability": 0.0,
-          "distance": 1.0,
-          "nodes_count": 1,
-          "zone": "pain",
-          "issue": "Зона боли: конкретный и стабильный"
-        },
-        {
-          "package": "server",
+          "package": "formatting",
           "abstractness": 0.0,
           "instability": 0.0,
           "distance": 1.0,
@@ -171,13 +171,6 @@
           "issue": "Зона боли: конкретный и стабильный"
         },
         {
-          "package": "src::cli",
-          "abstractness": 0.0,
-          "instability": 0.455,
-          "distance": 0.545,
-          "nodes_count": 1
-        },
-        {
           "package": "src::middleware",
           "abstractness": 0.0,
           "instability": 0.0,
@@ -187,7 +180,14 @@
           "issue": "Зона боли: конкретный и стабильный"
         },
         {
-          "package": "auth_message_signature",
+          "package": "src::cli",
+          "abstractness": 0.0,
+          "instability": 0.455,
+          "distance": 0.545,
+          "nodes_count": 1
+        },
+        {
+          "package": "RequestItem",
           "abstractness": 0.0,
           "instability": 0.0,
           "distance": 1.0,
@@ -206,6 +206,18 @@
       "threshold": 0.1,
       "low_clustering_nodes": [
         {
+          "node": "src::main",
+          "coefficient": 0.028
+        },
+        {
+          "node": "src::formatting::palette",
+          "coefficient": 0.0
+        },
+        {
+          "node": "src::formatting",
+          "coefficient": 0.0
+        },
+        {
           "node": "tests::cases",
           "coefficient": 0.0
         },
@@ -214,23 +226,11 @@
           "coefficient": 0.0
         },
         {
-          "node": "src::main",
-          "coefficient": 0.028
-        },
-        {
-          "node": "src::formatting",
-          "coefficient": 0.0
-        },
-        {
-          "node": "src::formatting::palette",
+          "node": "download",
           "coefficient": 0.0
         },
         {
           "node": "tests::prelude",
-          "coefficient": 0.0
-        },
-        {
-          "node": "download",
           "coefficient": 0.0
         }
       ],
@@ -250,18 +250,18 @@
       "description": "Критические узлы (удаление разбивает граф)",
       "status": "WARNING",
       "articulation_points": [
-        "tests::prelude",
         "src::main",
-        "src::nested_json",
-        "tests",
-        "src::formatting",
-        "src::formatting::palette",
-        "src::printer",
-        "src::request_items",
-        "src::buffer",
-        "src::cli",
-        "download",
         "tests::cases",
+        "download",
+        "src::buffer",
+        "src::formatting::palette",
+        "src::formatting",
+        "src::printer",
+        "src::cli",
+        "src::nested_json",
+        "src::request_items",
+        "tests",
+        "tests::prelude",
         "tests::cli"
       ],
       "count": 13,
@@ -273,60 +273,16 @@
       "status": "INFO",
       "bridges": [
         {
-          "from": "tests::cases::download",
-          "to": "tests::prelude"
+          "from": "src::redacted",
+          "to": "src::cli"
         },
         {
-          "from": "tests::cases::xml",
-          "to": "tests::prelude"
+          "from": "src::request_items",
+          "to": "RequestItem"
         },
         {
-          "from": "tests::cases",
-          "to": "auth_message_signature"
-        },
-        {
-          "from": "tests::cases",
-          "to": "compress_request_body"
-        },
-        {
-          "from": "tests::cases",
-          "to": "download"
-        },
-        {
-          "from": "tests::cases",
-          "to": "logging"
-        },
-        {
-          "from": "tests::cases",
-          "to": "unix_socket"
-        },
-        {
-          "from": "tests::cases",
-          "to": "xml"
-        },
-        {
-          "from": "tests::cases::compress_request_body",
-          "to": "tests::prelude"
-        },
-        {
-          "from": "tests::cases::unix_socket",
-          "to": "tests::prelude"
-        },
-        {
-          "from": "tests::cases::logging",
-          "to": "tests::prelude"
-        },
-        {
-          "from": "tests::cli",
-          "to": "cases"
-        },
-        {
-          "from": "tests::cli",
-          "to": "server"
-        },
-        {
-          "from": "tests::cli",
-          "to": "prelude"
+          "from": "src::message_signature",
+          "to": "tests"
         },
         {
           "from": "src::main",
@@ -351,6 +307,50 @@
         {
           "from": "src::main",
           "to": "download"
+        },
+        {
+          "from": "src::main",
+          "to": "error_reporting"
+        },
+        {
+          "from": "src::main",
+          "to": "formatting"
+        },
+        {
+          "from": "src::main",
+          "to": "generation"
+        },
+        {
+          "from": "src::main",
+          "to": "message_signature"
+        },
+        {
+          "from": "src::main",
+          "to": "middleware"
+        },
+        {
+          "from": "src::main",
+          "to": "nested_json"
+        },
+        {
+          "from": "src::main",
+          "to": "netrc"
+        },
+        {
+          "from": "src::main",
+          "to": "printer"
+        },
+        {
+          "from": "src::main",
+          "to": "redacted"
+        },
+        {
+          "from": "src::main",
+          "to": "redirect"
+        },
+        {
+          "from": "src::main",
+          "to": "request_items"
         }
       ],
       "count": 47
@@ -483,10 +483,10 @@
       "large_cliques": [
         [
           "src::to_curl",
-          "src::cli",
           "src::request_items",
-          "src::utils",
-          "tests"
+          "tests",
+          "src::cli",
+          "src::utils"
         ]
       ],
       "large_cliques_count": 1,

@@ -29,11 +29,11 @@
       "threshold": 0.1,
       "critical_components": [
         {
-          "node": "color",
+          "node": "color_windows",
           "pagerank": 0.25
         },
         {
-          "node": "color_windows",
+          "node": "doc",
           "pagerank": 0.25
         },
         {
@@ -41,7 +41,7 @@
           "pagerank": 0.25
         },
         {
-          "node": "doc",
+          "node": "color",
           "pagerank": 0.25
         }
       ],
@@ -71,14 +71,14 @@
       "status": "PASSED",
       "packages": [
         {
-          "package": "color",
+          "package": "color_windows",
           "abstractness": 0.0,
           "instability": 0.5,
           "distance": 0.5,
           "nodes_count": 1
         },
         {
-          "package": "color_windows",
+          "package": "doc",
           "abstractness": 0.0,
           "instability": 0.5,
           "distance": 0.5,
@@ -92,7 +92,7 @@
           "nodes_count": 1
         },
         {
-          "package": "doc",
+          "package": "color",
           "abstractness": 0.0,
           "instability": 0.5,
           "distance": 0.5,
@@ -158,11 +158,11 @@
       "central_nodes": [],
       "peripheral_nodes": [
         {
-          "node": "color",
+          "node": "color_windows",
           "closeness": 0.0
         },
         {
-          "node": "color_windows",
+          "node": "doc",
           "closeness": 0.0
         },
         {
@@ -170,7 +170,7 @@
           "closeness": 0.0
         },
         {
-          "node": "doc",
+          "node": "color",
           "closeness": 0.0
         }
       ],
@@ -183,11 +183,11 @@
       "threshold": 0.3,
       "influential_nodes": [
         {
-          "node": "color",
+          "node": "color_windows",
           "eigenvector": 0.5
         },
         {
-          "node": "color_windows",
+          "node": "doc",
           "eigenvector": 0.5
         },
         {
@@ -195,18 +195,18 @@
           "eigenvector": 0.5
         },
         {
-          "node": "doc",
+          "node": "color",
           "eigenvector": 0.5
         }
       ],
       "influential_count": 4,
       "top_5": [
         {
-          "node": "color",
+          "node": "color_windows",
           "eigenvector": 0.5
         },
         {
-          "node": "color_windows",
+          "node": "doc",
           "eigenvector": 0.5
         },
         {
@@ -214,7 +214,7 @@
           "eigenvector": 0.5
         },
         {
-          "node": "doc",
+          "node": "color",
           "eigenvector": 0.5
         }
       ]
@@ -304,11 +304,11 @@
       "max_impact": 0,
       "top_impact": [
         {
-          "node": "color",
+          "node": "color_windows",
           "impact": 0
         },
         {
-          "node": "color_windows",
+          "node": "doc",
           "impact": 0
         },
         {
@@ -316,7 +316,7 @@
           "impact": 0
         },
         {
-          "node": "doc",
+          "node": "color",
           "impact": 0
         }
       ],

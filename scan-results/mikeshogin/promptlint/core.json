@@ -44,10 +44,10 @@
       "status": "PASSED",
       "most_unstable": [
         {
-          "node": "cmd::promptlint::main",
+          "node": "pkg::server::server",
           "instability": 1.0,
           "ca": 0,
-          "ce": 9
+          "ce": 3
         },
         {
           "node": "pkg::analyzer::analyzer",
@@ -56,10 +56,10 @@
           "ce": 3
         },
         {
-          "node": "pkg::router::router",
+          "node": "pkg::perf::perf",
           "instability": 1.0,
           "ca": 0,
-          "ce": 2
+          "ce": 4
         },
         {
           "node": "pkg::abtest::abtest",
@@ -68,13 +68,31 @@
           "ce": 2
         },
         {
-          "node": "pkg::perf::perf",
+          "node": "pkg::middleware::middleware",
           "instability": 1.0,
           "ca": 0,
-          "ce": 4
+          "ce": 1
         }
       ],
       "most_stable": [
+        {
+          "node": "pkg/abtest",
+          "instability": 0.0,
+          "ca": 1,
+          "ce": 0
+        },
+        {
+          "node": "pkg/perf",
+          "instability": 0.0,
+          "ca": 1,
+          "ce": 0
+        },
+        {
+          "node": "pkg/server",
+          "instability": 0.0,
+          "ca": 1,
+          "ce": 0
+        },
         {
           "node": "pkg/template",
           "instability": 0.0,
@@ -83,24 +101,6 @@
         },
         {
           "node": "pkg/trend",
-          "instability": 0.0,
-          "ca": 1,
-          "ce": 0
-        },
-        {
-          "node": "pkg/validator",
-          "instability": 0.0,
-          "ca": 3,
-          "ce": 0
-        },
-        {
-          "node": "pkg/metrics",
-          "instability": 0.0,
-          "ca": 3,
-          "ce": 0
-        },
-        {
-          "node": "pkg/score",
           "instability": 0.0,
           "ca": 1,
           "ce": 0
@@ -174,16 +174,16 @@
       "description": "Компоненты без связей (возможно мертвый код)",
       "status": "WARNING",
       "orphans": [
-        "pkg::metrics::nlp",
-        "pkg::metrics::basic",
-        "pkg::metrics::domain",
-        "pkg::analyzer::analyzer_test",
-        "pkg::config::config",
-        "pkg::validator::validator",
         "pkg::trend::trend",
         "pkg::trend::trend_test",
+        "pkg::validator::validator",
+        "pkg::analyzer::analyzer_test",
         "pkg::template::template",
-        "pkg::template::template_test"
+        "pkg::template::template_test",
+        "pkg::config::config",
+        "pkg::metrics::basic",
+        "pkg::metrics::domain",
+        "pkg::metrics::nlp"
       ],
       "orphans_count": 10
     },
@@ -202,8 +202,8 @@
       "depth": 1,
       "max_depth": 10,
       "longest_path": [
-        "cmd::promptlint::main",
-        "pkg/abtest"
+        "pkg::analyzer::analyzer",
+        "pkg/score"
       ]
     },
     {

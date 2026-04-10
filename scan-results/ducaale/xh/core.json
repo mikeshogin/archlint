@@ -48,16 +48,16 @@
       "ce_threshold": 10,
       "violations": [
         {
-          "node": "src::main",
-          "afferent_coupling": 0,
-          "efferent_coupling": 30,
+          "node": "src::utils",
+          "afferent_coupling": 13,
+          "efferent_coupling": 1,
           "ca_threshold": 10,
           "ce_threshold": 10
         },
         {
-          "node": "src::utils",
-          "afferent_coupling": 13,
-          "efferent_coupling": 1,
+          "node": "src::main",
+          "afferent_coupling": 0,
+          "efferent_coupling": 30,
           "ca_threshold": 10,
           "ce_threshold": 10
         }
@@ -70,31 +70,31 @@
       "status": "ERROR",
       "most_unstable": [
         {
-          "node": "tests::cases::download",
+          "node": "src::message_signature",
           "instability": 1.0,
           "ca": 0,
           "ce": 1
         },
         {
-          "node": "tests::cases::xml",
+          "node": "src::main",
           "instability": 1.0,
           "ca": 0,
-          "ce": 1
+          "ce": 30
         },
         {
-          "node": "tests::cases",
+          "node": "src::to_curl",
           "instability": 1.0,
           "ca": 0,
-          "ce": 6
+          "ce": 4
         },
         {
-          "node": "tests::cases::compress_request_body",
+          "node": "src::redirect",
           "instability": 1.0,
           "ca": 0,
-          "ce": 1
+          "ce": 4
         },
         {
-          "node": "tests::cases::unix_socket",
+          "node": "src::generation",
           "instability": 1.0,
           "ca": 0,
           "ce": 1
@@ -102,31 +102,31 @@
       ],
       "most_stable": [
         {
-          "node": "Token",
+          "node": "unix_socket",
           "instability": 0.0,
           "ca": 1,
           "ce": 0
         },
         {
-          "node": "RequestItem",
+          "node": "xml",
           "instability": 0.0,
           "ca": 1,
           "ce": 0
         },
         {
-          "node": "headers",
+          "node": "cases",
           "instability": 0.0,
           "ca": 1,
           "ce": 0
         },
         {
-          "node": "palette",
+          "node": "server",
           "instability": 0.0,
           "ca": 1,
           "ce": 0
         },
         {
-          "node": "util",
+          "node": "prelude",
           "instability": 0.0,
           "ca": 1,
           "ce": 0
@@ -234,10 +234,10 @@
       "description": "Компоненты без связей (возможно мертвый код)",
       "status": "WARNING",
       "orphans": [
+        "src::error_reporting",
         "build",
-        "tests::cases::auth_message_signature",
         "tests::server",
-        "src::error_reporting"
+        "tests::cases::auth_message_signature"
       ],
       "orphans_count": 4
     },

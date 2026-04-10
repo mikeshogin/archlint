@@ -48,9 +48,16 @@
       "ce_threshold": 10,
       "violations": [
         {
-          "node": "src::infra",
-          "afferent_coupling": 16,
-          "efferent_coupling": 6,
+          "node": "src::config",
+          "afferent_coupling": 14,
+          "efferent_coupling": 3,
+          "ca_threshold": 10,
+          "ce_threshold": 10
+        },
+        {
+          "node": "src::domain",
+          "afferent_coupling": 17,
+          "efferent_coupling": 7,
           "ca_threshold": 10,
           "ce_threshold": 10
         },
@@ -69,16 +76,9 @@
           "ce_threshold": 10
         },
         {
-          "node": "src::domain",
-          "afferent_coupling": 17,
-          "efferent_coupling": 7,
-          "ca_threshold": 10,
-          "ce_threshold": 10
-        },
-        {
-          "node": "src::config",
-          "afferent_coupling": 14,
-          "efferent_coupling": 3,
+          "node": "src::infra",
+          "afferent_coupling": 16,
+          "efferent_coupling": 6,
           "ca_threshold": 10,
           "ce_threshold": 10
         }
@@ -91,7 +91,13 @@
       "status": "ERROR",
       "most_unstable": [
         {
-          "node": "tests::message_bus_trait",
+          "node": "src::lib",
+          "instability": 1.0,
+          "ca": 0,
+          "ce": 5
+        },
+        {
+          "node": "src::bin::session2graph",
           "instability": 1.0,
           "ca": 0,
           "ce": 1
@@ -103,51 +109,45 @@
           "ce": 2
         },
         {
-          "node": "src::infra::dto",
+          "node": "src::domain::task",
           "instability": 1.0,
           "ca": 0,
-          "ce": 2
+          "ce": 1
         },
         {
-          "node": "src::infra::memory_bus",
+          "node": "src::domain::events",
           "instability": 1.0,
           "ca": 0,
-          "ce": 3
-        },
-        {
-          "node": "src::infra::memory_store",
-          "instability": 1.0,
-          "ca": 0,
-          "ce": 4
+          "ce": 1
         }
       ],
       "most_stable": [
         {
-          "node": "domain",
+          "node": "dto",
           "instability": 0.0,
           "ca": 1,
           "ce": 0
         },
         {
-          "node": "infra",
+          "node": "memory_bus",
           "instability": 0.0,
           "ca": 1,
           "ce": 0
         },
         {
-          "node": "ports",
+          "node": "memory_store",
           "instability": 0.0,
           "ca": 1,
           "ce": 0
         },
         {
-          "node": "executor",
+          "node": "paths",
           "instability": 0.0,
           "ca": 1,
           "ce": 0
         },
         {
-          "node": "store",
+          "node": "unix_bus",
           "instability": 0.0,
           "ca": 1,
           "ce": 0
@@ -266,18 +266,18 @@
       "description": "Компоненты без связей (возможно мертвый код)",
       "status": "WARNING",
       "orphans": [
+        "src::domain::message",
+        "src::domain::context",
+        "src::app::commands::restart",
+        "src::app::cli",
+        "src::ports::executor",
         "build",
         "tests::workflow_transitions",
-        "tests::budget_enforcement",
-        "tests::crash_recovery",
         "tests::bus_integration",
+        "tests::crash_recovery",
+        "tests::budget_enforcement",
         "tests::schedule_to_worker",
-        "tests::agent_lifecycle",
-        "src::app::cli",
-        "src::app::commands::restart",
-        "src::domain::context",
-        "src::domain::message",
-        "src::ports::executor"
+        "tests::agent_lifecycle"
       ],
       "orphans_count": 12
     },
@@ -296,7 +296,7 @@
       "depth": 3,
       "max_depth": 10,
       "longest_path": [
-        "src::app::agent_registry",
+        "src::app::process_builder",
         "src::config",
         "src::infra",
         "context_store"

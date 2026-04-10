@@ -44,16 +44,22 @@
       "status": "PASSED",
       "most_unstable": [
         {
+          "node": "pkg::classifier::classifier",
+          "instability": 1.0,
+          "ca": 0,
+          "ce": 3
+        },
+        {
           "node": "cmd::seclint::main",
           "instability": 1.0,
           "ca": 0,
           "ce": 5
         },
         {
-          "node": "pkg::classifier::classifier",
-          "instability": 1.0,
+          "node": "pkg::audit::audit",
+          "instability": 0.5,
           "ca": 0,
-          "ce": 3
+          "ce": 0
         },
         {
           "node": "pkg::config::config_test",
@@ -63,12 +69,6 @@
         },
         {
           "node": "pkg::config::config",
-          "instability": 0.5,
-          "ca": 0,
-          "ce": 0
-        },
-        {
-          "node": "pkg::audit::audit",
           "instability": 0.5,
           "ca": 0,
           "ce": 0
@@ -82,27 +82,27 @@
           "ce": 0
         },
         {
-          "node": "pkg/classifier",
-          "instability": 0.0,
-          "ca": 1,
-          "ce": 0
-        },
-        {
           "node": "pkg/config",
           "instability": 0.0,
           "ca": 2,
           "ce": 0
         },
         {
-          "node": "pkg/report",
+          "node": "pkg/threat",
+          "instability": 0.0,
+          "ca": 2,
+          "ce": 0
+        },
+        {
+          "node": "pkg/classifier",
           "instability": 0.0,
           "ca": 1,
           "ce": 0
         },
         {
-          "node": "pkg/threat",
+          "node": "pkg/report",
           "instability": 0.0,
-          "ca": 2,
+          "ca": 1,
           "ce": 0
         }
       ],
@@ -174,14 +174,14 @@
       "description": "Компоненты без связей (возможно мертвый код)",
       "status": "WARNING",
       "orphans": [
+        "pkg::audit::audit",
         "pkg::config::config_test",
         "pkg::config::config",
-        "pkg::audit::audit",
         "pkg::threat::threat",
         "pkg::threat::threat_test",
         "pkg::classifier::classifier_test",
-        "pkg::report::report",
-        "pkg::report::report_test"
+        "pkg::report::report_test",
+        "pkg::report::report"
       ],
       "orphans_count": 8
     },
@@ -200,8 +200,8 @@
       "depth": 1,
       "max_depth": 10,
       "longest_path": [
-        "cmd::seclint::main",
-        "pkg/classifier"
+        "pkg::classifier::classifier",
+        "pkg/audit"
       ]
     },
     {
