@@ -10,8 +10,8 @@
     "errors": 3
   },
   "graph": {
-    "nodes": 125,
-    "edges": 178
+    "nodes": 139,
+    "edges": 204
   },
   "checks": [
     {
@@ -29,7 +29,7 @@
       "violations": [
         {
           "node": "src::app",
-          "fan_out": 24,
+          "fan_out": 25,
           "threshold": 10
         },
         {
@@ -56,7 +56,7 @@
         },
         {
           "node": "src::domain",
-          "afferent_coupling": 17,
+          "afferent_coupling": 22,
           "efferent_coupling": 7,
           "ca_threshold": 10,
           "ce_threshold": 10
@@ -64,7 +64,7 @@
         {
           "node": "src::app",
           "afferent_coupling": 18,
-          "efferent_coupling": 24,
+          "efferent_coupling": 25,
           "ca_threshold": 10,
           "ce_threshold": 10
         },
@@ -76,14 +76,21 @@
           "ce_threshold": 10
         },
         {
+          "node": "src::ports",
+          "afferent_coupling": 13,
+          "efferent_coupling": 3,
+          "ca_threshold": 10,
+          "ce_threshold": 10
+        },
+        {
           "node": "src::infra",
-          "afferent_coupling": 16,
-          "efferent_coupling": 6,
+          "afferent_coupling": 19,
+          "efferent_coupling": 9,
           "ca_threshold": 10,
           "ce_threshold": 10
         }
       ],
-      "violations_count": 5
+      "violations_count": 6
     },
     {
       "name": "instability",
@@ -123,18 +130,6 @@
       ],
       "most_stable": [
         {
-          "node": "dto",
-          "instability": 0.0,
-          "ca": 1,
-          "ce": 0
-        },
-        {
-          "node": "memory_bus",
-          "instability": 0.0,
-          "ca": 1,
-          "ce": 0
-        },
-        {
           "node": "memory_store",
           "instability": 0.0,
           "ca": 1,
@@ -142,6 +137,18 @@
         },
         {
           "node": "paths",
+          "instability": 0.0,
+          "ca": 1,
+          "ce": 0
+        },
+        {
+          "node": "sm_store",
+          "instability": 0.0,
+          "ca": 1,
+          "ce": 0
+        },
+        {
+          "node": "task_store",
           "instability": 0.0,
           "ca": 1,
           "ce": 0
@@ -156,9 +163,9 @@
       "violations": [
         {
           "from": "src::config",
-          "to": "src::domain",
+          "to": "src::infra",
           "from_instability": 0.176,
-          "to_instability": 0.292,
+          "to_instability": 0.321,
           "issue": "Зависимость направлена к менее стабильному компоненту"
         }
       ],
@@ -224,21 +231,21 @@
       "hubs": [
         {
           "node": "src::app",
-          "total_degree": 42,
+          "total_degree": 43,
           "in_degree": 18,
-          "out_degree": 24
+          "out_degree": 25
         },
         {
           "node": "src::domain",
-          "total_degree": 24,
-          "in_degree": 17,
+          "total_degree": 29,
+          "in_degree": 22,
           "out_degree": 7
         },
         {
           "node": "src::infra",
-          "total_degree": 22,
-          "in_degree": 16,
-          "out_degree": 6
+          "total_degree": 28,
+          "in_degree": 19,
+          "out_degree": 9
         },
         {
           "node": "src::config",
@@ -247,16 +254,16 @@
           "out_degree": 3
         },
         {
+          "node": "src::ports",
+          "total_degree": 16,
+          "in_degree": 13,
+          "out_degree": 3
+        },
+        {
           "node": "src::app::commands",
           "total_degree": 12,
           "in_degree": 0,
           "out_degree": 12
-        },
-        {
-          "node": "src::ports",
-          "total_degree": 12,
-          "in_degree": 9,
-          "out_degree": 3
         }
       ],
       "hubs_count": 6
@@ -272,20 +279,19 @@
         "src::app::cli",
         "src::ports::executor",
         "build",
-        "tests::workflow_transitions",
         "tests::bus_integration",
         "tests::crash_recovery",
         "tests::budget_enforcement",
         "tests::schedule_to_worker",
         "tests::agent_lifecycle"
       ],
-      "orphans_count": 12
+      "orphans_count": 11
     },
     {
       "name": "strongly_connected_components",
       "description": "Группы с взаимными зависимостями (размер > 1)",
       "status": "PASSED",
-      "total_sccs": 125,
+      "total_sccs": 139,
       "problematic_sccs": [],
       "problematic_count": 0
     },
@@ -299,7 +305,7 @@
         "src::app::process_builder",
         "src::config",
         "src::infra",
-        "context_store"
+        "bus_server"
       ]
     },
     {
