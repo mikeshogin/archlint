@@ -10,8 +10,8 @@
     "errors": 3
   },
   "graph": {
-    "nodes": 139,
-    "edges": 204
+    "nodes": 145,
+    "edges": 215
   },
   "checks": [
     {
@@ -29,12 +29,12 @@
       "violations": [
         {
           "node": "src::app",
-          "fan_out": 25,
+          "fan_out": 27,
           "threshold": 10
         },
         {
           "node": "src::app::commands",
-          "fan_out": 12,
+          "fan_out": 13,
           "threshold": 10
         }
       ],
@@ -49,29 +49,29 @@
       "violations": [
         {
           "node": "src::config",
-          "afferent_coupling": 14,
+          "afferent_coupling": 18,
           "efferent_coupling": 3,
           "ca_threshold": 10,
           "ce_threshold": 10
         },
         {
           "node": "src::domain",
-          "afferent_coupling": 22,
+          "afferent_coupling": 21,
           "efferent_coupling": 7,
           "ca_threshold": 10,
           "ce_threshold": 10
         },
         {
           "node": "src::app",
-          "afferent_coupling": 18,
-          "efferent_coupling": 25,
+          "afferent_coupling": 20,
+          "efferent_coupling": 27,
           "ca_threshold": 10,
           "ce_threshold": 10
         },
         {
           "node": "src::app::commands",
           "afferent_coupling": 0,
-          "efferent_coupling": 12,
+          "efferent_coupling": 13,
           "ca_threshold": 10,
           "ce_threshold": 10
         },
@@ -84,7 +84,7 @@
         },
         {
           "node": "src::infra",
-          "afferent_coupling": 19,
+          "afferent_coupling": 21,
           "efferent_coupling": 9,
           "ca_threshold": 10,
           "ce_threshold": 10
@@ -164,12 +164,19 @@
         {
           "from": "src::config",
           "to": "src::infra",
-          "from_instability": 0.176,
-          "to_instability": 0.321,
+          "from_instability": 0.143,
+          "to_instability": 0.3,
+          "issue": "Зависимость направлена к менее стабильному компоненту"
+        },
+        {
+          "from": "src::config",
+          "to": "src::domain",
+          "from_instability": 0.143,
+          "to_instability": 0.25,
           "issue": "Зависимость направлена к менее стабильному компоненту"
         }
       ],
-      "violations_count": 1
+      "violations_count": 2
     },
     {
       "name": "layer_violations",
@@ -231,26 +238,26 @@
       "hubs": [
         {
           "node": "src::app",
-          "total_degree": 43,
-          "in_degree": 18,
-          "out_degree": 25
-        },
-        {
-          "node": "src::domain",
-          "total_degree": 29,
-          "in_degree": 22,
-          "out_degree": 7
+          "total_degree": 47,
+          "in_degree": 20,
+          "out_degree": 27
         },
         {
           "node": "src::infra",
-          "total_degree": 28,
-          "in_degree": 19,
+          "total_degree": 30,
+          "in_degree": 21,
           "out_degree": 9
         },
         {
+          "node": "src::domain",
+          "total_degree": 28,
+          "in_degree": 21,
+          "out_degree": 7
+        },
+        {
           "node": "src::config",
-          "total_degree": 17,
-          "in_degree": 14,
+          "total_degree": 21,
+          "in_degree": 18,
           "out_degree": 3
         },
         {
@@ -261,9 +268,9 @@
         },
         {
           "node": "src::app::commands",
-          "total_degree": 12,
+          "total_degree": 13,
           "in_degree": 0,
-          "out_degree": 12
+          "out_degree": 13
         }
       ],
       "hubs_count": 6
@@ -291,7 +298,7 @@
       "name": "strongly_connected_components",
       "description": "Группы с взаимными зависимостями (размер > 1)",
       "status": "PASSED",
-      "total_sccs": 139,
+      "total_sccs": 145,
       "problematic_sccs": [],
       "problematic_count": 0
     },

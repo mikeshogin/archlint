@@ -10,8 +10,8 @@
     "errors": 0
   },
   "graph": {
-    "nodes": 139,
-    "edges": 204
+    "nodes": 145,
+    "edges": 215
   },
   "checks": [
     {
@@ -22,127 +22,128 @@
       "violations": [
         {
           "package": "src::app",
-          "domains_count": 25,
+          "domains_count": 27,
           "domains": [
-            "agent_process",
-            "tui",
-            "jsonrpc",
             "schedule",
-            "tasklog",
-            "process_builder",
-            "graph",
-            "agent_registry",
+            "agent",
+            "mcp_service",
+            "mcp_protocol",
             "serve",
-            "bus"
+            "process_builder",
+            "worker",
+            "bus_api",
+            "acp",
+            "cli"
           ]
         },
         {
           "package": "src::app::commands",
-          "domains_count": 12,
+          "domains_count": 13,
           "domains": [
-            "graph",
-            "restart",
-            "remind",
-            "sm",
-            "task",
-            "agent",
-            "bus",
-            "tests",
             "schedule",
-            "status"
+            "agent",
+            "remind",
+            "tui",
+            "restart",
+            "bus",
+            "graph",
+            "upgrade",
+            "usage",
+            "sm"
           ]
         },
         {
           "package": "src::infra",
           "domains_count": 9,
           "domains": [
-            "context_store",
-            "dto",
-            "paths",
-            "sm_store",
-            "bus_server",
             "memory_bus",
-            "memory_store",
+            "sm_store",
             "task_store",
-            "unix_bus"
+            "unix_bus",
+            "paths",
+            "bus_server",
+            "dto",
+            "context_store",
+            "memory_store"
           ]
         },
         {
           "package": "src::domain",
           "domains_count": 7,
           "domains": [
-            "statemachine",
-            "task",
-            "agent",
-            "workitem",
-            "message",
             "events",
-            "context"
+            "agent",
+            "context",
+            "message",
+            "workitem",
+            "statemachine",
+            "task"
           ]
         },
         {
           "package": "src::lib",
           "domains_count": 5,
           "domains": [
-            "infra",
-            "domain",
-            "ports",
             "config",
-            "app"
+            "ports",
+            "app",
+            "domain",
+            "infra"
           ]
         },
         {
           "package": "src::app::workflow",
           "domains_count": 5,
           "domains": [
-            "src::app",
-            "src::ports",
-            "tests",
             "src::infra",
+            "src::ports",
+            "src::app",
+            "tests",
             "src::domain"
+          ]
+        },
+        {
+          "package": "src::app::bus_api",
+          "domains_count": 5,
+          "domains": [
+            "src::infra",
+            "src::ports",
+            "src::app",
+            "src::config",
+            "tests"
           ]
         },
         {
           "package": "src::app::agent",
           "domains_count": 5,
           "domains": [
-            "src::process_builder",
+            "src::agent_process",
             "src::ports",
             "tests",
             "src::agent_registry",
-            "src::agent_process"
+            "src::process_builder"
           ]
         },
         {
           "package": "src::app::agent_registry",
           "domains_count": 5,
           "domains": [
-            "src::process_builder",
+            "src::infra",
             "src::config",
             "tests",
-            "src::infra",
-            "src::domain"
+            "src::domain",
+            "src::process_builder"
           ]
         },
         {
           "package": "src::infra::dto",
           "domains_count": 5,
           "domains": [
-            "task",
-            "bus",
-            "instance",
             "config",
-            "context"
-          ]
-        },
-        {
-          "package": "src::app::process_builder",
-          "domains_count": 4,
-          "domains": [
-            "tests",
-            "src::config",
-            "src::agent_registry",
-            "src::infra"
+            "bus",
+            "context",
+            "instance",
+            "task"
           ]
         }
       ],
@@ -153,10 +154,10 @@
       "description": "Соотношение абстракций >= 20% (OCP)",
       "status": "WARNING",
       "abstractions": 5,
-      "implementations": 134,
-      "ratio": 0.036,
+      "implementations": 140,
+      "ratio": 0.034,
       "threshold": 0.2,
-      "issue": "Низкое соотношение абстракций (3.60%) - плохая расширяемость"
+      "issue": "Низкое соотношение абстракций (3.45%) - плохая расширяемость"
     },
     {
       "name": "liskov_substitution",
