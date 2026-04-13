@@ -10,8 +10,8 @@
     "errors": 2
   },
   "graph": {
-    "nodes": 99,
-    "edges": 189
+    "nodes": 100,
+    "edges": 191
   },
   "checks": [
     {
@@ -39,7 +39,7 @@
         },
         {
           "node": "git-cliff-core::src::remote",
-          "fan_out": 15,
+          "fan_out": 16,
           "threshold": 10
         },
         {
@@ -74,7 +74,7 @@
         {
           "node": "git-cliff-core::src::remote",
           "afferent_coupling": 0,
-          "efferent_coupling": 15,
+          "efferent_coupling": 16,
           "ca_threshold": 10,
           "ce_threshold": 10
         },
@@ -239,6 +239,12 @@
       "threshold": 10,
       "hubs": [
         {
+          "node": "git-cliff-core::src::remote",
+          "total_degree": 16,
+          "in_degree": 0,
+          "out_degree": 16
+        },
+        {
           "node": "git-cliff-core::error",
           "total_degree": 16,
           "in_degree": 16,
@@ -249,12 +255,6 @@
           "total_degree": 16,
           "in_degree": 16,
           "out_degree": 0
-        },
-        {
-          "node": "git-cliff-core::src::remote",
-          "total_degree": 15,
-          "in_degree": 0,
-          "out_degree": 15
         },
         {
           "node": "git-cliff-core::src::lib",
@@ -294,7 +294,7 @@
       "name": "strongly_connected_components",
       "description": "Группы с взаимными зависимостями (размер > 1)",
       "status": "PASSED",
-      "total_sccs": 99,
+      "total_sccs": 100,
       "problematic_sccs": [],
       "problematic_count": 0
     },

@@ -34,9 +34,9 @@
       "name": "modularity",
       "description": "Модульность графа должна быть >= 0.3",
       "status": "PASSED",
-      "modularity": 0.474,
+      "modularity": 0.479,
       "threshold": 0.3,
-      "communities_count": 18
+      "communities_count": 19
     },
     {
       "name": "abstractness",
@@ -613,110 +613,110 @@
           "component": "tests",
           "impact_radius": 49,
           "sample_dependents": [
-            "src::app::workflow",
-            "src::app::bus_api",
             "src::app::commands::usage",
-            "src::app::unified_inbox",
-            "src::app::mcp_tools"
+            "src::app::commands::schedule",
+            "src::infra::dto::instance",
+            "src::app::serve",
+            "src::app::timeout_sweep"
           ]
         },
         {
           "component": "task",
           "impact_radius": 46,
           "sample_dependents": [
-            "src::domain",
-            "src::app::workflow",
-            "src::app::bus_api",
             "src::app::commands::usage",
-            "src::domain::workitem"
+            "src::app::commands::schedule",
+            "src::infra::dto::instance",
+            "src::app::serve",
+            "src::app::timeout_sweep"
           ]
         },
         {
           "component": "agent",
           "impact_radius": 45,
           "sample_dependents": [
-            "src::domain",
-            "src::app::workflow",
-            "src::app::bus_api",
             "src::app::commands::usage",
-            "src::domain::workitem"
+            "src::app::commands::schedule",
+            "src::infra::dto::instance",
+            "src::app::serve",
+            "src::app::timeout_sweep"
           ]
         },
         {
           "component": "context",
           "impact_radius": 45,
           "sample_dependents": [
-            "src::domain",
-            "src::app::workflow",
-            "src::app::bus_api",
             "src::app::commands::usage",
-            "src::domain::workitem"
+            "src::app::commands::schedule",
+            "src::infra::dto::instance",
+            "src::app::serve",
+            "src::app::timeout_sweep"
           ]
         },
         {
           "component": "message",
           "impact_radius": 44,
           "sample_dependents": [
-            "src::domain",
-            "src::app::workflow",
-            "src::app::bus_api",
             "src::app::commands::usage",
-            "src::domain::workitem"
+            "src::app::commands::schedule",
+            "src::infra::dto::instance",
+            "src::app::serve",
+            "src::app::timeout_sweep"
           ]
         },
         {
           "component": "statemachine",
           "impact_radius": 44,
           "sample_dependents": [
-            "src::domain",
-            "src::app::workflow",
-            "src::app::bus_api",
             "src::app::commands::usage",
-            "src::domain::workitem"
+            "src::app::commands::schedule",
+            "src::infra::dto::instance",
+            "src::app::serve",
+            "src::app::timeout_sweep"
           ]
         },
         {
           "component": "events",
           "impact_radius": 38,
           "sample_dependents": [
-            "src::domain",
-            "src::app::workflow",
-            "src::app::bus_api",
-            "src::domain::workitem",
-            "src::ports::store"
+            "src::app::commands::schedule",
+            "src::infra::dto::instance",
+            "src::app::serve",
+            "src::app::timeout_sweep",
+            "src::app::mcp"
           ]
         },
         {
           "component": "workitem",
           "impact_radius": 38,
           "sample_dependents": [
-            "src::domain",
-            "src::app::workflow",
-            "src::app::bus_api",
-            "src::domain::workitem",
-            "src::ports::store"
+            "src::app::commands::schedule",
+            "src::infra::dto::instance",
+            "src::app::serve",
+            "src::app::timeout_sweep",
+            "src::app::mcp"
           ]
         },
         {
           "component": "src::domain",
           "impact_radius": 37,
           "sample_dependents": [
-            "src::app::workflow",
-            "src::app::bus_api",
-            "src::domain::workitem",
-            "src::ports::store",
-            "src::app::mcp_tools"
+            "src::app::commands::schedule",
+            "src::infra::dto::instance",
+            "src::app::serve",
+            "src::app::timeout_sweep",
+            "src::app::mcp"
           ]
         },
         {
           "component": "bus_server",
           "impact_radius": 35,
           "sample_dependents": [
-            "src::app::workflow",
-            "src::app::task",
-            "src::app::bus_api",
-            "src::app::bus",
-            "src::app::mcp_tools"
+            "src::app::commands::schedule",
+            "src::app::serve",
+            "src::app::mcp",
+            "src::app::agent_process",
+            "src::app::commands::sm"
           ]
         }
       ],
