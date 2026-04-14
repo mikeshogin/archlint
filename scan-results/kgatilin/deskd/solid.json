@@ -24,16 +24,16 @@
           "package": "src::app",
           "domains_count": 27,
           "domains": [
-            "cli",
-            "agent",
-            "graph",
-            "acp",
-            "serve",
+            "adapters",
+            "mcp_tools",
+            "tasklog",
             "agent_process",
-            "mcp",
-            "bus_api",
-            "message",
-            "commands"
+            "process_builder",
+            "cli",
+            "unified_inbox",
+            "schedule",
+            "acp",
+            "graph"
           ]
         },
         {
@@ -41,14 +41,14 @@
           "domains_count": 13,
           "domains": [
             "tui",
-            "status",
-            "tests",
-            "remind",
-            "schedule",
             "bus",
-            "agent",
             "graph",
-            "task",
+            "sm",
+            "usage",
+            "tests",
+            "restart",
+            "agent",
+            "status",
             "upgrade"
           ]
         },
@@ -56,94 +56,94 @@
           "package": "src::infra",
           "domains_count": 9,
           "domains": [
+            "context_store",
+            "bus_server",
+            "memory_bus",
             "memory_store",
             "dto",
-            "unix_bus",
-            "context_store",
-            "sm_store",
-            "memory_bus",
-            "task_store",
             "paths",
-            "bus_server"
+            "task_store",
+            "unix_bus",
+            "sm_store"
           ]
         },
         {
           "package": "src::domain",
           "domains_count": 7,
           "domains": [
-            "events",
             "context",
-            "agent",
-            "task",
-            "message",
             "workitem",
-            "statemachine"
+            "agent",
+            "statemachine",
+            "message",
+            "task",
+            "events"
           ]
         },
         {
           "package": "src::lib",
           "domains_count": 5,
           "domains": [
-            "app",
-            "config",
-            "domain",
+            "ports",
             "infra",
-            "ports"
+            "config",
+            "app",
+            "domain"
           ]
         },
         {
           "package": "src::app::workflow",
           "domains_count": 5,
           "domains": [
-            "tests",
-            "src::domain",
+            "src::ports",
             "src::app",
-            "src::infra",
-            "src::ports"
+            "src::domain",
+            "tests",
+            "src::infra"
           ]
         },
         {
           "package": "src::app::bus_api",
           "domains_count": 5,
           "domains": [
-            "tests",
-            "src::app",
-            "src::infra",
             "src::ports",
-            "src::config"
+            "src::config",
+            "src::app",
+            "tests",
+            "src::infra"
           ]
         },
         {
           "package": "src::app::agent",
           "domains_count": 5,
           "domains": [
-            "tests",
+            "src::agent_registry",
+            "src::agent_process",
             "src::ports",
             "src::process_builder",
-            "src::agent_registry",
-            "src::agent_process"
+            "tests"
           ]
         },
         {
           "package": "src::app::agent_registry",
           "domains_count": 5,
           "domains": [
-            "tests",
-            "src::domain",
-            "src::infra",
+            "src::config",
             "src::process_builder",
-            "src::config"
+            "src::domain",
+            "tests",
+            "src::infra"
           ]
         },
         {
           "package": "src::infra::dto",
           "domains_count": 5,
           "domains": [
-            "config",
-            "context",
             "bus",
-            "task",
-            "instance"
+            "context",
+            "config",
+            "instance",
+            "task"
           ]
         }
       ],
