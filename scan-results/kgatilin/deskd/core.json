@@ -10,8 +10,8 @@
     "errors": 3
   },
   "graph": {
-    "nodes": 158,
-    "edges": 230
+    "nodes": 160,
+    "edges": 235
   },
   "checks": [
     {
@@ -29,7 +29,7 @@
       "violations": [
         {
           "node": "src::app",
-          "fan_out": 30,
+          "fan_out": 31,
           "threshold": 10
         },
         {
@@ -64,7 +64,7 @@
         {
           "node": "src::app",
           "afferent_coupling": 21,
-          "efferent_coupling": 30,
+          "efferent_coupling": 31,
           "ca_threshold": 10,
           "ce_threshold": 10
         },
@@ -77,14 +77,14 @@
         },
         {
           "node": "src::ports",
-          "afferent_coupling": 16,
+          "afferent_coupling": 17,
           "efferent_coupling": 4,
           "ca_threshold": 10,
           "ce_threshold": 10
         },
         {
           "node": "src::infra",
-          "afferent_coupling": 11,
+          "afferent_coupling": 12,
           "efferent_coupling": 9,
           "ca_threshold": 10,
           "ce_threshold": 10
@@ -122,7 +122,7 @@
           "ce": 1
         },
         {
-          "node": "src::domain::events",
+          "node": "src::domain::context",
           "instability": 1.0,
           "ca": 0,
           "ce": 1
@@ -165,7 +165,7 @@
           "from": "src::config",
           "to": "src::infra",
           "from_instability": 0.13,
-          "to_instability": 0.45,
+          "to_instability": 0.429,
           "issue": "Зависимость направлена к менее стабильному компоненту"
         }
       ],
@@ -231,9 +231,9 @@
       "hubs": [
         {
           "node": "src::app",
-          "total_degree": 51,
+          "total_degree": 52,
           "in_degree": 21,
-          "out_degree": 30
+          "out_degree": 31
         },
         {
           "node": "src::domain",
@@ -249,14 +249,14 @@
         },
         {
           "node": "src::ports",
-          "total_degree": 20,
-          "in_degree": 16,
+          "total_degree": 21,
+          "in_degree": 17,
           "out_degree": 4
         },
         {
           "node": "src::infra",
-          "total_degree": 20,
-          "in_degree": 11,
+          "total_degree": 21,
+          "in_degree": 12,
           "out_degree": 9
         },
         {
@@ -274,7 +274,6 @@
       "status": "WARNING",
       "orphans": [
         "src::domain::message",
-        "src::domain::context",
         "src::app::commands::restart",
         "src::app::cli",
         "src::ports::executor",
@@ -284,13 +283,13 @@
         "tests::schedule_to_worker",
         "tests::agent_lifecycle"
       ],
-      "orphans_count": 10
+      "orphans_count": 9
     },
     {
       "name": "strongly_connected_components",
       "description": "Группы с взаимными зависимостями (размер > 1)",
       "status": "PASSED",
-      "total_sccs": 158,
+      "total_sccs": 160,
       "problematic_sccs": [],
       "problematic_count": 0
     },

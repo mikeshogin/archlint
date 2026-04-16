@@ -615,66 +615,66 @@
           "component": "exit_code",
           "impact_radius": 25,
           "sample_dependents": [
-            "src::export",
-            "src::export::markdown",
+            "src::timer",
+            "src::export::markup",
             "src::export::asciidoc",
-            "src::benchmark::timing_result",
-            "src::util"
+            "src::parameter",
+            "src::benchmark::timing_result"
           ]
         },
         {
           "component": "min_max",
           "impact_radius": 25,
           "sample_dependents": [
-            "src::export",
-            "src::export::markdown",
+            "src::timer",
+            "src::export::markup",
             "src::export::asciidoc",
-            "src::benchmark::timing_result",
-            "src::util"
+            "src::parameter",
+            "src::benchmark::timing_result"
           ]
         },
         {
           "component": "number",
           "impact_radius": 25,
           "sample_dependents": [
-            "src::export",
-            "src::export::markdown",
+            "src::timer",
+            "src::export::markup",
             "src::export::asciidoc",
-            "src::benchmark::timing_result",
-            "src::util"
+            "src::parameter",
+            "src::benchmark::timing_result"
           ]
         },
         {
           "component": "randomized_environment_offset",
           "impact_radius": 25,
           "sample_dependents": [
-            "src::export",
-            "src::export::markdown",
+            "src::timer",
+            "src::export::markup",
             "src::export::asciidoc",
-            "src::benchmark::timing_result",
-            "src::util"
+            "src::parameter",
+            "src::benchmark::timing_result"
           ]
         },
         {
           "component": "units",
           "impact_radius": 25,
           "sample_dependents": [
-            "src::export",
-            "src::export::markdown",
+            "src::timer",
+            "src::export::markup",
             "src::export::asciidoc",
-            "src::benchmark::timing_result",
-            "src::util"
+            "src::parameter",
+            "src::benchmark::timing_result"
           ]
         },
         {
           "component": "src::util",
           "impact_radius": 24,
           "sample_dependents": [
-            "src::export",
-            "src::export::markdown",
+            "src::timer",
+            "src::export::markup",
             "src::export::asciidoc",
-            "src::benchmark::timing_result",
-            "src::benchmark::benchmark_result"
+            "src::parameter",
+            "src::benchmark::timing_result"
           ]
         }
       ],
