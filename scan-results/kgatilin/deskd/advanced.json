@@ -34,7 +34,7 @@
       "name": "modularity",
       "description": "Модульность графа должна быть >= 0.3",
       "status": "PASSED",
-      "modularity": 0.487,
+      "modularity": 0.485,
       "threshold": 0.3,
       "communities_count": 19
     },
@@ -615,110 +615,110 @@
           "component": "tests",
           "impact_radius": 56,
           "sample_dependents": [
-            "src::domain::config_types",
-            "src::config",
-            "src::domain::task",
-            "src::app::process_builder",
-            "src::app::workflow"
+            "src::infra::context_store",
+            "src::domain::events",
+            "src::app::workflow",
+            "src::app::agent",
+            "src::app::commands::agent"
           ]
         },
         {
           "component": "task",
           "impact_radius": 52,
           "sample_dependents": [
-            "src::config",
-            "src::ports::bus",
-            "src::app::process_builder",
+            "src::infra::context_store",
             "src::app::workflow",
-            "src::infra::task_store"
+            "src::app::agent_process",
+            "src::app::commands::agent",
+            "src::app::a2a_server"
           ]
         },
         {
           "component": "agent",
           "impact_radius": 51,
           "sample_dependents": [
-            "src::config",
-            "src::ports::bus",
-            "src::app::process_builder",
+            "src::infra::context_store",
             "src::app::workflow",
-            "src::infra::task_store"
+            "src::app::agent_process",
+            "src::app::commands::agent",
+            "src::app::a2a_server"
           ]
         },
         {
           "component": "context",
           "impact_radius": 51,
           "sample_dependents": [
-            "src::config",
-            "src::ports::bus",
-            "src::app::process_builder",
+            "src::infra::context_store",
             "src::app::workflow",
-            "src::infra::task_store"
+            "src::app::agent_process",
+            "src::app::commands::agent",
+            "src::app::a2a_server"
           ]
         },
         {
           "component": "message",
           "impact_radius": 50,
           "sample_dependents": [
-            "src::config",
-            "src::ports::bus",
-            "src::app::process_builder",
+            "src::infra::context_store",
             "src::app::workflow",
-            "src::infra::task_store"
+            "src::app::agent_process",
+            "src::app::commands::agent",
+            "src::app::a2a_server"
           ]
         },
         {
           "component": "statemachine",
           "impact_radius": 50,
           "sample_dependents": [
-            "src::config",
-            "src::ports::bus",
-            "src::app::process_builder",
+            "src::infra::context_store",
             "src::app::workflow",
-            "src::infra::task_store"
+            "src::app::agent_process",
+            "src::app::commands::agent",
+            "src::app::a2a_server"
           ]
         },
         {
           "component": "config_types",
           "impact_radius": 45,
           "sample_dependents": [
-            "src::config",
-            "src::ports::bus",
-            "src::app::process_builder",
+            "src::infra::context_store",
             "src::app::workflow",
-            "src::infra::task_store"
+            "src::app::agent_process",
+            "src::app::commands::agent",
+            "src::app::commands::bus"
           ]
         },
         {
           "component": "events",
           "impact_radius": 45,
           "sample_dependents": [
-            "src::config",
-            "src::ports::bus",
-            "src::app::process_builder",
+            "src::infra::context_store",
             "src::app::workflow",
-            "src::infra::task_store"
+            "src::app::agent_process",
+            "src::app::commands::agent",
+            "src::app::commands::bus"
           ]
         },
         {
           "component": "workitem",
           "impact_radius": 45,
           "sample_dependents": [
-            "src::config",
-            "src::ports::bus",
-            "src::app::process_builder",
+            "src::infra::context_store",
             "src::app::workflow",
-            "src::infra::task_store"
+            "src::app::agent_process",
+            "src::app::commands::agent",
+            "src::app::commands::bus"
           ]
         },
         {
           "component": "src::domain",
           "impact_radius": 44,
           "sample_dependents": [
-            "src::config",
-            "src::ports::bus",
-            "src::app::process_builder",
+            "src::infra::context_store",
             "src::app::workflow",
-            "src::infra::task_store"
+            "src::app::agent_process",
+            "src::app::commands::agent",
+            "src::app::commands::bus"
           ]
         }
       ],
