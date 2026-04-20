@@ -24,47 +24,47 @@
           "package": "src::app",
           "domains_count": 32,
           "domains": [
-            "cli",
-            "tasklog",
-            "config_watcher",
-            "mcp",
+            "mcp_tools",
+            "adapters",
             "worker",
-            "acp",
-            "mcp_protocol",
-            "a2a",
-            "unified_inbox",
-            "message"
+            "commands",
+            "a2a_jwt",
+            "config_watcher",
+            "statemachine",
+            "mcp",
+            "config_reload",
+            "jsonrpc"
           ]
         },
         {
           "package": "src::app::commands",
           "domains_count": 14,
           "domains": [
-            "graph",
-            "status",
-            "tests",
-            "usage",
-            "upgrade",
-            "tui",
-            "agent",
-            "remind",
+            "a2a",
+            "task",
             "sm",
-            "task"
+            "tui",
+            "status",
+            "bus",
+            "usage",
+            "agent",
+            "graph",
+            "upgrade"
           ]
         },
         {
           "package": "src::infra",
           "domains_count": 9,
           "domains": [
-            "memory_store",
-            "unix_bus",
-            "memory_bus",
-            "task_store",
-            "paths",
-            "context_store",
             "dto",
+            "memory_store",
             "bus_server",
-            "sm_store"
+            "paths",
+            "memory_bus",
+            "sm_store",
+            "context_store",
+            "task_store",
+            "unix_bus"
           ]
         },
         {
@@ -72,35 +72,35 @@
           "domains_count": 8,
           "domains": [
             "context",
+            "statemachine",
+            "task",
+            "config_types",
             "workitem",
             "agent",
-            "config_types",
-            "task",
-            "events",
             "message",
-            "statemachine"
+            "events"
           ]
         },
         {
           "package": "src::lib",
           "domains_count": 5,
           "domains": [
-            "config",
             "app",
             "domain",
-            "infra",
-            "ports"
+            "config",
+            "ports",
+            "infra"
           ]
         },
         {
           "package": "src::app::workflow",
           "domains_count": 5,
           "domains": [
-            "src::ports",
-            "src::infra",
             "src::domain",
-            "src::app",
-            "tests"
+            "src::infra",
+            "src::ports",
+            "tests",
+            "src::app"
           ]
         },
         {
@@ -108,41 +108,41 @@
           "domains_count": 5,
           "domains": [
             "src::agent_registry",
-            "src::ports",
             "src::agent_process",
-            "src::process_builder",
-            "tests"
+            "src::ports",
+            "tests",
+            "src::process_builder"
           ]
         },
         {
           "package": "src::app::mcp_tools",
           "domains_count": 5,
           "domains": [
-            "src::ports",
-            "src::infra",
             "src::config",
-            "src::app",
-            "tests"
+            "src::infra",
+            "src::ports",
+            "tests",
+            "src::app"
           ]
         },
         {
           "package": "src::infra::dto",
           "domains_count": 5,
           "domains": [
-            "config",
             "context",
-            "instance",
             "task",
-            "bus"
+            "config",
+            "bus",
+            "instance"
           ]
         },
         {
           "package": "src::app::process_builder",
           "domains_count": 4,
           "domains": [
-            "tests",
-            "src::agent_registry",
             "src::config",
+            "src::agent_registry",
+            "tests",
             "src::domain"
           ]
         }
