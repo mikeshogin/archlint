@@ -10,8 +10,8 @@
     "errors": 2
   },
   "graph": {
-    "nodes": 100,
-    "edges": 192
+    "nodes": 103,
+    "edges": 200
   },
   "checks": [
     {
@@ -29,7 +29,7 @@
       "violations": [
         {
           "node": "git-cliff-core::src::lib",
-          "fan_out": 14,
+          "fan_out": 15,
           "threshold": 10
         },
         {
@@ -48,12 +48,17 @@
           "threshold": 10
         },
         {
+          "node": "git-cliff-core::src::changelog",
+          "fan_out": 11,
+          "threshold": 10
+        },
+        {
           "node": "git-cliff-core::src::repo",
           "fan_out": 11,
           "threshold": 10
         }
       ],
-      "violations_count": 5
+      "violations_count": 6
     },
     {
       "name": "coupling",
@@ -65,7 +70,7 @@
         {
           "node": "git-cliff-core::src::lib",
           "afferent_coupling": 0,
-          "efferent_coupling": 14,
+          "efferent_coupling": 15,
           "ca_threshold": 10,
           "ce_threshold": 10
         },
@@ -91,6 +96,13 @@
           "ce_threshold": 10
         },
         {
+          "node": "git-cliff-core::src::changelog",
+          "afferent_coupling": 0,
+          "efferent_coupling": 11,
+          "ca_threshold": 10,
+          "ce_threshold": 10
+        },
+        {
           "node": "git-cliff-core::src::repo",
           "afferent_coupling": 0,
           "efferent_coupling": 11,
@@ -99,27 +111,27 @@
         },
         {
           "node": "git-cliff-core::error",
-          "afferent_coupling": 16,
+          "afferent_coupling": 17,
           "efferent_coupling": 0,
           "ca_threshold": 10,
           "ce_threshold": 10
         },
         {
           "node": "test",
-          "afferent_coupling": 16,
+          "afferent_coupling": 17,
           "efferent_coupling": 0,
           "ca_threshold": 10,
           "ce_threshold": 10
         },
         {
           "node": "git-cliff-core::config",
-          "afferent_coupling": 13,
+          "afferent_coupling": 14,
           "efferent_coupling": 0,
           "ca_threshold": 10,
           "ce_threshold": 10
         }
       ],
-      "violations_count": 8
+      "violations_count": 9
     },
     {
       "name": "instability",
@@ -165,7 +177,7 @@
           "ce": 0
         },
         {
-          "node": "git-cliff-core::summary",
+          "node": "git-cliff-core::process",
           "instability": 0.0,
           "ca": 1,
           "ce": 0
@@ -251,33 +263,33 @@
       "threshold": 10,
       "hubs": [
         {
+          "node": "git-cliff-core::error",
+          "total_degree": 17,
+          "in_degree": 17,
+          "out_degree": 0
+        },
+        {
+          "node": "test",
+          "total_degree": 17,
+          "in_degree": 17,
+          "out_degree": 0
+        },
+        {
           "node": "git-cliff-core::src::remote",
           "total_degree": 16,
           "in_degree": 0,
           "out_degree": 16
         },
         {
-          "node": "git-cliff-core::error",
-          "total_degree": 16,
-          "in_degree": 16,
-          "out_degree": 0
-        },
-        {
-          "node": "test",
-          "total_degree": 16,
-          "in_degree": 16,
-          "out_degree": 0
-        },
-        {
           "node": "git-cliff-core::src::lib",
-          "total_degree": 14,
+          "total_degree": 15,
           "in_degree": 0,
-          "out_degree": 14
+          "out_degree": 15
         },
         {
           "node": "git-cliff-core::config",
-          "total_degree": 13,
-          "in_degree": 13,
+          "total_degree": 14,
+          "in_degree": 14,
           "out_degree": 0
         },
         {
@@ -293,13 +305,19 @@
           "out_degree": 11
         },
         {
+          "node": "git-cliff-core::src::changelog",
+          "total_degree": 11,
+          "in_degree": 0,
+          "out_degree": 11
+        },
+        {
           "node": "git-cliff-core::src::repo",
           "total_degree": 11,
           "in_degree": 0,
           "out_degree": 11
         }
       ],
-      "hubs_count": 8
+      "hubs_count": 9
     },
     {
       "name": "orphan_nodes",
@@ -312,7 +330,7 @@
       "name": "strongly_connected_components",
       "description": "Группы с взаимными зависимостями (размер > 1)",
       "status": "PASSED",
-      "total_sccs": 100,
+      "total_sccs": 103,
       "problematic_sccs": [],
       "problematic_count": 0
     },

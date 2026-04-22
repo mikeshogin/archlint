@@ -10,8 +10,8 @@
     "errors": 0
   },
   "graph": {
-    "nodes": 166,
-    "edges": 244
+    "nodes": 164,
+    "edges": 241
   },
   "checks": [
     {
@@ -22,18 +22,18 @@
       "violations": [
         {
           "package": "src::app",
-          "domains_count": 32,
+          "domains_count": 33,
           "domains": [
-            "workflow",
-            "agent_registry",
-            "task",
-            "cli",
-            "worker",
+            "acp",
+            "a2a_server",
+            "bus_api",
+            "timeout_sweep",
+            "message",
+            "scope",
+            "agent",
             "mcp_tools",
             "serve",
-            "mcp_protocol",
-            "bus_api",
-            "bus"
+            "config_watcher"
           ]
         },
         {
@@ -41,56 +41,55 @@
           "domains_count": 14,
           "domains": [
             "remind",
-            "bus",
-            "tui",
+            "schedule",
+            "status",
             "restart",
-            "sm",
             "task",
-            "upgrade",
-            "graph",
             "tests",
-            "usage"
+            "agent",
+            "a2a",
+            "usage",
+            "sm"
           ]
         },
         {
           "package": "src::infra",
-          "domains_count": 10,
+          "domains_count": 9,
           "domains": [
-            "dto",
-            "unix_bus",
             "memory_store",
+            "sm_store",
+            "dto",
             "context_store",
             "memory_bus",
-            "task_store",
-            "sm_store",
             "bus_server",
-            "telegram_mtproto",
-            "paths"
+            "paths",
+            "unix_bus",
+            "task_store"
           ]
         },
         {
           "package": "src::domain",
           "domains_count": 8,
           "domains": [
-            "message",
-            "task",
-            "workitem",
-            "events",
-            "statemachine",
-            "context",
             "config_types",
-            "agent"
+            "message",
+            "statemachine",
+            "workitem",
+            "context",
+            "agent",
+            "task",
+            "events"
           ]
         },
         {
           "package": "src::lib",
           "domains_count": 5,
           "domains": [
-            "domain",
-            "app",
-            "infra",
             "config",
-            "ports"
+            "app",
+            "ports",
+            "domain",
+            "infra"
           ]
         },
         {
@@ -108,11 +107,11 @@
           "package": "src::app::agent",
           "domains_count": 5,
           "domains": [
-            "src::process_builder",
-            "src::agent_registry",
             "src::ports",
+            "src::agent_registry",
             "src::agent_process",
-            "tests"
+            "tests",
+            "src::process_builder"
           ]
         },
         {
@@ -121,8 +120,8 @@
           "domains": [
             "src::ports",
             "tests",
-            "src::config",
             "src::app",
+            "src::config",
             "src::infra"
           ]
         },
@@ -130,11 +129,11 @@
           "package": "src::infra::dto",
           "domains_count": 5,
           "domains": [
-            "bus",
-            "task",
             "config",
             "context",
-            "instance"
+            "task",
+            "instance",
+            "bus"
           ]
         },
         {
@@ -142,23 +141,23 @@
           "domains_count": 4,
           "domains": [
             "tests",
-            "src::config",
+            "src::agent_registry",
             "src::domain",
-            "src::agent_registry"
+            "src::config"
           ]
         }
       ],
-      "violations_count": 20
+      "violations_count": 19
     },
     {
       "name": "open_closed",
       "description": "Соотношение абстракций >= 20% (OCP)",
       "status": "WARNING",
       "abstractions": 6,
-      "implementations": 160,
-      "ratio": 0.036,
+      "implementations": 158,
+      "ratio": 0.037,
       "threshold": 0.2,
-      "issue": "Низкое соотношение абстракций (3.61%) - плохая расширяемость"
+      "issue": "Низкое соотношение абстракций (3.66%) - плохая расширяемость"
     },
     {
       "name": "liskov_substitution",
