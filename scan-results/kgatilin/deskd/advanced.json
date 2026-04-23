@@ -34,9 +34,9 @@
       "name": "modularity",
       "description": "Модульность графа должна быть >= 0.3",
       "status": "PASSED",
-      "modularity": 0.486,
+      "modularity": 0.487,
       "threshold": 0.3,
-      "communities_count": 19
+      "communities_count": 18
     },
     {
       "name": "abstractness",
@@ -615,110 +615,110 @@
           "component": "tests",
           "impact_radius": 58,
           "sample_dependents": [
-            "src::app::timeout_sweep",
-            "src::app::commands::agent",
-            "src::app::commands::a2a",
+            "src::app::worker",
+            "src::app::commands::usage",
+            "src::app::mcp",
             "src::app::serve",
-            "src::app::adapters"
+            "src::app::graph"
           ]
         },
         {
           "component": "task",
           "impact_radius": 53,
           "sample_dependents": [
-            "src::app::timeout_sweep",
-            "src::ports::bus",
-            "src::app::commands::agent",
-            "src::app",
-            "src::app::commands::a2a"
+            "src::app::worker",
+            "src::app::commands::usage",
+            "src::domain::workitem",
+            "src::app::mcp",
+            "src::app::serve"
           ]
         },
         {
           "component": "agent",
           "impact_radius": 52,
           "sample_dependents": [
-            "src::app::timeout_sweep",
-            "src::ports::bus",
-            "src::app::commands::agent",
-            "src::app",
-            "src::app::commands::a2a"
+            "src::app::worker",
+            "src::app::commands::usage",
+            "src::domain::workitem",
+            "src::app::mcp",
+            "src::app::serve"
           ]
         },
         {
           "component": "context",
           "impact_radius": 52,
           "sample_dependents": [
-            "src::app::timeout_sweep",
-            "src::ports::bus",
-            "src::app::commands::agent",
-            "src::app",
-            "src::app::commands::a2a"
+            "src::app::worker",
+            "src::app::commands::usage",
+            "src::domain::workitem",
+            "src::app::mcp",
+            "src::app::serve"
           ]
         },
         {
           "component": "message",
           "impact_radius": 51,
           "sample_dependents": [
-            "src::app::timeout_sweep",
-            "src::ports::bus",
-            "src::app::commands::agent",
-            "src::app",
-            "src::app::commands::a2a"
+            "src::app::worker",
+            "src::app::commands::usage",
+            "src::domain::workitem",
+            "src::app::mcp",
+            "src::app::serve"
           ]
         },
         {
           "component": "statemachine",
           "impact_radius": 51,
           "sample_dependents": [
-            "src::app::timeout_sweep",
-            "src::ports::bus",
-            "src::app::commands::agent",
-            "src::app",
-            "src::app::commands::a2a"
+            "src::app::worker",
+            "src::app::commands::usage",
+            "src::domain::workitem",
+            "src::app::mcp",
+            "src::app::serve"
           ]
         },
         {
           "component": "config_types",
           "impact_radius": 46,
           "sample_dependents": [
-            "src::app::timeout_sweep",
-            "src::ports::bus",
-            "src::app::commands::agent",
-            "src::app::commands::a2a",
-            "src::app::serve"
+            "src::app::worker",
+            "src::domain::workitem",
+            "src::app::mcp",
+            "src::app::serve",
+            "src::ports::bus_wire"
           ]
         },
         {
           "component": "events",
           "impact_radius": 46,
           "sample_dependents": [
-            "src::app::timeout_sweep",
-            "src::ports::bus",
-            "src::app::commands::agent",
-            "src::app::commands::a2a",
-            "src::app::serve"
+            "src::app::worker",
+            "src::domain::workitem",
+            "src::app::mcp",
+            "src::app::serve",
+            "src::ports::bus_wire"
           ]
         },
         {
           "component": "workitem",
           "impact_radius": 46,
           "sample_dependents": [
-            "src::app::timeout_sweep",
-            "src::ports::bus",
-            "src::app::commands::agent",
-            "src::app::commands::a2a",
-            "src::app::serve"
+            "src::app::worker",
+            "src::domain::workitem",
+            "src::app::mcp",
+            "src::app::serve",
+            "src::ports::bus_wire"
           ]
         },
         {
           "component": "src::domain",
           "impact_radius": 45,
           "sample_dependents": [
-            "src::app::timeout_sweep",
-            "src::ports::bus",
-            "src::app::commands::agent",
-            "src::app::commands::a2a",
-            "src::app::serve"
+            "src::app::worker",
+            "src::domain::workitem",
+            "src::app::mcp",
+            "src::app::serve",
+            "src::ports::bus_wire"
           ]
         }
       ],
