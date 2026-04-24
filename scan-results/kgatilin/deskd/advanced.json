@@ -615,110 +615,110 @@
           "component": "tests",
           "impact_radius": 58,
           "sample_dependents": [
-            "src::app::worker",
-            "src::app::commands::usage",
+            "src::app::commands::schedule",
+            "src::app::a2a_server",
+            "src::main",
             "src::app::mcp",
-            "src::app::serve",
-            "src::app::graph"
+            "src::domain::events"
           ]
         },
         {
           "component": "task",
           "impact_radius": 53,
           "sample_dependents": [
-            "src::app::worker",
             "src::app::commands::usage",
-            "src::domain::workitem",
-            "src::app::mcp",
-            "src::app::serve"
+            "src::app::commands::schedule",
+            "src::app::a2a_server",
+            "src::ports::store",
+            "src::app"
           ]
         },
         {
           "component": "agent",
           "impact_radius": 52,
           "sample_dependents": [
-            "src::app::worker",
             "src::app::commands::usage",
-            "src::domain::workitem",
-            "src::app::mcp",
-            "src::app::serve"
+            "src::app::commands::schedule",
+            "src::app::a2a_server",
+            "src::ports::store",
+            "src::app"
           ]
         },
         {
           "component": "context",
           "impact_radius": 52,
           "sample_dependents": [
-            "src::app::worker",
             "src::app::commands::usage",
-            "src::domain::workitem",
-            "src::app::mcp",
-            "src::app::serve"
+            "src::app::commands::schedule",
+            "src::app::a2a_server",
+            "src::ports::store",
+            "src::app"
           ]
         },
         {
           "component": "message",
           "impact_radius": 51,
           "sample_dependents": [
-            "src::app::worker",
             "src::app::commands::usage",
-            "src::domain::workitem",
-            "src::app::mcp",
-            "src::app::serve"
+            "src::app::commands::schedule",
+            "src::app::a2a_server",
+            "src::ports::store",
+            "src::app"
           ]
         },
         {
           "component": "statemachine",
           "impact_radius": 51,
           "sample_dependents": [
-            "src::app::worker",
             "src::app::commands::usage",
-            "src::domain::workitem",
-            "src::app::mcp",
-            "src::app::serve"
+            "src::app::commands::schedule",
+            "src::app::a2a_server",
+            "src::ports::store",
+            "src::app"
           ]
         },
         {
           "component": "config_types",
           "impact_radius": 46,
           "sample_dependents": [
-            "src::app::worker",
-            "src::domain::workitem",
+            "src::app::commands::schedule",
+            "src::ports::store",
             "src::app::mcp",
-            "src::app::serve",
-            "src::ports::bus_wire"
+            "src::ports::bus_wire",
+            "src::domain"
           ]
         },
         {
           "component": "events",
           "impact_radius": 46,
           "sample_dependents": [
-            "src::app::worker",
-            "src::domain::workitem",
+            "src::app::commands::schedule",
+            "src::ports::store",
             "src::app::mcp",
-            "src::app::serve",
-            "src::ports::bus_wire"
+            "src::ports::bus_wire",
+            "src::domain"
           ]
         },
         {
           "component": "workitem",
           "impact_radius": 46,
           "sample_dependents": [
-            "src::app::worker",
-            "src::domain::workitem",
+            "src::app::commands::schedule",
+            "src::ports::store",
             "src::app::mcp",
-            "src::app::serve",
-            "src::ports::bus_wire"
+            "src::ports::bus_wire",
+            "src::domain"
           ]
         },
         {
           "component": "src::domain",
           "impact_radius": 45,
           "sample_dependents": [
-            "src::app::worker",
-            "src::domain::workitem",
+            "src::app::commands::schedule",
+            "src::ports::store",
             "src::app::mcp",
-            "src::app::serve",
-            "src::ports::bus_wire"
+            "src::ports::bus_wire",
+            "src::app::agent_registry"
           ]
         }
       ],

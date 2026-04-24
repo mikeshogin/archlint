@@ -24,93 +24,93 @@
           "package": "src::app",
           "domains_count": 33,
           "domains": [
-            "tasklog",
-            "timeout_sweep",
-            "unified_inbox",
-            "mcp_service",
+            "mcp",
+            "message",
+            "process_builder",
+            "agent_process",
+            "mcp_tools",
             "adapters",
-            "commands",
-            "mcp_protocol",
-            "workflow",
-            "a2a_server",
-            "mcp"
+            "jsonrpc",
+            "a2a",
+            "config_watcher",
+            "worker"
           ]
         },
         {
           "package": "src::app::commands",
           "domains_count": 14,
           "domains": [
-            "bus",
-            "tests",
-            "graph",
-            "schedule",
             "agent",
-            "remind",
-            "status",
             "task",
-            "restart",
-            "a2a"
+            "upgrade",
+            "tui",
+            "tests",
+            "schedule",
+            "usage",
+            "remind",
+            "sm",
+            "restart"
           ]
         },
         {
           "package": "src::infra",
           "domains_count": 9,
           "domains": [
-            "memory_store",
-            "context_store",
-            "bus_server",
             "paths",
-            "task_store",
+            "memory_store",
             "dto",
+            "task_store",
             "unix_bus",
+            "sm_store",
             "memory_bus",
-            "sm_store"
+            "context_store",
+            "bus_server"
           ]
         },
         {
           "package": "src::domain",
           "domains_count": 8,
           "domains": [
-            "message",
-            "workitem",
-            "config_types",
-            "statemachine",
             "agent",
             "task",
-            "context",
-            "events"
+            "workitem",
+            "message",
+            "config_types",
+            "statemachine",
+            "events",
+            "context"
           ]
         },
         {
           "package": "src::lib",
           "domains_count": 5,
           "domains": [
-            "ports",
-            "domain",
-            "infra",
             "config",
-            "app"
+            "ports",
+            "infra",
+            "app",
+            "domain"
           ]
         },
         {
           "package": "src::app::workflow",
           "domains_count": 5,
           "domains": [
-            "src::domain",
             "tests",
+            "src::ports",
             "src::infra",
             "src::app",
-            "src::ports"
+            "src::domain"
           ]
         },
         {
           "package": "src::app::agent",
           "domains_count": 5,
           "domains": [
-            "tests",
             "src::process_builder",
-            "src::agent_process",
+            "tests",
             "src::agent_registry",
+            "src::agent_process",
             "src::ports"
           ]
         },
@@ -120,19 +120,19 @@
           "domains": [
             "src::config",
             "tests",
+            "src::ports",
             "src::infra",
-            "src::app",
-            "src::ports"
+            "src::app"
           ]
         },
         {
           "package": "src::infra::dto",
           "domains_count": 5,
           "domains": [
-            "bus",
-            "instance",
             "task",
             "config",
+            "instance",
+            "bus",
             "context"
           ]
         },
