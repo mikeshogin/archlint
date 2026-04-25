@@ -24,61 +24,61 @@
           "package": "src::app",
           "domains_count": 33,
           "domains": [
-            "mcp",
-            "message",
-            "process_builder",
-            "agent_process",
-            "mcp_tools",
+            "cli",
+            "context",
+            "tasklog",
             "adapters",
             "jsonrpc",
             "a2a",
-            "config_watcher",
-            "worker"
+            "bus",
+            "workflow",
+            "mcp_protocol",
+            "acp"
           ]
         },
         {
           "package": "src::app::commands",
           "domains_count": 14,
           "domains": [
-            "agent",
-            "task",
-            "upgrade",
-            "tui",
-            "tests",
-            "schedule",
             "usage",
+            "tests",
+            "agent",
+            "status",
+            "tui",
+            "task",
+            "bus",
+            "upgrade",
             "remind",
-            "sm",
-            "restart"
+            "sm"
           ]
         },
         {
           "package": "src::infra",
           "domains_count": 9,
           "domains": [
-            "paths",
             "memory_store",
-            "dto",
-            "task_store",
-            "unix_bus",
-            "sm_store",
-            "memory_bus",
+            "bus_server",
             "context_store",
-            "bus_server"
+            "sm_store",
+            "dto",
+            "memory_bus",
+            "task_store",
+            "paths",
+            "unix_bus"
           ]
         },
         {
           "package": "src::domain",
           "domains_count": 8,
           "domains": [
-            "agent",
-            "task",
-            "workitem",
-            "message",
-            "config_types",
             "statemachine",
+            "agent",
             "events",
-            "context"
+            "context",
+            "task",
+            "config_types",
+            "workitem",
+            "message"
           ]
         },
         {
@@ -87,8 +87,8 @@
           "domains": [
             "config",
             "ports",
-            "infra",
             "app",
+            "infra",
             "domain"
           ]
         },
@@ -97,9 +97,9 @@
           "domains_count": 5,
           "domains": [
             "tests",
-            "src::ports",
-            "src::infra",
             "src::app",
+            "src::infra",
+            "src::ports",
             "src::domain"
           ]
         },
@@ -118,22 +118,22 @@
           "package": "src::app::mcp_tools",
           "domains_count": 5,
           "domains": [
-            "src::config",
             "tests",
-            "src::ports",
+            "src::config",
+            "src::app",
             "src::infra",
-            "src::app"
+            "src::ports"
           ]
         },
         {
           "package": "src::infra::dto",
           "domains_count": 5,
           "domains": [
+            "context",
             "task",
             "config",
             "instance",
-            "bus",
-            "context"
+            "bus"
           ]
         },
         {

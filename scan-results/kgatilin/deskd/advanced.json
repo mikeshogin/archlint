@@ -34,9 +34,9 @@
       "name": "modularity",
       "description": "Модульность графа должна быть >= 0.3",
       "status": "PASSED",
-      "modularity": 0.487,
+      "modularity": 0.485,
       "threshold": 0.3,
-      "communities_count": 18
+      "communities_count": 19
     },
     {
       "name": "abstractness",
@@ -615,110 +615,110 @@
           "component": "tests",
           "impact_radius": 58,
           "sample_dependents": [
-            "src::app::commands::schedule",
-            "src::app::a2a_server",
-            "src::main",
-            "src::app::mcp",
-            "src::domain::events"
+            "src::infra::dto::task",
+            "src::app::context",
+            "src::infra::paths",
+            "src::infra::bus_server",
+            "src::app::commands::bus"
           ]
         },
         {
           "component": "task",
           "impact_radius": 53,
           "sample_dependents": [
-            "src::app::commands::usage",
-            "src::app::commands::schedule",
-            "src::app::a2a_server",
-            "src::ports::store",
-            "src::app"
+            "src::infra::dto::task",
+            "src::app::context",
+            "src::infra::bus_server",
+            "src::app::commands::bus",
+            "src::app::commands::sm"
           ]
         },
         {
           "component": "agent",
           "impact_radius": 52,
           "sample_dependents": [
-            "src::app::commands::usage",
-            "src::app::commands::schedule",
-            "src::app::a2a_server",
-            "src::ports::store",
-            "src::app"
+            "src::infra::dto::task",
+            "src::app::context",
+            "src::infra::bus_server",
+            "src::app::commands::bus",
+            "src::app::commands::sm"
           ]
         },
         {
           "component": "context",
           "impact_radius": 52,
           "sample_dependents": [
-            "src::app::commands::usage",
-            "src::app::commands::schedule",
-            "src::app::a2a_server",
-            "src::ports::store",
-            "src::app"
+            "src::infra::dto::task",
+            "src::app::context",
+            "src::infra::bus_server",
+            "src::app::commands::bus",
+            "src::app::commands::sm"
           ]
         },
         {
           "component": "message",
           "impact_radius": 51,
           "sample_dependents": [
-            "src::app::commands::usage",
-            "src::app::commands::schedule",
-            "src::app::a2a_server",
-            "src::ports::store",
-            "src::app"
+            "src::infra::dto::task",
+            "src::app::context",
+            "src::infra::bus_server",
+            "src::app::commands::bus",
+            "src::app::commands::sm"
           ]
         },
         {
           "component": "statemachine",
           "impact_radius": 51,
           "sample_dependents": [
-            "src::app::commands::usage",
-            "src::app::commands::schedule",
-            "src::app::a2a_server",
-            "src::ports::store",
-            "src::app"
+            "src::infra::dto::task",
+            "src::app::context",
+            "src::infra::bus_server",
+            "src::app::commands::bus",
+            "src::app::commands::sm"
           ]
         },
         {
           "component": "config_types",
           "impact_radius": 46,
           "sample_dependents": [
-            "src::app::commands::schedule",
-            "src::ports::store",
-            "src::app::mcp",
-            "src::ports::bus_wire",
-            "src::domain"
+            "src::infra::dto::task",
+            "src::app::context",
+            "src::infra::bus_server",
+            "src::app::commands::bus",
+            "src::app::commands::sm"
           ]
         },
         {
           "component": "events",
           "impact_radius": 46,
           "sample_dependents": [
-            "src::app::commands::schedule",
-            "src::ports::store",
-            "src::app::mcp",
-            "src::ports::bus_wire",
-            "src::domain"
+            "src::infra::dto::task",
+            "src::app::context",
+            "src::infra::bus_server",
+            "src::app::commands::bus",
+            "src::app::commands::sm"
           ]
         },
         {
           "component": "workitem",
           "impact_radius": 46,
           "sample_dependents": [
-            "src::app::commands::schedule",
-            "src::ports::store",
-            "src::app::mcp",
-            "src::ports::bus_wire",
-            "src::domain"
+            "src::infra::dto::task",
+            "src::app::context",
+            "src::infra::bus_server",
+            "src::app::commands::bus",
+            "src::app::commands::sm"
           ]
         },
         {
           "component": "src::domain",
           "impact_radius": 45,
           "sample_dependents": [
-            "src::app::commands::schedule",
-            "src::ports::store",
-            "src::app::mcp",
-            "src::ports::bus_wire",
-            "src::app::agent_registry"
+            "src::infra::dto::task",
+            "src::app::context",
+            "src::infra::bus_server",
+            "src::app::commands::bus",
+            "src::app::commands::sm"
           ]
         }
       ],
