@@ -24,40 +24,40 @@
           "package": "src::main",
           "domains_count": 17,
           "domains": [
-            "file_op",
+            "args",
+            "file_utils",
+            "renderer",
+            "consts",
+            "webdav_fs",
             "archive",
             "listing",
-            "src::args",
-            "src::config",
             "pipe",
-            "src::errors",
-            "renderer",
-            "src::file_op",
-            "consts"
+            "src::config",
+            "src::args"
           ]
         },
         {
           "package": "src::args",
           "domains_count": 7,
           "domains": [
-            "src::listing",
-            "tests",
-            "src::renderer",
-            "RequiredAuthPassword",
-            "AuthParseError",
             "auth",
-            "src::auth"
+            "AuthParseError",
+            "src::renderer",
+            "src::auth",
+            "RequiredAuthPassword",
+            "src::listing",
+            "tests"
           ]
         },
         {
           "package": "src::listing",
           "domains_count": 6,
           "domains": [
-            "src::renderer",
-            "percent_encode_sets",
-            "src::errors",
             "src::percent_encode_sets",
             "src::archive",
+            "percent_encode_sets",
+            "src::errors",
+            "src::renderer",
             "src::auth"
           ]
         },
@@ -65,20 +65,20 @@
           "package": "src::renderer",
           "domains_count": 4,
           "domains": [
-            "tests",
             "src::consts",
             "src::auth",
-            "src::listing"
+            "src::listing",
+            "tests"
           ]
         },
         {
           "package": "tests::navigation",
           "domains_count": 4,
           "domains": [
-            "tests::utils",
-            "tests::fixtures",
             "fixtures",
-            "utils"
+            "utils",
+            "tests::fixtures",
+            "tests::utils"
           ]
         }
       ],
