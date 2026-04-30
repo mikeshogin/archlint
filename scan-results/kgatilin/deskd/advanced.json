@@ -34,9 +34,9 @@
       "name": "modularity",
       "description": "Модульность графа должна быть >= 0.3",
       "status": "PASSED",
-      "modularity": 0.5,
+      "modularity": 0.498,
       "threshold": 0.3,
-      "communities_count": 21
+      "communities_count": 19
     },
     {
       "name": "abstractness",
@@ -619,110 +619,110 @@
           "component": "tests",
           "impact_radius": 66,
           "sample_dependents": [
+            "src::app::graph",
+            "src::app::context_size",
             "src::app::process_builder",
-            "src::app::commands::bus",
-            "src::app::adapters::telegram",
-            "src::infra::paths",
-            "src::config"
+            "src::app::agent_registry",
+            "src::domain::config_types"
           ]
         },
         {
           "component": "context",
           "impact_radius": 60,
           "sample_dependents": [
-            "src::app::commands::agent",
-            "src::domain::workitem",
-            "src::domain",
-            "src::app::process_builder",
-            "src::app::commands::bus"
+            "src::infra::task_store",
+            "src::app::commands::tui",
+            "src::app::acp",
+            "src::app::context_size",
+            "src::app::process_builder"
           ]
         },
         {
           "component": "task",
           "impact_radius": 60,
           "sample_dependents": [
-            "src::app::commands::agent",
-            "src::domain::workitem",
-            "src::domain",
-            "src::app::process_builder",
-            "src::app::commands::bus"
+            "src::infra::task_store",
+            "src::app::commands::tui",
+            "src::app::acp",
+            "src::app::context_size",
+            "src::app::process_builder"
           ]
         },
         {
           "component": "agent",
           "impact_radius": 59,
           "sample_dependents": [
-            "src::app::commands::agent",
-            "src::domain::workitem",
-            "src::domain",
-            "src::app::process_builder",
-            "src::app::commands::bus"
+            "src::infra::task_store",
+            "src::app::commands::tui",
+            "src::app::acp",
+            "src::app::context_size",
+            "src::app::process_builder"
           ]
         },
         {
           "component": "message",
           "impact_radius": 58,
           "sample_dependents": [
-            "src::app::commands::agent",
-            "src::domain::workitem",
-            "src::domain",
-            "src::app::process_builder",
-            "src::app::commands::bus"
+            "src::infra::task_store",
+            "src::app::commands::tui",
+            "src::app::acp",
+            "src::app::context_size",
+            "src::app::process_builder"
           ]
         },
         {
           "component": "statemachine",
           "impact_radius": 58,
           "sample_dependents": [
-            "src::app::commands::agent",
-            "src::domain::workitem",
-            "src::domain",
-            "src::app::process_builder",
-            "src::app::commands::bus"
+            "src::infra::task_store",
+            "src::app::commands::tui",
+            "src::app::acp",
+            "src::app::context_size",
+            "src::app::process_builder"
           ]
         },
         {
           "component": "config_types",
           "impact_radius": 49,
           "sample_dependents": [
-            "src::app::commands::agent",
-            "src::domain::workitem",
-            "src::domain",
+            "src::infra::task_store",
+            "src::app::commands::tui",
+            "src::app::acp",
             "src::app::process_builder",
-            "src::app::commands::bus"
+            "src::app::agent_registry"
           ]
         },
         {
           "component": "events",
           "impact_radius": 49,
           "sample_dependents": [
-            "src::app::commands::agent",
-            "src::domain::workitem",
-            "src::domain",
+            "src::infra::task_store",
+            "src::app::commands::tui",
+            "src::app::acp",
             "src::app::process_builder",
-            "src::app::commands::bus"
+            "src::app::agent_registry"
           ]
         },
         {
           "component": "workitem",
           "impact_radius": 49,
           "sample_dependents": [
-            "src::app::commands::agent",
-            "src::domain::workitem",
-            "src::domain",
+            "src::infra::task_store",
+            "src::app::commands::tui",
+            "src::app::acp",
             "src::app::process_builder",
-            "src::app::commands::bus"
+            "src::app::agent_registry"
           ]
         },
         {
           "component": "src::domain",
           "impact_radius": 48,
           "sample_dependents": [
-            "src::app::commands::agent",
-            "src::domain::workitem",
+            "src::infra::task_store",
+            "src::app::commands::tui",
+            "src::app::acp",
             "src::app::process_builder",
-            "src::app::commands::bus",
-            "src::app::adapters::telegram"
+            "src::app::agent_registry"
           ]
         }
       ],
