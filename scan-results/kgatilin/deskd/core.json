@@ -10,8 +10,8 @@
     "errors": 3
   },
   "graph": {
-    "nodes": 190,
-    "edges": 276
+    "nodes": 193,
+    "edges": 279
   },
   "checks": [
     {
@@ -29,7 +29,7 @@
       "violations": [
         {
           "node": "src::app",
-          "fan_out": 38,
+          "fan_out": 39,
           "threshold": 10
         },
         {
@@ -69,7 +69,7 @@
         {
           "node": "src::app",
           "afferent_coupling": 26,
-          "efferent_coupling": 38,
+          "efferent_coupling": 39,
           "ca_threshold": 10,
           "ce_threshold": 10
         },
@@ -106,7 +106,7 @@
           "node": "src::lib",
           "instability": 1.0,
           "ca": 0,
-          "ce": 5
+          "ce": 6
         },
         {
           "node": "src::bin::session2graph",
@@ -243,9 +243,9 @@
       "hubs": [
         {
           "node": "src::app",
-          "total_degree": 64,
+          "total_degree": 65,
           "in_degree": 26,
-          "out_degree": 38
+          "out_degree": 39
         },
         {
           "node": "src::domain",
@@ -301,7 +301,7 @@
       "name": "strongly_connected_components",
       "description": "Группы с взаимными зависимостями (размер > 1)",
       "status": "PASSED",
-      "total_sccs": 190,
+      "total_sccs": 193,
       "problematic_sccs": [],
       "problematic_count": 0
     },
