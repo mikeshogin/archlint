@@ -34,9 +34,9 @@
       "name": "modularity",
       "description": "Модульность графа должна быть >= 0.3",
       "status": "PASSED",
-      "modularity": 0.574,
+      "modularity": 0.58,
       "threshold": 0.3,
-      "communities_count": 15
+      "communities_count": 16
     },
     {
       "name": "abstractness",
@@ -616,10 +616,10 @@
           "impact_radius": 25,
           "sample_dependents": [
             "src::output::format",
-            "src::export::markup",
-            "src::export::asciidoc",
-            "src::timer::unix_timer",
-            "src::output::warnings"
+            "src::command",
+            "src::export::tests",
+            "src::timer::wall_clock_timer",
+            "src::benchmark::executor"
           ]
         },
         {
@@ -627,10 +627,10 @@
           "impact_radius": 25,
           "sample_dependents": [
             "src::output::format",
-            "src::export::markup",
-            "src::export::asciidoc",
-            "src::timer::unix_timer",
-            "src::output::warnings"
+            "src::command",
+            "src::export::tests",
+            "src::timer::wall_clock_timer",
+            "src::benchmark::executor"
           ]
         },
         {
@@ -638,10 +638,10 @@
           "impact_radius": 25,
           "sample_dependents": [
             "src::output::format",
-            "src::export::markup",
-            "src::export::asciidoc",
-            "src::timer::unix_timer",
-            "src::output::warnings"
+            "src::command",
+            "src::export::tests",
+            "src::timer::wall_clock_timer",
+            "src::benchmark::executor"
           ]
         },
         {
@@ -649,10 +649,10 @@
           "impact_radius": 25,
           "sample_dependents": [
             "src::output::format",
-            "src::export::markup",
-            "src::export::asciidoc",
-            "src::timer::unix_timer",
-            "src::output::warnings"
+            "src::command",
+            "src::export::tests",
+            "src::timer::wall_clock_timer",
+            "src::benchmark::executor"
           ]
         },
         {
@@ -660,10 +660,10 @@
           "impact_radius": 25,
           "sample_dependents": [
             "src::output::format",
-            "src::export::markup",
-            "src::export::asciidoc",
-            "src::timer::unix_timer",
-            "src::output::warnings"
+            "src::command",
+            "src::export::tests",
+            "src::timer::wall_clock_timer",
+            "src::benchmark::executor"
           ]
         },
         {
@@ -671,10 +671,10 @@
           "impact_radius": 24,
           "sample_dependents": [
             "src::output::format",
-            "src::export::markup",
-            "src::export::asciidoc",
-            "src::timer::unix_timer",
-            "src::output::warnings"
+            "src::command",
+            "src::export::tests",
+            "src::timer::wall_clock_timer",
+            "src::benchmark::executor"
           ]
         }
       ],
