@@ -11,7 +11,7 @@
   },
   "graph": {
     "nodes": 194,
-    "edges": 279
+    "edges": 281
   },
   "checks": [
     {
@@ -24,16 +24,16 @@
           "package": "src::app",
           "domains_count": 39,
           "domains": [
-            "jsonrpc",
-            "task",
-            "mcp_service",
-            "config_changeset",
+            "doctor",
+            "schedule",
+            "serve",
+            "unified_inbox",
+            "statemachine",
+            "mcp_protocol",
             "bus_api",
-            "context_log",
-            "agent_registry",
-            "message",
-            "agent_process",
-            "adapters"
+            "acp",
+            "context",
+            "jsonrpc"
           ]
         },
         {
@@ -42,30 +42,30 @@
           "domains": [
             "context",
             "bus",
+            "agent",
+            "upgrade",
+            "remind",
+            "usage",
             "doctor",
-            "task",
-            "dashboard",
-            "restart",
-            "tests",
-            "tui",
-            "status",
-            "a2a"
+            "schedule",
+            "sm",
+            "status"
           ]
         },
         {
           "package": "src::infra",
           "domains_count": 11,
           "domains": [
-            "memory_bus",
-            "memory_store",
-            "sm_store",
             "task_store",
-            "diag",
             "unix_bus",
-            "context_store",
+            "memory_bus",
+            "dto",
+            "bus_server",
             "paths",
             "agent_file",
-            "dto"
+            "sm_store",
+            "memory_store",
+            "diag"
           ]
         },
         {
@@ -73,68 +73,68 @@
           "domains_count": 8,
           "domains": [
             "context",
+            "message",
+            "agent",
+            "events",
+            "workitem",
             "config_types",
             "task",
-            "workitem",
-            "statemachine",
-            "events",
-            "message",
-            "agent"
+            "statemachine"
           ]
         },
         {
           "package": "src::lib",
           "domains_count": 6,
           "domains": [
-            "config",
             "infra",
-            "test_support",
-            "app",
             "ports",
-            "domain"
+            "domain",
+            "test_support",
+            "config",
+            "app"
           ]
         },
         {
           "package": "src::app::process_builder",
           "domains_count": 5,
           "domains": [
-            "src::agent_registry",
+            "src::domain",
+            "src::config",
             "src::context_size",
             "tests",
-            "src::domain",
-            "src::config"
+            "src::agent_registry"
           ]
         },
         {
           "package": "src::app::workflow",
           "domains_count": 5,
           "domains": [
-            "src::ports",
             "src::infra",
-            "src::app",
+            "src::domain",
             "tests",
-            "src::domain"
+            "src::ports",
+            "src::app"
           ]
         },
         {
           "package": "src::app::agent",
           "domains_count": 5,
           "domains": [
-            "src::ports",
-            "src::agent_registry",
-            "tests",
             "src::process_builder",
-            "src::agent_process"
+            "src::agent_process",
+            "tests",
+            "src::ports",
+            "src::agent_registry"
           ]
         },
         {
           "package": "src::app::mcp_service",
           "domains_count": 5,
           "domains": [
+            "src::domain",
+            "restart_tests",
             "src::ports",
             "src::app",
-            "restart_tests",
-            "src::domain",
             "src::config"
           ]
         },
@@ -142,15 +142,15 @@
           "package": "src::app::mcp_tools",
           "domains_count": 5,
           "domains": [
-            "src::ports",
             "src::infra",
-            "src::app",
             "tests",
+            "src::ports",
+            "src::app",
             "src::config"
           ]
         }
       ],
-      "violations_count": 20
+      "violations_count": 21
     },
     {
       "name": "open_closed",
