@@ -34,9 +34,9 @@
       "name": "modularity",
       "description": "Модульность графа должна быть >= 0.3",
       "status": "PASSED",
-      "modularity": 0.504,
+      "modularity": 0.503,
       "threshold": 0.3,
-      "communities_count": 21
+      "communities_count": 20
     },
     {
       "name": "abstractness",
@@ -625,110 +625,110 @@
           "component": "tests",
           "impact_radius": 67,
           "sample_dependents": [
-            "src::app::alerts",
             "src::infra::sm_store",
-            "src::app::a2a_server",
-            "src::app::acp",
-            "src::infra::context_store"
+            "src::domain::context",
+            "src::infra::memory_store",
+            "src::app::serve",
+            "src::app::commands::a2a"
           ]
         },
         {
           "component": "context",
           "impact_radius": 60,
           "sample_dependents": [
-            "src::app::alerts",
             "src::infra::sm_store",
-            "src::infra::dto::config",
-            "src::app::a2a_server",
-            "src::app::adapters::telegram"
+            "src::infra::memory_store",
+            "src::app::schedule",
+            "src::app::commands",
+            "src::app::serve"
           ]
         },
         {
           "component": "task",
           "impact_radius": 60,
           "sample_dependents": [
-            "src::app::alerts",
             "src::infra::sm_store",
-            "src::infra::dto::config",
-            "src::app::a2a_server",
-            "src::app::adapters::telegram"
+            "src::infra::memory_store",
+            "src::app::schedule",
+            "src::app::commands",
+            "src::app::serve"
           ]
         },
         {
           "component": "agent",
           "impact_radius": 59,
           "sample_dependents": [
-            "src::app::alerts",
             "src::infra::sm_store",
-            "src::infra::dto::config",
-            "src::app::a2a_server",
-            "src::app::adapters::telegram"
+            "src::infra::memory_store",
+            "src::app::schedule",
+            "src::app::commands",
+            "src::app::serve"
           ]
         },
         {
           "component": "message",
           "impact_radius": 58,
           "sample_dependents": [
-            "src::app::alerts",
             "src::infra::sm_store",
-            "src::infra::dto::config",
-            "src::app::a2a_server",
-            "src::app::adapters::telegram"
+            "src::infra::memory_store",
+            "src::app::schedule",
+            "src::app::serve",
+            "src::app::adapters::discord"
           ]
         },
         {
           "component": "statemachine",
           "impact_radius": 58,
           "sample_dependents": [
-            "src::app::alerts",
             "src::infra::sm_store",
-            "src::infra::dto::config",
-            "src::app::a2a_server",
-            "src::app::adapters::telegram"
+            "src::infra::memory_store",
+            "src::app::schedule",
+            "src::app::serve",
+            "src::app::adapters::discord"
           ]
         },
         {
           "component": "config_types",
           "impact_radius": 49,
           "sample_dependents": [
-            "src::app::alerts",
             "src::infra::sm_store",
-            "src::infra::dto::config",
-            "src::app::adapters::telegram",
-            "src::domain::workitem"
+            "src::infra::memory_store",
+            "src::app::schedule",
+            "src::app::serve",
+            "src::app::adapters::discord"
           ]
         },
         {
           "component": "events",
           "impact_radius": 49,
           "sample_dependents": [
-            "src::app::alerts",
             "src::infra::sm_store",
-            "src::infra::dto::config",
-            "src::app::adapters::telegram",
-            "src::domain::workitem"
+            "src::infra::memory_store",
+            "src::app::schedule",
+            "src::app::serve",
+            "src::app::adapters::discord"
           ]
         },
         {
           "component": "workitem",
           "impact_radius": 49,
           "sample_dependents": [
-            "src::app::alerts",
             "src::infra::sm_store",
-            "src::infra::dto::config",
-            "src::app::adapters::telegram",
-            "src::domain::workitem"
+            "src::infra::memory_store",
+            "src::app::schedule",
+            "src::app::serve",
+            "src::app::adapters::discord"
           ]
         },
         {
           "component": "src::domain",
           "impact_radius": 48,
           "sample_dependents": [
-            "src::app::alerts",
             "src::infra::sm_store",
-            "src::infra::dto::config",
-            "src::app::adapters::telegram",
-            "src::domain::workitem"
+            "src::infra::memory_store",
+            "src::app::schedule",
+            "src::app::serve",
+            "src::app::adapters::discord"
           ]
         }
       ],

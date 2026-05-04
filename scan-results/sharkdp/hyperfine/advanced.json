@@ -34,9 +34,9 @@
       "name": "modularity",
       "description": "Модульность графа должна быть >= 0.3",
       "status": "PASSED",
-      "modularity": 0.575,
+      "modularity": 0.58,
       "threshold": 0.3,
-      "communities_count": 15
+      "communities_count": 16
     },
     {
       "name": "abstractness",
@@ -615,66 +615,66 @@
           "component": "exit_code",
           "impact_radius": 25,
           "sample_dependents": [
+            "src::benchmark::scheduler",
+            "src::parameter",
             "src::output::progress_bar",
-            "src::util",
-            "src::options",
-            "src::benchmark::timing_result",
-            "src::parameter"
+            "src::timer::wall_clock_timer",
+            "src::export::json"
           ]
         },
         {
           "component": "min_max",
           "impact_radius": 25,
           "sample_dependents": [
+            "src::benchmark::scheduler",
+            "src::parameter",
             "src::output::progress_bar",
-            "src::util",
-            "src::options",
-            "src::benchmark::timing_result",
-            "src::parameter"
+            "src::timer::wall_clock_timer",
+            "src::export::json"
           ]
         },
         {
           "component": "number",
           "impact_radius": 25,
           "sample_dependents": [
+            "src::benchmark::scheduler",
+            "src::parameter",
             "src::output::progress_bar",
-            "src::util",
-            "src::options",
-            "src::benchmark::timing_result",
-            "src::parameter"
+            "src::timer::wall_clock_timer",
+            "src::export::json"
           ]
         },
         {
           "component": "randomized_environment_offset",
           "impact_radius": 25,
           "sample_dependents": [
+            "src::benchmark::scheduler",
+            "src::parameter",
             "src::output::progress_bar",
-            "src::util",
-            "src::options",
-            "src::benchmark::timing_result",
-            "src::parameter"
+            "src::timer::wall_clock_timer",
+            "src::export::json"
           ]
         },
         {
           "component": "units",
           "impact_radius": 25,
           "sample_dependents": [
+            "src::benchmark::scheduler",
+            "src::parameter",
             "src::output::progress_bar",
-            "src::util",
-            "src::options",
-            "src::benchmark::timing_result",
-            "src::parameter"
+            "src::timer::wall_clock_timer",
+            "src::export::json"
           ]
         },
         {
           "component": "src::util",
           "impact_radius": 24,
           "sample_dependents": [
-            "src::output::progress_bar",
-            "src::options",
-            "src::benchmark::timing_result",
+            "src::benchmark::scheduler",
             "src::parameter",
-            "src::export::orgmode"
+            "src::output::progress_bar",
+            "src::timer::wall_clock_timer",
+            "src::export::json"
           ]
         }
       ],
