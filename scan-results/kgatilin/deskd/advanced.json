@@ -34,9 +34,9 @@
       "name": "modularity",
       "description": "Модульность графа должна быть >= 0.3",
       "status": "PASSED",
-      "modularity": 0.503,
+      "modularity": 0.502,
       "threshold": 0.3,
-      "communities_count": 20
+      "communities_count": 23
     },
     {
       "name": "abstractness",
@@ -625,110 +625,110 @@
           "component": "tests",
           "impact_radius": 67,
           "sample_dependents": [
-            "src::infra::sm_store",
-            "src::domain::context",
-            "src::infra::memory_store",
-            "src::app::serve",
-            "src::app::commands::a2a"
+            "src::main",
+            "src::domain::task",
+            "src::app::adapters::discord",
+            "src::app::commands::schedule",
+            "src::app::jsonrpc"
           ]
         },
         {
           "component": "context",
           "impact_radius": 60,
           "sample_dependents": [
-            "src::infra::sm_store",
-            "src::infra::memory_store",
-            "src::app::schedule",
-            "src::app::commands",
-            "src::app::serve"
+            "src::app::message",
+            "src::config",
+            "src::infra::dto::instance",
+            "src::app::adapters::discord",
+            "src::app::commands::schedule"
           ]
         },
         {
           "component": "task",
           "impact_radius": 60,
           "sample_dependents": [
-            "src::infra::sm_store",
-            "src::infra::memory_store",
-            "src::app::schedule",
-            "src::app::commands",
-            "src::app::serve"
+            "src::app::message",
+            "src::config",
+            "src::infra::dto::instance",
+            "src::app::adapters::discord",
+            "src::app::commands::schedule"
           ]
         },
         {
           "component": "agent",
           "impact_radius": 59,
           "sample_dependents": [
-            "src::infra::sm_store",
-            "src::infra::memory_store",
-            "src::app::schedule",
-            "src::app::commands",
-            "src::app::serve"
+            "src::app::message",
+            "src::config",
+            "src::infra::dto::instance",
+            "src::app::adapters::discord",
+            "src::app::commands::schedule"
           ]
         },
         {
           "component": "message",
           "impact_radius": 58,
           "sample_dependents": [
-            "src::infra::sm_store",
-            "src::infra::memory_store",
-            "src::app::schedule",
-            "src::app::serve",
-            "src::app::adapters::discord"
+            "src::app::message",
+            "src::config",
+            "src::infra::dto::instance",
+            "src::app::adapters::discord",
+            "src::app::commands::schedule"
           ]
         },
         {
           "component": "statemachine",
           "impact_radius": 58,
           "sample_dependents": [
-            "src::infra::sm_store",
-            "src::infra::memory_store",
-            "src::app::schedule",
-            "src::app::serve",
-            "src::app::adapters::discord"
+            "src::app::message",
+            "src::config",
+            "src::infra::dto::instance",
+            "src::app::adapters::discord",
+            "src::app::commands::schedule"
           ]
         },
         {
           "component": "config_types",
           "impact_radius": 49,
           "sample_dependents": [
-            "src::infra::sm_store",
-            "src::infra::memory_store",
-            "src::app::schedule",
-            "src::app::serve",
-            "src::app::adapters::discord"
+            "src::app::message",
+            "src::config",
+            "src::infra::dto::instance",
+            "src::app::adapters::discord",
+            "src::app::commands::schedule"
           ]
         },
         {
           "component": "events",
           "impact_radius": 49,
           "sample_dependents": [
-            "src::infra::sm_store",
-            "src::infra::memory_store",
-            "src::app::schedule",
-            "src::app::serve",
-            "src::app::adapters::discord"
+            "src::app::message",
+            "src::config",
+            "src::infra::dto::instance",
+            "src::app::adapters::discord",
+            "src::app::commands::schedule"
           ]
         },
         {
           "component": "workitem",
           "impact_radius": 49,
           "sample_dependents": [
-            "src::infra::sm_store",
-            "src::infra::memory_store",
-            "src::app::schedule",
-            "src::app::serve",
-            "src::app::adapters::discord"
+            "src::app::message",
+            "src::config",
+            "src::infra::dto::instance",
+            "src::app::adapters::discord",
+            "src::app::commands::schedule"
           ]
         },
         {
           "component": "src::domain",
           "impact_radius": 48,
           "sample_dependents": [
-            "src::infra::sm_store",
-            "src::infra::memory_store",
-            "src::app::schedule",
-            "src::app::serve",
-            "src::app::adapters::discord"
+            "src::app::message",
+            "src::config",
+            "src::infra::dto::instance",
+            "src::app::adapters::discord",
+            "src::app::commands::schedule"
           ]
         }
       ],
