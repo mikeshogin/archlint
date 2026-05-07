@@ -34,9 +34,9 @@
       "name": "modularity",
       "description": "Модульность графа должна быть >= 0.3",
       "status": "PASSED",
-      "modularity": 0.501,
+      "modularity": 0.5,
       "threshold": 0.3,
-      "communities_count": 21
+      "communities_count": 22
     },
     {
       "name": "abstractness",
@@ -625,110 +625,110 @@
           "component": "tests",
           "impact_radius": 67,
           "sample_dependents": [
-            "src::main",
-            "src::app::a2a_server",
-            "src::app::config_reload",
-            "src::app::commands::dashboard",
-            "src::infra::dto::config"
+            "src::infra::paths",
+            "src::app::timeout_sweep",
+            "src::app::acp",
+            "src::infra::dto::task",
+            "src::app::serve"
           ]
         },
         {
           "component": "context",
           "impact_radius": 60,
           "sample_dependents": [
-            "src::app::a2a_server",
-            "src::app::serve",
-            "src::domain::workitem",
-            "src::app::config_reload",
-            "src::app::commands::dashboard"
+            "src::infra::agent_file",
+            "src::app::agent_registry",
+            "src::app::timeout_sweep",
+            "src::app::acp",
+            "src::infra::dto::task"
           ]
         },
         {
           "component": "task",
           "impact_radius": 60,
           "sample_dependents": [
-            "src::app::a2a_server",
-            "src::app::serve",
-            "src::domain::workitem",
-            "src::app::config_reload",
-            "src::app::commands::dashboard"
+            "src::infra::agent_file",
+            "src::app::agent_registry",
+            "src::app::timeout_sweep",
+            "src::app::acp",
+            "src::infra::dto::task"
           ]
         },
         {
           "component": "agent",
           "impact_radius": 59,
           "sample_dependents": [
-            "src::app::a2a_server",
-            "src::app::serve",
-            "src::domain::workitem",
-            "src::app::config_reload",
-            "src::app::commands::dashboard"
+            "src::infra::agent_file",
+            "src::app::agent_registry",
+            "src::app::timeout_sweep",
+            "src::app::acp",
+            "src::infra::dto::task"
           ]
         },
         {
           "component": "message",
           "impact_radius": 58,
           "sample_dependents": [
-            "src::app::a2a_server",
-            "src::app::serve",
-            "src::domain::workitem",
-            "src::app::config_reload",
-            "src::app::commands::dashboard"
+            "src::infra::agent_file",
+            "src::app::agent_registry",
+            "src::app::timeout_sweep",
+            "src::app::acp",
+            "src::infra::dto::task"
           ]
         },
         {
           "component": "statemachine",
           "impact_radius": 58,
           "sample_dependents": [
-            "src::app::a2a_server",
-            "src::app::serve",
-            "src::domain::workitem",
-            "src::app::config_reload",
-            "src::app::commands::dashboard"
+            "src::infra::agent_file",
+            "src::app::agent_registry",
+            "src::app::timeout_sweep",
+            "src::app::acp",
+            "src::infra::dto::task"
           ]
         },
         {
           "component": "config_types",
           "impact_radius": 49,
           "sample_dependents": [
-            "src::app::serve",
-            "src::domain::workitem",
-            "src::app::config_reload",
-            "src::app::commands::dashboard",
-            "src::infra::dto::config"
+            "src::infra::agent_file",
+            "src::app::agent_registry",
+            "src::app::timeout_sweep",
+            "src::app::acp",
+            "src::infra::dto::task"
           ]
         },
         {
           "component": "events",
           "impact_radius": 49,
           "sample_dependents": [
-            "src::app::serve",
-            "src::domain::workitem",
-            "src::app::config_reload",
-            "src::app::commands::dashboard",
-            "src::infra::dto::config"
+            "src::infra::agent_file",
+            "src::app::agent_registry",
+            "src::app::timeout_sweep",
+            "src::app::acp",
+            "src::infra::dto::task"
           ]
         },
         {
           "component": "workitem",
           "impact_radius": 49,
           "sample_dependents": [
-            "src::app::serve",
-            "src::domain::workitem",
-            "src::app::config_reload",
-            "src::app::commands::dashboard",
-            "src::infra::dto::config"
+            "src::infra::agent_file",
+            "src::app::agent_registry",
+            "src::app::timeout_sweep",
+            "src::app::acp",
+            "src::infra::dto::task"
           ]
         },
         {
           "component": "src::domain",
           "impact_radius": 48,
           "sample_dependents": [
-            "src::app::serve",
-            "src::domain::workitem",
-            "src::app::config_reload",
-            "src::app::commands::dashboard",
-            "src::infra::dto::config"
+            "src::infra::agent_file",
+            "src::app::agent_registry",
+            "src::app::timeout_sweep",
+            "src::app::acp",
+            "src::infra::dto::task"
           ]
         }
       ],

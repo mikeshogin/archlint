@@ -24,61 +24,61 @@
           "package": "src::main",
           "domains_count": 30,
           "domains": [
-            "session",
-            "src::session",
-            "decoder",
-            "nested_json",
-            "content_disposition",
-            "formatting",
-            "netrc",
-            "cli",
+            "src::middleware",
             "download",
-            "auth"
+            "src::utils",
+            "utils",
+            "decoder",
+            "src::cli",
+            "src::buffer",
+            "printer",
+            "cli",
+            "request_items"
           ]
         },
         {
           "package": "tests::cases",
           "domains_count": 6,
           "domains": [
-            "logging",
-            "unix_socket",
+            "auth_message_signature",
             "xml",
             "compress_request_body",
             "download",
-            "auth_message_signature"
+            "unix_socket",
+            "logging"
           ]
         },
         {
           "package": "src::request_items",
           "domains_count": 5,
           "domains": [
-            "tests",
             "RequestItem",
-            "src::cli",
+            "src::nested_json",
             "src::utils",
-            "src::nested_json"
+            "tests",
+            "src::cli"
           ]
         },
         {
           "package": "src::auth",
           "domains_count": 5,
           "domains": [
-            "tests",
-            "src::cli",
             "src::middleware",
             "src::utils",
-            "src::netrc"
+            "tests",
+            "src::netrc",
+            "src::cli"
           ]
         },
         {
           "package": "src::cli",
           "domains_count": 5,
           "domains": [
-            "tests",
-            "src::buffer",
             "src::redacted",
             "src::utils",
-            "src::request_items"
+            "tests",
+            "src::request_items",
+            "src::buffer"
           ]
         },
         {
@@ -97,28 +97,28 @@
           "domains": [
             "src::utils",
             "tests",
-            "src::cli",
-            "src::middleware"
+            "src::middleware",
+            "src::cli"
           ]
         },
         {
           "package": "src::nested_json",
           "domains_count": 4,
           "domains": [
-            "Token",
-            "src::utils",
+            "tests",
             "PathAction",
-            "tests"
+            "src::utils",
+            "Token"
           ]
         },
         {
           "package": "src::download",
           "domains_count": 4,
           "domains": [
-            "src::utils",
-            "tests",
             "src::decoder",
-            "src::content_disposition"
+            "tests",
+            "src::content_disposition",
+            "src::utils"
           ]
         }
       ],
