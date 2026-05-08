@@ -615,66 +615,66 @@
           "component": "exit_code",
           "impact_radius": 25,
           "sample_dependents": [
-            "src::timer",
-            "src::timer::windows_timer",
-            "src::export::tests",
-            "src::timer::wall_clock_timer",
-            "src::options"
+            "src::benchmark::scheduler",
+            "src::parameter::range_step",
+            "src::export::markdown",
+            "src::export",
+            "src::timer::windows_timer"
           ]
         },
         {
           "component": "min_max",
           "impact_radius": 25,
           "sample_dependents": [
-            "src::timer",
-            "src::timer::windows_timer",
-            "src::export::tests",
-            "src::timer::wall_clock_timer",
-            "src::options"
+            "src::benchmark::scheduler",
+            "src::parameter::range_step",
+            "src::export::markdown",
+            "src::export",
+            "src::timer::windows_timer"
           ]
         },
         {
           "component": "number",
           "impact_radius": 25,
           "sample_dependents": [
-            "src::timer",
-            "src::timer::windows_timer",
-            "src::export::tests",
-            "src::timer::wall_clock_timer",
-            "src::options"
+            "src::benchmark::scheduler",
+            "src::parameter::range_step",
+            "src::export::markdown",
+            "src::export",
+            "src::timer::windows_timer"
           ]
         },
         {
           "component": "randomized_environment_offset",
           "impact_radius": 25,
           "sample_dependents": [
-            "src::timer",
-            "src::timer::windows_timer",
-            "src::export::tests",
-            "src::timer::wall_clock_timer",
-            "src::options"
+            "src::benchmark::scheduler",
+            "src::parameter::range_step",
+            "src::export::markdown",
+            "src::export",
+            "src::timer::windows_timer"
           ]
         },
         {
           "component": "units",
           "impact_radius": 25,
           "sample_dependents": [
-            "src::timer",
-            "src::timer::windows_timer",
-            "src::export::tests",
-            "src::timer::wall_clock_timer",
-            "src::options"
+            "src::benchmark::scheduler",
+            "src::parameter::range_step",
+            "src::export::markdown",
+            "src::export",
+            "src::timer::windows_timer"
           ]
         },
         {
           "component": "src::util",
           "impact_radius": 24,
           "sample_dependents": [
-            "src::timer",
-            "src::timer::windows_timer",
-            "src::export::tests",
-            "src::timer::wall_clock_timer",
-            "src::options"
+            "src::benchmark::scheduler",
+            "src::parameter::range_step",
+            "src::export::markdown",
+            "src::export",
+            "src::timer::windows_timer"
           ]
         }
       ],

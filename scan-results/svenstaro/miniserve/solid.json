@@ -24,61 +24,61 @@
           "package": "src::main",
           "domains_count": 17,
           "domains": [
-            "renderer",
-            "auth",
             "src::args",
-            "webdav_fs",
-            "src::config",
-            "consts",
-            "src::file_op",
+            "renderer",
+            "archive",
+            "file_utils",
+            "src::errors",
             "errors",
-            "pipe",
-            "archive"
+            "src::file_op",
+            "args",
+            "config",
+            "pipe"
           ]
         },
         {
           "package": "src::args",
           "domains_count": 7,
           "domains": [
-            "auth",
-            "src::auth",
-            "src::listing",
             "AuthParseError",
-            "src::renderer",
+            "RequiredAuthPassword",
             "tests",
-            "RequiredAuthPassword"
+            "src::auth",
+            "auth",
+            "src::listing",
+            "src::renderer"
           ]
         },
         {
           "package": "src::listing",
           "domains_count": 6,
           "domains": [
+            "src::archive",
+            "src::errors",
+            "src::percent_encode_sets",
             "src::auth",
             "percent_encode_sets",
-            "src::errors",
-            "src::renderer",
-            "src::percent_encode_sets",
-            "src::archive"
+            "src::renderer"
           ]
         },
         {
           "package": "src::renderer",
           "domains_count": 4,
           "domains": [
-            "src::auth",
-            "src::listing",
             "tests",
-            "src::consts"
+            "src::auth",
+            "src::consts",
+            "src::listing"
           ]
         },
         {
           "package": "tests::navigation",
           "domains_count": 4,
           "domains": [
-            "tests::utils",
-            "utils",
             "fixtures",
-            "tests::fixtures"
+            "tests::fixtures",
+            "tests::utils",
+            "utils"
           ]
         }
       ],

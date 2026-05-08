@@ -34,7 +34,7 @@
       "name": "modularity",
       "description": "Модульность графа должна быть >= 0.3",
       "status": "PASSED",
-      "modularity": 0.5,
+      "modularity": 0.502,
       "threshold": 0.3,
       "communities_count": 22
     },
@@ -625,110 +625,110 @@
           "component": "tests",
           "impact_radius": 67,
           "sample_dependents": [
-            "src::infra::paths",
-            "src::app::timeout_sweep",
-            "src::app::acp",
-            "src::infra::dto::task",
-            "src::app::serve"
+            "src::app::agent",
+            "src::app::jsonrpc",
+            "src::app::commands::sm",
+            "src::app::tasklog",
+            "src::app::a2a_jwt"
           ]
         },
         {
           "component": "context",
           "impact_radius": 60,
           "sample_dependents": [
-            "src::infra::agent_file",
+            "src::infra::dto::config",
             "src::app::agent_registry",
-            "src::app::timeout_sweep",
-            "src::app::acp",
-            "src::infra::dto::task"
+            "src::infra::dto",
+            "src::app::commands::sm",
+            "src::infra::memory_bus"
           ]
         },
         {
           "component": "task",
           "impact_radius": 60,
           "sample_dependents": [
-            "src::infra::agent_file",
+            "src::infra::dto::config",
             "src::app::agent_registry",
-            "src::app::timeout_sweep",
-            "src::app::acp",
-            "src::infra::dto::task"
+            "src::infra::dto",
+            "src::app::commands::sm",
+            "src::infra::memory_bus"
           ]
         },
         {
           "component": "agent",
           "impact_radius": 59,
           "sample_dependents": [
-            "src::infra::agent_file",
+            "src::infra::dto::config",
             "src::app::agent_registry",
-            "src::app::timeout_sweep",
-            "src::app::acp",
-            "src::infra::dto::task"
+            "src::app::commands::sm",
+            "src::infra::memory_bus",
+            "src::app"
           ]
         },
         {
           "component": "message",
           "impact_radius": 58,
           "sample_dependents": [
-            "src::infra::agent_file",
+            "src::infra::dto::config",
             "src::app::agent_registry",
-            "src::app::timeout_sweep",
-            "src::app::acp",
-            "src::infra::dto::task"
+            "src::app::commands::sm",
+            "src::infra::memory_bus",
+            "src::app"
           ]
         },
         {
           "component": "statemachine",
           "impact_radius": 58,
           "sample_dependents": [
-            "src::infra::agent_file",
+            "src::infra::dto::config",
             "src::app::agent_registry",
-            "src::app::timeout_sweep",
-            "src::app::acp",
-            "src::infra::dto::task"
+            "src::app::commands::sm",
+            "src::infra::memory_bus",
+            "src::app"
           ]
         },
         {
           "component": "config_types",
           "impact_radius": 49,
           "sample_dependents": [
-            "src::infra::agent_file",
+            "src::infra::dto::config",
             "src::app::agent_registry",
-            "src::app::timeout_sweep",
-            "src::app::acp",
-            "src::infra::dto::task"
+            "src::app::commands::sm",
+            "src::infra::memory_bus",
+            "src::config"
           ]
         },
         {
           "component": "events",
           "impact_radius": 49,
           "sample_dependents": [
-            "src::infra::agent_file",
+            "src::infra::dto::config",
             "src::app::agent_registry",
-            "src::app::timeout_sweep",
-            "src::app::acp",
-            "src::infra::dto::task"
+            "src::app::commands::sm",
+            "src::infra::memory_bus",
+            "src::config"
           ]
         },
         {
           "component": "workitem",
           "impact_radius": 49,
           "sample_dependents": [
-            "src::infra::agent_file",
+            "src::infra::dto::config",
             "src::app::agent_registry",
-            "src::app::timeout_sweep",
-            "src::app::acp",
-            "src::infra::dto::task"
+            "src::app::commands::sm",
+            "src::infra::memory_bus",
+            "src::config"
           ]
         },
         {
           "component": "src::domain",
           "impact_radius": 48,
           "sample_dependents": [
-            "src::infra::agent_file",
+            "src::infra::dto::config",
             "src::app::agent_registry",
-            "src::app::timeout_sweep",
-            "src::app::acp",
-            "src::infra::dto::task"
+            "src::app::commands::sm",
+            "src::infra::memory_bus",
+            "src::config"
           ]
         }
       ],
