@@ -34,9 +34,9 @@
       "name": "modularity",
       "description": "Модульность графа должна быть >= 0.3",
       "status": "PASSED",
-      "modularity": 0.502,
+      "modularity": 0.501,
       "threshold": 0.3,
-      "communities_count": 22
+      "communities_count": 21
     },
     {
       "name": "abstractness",
@@ -625,110 +625,110 @@
           "component": "tests",
           "impact_radius": 67,
           "sample_dependents": [
-            "src::app::agent",
-            "src::app::jsonrpc",
-            "src::app::commands::sm",
-            "src::app::tasklog",
-            "src::app::a2a_jwt"
+            "src::app::context_log",
+            "src::bin::session2graph",
+            "src::infra::dto::instance",
+            "src::infra::memory_bus",
+            "src::app::commands"
           ]
         },
         {
           "component": "context",
           "impact_radius": 60,
           "sample_dependents": [
-            "src::infra::dto::config",
-            "src::app::agent_registry",
-            "src::infra::dto",
-            "src::app::commands::sm",
-            "src::infra::memory_bus"
+            "src::app::mcp_service",
+            "src::infra::dto::instance",
+            "src::infra::memory_bus",
+            "src::infra::context_store",
+            "src::app::commands"
           ]
         },
         {
           "component": "task",
           "impact_radius": 60,
           "sample_dependents": [
-            "src::infra::dto::config",
-            "src::app::agent_registry",
-            "src::infra::dto",
-            "src::app::commands::sm",
-            "src::infra::memory_bus"
+            "src::app::mcp_service",
+            "src::infra::dto::instance",
+            "src::infra::memory_bus",
+            "src::infra::context_store",
+            "src::app::commands"
           ]
         },
         {
           "component": "agent",
           "impact_radius": 59,
           "sample_dependents": [
-            "src::infra::dto::config",
-            "src::app::agent_registry",
-            "src::app::commands::sm",
+            "src::app::mcp_service",
+            "src::infra::dto::instance",
             "src::infra::memory_bus",
-            "src::app"
+            "src::infra::context_store",
+            "src::app::commands"
           ]
         },
         {
           "component": "message",
           "impact_radius": 58,
           "sample_dependents": [
-            "src::infra::dto::config",
-            "src::app::agent_registry",
-            "src::app::commands::sm",
+            "src::app::mcp_service",
+            "src::infra::dto::instance",
             "src::infra::memory_bus",
-            "src::app"
+            "src::infra::context_store",
+            "src::infra::dto::config"
           ]
         },
         {
           "component": "statemachine",
           "impact_radius": 58,
           "sample_dependents": [
-            "src::infra::dto::config",
-            "src::app::agent_registry",
-            "src::app::commands::sm",
+            "src::app::mcp_service",
+            "src::infra::dto::instance",
             "src::infra::memory_bus",
-            "src::app"
+            "src::infra::context_store",
+            "src::infra::dto::config"
           ]
         },
         {
           "component": "config_types",
           "impact_radius": 49,
           "sample_dependents": [
-            "src::infra::dto::config",
-            "src::app::agent_registry",
-            "src::app::commands::sm",
+            "src::app::mcp_service",
+            "src::infra::dto::instance",
             "src::infra::memory_bus",
-            "src::config"
+            "src::infra::context_store",
+            "src::infra::dto::config"
           ]
         },
         {
           "component": "events",
           "impact_radius": 49,
           "sample_dependents": [
-            "src::infra::dto::config",
-            "src::app::agent_registry",
-            "src::app::commands::sm",
+            "src::app::mcp_service",
+            "src::infra::dto::instance",
             "src::infra::memory_bus",
-            "src::config"
+            "src::infra::context_store",
+            "src::infra::dto::config"
           ]
         },
         {
           "component": "workitem",
           "impact_radius": 49,
           "sample_dependents": [
-            "src::infra::dto::config",
-            "src::app::agent_registry",
-            "src::app::commands::sm",
+            "src::app::mcp_service",
+            "src::infra::dto::instance",
             "src::infra::memory_bus",
-            "src::config"
+            "src::infra::context_store",
+            "src::infra::dto::config"
           ]
         },
         {
           "component": "src::domain",
           "impact_radius": 48,
           "sample_dependents": [
-            "src::infra::dto::config",
-            "src::app::agent_registry",
-            "src::app::commands::sm",
+            "src::app::mcp_service",
+            "src::infra::dto::instance",
             "src::infra::memory_bus",
-            "src::config"
+            "src::infra::context_store",
+            "src::infra::dto::config"
           ]
         }
       ],
