@@ -626,110 +626,110 @@
           "component": "tests",
           "impact_radius": 77,
           "sample_dependents": [
-            "src::app::mcp_protocol",
-            "src::app::timeout_sweep",
-            "src::app::tasklog",
-            "src::domain::statemachine",
-            "src::app::unified_inbox"
+            "src::infra::dto::task",
+            "src::app::adapters::web::middleware::rate_limit",
+            "src::infra::task_store",
+            "src::app::process_builder",
+            "src::app::tasklog"
           ]
         },
         {
           "component": "context",
           "impact_radius": 65,
           "sample_dependents": [
-            "src::app",
+            "src::ports::bus_wire",
+            "src::infra::dto::task",
             "src::ports::store",
-            "src::app::timeout_sweep",
-            "src::app::adapters::web::routes::logout",
-            "src::app::commands::doctor"
+            "src::app::bus",
+            "src::app::message"
           ]
         },
         {
           "component": "task",
           "impact_radius": 65,
           "sample_dependents": [
-            "src::app",
+            "src::ports::bus_wire",
+            "src::infra::dto::task",
             "src::ports::store",
-            "src::app::timeout_sweep",
-            "src::app::adapters::web::routes::logout",
-            "src::app::commands::doctor"
+            "src::app::bus",
+            "src::app::message"
           ]
         },
         {
           "component": "agent",
           "impact_radius": 64,
           "sample_dependents": [
-            "src::app",
+            "src::ports::bus_wire",
+            "src::infra::dto::task",
             "src::ports::store",
-            "src::app::timeout_sweep",
-            "src::app::adapters::web::routes::logout",
-            "src::app::commands::doctor"
+            "src::app::bus",
+            "src::app::message"
           ]
         },
         {
           "component": "message",
           "impact_radius": 63,
           "sample_dependents": [
-            "src::app::commands::schedule",
-            "src::app::adapters::telegram",
-            "src::app",
+            "src::ports::bus_wire",
+            "src::infra::dto::task",
+            "src::app::doctor",
             "src::ports::store",
-            "src::app::bus_api"
+            "src::infra::bus_server"
           ]
         },
         {
           "component": "statemachine",
           "impact_radius": 63,
           "sample_dependents": [
-            "src::app::commands::schedule",
-            "src::app::adapters::telegram",
-            "src::app",
+            "src::ports::bus_wire",
+            "src::infra::dto::task",
+            "src::app::doctor",
             "src::ports::store",
-            "src::app::bus_api"
+            "src::infra::bus_server"
           ]
         },
         {
           "component": "config_types",
           "impact_radius": 51,
           "sample_dependents": [
-            "src::app::commands::schedule",
-            "src::app::adapters::telegram",
+            "src::ports::bus_wire",
+            "src::infra::dto::task",
             "src::ports::store",
-            "src::app::bus_api",
-            "src::app::timeout_sweep"
+            "src::infra::bus_server",
+            "src::app::bus"
           ]
         },
         {
           "component": "events",
           "impact_radius": 51,
           "sample_dependents": [
-            "src::app::commands::schedule",
-            "src::app::adapters::telegram",
+            "src::ports::bus_wire",
+            "src::infra::dto::task",
             "src::ports::store",
-            "src::app::bus_api",
-            "src::app::timeout_sweep"
+            "src::infra::bus_server",
+            "src::app::bus"
           ]
         },
         {
           "component": "workitem",
           "impact_radius": 51,
           "sample_dependents": [
-            "src::app::commands::schedule",
-            "src::app::adapters::telegram",
+            "src::ports::bus_wire",
+            "src::infra::dto::task",
             "src::ports::store",
-            "src::app::bus_api",
-            "src::app::timeout_sweep"
+            "src::infra::bus_server",
+            "src::app::bus"
           ]
         },
         {
           "component": "src::domain",
           "impact_radius": 50,
           "sample_dependents": [
-            "src::app::commands::schedule",
-            "src::app::adapters::telegram",
+            "src::ports::bus_wire",
+            "src::infra::dto::task",
             "src::ports::store",
-            "src::app::bus_api",
-            "src::app::timeout_sweep"
+            "src::infra::bus_server",
+            "src::app::bus"
           ]
         }
       ],
