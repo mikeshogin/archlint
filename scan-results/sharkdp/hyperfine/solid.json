@@ -24,14 +24,14 @@
           "package": "src::export",
           "domains_count": 15,
           "domains": [
-            "asciidoc",
-            "src::util",
-            "markup",
-            "json",
-            "src::asciidoc",
-            "csv",
             "src::orgmode",
-            "src::benchmark",
+            "tests",
+            "src::util",
+            "src::json",
+            "src::markdown",
+            "asciidoc",
+            "csv",
+            "src::csv",
             "src::options",
             "markdown"
           ]
@@ -40,32 +40,32 @@
           "package": "src::benchmark",
           "domains_count": 12,
           "domains": [
-            "src::executor",
-            "src::util",
-            "scheduler",
             "executor",
-            "src::outlier_detection",
-            "src::options",
-            "benchmark_result",
-            "timing_result",
+            "src::util",
             "src::parameter",
-            "relative_speed"
+            "src::outlier_detection",
+            "timing_result",
+            "src::options",
+            "src::command",
+            "src::output",
+            "src::executor",
+            "benchmark_result"
           ]
         },
         {
           "package": "src::main",
           "domains_count": 11,
           "domains": [
-            "outlier_detection",
-            "error",
-            "parameter",
-            "output",
-            "export",
+            "timer",
             "options",
             "benchmark",
+            "parameter",
+            "export",
+            "error",
+            "outlier_detection",
+            "util",
             "cli",
-            "command",
-            "timer"
+            "output"
           ]
         },
         {
@@ -74,34 +74,34 @@
           "domains": [
             "nix",
             "unix_timer",
+            "src::util",
             "windows_timer",
-            "wall_clock_timer",
             "windows_sys",
-            "src::util"
+            "wall_clock_timer"
           ]
         },
         {
           "package": "src::benchmark::executor",
           "domains_count": 6,
           "domains": [
-            "src::timing_result",
-            "src::timer",
-            "src::command",
+            "src::util",
             "src::options",
-            "src::output",
-            "src::util"
+            "src::timer",
+            "src::timing_result",
+            "src::command",
+            "src::output"
           ]
         },
         {
           "package": "src::benchmark::scheduler",
           "domains_count": 6,
           "domains": [
+            "src::cli",
             "src::export",
             "src::benchmark_result",
-            "src::executor",
             "src::options",
-            "src::cli",
-            "src::command"
+            "src::command",
+            "src::executor"
           ]
         },
         {
@@ -109,41 +109,41 @@
           "domains_count": 5,
           "domains": [
             "randomized_environment_offset",
-            "number",
+            "min_max",
             "units",
             "exit_code",
-            "min_max"
+            "number"
           ]
         },
         {
           "package": "src::export::markup",
           "domains_count": 5,
           "domains": [
+            "src::util",
             "src::Exporter",
             "src::options",
-            "src::benchmark",
             "src::output",
-            "src::util"
+            "src::benchmark"
           ]
         },
         {
           "package": "src::export::tests",
           "domains_count": 4,
           "domains": [
-            "src::export",
-            "src::util",
             "src::Exporter",
-            "src::benchmark"
+            "src::export",
+            "src::benchmark",
+            "src::util"
           ]
         },
         {
           "package": "src::export::csv",
           "domains_count": 4,
           "domains": [
-            "src::util",
             "src::Exporter",
             "src::options",
-            "src::benchmark"
+            "src::benchmark",
+            "src::util"
           ]
         }
       ],
