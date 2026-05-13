@@ -34,9 +34,9 @@
       "name": "modularity",
       "description": "Модульность графа должна быть >= 0.3",
       "status": "PASSED",
-      "modularity": 0.55,
+      "modularity": 0.549,
       "threshold": 0.3,
-      "communities_count": 27
+      "communities_count": 28
     },
     {
       "name": "abstractness",
@@ -626,21 +626,21 @@
           "component": "tests",
           "impact_radius": 77,
           "sample_dependents": [
-            "src::app::config_watcher",
+            "src::app::process_builder",
             "src::app::acp",
-            "src::bin::session2graph",
-            "src::infra::dto::bus",
-            "src::app::adapters::web::templates"
+            "src::app::adapters::web::state",
+            "src::app::context_log",
+            "src::app::commands::a2a"
           ]
         },
         {
           "component": "context",
           "impact_radius": 65,
           "sample_dependents": [
+            "src::app::process_builder",
+            "src::ports::store",
             "src::app::acp",
-            "src::infra::dto::bus",
-            "src::app::adapters::web::routes::dashboard",
-            "src::app::commands::usage",
+            "src::app::adapters::web::state",
             "src::app::commands::a2a"
           ]
         },
@@ -648,10 +648,10 @@
           "component": "task",
           "impact_radius": 65,
           "sample_dependents": [
+            "src::app::process_builder",
+            "src::ports::store",
             "src::app::acp",
-            "src::infra::dto::bus",
-            "src::app::adapters::web::routes::dashboard",
-            "src::app::commands::usage",
+            "src::app::adapters::web::state",
             "src::app::commands::a2a"
           ]
         },
@@ -659,10 +659,10 @@
           "component": "agent",
           "impact_radius": 64,
           "sample_dependents": [
+            "src::app::process_builder",
+            "src::ports::store",
             "src::app::acp",
-            "src::infra::dto::bus",
-            "src::app::adapters::web::routes::dashboard",
-            "src::app::commands::usage",
+            "src::app::adapters::web::state",
             "src::app::commands::a2a"
           ]
         },
@@ -670,66 +670,66 @@
           "component": "message",
           "impact_radius": 63,
           "sample_dependents": [
-            "src::infra::memory_bus",
-            "src::app::config_changeset",
-            "src::app::acp",
+            "src::infra::sm_store",
             "src::app::process_builder",
-            "src::app::agent_process"
+            "src::ports::store",
+            "src::app::acp",
+            "src::app::adapters::web::state"
           ]
         },
         {
           "component": "statemachine",
           "impact_radius": 63,
           "sample_dependents": [
-            "src::infra::memory_bus",
-            "src::app::config_changeset",
-            "src::app::acp",
+            "src::infra::sm_store",
             "src::app::process_builder",
-            "src::app::agent_process"
+            "src::ports::store",
+            "src::app::acp",
+            "src::app::adapters::web::state"
           ]
         },
         {
           "component": "config_types",
           "impact_radius": 51,
           "sample_dependents": [
-            "src::infra::memory_bus",
-            "src::app::config_changeset",
-            "src::app::acp",
+            "src::infra::sm_store",
             "src::app::process_builder",
-            "src::app::agent_process"
+            "src::ports::store",
+            "src::app::acp",
+            "src::app::adapters::web::state"
           ]
         },
         {
           "component": "events",
           "impact_radius": 51,
           "sample_dependents": [
-            "src::infra::memory_bus",
-            "src::app::config_changeset",
-            "src::app::acp",
+            "src::infra::sm_store",
             "src::app::process_builder",
-            "src::app::agent_process"
+            "src::ports::store",
+            "src::app::acp",
+            "src::app::adapters::web::state"
           ]
         },
         {
           "component": "workitem",
           "impact_radius": 51,
           "sample_dependents": [
-            "src::infra::memory_bus",
-            "src::app::config_changeset",
-            "src::app::acp",
+            "src::infra::sm_store",
             "src::app::process_builder",
-            "src::app::agent_process"
+            "src::ports::store",
+            "src::app::acp",
+            "src::app::adapters::web::state"
           ]
         },
         {
           "component": "src::domain",
           "impact_radius": 50,
           "sample_dependents": [
-            "src::infra::memory_bus",
-            "src::app::config_changeset",
-            "src::app::acp",
+            "src::infra::sm_store",
             "src::app::process_builder",
-            "src::app::agent_process"
+            "src::ports::store",
+            "src::app::acp",
+            "src::app::adapters::web::state"
           ]
         }
       ],

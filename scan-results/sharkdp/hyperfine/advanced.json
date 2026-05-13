@@ -34,9 +34,9 @@
       "name": "modularity",
       "description": "Модульность графа должна быть >= 0.3",
       "status": "PASSED",
-      "modularity": 0.58,
+      "modularity": 0.577,
       "threshold": 0.3,
-      "communities_count": 16
+      "communities_count": 15
     },
     {
       "name": "abstractness",
@@ -615,66 +615,66 @@
           "component": "exit_code",
           "impact_radius": 25,
           "sample_dependents": [
+            "src::export::orgmode",
+            "src::options",
+            "src::export",
             "src::output::warnings",
-            "src::util",
-            "src::timer",
-            "src::benchmark::timing_result",
-            "src::command"
+            "src::export::asciidoc"
           ]
         },
         {
           "component": "min_max",
           "impact_radius": 25,
           "sample_dependents": [
+            "src::export::orgmode",
+            "src::options",
+            "src::export",
             "src::output::warnings",
-            "src::util",
-            "src::timer",
-            "src::benchmark::timing_result",
-            "src::command"
+            "src::export::asciidoc"
           ]
         },
         {
           "component": "number",
           "impact_radius": 25,
           "sample_dependents": [
+            "src::export::orgmode",
+            "src::options",
+            "src::export",
             "src::output::warnings",
-            "src::util",
-            "src::timer",
-            "src::benchmark::timing_result",
-            "src::command"
+            "src::export::asciidoc"
           ]
         },
         {
           "component": "randomized_environment_offset",
           "impact_radius": 25,
           "sample_dependents": [
+            "src::export::orgmode",
+            "src::options",
+            "src::export",
             "src::output::warnings",
-            "src::util",
-            "src::timer",
-            "src::benchmark::timing_result",
-            "src::command"
+            "src::export::asciidoc"
           ]
         },
         {
           "component": "units",
           "impact_radius": 25,
           "sample_dependents": [
+            "src::export::orgmode",
+            "src::options",
+            "src::export",
             "src::output::warnings",
-            "src::util",
-            "src::timer",
-            "src::benchmark::timing_result",
-            "src::command"
+            "src::export::asciidoc"
           ]
         },
         {
           "component": "src::util",
           "impact_radius": 24,
           "sample_dependents": [
+            "src::export::orgmode",
+            "src::options",
+            "src::export",
             "src::output::warnings",
-            "src::timer",
-            "src::benchmark::timing_result",
-            "src::command",
-            "src::timer::wall_clock_timer"
+            "src::export::asciidoc"
           ]
         }
       ],
