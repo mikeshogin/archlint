@@ -34,7 +34,7 @@
       "name": "modularity",
       "description": "Модульность графа должна быть >= 0.3",
       "status": "PASSED",
-      "modularity": 0.549,
+      "modularity": 0.548,
       "threshold": 0.3,
       "communities_count": 28
     },
@@ -626,110 +626,110 @@
           "component": "tests",
           "impact_radius": 77,
           "sample_dependents": [
-            "src::app::process_builder",
-            "src::app::acp",
-            "src::app::adapters::web::state",
-            "src::app::context_log",
-            "src::app::commands::a2a"
+            "src::app::commands::schedule",
+            "src::domain::agent",
+            "src::app::schedule",
+            "src::app::mcp_protocol",
+            "src::app::timeout_sweep"
           ]
         },
         {
           "component": "context",
           "impact_radius": 65,
           "sample_dependents": [
-            "src::app::process_builder",
-            "src::ports::store",
-            "src::app::acp",
-            "src::app::adapters::web::state",
-            "src::app::commands::a2a"
+            "src::app::commands::schedule",
+            "src::infra::dto::context",
+            "src::app::schedule",
+            "src::app::timeout_sweep",
+            "src::app::commands::remind"
           ]
         },
         {
           "component": "task",
           "impact_radius": 65,
           "sample_dependents": [
-            "src::app::process_builder",
-            "src::ports::store",
-            "src::app::acp",
-            "src::app::adapters::web::state",
-            "src::app::commands::a2a"
+            "src::app::commands::schedule",
+            "src::infra::dto::context",
+            "src::app::schedule",
+            "src::app::timeout_sweep",
+            "src::app::commands::remind"
           ]
         },
         {
           "component": "agent",
           "impact_radius": 64,
           "sample_dependents": [
-            "src::app::process_builder",
-            "src::ports::store",
-            "src::app::acp",
-            "src::app::adapters::web::state",
-            "src::app::commands::a2a"
+            "src::app::commands::schedule",
+            "src::infra::dto::context",
+            "src::app::schedule",
+            "src::app::timeout_sweep",
+            "src::app::commands::remind"
           ]
         },
         {
           "component": "message",
           "impact_radius": 63,
           "sample_dependents": [
-            "src::infra::sm_store",
-            "src::app::process_builder",
-            "src::ports::store",
-            "src::app::acp",
-            "src::app::adapters::web::state"
+            "src::app::message",
+            "src::app::commands::schedule",
+            "src::infra::dto::context",
+            "src::app::schedule",
+            "src::app::config_changeset"
           ]
         },
         {
           "component": "statemachine",
           "impact_radius": 63,
           "sample_dependents": [
-            "src::infra::sm_store",
-            "src::app::process_builder",
-            "src::ports::store",
-            "src::app::acp",
-            "src::app::adapters::web::state"
+            "src::app::message",
+            "src::app::commands::schedule",
+            "src::infra::dto::context",
+            "src::app::schedule",
+            "src::app::config_changeset"
           ]
         },
         {
           "component": "config_types",
           "impact_radius": 51,
           "sample_dependents": [
-            "src::infra::sm_store",
-            "src::app::process_builder",
-            "src::ports::store",
-            "src::app::acp",
-            "src::app::adapters::web::state"
+            "src::app::message",
+            "src::app::commands::schedule",
+            "src::infra::dto::context",
+            "src::app::schedule",
+            "src::app::timeout_sweep"
           ]
         },
         {
           "component": "events",
           "impact_radius": 51,
           "sample_dependents": [
-            "src::infra::sm_store",
-            "src::app::process_builder",
-            "src::ports::store",
-            "src::app::acp",
-            "src::app::adapters::web::state"
+            "src::app::message",
+            "src::app::commands::schedule",
+            "src::infra::dto::context",
+            "src::app::schedule",
+            "src::app::timeout_sweep"
           ]
         },
         {
           "component": "workitem",
           "impact_radius": 51,
           "sample_dependents": [
-            "src::infra::sm_store",
-            "src::app::process_builder",
-            "src::ports::store",
-            "src::app::acp",
-            "src::app::adapters::web::state"
+            "src::app::message",
+            "src::app::commands::schedule",
+            "src::infra::dto::context",
+            "src::app::schedule",
+            "src::app::timeout_sweep"
           ]
         },
         {
           "component": "src::domain",
           "impact_radius": 50,
           "sample_dependents": [
-            "src::infra::sm_store",
-            "src::app::process_builder",
-            "src::ports::store",
-            "src::app::acp",
-            "src::app::adapters::web::state"
+            "src::app::message",
+            "src::app::commands::schedule",
+            "src::infra::dto::context",
+            "src::app::schedule",
+            "src::app::timeout_sweep"
           ]
         }
       ],
