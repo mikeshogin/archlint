@@ -34,9 +34,9 @@
       "name": "modularity",
       "description": "Модульность графа должна быть >= 0.3",
       "status": "PASSED",
-      "modularity": 0.373,
+      "modularity": 0.399,
       "threshold": 0.3,
-      "communities_count": 14
+      "communities_count": 15
     },
     {
       "name": "abstractness",
@@ -65,13 +65,6 @@
           "issue": "Зона боли: конкретный и стабильный"
         },
         {
-          "package": "pkg::trend::trend",
-          "abstractness": 0.0,
-          "instability": 0.5,
-          "distance": 0.5,
-          "nodes_count": 1
-        },
-        {
           "package": "pkg::trend::trend_test",
           "abstractness": 0.0,
           "instability": 0.5,
@@ -79,14 +72,14 @@
           "nodes_count": 1
         },
         {
-          "package": "pkg::validator::validator",
+          "package": "pkg::trend::trend",
           "abstractness": 0.0,
           "instability": 0.5,
           "distance": 0.5,
           "nodes_count": 1
         },
         {
-          "package": "pkg::analyzer::analyzer_test",
+          "package": "pkg::validator::validator",
           "abstractness": 0.0,
           "instability": 0.5,
           "distance": 0.5,
@@ -107,7 +100,14 @@
           "nodes_count": 1
         },
         {
-          "package": "pkg::config::config",
+          "package": "pkg::analyzer::analyzer_test",
+          "abstractness": 0.0,
+          "instability": 0.5,
+          "distance": 0.5,
+          "nodes_count": 1
+        },
+        {
+          "package": "pkg::metrics::domain",
           "abstractness": 0.0,
           "instability": 0.5,
           "distance": 0.5,
@@ -121,7 +121,7 @@
           "nodes_count": 1
         },
         {
-          "package": "pkg::metrics::domain",
+          "package": "pkg::metrics::nlp",
           "abstractness": 0.0,
           "instability": 0.5,
           "distance": 0.5,
@@ -149,7 +149,11 @@
       "threshold": 0.1,
       "low_clustering_nodes": [
         {
-          "node": "pkg::server::server",
+          "node": "pkg::router::router",
+          "coefficient": 0.0
+        },
+        {
+          "node": "pkg::abtest::abtest",
           "coefficient": 0.0
         },
         {
@@ -161,11 +165,7 @@
           "coefficient": 0.0
         },
         {
-          "node": "pkg::abtest::abtest",
-          "coefficient": 0.0
-        },
-        {
-          "node": "pkg::router::router",
+          "node": "pkg::server::server",
           "coefficient": 0.0
         },
         {
@@ -177,15 +177,15 @@
           "coefficient": 0.0
         },
         {
+          "node": "pkg/config",
+          "coefficient": 0.0
+        },
+        {
           "node": "pkg/router",
           "coefficient": 0.0
         },
         {
-          "node": "pkg/validator",
-          "coefficient": 0.0
-        },
-        {
-          "node": "pkg/config",
+          "node": "pkg/metrics",
           "coefficient": 0.0
         }
       ],
@@ -205,10 +205,10 @@
       "description": "Критические узлы (удаление разбивает граф)",
       "status": "WARNING",
       "articulation_points": [
+        "pkg/analyzer",
         "cmd::promptlint::main",
         "pkg::analyzer::analyzer",
-        "pkg/metrics",
-        "pkg/analyzer"
+        "pkg/metrics"
       ],
       "count": 4,
       "recommendation": "Уменьшить зависимость от критических узлов"
@@ -219,12 +219,12 @@
       "status": "INFO",
       "bridges": [
         {
-          "from": "pkg::analyzer::analyzer",
-          "to": "pkg/score"
-        },
-        {
           "from": "pkg::middleware::middleware",
           "to": "pkg/analyzer"
+        },
+        {
+          "from": "pkg::analyzer::analyzer",
+          "to": "pkg/score"
         },
         {
           "from": "pkg::score::score",
@@ -279,19 +279,19 @@
       "central_nodes": [],
       "peripheral_nodes": [
         {
-          "node": "pkg/router",
-          "closeness": 0.138
-        },
-        {
           "node": "pkg/config",
           "closeness": 0.138
         },
         {
-          "node": "pkg/validator",
-          "closeness": 0.103
+          "node": "pkg/router",
+          "closeness": 0.138
         },
         {
           "node": "pkg/metrics",
+          "closeness": 0.103
+        },
+        {
+          "node": "pkg/validator",
           "closeness": 0.103
         },
         {
@@ -332,19 +332,19 @@
           "eigenvector": 0.625
         },
         {
-          "node": "pkg/router",
-          "eigenvector": 0.417
-        },
-        {
           "node": "pkg/config",
           "eigenvector": 0.417
         },
         {
-          "node": "pkg/validator",
-          "eigenvector": 0.313
+          "node": "pkg/router",
+          "eigenvector": 0.417
         },
         {
           "node": "pkg/metrics",
+          "eigenvector": 0.313
+        },
+        {
+          "node": "pkg/validator",
           "eigenvector": 0.313
         }
       ],
@@ -355,19 +355,19 @@
           "eigenvector": 0.625
         },
         {
-          "node": "pkg/router",
-          "eigenvector": 0.417
-        },
-        {
           "node": "pkg/config",
           "eigenvector": 0.417
         },
         {
-          "node": "pkg/validator",
-          "eigenvector": 0.313
+          "node": "pkg/router",
+          "eigenvector": 0.417
         },
         {
           "node": "pkg/metrics",
+          "eigenvector": 0.313
+        },
+        {
+          "node": "pkg/validator",
           "eigenvector": 0.313
         }
       ]
@@ -484,19 +484,19 @@
           "impact": 6
         },
         {
-          "node": "pkg/router",
-          "impact": 4
-        },
-        {
           "node": "pkg/config",
           "impact": 4
         },
         {
-          "node": "pkg/validator",
-          "impact": 3
+          "node": "pkg/router",
+          "impact": 4
         },
         {
           "node": "pkg/metrics",
+          "impact": 3
+        },
+        {
+          "node": "pkg/validator",
           "impact": 3
         }
       ],

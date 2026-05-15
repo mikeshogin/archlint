@@ -35,8 +35,33 @@
       "threshold": 10,
       "violations": [
         {
-          "node": "protoc-gen-twirp::generator",
-          "fan_out": 18,
+          "node": "_tools::src::golang.org::x::tools::go::loader::loader",
+          "fan_out": 15,
+          "threshold": 10
+        },
+        {
+          "node": "_tools::src::golang.org::x::tools::go::buildutil::util",
+          "fan_out": 11,
+          "threshold": 10
+        },
+        {
+          "node": "_tools::src::golang.org::x::tools::go::internal::cgo::cgo",
+          "fan_out": 12,
+          "threshold": 10
+        },
+        {
+          "node": "_tools::src::github.com::kisielk::errcheck::internal::errcheck::errcheck",
+          "fan_out": 13,
+          "threshold": 10
+        },
+        {
+          "node": "_tools::src::google.golang.org::protobuf::encoding::prototext::encode",
+          "fan_out": 15,
+          "threshold": 10
+        },
+        {
+          "node": "_tools::src::google.golang.org::protobuf::encoding::prototext::decode",
+          "fan_out": 13,
           "threshold": 10
         },
         {
@@ -50,16 +75,6 @@
           "threshold": 10
         },
         {
-          "node": "_tools::src::google.golang.org::protobuf::encoding::prototext::decode",
-          "fan_out": 13,
-          "threshold": 10
-        },
-        {
-          "node": "_tools::src::google.golang.org::protobuf::encoding::prototext::encode",
-          "fan_out": 15,
-          "threshold": 10
-        },
-        {
           "node": "_tools::src::google.golang.org::protobuf::internal::impl::validate",
           "fan_out": 13,
           "threshold": 10
@@ -67,21 +82,6 @@
         {
           "node": "_tools::src::google.golang.org::protobuf::internal::impl::legacy_message",
           "fan_out": 11,
-          "threshold": 10
-        },
-        {
-          "node": "_tools::src::google.golang.org::protobuf::internal::filedesc::desc",
-          "fan_out": 13,
-          "threshold": 10
-        },
-        {
-          "node": "_tools::src::github.com::kisielk::errcheck::internal::errcheck::errcheck",
-          "fan_out": 13,
-          "threshold": 10
-        },
-        {
-          "node": "_tools::src::golang.org::x::tools::go::loader::loader",
-          "fan_out": 15,
           "threshold": 10
         }
       ],
@@ -95,16 +95,44 @@
       "ce_threshold": 10,
       "violations": [
         {
-          "node": "errors",
-          "afferent_coupling": 46,
-          "efferent_coupling": 5,
+          "node": "_tools::src::golang.org::x::tools::go::loader::loader",
+          "afferent_coupling": 0,
+          "efferent_coupling": 15,
           "ca_threshold": 10,
           "ce_threshold": 10
         },
         {
-          "node": "protoc-gen-twirp::generator",
+          "node": "_tools::src::golang.org::x::tools::go::buildutil::util",
           "afferent_coupling": 0,
-          "efferent_coupling": 18,
+          "efferent_coupling": 11,
+          "ca_threshold": 10,
+          "ce_threshold": 10
+        },
+        {
+          "node": "_tools::src::golang.org::x::tools::go::internal::cgo::cgo",
+          "afferent_coupling": 0,
+          "efferent_coupling": 12,
+          "ca_threshold": 10,
+          "ce_threshold": 10
+        },
+        {
+          "node": "_tools::src::github.com::kisielk::errcheck::internal::errcheck::errcheck",
+          "afferent_coupling": 0,
+          "efferent_coupling": 13,
+          "ca_threshold": 10,
+          "ce_threshold": 10
+        },
+        {
+          "node": "_tools::src::google.golang.org::protobuf::encoding::prototext::encode",
+          "afferent_coupling": 0,
+          "efferent_coupling": 15,
+          "ca_threshold": 10,
+          "ce_threshold": 10
+        },
+        {
+          "node": "_tools::src::google.golang.org::protobuf::encoding::prototext::decode",
+          "afferent_coupling": 0,
+          "efferent_coupling": 13,
           "ca_threshold": 10,
           "ce_threshold": 10
         },
@@ -123,20 +151,6 @@
           "ce_threshold": 10
         },
         {
-          "node": "_tools::src::google.golang.org::protobuf::encoding::prototext::decode",
-          "afferent_coupling": 0,
-          "efferent_coupling": 13,
-          "ca_threshold": 10,
-          "ce_threshold": 10
-        },
-        {
-          "node": "_tools::src::google.golang.org::protobuf::encoding::prototext::encode",
-          "afferent_coupling": 0,
-          "efferent_coupling": 15,
-          "ca_threshold": 10,
-          "ce_threshold": 10
-        },
-        {
           "node": "_tools::src::google.golang.org::protobuf::internal::impl::validate",
           "afferent_coupling": 0,
           "efferent_coupling": 13,
@@ -149,20 +163,6 @@
           "efferent_coupling": 11,
           "ca_threshold": 10,
           "ce_threshold": 10
-        },
-        {
-          "node": "_tools::src::google.golang.org::protobuf::internal::filedesc::desc",
-          "afferent_coupling": 0,
-          "efferent_coupling": 13,
-          "ca_threshold": 10,
-          "ce_threshold": 10
-        },
-        {
-          "node": "_tools::src::github.com::kisielk::errcheck::internal::errcheck::errcheck",
-          "afferent_coupling": 0,
-          "efferent_coupling": 13,
-          "ca_threshold": 10,
-          "ce_threshold": 10
         }
       ],
       "violations_count": 46
@@ -173,57 +173,57 @@
       "status": "PASSED",
       "most_unstable": [
         {
-          "node": "client_options_test",
+          "node": "_tools::src::golang.org::x::sys::execabs::execabs",
+          "instability": 1.0,
+          "ca": 0,
+          "ce": 6
+        },
+        {
+          "node": "_tools::src::golang.org::x::tools::go::ast::astutil::rewrite",
           "instability": 1.0,
           "ca": 0,
           "ce": 4
         },
         {
-          "node": "protoc-gen-twirp::go_naming_test",
-          "instability": 1.0,
-          "ca": 0,
-          "ce": 2
-        },
-        {
-          "node": "protoc-gen-twirp::command_line",
-          "instability": 1.0,
-          "ca": 0,
-          "ce": 2
-        },
-        {
-          "node": "protoc-gen-twirp::go_naming",
+          "node": "_tools::src::golang.org::x::tools::go::ast::astutil::enclosing",
           "instability": 1.0,
           "ca": 0,
           "ce": 4
         },
         {
-          "node": "protoc-gen-twirp::main",
+          "node": "_tools::src::golang.org::x::tools::go::ast::astutil::imports",
           "instability": 1.0,
           "ca": 0,
-          "ce": 4
+          "ce": 5
+        },
+        {
+          "node": "_tools::src::golang.org::x::tools::go::loader::loader",
+          "instability": 1.0,
+          "ca": 0,
+          "ce": 15
         }
       ],
       "most_stable": [
         {
-          "node": "contextkeys",
-          "instability": 0.0,
-          "ca": 2,
-          "ce": 0
-        },
-        {
-          "node": "rand",
+          "node": "importable",
           "instability": 0.0,
           "ca": 1,
           "ce": 0
         },
         {
-          "node": "example",
+          "node": "no_package_name",
           "instability": 0.0,
-          "ca": 2,
+          "ca": 1,
           "ce": 0
         },
         {
-          "node": "statsd",
+          "node": "assert",
+          "instability": 0.0,
+          "ca": 1,
+          "ce": 0
+        },
+        {
+          "node": "require",
           "instability": 0.0,
           "ca": 1,
           "ce": 0
@@ -364,26 +364,26 @@
       "description": "Компоненты без связей (возможно мертвый код)",
       "status": "WARNING",
       "orphans": [
-        "version_constant",
+        "_tools::src::golang.org::x::tools::go::ast::astutil::util",
+        "_tools::src::golang.org::x::tools::go::loader::doc",
+        "_tools::src::golang.org::x::tools::go::buildutil::tags",
+        "_tools::src::github.com::kisielk::gotool::tool",
+        "_tools::src::github.com::twitchtv::retool::add",
+        "_tools::src::github.com::twitchtv::retool::sync",
+        "_tools::src::github.com::twitchtv::retool::upgrade",
+        "_tools::src::github.com::twitchtv::retool::build",
+        "_tools::src::github.com::twitchtv::retool::remove",
         "_tools::src::google.golang.org::protobuf::proto::doc",
         "_tools::src::google.golang.org::protobuf::proto::wrappers",
-        "_tools::src::google.golang.org::protobuf::runtime::protoiface::legacy",
+        "_tools::src::google.golang.org::protobuf::reflect::protoreflect::type",
         "_tools::src::google.golang.org::protobuf::reflect::protoreflect::value_pure",
         "_tools::src::google.golang.org::protobuf::reflect::protoreflect::value",
         "_tools::src::google.golang.org::protobuf::reflect::protoreflect::source_gen",
-        "_tools::src::google.golang.org::protobuf::reflect::protoreflect::type",
         "_tools::src::google.golang.org::protobuf::encoding::prototext::doc",
-        "_tools::src::google.golang.org::protobuf::internal::impl::codec_unsafe",
-        "_tools::src::google.golang.org::protobuf::internal::impl::codec_map_go112",
-        "_tools::src::google.golang.org::protobuf::internal::impl::merge_gen",
-        "_tools::src::google.golang.org::protobuf::internal::impl::codec_map_go111",
-        "_tools::src::google.golang.org::protobuf::internal::errors::is_go113",
+        "_tools::src::google.golang.org::protobuf::runtime::protoiface::legacy",
+        "_tools::src::google.golang.org::protobuf::internal::descopts::options",
         "_tools::src::google.golang.org::protobuf::internal::errors::is_go112",
-        "_tools::src::google.golang.org::protobuf::internal::set::ints",
-        "_tools::src::google.golang.org::protobuf::internal::encoding::text::decode_number",
-        "_tools::src::google.golang.org::protobuf::internal::encoding::text::doc",
-        "_tools::src::google.golang.org::protobuf::internal::pragma::pragma",
-        "_tools::src::google.golang.org::protobuf::internal::flags::proto_legacy_enable"
+        "_tools::src::google.golang.org::protobuf::internal::errors::is_go113"
       ],
       "orphans_count": 81
     },

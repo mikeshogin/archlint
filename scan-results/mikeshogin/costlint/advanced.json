@@ -79,6 +79,27 @@
           "issue": "Зона боли: конкретный и стабильный"
         },
         {
+          "package": "pkg::cache::cache",
+          "abstractness": 0.0,
+          "instability": 0.5,
+          "distance": 0.5,
+          "nodes_count": 1
+        },
+        {
+          "package": "pkg::perf::perf",
+          "abstractness": 0.0,
+          "instability": 0.5,
+          "distance": 0.5,
+          "nodes_count": 1
+        },
+        {
+          "package": "pkg::telemetry::telemetry",
+          "abstractness": 0.0,
+          "instability": 0.5,
+          "distance": 0.5,
+          "nodes_count": 1
+        },
+        {
           "package": "pkg::pricing::subscription",
           "abstractness": 0.0,
           "instability": 0.5,
@@ -107,28 +128,7 @@
           "nodes_count": 1
         },
         {
-          "package": "pkg::perf::perf",
-          "abstractness": 0.0,
-          "instability": 0.5,
-          "distance": 0.5,
-          "nodes_count": 1
-        },
-        {
-          "package": "pkg::telemetry::telemetry",
-          "abstractness": 0.0,
-          "instability": 0.5,
-          "distance": 0.5,
-          "nodes_count": 1
-        },
-        {
-          "package": "pkg::cache::cache",
-          "abstractness": 0.0,
-          "instability": 0.5,
-          "distance": 0.5,
-          "nodes_count": 1
-        },
-        {
-          "package": "pkg::daily::daily",
+          "package": "pkg::predict::predict",
           "abstractness": 0.0,
           "instability": 1.0,
           "distance": 0.0,
@@ -173,7 +173,7 @@
           "coefficient": 0.0
         },
         {
-          "node": "pkg/telemetry",
+          "node": "pkg/counter",
           "coefficient": 0.0
         },
         {
@@ -181,7 +181,7 @@
           "coefficient": 0.0
         },
         {
-          "node": "pkg/counter",
+          "node": "pkg/telemetry",
           "coefficient": 0.0
         }
       ],
@@ -226,11 +226,11 @@
           "to": "pkg/pricing"
         },
         {
-          "from": "pkg::ab::ab",
+          "from": "pkg::budget::budget",
           "to": "pkg/pricing"
         },
         {
-          "from": "pkg::budget::budget",
+          "from": "pkg::ab::ab",
           "to": "pkg/pricing"
         },
         {
@@ -290,11 +290,11 @@
       "central_nodes": [],
       "peripheral_nodes": [
         {
-          "node": "pkg/telemetry",
+          "node": "pkg/counter",
           "closeness": 0.087
         },
         {
-          "node": "pkg/counter",
+          "node": "pkg/telemetry",
           "closeness": 0.087
         },
         {
@@ -326,7 +326,7 @@
           "closeness": 0.043
         },
         {
-          "node": "pkg::pricing::subscription",
+          "node": "pkg::predict::predict",
           "closeness": 0.0
         }
       ],
@@ -350,11 +350,11 @@
           "eigenvector": 0.84
         },
         {
-          "node": "pkg/telemetry",
+          "node": "pkg/counter",
           "eigenvector": 0.28
         },
         {
-          "node": "pkg/counter",
+          "node": "pkg/telemetry",
           "eigenvector": 0.28
         },
         {
@@ -476,11 +476,11 @@
           "impact": 6
         },
         {
-          "node": "pkg/telemetry",
+          "node": "pkg/counter",
           "impact": 2
         },
         {
-          "node": "pkg/counter",
+          "node": "pkg/telemetry",
           "impact": 2
         },
         {
