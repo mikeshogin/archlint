@@ -24,76 +24,76 @@
           "package": "src::app",
           "domains_count": 39,
           "domains": [
-            "agent_components",
-            "a2a",
-            "statemachine",
-            "schedule",
-            "adapters",
-            "doctor",
-            "mcp",
-            "context",
-            "scope",
-            "a2a_server"
+            "context_size",
+            "a2a_jwt",
+            "config_changeset",
+            "process_builder",
+            "mcp_protocol",
+            "cli",
+            "agent_registry",
+            "serve",
+            "config_watcher",
+            "context_log"
           ]
         },
         {
           "package": "src::app::commands",
           "domains_count": 17,
           "domains": [
-            "bus",
-            "upgrade",
+            "task",
             "dashboard",
+            "sm",
             "graph",
-            "restart",
-            "a2a",
+            "status",
             "usage",
             "schedule",
-            "sm",
-            "tests"
+            "bus",
+            "tests",
+            "remind"
           ]
         },
         {
           "package": "src::infra",
           "domains_count": 11,
           "domains": [
-            "sm_store",
             "unix_bus",
-            "diag",
-            "memory_store",
-            "bus_server",
             "dto",
-            "context_store",
             "agent_file",
             "memory_bus",
-            "task_store"
+            "paths",
+            "task_store",
+            "memory_store",
+            "diag",
+            "context_store",
+            "sm_store"
           ]
         },
         {
           "package": "src::app::adapters::web",
           "domains_count": 9,
           "domains": [
-            "state",
-            "auth",
-            "middleware",
-            "routes",
-            "src::config",
-            "audit",
-            "templates",
             "router",
-            "dispatch"
+            "dispatch",
+            "routes",
+            "audit",
+            "src::config",
+            "middleware",
+            "auth",
+            "state",
+            "templates"
           ]
         },
         {
           "package": "src::domain",
           "domains_count": 8,
           "domains": [
-            "events",
-            "statemachine",
-            "message",
+            "task",
             "workitem",
+            "events",
             "config_types",
             "agent",
-            "task",
+            "statemachine",
+            "message",
             "context"
           ]
         },
@@ -101,22 +101,22 @@
           "package": "src::lib",
           "domains_count": 6,
           "domains": [
+            "infra",
             "ports",
             "app",
             "test_support",
-            "infra",
-            "config",
-            "domain"
+            "domain",
+            "config"
           ]
         },
         {
           "package": "src::infra::dto",
           "domains_count": 5,
           "domains": [
-            "bus",
             "instance",
-            "config",
             "task",
+            "bus",
+            "config",
             "context"
           ]
         },
@@ -124,33 +124,33 @@
           "package": "src::app::agent",
           "domains_count": 5,
           "domains": [
-            "src::ports",
             "src::process_builder",
             "src::agent_registry",
             "src::agent_process",
-            "tests"
+            "tests",
+            "src::ports"
           ]
         },
         {
           "package": "src::app::workflow",
           "domains_count": 5,
           "domains": [
-            "src::ports",
-            "src::infra",
             "tests",
+            "src::app",
+            "src::ports",
             "src::domain",
-            "src::app"
+            "src::infra"
           ]
         },
         {
           "package": "src::app::adapters::web::routes",
           "domains_count": 5,
           "domains": [
-            "health",
             "dashboard",
             "tests",
-            "login",
-            "logout"
+            "health",
+            "logout",
+            "login"
           ]
         }
       ],

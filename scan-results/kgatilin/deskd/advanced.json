@@ -34,7 +34,7 @@
       "name": "modularity",
       "description": "Модульность графа должна быть >= 0.3",
       "status": "PASSED",
-      "modularity": 0.549,
+      "modularity": 0.552,
       "threshold": 0.3,
       "communities_count": 29
     },
@@ -624,110 +624,110 @@
           "component": "tests",
           "impact_radius": 77,
           "sample_dependents": [
-            "src::app::commands::usage",
-            "src::infra::context_store",
-            "src::app::workflow",
-            "src::infra::dto::task",
-            "src::infra::dto::instance"
+            "src::app::adapters::web::auth::magic_link",
+            "src::app::graph",
+            "src::app::config_reload",
+            "src::main",
+            "src::app::timeout_sweep"
           ]
         },
         {
           "component": "context",
           "impact_radius": 65,
           "sample_dependents": [
-            "src::app::commands::usage",
-            "src::infra::context_store",
-            "src::app::workflow",
-            "src::infra::dto::task",
-            "src::infra::dto::instance"
+            "src::app::config_reload",
+            "src::app::timeout_sweep",
+            "src::app::worker",
+            "src::app::context_size",
+            "src::app::config_changeset"
           ]
         },
         {
           "component": "task",
           "impact_radius": 65,
           "sample_dependents": [
-            "src::app::commands::usage",
-            "src::infra::context_store",
-            "src::app::workflow",
-            "src::infra::dto::task",
-            "src::infra::dto::instance"
+            "src::app::config_reload",
+            "src::app::timeout_sweep",
+            "src::app::worker",
+            "src::app::context_size",
+            "src::app::config_changeset"
           ]
         },
         {
           "component": "agent",
           "impact_radius": 64,
           "sample_dependents": [
-            "src::app::commands::usage",
-            "src::infra::context_store",
-            "src::app::workflow",
-            "src::infra::dto::task",
-            "src::infra::dto::instance"
+            "src::app::config_reload",
+            "src::app::timeout_sweep",
+            "src::app::worker",
+            "src::app::context_size",
+            "src::app::config_changeset"
           ]
         },
         {
           "component": "message",
           "impact_radius": 63,
           "sample_dependents": [
-            "src::app::commands::usage",
-            "src::infra::context_store",
-            "src::app::workflow",
-            "src::infra::dto::task",
-            "src::app::worker"
+            "src::infra::memory_store",
+            "src::app::commands::bus",
+            "src::app::adapters::web::routes::login",
+            "src::infra::dto::bus",
+            "src::app::mcp_service"
           ]
         },
         {
           "component": "statemachine",
           "impact_radius": 63,
           "sample_dependents": [
-            "src::app::commands::usage",
-            "src::infra::context_store",
-            "src::app::workflow",
-            "src::infra::dto::task",
-            "src::app::worker"
+            "src::infra::memory_store",
+            "src::app::commands::bus",
+            "src::app::adapters::web::routes::login",
+            "src::infra::dto::bus",
+            "src::app::mcp_service"
           ]
         },
         {
           "component": "config_types",
           "impact_radius": 51,
           "sample_dependents": [
-            "src::infra::context_store",
-            "src::app::workflow",
-            "src::infra::dto::task",
-            "src::app::worker",
-            "src::infra::dto::instance"
+            "src::infra::memory_store",
+            "src::app::commands::bus",
+            "src::app::config_reload",
+            "src::infra::dto::bus",
+            "src::app::mcp_service"
           ]
         },
         {
           "component": "events",
           "impact_radius": 51,
           "sample_dependents": [
-            "src::infra::context_store",
-            "src::app::workflow",
-            "src::infra::dto::task",
-            "src::app::worker",
-            "src::infra::dto::instance"
+            "src::infra::memory_store",
+            "src::app::commands::bus",
+            "src::app::config_reload",
+            "src::infra::dto::bus",
+            "src::app::mcp_service"
           ]
         },
         {
           "component": "workitem",
           "impact_radius": 51,
           "sample_dependents": [
-            "src::infra::context_store",
-            "src::app::workflow",
-            "src::infra::dto::task",
-            "src::app::worker",
-            "src::infra::dto::instance"
+            "src::infra::memory_store",
+            "src::app::commands::bus",
+            "src::app::config_reload",
+            "src::infra::dto::bus",
+            "src::app::mcp_service"
           ]
         },
         {
           "component": "src::domain",
           "impact_radius": 50,
           "sample_dependents": [
-            "src::infra::context_store",
-            "src::app::workflow",
-            "src::infra::dto::task",
-            "src::app::worker",
-            "src::infra::dto::instance"
+            "src::infra::memory_store",
+            "src::app::commands::bus",
+            "src::app::config_reload",
+            "src::infra::dto::bus",
+            "src::app::mcp_service"
           ]
         }
       ],
