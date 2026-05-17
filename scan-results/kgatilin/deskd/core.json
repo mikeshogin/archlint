@@ -10,8 +10,8 @@
     "errors": 3
   },
   "graph": {
-    "nodes": 237,
-    "edges": 322
+    "nodes": 256,
+    "edges": 345
   },
   "checks": [
     {
@@ -38,12 +38,17 @@
           "threshold": 10
         },
         {
+          "node": "src::app::adapters::web",
+          "fan_out": 11,
+          "threshold": 10
+        },
+        {
           "node": "src::app",
-          "fan_out": 39,
+          "fan_out": 40,
           "threshold": 10
         }
       ],
-      "violations_count": 3
+      "violations_count": 4
     },
     {
       "name": "coupling",
@@ -61,7 +66,7 @@
         },
         {
           "node": "src::domain",
-          "afferent_coupling": 27,
+          "afferent_coupling": 28,
           "efferent_coupling": 8,
           "ca_threshold": 10,
           "ce_threshold": 10
@@ -74,9 +79,16 @@
           "ce_threshold": 10
         },
         {
+          "node": "src::app::adapters::web",
+          "afferent_coupling": 0,
+          "efferent_coupling": 11,
+          "ca_threshold": 10,
+          "ce_threshold": 10
+        },
+        {
           "node": "src::app",
-          "afferent_coupling": 29,
-          "efferent_coupling": 39,
+          "afferent_coupling": 33,
+          "efferent_coupling": 40,
           "ca_threshold": 10,
           "ce_threshold": 10
         },
@@ -89,13 +101,13 @@
         },
         {
           "node": "src::config",
-          "afferent_coupling": 26,
+          "afferent_coupling": 27,
           "efferent_coupling": 3,
           "ca_threshold": 10,
           "ce_threshold": 10
         }
       ],
-      "violations_count": 6
+      "violations_count": 7
     },
     {
       "name": "instability",
@@ -161,7 +173,7 @@
         {
           "node": "deskd",
           "instability": 0.0,
-          "ca": 6,
+          "ca": 8,
           "ce": 0
         }
       ],
@@ -169,14 +181,14 @@
         {
           "from": "src::config",
           "to": "src::domain",
-          "from_instability": 0.103,
-          "to_instability": 0.229,
+          "from_instability": 0.1,
+          "to_instability": 0.222,
           "issue": "Зависимость направлена к менее стабильному компоненту"
         },
         {
           "from": "src::config",
           "to": "src::infra",
-          "from_instability": 0.103,
+          "from_instability": 0.1,
           "to_instability": 0.423,
           "issue": "Зависимость направлена к менее стабильному компоненту"
         }
@@ -243,20 +255,20 @@
       "hubs": [
         {
           "node": "src::app",
-          "total_degree": 68,
-          "in_degree": 29,
-          "out_degree": 39
+          "total_degree": 73,
+          "in_degree": 33,
+          "out_degree": 40
         },
         {
           "node": "src::domain",
-          "total_degree": 35,
-          "in_degree": 27,
+          "total_degree": 36,
+          "in_degree": 28,
           "out_degree": 8
         },
         {
           "node": "src::config",
-          "total_degree": 29,
-          "in_degree": 26,
+          "total_degree": 30,
+          "in_degree": 27,
           "out_degree": 3
         },
         {
@@ -276,9 +288,15 @@
           "total_degree": 17,
           "in_degree": 0,
           "out_degree": 17
+        },
+        {
+          "node": "src::app::adapters::web",
+          "total_degree": 11,
+          "in_degree": 0,
+          "out_degree": 11
         }
       ],
-      "hubs_count": 6
+      "hubs_count": 7
     },
     {
       "name": "orphan_nodes",
@@ -291,20 +309,22 @@
         "src::app::adapters::web::middleware::headers",
         "src::app::adapters::web::routes::health",
         "src::ports::executor",
+        "tests::agent_state_mcp",
         "tests::diag_publish",
         "tests::budget_enforcement",
         "tests::agent_lifecycle",
         "tests::schedule_to_worker",
+        "tests::mcp_channel_subprocess",
         "tests::crash_recovery",
         "build"
       ],
-      "orphans_count": 12
+      "orphans_count": 14
     },
     {
       "name": "strongly_connected_components",
       "description": "Группы с взаимными зависимостями (размер > 1)",
       "status": "PASSED",
-      "total_sccs": 237,
+      "total_sccs": 256,
       "problematic_sccs": [],
       "problematic_count": 0
     },
