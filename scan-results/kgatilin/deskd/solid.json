@@ -10,8 +10,8 @@
     "errors": 0
   },
   "graph": {
-    "nodes": 256,
-    "edges": 345
+    "nodes": 284,
+    "edges": 381
   },
   "checks": [
     {
@@ -24,48 +24,48 @@
           "package": "src::app",
           "domains_count": 40,
           "domains": [
-            "unified_inbox",
             "agent_components",
-            "commands",
-            "task",
-            "process_builder",
-            "worker",
-            "a2a_server",
+            "mcp_protocol",
+            "statemachine",
+            "scope",
+            "context",
+            "schedule",
             "agent",
-            "jsonrpc",
-            "message"
+            "context_size",
+            "cli",
+            "unified_inbox"
           ]
         },
         {
           "package": "src::app::commands",
           "domains_count": 17,
           "domains": [
-            "tests",
+            "usage",
             "sm",
-            "upgrade",
-            "task",
             "status",
-            "tui",
+            "bus",
+            "doctor",
+            "a2a",
             "dashboard",
-            "remind",
             "context",
-            "graph"
+            "remind",
+            "tui"
           ]
         },
         {
           "package": "src::infra",
           "domains_count": 11,
           "domains": [
-            "agent_file",
-            "context_store",
-            "paths",
-            "sm_store",
+            "memory_bus",
             "dto",
-            "diag",
-            "memory_store",
             "bus_server",
+            "memory_store",
+            "unix_bus",
+            "context_store",
+            "diag",
+            "paths",
             "task_store",
-            "unix_bus"
+            "sm_store"
           ]
         },
         {
@@ -74,28 +74,42 @@
           "domains": [
             "auth",
             "middleware",
-            "src::config",
-            "state",
-            "audit",
-            "view",
-            "routes",
-            "templates",
             "router",
-            "data"
+            "routes",
+            "view",
+            "state",
+            "src::config",
+            "audit",
+            "data",
+            "dispatch"
           ]
         },
         {
           "package": "src::domain",
           "domains_count": 8,
           "domains": [
-            "task",
-            "statemachine",
             "message",
             "context",
-            "workitem",
             "events",
+            "config_types",
+            "workitem",
+            "task",
             "agent",
-            "config_types"
+            "statemachine"
+          ]
+        },
+        {
+          "package": "src::app::adapters::federation",
+          "domains_count": 8,
+          "domains": [
+            "registry",
+            "routing",
+            "glob",
+            "hub",
+            "forward",
+            "peer",
+            "preflight",
+            "frame"
           ]
         },
         {
@@ -103,71 +117,62 @@
           "domains_count": 7,
           "domains": [
             "health",
+            "login",
+            "static_assets",
+            "dashboard",
             "logout",
             "tests",
-            "dashboard",
-            "static_assets",
-            "sse",
-            "login"
+            "sse"
+          ]
+        },
+        {
+          "package": "src::app::adapters::federation::hub",
+          "domains_count": 7,
+          "domains": [
+            "src::registry",
+            "src::preflight",
+            "src::forward",
+            "src::frame",
+            "src::app",
+            "tests",
+            "src::routing"
           ]
         },
         {
           "package": "src::lib",
           "domains_count": 6,
           "domains": [
-            "test_support",
             "app",
-            "infra",
+            "test_support",
+            "ports",
             "config",
             "domain",
-            "ports"
+            "infra"
           ]
         },
         {
           "package": "src::infra::dto",
           "domains_count": 5,
           "domains": [
-            "task",
-            "context",
-            "instance",
+            "config",
             "bus",
-            "config"
-          ]
-        },
-        {
-          "package": "src::app::agent",
-          "domains_count": 5,
-          "domains": [
-            "tests",
-            "src::ports",
-            "src::agent_registry",
-            "src::process_builder",
-            "src::agent_process"
-          ]
-        },
-        {
-          "package": "src::app::workflow",
-          "domains_count": 5,
-          "domains": [
-            "tests",
-            "src::ports",
-            "src::infra",
-            "src::domain",
-            "src::app"
+            "instance",
+            "context",
+            "task"
           ]
         }
       ],
-      "violations_count": 25
+      "violations_count": 29
     },
     {
       "name": "open_closed",
       "description": "Соотношение абстракций >= 20% (OCP)",
       "status": "WARNING",
       "abstractions": 7,
-      "implementations": 249,
-      "ratio": 0.027,
+      "implementations": 277,
+      "ratio": 0.025,
       "threshold": 0.2,
-      "issue": "Низкое соотношение абстракций (2.73%) - плохая расширяемость"
+      "issue": "Низкое соотношение абстракций (2.46%) - плохая расширяемость"
     },
     {
       "name": "liskov_substitution",

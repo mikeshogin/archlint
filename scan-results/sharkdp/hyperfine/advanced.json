@@ -34,7 +34,7 @@
       "name": "modularity",
       "description": "Модульность графа должна быть >= 0.3",
       "status": "PASSED",
-      "modularity": 0.58,
+      "modularity": 0.579,
       "threshold": 0.3,
       "communities_count": 16
     },
@@ -618,10 +618,10 @@
           "impact_radius": 25,
           "sample_dependents": [
             "src::timer::unix_timer",
-            "src::export::asciidoc",
-            "src::export::tests",
-            "src::output::progress_bar",
-            "src::benchmark::scheduler"
+            "src::export::json",
+            "src::export",
+            "src::options",
+            "src::export::tests"
           ]
         },
         {
@@ -629,10 +629,10 @@
           "impact_radius": 25,
           "sample_dependents": [
             "src::timer::unix_timer",
-            "src::export::asciidoc",
-            "src::export::tests",
-            "src::output::progress_bar",
-            "src::benchmark::scheduler"
+            "src::export::json",
+            "src::export",
+            "src::options",
+            "src::export::tests"
           ]
         },
         {
@@ -640,10 +640,10 @@
           "impact_radius": 25,
           "sample_dependents": [
             "src::timer::unix_timer",
-            "src::export::asciidoc",
-            "src::export::tests",
-            "src::output::progress_bar",
-            "src::benchmark::scheduler"
+            "src::export::json",
+            "src::export",
+            "src::options",
+            "src::export::tests"
           ]
         },
         {
@@ -651,10 +651,10 @@
           "impact_radius": 25,
           "sample_dependents": [
             "src::timer::unix_timer",
-            "src::export::asciidoc",
-            "src::export::tests",
-            "src::output::progress_bar",
-            "src::benchmark::scheduler"
+            "src::export::json",
+            "src::export",
+            "src::options",
+            "src::export::tests"
           ]
         },
         {
@@ -662,10 +662,10 @@
           "impact_radius": 25,
           "sample_dependents": [
             "src::timer::unix_timer",
-            "src::export::asciidoc",
-            "src::export::tests",
-            "src::output::progress_bar",
-            "src::benchmark::scheduler"
+            "src::export::json",
+            "src::export",
+            "src::options",
+            "src::export::tests"
           ]
         },
         {
@@ -673,10 +673,10 @@
           "impact_radius": 24,
           "sample_dependents": [
             "src::timer::unix_timer",
-            "src::export::asciidoc",
-            "src::export::tests",
-            "src::output::progress_bar",
-            "src::benchmark::scheduler"
+            "src::export::json",
+            "src::export",
+            "src::options",
+            "src::export::tests"
           ]
         }
       ],

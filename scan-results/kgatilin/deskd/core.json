@@ -10,8 +10,8 @@
     "errors": 3
   },
   "graph": {
-    "nodes": 256,
-    "edges": 345
+    "nodes": 284,
+    "edges": 381
   },
   "checks": [
     {
@@ -87,14 +87,14 @@
         },
         {
           "node": "src::app",
-          "afferent_coupling": 33,
+          "afferent_coupling": 35,
           "efferent_coupling": 40,
           "ca_threshold": 10,
           "ce_threshold": 10
         },
         {
           "node": "src::ports",
-          "afferent_coupling": 18,
+          "afferent_coupling": 20,
           "efferent_coupling": 4,
           "ca_threshold": 10,
           "ce_threshold": 10
@@ -173,7 +173,7 @@
         {
           "node": "deskd",
           "instability": 0.0,
-          "ca": 8,
+          "ca": 10,
           "ce": 0
         }
       ],
@@ -255,8 +255,8 @@
       "hubs": [
         {
           "node": "src::app",
-          "total_degree": 73,
-          "in_degree": 33,
+          "total_degree": 75,
+          "in_degree": 35,
           "out_degree": 40
         },
         {
@@ -279,8 +279,8 @@
         },
         {
           "node": "src::ports",
-          "total_degree": 22,
-          "in_degree": 18,
+          "total_degree": 24,
+          "in_degree": 20,
           "out_degree": 4
         },
         {
@@ -324,7 +324,7 @@
       "name": "strongly_connected_components",
       "description": "Группы с взаимными зависимостями (размер > 1)",
       "status": "PASSED",
-      "total_sccs": 256,
+      "total_sccs": 284,
       "problematic_sccs": [],
       "problematic_count": 0
     },
