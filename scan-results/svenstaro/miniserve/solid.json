@@ -24,50 +24,50 @@
           "package": "src::main",
           "domains_count": 17,
           "domains": [
-            "src::args",
-            "consts",
+            "config",
             "file_op",
-            "auth",
-            "archive",
-            "file_utils",
-            "pipe",
-            "listing",
             "renderer",
-            "src::config"
+            "auth",
+            "file_utils",
+            "consts",
+            "archive",
+            "src::webdav_fs",
+            "webdav_fs",
+            "src::args"
           ]
         },
         {
           "package": "src::args",
           "domains_count": 7,
           "domains": [
-            "src::listing",
+            "tests",
             "AuthParseError",
             "src::auth",
             "auth",
-            "src::renderer",
-            "tests",
-            "RequiredAuthPassword"
+            "RequiredAuthPassword",
+            "src::listing",
+            "src::renderer"
           ]
         },
         {
           "package": "src::listing",
           "domains_count": 6,
           "domains": [
-            "src::auth",
             "percent_encode_sets",
-            "src::errors",
-            "src::renderer",
+            "src::archive",
+            "src::auth",
             "src::percent_encode_sets",
-            "src::archive"
+            "src::errors",
+            "src::renderer"
           ]
         },
         {
           "package": "src::renderer",
           "domains_count": 4,
           "domains": [
-            "src::consts",
-            "tests",
             "src::listing",
+            "tests",
+            "src::consts",
             "src::auth"
           ]
         },
@@ -75,10 +75,10 @@
           "package": "tests::navigation",
           "domains_count": 4,
           "domains": [
-            "tests::utils",
+            "tests::fixtures",
             "fixtures",
             "utils",
-            "tests::fixtures"
+            "tests::utils"
           ]
         }
       ],

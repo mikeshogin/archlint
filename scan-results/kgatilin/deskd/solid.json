@@ -24,32 +24,32 @@
           "package": "src::app",
           "domains_count": 40,
           "domains": [
-            "agent_components",
-            "mcp_protocol",
-            "statemachine",
-            "scope",
-            "context",
+            "timeout_sweep",
+            "tasklog",
             "schedule",
-            "agent",
-            "context_size",
-            "cli",
-            "unified_inbox"
+            "bus",
+            "agent_components",
+            "a2a",
+            "acp",
+            "task",
+            "workflow",
+            "mcp_protocol"
           ]
         },
         {
           "package": "src::app::commands",
           "domains_count": 17,
           "domains": [
-            "usage",
-            "sm",
-            "status",
-            "bus",
             "doctor",
-            "a2a",
-            "dashboard",
-            "context",
-            "remind",
-            "tui"
+            "restart",
+            "schedule",
+            "status",
+            "usage",
+            "tui",
+            "tests",
+            "bus",
+            "upgrade",
+            "sm"
           ]
         },
         {
@@ -57,97 +57,97 @@
           "domains_count": 11,
           "domains": [
             "memory_bus",
-            "dto",
             "bus_server",
-            "memory_store",
-            "unix_bus",
-            "context_store",
             "diag",
             "paths",
+            "context_store",
             "task_store",
-            "sm_store"
+            "unix_bus",
+            "sm_store",
+            "memory_store",
+            "agent_file"
           ]
         },
         {
           "package": "src::app::adapters::web",
           "domains_count": 11,
           "domains": [
-            "auth",
-            "middleware",
-            "router",
+            "dispatch",
             "routes",
-            "view",
-            "state",
-            "src::config",
-            "audit",
             "data",
-            "dispatch"
+            "middleware",
+            "state",
+            "router",
+            "audit",
+            "templates",
+            "src::config",
+            "view"
           ]
         },
         {
           "package": "src::domain",
           "domains_count": 8,
           "domains": [
+            "statemachine",
             "message",
-            "context",
-            "events",
             "config_types",
+            "events",
             "workitem",
-            "task",
             "agent",
-            "statemachine"
+            "context",
+            "task"
           ]
         },
         {
           "package": "src::app::adapters::federation",
           "domains_count": 8,
           "domains": [
-            "registry",
-            "routing",
-            "glob",
-            "hub",
             "forward",
-            "peer",
+            "registry",
+            "glob",
             "preflight",
-            "frame"
+            "frame",
+            "hub",
+            "routing",
+            "peer"
           ]
         },
         {
           "package": "src::app::adapters::web::routes",
           "domains_count": 7,
           "domains": [
-            "health",
-            "login",
             "static_assets",
-            "dashboard",
-            "logout",
+            "health",
             "tests",
-            "sse"
+            "logout",
+            "sse",
+            "login",
+            "dashboard"
           ]
         },
         {
           "package": "src::app::adapters::federation::hub",
           "domains_count": 7,
           "domains": [
-            "src::registry",
-            "src::preflight",
             "src::forward",
-            "src::frame",
-            "src::app",
+            "src::registry",
+            "src::routing",
+            "src::preflight",
             "tests",
-            "src::routing"
+            "src::app",
+            "src::frame"
           ]
         },
         {
           "package": "src::lib",
           "domains_count": 6,
           "domains": [
-            "app",
-            "test_support",
             "ports",
-            "config",
             "domain",
-            "infra"
+            "infra",
+            "config",
+            "test_support",
+            "app"
           ]
         },
         {
