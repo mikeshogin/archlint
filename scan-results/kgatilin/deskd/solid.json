@@ -10,8 +10,8 @@
     "errors": 0
   },
   "graph": {
-    "nodes": 284,
-    "edges": 381
+    "nodes": 296,
+    "edges": 405
   },
   "checks": [
     {
@@ -22,107 +22,123 @@
       "violations": [
         {
           "package": "src::app",
-          "domains_count": 40,
+          "domains_count": 41,
           "domains": [
-            "timeout_sweep",
+            "alerts",
+            "adapters",
+            "agent_state",
             "tasklog",
-            "schedule",
-            "bus",
-            "agent_components",
-            "a2a",
-            "acp",
-            "task",
-            "workflow",
-            "mcp_protocol"
+            "commands",
+            "config_watcher",
+            "mcp_service",
+            "mcp_protocol",
+            "worker",
+            "mcp_tools"
           ]
         },
         {
           "package": "src::app::commands",
           "domains_count": 17,
           "domains": [
-            "doctor",
-            "restart",
-            "schedule",
-            "status",
+            "agent",
+            "remind",
+            "sm",
             "usage",
-            "tui",
-            "tests",
-            "bus",
+            "restart",
+            "task",
+            "dashboard",
             "upgrade",
-            "sm"
+            "graph",
+            "a2a"
+          ]
+        },
+        {
+          "package": "src::app::adapters::web",
+          "domains_count": 12,
+          "domains": [
+            "src::app",
+            "src::config",
+            "view",
+            "routes",
+            "router",
+            "audit",
+            "state",
+            "templates",
+            "data",
+            "auth"
           ]
         },
         {
           "package": "src::infra",
           "domains_count": 11,
           "domains": [
-            "memory_bus",
+            "context_store",
+            "memory_store",
             "bus_server",
             "diag",
-            "paths",
-            "context_store",
-            "task_store",
+            "dto",
             "unix_bus",
-            "sm_store",
-            "memory_store",
-            "agent_file"
+            "paths",
+            "task_store",
+            "memory_bus",
+            "sm_store"
           ]
         },
         {
-          "package": "src::app::adapters::web",
-          "domains_count": 11,
+          "package": "src::app::adapters::web::routes",
+          "domains_count": 10,
           "domains": [
-            "dispatch",
-            "routes",
-            "data",
-            "middleware",
-            "state",
-            "router",
-            "audit",
-            "templates",
-            "src::config",
-            "view"
+            "health",
+            "metrics",
+            "sse",
+            "agent_detail",
+            "dashboard",
+            "login",
+            "logout",
+            "static_assets",
+            "tests",
+            "github_webhook"
           ]
         },
         {
           "package": "src::domain",
           "domains_count": 8,
           "domains": [
-            "statemachine",
-            "message",
-            "config_types",
-            "events",
-            "workitem",
             "agent",
+            "message",
+            "task",
+            "config_types",
+            "statemachine",
+            "workitem",
             "context",
-            "task"
+            "events"
           ]
         },
         {
           "package": "src::app::adapters::federation",
           "domains_count": 8,
           "domains": [
-            "forward",
-            "registry",
-            "glob",
-            "preflight",
-            "frame",
             "hub",
+            "registry",
+            "preflight",
             "routing",
-            "peer"
+            "glob",
+            "peer",
+            "forward",
+            "frame"
           ]
         },
         {
-          "package": "src::app::adapters::web::routes",
+          "package": "src::app::adapters::web::state",
           "domains_count": 7,
           "domains": [
-            "static_assets",
-            "health",
-            "tests",
-            "logout",
-            "sse",
-            "login",
-            "dashboard"
+            "src::app",
+            "src::dispatch",
+            "src::routes",
+            "src::auth",
+            "src::audit",
+            "src::config",
+            "src::middleware"
           ]
         },
         {
@@ -130,12 +146,12 @@
           "domains_count": 7,
           "domains": [
             "src::forward",
-            "src::registry",
-            "src::routing",
-            "src::preflight",
-            "tests",
             "src::app",
-            "src::frame"
+            "src::frame",
+            "src::routing",
+            "tests",
+            "src::preflight",
+            "src::registry"
           ]
         },
         {
@@ -146,33 +162,22 @@
             "domain",
             "infra",
             "config",
-            "test_support",
-            "app"
-          ]
-        },
-        {
-          "package": "src::infra::dto",
-          "domains_count": 5,
-          "domains": [
-            "config",
-            "bus",
-            "instance",
-            "context",
-            "task"
+            "app",
+            "test_support"
           ]
         }
       ],
-      "violations_count": 29
+      "violations_count": 32
     },
     {
       "name": "open_closed",
       "description": "Соотношение абстракций >= 20% (OCP)",
       "status": "WARNING",
       "abstractions": 7,
-      "implementations": 277,
-      "ratio": 0.025,
+      "implementations": 289,
+      "ratio": 0.024,
       "threshold": 0.2,
-      "issue": "Низкое соотношение абстракций (2.46%) - плохая расширяемость"
+      "issue": "Низкое соотношение абстракций (2.36%) - плохая расширяемость"
     },
     {
       "name": "liskov_substitution",
@@ -188,9 +193,9 @@
       "name": "dependency_inversion",
       "description": "Зависимости на абстракции >= 30% (DIP)",
       "status": "PASSED",
-      "abstract_deps": 20,
+      "abstract_deps": 21,
       "concrete_deps": 2,
-      "abstract_ratio": 0.909,
+      "abstract_ratio": 0.913,
       "threshold": 0.3,
       "violations": [
         {

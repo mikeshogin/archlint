@@ -10,8 +10,8 @@
     "errors": 3
   },
   "graph": {
-    "nodes": 284,
-    "edges": 381
+    "nodes": 296,
+    "edges": 405
   },
   "checks": [
     {
@@ -39,12 +39,12 @@
         },
         {
           "node": "src::app::adapters::web",
-          "fan_out": 11,
+          "fan_out": 12,
           "threshold": 10
         },
         {
           "node": "src::app",
-          "fan_out": 40,
+          "fan_out": 41,
           "threshold": 10
         }
       ],
@@ -81,33 +81,40 @@
         {
           "node": "src::app::adapters::web",
           "afferent_coupling": 0,
-          "efferent_coupling": 11,
+          "efferent_coupling": 12,
           "ca_threshold": 10,
           "ce_threshold": 10
         },
         {
           "node": "src::app",
-          "afferent_coupling": 35,
-          "efferent_coupling": 40,
+          "afferent_coupling": 41,
+          "efferent_coupling": 41,
           "ca_threshold": 10,
           "ce_threshold": 10
         },
         {
           "node": "src::ports",
-          "afferent_coupling": 20,
+          "afferent_coupling": 21,
           "efferent_coupling": 4,
           "ca_threshold": 10,
           "ce_threshold": 10
         },
         {
           "node": "src::config",
-          "afferent_coupling": 27,
+          "afferent_coupling": 29,
           "efferent_coupling": 3,
+          "ca_threshold": 10,
+          "ce_threshold": 10
+        },
+        {
+          "node": "deskd",
+          "afferent_coupling": 11,
+          "efferent_coupling": 0,
           "ca_threshold": 10,
           "ce_threshold": 10
         }
       ],
-      "violations_count": 7
+      "violations_count": 8
     },
     {
       "name": "instability",
@@ -173,7 +180,7 @@
         {
           "node": "deskd",
           "instability": 0.0,
-          "ca": 10,
+          "ca": 11,
           "ce": 0
         }
       ],
@@ -181,14 +188,14 @@
         {
           "from": "src::config",
           "to": "src::domain",
-          "from_instability": 0.1,
+          "from_instability": 0.094,
           "to_instability": 0.222,
           "issue": "Зависимость направлена к менее стабильному компоненту"
         },
         {
           "from": "src::config",
           "to": "src::infra",
-          "from_instability": 0.1,
+          "from_instability": 0.094,
           "to_instability": 0.423,
           "issue": "Зависимость направлена к менее стабильному компоненту"
         }
@@ -255,9 +262,9 @@
       "hubs": [
         {
           "node": "src::app",
-          "total_degree": 75,
-          "in_degree": 35,
-          "out_degree": 40
+          "total_degree": 82,
+          "in_degree": 41,
+          "out_degree": 41
         },
         {
           "node": "src::domain",
@@ -267,8 +274,8 @@
         },
         {
           "node": "src::config",
-          "total_degree": 30,
-          "in_degree": 27,
+          "total_degree": 32,
+          "in_degree": 29,
           "out_degree": 3
         },
         {
@@ -279,8 +286,8 @@
         },
         {
           "node": "src::ports",
-          "total_degree": 24,
-          "in_degree": 20,
+          "total_degree": 25,
+          "in_degree": 21,
           "out_degree": 4
         },
         {
@@ -291,12 +298,18 @@
         },
         {
           "node": "src::app::adapters::web",
-          "total_degree": 11,
+          "total_degree": 12,
           "in_degree": 0,
-          "out_degree": 11
+          "out_degree": 12
+        },
+        {
+          "node": "deskd",
+          "total_degree": 11,
+          "in_degree": 11,
+          "out_degree": 0
         }
       ],
-      "hubs_count": 7
+      "hubs_count": 8
     },
     {
       "name": "orphan_nodes",
@@ -324,7 +337,7 @@
       "name": "strongly_connected_components",
       "description": "Группы с взаимными зависимостями (размер > 1)",
       "status": "PASSED",
-      "total_sccs": 284,
+      "total_sccs": 296,
       "problematic_sccs": [],
       "problematic_count": 0
     },
