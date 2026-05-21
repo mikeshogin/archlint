@@ -10,8 +10,8 @@
     "errors": 0
   },
   "graph": {
-    "nodes": 296,
-    "edges": 405
+    "nodes": 316,
+    "edges": 443
   },
   "checks": [
     {
@@ -22,82 +22,82 @@
       "violations": [
         {
           "package": "src::app",
-          "domains_count": 41,
+          "domains_count": 45,
           "domains": [
-            "alerts",
-            "adapters",
+            "config_changeset",
+            "agent",
+            "bus",
             "agent_state",
-            "tasklog",
-            "commands",
-            "config_watcher",
-            "mcp_service",
-            "mcp_protocol",
-            "worker",
-            "mcp_tools"
+            "context_size",
+            "adapters",
+            "agent_process",
+            "a2a_jwt",
+            "a2a",
+            "mcp"
           ]
         },
         {
           "package": "src::app::commands",
-          "domains_count": 17,
+          "domains_count": 19,
           "domains": [
             "agent",
-            "remind",
-            "sm",
-            "usage",
-            "restart",
-            "task",
-            "dashboard",
+            "bus",
             "upgrade",
+            "a2a",
+            "task",
+            "remind",
+            "context",
+            "sm",
             "graph",
-            "a2a"
+            "session"
           ]
         },
         {
           "package": "src::app::adapters::web",
-          "domains_count": 12,
+          "domains_count": 13,
           "domains": [
-            "src::app",
-            "src::config",
-            "view",
-            "routes",
-            "router",
+            "dispatch",
             "audit",
-            "state",
             "templates",
+            "src::config",
+            "middleware",
             "data",
-            "auth"
+            "data_cost",
+            "auth",
+            "view",
+            "src::app"
+          ]
+        },
+        {
+          "package": "src::app::adapters::web::routes",
+          "domains_count": 13,
+          "domains": [
+            "tests",
+            "agent_detail",
+            "github_webhook",
+            "cost",
+            "dashboard",
+            "cost_feed",
+            "health",
+            "sse",
+            "src::app",
+            "static_assets"
           ]
         },
         {
           "package": "src::infra",
           "domains_count": 11,
           "domains": [
+            "sm_store",
             "context_store",
-            "memory_store",
-            "bus_server",
             "diag",
+            "bus_server",
             "dto",
             "unix_bus",
-            "paths",
-            "task_store",
             "memory_bus",
-            "sm_store"
-          ]
-        },
-        {
-          "package": "src::app::adapters::web::routes",
-          "domains_count": 10,
-          "domains": [
-            "health",
-            "metrics",
-            "sse",
-            "agent_detail",
-            "dashboard",
-            "login",
-            "logout",
-            "static_assets",
-            "tests",
-            "github_webhook"
+            "paths",
+            "memory_store",
+            "agent_file"
           ]
         },
         {
@@ -105,13 +105,27 @@
           "domains_count": 8,
           "domains": [
             "agent",
-            "message",
-            "task",
-            "config_types",
-            "statemachine",
             "workitem",
+            "events",
+            "config_types",
+            "task",
             "context",
-            "events"
+            "message",
+            "statemachine"
+          ]
+        },
+        {
+          "package": "src::app::adapters::web::state",
+          "domains_count": 8,
+          "domains": [
+            "src::config",
+            "src::auth",
+            "src::data_cost",
+            "src::audit",
+            "src::app",
+            "src::dispatch",
+            "src::middleware",
+            "src::routes"
           ]
         },
         {
@@ -119,39 +133,26 @@
           "domains_count": 8,
           "domains": [
             "hub",
-            "registry",
-            "preflight",
-            "routing",
-            "glob",
-            "peer",
             "forward",
-            "frame"
-          ]
-        },
-        {
-          "package": "src::app::adapters::web::state",
-          "domains_count": 7,
-          "domains": [
-            "src::app",
-            "src::dispatch",
-            "src::routes",
-            "src::auth",
-            "src::audit",
-            "src::config",
-            "src::middleware"
+            "preflight",
+            "glob",
+            "frame",
+            "routing",
+            "registry",
+            "peer"
           ]
         },
         {
           "package": "src::app::adapters::federation::hub",
           "domains_count": 7,
           "domains": [
-            "src::forward",
-            "src::app",
             "src::frame",
-            "src::routing",
             "tests",
+            "src::routing",
             "src::preflight",
-            "src::registry"
+            "src::registry",
+            "src::app",
+            "src::forward"
           ]
         },
         {
@@ -160,24 +161,24 @@
           "domains": [
             "ports",
             "domain",
-            "infra",
+            "test_support",
             "config",
-            "app",
-            "test_support"
+            "infra",
+            "app"
           ]
         }
       ],
-      "violations_count": 32
+      "violations_count": 34
     },
     {
       "name": "open_closed",
       "description": "Соотношение абстракций >= 20% (OCP)",
       "status": "WARNING",
       "abstractions": 7,
-      "implementations": 289,
-      "ratio": 0.024,
+      "implementations": 309,
+      "ratio": 0.022,
       "threshold": 0.2,
-      "issue": "Низкое соотношение абстракций (2.36%) - плохая расширяемость"
+      "issue": "Низкое соотношение абстракций (2.22%) - плохая расширяемость"
     },
     {
       "name": "liskov_substitution",
