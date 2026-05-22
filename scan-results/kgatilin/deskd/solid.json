@@ -10,8 +10,8 @@
     "errors": 0
   },
   "graph": {
-    "nodes": 316,
-    "edges": 443
+    "nodes": 332,
+    "edges": 468
   },
   "checks": [
     {
@@ -24,120 +24,135 @@
           "package": "src::app",
           "domains_count": 45,
           "domains": [
-            "config_changeset",
-            "agent",
-            "bus",
-            "agent_state",
-            "context_size",
-            "adapters",
-            "agent_process",
+            "mcp_tools",
+            "context",
+            "tasklog",
+            "mcp_protocol",
             "a2a_jwt",
+            "serve",
+            "session_discover",
+            "context_log",
             "a2a",
-            "mcp"
+            "reload_state"
           ]
         },
         {
           "package": "src::app::commands",
           "domains_count": 19,
           "domains": [
-            "agent",
-            "bus",
+            "status",
+            "context",
+            "session",
             "upgrade",
             "a2a",
-            "task",
-            "remind",
-            "context",
+            "doctor",
             "sm",
-            "graph",
-            "session"
+            "usage",
+            "agent",
+            "tests"
           ]
         },
         {
           "package": "src::app::adapters::web",
-          "domains_count": 13,
+          "domains_count": 15,
           "domains": [
-            "dispatch",
-            "audit",
-            "templates",
-            "src::config",
-            "middleware",
             "data",
-            "data_cost",
+            "templates",
+            "router",
+            "dispatch",
+            "src::app",
+            "state",
+            "data_chart",
             "auth",
             "view",
-            "src::app"
+            "src::config"
           ]
         },
         {
           "package": "src::app::adapters::web::routes",
-          "domains_count": 13,
+          "domains_count": 15,
           "domains": [
-            "tests",
-            "agent_detail",
-            "github_webhook",
-            "cost",
-            "dashboard",
-            "cost_feed",
-            "health",
-            "sse",
+            "static_assets",
             "src::app",
-            "static_assets"
+            "agent_log",
+            "sse",
+            "logout",
+            "metrics",
+            "agent_task",
+            "agent_detail",
+            "cost_feed",
+            "dashboard"
           ]
         },
         {
           "package": "src::infra",
           "domains_count": 11,
           "domains": [
-            "sm_store",
-            "context_store",
-            "diag",
-            "bus_server",
-            "dto",
-            "unix_bus",
-            "memory_bus",
             "paths",
-            "memory_store",
-            "agent_file"
+            "unix_bus",
+            "sm_store",
+            "dto",
+            "memory_bus",
+            "task_store",
+            "bus_server",
+            "context_store",
+            "agent_file",
+            "diag"
+          ]
+        },
+        {
+          "package": "src::app::adapters::web::view",
+          "domains_count": 9,
+          "domains": [
+            "strip",
+            "breadcrumb",
+            "detail",
+            "log",
+            "tests",
+            "chart",
+            "cards",
+            "cost",
+            "task"
           ]
         },
         {
           "package": "src::domain",
           "domains_count": 8,
           "domains": [
+            "message",
+            "context",
+            "config_types",
             "agent",
             "workitem",
+            "statemachine",
             "events",
-            "config_types",
-            "task",
-            "context",
-            "message",
-            "statemachine"
+            "task"
           ]
         },
         {
           "package": "src::app::adapters::web::state",
           "domains_count": 8,
           "domains": [
-            "src::config",
+            "src::dispatch",
+            "src::app",
+            "src::routes",
+            "src::middleware",
             "src::auth",
             "src::data_cost",
-            "src::audit",
-            "src::app",
-            "src::dispatch",
-            "src::middleware",
-            "src::routes"
+            "src::config",
+            "src::audit"
           ]
         },
         {
           "package": "src::app::adapters::federation",
           "domains_count": 8,
           "domains": [
+            "frame",
+            "glob",
+            "preflight",
+            "routing",
             "hub",
             "forward",
-            "preflight",
-            "glob",
-            "frame",
-            "routing",
             "registry",
             "peer"
           ]
@@ -146,25 +161,13 @@
           "package": "src::app::adapters::federation::hub",
           "domains_count": 7,
           "domains": [
-            "src::frame",
-            "tests",
-            "src::routing",
-            "src::preflight",
-            "src::registry",
             "src::app",
-            "src::forward"
-          ]
-        },
-        {
-          "package": "src::lib",
-          "domains_count": 6,
-          "domains": [
-            "ports",
-            "domain",
-            "test_support",
-            "config",
-            "infra",
-            "app"
+            "src::registry",
+            "src::preflight",
+            "src::frame",
+            "src::forward",
+            "tests",
+            "src::routing"
           ]
         }
       ],
@@ -175,10 +178,10 @@
       "description": "Соотношение абстракций >= 20% (OCP)",
       "status": "WARNING",
       "abstractions": 7,
-      "implementations": 309,
-      "ratio": 0.022,
+      "implementations": 325,
+      "ratio": 0.021,
       "threshold": 0.2,
-      "issue": "Низкое соотношение абстракций (2.22%) - плохая расширяемость"
+      "issue": "Низкое соотношение абстракций (2.11%) - плохая расширяемость"
     },
     {
       "name": "liskov_substitution",

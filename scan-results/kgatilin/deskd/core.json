@@ -10,8 +10,8 @@
     "errors": 3
   },
   "graph": {
-    "nodes": 316,
-    "edges": 443
+    "nodes": 332,
+    "edges": 468
   },
   "checks": [
     {
@@ -39,12 +39,12 @@
         },
         {
           "node": "src::app::adapters::web",
-          "fan_out": 13,
+          "fan_out": 15,
           "threshold": 10
         },
         {
           "node": "src::app::adapters::web::routes",
-          "fan_out": 13,
+          "fan_out": 15,
           "threshold": 10
         },
         {
@@ -86,20 +86,20 @@
         {
           "node": "src::app::adapters::web",
           "afferent_coupling": 0,
-          "efferent_coupling": 13,
+          "efferent_coupling": 15,
           "ca_threshold": 10,
           "ce_threshold": 10
         },
         {
           "node": "src::app::adapters::web::routes",
           "afferent_coupling": 0,
-          "efferent_coupling": 13,
+          "efferent_coupling": 15,
           "ca_threshold": 10,
           "ce_threshold": 10
         },
         {
           "node": "src::app",
-          "afferent_coupling": 48,
+          "afferent_coupling": 54,
           "efferent_coupling": 45,
           "ca_threshold": 10,
           "ce_threshold": 10
@@ -120,7 +120,7 @@
         },
         {
           "node": "deskd",
-          "afferent_coupling": 12,
+          "afferent_coupling": 13,
           "efferent_coupling": 0,
           "ca_threshold": 10,
           "ce_threshold": 10
@@ -192,7 +192,7 @@
         {
           "node": "deskd",
           "instability": 0.0,
-          "ca": 12,
+          "ca": 13,
           "ce": 0
         }
       ],
@@ -274,8 +274,8 @@
       "hubs": [
         {
           "node": "src::app",
-          "total_degree": 93,
-          "in_degree": 48,
+          "total_degree": 99,
+          "in_degree": 54,
           "out_degree": 45
         },
         {
@@ -310,20 +310,20 @@
         },
         {
           "node": "src::app::adapters::web",
-          "total_degree": 13,
+          "total_degree": 15,
           "in_degree": 0,
-          "out_degree": 13
+          "out_degree": 15
         },
         {
           "node": "src::app::adapters::web::routes",
-          "total_degree": 13,
+          "total_degree": 15,
           "in_degree": 0,
-          "out_degree": 13
+          "out_degree": 15
         },
         {
           "node": "deskd",
-          "total_degree": 12,
-          "in_degree": 12,
+          "total_degree": 13,
+          "in_degree": 13,
           "out_degree": 0
         }
       ],
@@ -355,7 +355,7 @@
       "name": "strongly_connected_components",
       "description": "Группы с взаимными зависимостями (размер > 1)",
       "status": "PASSED",
-      "total_sccs": 316,
+      "total_sccs": 332,
       "problematic_sccs": [],
       "problematic_count": 0
     },
