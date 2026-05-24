@@ -41,7 +41,7 @@
       "status": "PASSED",
       "modularity": 0.571,
       "threshold": 0.3,
-      "communities_count": 30
+      "communities_count": 31
     },
     {
       "name": "abstractness",
@@ -625,110 +625,110 @@
           "component": "tests",
           "impact_radius": 120,
           "sample_dependents": [
-            "src::app::adapters::federation::routing",
-            "src::infra::sm_store",
-            "src::app::acp",
-            "src::app::adapters::discord",
-            "src::app::adapters::web::routes::agent_task"
+            "src::app::alerts",
+            "src::infra::paths",
+            "src::app::adapters::telegram",
+            "src::app::adapters::federation::peer",
+            "src::app::config_reload"
           ]
         },
         {
           "component": "task",
           "impact_radius": 92,
           "sample_dependents": [
-            "src::infra::sm_store",
-            "src::ports::bus",
-            "src::app::acp",
-            "src::app::adapters::discord",
-            "src::app::adapters::web::routes::agent_task"
+            "src::app::alerts",
+            "src::app::adapters::telegram",
+            "src::app",
+            "src::app::adapters::federation::peer",
+            "src::app::commands::doctor"
           ]
         },
         {
           "component": "context",
           "impact_radius": 91,
           "sample_dependents": [
-            "src::infra::sm_store",
-            "src::ports::bus",
-            "src::app::acp",
-            "src::app::adapters::discord",
-            "src::app::adapters::web::routes::agent_task"
+            "src::app::alerts",
+            "src::app::adapters::telegram",
+            "src::app",
+            "src::app::adapters::federation::peer",
+            "src::app::commands::doctor"
           ]
         },
         {
           "component": "agent",
           "impact_radius": 90,
           "sample_dependents": [
-            "src::infra::sm_store",
-            "src::ports::bus",
-            "src::app::acp",
-            "src::app::adapters::discord",
-            "src::app::adapters::web::routes::agent_task"
+            "src::app::alerts",
+            "src::app::adapters::telegram",
+            "src::app",
+            "src::app::adapters::federation::peer",
+            "src::app::commands::doctor"
           ]
         },
         {
           "component": "message",
           "impact_radius": 89,
           "sample_dependents": [
-            "src::infra::sm_store",
-            "src::ports::bus",
-            "src::app::acp",
-            "src::app::adapters::discord",
-            "src::app::adapters::web::routes::agent_task"
+            "src::app::alerts",
+            "src::app::adapters::telegram",
+            "src::app",
+            "src::app::adapters::federation::peer",
+            "src::app::commands::doctor"
           ]
         },
         {
           "component": "statemachine",
           "impact_radius": 89,
           "sample_dependents": [
-            "src::infra::sm_store",
-            "src::ports::bus",
-            "src::app::acp",
-            "src::app::adapters::discord",
-            "src::app::adapters::web::routes::agent_task"
+            "src::app::alerts",
+            "src::app::adapters::telegram",
+            "src::app",
+            "src::app::adapters::federation::peer",
+            "src::app::commands::doctor"
           ]
         },
         {
           "component": "bus",
           "impact_radius": 71,
           "sample_dependents": [
-            "src::app::acp",
-            "src::app::adapters::web::routes::agent_task",
-            "src::app::timeout_sweep",
-            "src::app::adapters::federation::forward",
-            "src::app::commands::schedule"
+            "src::infra::unix_bus",
+            "src::app",
+            "src::app::adapters::telegram",
+            "src::app::adapters::federation::peer",
+            "src::app::commands::doctor"
           ]
         },
         {
           "component": "events",
           "impact_radius": 61,
           "sample_dependents": [
-            "src::infra::dto::task",
-            "src::config",
-            "src::infra::sm_store",
-            "src::ports::bus",
-            "src::app::acp"
+            "src::app::alerts",
+            "src::infra::dto::config",
+            "src::app::adapters::telegram",
+            "src::infra::dto::bus",
+            "src::ports::store"
           ]
         },
         {
           "component": "config_types",
           "impact_radius": 60,
           "sample_dependents": [
-            "src::infra::dto::task",
-            "src::config",
-            "src::infra::sm_store",
-            "src::ports::bus",
-            "src::app::acp"
+            "src::app::alerts",
+            "src::infra::dto::config",
+            "src::app::adapters::telegram",
+            "src::infra::dto::bus",
+            "src::ports::store"
           ]
         },
         {
           "component": "workitem",
           "impact_radius": 60,
           "sample_dependents": [
-            "src::infra::dto::task",
-            "src::config",
-            "src::infra::sm_store",
-            "src::ports::bus",
-            "src::app::acp"
+            "src::app::alerts",
+            "src::infra::dto::config",
+            "src::app::adapters::telegram",
+            "src::infra::dto::bus",
+            "src::ports::store"
           ]
         }
       ],
