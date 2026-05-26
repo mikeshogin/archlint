@@ -34,7 +34,7 @@
       "name": "modularity",
       "description": "Модульность графа должна быть >= 0.3",
       "status": "PASSED",
-      "modularity": 0.577,
+      "modularity": 0.58,
       "threshold": 0.3,
       "communities_count": 16
     },
@@ -617,66 +617,66 @@
           "component": "exit_code",
           "impact_radius": 25,
           "sample_dependents": [
-            "src::timer::wall_clock_timer",
-            "src::output::warnings",
-            "src::export::markup",
-            "src::benchmark",
-            "src::timer"
+            "src::options",
+            "src::output::format",
+            "src::export::asciidoc",
+            "src::command",
+            "src::timer::wall_clock_timer"
           ]
         },
         {
           "component": "min_max",
           "impact_radius": 25,
           "sample_dependents": [
-            "src::timer::wall_clock_timer",
-            "src::output::warnings",
-            "src::export::markup",
-            "src::benchmark",
-            "src::timer"
+            "src::options",
+            "src::output::format",
+            "src::export::asciidoc",
+            "src::command",
+            "src::timer::wall_clock_timer"
           ]
         },
         {
           "component": "number",
           "impact_radius": 25,
           "sample_dependents": [
-            "src::timer::wall_clock_timer",
-            "src::output::warnings",
-            "src::export::markup",
-            "src::benchmark",
-            "src::timer"
+            "src::options",
+            "src::output::format",
+            "src::export::asciidoc",
+            "src::command",
+            "src::timer::wall_clock_timer"
           ]
         },
         {
           "component": "randomized_environment_offset",
           "impact_radius": 25,
           "sample_dependents": [
-            "src::timer::wall_clock_timer",
-            "src::output::warnings",
-            "src::export::markup",
-            "src::benchmark",
-            "src::timer"
+            "src::options",
+            "src::output::format",
+            "src::export::asciidoc",
+            "src::command",
+            "src::timer::wall_clock_timer"
           ]
         },
         {
           "component": "units",
           "impact_radius": 25,
           "sample_dependents": [
-            "src::timer::wall_clock_timer",
-            "src::output::warnings",
-            "src::export::markup",
-            "src::benchmark",
-            "src::timer"
+            "src::options",
+            "src::output::format",
+            "src::export::asciidoc",
+            "src::command",
+            "src::timer::wall_clock_timer"
           ]
         },
         {
           "component": "src::util",
           "impact_radius": 24,
           "sample_dependents": [
-            "src::timer::wall_clock_timer",
-            "src::output::warnings",
-            "src::export::markup",
-            "src::benchmark",
-            "src::timer"
+            "src::options",
+            "src::output::format",
+            "src::export::asciidoc",
+            "src::command",
+            "src::timer::wall_clock_timer"
           ]
         }
       ],
