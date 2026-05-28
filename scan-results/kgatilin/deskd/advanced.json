@@ -625,110 +625,110 @@
           "component": "tests",
           "impact_radius": 121,
           "sample_dependents": [
-            "src::app::metrics",
-            "src::app::adapters::web::middleware::rate_limit",
-            "src::app::mcp_service",
-            "src::domain::context",
-            "src::app::scope"
+            "src::app::doctor",
+            "src::infra::memory_store",
+            "src::app::adapters::web::view::task",
+            "src::app::adapters::federation::registry",
+            "src::app::adapters::federation::peer"
           ]
         },
         {
           "component": "task",
           "impact_radius": 92,
           "sample_dependents": [
-            "src::app::metrics",
-            "src::app::commands::doctor",
-            "src::app::mcp_service",
-            "src::infra::dto::config",
-            "src::ports::store"
+            "src::app::doctor",
+            "src::infra::memory_store",
+            "src::ports::store",
+            "src::app::adapters::web::view::task",
+            "src::app::adapters::federation::peer"
           ]
         },
         {
           "component": "context",
           "impact_radius": 91,
           "sample_dependents": [
-            "src::app::metrics",
-            "src::app::commands::doctor",
-            "src::app::mcp_service",
-            "src::infra::dto::config",
-            "src::ports::store"
+            "src::app::doctor",
+            "src::infra::memory_store",
+            "src::ports::store",
+            "src::app::adapters::web::view::task",
+            "src::app::adapters::federation::peer"
           ]
         },
         {
           "component": "agent",
           "impact_radius": 90,
           "sample_dependents": [
-            "src::app::metrics",
-            "src::app::commands::doctor",
-            "src::app::mcp_service",
-            "src::infra::dto::config",
-            "src::ports::store"
+            "src::app::doctor",
+            "src::infra::memory_store",
+            "src::ports::store",
+            "src::app::adapters::web::view::task",
+            "src::app::adapters::federation::peer"
           ]
         },
         {
           "component": "message",
           "impact_radius": 89,
           "sample_dependents": [
-            "src::app::metrics",
-            "src::app::commands::doctor",
-            "src::app::mcp_service",
-            "src::infra::dto::config",
-            "src::ports::store"
+            "src::app::doctor",
+            "src::infra::memory_store",
+            "src::ports::store",
+            "src::app::adapters::web::view::task",
+            "src::app::adapters::federation::peer"
           ]
         },
         {
           "component": "statemachine",
           "impact_radius": 89,
           "sample_dependents": [
-            "src::app::metrics",
-            "src::app::commands::doctor",
-            "src::app::mcp_service",
-            "src::infra::dto::config",
-            "src::ports::store"
+            "src::app::doctor",
+            "src::infra::memory_store",
+            "src::ports::store",
+            "src::app::adapters::web::view::task",
+            "src::app::adapters::federation::peer"
           ]
         },
         {
           "component": "bus",
           "impact_radius": 71,
           "sample_dependents": [
-            "src::app::metrics",
-            "src::app::commands::doctor",
-            "src::app::mcp_service",
-            "src::app::commands::schedule",
-            "src::app::doctor"
+            "src::app::doctor",
+            "src::infra::memory_store",
+            "src::app::adapters::web::view::task",
+            "src::app::adapters::federation::peer",
+            "src::app::adapters::web::view::chart"
           ]
         },
         {
           "component": "events",
           "impact_radius": 61,
           "sample_dependents": [
-            "src::infra::bus_server",
-            "src::app::metrics",
-            "src::app::mcp",
-            "src::app::process_builder",
-            "src::app::adapters::web::view::cost"
+            "src::infra::dto::config",
+            "src::infra::memory_store",
+            "src::ports::store",
+            "src::app::schedule",
+            "src::app::mcp_service"
           ]
         },
         {
           "component": "config_types",
           "impact_radius": 60,
           "sample_dependents": [
-            "src::infra::bus_server",
-            "src::app::metrics",
-            "src::app::mcp",
-            "src::app::process_builder",
-            "src::app::adapters::web::view::cost"
+            "src::infra::dto::config",
+            "src::infra::memory_store",
+            "src::ports::store",
+            "src::app::schedule",
+            "src::app::mcp_service"
           ]
         },
         {
           "component": "workitem",
           "impact_radius": 60,
           "sample_dependents": [
-            "src::infra::bus_server",
-            "src::app::metrics",
-            "src::app::mcp",
-            "src::app::process_builder",
-            "src::app::adapters::web::view::cost"
+            "src::infra::dto::config",
+            "src::infra::memory_store",
+            "src::ports::store",
+            "src::app::schedule",
+            "src::app::mcp_service"
           ]
         }
       ],
