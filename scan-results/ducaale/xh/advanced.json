@@ -39,9 +39,9 @@
       "name": "modularity",
       "description": "Модульность графа должна быть >= 0.3",
       "status": "PASSED",
-      "modularity": 0.525,
+      "modularity": 0.53,
       "threshold": 0.3,
-      "communities_count": 11
+      "communities_count": 12
     },
     {
       "name": "abstractness",
@@ -79,7 +79,7 @@
           "issue": "Зона боли: конкретный и стабильный"
         },
         {
-          "package": "imp",
+          "package": "RequestItem",
           "abstractness": 0.0,
           "instability": 0.0,
           "distance": 1.0,
@@ -88,7 +88,7 @@
           "issue": "Зона боли: конкретный и стабильный"
         },
         {
-          "package": "RequestItem",
+          "package": "util",
           "abstractness": 0.0,
           "instability": 0.0,
           "distance": 1.0,
@@ -107,15 +107,6 @@
         },
         {
           "package": "palette",
-          "abstractness": 0.0,
-          "instability": 0.0,
-          "distance": 1.0,
-          "nodes_count": 1,
-          "zone": "pain",
-          "issue": "Зона боли: конкретный и стабильный"
-        },
-        {
-          "package": "util",
           "abstractness": 0.0,
           "instability": 0.0,
           "distance": 1.0,
@@ -149,6 +140,15 @@
           "nodes_count": 1,
           "zone": "pain",
           "issue": "Зона боли: конкретный и стабильный"
+        },
+        {
+          "package": "content_disposition",
+          "abstractness": 0.0,
+          "instability": 0.0,
+          "distance": 1.0,
+          "nodes_count": 1,
+          "zone": "pain",
+          "issue": "Зона боли: конкретный и стабильный"
         }
       ],
       "violations": [
@@ -160,19 +160,19 @@
           "nodes_count": 1
         },
         {
-          "package": "src::middleware",
+          "package": "src::utils",
           "abstractness": 0.0,
-          "instability": 0.0,
-          "distance": 1.0,
+          "instability": 0.071,
+          "distance": 0.929,
           "nodes_count": 1,
           "zone": "pain",
           "issue": "Зона боли: конкретный и стабильный"
         },
         {
-          "package": "src::utils",
+          "package": "src::middleware",
           "abstractness": 0.0,
-          "instability": 0.071,
-          "distance": 0.929,
+          "instability": 0.0,
+          "distance": 1.0,
           "nodes_count": 1,
           "zone": "pain",
           "issue": "Зона боли: конкретный и стабильный"
@@ -187,7 +187,7 @@
           "issue": "Зона боли: конкретный и стабильный"
         },
         {
-          "package": "imp",
+          "package": "RequestItem",
           "abstractness": 0.0,
           "instability": 0.0,
           "distance": 1.0,
@@ -206,11 +206,11 @@
       "threshold": 0.1,
       "low_clustering_nodes": [
         {
-          "node": "src::formatting",
+          "node": "src::formatting::palette",
           "coefficient": 0.0
         },
         {
-          "node": "src::formatting::palette",
+          "node": "src::formatting",
           "coefficient": 0.0
         },
         {
@@ -250,17 +250,17 @@
       "description": "Критические узлы (удаление разбивает граф)",
       "status": "WARNING",
       "articulation_points": [
-        "src::buffer",
+        "src::formatting::palette",
+        "src::formatting",
+        "tests",
         "src::main",
         "tests::cases",
         "download",
-        "src::formatting",
-        "src::formatting::palette",
-        "src::printer",
+        "src::buffer",
         "src::nested_json",
         "src::request_items",
-        "tests",
         "src::cli",
+        "src::printer",
         "tests::cli",
         "tests::prelude"
       ],
@@ -273,20 +273,28 @@
       "status": "INFO",
       "bridges": [
         {
-          "from": "src::cli",
-          "to": "src::redacted"
-        },
-        {
-          "from": "src::buffer",
-          "to": "imp"
+          "from": "src::printer",
+          "to": "src::formatting"
         },
         {
           "from": "src::message_signature",
           "to": "tests"
         },
         {
+          "from": "src::cli",
+          "to": "src::redacted"
+        },
+        {
           "from": "src::request_items",
           "to": "RequestItem"
+        },
+        {
+          "from": "src::formatting::palette",
+          "to": "util"
+        },
+        {
+          "from": "src::formatting::palette",
+          "to": "src::formatting"
         },
         {
           "from": "src::formatting",
@@ -295,18 +303,6 @@
         {
           "from": "src::formatting",
           "to": "palette"
-        },
-        {
-          "from": "src::formatting",
-          "to": "src::formatting::palette"
-        },
-        {
-          "from": "src::formatting",
-          "to": "src::printer"
-        },
-        {
-          "from": "src::formatting::palette",
-          "to": "util"
         },
         {
           "from": "src::main",
@@ -351,6 +347,10 @@
         {
           "from": "src::main",
           "to": "middleware"
+        },
+        {
+          "from": "src::main",
+          "to": "nested_json"
         }
       ],
       "count": 46
@@ -482,11 +482,11 @@
       "threshold": 4,
       "large_cliques": [
         [
+          "src::to_curl",
+          "src::request_items",
           "tests",
           "src::utils",
-          "src::cli",
-          "src::request_items",
-          "src::to_curl"
+          "src::cli"
         ]
       ],
       "large_cliques_count": 1,
