@@ -41,7 +41,7 @@
       "status": "PASSED",
       "modularity": 0.578,
       "threshold": 0.3,
-      "communities_count": 30
+      "communities_count": 29
     },
     {
       "name": "abstractness",
@@ -629,110 +629,110 @@
           "component": "tests",
           "impact_radius": 124,
           "sample_dependents": [
-            "src::domain::statemachine",
-            "src::app::commands::reload",
-            "src::app::context_log",
-            "src::app::mcp_service",
-            "src::infra::paths"
+            "src::app::adapters::web::routes::github_webhook",
+            "src::infra::sm_store",
+            "src::app::commands::tui",
+            "src::app::adapters::web::data_log",
+            "src::app::adapters::web::routes::agent_task"
           ]
         },
         {
           "component": "task",
           "impact_radius": 95,
           "sample_dependents": [
-            "src::app::commands::reload",
-            "src::app::adapters::web::routes::panel",
-            "src::app::mcp_service",
-            "src::app::commands::task",
-            "src::app::a2a"
+            "src::app::adapters::web::routes::github_webhook",
+            "src::infra::sm_store",
+            "src::app::commands::tui",
+            "src::ports::store",
+            "src::app::adapters::web::routes::agent_task"
           ]
         },
         {
           "component": "context",
           "impact_radius": 94,
           "sample_dependents": [
-            "src::app::commands::reload",
-            "src::app::adapters::web::routes::panel",
-            "src::app::mcp_service",
-            "src::app::commands::task",
-            "src::app::a2a"
+            "src::app::adapters::web::routes::github_webhook",
+            "src::infra::sm_store",
+            "src::app::commands::tui",
+            "src::ports::store",
+            "src::app::adapters::web::routes::agent_task"
           ]
         },
         {
           "component": "agent",
           "impact_radius": 93,
           "sample_dependents": [
-            "src::app::commands::reload",
-            "src::app::adapters::web::routes::panel",
-            "src::app::mcp_service",
-            "src::app::commands::task",
-            "src::app::a2a"
+            "src::app::adapters::web::routes::github_webhook",
+            "src::infra::sm_store",
+            "src::app::commands::tui",
+            "src::ports::store",
+            "src::app::adapters::web::routes::agent_task"
           ]
         },
         {
           "component": "message",
           "impact_radius": 92,
           "sample_dependents": [
-            "src::app::commands::reload",
-            "src::app::adapters::web::routes::panel",
-            "src::app::mcp_service",
-            "src::app::commands::task",
-            "src::app::a2a"
+            "src::app::adapters::web::routes::github_webhook",
+            "src::infra::sm_store",
+            "src::app::commands::tui",
+            "src::ports::store",
+            "src::app::adapters::web::routes::agent_task"
           ]
         },
         {
           "component": "statemachine",
           "impact_radius": 92,
           "sample_dependents": [
-            "src::app::commands::reload",
-            "src::app::adapters::web::routes::panel",
-            "src::app::mcp_service",
-            "src::app::commands::task",
-            "src::app::a2a"
+            "src::app::adapters::web::routes::github_webhook",
+            "src::infra::sm_store",
+            "src::app::commands::tui",
+            "src::ports::store",
+            "src::app::adapters::web::routes::agent_task"
           ]
         },
         {
           "component": "bus",
           "impact_radius": 74,
           "sample_dependents": [
-            "src::app::adapters::web::routes::panel",
-            "src::app::mcp_service",
-            "src::app::commands::task",
             "src::app::adapters::web::routes::agent_task",
-            "src::app::mcp_protocol"
+            "src::app::adapters::web::view::cost",
+            "src::app::commands::context",
+            "src::app::commands::usage",
+            "src::app::adapters::web::routes::logout"
           ]
         },
         {
           "component": "events",
           "impact_radius": 61,
           "sample_dependents": [
-            "src::app::commands::reload",
-            "src::app::commands::a2a",
+            "src::app::adapters::web::routes::github_webhook",
+            "src::infra::sm_store",
+            "src::ports::store",
             "src::infra::dto::context",
-            "src::config",
-            "src::app::mcp_service"
+            "src::config"
           ]
         },
         {
           "component": "config_types",
           "impact_radius": 60,
           "sample_dependents": [
-            "src::app::commands::reload",
-            "src::app::commands::a2a",
+            "src::app::adapters::web::routes::github_webhook",
+            "src::infra::sm_store",
+            "src::ports::store",
             "src::infra::dto::context",
-            "src::config",
-            "src::app::mcp_service"
+            "src::config"
           ]
         },
         {
           "component": "workitem",
           "impact_radius": 60,
           "sample_dependents": [
-            "src::app::commands::reload",
-            "src::app::commands::a2a",
+            "src::app::adapters::web::routes::github_webhook",
+            "src::infra::sm_store",
+            "src::ports::store",
             "src::infra::dto::context",
-            "src::config",
-            "src::app::mcp_service"
+            "src::config"
           ]
         }
       ],
