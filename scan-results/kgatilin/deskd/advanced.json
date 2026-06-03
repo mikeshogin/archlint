@@ -41,7 +41,7 @@
       "status": "PASSED",
       "modularity": 0.578,
       "threshold": 0.3,
-      "communities_count": 29
+      "communities_count": 30
     },
     {
       "name": "abstractness",
@@ -629,110 +629,110 @@
           "component": "tests",
           "impact_radius": 124,
           "sample_dependents": [
-            "src::app::adapters::web::routes::github_webhook",
-            "src::infra::sm_store",
-            "src::app::commands::tui",
-            "src::app::adapters::web::data_log",
-            "src::app::adapters::web::routes::agent_task"
+            "src::infra::context_store",
+            "src::app::agent",
+            "src::app::commands::remind",
+            "src::app::adapters::federation::forward",
+            "src::app::bus_api"
           ]
         },
         {
           "component": "task",
           "impact_radius": 95,
           "sample_dependents": [
-            "src::app::adapters::web::routes::github_webhook",
-            "src::infra::sm_store",
-            "src::app::commands::tui",
-            "src::ports::store",
-            "src::app::adapters::web::routes::agent_task"
+            "src::infra::context_store",
+            "src::app::commands::remind",
+            "src::infra::dto::config",
+            "src::app::bus_api",
+            "src::app::timeout_sweep"
           ]
         },
         {
           "component": "context",
           "impact_radius": 94,
           "sample_dependents": [
-            "src::app::adapters::web::routes::github_webhook",
-            "src::infra::sm_store",
-            "src::app::commands::tui",
-            "src::ports::store",
-            "src::app::adapters::web::routes::agent_task"
+            "src::infra::context_store",
+            "src::app::commands::remind",
+            "src::infra::dto::config",
+            "src::app::bus_api",
+            "src::app::timeout_sweep"
           ]
         },
         {
           "component": "agent",
           "impact_radius": 93,
           "sample_dependents": [
-            "src::app::adapters::web::routes::github_webhook",
-            "src::infra::sm_store",
-            "src::app::commands::tui",
-            "src::ports::store",
-            "src::app::adapters::web::routes::agent_task"
+            "src::infra::context_store",
+            "src::app::commands::remind",
+            "src::infra::dto::config",
+            "src::app::bus_api",
+            "src::app::timeout_sweep"
           ]
         },
         {
           "component": "message",
           "impact_radius": 92,
           "sample_dependents": [
-            "src::app::adapters::web::routes::github_webhook",
-            "src::infra::sm_store",
-            "src::app::commands::tui",
-            "src::ports::store",
-            "src::app::adapters::web::routes::agent_task"
+            "src::infra::context_store",
+            "src::app::commands::remind",
+            "src::infra::dto::config",
+            "src::app::bus_api",
+            "src::app::timeout_sweep"
           ]
         },
         {
           "component": "statemachine",
           "impact_radius": 92,
           "sample_dependents": [
-            "src::app::adapters::web::routes::github_webhook",
-            "src::infra::sm_store",
-            "src::app::commands::tui",
-            "src::ports::store",
-            "src::app::adapters::web::routes::agent_task"
+            "src::infra::context_store",
+            "src::app::commands::remind",
+            "src::infra::dto::config",
+            "src::app::bus_api",
+            "src::app::timeout_sweep"
           ]
         },
         {
           "component": "bus",
           "impact_radius": 74,
           "sample_dependents": [
-            "src::app::adapters::web::routes::agent_task",
-            "src::app::adapters::web::view::cost",
-            "src::app::commands::context",
-            "src::app::commands::usage",
-            "src::app::adapters::web::routes::logout"
+            "src::infra::context_store",
+            "src::app::agent",
+            "src::app::timeout_sweep",
+            "src::app::bus_api",
+            "src::app::adapters::federation::forward"
           ]
         },
         {
           "component": "events",
           "impact_radius": 61,
           "sample_dependents": [
-            "src::app::adapters::web::routes::github_webhook",
-            "src::infra::sm_store",
-            "src::ports::store",
-            "src::infra::dto::context",
-            "src::config"
+            "src::infra::context_store",
+            "src::app::commands::remind",
+            "src::infra::dto::config",
+            "src::app::timeout_sweep",
+            "src::app::bus_api"
           ]
         },
         {
           "component": "config_types",
           "impact_radius": 60,
           "sample_dependents": [
-            "src::app::adapters::web::routes::github_webhook",
-            "src::infra::sm_store",
-            "src::ports::store",
-            "src::infra::dto::context",
-            "src::config"
+            "src::infra::context_store",
+            "src::app::commands::remind",
+            "src::infra::dto::config",
+            "src::app::timeout_sweep",
+            "src::app::bus_api"
           ]
         },
         {
           "component": "workitem",
           "impact_radius": 60,
           "sample_dependents": [
-            "src::app::adapters::web::routes::github_webhook",
-            "src::infra::sm_store",
-            "src::ports::store",
-            "src::infra::dto::context",
-            "src::config"
+            "src::infra::context_store",
+            "src::app::commands::remind",
+            "src::infra::dto::config",
+            "src::app::timeout_sweep",
+            "src::app::bus_api"
           ]
         }
       ],
