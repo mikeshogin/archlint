@@ -629,110 +629,110 @@
           "component": "tests",
           "impact_radius": 124,
           "sample_dependents": [
-            "src::app::timeout_sweep",
-            "src::app::agent_provisioning",
-            "src::app::adapters::federation::glob",
-            "src::app::adapters::web::data_log",
-            "src::config"
+            "src::app::context",
+            "src::app::adapters::web::routes::cost_feed",
+            "src::app::adapters::telegram::attachments",
+            "src::app::reload_state",
+            "src::app::agent"
           ]
         },
         {
           "component": "task",
           "impact_radius": 95,
           "sample_dependents": [
-            "src::app::timeout_sweep",
-            "src::ports::bus",
+            "src::app::context",
+            "src::app::adapters::web::routes::cost_feed",
+            "src::app::adapters::web::routes::metrics",
             "src::app::commands::context",
-            "src::ports::bus_wire",
-            "src::config"
+            "src::app::adapters::web::routes::cost"
           ]
         },
         {
           "component": "context",
           "impact_radius": 94,
           "sample_dependents": [
-            "src::app::timeout_sweep",
-            "src::ports::bus",
+            "src::app::context",
+            "src::app::adapters::web::routes::cost_feed",
+            "src::app::adapters::web::routes::metrics",
             "src::app::commands::context",
-            "src::ports::bus_wire",
-            "src::config"
+            "src::app::adapters::web::routes::cost"
           ]
         },
         {
           "component": "agent",
           "impact_radius": 93,
           "sample_dependents": [
-            "src::app::timeout_sweep",
-            "src::ports::bus",
+            "src::app::context",
+            "src::app::adapters::web::routes::cost_feed",
+            "src::app::adapters::web::routes::metrics",
             "src::app::commands::context",
-            "src::ports::bus_wire",
-            "src::config"
+            "src::app::adapters::web::routes::cost"
           ]
         },
         {
           "component": "message",
           "impact_radius": 92,
           "sample_dependents": [
-            "src::app::timeout_sweep",
-            "src::ports::bus",
+            "src::app::context",
+            "src::app::adapters::web::routes::cost_feed",
+            "src::app::adapters::web::routes::metrics",
             "src::app::commands::context",
-            "src::ports::bus_wire",
-            "src::config"
+            "src::app::adapters::web::routes::cost"
           ]
         },
         {
           "component": "statemachine",
           "impact_radius": 92,
           "sample_dependents": [
-            "src::app::timeout_sweep",
-            "src::ports::bus",
+            "src::app::context",
+            "src::app::adapters::web::routes::cost_feed",
+            "src::app::adapters::web::routes::metrics",
             "src::app::commands::context",
-            "src::ports::bus_wire",
-            "src::config"
+            "src::app::adapters::web::routes::cost"
           ]
         },
         {
           "component": "bus",
           "impact_radius": 74,
           "sample_dependents": [
-            "src::app::timeout_sweep",
-            "src::app::commands::context",
-            "src::infra::unix_bus",
-            "src::app::commands",
-            "src::app::bus_api"
+            "src::app::context",
+            "src::app::adapters::web::routes::cost_feed",
+            "src::app::adapters::web::routes::metrics",
+            "src::app::agent",
+            "src::app::commands::context"
           ]
         },
         {
           "component": "events",
           "impact_radius": 61,
           "sample_dependents": [
-            "src::app::agent_state",
+            "src::app::context",
             "src::app::timeout_sweep",
-            "src::ports::bus",
-            "src::app::bus",
-            "src::app::agent_process"
+            "src::domain::workitem",
+            "src::app::adapters::web::routes::cost_feed",
+            "src::app::config_reload"
           ]
         },
         {
           "component": "config_types",
           "impact_radius": 60,
           "sample_dependents": [
-            "src::app::agent_state",
+            "src::app::context",
             "src::app::timeout_sweep",
-            "src::ports::bus",
-            "src::app::bus",
-            "src::app::agent_process"
+            "src::domain::workitem",
+            "src::app::adapters::web::routes::cost_feed",
+            "src::app::config_reload"
           ]
         },
         {
           "component": "workitem",
           "impact_radius": 60,
           "sample_dependents": [
-            "src::app::agent_state",
+            "src::app::context",
             "src::app::timeout_sweep",
-            "src::ports::bus",
-            "src::app::bus",
-            "src::app::agent_process"
+            "src::domain::workitem",
+            "src::app::adapters::web::routes::cost_feed",
+            "src::app::config_reload"
           ]
         }
       ],
