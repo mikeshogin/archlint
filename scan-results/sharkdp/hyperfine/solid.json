@@ -24,16 +24,16 @@
           "package": "src::export",
           "domains_count": 15,
           "domains": [
-            "csv",
+            "tests",
+            "src::orgmode",
             "src::util",
-            "src::csv",
-            "markup",
             "src::markdown",
-            "orgmode",
-            "asciidoc",
-            "src::options",
+            "markup",
             "markdown",
-            "tests"
+            "orgmode",
+            "src::csv",
+            "src::asciidoc",
+            "src::options"
           ]
         },
         {
@@ -42,41 +42,41 @@
           "domains": [
             "src::util",
             "executor",
-            "src::parameter",
-            "src::executor",
+            "src::output",
+            "scheduler",
+            "benchmark_result",
+            "relative_speed",
             "src::command",
             "src::options",
-            "src::outlier_detection",
-            "relative_speed",
-            "benchmark_result",
-            "scheduler"
+            "src::executor",
+            "src::parameter"
           ]
         },
         {
           "package": "src::main",
           "domains_count": 11,
           "domains": [
-            "error",
-            "export",
-            "timer",
-            "benchmark",
-            "outlier_detection",
-            "cli",
-            "util",
-            "output",
             "parameter",
-            "command"
+            "export",
+            "options",
+            "cli",
+            "benchmark",
+            "error",
+            "output",
+            "outlier_detection",
+            "command",
+            "util"
           ]
         },
         {
           "package": "src::timer",
           "domains_count": 6,
           "domains": [
-            "src::util",
-            "unix_timer",
             "wall_clock_timer",
-            "windows_sys",
             "nix",
+            "src::util",
+            "windows_sys",
+            "unix_timer",
             "windows_timer"
           ]
         },
@@ -84,12 +84,12 @@
           "package": "src::benchmark::scheduler",
           "domains_count": 6,
           "domains": [
-            "src::export",
             "src::cli",
-            "src::executor",
-            "src::command",
+            "src::benchmark_result",
             "src::options",
-            "src::benchmark_result"
+            "src::command",
+            "src::executor",
+            "src::export"
           ]
         },
         {
@@ -98,10 +98,10 @@
           "domains": [
             "src::util",
             "src::timer",
-            "src::command",
+            "src::output",
             "src::options",
-            "src::timing_result",
-            "src::output"
+            "src::command",
+            "src::timing_result"
           ]
         },
         {
@@ -109,21 +109,21 @@
           "domains_count": 5,
           "domains": [
             "src::util",
-            "src::options",
-            "src::benchmark",
+            "src::Exporter",
             "src::output",
-            "src::Exporter"
+            "src::options",
+            "src::benchmark"
           ]
         },
         {
           "package": "src::util",
           "domains_count": 5,
           "domains": [
-            "exit_code",
-            "min_max",
             "units",
             "randomized_environment_offset",
-            "number"
+            "exit_code",
+            "number",
+            "min_max"
           ]
         },
         {
@@ -131,8 +131,8 @@
           "domains_count": 4,
           "domains": [
             "src::benchmark",
-            "src::options",
             "src::util",
+            "src::options",
             "src::Exporter"
           ]
         },
@@ -140,9 +140,9 @@
           "package": "src::export::tests",
           "domains_count": 4,
           "domains": [
-            "src::export",
             "src::benchmark",
             "src::util",
+            "src::export",
             "src::Exporter"
           ]
         }
