@@ -629,76 +629,76 @@
           "component": "tests",
           "impact_radius": 124,
           "sample_dependents": [
-            "src::app::adapters::web",
-            "src::app::adapters::federation::hub",
-            "src::app::commands::sm",
-            "src::infra::dto::task",
-            "src::app::schedule"
+            "src::app::config_watcher",
+            "src::app::mcp",
+            "src::app::adapters::web::audit",
+            "src::app::adapters::web::view::log",
+            "src::app::commands::remind"
           ]
         },
         {
           "component": "task",
           "impact_radius": 95,
           "sample_dependents": [
-            "src::app::adapters::web",
-            "src::app::adapters::web::routes::agent_log",
-            "src::app::adapters::federation::hub",
-            "src::app::commands::sm",
-            "src::infra::dto::task"
+            "src::app::mcp",
+            "src::app::adapters::web::view::log",
+            "src::app::commands::remind",
+            "src::ports::bus",
+            "src::app::mcp_tools"
           ]
         },
         {
           "component": "context",
           "impact_radius": 94,
           "sample_dependents": [
-            "src::app::adapters::web",
-            "src::app::adapters::web::routes::agent_log",
-            "src::app::adapters::federation::hub",
-            "src::app::commands::sm",
-            "src::infra::dto::task"
+            "src::app::mcp",
+            "src::app::adapters::web::view::log",
+            "src::app::commands::remind",
+            "src::ports::bus",
+            "src::app::mcp_tools"
           ]
         },
         {
           "component": "agent",
           "impact_radius": 93,
           "sample_dependents": [
-            "src::app::adapters::web",
-            "src::app::adapters::web::routes::agent_log",
-            "src::app::adapters::federation::hub",
-            "src::app::commands::sm",
-            "src::infra::dto::task"
+            "src::app::mcp",
+            "src::app::adapters::web::view::log",
+            "src::app::commands::remind",
+            "src::ports::bus",
+            "src::app::mcp_tools"
           ]
         },
         {
           "component": "message",
           "impact_radius": 92,
           "sample_dependents": [
-            "src::app::adapters::web",
-            "src::app::adapters::web::routes::agent_log",
-            "src::app::adapters::federation::hub",
-            "src::app::commands::sm",
-            "src::infra::dto::task"
+            "src::app::mcp",
+            "src::app::adapters::web::view::log",
+            "src::app::commands::remind",
+            "src::ports::bus",
+            "src::app::mcp_tools"
           ]
         },
         {
           "component": "statemachine",
           "impact_radius": 92,
           "sample_dependents": [
-            "src::app::adapters::web",
-            "src::app::adapters::web::routes::agent_log",
-            "src::app::adapters::federation::hub",
-            "src::app::commands::sm",
-            "src::infra::dto::task"
+            "src::app::mcp",
+            "src::app::adapters::web::view::log",
+            "src::app::commands::remind",
+            "src::ports::bus",
+            "src::app::mcp_tools"
           ]
         },
         {
           "component": "bus",
           "impact_radius": 74,
           "sample_dependents": [
-            "src::app::adapters::web",
-            "src::app::adapters::web::routes::agent_log",
-            "src::app::adapters::federation::hub",
-            "src::app::commands::sm",
+            "src::app::mcp",
+            "src::app::adapters::web::view::log",
+            "src::app::mcp_tools",
+            "src::app::adapters::web::view::detail",
             "src::app::schedule"
           ]
         },
@@ -706,33 +706,33 @@
           "component": "events",
           "impact_radius": 61,
           "sample_dependents": [
-            "src::app::commands::dashboard",
-            "src::app::adapters::web",
-            "src::app::adapters::telegram",
-            "src::app::commands::sm",
-            "src::infra::task_store"
+            "src::app::mcp",
+            "src::app::commands::remind",
+            "src::app::transcript_extractor",
+            "src::ports::bus",
+            "src::app::mcp_tools"
           ]
         },
         {
           "component": "config_types",
           "impact_radius": 60,
           "sample_dependents": [
-            "src::app::commands::dashboard",
-            "src::app::adapters::web",
-            "src::app::adapters::telegram",
-            "src::app::commands::sm",
-            "src::infra::task_store"
+            "src::app::mcp",
+            "src::app::commands::remind",
+            "src::ports::bus",
+            "src::app::mcp_tools",
+            "src::app::adapters::telegram"
           ]
         },
         {
           "component": "workitem",
           "impact_radius": 60,
           "sample_dependents": [
-            "src::app::commands::dashboard",
-            "src::app::adapters::web",
-            "src::app::adapters::telegram",
-            "src::app::commands::sm",
-            "src::infra::task_store"
+            "src::app::mcp",
+            "src::app::commands::remind",
+            "src::ports::bus",
+            "src::app::mcp_tools",
+            "src::app::adapters::telegram"
           ]
         }
       ],

@@ -24,51 +24,51 @@
           "package": "src::main",
           "domains_count": 17,
           "domains": [
-            "src::args",
-            "args",
-            "file_op",
-            "errors",
-            "listing",
-            "pipe",
+            "file_utils",
             "src::errors",
-            "src::config",
-            "renderer",
-            "archive"
+            "webdav_fs",
+            "errors",
+            "config",
+            "consts",
+            "pipe",
+            "src::file_op",
+            "file_op",
+            "args"
           ]
         },
         {
           "package": "src::args",
           "domains_count": 7,
           "domains": [
-            "src::auth",
-            "src::renderer",
-            "auth",
             "AuthParseError",
-            "RequiredAuthPassword",
+            "tests",
             "src::listing",
-            "tests"
+            "src::auth",
+            "auth",
+            "src::renderer",
+            "RequiredAuthPassword"
           ]
         },
         {
           "package": "src::listing",
           "domains_count": 6,
           "domains": [
-            "src::auth",
-            "src::renderer",
-            "percent_encode_sets",
-            "src::percent_encode_sets",
             "src::errors",
-            "src::archive"
+            "src::archive",
+            "src::auth",
+            "percent_encode_sets",
+            "src::renderer",
+            "src::percent_encode_sets"
           ]
         },
         {
           "package": "src::renderer",
           "domains_count": 4,
           "domains": [
+            "tests",
             "src::consts",
             "src::auth",
-            "src::listing",
-            "tests"
+            "src::listing"
           ]
         },
         {
