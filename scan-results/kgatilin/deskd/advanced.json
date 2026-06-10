@@ -39,9 +39,9 @@
       "name": "modularity",
       "description": "Модульность графа должна быть >= 0.3",
       "status": "PASSED",
-      "modularity": 0.578,
+      "modularity": 0.577,
       "threshold": 0.3,
-      "communities_count": 30
+      "communities_count": 28
     },
     {
       "name": "abstractness",
@@ -629,110 +629,110 @@
           "component": "tests",
           "impact_radius": 124,
           "sample_dependents": [
-            "src::app::config_watcher",
-            "src::app::mcp",
-            "src::app::adapters::web::audit",
-            "src::app::adapters::web::view::log",
-            "src::app::commands::remind"
+            "src::app::adapters::web::routes::cost",
+            "src::infra::dto::instance",
+            "src::app::acp",
+            "src::app::a2a",
+            "src::app::commands"
           ]
         },
         {
           "component": "task",
           "impact_radius": 95,
           "sample_dependents": [
-            "src::app::mcp",
-            "src::app::adapters::web::view::log",
-            "src::app::commands::remind",
-            "src::ports::bus",
-            "src::app::mcp_tools"
+            "src::app::message",
+            "src::app::adapters::web::routes::cost",
+            "src::infra::dto::instance",
+            "src::app::acp",
+            "src::app::commands"
           ]
         },
         {
           "component": "context",
           "impact_radius": 94,
           "sample_dependents": [
-            "src::app::mcp",
-            "src::app::adapters::web::view::log",
-            "src::app::commands::remind",
-            "src::ports::bus",
-            "src::app::mcp_tools"
+            "src::app::message",
+            "src::app::adapters::web::routes::cost",
+            "src::infra::dto::instance",
+            "src::app::acp",
+            "src::app::commands"
           ]
         },
         {
           "component": "agent",
           "impact_radius": 93,
           "sample_dependents": [
-            "src::app::mcp",
-            "src::app::adapters::web::view::log",
-            "src::app::commands::remind",
-            "src::ports::bus",
-            "src::app::mcp_tools"
+            "src::app::message",
+            "src::app::adapters::web::routes::cost",
+            "src::infra::dto::instance",
+            "src::app::acp",
+            "src::app::commands"
           ]
         },
         {
           "component": "message",
           "impact_radius": 92,
           "sample_dependents": [
-            "src::app::mcp",
-            "src::app::adapters::web::view::log",
-            "src::app::commands::remind",
-            "src::ports::bus",
-            "src::app::mcp_tools"
+            "src::app::message",
+            "src::app::adapters::web::routes::cost",
+            "src::infra::dto::instance",
+            "src::app::acp",
+            "src::app::a2a"
           ]
         },
         {
           "component": "statemachine",
           "impact_radius": 92,
           "sample_dependents": [
-            "src::app::mcp",
-            "src::app::adapters::web::view::log",
-            "src::app::commands::remind",
-            "src::ports::bus",
-            "src::app::mcp_tools"
+            "src::app::message",
+            "src::app::adapters::web::routes::cost",
+            "src::infra::dto::instance",
+            "src::app::acp",
+            "src::app::a2a"
           ]
         },
         {
           "component": "bus",
           "impact_radius": 74,
           "sample_dependents": [
-            "src::app::mcp",
-            "src::app::adapters::web::view::log",
-            "src::app::mcp_tools",
-            "src::app::adapters::web::view::detail",
-            "src::app::schedule"
+            "src::app::adapters::web::routes::cost",
+            "src::app::acp",
+            "src::app::commands",
+            "src::app::timeout_sweep",
+            "src::app::commands::a2a"
           ]
         },
         {
           "component": "events",
           "impact_radius": 61,
           "sample_dependents": [
-            "src::app::mcp",
+            "src::app::message",
             "src::app::commands::remind",
-            "src::app::transcript_extractor",
-            "src::ports::bus",
-            "src::app::mcp_tools"
+            "src::app::adapters::web",
+            "src::app::adapters::web::routes::cost",
+            "src::infra::dto::instance"
           ]
         },
         {
           "component": "config_types",
           "impact_radius": 60,
           "sample_dependents": [
-            "src::app::mcp",
+            "src::app::message",
             "src::app::commands::remind",
-            "src::ports::bus",
-            "src::app::mcp_tools",
-            "src::app::adapters::telegram"
+            "src::app::adapters::web",
+            "src::app::adapters::web::routes::cost",
+            "src::infra::dto::instance"
           ]
         },
         {
           "component": "workitem",
           "impact_radius": 60,
           "sample_dependents": [
-            "src::app::mcp",
+            "src::app::message",
             "src::app::commands::remind",
-            "src::ports::bus",
-            "src::app::mcp_tools",
-            "src::app::adapters::telegram"
+            "src::app::adapters::web",
+            "src::app::adapters::web::routes::cost",
+            "src::infra::dto::instance"
           ]
         }
       ],
