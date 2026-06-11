@@ -20,8 +20,8 @@
       "status": "FAILED",
       "cycles": [
         [
-          "src::cli",
-          "src::request_items"
+          "src::request_items",
+          "src::cli"
         ]
       ],
       "cycles_count": 1
@@ -70,10 +70,22 @@
       "status": "ERROR",
       "most_unstable": [
         {
-          "node": "src::message_signature",
+          "node": "src::formatting::headers",
           "instability": 1.0,
           "ca": 0,
-          "ce": 1
+          "ce": 2
+        },
+        {
+          "node": "src::formatting::palette",
+          "instability": 1.0,
+          "ca": 0,
+          "ce": 2
+        },
+        {
+          "node": "src::to_curl",
+          "instability": 1.0,
+          "ca": 0,
+          "ce": 4
         },
         {
           "node": "src::generation",
@@ -86,18 +98,6 @@
           "instability": 1.0,
           "ca": 0,
           "ce": 4
-        },
-        {
-          "node": "src::formatting::palette",
-          "instability": 1.0,
-          "ca": 0,
-          "ce": 2
-        },
-        {
-          "node": "src::formatting::headers",
-          "instability": 1.0,
-          "ca": 0,
-          "ce": 2
         }
       ],
       "most_stable": [
@@ -234,8 +234,8 @@
       "description": "Компоненты без связей (возможно мертвый код)",
       "status": "WARNING",
       "orphans": [
-        "build",
         "src::error_reporting",
+        "build",
         "tests::server",
         "tests::cases::auth_message_signature"
       ],
@@ -248,8 +248,8 @@
       "total_sccs": 70,
       "problematic_sccs": [
         [
-          "src::cli",
-          "src::request_items"
+          "src::request_items",
+          "src::cli"
         ]
       ],
       "problematic_count": 1
