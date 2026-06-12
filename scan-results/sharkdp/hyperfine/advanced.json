@@ -615,66 +615,66 @@
           "component": "exit_code",
           "impact_radius": 25,
           "sample_dependents": [
-            "src::export::markdown",
-            "src::output::progress_bar",
+            "src::command",
             "src::export",
-            "src::benchmark::executor",
-            "src::parameter"
+            "src::timer::unix_timer",
+            "src::timer",
+            "src::timer::windows_timer"
           ]
         },
         {
           "component": "min_max",
           "impact_radius": 25,
           "sample_dependents": [
-            "src::export::markdown",
-            "src::output::progress_bar",
+            "src::command",
             "src::export",
-            "src::benchmark::executor",
-            "src::parameter"
+            "src::timer::unix_timer",
+            "src::timer",
+            "src::timer::windows_timer"
           ]
         },
         {
           "component": "number",
           "impact_radius": 25,
           "sample_dependents": [
-            "src::export::markdown",
-            "src::output::progress_bar",
+            "src::command",
             "src::export",
-            "src::benchmark::executor",
-            "src::parameter"
+            "src::timer::unix_timer",
+            "src::timer",
+            "src::timer::windows_timer"
           ]
         },
         {
           "component": "randomized_environment_offset",
           "impact_radius": 25,
           "sample_dependents": [
-            "src::export::markdown",
-            "src::output::progress_bar",
+            "src::command",
             "src::export",
-            "src::benchmark::executor",
-            "src::parameter"
+            "src::timer::unix_timer",
+            "src::timer",
+            "src::timer::windows_timer"
           ]
         },
         {
           "component": "units",
           "impact_radius": 25,
           "sample_dependents": [
-            "src::export::markdown",
-            "src::output::progress_bar",
+            "src::command",
             "src::export",
-            "src::benchmark::executor",
-            "src::parameter"
+            "src::timer::unix_timer",
+            "src::timer",
+            "src::timer::windows_timer"
           ]
         },
         {
           "component": "src::util",
           "impact_radius": 24,
           "sample_dependents": [
-            "src::export::markdown",
-            "src::output::progress_bar",
+            "src::command",
             "src::export",
-            "src::benchmark::executor",
-            "src::parameter"
+            "src::timer::unix_timer",
+            "src::timer",
+            "src::timer::windows_timer"
           ]
         }
       ],

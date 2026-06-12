@@ -39,7 +39,7 @@
       "name": "modularity",
       "description": "Модульность графа должна быть >= 0.3",
       "status": "PASSED",
-      "modularity": 0.577,
+      "modularity": 0.578,
       "threshold": 0.3,
       "communities_count": 29
     },
@@ -627,110 +627,110 @@
           "component": "tests",
           "impact_radius": 124,
           "sample_dependents": [
-            "src::app::commands::tui",
-            "src::app::tasklog",
-            "src::app::commands::reload",
-            "src::app::commands::dashboard",
-            "src::app::adapters::web::templates"
+            "src::app::adapters::web::view",
+            "src::app::scope",
+            "src::app::adapters::web::state",
+            "src::app::bus_api",
+            "src::app::a2a_server"
           ]
         },
         {
           "component": "task",
           "impact_radius": 95,
           "sample_dependents": [
-            "src::app::commands::tui",
-            "src::app::commands::reload",
-            "src::app::commands::dashboard",
-            "src::ports::bus",
-            "src::app::workflow"
+            "src::app::adapters::web::view",
+            "src::app::bus_api",
+            "src::app::adapters::web::state",
+            "src::app::a2a_server",
+            "src::app::adapters::web::routes::agent_detail"
           ]
         },
         {
           "component": "context",
           "impact_radius": 94,
           "sample_dependents": [
-            "src::app::commands::tui",
-            "src::app::commands::reload",
-            "src::app::commands::dashboard",
-            "src::ports::bus",
-            "src::app::workflow"
+            "src::app::bus_api",
+            "src::app::adapters::web::state",
+            "src::app::a2a_server",
+            "src::app::adapters::web::routes::agent_detail",
+            "src::app::adapters::web::view::detail"
           ]
         },
         {
           "component": "agent",
           "impact_radius": 93,
           "sample_dependents": [
-            "src::app::commands::tui",
-            "src::app::commands::reload",
-            "src::app::commands::dashboard",
-            "src::ports::bus",
-            "src::app::workflow"
+            "src::app::bus_api",
+            "src::app::adapters::web::state",
+            "src::app::a2a_server",
+            "src::app::adapters::web::routes::agent_detail",
+            "src::app::adapters::web::view::detail"
           ]
         },
         {
           "component": "message",
           "impact_radius": 92,
           "sample_dependents": [
-            "src::app::commands::tui",
-            "src::app::commands::reload",
-            "src::app::commands::dashboard",
-            "src::ports::bus",
-            "src::app::workflow"
+            "src::app::bus_api",
+            "src::app::adapters::web::state",
+            "src::app::a2a_server",
+            "src::app::adapters::web::routes::agent_detail",
+            "src::app::adapters::web::view::detail"
           ]
         },
         {
           "component": "statemachine",
           "impact_radius": 92,
           "sample_dependents": [
-            "src::app::commands::tui",
-            "src::app::commands::reload",
-            "src::app::commands::dashboard",
-            "src::ports::bus",
-            "src::app::workflow"
+            "src::app::bus_api",
+            "src::app::adapters::web::state",
+            "src::app::a2a_server",
+            "src::app::adapters::web::routes::agent_detail",
+            "src::app::adapters::web::view::detail"
           ]
         },
         {
           "component": "bus",
           "impact_radius": 74,
           "sample_dependents": [
-            "src::app::commands::dashboard",
-            "src::app::workflow",
-            "src::app::adapters::web::view::cards",
-            "src::app::session_discover",
-            "src::app::adapters::web::routes::sse"
+            "src::app::bus_api",
+            "src::app::adapters::web::state",
+            "src::app::a2a_server",
+            "src::app::adapters::web::routes::agent_detail",
+            "src::app::adapters::web::view::detail"
           ]
         },
         {
           "component": "events",
           "impact_radius": 61,
           "sample_dependents": [
-            "src::app::config_changeset",
-            "src::app::commands::remind",
-            "src::app::schedule",
-            "src::app::commands::tui",
-            "src::app::agent_process"
+            "src::infra::context_store",
+            "src::app::commands::reload",
+            "src::infra::memory_bus",
+            "src::app::adapters::telegram",
+            "src::app::adapters::web::state"
           ]
         },
         {
           "component": "config_types",
           "impact_radius": 60,
           "sample_dependents": [
-            "src::app::config_changeset",
-            "src::app::commands::remind",
-            "src::app::schedule",
-            "src::app::commands::tui",
-            "src::app::agent_process"
+            "src::infra::context_store",
+            "src::app::commands::reload",
+            "src::infra::memory_bus",
+            "src::app::adapters::telegram",
+            "src::app::adapters::web::state"
           ]
         },
         {
           "component": "workitem",
           "impact_radius": 60,
           "sample_dependents": [
-            "src::app::config_changeset",
-            "src::app::commands::remind",
-            "src::app::schedule",
-            "src::app::commands::tui",
-            "src::app::agent_process"
+            "src::infra::context_store",
+            "src::app::commands::reload",
+            "src::infra::memory_bus",
+            "src::app::adapters::telegram",
+            "src::app::adapters::web::state"
           ]
         }
       ],
