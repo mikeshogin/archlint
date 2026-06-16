@@ -24,15 +24,15 @@
           "package": "src::main",
           "domains_count": 17,
           "domains": [
-            "config",
-            "listing",
-            "src::file_op",
-            "args",
-            "file_op",
-            "src::errors",
+            "src::webdav_fs",
             "archive",
-            "file_utils",
+            "consts",
             "webdav_fs",
+            "file_utils",
+            "listing",
+            "renderer",
+            "src::file_op",
+            "config",
             "auth"
           ]
         },
@@ -40,45 +40,45 @@
           "package": "src::args",
           "domains_count": 7,
           "domains": [
+            "src::listing",
             "tests",
-            "src::renderer",
             "src::auth",
-            "RequiredAuthPassword",
-            "AuthParseError",
+            "src::renderer",
             "auth",
-            "src::listing"
+            "RequiredAuthPassword",
+            "AuthParseError"
           ]
         },
         {
           "package": "src::listing",
           "domains_count": 6,
           "domains": [
-            "src::renderer",
             "src::auth",
-            "src::errors",
+            "src::percent_encode_sets",
+            "src::renderer",
             "percent_encode_sets",
-            "src::archive",
-            "src::percent_encode_sets"
+            "src::errors",
+            "src::archive"
           ]
         },
         {
           "package": "src::renderer",
           "domains_count": 4,
           "domains": [
-            "tests",
-            "src::consts",
             "src::auth",
-            "src::listing"
+            "src::listing",
+            "tests",
+            "src::consts"
           ]
         },
         {
           "package": "tests::navigation",
           "domains_count": 4,
           "domains": [
-            "fixtures",
+            "tests::fixtures",
             "tests::utils",
-            "utils",
-            "tests::fixtures"
+            "fixtures",
+            "utils"
           ]
         }
       ],
