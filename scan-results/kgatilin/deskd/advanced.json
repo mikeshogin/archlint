@@ -39,9 +39,9 @@
       "name": "modularity",
       "description": "Модульность графа должна быть >= 0.3",
       "status": "PASSED",
-      "modularity": 0.578,
+      "modularity": 0.577,
       "threshold": 0.3,
-      "communities_count": 30
+      "communities_count": 29
     },
     {
       "name": "abstractness",
@@ -627,110 +627,110 @@
           "component": "tests",
           "impact_radius": 124,
           "sample_dependents": [
-            "src::app::unified_inbox",
-            "src::app::agent_provisioning",
-            "src::app::adapters::web::view::strip",
-            "src::app::config_changeset",
-            "src::app::transcript_extractor"
+            "src::app::process_builder",
+            "src::app::adapters::discord",
+            "src::domain::config_types",
+            "src::main",
+            "src::app::tmux_launcher"
           ]
         },
         {
           "component": "task",
           "impact_radius": 95,
           "sample_dependents": [
-            "src::app::adapters::web::view::strip",
-            "src::app::config_changeset",
-            "src::app::adapters::web::routes::github_webhook",
-            "src::app::adapters::web::view::cards",
-            "src::app::context"
+            "src::app::process_builder",
+            "src::ports::store",
+            "src::app::adapters::discord",
+            "src::app::bus_api",
+            "src::app::agent_registry"
           ]
         },
         {
           "component": "context",
           "impact_radius": 94,
           "sample_dependents": [
-            "src::app::adapters::web::view::strip",
-            "src::app::config_changeset",
-            "src::app::adapters::web::routes::github_webhook",
-            "src::app::adapters::web::view::cards",
-            "src::app::context"
+            "src::app::process_builder",
+            "src::ports::store",
+            "src::app::adapters::discord",
+            "src::app::bus_api",
+            "src::app::agent_registry"
           ]
         },
         {
           "component": "agent",
           "impact_radius": 93,
           "sample_dependents": [
-            "src::app::adapters::web::view::strip",
-            "src::app::config_changeset",
-            "src::app::adapters::web::routes::github_webhook",
-            "src::app::adapters::web::view::cards",
-            "src::app::context"
+            "src::app::process_builder",
+            "src::ports::store",
+            "src::app::adapters::discord",
+            "src::app::bus_api",
+            "src::app::agent_registry"
           ]
         },
         {
           "component": "message",
           "impact_radius": 92,
           "sample_dependents": [
-            "src::app::adapters::web::view::strip",
-            "src::app::config_changeset",
-            "src::app::adapters::web::routes::github_webhook",
-            "src::app::adapters::web::view::cards",
-            "src::app::context"
+            "src::app::process_builder",
+            "src::ports::store",
+            "src::app::adapters::discord",
+            "src::app::bus_api",
+            "src::app::agent_registry"
           ]
         },
         {
           "component": "statemachine",
           "impact_radius": 92,
           "sample_dependents": [
-            "src::app::adapters::web::view::strip",
-            "src::app::config_changeset",
-            "src::app::adapters::web::routes::github_webhook",
-            "src::app::adapters::web::view::cards",
-            "src::app::context"
+            "src::app::process_builder",
+            "src::ports::store",
+            "src::app::adapters::discord",
+            "src::app::bus_api",
+            "src::app::agent_registry"
           ]
         },
         {
           "component": "bus",
           "impact_radius": 74,
           "sample_dependents": [
-            "src::app::adapters::web::view::strip",
-            "src::app::adapters::web::view::cards",
-            "src::app::context",
-            "src::app::adapters::web::routes::sse",
-            "src::app::adapters::web::routes::agent_log"
+            "src::ports",
+            "src::app::bus_api",
+            "src::app::adapters::federation::forward",
+            "src::app::adapters::web::routes::metrics",
+            "src::app::adapters::web::routes::logout"
           ]
         },
         {
           "component": "events",
           "impact_radius": 61,
           "sample_dependents": [
-            "src::infra::bus_server",
-            "src::app::adapters::discord",
-            "src::app::transcript_extractor",
-            "src::app::config_changeset",
-            "src::app::process_builder"
+            "src::app::process_builder",
+            "src::infra::dto::context",
+            "src::infra::memory_store",
+            "src::ports::store",
+            "src::app::adapters::discord"
           ]
         },
         {
           "component": "config_types",
           "impact_radius": 60,
           "sample_dependents": [
-            "src::infra::bus_server",
-            "src::app::adapters::discord",
-            "src::app::config_changeset",
             "src::app::process_builder",
-            "src::app::adapters::web::view::cost"
+            "src::infra::dto::context",
+            "src::infra::memory_store",
+            "src::ports::store",
+            "src::app::adapters::discord"
           ]
         },
         {
           "component": "workitem",
           "impact_radius": 60,
           "sample_dependents": [
-            "src::infra::bus_server",
-            "src::app::adapters::discord",
-            "src::app::config_changeset",
             "src::app::process_builder",
-            "src::app::adapters::web::view::cost"
+            "src::infra::dto::context",
+            "src::infra::memory_store",
+            "src::ports::store",
+            "src::app::adapters::discord"
           ]
         }
       ],
