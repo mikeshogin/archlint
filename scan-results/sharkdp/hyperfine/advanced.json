@@ -34,9 +34,9 @@
       "name": "modularity",
       "description": "Модульность графа должна быть >= 0.3",
       "status": "PASSED",
-      "modularity": 0.575,
+      "modularity": 0.58,
       "threshold": 0.3,
-      "communities_count": 15
+      "communities_count": 16
     },
     {
       "name": "abstractness",
@@ -615,10 +615,10 @@
           "component": "exit_code",
           "impact_radius": 25,
           "sample_dependents": [
-            "src::export",
-            "src::output::warnings",
-            "src::timer::windows_timer",
-            "src::export::asciidoc",
+            "src::benchmark::executor",
+            "src::benchmark::benchmark_result",
+            "src::benchmark",
+            "src::command",
             "src::benchmark::scheduler"
           ]
         },
@@ -626,10 +626,10 @@
           "component": "min_max",
           "impact_radius": 25,
           "sample_dependents": [
-            "src::export",
-            "src::output::warnings",
-            "src::timer::windows_timer",
-            "src::export::asciidoc",
+            "src::benchmark::executor",
+            "src::benchmark::benchmark_result",
+            "src::benchmark",
+            "src::command",
             "src::benchmark::scheduler"
           ]
         },
@@ -637,10 +637,10 @@
           "component": "number",
           "impact_radius": 25,
           "sample_dependents": [
-            "src::export",
-            "src::output::warnings",
-            "src::timer::windows_timer",
-            "src::export::asciidoc",
+            "src::benchmark::executor",
+            "src::benchmark::benchmark_result",
+            "src::benchmark",
+            "src::command",
             "src::benchmark::scheduler"
           ]
         },
@@ -648,10 +648,10 @@
           "component": "randomized_environment_offset",
           "impact_radius": 25,
           "sample_dependents": [
-            "src::export",
-            "src::output::warnings",
-            "src::timer::windows_timer",
-            "src::export::asciidoc",
+            "src::benchmark::executor",
+            "src::benchmark::benchmark_result",
+            "src::benchmark",
+            "src::command",
             "src::benchmark::scheduler"
           ]
         },
@@ -659,10 +659,10 @@
           "component": "units",
           "impact_radius": 25,
           "sample_dependents": [
-            "src::export",
-            "src::output::warnings",
-            "src::timer::windows_timer",
-            "src::export::asciidoc",
+            "src::benchmark::executor",
+            "src::benchmark::benchmark_result",
+            "src::benchmark",
+            "src::command",
             "src::benchmark::scheduler"
           ]
         },
@@ -670,10 +670,10 @@
           "component": "src::util",
           "impact_radius": 24,
           "sample_dependents": [
-            "src::export",
-            "src::output::warnings",
-            "src::timer::windows_timer",
-            "src::export::asciidoc",
+            "src::benchmark::executor",
+            "src::benchmark::benchmark_result",
+            "src::benchmark",
+            "src::command",
             "src::benchmark::scheduler"
           ]
         }

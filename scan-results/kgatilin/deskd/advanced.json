@@ -39,9 +39,9 @@
       "name": "modularity",
       "description": "Модульность графа должна быть >= 0.3",
       "status": "PASSED",
-      "modularity": 0.577,
+      "modularity": 0.578,
       "threshold": 0.3,
-      "communities_count": 29
+      "communities_count": 30
     },
     {
       "name": "abstractness",
@@ -627,110 +627,110 @@
           "component": "tests",
           "impact_radius": 124,
           "sample_dependents": [
-            "src::app::process_builder",
-            "src::app::adapters::discord",
-            "src::domain::config_types",
-            "src::main",
-            "src::app::tmux_launcher"
+            "src::infra::context_store",
+            "src::domain::events",
+            "src::app::context_log",
+            "src::app::jsonrpc",
+            "src::infra::task_store"
           ]
         },
         {
           "component": "task",
           "impact_radius": 95,
           "sample_dependents": [
-            "src::app::process_builder",
-            "src::ports::store",
-            "src::app::adapters::discord",
-            "src::app::bus_api",
-            "src::app::agent_registry"
+            "src::infra::context_store",
+            "src::ports::bus",
+            "src::infra::task_store",
+            "src::app::commands::graph",
+            "src::app::process_builder"
           ]
         },
         {
           "component": "context",
           "impact_radius": 94,
           "sample_dependents": [
-            "src::app::process_builder",
-            "src::ports::store",
-            "src::app::adapters::discord",
-            "src::app::bus_api",
-            "src::app::agent_registry"
+            "src::infra::context_store",
+            "src::ports::bus",
+            "src::infra::task_store",
+            "src::app::commands::graph",
+            "src::app::process_builder"
           ]
         },
         {
           "component": "agent",
           "impact_radius": 93,
           "sample_dependents": [
-            "src::app::process_builder",
-            "src::ports::store",
-            "src::app::adapters::discord",
-            "src::app::bus_api",
-            "src::app::agent_registry"
+            "src::infra::context_store",
+            "src::ports::bus",
+            "src::infra::task_store",
+            "src::app::commands::graph",
+            "src::app::process_builder"
           ]
         },
         {
           "component": "message",
           "impact_radius": 92,
           "sample_dependents": [
-            "src::app::process_builder",
-            "src::ports::store",
-            "src::app::adapters::discord",
-            "src::app::bus_api",
-            "src::app::agent_registry"
+            "src::infra::context_store",
+            "src::ports::bus",
+            "src::infra::task_store",
+            "src::app::commands::graph",
+            "src::app::process_builder"
           ]
         },
         {
           "component": "statemachine",
           "impact_radius": 92,
           "sample_dependents": [
-            "src::app::process_builder",
-            "src::ports::store",
-            "src::app::adapters::discord",
-            "src::app::bus_api",
-            "src::app::agent_registry"
+            "src::infra::context_store",
+            "src::ports::bus",
+            "src::infra::task_store",
+            "src::app::commands::graph",
+            "src::app::process_builder"
           ]
         },
         {
           "component": "bus",
           "impact_radius": 74,
           "sample_dependents": [
+            "src::infra::context_store",
             "src::ports",
-            "src::app::bus_api",
-            "src::app::adapters::federation::forward",
-            "src::app::adapters::web::routes::metrics",
-            "src::app::adapters::web::routes::logout"
+            "src::app::commands::graph",
+            "src::app::adapters::web::event_query",
+            "src::app::commands"
           ]
         },
         {
           "component": "events",
           "impact_radius": 61,
           "sample_dependents": [
-            "src::app::process_builder",
-            "src::infra::dto::context",
-            "src::infra::memory_store",
-            "src::ports::store",
-            "src::app::adapters::discord"
+            "src::infra::context_store",
+            "src::ports::bus",
+            "src::app::message",
+            "src::infra::dto::bus",
+            "src::infra::task_store"
           ]
         },
         {
           "component": "config_types",
           "impact_radius": 60,
           "sample_dependents": [
-            "src::app::process_builder",
-            "src::infra::dto::context",
-            "src::infra::memory_store",
-            "src::ports::store",
-            "src::app::adapters::discord"
+            "src::infra::context_store",
+            "src::ports::bus",
+            "src::app::message",
+            "src::infra::dto::bus",
+            "src::infra::task_store"
           ]
         },
         {
           "component": "workitem",
           "impact_radius": 60,
           "sample_dependents": [
-            "src::app::process_builder",
-            "src::infra::dto::context",
-            "src::infra::memory_store",
-            "src::ports::store",
-            "src::app::adapters::discord"
+            "src::infra::context_store",
+            "src::ports::bus",
+            "src::app::message",
+            "src::infra::dto::bus",
+            "src::infra::task_store"
           ]
         }
       ],
