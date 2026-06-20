@@ -627,110 +627,110 @@
           "component": "tests",
           "impact_radius": 124,
           "sample_dependents": [
-            "src::app::adapters::web::view::detail",
-            "src::app::tmux_launcher",
-            "src::app::commands::sm",
-            "src::app::adapters::telegram",
-            "src::app::commands::tui"
+            "src::app::adapters::web::routes::github_webhook",
+            "src::app::adapters::telegram::attachments",
+            "src::app::commands::a2a",
+            "src::app::commands::dashboard",
+            "src::app::adapters::federation::hub"
           ]
         },
         {
           "component": "task",
           "impact_radius": 95,
           "sample_dependents": [
-            "src::app::adapters::web::view::detail",
-            "src::app::commands::sm",
-            "src::app::adapters::telegram",
-            "src::app::commands::tui",
-            "src::app::mcp_service"
+            "src::app::adapters::web::routes::github_webhook",
+            "src::app::commands::a2a",
+            "src::app::commands::dashboard",
+            "src::app::adapters::federation::hub",
+            "src::app::commands::usage"
           ]
         },
         {
           "component": "context",
           "impact_radius": 94,
           "sample_dependents": [
-            "src::app::adapters::web::view::detail",
-            "src::app::commands::sm",
-            "src::app::adapters::telegram",
-            "src::app::commands::tui",
-            "src::app::mcp_service"
+            "src::app::adapters::web::routes::github_webhook",
+            "src::app::commands::a2a",
+            "src::app::commands::dashboard",
+            "src::app::adapters::federation::hub",
+            "src::app::commands::usage"
           ]
         },
         {
           "component": "agent",
           "impact_radius": 93,
           "sample_dependents": [
-            "src::app::adapters::web::view::detail",
-            "src::app::commands::sm",
-            "src::app::adapters::telegram",
-            "src::app::commands::tui",
-            "src::app::mcp_service"
+            "src::app::adapters::web::routes::github_webhook",
+            "src::app::commands::a2a",
+            "src::app::commands::dashboard",
+            "src::app::adapters::federation::hub",
+            "src::app::commands::usage"
           ]
         },
         {
           "component": "message",
           "impact_radius": 92,
           "sample_dependents": [
-            "src::app::adapters::web::view::detail",
-            "src::app::commands::sm",
-            "src::app::adapters::telegram",
-            "src::app::commands::tui",
-            "src::app::mcp_service"
+            "src::app::adapters::web::routes::github_webhook",
+            "src::app::commands::a2a",
+            "src::app::commands::dashboard",
+            "src::app::adapters::federation::hub",
+            "src::app::commands::usage"
           ]
         },
         {
           "component": "statemachine",
           "impact_radius": 92,
           "sample_dependents": [
-            "src::app::adapters::web::view::detail",
-            "src::app::commands::sm",
-            "src::app::adapters::telegram",
-            "src::app::commands::tui",
-            "src::app::mcp_service"
+            "src::app::adapters::web::routes::github_webhook",
+            "src::app::commands::a2a",
+            "src::app::commands::dashboard",
+            "src::app::adapters::federation::hub",
+            "src::app::commands::usage"
           ]
         },
         {
           "component": "bus",
           "impact_radius": 74,
           "sample_dependents": [
-            "src::app::adapters::web::view::detail",
-            "src::app::commands::sm",
-            "src::app::adapters::telegram",
-            "src::app::mcp_service",
-            "src::app::commands::agent"
+            "src::app::commands::a2a",
+            "src::app::commands::dashboard",
+            "src::app::adapters::federation::hub",
+            "src::app::commands::usage",
+            "src::app::commands::schedule"
           ]
         },
         {
           "component": "events",
           "impact_radius": 61,
           "sample_dependents": [
-            "src::app::agent_registry",
-            "src::app::commands::sm",
-            "src::app::adapters::telegram",
-            "src::app::alerts",
-            "src::app::commands::tui"
+            "src::app::adapters",
+            "src::app::adapters::web::routes::github_webhook",
+            "src::infra::task_store",
+            "src::infra::memory_bus",
+            "src::app::agent_process"
           ]
         },
         {
           "component": "config_types",
           "impact_radius": 60,
           "sample_dependents": [
-            "src::app::agent_registry",
-            "src::app::commands::sm",
-            "src::app::adapters::telegram",
-            "src::app::alerts",
-            "src::app::commands::tui"
+            "src::app::adapters",
+            "src::app::adapters::web::routes::github_webhook",
+            "src::infra::task_store",
+            "src::infra::memory_bus",
+            "src::app::agent_process"
           ]
         },
         {
           "component": "workitem",
           "impact_radius": 60,
           "sample_dependents": [
-            "src::app::agent_registry",
-            "src::app::commands::sm",
-            "src::app::adapters::telegram",
-            "src::app::alerts",
-            "src::app::commands::tui"
+            "src::app::adapters",
+            "src::app::adapters::web::routes::github_webhook",
+            "src::infra::task_store",
+            "src::infra::memory_bus",
+            "src::app::agent_process"
           ]
         }
       ],
