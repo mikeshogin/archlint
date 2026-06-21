@@ -627,110 +627,110 @@
           "component": "tests",
           "impact_radius": 124,
           "sample_dependents": [
-            "src::app::adapters::web::routes::github_webhook",
-            "src::app::adapters::telegram::attachments",
-            "src::app::commands::a2a",
-            "src::app::commands::dashboard",
-            "src::app::adapters::federation::hub"
+            "src::app::adapters::federation::frame",
+            "src::app::process_builder",
+            "src::app::transcript_extractor::parser",
+            "src::infra::memory_store",
+            "src::app::config_watcher"
           ]
         },
         {
           "component": "task",
           "impact_radius": 95,
           "sample_dependents": [
-            "src::app::adapters::web::routes::github_webhook",
-            "src::app::commands::a2a",
-            "src::app::commands::dashboard",
-            "src::app::adapters::federation::hub",
-            "src::app::commands::usage"
+            "src::app::process_builder",
+            "src::infra::memory_store",
+            "src::app::a2a",
+            "src::app::metrics",
+            "src::infra::dto"
           ]
         },
         {
           "component": "context",
           "impact_radius": 94,
           "sample_dependents": [
-            "src::app::adapters::web::routes::github_webhook",
-            "src::app::commands::a2a",
-            "src::app::commands::dashboard",
-            "src::app::adapters::federation::hub",
-            "src::app::commands::usage"
+            "src::app::process_builder",
+            "src::infra::memory_store",
+            "src::app::a2a",
+            "src::app::metrics",
+            "src::infra::dto"
           ]
         },
         {
           "component": "agent",
           "impact_radius": 93,
           "sample_dependents": [
-            "src::app::adapters::web::routes::github_webhook",
-            "src::app::commands::a2a",
-            "src::app::commands::dashboard",
-            "src::app::adapters::federation::hub",
-            "src::app::commands::usage"
+            "src::app::process_builder",
+            "src::infra::memory_store",
+            "src::app::a2a",
+            "src::app::metrics",
+            "src::infra::dto::task"
           ]
         },
         {
           "component": "message",
           "impact_radius": 92,
           "sample_dependents": [
-            "src::app::adapters::web::routes::github_webhook",
-            "src::app::commands::a2a",
-            "src::app::commands::dashboard",
-            "src::app::adapters::federation::hub",
-            "src::app::commands::usage"
+            "src::app::process_builder",
+            "src::infra::memory_store",
+            "src::app::a2a",
+            "src::app::metrics",
+            "src::infra::dto::task"
           ]
         },
         {
           "component": "statemachine",
           "impact_radius": 92,
           "sample_dependents": [
-            "src::app::adapters::web::routes::github_webhook",
-            "src::app::commands::a2a",
-            "src::app::commands::dashboard",
-            "src::app::adapters::federation::hub",
-            "src::app::commands::usage"
+            "src::app::process_builder",
+            "src::infra::memory_store",
+            "src::app::a2a",
+            "src::app::metrics",
+            "src::infra::dto::task"
           ]
         },
         {
           "component": "bus",
           "impact_radius": 74,
           "sample_dependents": [
-            "src::app::commands::a2a",
-            "src::app::commands::dashboard",
-            "src::app::adapters::federation::hub",
-            "src::app::commands::usage",
-            "src::app::commands::schedule"
+            "src::app::adapters::federation::frame",
+            "src::infra::memory_store",
+            "src::app::metrics",
+            "src::infra::dto",
+            "src::app::adapters::federation::forward"
           ]
         },
         {
           "component": "events",
           "impact_radius": 61,
           "sample_dependents": [
-            "src::app::adapters",
-            "src::app::adapters::web::routes::github_webhook",
-            "src::infra::task_store",
-            "src::infra::memory_bus",
-            "src::app::agent_process"
+            "src::app::adapters::web",
+            "src::app::process_builder",
+            "src::infra::sm_store",
+            "src::app::commands::sm",
+            "src::infra::memory_store"
           ]
         },
         {
           "component": "config_types",
           "impact_radius": 60,
           "sample_dependents": [
-            "src::app::adapters",
-            "src::app::adapters::web::routes::github_webhook",
-            "src::infra::task_store",
-            "src::infra::memory_bus",
-            "src::app::agent_process"
+            "src::app::adapters::web",
+            "src::app::process_builder",
+            "src::infra::sm_store",
+            "src::app::commands::sm",
+            "src::infra::memory_store"
           ]
         },
         {
           "component": "workitem",
           "impact_radius": 60,
           "sample_dependents": [
-            "src::app::adapters",
-            "src::app::adapters::web::routes::github_webhook",
-            "src::infra::task_store",
-            "src::infra::memory_bus",
-            "src::app::agent_process"
+            "src::app::adapters::web",
+            "src::app::process_builder",
+            "src::infra::sm_store",
+            "src::app::commands::sm",
+            "src::infra::memory_store"
           ]
         }
       ],
