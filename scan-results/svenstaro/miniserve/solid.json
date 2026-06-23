@@ -24,61 +24,61 @@
           "package": "src::main",
           "domains_count": 17,
           "domains": [
-            "src::errors",
-            "file_utils",
-            "src::webdav_fs",
             "src::args",
-            "auth",
-            "src::file_op",
-            "args",
-            "errors",
             "src::config",
-            "archive"
+            "config",
+            "file_op",
+            "src::webdav_fs",
+            "archive",
+            "file_utils",
+            "pipe",
+            "listing",
+            "errors"
           ]
         },
         {
           "package": "src::args",
           "domains_count": 7,
           "domains": [
-            "src::listing",
-            "auth",
             "src::auth",
+            "src::renderer",
             "AuthParseError",
-            "RequiredAuthPassword",
             "tests",
-            "src::renderer"
+            "auth",
+            "src::listing",
+            "RequiredAuthPassword"
           ]
         },
         {
           "package": "src::listing",
           "domains_count": 6,
           "domains": [
-            "src::errors",
-            "src::percent_encode_sets",
-            "src::archive",
             "src::auth",
+            "src::renderer",
+            "src::percent_encode_sets",
             "percent_encode_sets",
-            "src::renderer"
+            "src::errors",
+            "src::archive"
           ]
         },
         {
           "package": "src::renderer",
           "domains_count": 4,
           "domains": [
-            "src::listing",
-            "src::auth",
             "src::consts",
-            "tests"
+            "src::auth",
+            "tests",
+            "src::listing"
           ]
         },
         {
           "package": "tests::navigation",
           "domains_count": 4,
           "domains": [
-            "tests::fixtures",
-            "fixtures",
+            "tests::utils",
             "utils",
-            "tests::utils"
+            "tests::fixtures",
+            "fixtures"
           ]
         }
       ],
