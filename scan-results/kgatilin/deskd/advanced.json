@@ -41,7 +41,7 @@
       "status": "PASSED",
       "modularity": 0.577,
       "threshold": 0.3,
-      "communities_count": 29
+      "communities_count": 28
     },
     {
       "name": "abstractness",
@@ -627,110 +627,110 @@
           "component": "tests",
           "impact_radius": 124,
           "sample_dependents": [
-            "src::app::adapters::discord",
-            "src::app::commands::a2a",
-            "src::app::commands::schedule",
+            "src::app::bus_api",
+            "src::app::alerts",
+            "src::app::agent",
             "src::app::commands::tui",
-            "src::app::adapters::web::view::detail"
+            "src::infra::agent_file"
           ]
         },
         {
           "component": "task",
           "impact_radius": 95,
           "sample_dependents": [
-            "src::app::adapters::discord",
-            "src::app::adapters::web::routes::panel",
-            "src::app::commands::a2a",
-            "src::domain",
-            "src::app::commands::schedule"
+            "src::app::commands::doctor",
+            "src::app::bus_api",
+            "src::app::alerts",
+            "src::app::commands::tui",
+            "src::infra::agent_file"
           ]
         },
         {
           "component": "context",
           "impact_radius": 94,
           "sample_dependents": [
-            "src::app::adapters::discord",
-            "src::app::adapters::web::routes::panel",
-            "src::app::commands::a2a",
-            "src::domain",
-            "src::app::commands::schedule"
+            "src::app::commands::doctor",
+            "src::app::bus_api",
+            "src::app::alerts",
+            "src::app::commands::tui",
+            "src::infra::agent_file"
           ]
         },
         {
           "component": "agent",
           "impact_radius": 93,
           "sample_dependents": [
-            "src::app::adapters::discord",
-            "src::app::adapters::web::routes::panel",
-            "src::app::commands::a2a",
-            "src::domain",
-            "src::app::commands::schedule"
+            "src::app::commands::doctor",
+            "src::app::bus_api",
+            "src::app::alerts",
+            "src::app::commands::tui",
+            "src::infra::agent_file"
           ]
         },
         {
           "component": "message",
           "impact_radius": 92,
           "sample_dependents": [
-            "src::app::adapters::discord",
-            "src::app::adapters::web::routes::panel",
-            "src::app::commands::a2a",
-            "src::domain",
-            "src::app::commands::schedule"
+            "src::app::commands::doctor",
+            "src::app::bus_api",
+            "src::app::alerts",
+            "src::app::commands::tui",
+            "src::infra::agent_file"
           ]
         },
         {
           "component": "statemachine",
           "impact_radius": 92,
           "sample_dependents": [
-            "src::app::adapters::discord",
-            "src::app::adapters::web::routes::panel",
-            "src::app::commands::a2a",
-            "src::domain",
-            "src::app::commands::schedule"
+            "src::app::commands::doctor",
+            "src::app::bus_api",
+            "src::app::alerts",
+            "src::app::commands::tui",
+            "src::infra::agent_file"
           ]
         },
         {
           "component": "bus",
           "impact_radius": 74,
           "sample_dependents": [
-            "src::ports",
-            "src::app::adapters::web::routes::panel",
-            "src::app::commands::a2a",
-            "src::app::commands::schedule",
-            "src::app::adapters::web::view::detail"
+            "src::app::commands::doctor",
+            "src::app::bus_api",
+            "src::app::agent",
+            "src::app::agent_process",
+            "src::app::bus"
           ]
         },
         {
           "component": "events",
           "impact_radius": 61,
           "sample_dependents": [
-            "src::app::adapters::web::data",
-            "src::infra::task_store",
-            "src::app::adapters::discord",
-            "src::app::adapters::web::routes::cost",
-            "src::app::commands::reload"
+            "src::app::workflow",
+            "src::app::bus_api",
+            "src::app::alerts",
+            "src::app::commands::tui",
+            "src::app::agent_process"
           ]
         },
         {
           "component": "config_types",
           "impact_radius": 60,
           "sample_dependents": [
-            "src::app::adapters::web::data",
-            "src::infra::task_store",
-            "src::app::adapters::discord",
-            "src::app::adapters::web::routes::cost",
-            "src::app::commands::reload"
+            "src::app::workflow",
+            "src::app::bus_api",
+            "src::app::alerts",
+            "src::app::commands::tui",
+            "src::app::agent_process"
           ]
         },
         {
           "component": "workitem",
           "impact_radius": 60,
           "sample_dependents": [
-            "src::app::adapters::web::data",
-            "src::infra::task_store",
-            "src::app::adapters::discord",
-            "src::app::adapters::web::routes::cost",
-            "src::app::commands::reload"
+            "src::app::workflow",
+            "src::app::bus_api",
+            "src::app::alerts",
+            "src::app::commands::tui",
+            "src::app::agent_process"
           ]
         }
       ],

@@ -24,13 +24,13 @@
           "package": "src::main",
           "domains_count": 11,
           "domains": [
-            "src::theme",
+            "types",
             "theme",
+            "src::theme",
+            "src::color",
             "error",
             "color",
-            "src::color",
             "src::error",
-            "src::filetypes",
             "util",
             "font_style",
             "filetypes"
@@ -40,24 +40,24 @@
           "package": "src::theme",
           "domains_count": 7,
           "domains": [
-            "tests",
             "src::Theme",
+            "src::font_style",
             "src::color",
-            "src::error",
             "src::util",
             "src::types",
-            "src::font_style"
+            "tests",
+            "src::error"
           ]
         },
         {
           "package": "src::filetypes",
           "domains_count": 5,
           "domains": [
-            "tests",
-            "src::error",
             "src::util",
+            "src::types",
+            "tests",
             "src::FileTypes",
-            "src::types"
+            "src::error"
           ]
         }
       ],
