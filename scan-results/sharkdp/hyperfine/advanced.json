@@ -34,7 +34,7 @@
       "name": "modularity",
       "description": "Модульность графа должна быть >= 0.3",
       "status": "PASSED",
-      "modularity": 0.577,
+      "modularity": 0.58,
       "threshold": 0.3,
       "communities_count": 16
     },
@@ -615,66 +615,66 @@
           "component": "exit_code",
           "impact_radius": 25,
           "sample_dependents": [
+            "src::export",
+            "src::parameter",
+            "src::export::asciidoc",
             "src::parameter::range_step",
-            "src::util",
-            "src::timer",
-            "src::benchmark::benchmark_result",
-            "src::timer::wall_clock_timer"
+            "src::output::progress_bar"
           ]
         },
         {
           "component": "min_max",
           "impact_radius": 25,
           "sample_dependents": [
+            "src::export",
+            "src::parameter",
+            "src::export::asciidoc",
             "src::parameter::range_step",
-            "src::util",
-            "src::timer",
-            "src::benchmark::benchmark_result",
-            "src::timer::wall_clock_timer"
+            "src::output::progress_bar"
           ]
         },
         {
           "component": "number",
           "impact_radius": 25,
           "sample_dependents": [
+            "src::export",
+            "src::parameter",
+            "src::export::asciidoc",
             "src::parameter::range_step",
-            "src::util",
-            "src::timer",
-            "src::benchmark::benchmark_result",
-            "src::timer::wall_clock_timer"
+            "src::output::progress_bar"
           ]
         },
         {
           "component": "randomized_environment_offset",
           "impact_radius": 25,
           "sample_dependents": [
+            "src::export",
+            "src::parameter",
+            "src::export::asciidoc",
             "src::parameter::range_step",
-            "src::util",
-            "src::timer",
-            "src::benchmark::benchmark_result",
-            "src::timer::wall_clock_timer"
+            "src::output::progress_bar"
           ]
         },
         {
           "component": "units",
           "impact_radius": 25,
           "sample_dependents": [
+            "src::export",
+            "src::parameter",
+            "src::export::asciidoc",
             "src::parameter::range_step",
-            "src::util",
-            "src::timer",
-            "src::benchmark::benchmark_result",
-            "src::timer::wall_clock_timer"
+            "src::output::progress_bar"
           ]
         },
         {
           "component": "src::util",
           "impact_radius": 24,
           "sample_dependents": [
+            "src::export",
+            "src::parameter",
+            "src::export::asciidoc",
             "src::parameter::range_step",
-            "src::timer",
-            "src::benchmark::benchmark_result",
-            "src::timer::wall_clock_timer",
-            "src::command"
+            "src::output::progress_bar"
           ]
         }
       ],
