@@ -39,9 +39,9 @@
       "name": "modularity",
       "description": "Модульность графа должна быть >= 0.3",
       "status": "PASSED",
-      "modularity": 0.578,
+      "modularity": 0.579,
       "threshold": 0.3,
-      "communities_count": 30
+      "communities_count": 29
     },
     {
       "name": "abstractness",
@@ -627,110 +627,110 @@
           "component": "tests",
           "impact_radius": 124,
           "sample_dependents": [
-            "src::app::adapters::web::view::detail",
-            "src::app::config_watcher",
-            "src::app::adapters::web::data_log",
-            "src::config",
-            "src::app::a2a_server"
+            "src::app::mcp_protocol",
+            "src::app::commands::usage",
+            "src::app::context",
+            "src::app::adapters::web::routes::cost",
+            "src::app::graph"
           ]
         },
         {
           "component": "task",
           "impact_radius": 95,
           "sample_dependents": [
-            "src::app::adapters::web::view::detail",
-            "src::config",
-            "src::app::a2a_server",
-            "src::app::mcp_tools",
-            "src::app::mcp_service"
+            "src::app::context",
+            "src::app::commands::usage",
+            "src::app::adapters::web::routes::cost",
+            "src::app::adapters::discord",
+            "src::app::adapters::web::view::log"
           ]
         },
         {
           "component": "context",
           "impact_radius": 94,
           "sample_dependents": [
-            "src::app::adapters::web::view::detail",
-            "src::config",
-            "src::app::a2a_server",
-            "src::app::mcp_tools",
-            "src::app::mcp_service"
+            "src::app::context",
+            "src::app::commands::usage",
+            "src::app::adapters::web::routes::cost",
+            "src::app::adapters::discord",
+            "src::app::adapters::web::view::log"
           ]
         },
         {
           "component": "agent",
           "impact_radius": 93,
           "sample_dependents": [
-            "src::app::adapters::web::view::detail",
-            "src::config",
-            "src::app::a2a_server",
-            "src::app::mcp_tools",
-            "src::app::mcp_service"
+            "src::app::context",
+            "src::app::commands::usage",
+            "src::app::adapters::web::routes::cost",
+            "src::app::adapters::discord",
+            "src::app::adapters::web::view::log"
           ]
         },
         {
           "component": "message",
           "impact_radius": 92,
           "sample_dependents": [
-            "src::app::adapters::web::view::detail",
-            "src::config",
-            "src::app::a2a_server",
-            "src::app::mcp_tools",
-            "src::app::mcp_service"
+            "src::app::context",
+            "src::app::commands::usage",
+            "src::app::adapters::web::routes::cost",
+            "src::app::adapters::discord",
+            "src::app::adapters::web::view::log"
           ]
         },
         {
           "component": "statemachine",
           "impact_radius": 92,
           "sample_dependents": [
-            "src::app::adapters::web::view::detail",
-            "src::config",
-            "src::app::a2a_server",
-            "src::app::mcp_tools",
-            "src::app::mcp_service"
+            "src::app::context",
+            "src::app::commands::usage",
+            "src::app::adapters::web::routes::cost",
+            "src::app::adapters::discord",
+            "src::app::adapters::web::view::log"
           ]
         },
         {
           "component": "bus",
           "impact_radius": 74,
           "sample_dependents": [
-            "src::app::adapters::web::view::detail",
-            "src::app::a2a_server",
-            "src::app::mcp_tools",
-            "src::app::mcp_service",
-            "src::app::adapters::web::state"
+            "src::app::mcp_protocol",
+            "src::app::commands::usage",
+            "src::app::context",
+            "src::app::adapters::web::routes::cost",
+            "src::app::adapters::web::view::log"
           ]
         },
         {
           "component": "events",
           "impact_radius": 61,
           "sample_dependents": [
-            "src::config",
-            "src::infra::sm_store",
-            "src::app::commands::remind",
-            "src::app::mcp_tools",
-            "src::app::mcp_service"
+            "src::app::commands::tui",
+            "src::app::context",
+            "src::app::adapters::web::routes::cost",
+            "src::app::adapters",
+            "src::app::adapters::discord"
           ]
         },
         {
           "component": "config_types",
           "impact_radius": 60,
           "sample_dependents": [
-            "src::config",
-            "src::infra::sm_store",
-            "src::app::commands::remind",
-            "src::app::mcp_tools",
-            "src::app::mcp_service"
+            "src::app::commands::tui",
+            "src::app::context",
+            "src::app::adapters::web::routes::cost",
+            "src::app::adapters",
+            "src::app::adapters::discord"
           ]
         },
         {
           "component": "workitem",
           "impact_radius": 60,
           "sample_dependents": [
-            "src::config",
-            "src::infra::sm_store",
-            "src::app::commands::remind",
-            "src::app::mcp_tools",
-            "src::app::mcp_service"
+            "src::app::commands::tui",
+            "src::app::context",
+            "src::app::adapters::web::routes::cost",
+            "src::app::adapters",
+            "src::app::adapters::discord"
           ]
         }
       ],
