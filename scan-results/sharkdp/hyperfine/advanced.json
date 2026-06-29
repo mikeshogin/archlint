@@ -34,7 +34,7 @@
       "name": "modularity",
       "description": "Модульность графа должна быть >= 0.3",
       "status": "PASSED",
-      "modularity": 0.58,
+      "modularity": 0.573,
       "threshold": 0.3,
       "communities_count": 16
     },
@@ -615,66 +615,66 @@
           "component": "exit_code",
           "impact_radius": 25,
           "sample_dependents": [
-            "src::export::asciidoc",
             "src::timer",
+            "src::options",
             "src::timer::windows_timer",
             "src::output::warnings",
-            "src::export::markdown"
+            "src::export"
           ]
         },
         {
           "component": "min_max",
           "impact_radius": 25,
           "sample_dependents": [
-            "src::export::asciidoc",
             "src::timer",
+            "src::options",
             "src::timer::windows_timer",
             "src::output::warnings",
-            "src::export::markdown"
+            "src::export"
           ]
         },
         {
           "component": "number",
           "impact_radius": 25,
           "sample_dependents": [
-            "src::export::asciidoc",
             "src::timer",
+            "src::options",
             "src::timer::windows_timer",
             "src::output::warnings",
-            "src::export::markdown"
+            "src::export"
           ]
         },
         {
           "component": "randomized_environment_offset",
           "impact_radius": 25,
           "sample_dependents": [
-            "src::export::asciidoc",
             "src::timer",
+            "src::options",
             "src::timer::windows_timer",
             "src::output::warnings",
-            "src::export::markdown"
+            "src::export"
           ]
         },
         {
           "component": "units",
           "impact_radius": 25,
           "sample_dependents": [
-            "src::export::asciidoc",
             "src::timer",
+            "src::options",
             "src::timer::windows_timer",
             "src::output::warnings",
-            "src::export::markdown"
+            "src::export"
           ]
         },
         {
           "component": "src::util",
           "impact_radius": 24,
           "sample_dependents": [
-            "src::export::asciidoc",
             "src::timer",
+            "src::options",
             "src::timer::windows_timer",
             "src::output::warnings",
-            "src::export::markdown"
+            "src::export"
           ]
         }
       ],
