@@ -39,9 +39,9 @@
       "name": "modularity",
       "description": "Модульность графа должна быть >= 0.3",
       "status": "PASSED",
-      "modularity": 0.578,
+      "modularity": 0.577,
       "threshold": 0.3,
-      "communities_count": 30
+      "communities_count": 29
     },
     {
       "name": "abstractness",
@@ -627,87 +627,87 @@
           "component": "tests",
           "impact_radius": 124,
           "sample_dependents": [
-            "src::app::jsonrpc",
-            "src::app::commands::schedule",
-            "src::app::adapters::federation::frame",
-            "src::app::adapters",
-            "src::infra::sm_store"
+            "src::infra::dto::bus",
+            "src::app::worker",
+            "src::app::transcript_extractor",
+            "src::bin::session2graph",
+            "src::app::commands::usage"
           ]
         },
         {
           "component": "task",
           "impact_radius": 95,
           "sample_dependents": [
-            "src::app::commands::doctor",
-            "src::app::commands::schedule",
-            "src::app::adapters",
-            "src::infra::sm_store",
-            "src::app::adapters::web::view::log"
+            "src::infra::dto::bus",
+            "src::app::worker",
+            "src::app::commands::usage",
+            "src::app::adapters::web::data_chart",
+            "src::app::commands"
           ]
         },
         {
           "component": "context",
           "impact_radius": 94,
           "sample_dependents": [
-            "src::app::commands::doctor",
-            "src::app::commands::schedule",
-            "src::app::adapters",
-            "src::infra::sm_store",
-            "src::app::adapters::web::view::log"
+            "src::infra::dto::bus",
+            "src::app::worker",
+            "src::app::commands::usage",
+            "src::app::adapters::web::data_chart",
+            "src::app::commands"
           ]
         },
         {
           "component": "agent",
           "impact_radius": 93,
           "sample_dependents": [
-            "src::app::commands::doctor",
-            "src::app::commands::schedule",
-            "src::app::adapters",
-            "src::infra::sm_store",
-            "src::app::adapters::web::view::log"
+            "src::infra::dto::bus",
+            "src::app::worker",
+            "src::app::commands::usage",
+            "src::app::adapters::web::data_chart",
+            "src::app::commands"
           ]
         },
         {
           "component": "message",
           "impact_radius": 92,
           "sample_dependents": [
-            "src::app::commands::doctor",
-            "src::app::commands::schedule",
-            "src::app::adapters",
-            "src::infra::sm_store",
-            "src::app::adapters::web::view::log"
+            "src::infra::dto::bus",
+            "src::app::worker",
+            "src::app::commands::usage",
+            "src::app::adapters::web::data_chart",
+            "src::app::mcp_tools"
           ]
         },
         {
           "component": "statemachine",
           "impact_radius": 92,
           "sample_dependents": [
-            "src::app::commands::doctor",
-            "src::app::commands::schedule",
-            "src::app::adapters",
-            "src::infra::sm_store",
-            "src::app::adapters::web::view::log"
+            "src::infra::dto::bus",
+            "src::app::worker",
+            "src::app::commands::usage",
+            "src::app::adapters::web::data_chart",
+            "src::app::mcp_tools"
           ]
         },
         {
           "component": "bus",
           "impact_radius": 74,
           "sample_dependents": [
-            "src::app::commands::doctor",
-            "src::app::commands::schedule",
-            "src::app::adapters::federation::frame",
-            "src::app::adapters::web::view::log",
-            "src::app::context"
+            "src::infra::dto::bus",
+            "src::app::worker",
+            "src::app::commands::usage",
+            "src::app::commands",
+            "src::app::adapters::web::data_chart"
           ]
         },
         {
           "component": "events",
           "impact_radius": 61,
           "sample_dependents": [
-            "src::infra::bus_server",
-            "src::app::commands::schedule",
-            "src::app::adapters",
-            "src::infra::sm_store",
+            "src::app::adapters::discord",
+            "src::app::transcript_extractor",
+            "src::infra::dto::bus",
+            "src::infra::task_store",
             "src::app::worker"
           ]
         },
@@ -715,22 +715,22 @@
           "component": "config_types",
           "impact_radius": 60,
           "sample_dependents": [
-            "src::infra::bus_server",
-            "src::app::commands::schedule",
-            "src::app::adapters",
-            "src::infra::sm_store",
-            "src::app::worker"
+            "src::app::adapters::discord",
+            "src::infra::dto::bus",
+            "src::app::worker",
+            "src::infra::task_store",
+            "src::app::commands::tui"
           ]
         },
         {
           "component": "workitem",
           "impact_radius": 60,
           "sample_dependents": [
-            "src::infra::bus_server",
-            "src::app::commands::schedule",
-            "src::app::adapters",
-            "src::infra::sm_store",
-            "src::app::worker"
+            "src::app::adapters::discord",
+            "src::infra::dto::bus",
+            "src::app::worker",
+            "src::infra::task_store",
+            "src::app::commands::tui"
           ]
         }
       ],
