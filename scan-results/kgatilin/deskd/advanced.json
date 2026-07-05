@@ -39,7 +39,7 @@
       "name": "modularity",
       "description": "Модульность графа должна быть >= 0.3",
       "status": "PASSED",
-      "modularity": 0.577,
+      "modularity": 0.578,
       "threshold": 0.3,
       "communities_count": 29
     },
@@ -627,110 +627,110 @@
           "component": "tests",
           "impact_radius": 124,
           "sample_dependents": [
-            "src::app::commands::bus",
-            "src::app::commands::sm",
-            "src::app::adapters::web::view::chart",
-            "src::app::unified_inbox",
-            "src::app::adapters::web::templates"
+            "src::app::mcp_tools",
+            "src::infra::memory_bus",
+            "src::domain::task",
+            "src::app::adapters::web::middleware::rate_limit",
+            "src::app::adapters::federation::forward"
           ]
         },
         {
           "component": "task",
           "impact_radius": 95,
           "sample_dependents": [
-            "src::app::commands::bus",
-            "src::app::commands::sm",
-            "src::app::commands::graph",
-            "src::app::adapters::web::view::chart",
-            "src::app::commands::context"
+            "src::app::mcp_tools",
+            "src::infra::memory_bus",
+            "src::ports::store",
+            "src::app::message",
+            "src::infra::agent_file"
           ]
         },
         {
           "component": "context",
           "impact_radius": 94,
           "sample_dependents": [
-            "src::app::commands::bus",
-            "src::app::commands::sm",
-            "src::app::commands::graph",
-            "src::app::adapters::web::view::chart",
-            "src::app::commands::context"
+            "src::app::mcp_tools",
+            "src::infra::memory_bus",
+            "src::ports::store",
+            "src::app::message",
+            "src::infra::agent_file"
           ]
         },
         {
           "component": "agent",
           "impact_radius": 93,
           "sample_dependents": [
-            "src::app::commands::bus",
-            "src::app::commands::sm",
-            "src::app::commands::graph",
-            "src::app::adapters::web::view::chart",
-            "src::app::commands::context"
+            "src::app::mcp_tools",
+            "src::infra::memory_bus",
+            "src::ports::store",
+            "src::app::message",
+            "src::infra::agent_file"
           ]
         },
         {
           "component": "message",
           "impact_radius": 92,
           "sample_dependents": [
-            "src::app::commands::bus",
-            "src::app::commands::sm",
-            "src::app::commands::graph",
-            "src::app::adapters::web::view::chart",
-            "src::app::commands::context"
+            "src::app::mcp_tools",
+            "src::infra::memory_bus",
+            "src::ports::store",
+            "src::app::message",
+            "src::infra::agent_file"
           ]
         },
         {
           "component": "statemachine",
           "impact_radius": 92,
           "sample_dependents": [
-            "src::app::commands::bus",
-            "src::app::commands::sm",
-            "src::app::commands::graph",
-            "src::app::adapters::web::view::chart",
-            "src::app::commands::context"
+            "src::app::mcp_tools",
+            "src::infra::memory_bus",
+            "src::ports::store",
+            "src::app::message",
+            "src::infra::agent_file"
           ]
         },
         {
           "component": "bus",
           "impact_radius": 74,
           "sample_dependents": [
-            "src::app::commands::bus",
-            "src::app::commands::sm",
-            "src::app::commands::graph",
-            "src::app::adapters::web::view::chart",
-            "src::app::commands::context"
+            "src::app::mcp_tools",
+            "src::infra::memory_bus",
+            "src::app::adapters::federation::forward",
+            "src::app::adapters::web::routes::agent_log",
+            "src::app::adapters::web::view::log"
           ]
         },
         {
           "component": "events",
           "impact_radius": 61,
           "sample_dependents": [
-            "src::app::commands::bus",
-            "src::app::commands::sm",
-            "src::app::adapters::web::view::cost",
-            "src::domain",
-            "src::app::schedule"
+            "src::app::mcp_tools",
+            "src::infra::memory_bus",
+            "src::app::alerts",
+            "src::ports::store",
+            "src::app::serve"
           ]
         },
         {
           "component": "config_types",
           "impact_radius": 60,
           "sample_dependents": [
-            "src::app::commands::bus",
-            "src::app::commands::sm",
-            "src::app::adapters::web::view::cost",
-            "src::domain",
-            "src::app::schedule"
+            "src::app::mcp_tools",
+            "src::infra::memory_bus",
+            "src::app::alerts",
+            "src::ports::store",
+            "src::app::serve"
           ]
         },
         {
           "component": "workitem",
           "impact_radius": 60,
           "sample_dependents": [
-            "src::app::commands::bus",
-            "src::app::commands::sm",
-            "src::app::adapters::web::view::cost",
-            "src::domain",
-            "src::app::schedule"
+            "src::app::mcp_tools",
+            "src::infra::memory_bus",
+            "src::app::alerts",
+            "src::ports::store",
+            "src::app::serve"
           ]
         }
       ],
