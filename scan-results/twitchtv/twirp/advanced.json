@@ -34,7 +34,7 @@
       "name": "modularity",
       "description": "Модульность графа должна быть >= 0.3",
       "status": "PASSED",
-      "modularity": 0.436,
+      "modularity": 0.45,
       "threshold": 0.3,
       "communities_count": 88
     },
@@ -660,76 +660,76 @@
           "component": "fmt",
           "impact_radius": 109,
           "sample_dependents": [
-            "internal::twirptest::client_1_13_test",
-            "_tools::src::google.golang.org::protobuf::internal::version::version",
-            "internal::twirptest::snake_case_names::compatibility_test",
-            "_tools::src::github.com::kisielk::errcheck::main",
-            "_tools::src::google.golang.org::protobuf::internal::impl::pointer_reflect"
+            "_tools::src::google.golang.org::protobuf::internal::encoding::messageset::messageset",
+            "clientcompat::clientcompat",
+            "_tools::src::golang.org::x::tools::go::buildutil::fakecontext",
+            "internal::twirptest::client_test",
+            "internal::descriptors::descriptors"
           ]
         },
         {
           "component": "protoreflect",
           "impact_radius": 100,
           "sample_dependents": [
-            "internal::twirptest::importmapping::y::y.pb",
-            "internal::twirptest::google_protobuf_imports::service.pb",
-            "_tools::src::google.golang.org::protobuf::proto::messageset",
-            "_tools::src::google.golang.org::protobuf::internal::filedesc::desc_list_gen",
-            "_tools::src::google.golang.org::protobuf::internal::impl::codec_gen"
+            "_tools::src::google.golang.org::protobuf::internal::encoding::messageset::messageset",
+            "_tools::src::google.golang.org::protobuf::internal::genid::descriptor_gen",
+            "_tools::src::google.golang.org::protobuf::internal::genid::empty_gen",
+            "_tools::src::google.golang.org::protobuf::types::pluginpb::plugin.pb",
+            "_tools::src::google.golang.org::protobuf::internal::impl::validate"
           ]
         },
         {
           "component": "strconv",
           "impact_radius": 76,
           "sample_dependents": [
-            "internal::twirptest::client_1_13_test",
-            "internal::twirptest::snake_case_names::compatibility_test",
-            "context",
-            "_tools::src::google.golang.org::protobuf::proto::messageset",
-            "ctxsetters::ctxsetters"
+            "_tools::src::google.golang.org::protobuf::internal::encoding::messageset::messageset",
+            "clientcompat::clientcompat",
+            "internal::twirptest::client_test",
+            "internal::descriptors::descriptors",
+            "_tools::src::google.golang.org::protobuf::encoding::prototext::encode"
           ]
         },
         {
           "component": "json",
           "impact_radius": 66,
           "sample_dependents": [
-            "internal::twirptest::client_1_13_test",
-            "internal::twirptest::snake_case_names::compatibility_test",
-            "context",
-            "_tools::src::google.golang.org::protobuf::proto::messageset",
-            "ctxsetters::ctxsetters"
+            "_tools::src::google.golang.org::protobuf::internal::encoding::messageset::messageset",
+            "clientcompat::clientcompat",
+            "internal::twirptest::client_test",
+            "internal::descriptors::descriptors",
+            "_tools::src::google.golang.org::protobuf::encoding::prototext::encode"
           ]
         },
         {
           "component": "http",
           "impact_radius": 64,
           "sample_dependents": [
-            "internal::twirptest::client_1_13_test",
-            "internal::twirptest::snake_case_names::compatibility_test",
-            "context",
-            "_tools::src::google.golang.org::protobuf::proto::messageset",
-            "ctxsetters::ctxsetters"
+            "_tools::src::google.golang.org::protobuf::internal::encoding::messageset::messageset",
+            "clientcompat::clientcompat",
+            "internal::twirptest::client_test",
+            "internal::descriptors::descriptors",
+            "_tools::src::google.golang.org::protobuf::encoding::prototext::encode"
           ]
         },
         {
           "component": "errors",
           "impact_radius": 63,
           "sample_dependents": [
-            "errors_test",
-            "internal::twirptest::client_1_13_test",
-            "server_options_test",
-            "internal::twirptest::snake_case_names::compatibility_test",
-            "_tools::src::google.golang.org::protobuf::encoding::prototext::decode"
+            "_tools::src::google.golang.org::protobuf::reflect::protodesc::desc_validate",
+            "_tools::src::google.golang.org::protobuf::internal::encoding::messageset::messageset",
+            "clientcompat::clientcompat",
+            "_tools::src::golang.org::x::sys::execabs::execabs",
+            "internal::twirptest::client_test"
           ]
         },
         {
           "component": "reflect",
           "impact_radius": 55,
           "sample_dependents": [
-            "internal::twirptest::service.pb",
-            "server_options_test",
-            "internal::twirptest::importmapping::y::y.pb",
-            "internal::twirptest::google_protobuf_imports::service.pb",
+            "_tools::src::google.golang.org::protobuf::internal::impl::message_reflect",
+            "_tools::src::google.golang.org::protobuf::internal::impl::message",
+            "_tools::src::golang.org::x::sys::execabs::execabs",
+            "_tools::src::google.golang.org::protobuf::types::pluginpb::plugin.pb",
             "_tools::src::google.golang.org::protobuf::internal::impl::pointer_reflect"
           ]
         },
@@ -737,33 +737,33 @@
           "component": "strings",
           "impact_radius": 47,
           "sample_dependents": [
-            "_tools::src::google.golang.org::protobuf::internal::version::version",
-            "_tools::src::golang.org::x::tools::go::internal::cgo::cgo",
-            "protoc-gen-twirp::go_naming",
-            "_tools::src::github.com::kisielk::errcheck::main",
-            "_tools::src::github.com::kisielk::gotool::internal::load::path"
+            "_tools::src::google.golang.org::protobuf::reflect::protodesc::desc_validate",
+            "_tools::src::google.golang.org::protobuf::cmd::protoc-gen-go::internal_gengo::main",
+            "_tools::src::google.golang.org::protobuf::reflect::protodesc::proto",
+            "_tools::src::google.golang.org::protobuf::internal::impl::message",
+            "_tools::src::golang.org::x::tools::go::buildutil::fakecontext"
           ]
         },
         {
           "component": "sync",
           "impact_radius": 37,
           "sample_dependents": [
-            "errors_test",
-            "internal::twirptest::service.pb",
-            "internal::twirptest::importmapping::y::y.pb",
+            "_tools::src::google.golang.org::protobuf::internal::impl::legacy_file",
+            "_tools::src::google.golang.org::protobuf::internal::impl::message",
+            "_tools::src::google.golang.org::protobuf::types::pluginpb::plugin.pb",
             "_tools::src::google.golang.org::protobuf::internal::impl::pointer_reflect",
-            "_tools::src::google.golang.org::protobuf::internal::filedesc::desc_list_gen"
+            "_tools::src::golang.org::x::tools::go::buildutil::allpackages"
           ]
         },
         {
           "component": "os",
           "impact_radius": 34,
           "sample_dependents": [
+            "_tools::src::golang.org::x::tools::go::buildutil::fakecontext",
+            "_tools::src::golang.org::x::tools::go::buildutil::allpackages",
             "_tools::src::golang.org::x::tools::go::internal::cgo::cgo",
-            "_tools::src::github.com::kisielk::errcheck::main",
-            "_tools::src::github.com::twitchtv::retool::do",
-            "_tools::src::google.golang.org::protobuf::reflect::protoregistry::registry",
-            "_tools::src::github.com::twitchtv::retool::input"
+            "_tools::src::github.com::twitchtv::retool::input",
+            "example::cmd::server::main"
           ]
         }
       ],
@@ -861,16 +861,16 @@
       "description": "Отсутствие использования deprecated компонентов",
       "status": "PASSED",
       "deprecated_components": [
-        "_tools::src::google.golang.org::protobuf::internal::flags::proto_legacy_enable",
-        "_tools::src::google.golang.org::protobuf::internal::flags::proto_legacy_disable",
-        "_tools::src::google.golang.org::protobuf::internal::impl::legacy_extension",
-        "_tools::src::google.golang.org::protobuf::internal::impl::legacy_message",
         "_tools::src::google.golang.org::protobuf::internal::impl::legacy_file",
+        "_tools::src::google.golang.org::protobuf::internal::filedesc::placeholder",
         "_tools::src::github.com::twitchtv::retool::tooldir",
+        "_tools::src::google.golang.org::protobuf::internal::flags::proto_legacy_disable",
+        "_tools::src::google.golang.org::protobuf::internal::impl::legacy_message",
         "_tools::src::google.golang.org::protobuf::runtime::protoiface::legacy",
+        "_tools::src::google.golang.org::protobuf::internal::impl::legacy_extension",
         "_tools::src::google.golang.org::protobuf::internal::impl::legacy_enum",
         "_tools::src::google.golang.org::protobuf::internal::impl::legacy_export",
-        "_tools::src::google.golang.org::protobuf::internal::filedesc::placeholder"
+        "_tools::src::google.golang.org::protobuf::internal::flags::proto_legacy_enable"
       ],
       "deprecated_count": 10,
       "violations": [],
