@@ -39,7 +39,7 @@
       "name": "modularity",
       "description": "Модульность графа должна быть >= 0.3",
       "status": "PASSED",
-      "modularity": 0.577,
+      "modularity": 0.578,
       "threshold": 0.3,
       "communities_count": 30
     },
@@ -627,110 +627,110 @@
           "component": "tests",
           "impact_radius": 124,
           "sample_dependents": [
-            "src::domain::statemachine",
-            "src::app::adapters::web::auth::secret",
-            "src::app::adapters::web::event_query",
-            "src::app::commands",
-            "src::app::graph"
+            "src::app::config_remotes",
+            "src::app::config_watcher",
+            "src::app::context_log",
+            "src::app::adapters::web::routes::static_assets",
+            "src::app::adapters::federation::peer"
           ]
         },
         {
           "component": "task",
           "impact_radius": 95,
           "sample_dependents": [
-            "src::app::adapters::web::event_query",
-            "src::app::commands",
-            "src::app::commands::task",
-            "src::app::adapters::web::view::detail",
-            "src::infra::memory_bus"
+            "src::app::commands::context",
+            "src::app::adapters::federation::peer",
+            "src::infra::dto::bus",
+            "src::app::metrics",
+            "src::app::adapters::web::routes"
           ]
         },
         {
           "component": "context",
           "impact_radius": 94,
           "sample_dependents": [
-            "src::app::adapters::web::event_query",
-            "src::app::commands",
-            "src::app::commands::task",
-            "src::app::adapters::web::view::detail",
-            "src::infra::memory_bus"
+            "src::app::commands::context",
+            "src::app::adapters::federation::peer",
+            "src::infra::dto::bus",
+            "src::app::metrics",
+            "src::app::adapters::web::routes"
           ]
         },
         {
           "component": "agent",
           "impact_radius": 93,
           "sample_dependents": [
-            "src::app::adapters::web::event_query",
-            "src::app::commands",
-            "src::app::commands::task",
-            "src::app::adapters::web::view::detail",
-            "src::infra::memory_bus"
+            "src::app::commands::context",
+            "src::app::adapters::federation::peer",
+            "src::infra::dto::bus",
+            "src::app::metrics",
+            "src::app::adapters::web::routes"
           ]
         },
         {
           "component": "message",
           "impact_radius": 92,
           "sample_dependents": [
-            "src::app::adapters::web::event_query",
-            "src::app::commands::task",
-            "src::app::adapters::web::view::detail",
-            "src::infra::memory_bus",
-            "src::infra::dto::config"
+            "src::app::commands::context",
+            "src::app::adapters::federation::peer",
+            "src::infra::dto::bus",
+            "src::app::metrics",
+            "src::app::adapters::web::routes"
           ]
         },
         {
           "component": "statemachine",
           "impact_radius": 92,
           "sample_dependents": [
-            "src::app::adapters::web::event_query",
-            "src::app::commands::task",
-            "src::app::adapters::web::view::detail",
-            "src::infra::memory_bus",
-            "src::infra::dto::config"
+            "src::app::commands::context",
+            "src::app::adapters::federation::peer",
+            "src::infra::dto::bus",
+            "src::app::metrics",
+            "src::app::adapters::web::routes"
           ]
         },
         {
           "component": "bus",
           "impact_radius": 74,
           "sample_dependents": [
-            "src::app::adapters::web::event_query",
-            "src::app::commands",
-            "src::app::commands::task",
-            "src::app::adapters::web::view::detail",
-            "src::app::commands::dashboard"
+            "src::app::commands::context",
+            "src::app::adapters::federation::peer",
+            "src::infra::dto::bus",
+            "src::app::metrics",
+            "src::app::adapters::web::routes"
           ]
         },
         {
           "component": "events",
           "impact_radius": 61,
           "sample_dependents": [
-            "src::ports::bus",
-            "src::infra::memory_bus",
-            "src::infra::dto::config",
-            "src::app::commands::dashboard",
-            "src::app::commands::schedule"
+            "src::infra::dto::context",
+            "src::infra::dto::bus",
+            "src::app::metrics",
+            "src::domain::workitem",
+            "src::app::adapters::discord"
           ]
         },
         {
           "component": "config_types",
           "impact_radius": 60,
           "sample_dependents": [
-            "src::ports::bus",
-            "src::infra::memory_bus",
-            "src::infra::dto::config",
-            "src::app::commands::dashboard",
-            "src::app::commands::schedule"
+            "src::infra::dto::context",
+            "src::infra::dto::bus",
+            "src::app::metrics",
+            "src::domain::workitem",
+            "src::app::adapters::discord"
           ]
         },
         {
           "component": "workitem",
           "impact_radius": 60,
           "sample_dependents": [
-            "src::ports::bus",
-            "src::infra::memory_bus",
-            "src::infra::dto::config",
-            "src::app::commands::dashboard",
-            "src::app::commands::schedule"
+            "src::infra::dto::context",
+            "src::infra::dto::bus",
+            "src::app::metrics",
+            "src::domain::workitem",
+            "src::app::adapters::discord"
           ]
         }
       ],
