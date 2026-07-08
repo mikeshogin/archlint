@@ -627,21 +627,21 @@
           "component": "tests",
           "impact_radius": 124,
           "sample_dependents": [
-            "src::app::config_remotes",
-            "src::app::config_watcher",
-            "src::app::context_log",
-            "src::app::adapters::web::routes::static_assets",
-            "src::app::adapters::federation::peer"
+            "src::app::adapters::web::view::log",
+            "src::app::session_discover",
+            "src::app::tmux_launcher",
+            "src::app::commands::reload",
+            "src::infra::context_store"
           ]
         },
         {
           "component": "task",
           "impact_radius": 95,
           "sample_dependents": [
-            "src::app::commands::context",
-            "src::app::adapters::federation::peer",
-            "src::infra::dto::bus",
-            "src::app::metrics",
+            "src::app::adapters::web::view::log",
+            "src::app::session_discover",
+            "src::app::commands::reload",
+            "src::infra::context_store",
             "src::app::adapters::web::routes"
           ]
         },
@@ -649,10 +649,10 @@
           "component": "context",
           "impact_radius": 94,
           "sample_dependents": [
-            "src::app::commands::context",
-            "src::app::adapters::federation::peer",
-            "src::infra::dto::bus",
-            "src::app::metrics",
+            "src::app::adapters::web::view::log",
+            "src::app::session_discover",
+            "src::app::commands::reload",
+            "src::infra::context_store",
             "src::app::adapters::web::routes"
           ]
         },
@@ -660,10 +660,10 @@
           "component": "agent",
           "impact_radius": 93,
           "sample_dependents": [
-            "src::app::commands::context",
-            "src::app::adapters::federation::peer",
-            "src::infra::dto::bus",
-            "src::app::metrics",
+            "src::app::adapters::web::view::log",
+            "src::app::session_discover",
+            "src::app::commands::reload",
+            "src::infra::context_store",
             "src::app::adapters::web::routes"
           ]
         },
@@ -671,10 +671,10 @@
           "component": "message",
           "impact_radius": 92,
           "sample_dependents": [
-            "src::app::commands::context",
-            "src::app::adapters::federation::peer",
-            "src::infra::dto::bus",
-            "src::app::metrics",
+            "src::app::adapters::web::view::log",
+            "src::app::session_discover",
+            "src::app::commands::reload",
+            "src::infra::context_store",
             "src::app::adapters::web::routes"
           ]
         },
@@ -682,10 +682,10 @@
           "component": "statemachine",
           "impact_radius": 92,
           "sample_dependents": [
-            "src::app::commands::context",
-            "src::app::adapters::federation::peer",
-            "src::infra::dto::bus",
-            "src::app::metrics",
+            "src::app::adapters::web::view::log",
+            "src::app::session_discover",
+            "src::app::commands::reload",
+            "src::infra::context_store",
             "src::app::adapters::web::routes"
           ]
         },
@@ -693,44 +693,44 @@
           "component": "bus",
           "impact_radius": 74,
           "sample_dependents": [
-            "src::app::commands::context",
-            "src::app::adapters::federation::peer",
-            "src::infra::dto::bus",
-            "src::app::metrics",
-            "src::app::adapters::web::routes"
+            "src::app::adapters::web::view::log",
+            "src::ports",
+            "src::app::session_discover",
+            "src::infra::unix_bus",
+            "src::infra::context_store"
           ]
         },
         {
           "component": "events",
           "impact_radius": 61,
           "sample_dependents": [
-            "src::infra::dto::context",
-            "src::infra::dto::bus",
-            "src::app::metrics",
-            "src::domain::workitem",
-            "src::app::adapters::discord"
+            "src::app::agent_process",
+            "src::infra::bus_server",
+            "src::app::commands::bus",
+            "src::app::adapters::telegram",
+            "src::infra::dto::context"
           ]
         },
         {
           "component": "config_types",
           "impact_radius": 60,
           "sample_dependents": [
-            "src::infra::dto::context",
-            "src::infra::dto::bus",
-            "src::app::metrics",
-            "src::domain::workitem",
-            "src::app::adapters::discord"
+            "src::app::agent_process",
+            "src::infra::bus_server",
+            "src::app::commands::bus",
+            "src::app::adapters::telegram",
+            "src::infra::dto::context"
           ]
         },
         {
           "component": "workitem",
           "impact_radius": 60,
           "sample_dependents": [
-            "src::infra::dto::context",
-            "src::infra::dto::bus",
-            "src::app::metrics",
-            "src::domain::workitem",
-            "src::app::adapters::discord"
+            "src::app::agent_process",
+            "src::infra::bus_server",
+            "src::app::commands::bus",
+            "src::app::adapters::telegram",
+            "src::infra::dto::context"
           ]
         }
       ],
