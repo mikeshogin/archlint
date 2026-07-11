@@ -627,110 +627,110 @@
           "component": "tests",
           "impact_radius": 124,
           "sample_dependents": [
-            "src::app::agent_components",
-            "src::app::adapters::web::view::task",
-            "src::app::agent",
-            "src::app::config_changeset",
-            "src::app::adapters::web::view::strip"
+            "src::infra::dto::instance",
+            "src::app::schedule",
+            "src::app::commands::dashboard",
+            "src::app::transcript_extractor::event_store",
+            "src::app::adapters::web::routes::github_webhook"
           ]
         },
         {
           "component": "task",
           "impact_radius": 95,
           "sample_dependents": [
-            "src::app::adapters::web::view::task",
+            "src::infra::dto::instance",
             "src::app::schedule",
-            "src::app::config_changeset",
-            "src::app::adapters::web::view::strip",
-            "src::infra::sm_store"
+            "src::app::commands::dashboard",
+            "src::app::commands::doctor",
+            "src::app::adapters::web::routes::github_webhook"
           ]
         },
         {
           "component": "context",
           "impact_radius": 94,
           "sample_dependents": [
-            "src::app::adapters::web::view::task",
+            "src::infra::dto::instance",
             "src::app::schedule",
-            "src::app::config_changeset",
-            "src::app::adapters::web::view::strip",
-            "src::infra::sm_store"
+            "src::app::commands::dashboard",
+            "src::app::commands::doctor",
+            "src::app::adapters::web::routes::github_webhook"
           ]
         },
         {
           "component": "agent",
           "impact_radius": 93,
           "sample_dependents": [
-            "src::app::adapters::web::view::task",
+            "src::infra::dto::instance",
             "src::app::schedule",
-            "src::app::config_changeset",
-            "src::app::adapters::web::view::strip",
-            "src::infra::sm_store"
+            "src::app::commands::dashboard",
+            "src::app::commands::doctor",
+            "src::app::adapters::web::routes::github_webhook"
           ]
         },
         {
           "component": "message",
           "impact_radius": 92,
           "sample_dependents": [
-            "src::app::adapters::web::view::task",
+            "src::infra::dto::instance",
             "src::app::schedule",
-            "src::app::config_changeset",
-            "src::app::adapters::web::view::strip",
-            "src::infra::sm_store"
+            "src::app::commands::dashboard",
+            "src::app::commands::doctor",
+            "src::app::adapters::web::routes::github_webhook"
           ]
         },
         {
           "component": "statemachine",
           "impact_radius": 92,
           "sample_dependents": [
-            "src::app::adapters::web::view::task",
+            "src::infra::dto::instance",
             "src::app::schedule",
-            "src::app::config_changeset",
-            "src::app::adapters::web::view::strip",
-            "src::infra::sm_store"
+            "src::app::commands::dashboard",
+            "src::app::commands::doctor",
+            "src::app::adapters::web::routes::github_webhook"
           ]
         },
         {
           "component": "bus",
           "impact_radius": 74,
           "sample_dependents": [
-            "src::app::adapters::web::view::task",
             "src::app::schedule",
-            "src::app::agent",
-            "src::app::adapters::web::view::strip",
-            "src::app::adapters::web::view::chart"
+            "src::app::commands::dashboard",
+            "src::app::commands::doctor",
+            "src::app::mcp_tools",
+            "src::app::adapters::web::view::log"
           ]
         },
         {
           "component": "events",
           "impact_radius": 61,
           "sample_dependents": [
-            "src::app::schedule",
-            "src::app::config_changeset",
-            "src::infra::sm_store",
-            "src::infra::dto::config",
-            "src::app::commands::reload"
+            "src::app::commands::remind",
+            "src::infra::dto::instance",
+            "src::infra::bus_server",
+            "src::app::agent_process",
+            "src::app::commands::dashboard"
           ]
         },
         {
           "component": "config_types",
           "impact_radius": 60,
           "sample_dependents": [
-            "src::app::schedule",
-            "src::app::config_changeset",
-            "src::infra::sm_store",
-            "src::infra::dto::config",
-            "src::app::commands::reload"
+            "src::app::commands::remind",
+            "src::infra::dto::instance",
+            "src::infra::bus_server",
+            "src::app::agent_process",
+            "src::app::commands::dashboard"
           ]
         },
         {
           "component": "workitem",
           "impact_radius": 60,
           "sample_dependents": [
-            "src::app::schedule",
-            "src::app::config_changeset",
-            "src::infra::sm_store",
-            "src::infra::dto::config",
-            "src::app::commands::reload"
+            "src::app::commands::remind",
+            "src::infra::dto::instance",
+            "src::infra::bus_server",
+            "src::app::agent_process",
+            "src::app::commands::dashboard"
           ]
         }
       ],
