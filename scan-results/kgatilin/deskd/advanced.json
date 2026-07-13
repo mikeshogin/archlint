@@ -39,9 +39,9 @@
       "name": "modularity",
       "description": "Модульность графа должна быть >= 0.3",
       "status": "PASSED",
-      "modularity": 0.578,
+      "modularity": 0.577,
       "threshold": 0.3,
-      "communities_count": 29
+      "communities_count": 28
     },
     {
       "name": "abstractness",
@@ -627,87 +627,87 @@
           "component": "tests",
           "impact_radius": 124,
           "sample_dependents": [
-            "src::app::alerts",
-            "src::app::doctor",
-            "src::app::adapters",
-            "src::infra::sm_store",
-            "src::app::adapters::web::panel"
+            "src::app::adapters::web::templates",
+            "src::app::commands::session",
+            "src::app::adapters::web::routes::agent_detail",
+            "src::app::adapters::federation::registry",
+            "src::app::config_reload"
           ]
         },
         {
           "component": "task",
           "impact_radius": 95,
           "sample_dependents": [
-            "src::app::alerts",
-            "src::app::doctor",
-            "src::app::adapters",
-            "src::infra::sm_store",
-            "src::app::adapters::web::panel"
+            "src::app::commands::session",
+            "src::app",
+            "src::app::adapters::web::routes::agent_detail",
+            "src::app::config_reload",
+            "src::app::commands"
           ]
         },
         {
           "component": "context",
           "impact_radius": 94,
           "sample_dependents": [
-            "src::app::alerts",
-            "src::app::doctor",
-            "src::app::adapters",
-            "src::infra::sm_store",
-            "src::app::adapters::web::panel"
+            "src::app::commands::session",
+            "src::app",
+            "src::app::adapters::web::routes::agent_detail",
+            "src::app::config_reload",
+            "src::app::commands"
           ]
         },
         {
           "component": "agent",
           "impact_radius": 93,
           "sample_dependents": [
-            "src::app::alerts",
-            "src::app::doctor",
-            "src::app::adapters",
-            "src::infra::sm_store",
-            "src::app::adapters::web::panel"
+            "src::app::commands::session",
+            "src::app",
+            "src::app::adapters::web::routes::agent_detail",
+            "src::app::config_reload",
+            "src::app::commands"
           ]
         },
         {
           "component": "message",
           "impact_radius": 92,
           "sample_dependents": [
-            "src::app::alerts",
-            "src::app::doctor",
-            "src::app::adapters",
-            "src::infra::sm_store",
-            "src::app::adapters::web::panel"
+            "src::app::commands::session",
+            "src::app",
+            "src::app::adapters::web::routes::agent_detail",
+            "src::app::config_reload",
+            "src::app::context"
           ]
         },
         {
           "component": "statemachine",
           "impact_radius": 92,
           "sample_dependents": [
-            "src::app::alerts",
-            "src::app::doctor",
-            "src::app::adapters",
-            "src::infra::sm_store",
-            "src::app::adapters::web::panel"
+            "src::app::commands::session",
+            "src::app",
+            "src::app::adapters::web::routes::agent_detail",
+            "src::app::config_reload",
+            "src::app::context"
           ]
         },
         {
           "component": "bus",
           "impact_radius": 74,
           "sample_dependents": [
-            "src::app::doctor",
-            "src::infra::unix_bus",
-            "src::app::adapters::web::panel",
-            "src::app::commands::graph",
-            "src::infra::dto::bus"
+            "src::app::commands::session",
+            "src::app",
+            "src::app::adapters::web::routes::agent_detail",
+            "src::app::config_reload",
+            "src::app::commands"
           ]
         },
         {
           "component": "events",
           "impact_radius": 61,
           "sample_dependents": [
-            "src::app::alerts",
-            "src::app::adapters::telegram",
-            "src::app::adapters",
-            "src::app::adapters::web::data_cost",
+            "src::app::agent_state",
+            "src::app::config_reload",
+            "src::app::context",
+            "src::app::commands::reload",
             "src::app::agent_registry"
           ]
         },
@@ -715,10 +715,10 @@
           "component": "config_types",
           "impact_radius": 60,
           "sample_dependents": [
-            "src::app::alerts",
-            "src::app::adapters::telegram",
-            "src::app::adapters",
-            "src::app::adapters::web::data_cost",
+            "src::app::agent_state",
+            "src::app::config_reload",
+            "src::app::context",
+            "src::app::commands::reload",
             "src::app::agent_registry"
           ]
         },
@@ -726,10 +726,10 @@
           "component": "workitem",
           "impact_radius": 60,
           "sample_dependents": [
-            "src::app::alerts",
-            "src::app::adapters::telegram",
-            "src::app::adapters",
-            "src::app::adapters::web::data_cost",
+            "src::app::agent_state",
+            "src::app::config_reload",
+            "src::app::context",
+            "src::app::commands::reload",
             "src::app::agent_registry"
           ]
         }
