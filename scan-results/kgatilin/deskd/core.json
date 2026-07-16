@@ -33,8 +33,8 @@
           "threshold": 10
         },
         {
-          "node": "src::app::commands",
-          "fan_out": 19,
+          "node": "src::app::adapters::web::routes",
+          "fan_out": 16,
           "threshold": 10
         },
         {
@@ -43,8 +43,8 @@
           "threshold": 10
         },
         {
-          "node": "src::app::adapters::web::routes",
-          "fan_out": 16,
+          "node": "src::app::commands",
+          "fan_out": 19,
           "threshold": 10
         },
         {
@@ -63,6 +63,13 @@
       "ce_threshold": 10,
       "violations": [
         {
+          "node": "src::infra",
+          "afferent_coupling": 16,
+          "efferent_coupling": 11,
+          "ca_threshold": 10,
+          "ce_threshold": 10
+        },
+        {
           "node": "src::domain",
           "afferent_coupling": 30,
           "efferent_coupling": 8,
@@ -77,23 +84,9 @@
           "ce_threshold": 10
         },
         {
-          "node": "src::infra",
-          "afferent_coupling": 16,
-          "efferent_coupling": 11,
-          "ca_threshold": 10,
-          "ce_threshold": 10
-        },
-        {
-          "node": "src::app::commands",
-          "afferent_coupling": 0,
-          "efferent_coupling": 19,
-          "ca_threshold": 10,
-          "ce_threshold": 10
-        },
-        {
-          "node": "src::app::adapters::web",
-          "afferent_coupling": 0,
-          "efferent_coupling": 18,
+          "node": "src::ports",
+          "afferent_coupling": 21,
+          "efferent_coupling": 4,
           "ca_threshold": 10,
           "ce_threshold": 10
         },
@@ -105,16 +98,23 @@
           "ce_threshold": 10
         },
         {
-          "node": "src::app",
-          "afferent_coupling": 57,
-          "efferent_coupling": 47,
+          "node": "src::app::adapters::web",
+          "afferent_coupling": 0,
+          "efferent_coupling": 18,
           "ca_threshold": 10,
           "ce_threshold": 10
         },
         {
-          "node": "src::ports",
-          "afferent_coupling": 21,
-          "efferent_coupling": 4,
+          "node": "src::app::commands",
+          "afferent_coupling": 0,
+          "efferent_coupling": 19,
+          "ca_threshold": 10,
+          "ce_threshold": 10
+        },
+        {
+          "node": "src::app",
+          "afferent_coupling": 57,
+          "efferent_coupling": 47,
           "ca_threshold": 10,
           "ce_threshold": 10
         },
@@ -134,63 +134,63 @@
       "status": "ERROR",
       "most_unstable": [
         {
-          "node": "src::domain::context",
+          "node": "src::infra::context_store",
           "instability": 1.0,
           "ca": 0,
-          "ce": 1
+          "ce": 4
         },
         {
-          "node": "src::domain::config_types",
+          "node": "src::infra::diag",
           "instability": 1.0,
           "ca": 0,
           "ce": 3
         },
         {
-          "node": "src::domain::agent",
+          "node": "src::infra::memory_bus",
           "instability": 1.0,
           "ca": 0,
-          "ce": 1
+          "ce": 3
         },
         {
-          "node": "src::domain::statemachine",
+          "node": "src::infra::memory_store",
           "instability": 1.0,
           "ca": 0,
-          "ce": 1
+          "ce": 4
         },
         {
-          "node": "src::domain::workitem",
+          "node": "src::infra::task_store",
           "instability": 1.0,
           "ca": 0,
-          "ce": 1
+          "ce": 3
         }
       ],
       "most_stable": [
         {
-          "node": "patterns",
+          "node": "transcript_extractor",
           "instability": 0.0,
           "ca": 1,
           "ce": 0
         },
         {
-          "node": "src::patterns",
+          "node": "unified_inbox",
           "instability": 0.0,
           "ca": 1,
           "ce": 0
         },
         {
-          "node": "bus_wire",
+          "node": "worker",
           "instability": 0.0,
           "ca": 1,
           "ce": 0
         },
         {
-          "node": "executor",
+          "node": "workflow",
           "instability": 0.0,
           "ca": 1,
           "ce": 0
         },
         {
-          "node": "store",
+          "node": "src::context_size",
           "instability": 0.0,
           "ca": 1,
           "ce": 0
@@ -334,17 +334,17 @@
       "description": "Компоненты без связей (возможно мертвый код)",
       "status": "WARNING",
       "orphans": [
-        "src::domain::message",
-        "src::app::commands::restart",
-        "src::app::adapters::web::middleware::headers",
-        "src::app::adapters::web::routes::health",
-        "src::app::cli",
-        "src::ports::executor",
         "build",
-        "tests::agent_lifecycle",
-        "tests::mcp_channel_subprocess",
-        "tests::schedule_to_worker",
+        "src::domain::message",
+        "src::ports::executor",
+        "src::app::adapters::web::routes::health",
+        "src::app::adapters::web::middleware::headers",
+        "src::app::commands::restart",
+        "src::app::cli",
         "tests::diag_publish",
+        "tests::agent_lifecycle",
+        "tests::schedule_to_worker",
+        "tests::mcp_channel_subprocess",
         "tests::crash_recovery",
         "tests::agent_state_mcp"
       ],

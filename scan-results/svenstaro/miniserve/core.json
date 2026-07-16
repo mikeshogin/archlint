@@ -20,8 +20,8 @@
       "status": "FAILED",
       "cycles": [
         [
-          "src::listing",
-          "src::renderer"
+          "src::renderer",
+          "src::listing"
         ]
       ],
       "cycles_count": 1
@@ -76,7 +76,7 @@
           "ce": 17
         },
         {
-          "node": "tests::readme",
+          "node": "tests::archive",
           "instability": 1.0,
           "ca": 0,
           "ce": 2
@@ -88,13 +88,13 @@
           "ce": 2
         },
         {
-          "node": "tests::serve_request",
+          "node": "tests::auth",
           "instability": 1.0,
           "ca": 0,
           "ce": 2
         },
         {
-          "node": "tests::upload_files",
+          "node": "tests::create_directories",
           "instability": 1.0,
           "ca": 0,
           "ce": 2
@@ -102,13 +102,13 @@
       ],
       "most_stable": [
         {
-          "node": "renderer",
+          "node": "src::percent_encode_sets",
           "instability": 0.0,
           "ca": 1,
           "ce": 0
         },
         {
-          "node": "webdav_fs",
+          "node": "percent_encode_sets",
           "instability": 0.0,
           "ca": 1,
           "ce": 0
@@ -224,8 +224,8 @@
       "total_sccs": 52,
       "problematic_sccs": [
         [
-          "src::listing",
-          "src::renderer"
+          "src::renderer",
+          "src::listing"
         ]
       ],
       "problematic_count": 1

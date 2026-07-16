@@ -43,7 +43,7 @@
       "name": "modularity",
       "description": "Модульность графа должна быть >= 0.3",
       "status": "PASSED",
-      "modularity": 0.577,
+      "modularity": 0.582,
       "threshold": 0.3,
       "communities_count": 5
     },
@@ -65,16 +65,7 @@
       "status": "WARNING",
       "packages": [
         {
-          "package": "src::errors",
-          "abstractness": 0.0,
-          "instability": 0.0,
-          "distance": 1.0,
-          "nodes_count": 1,
-          "zone": "pain",
-          "issue": "Зона боли: конкретный и стабильный"
-        },
-        {
-          "package": "src::webdav_fs",
+          "package": "src::consts",
           "abstractness": 0.0,
           "instability": 0.0,
           "distance": 1.0,
@@ -92,7 +83,7 @@
           "issue": "Зона боли: конкретный и стабильный"
         },
         {
-          "package": "src::consts",
+          "package": "src::webdav_fs",
           "abstractness": 0.0,
           "instability": 0.0,
           "distance": 1.0,
@@ -101,34 +92,7 @@
           "issue": "Зона боли: конкретный и стабильный"
         },
         {
-          "package": "src::percent_encode_sets",
-          "abstractness": 0.0,
-          "instability": 0.0,
-          "distance": 1.0,
-          "nodes_count": 1,
-          "zone": "pain",
-          "issue": "Зона боли: конкретный и стабильный"
-        },
-        {
-          "package": "percent_encode_sets",
-          "abstractness": 0.0,
-          "instability": 0.0,
-          "distance": 1.0,
-          "nodes_count": 1,
-          "zone": "pain",
-          "issue": "Зона боли: конкретный и стабильный"
-        },
-        {
-          "package": "AuthParseError",
-          "abstractness": 0.0,
-          "instability": 0.0,
-          "distance": 1.0,
-          "nodes_count": 1,
-          "zone": "pain",
-          "issue": "Зона боли: конкретный и стабильный"
-        },
-        {
-          "package": "auth",
+          "package": "src::errors",
           "abstractness": 0.0,
           "instability": 0.0,
           "distance": 1.0,
@@ -153,11 +117,9 @@
           "nodes_count": 1,
           "zone": "pain",
           "issue": "Зона боли: конкретный и стабильный"
-        }
-      ],
-      "violations": [
+        },
         {
-          "package": "src::errors",
+          "package": "args",
           "abstractness": 0.0,
           "instability": 0.0,
           "distance": 1.0,
@@ -166,7 +128,36 @@
           "issue": "Зона боли: конкретный и стабильный"
         },
         {
-          "package": "src::webdav_fs",
+          "package": "auth",
+          "abstractness": 0.0,
+          "instability": 0.0,
+          "distance": 1.0,
+          "nodes_count": 1,
+          "zone": "pain",
+          "issue": "Зона боли: конкретный и стабильный"
+        },
+        {
+          "package": "config",
+          "abstractness": 0.0,
+          "instability": 0.0,
+          "distance": 1.0,
+          "nodes_count": 1,
+          "zone": "pain",
+          "issue": "Зона боли: конкретный и стабильный"
+        },
+        {
+          "package": "consts",
+          "abstractness": 0.0,
+          "instability": 0.0,
+          "distance": 1.0,
+          "nodes_count": 1,
+          "zone": "pain",
+          "issue": "Зона боли: конкретный и стабильный"
+        }
+      ],
+      "violations": [
+        {
+          "package": "src::consts",
           "abstractness": 0.0,
           "instability": 0.0,
           "distance": 1.0,
@@ -184,7 +175,7 @@
           "issue": "Зона боли: конкретный и стабильный"
         },
         {
-          "package": "src::consts",
+          "package": "src::webdav_fs",
           "abstractness": 0.0,
           "instability": 0.0,
           "distance": 1.0,
@@ -193,7 +184,16 @@
           "issue": "Зона боли: конкретный и стабильный"
         },
         {
-          "package": "src::percent_encode_sets",
+          "package": "src::errors",
+          "abstractness": 0.0,
+          "instability": 0.0,
+          "distance": 1.0,
+          "nodes_count": 1,
+          "zone": "pain",
+          "issue": "Зона боли: конкретный и стабильный"
+        },
+        {
+          "package": "RequiredAuthPassword",
           "abstractness": 0.0,
           "instability": 0.0,
           "distance": 1.0,
@@ -224,11 +224,7 @@
           "coefficient": 0.007
         },
         {
-          "node": "tests::fixtures",
-          "coefficient": 0.0
-        },
-        {
-          "node": "tests::readme",
+          "node": "tests::archive",
           "coefficient": 0.0
         },
         {
@@ -236,11 +232,11 @@
           "coefficient": 0.0
         },
         {
-          "node": "tests::serve_request",
+          "node": "tests::auth",
           "coefficient": 0.0
         },
         {
-          "node": "tests::upload_files",
+          "node": "tests::create_directories",
           "coefficient": 0.0
         },
         {
@@ -248,7 +244,11 @@
           "coefficient": 0.0
         },
         {
-          "node": "tests::navigation",
+          "node": "tests::fixtures",
+          "coefficient": 0.0
+        },
+        {
+          "node": "tests::upload_files",
           "coefficient": 0.0
         }
       ],
@@ -268,9 +268,9 @@
       "description": "Критические узлы (удаление разбивает граф)",
       "status": "WARNING",
       "articulation_points": [
-        "src::listing",
         "src::main",
         "src::args",
+        "src::listing",
         "src::renderer",
         "tests::navigation",
         "tests::qrcode"
@@ -284,23 +284,11 @@
       "status": "INFO",
       "bridges": [
         {
-          "from": "src::listing",
-          "to": "src::percent_encode_sets"
+          "from": "src::consts",
+          "to": "src::renderer"
         },
         {
-          "from": "src::listing",
-          "to": "percent_encode_sets"
-        },
-        {
-          "from": "src::renderer",
-          "to": "src::consts"
-        },
-        {
-          "from": "src::args",
-          "to": "AuthParseError"
-        },
-        {
-          "from": "src::webdav_fs",
+          "from": "src::file_op",
           "to": "src::main"
         },
         {
@@ -349,7 +337,19 @@
         },
         {
           "from": "src::main",
-          "to": "src::file_op"
+          "to": "src::webdav_fs"
+        },
+        {
+          "from": "src::args",
+          "to": "AuthParseError"
+        },
+        {
+          "from": "src::listing",
+          "to": "src::percent_encode_sets"
+        },
+        {
+          "from": "src::listing",
+          "to": "percent_encode_sets"
         },
         {
           "from": "tests::utils",
@@ -404,27 +404,27 @@
           "closeness": 0.06
         },
         {
-          "node": "src::listing",
-          "closeness": 0.043
-        },
-        {
           "node": "src::renderer",
           "closeness": 0.043
         },
         {
-          "node": "src::archive",
-          "closeness": 0.038
+          "node": "src::listing",
+          "closeness": 0.043
         },
         {
           "node": "src::consts",
           "closeness": 0.038
         },
         {
-          "node": "src::percent_encode_sets",
+          "node": "src::archive",
           "closeness": 0.038
         },
         {
-          "node": "percent_encode_sets",
+          "node": "auth",
+          "closeness": 0.038
+        },
+        {
+          "node": "src::percent_encode_sets",
           "closeness": 0.038
         }
       ],
@@ -472,7 +472,7 @@
           "eigenvector": 0.32
         },
         {
-          "node": "src::listing",
+          "node": "src::renderer",
           "eigenvector": 0.16
         }
       ]

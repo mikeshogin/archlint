@@ -44,13 +44,19 @@
       "status": "PASSED",
       "most_unstable": [
         {
-          "node": "pkg::ab::ab",
+          "node": "pkg::feature::feature",
           "instability": 1.0,
           "ca": 0,
           "ce": 1
         },
         {
           "node": "pkg::reporter::reporter",
+          "instability": 1.0,
+          "ca": 0,
+          "ce": 1
+        },
+        {
+          "node": "pkg::daily::daily",
           "instability": 1.0,
           "ca": 0,
           "ce": 1
@@ -66,12 +72,6 @@
           "instability": 1.0,
           "ca": 0,
           "ce": 2
-        },
-        {
-          "node": "pkg::feature::feature",
-          "instability": 1.0,
-          "ca": 0,
-          "ce": 1
         }
       ],
       "most_stable": [
@@ -176,10 +176,10 @@
       "orphans": [
         "pkg::pricing::subscription",
         "pkg::pricing::pricing",
+        "pkg::counter::counter",
+        "pkg::counter::tiktoken",
         "pkg::perf::perf",
         "pkg::telemetry::telemetry",
-        "pkg::counter::tiktoken",
-        "pkg::counter::counter",
         "pkg::cache::cache"
       ],
       "orphans_count": 7

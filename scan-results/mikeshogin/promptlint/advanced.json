@@ -65,13 +65,6 @@
           "issue": "Зона боли: конкретный и стабильный"
         },
         {
-          "package": "pkg::template::template",
-          "abstractness": 0.0,
-          "instability": 0.5,
-          "distance": 0.5,
-          "nodes_count": 1
-        },
-        {
           "package": "pkg::template::template_test",
           "abstractness": 0.0,
           "instability": 0.5,
@@ -79,21 +72,7 @@
           "nodes_count": 1
         },
         {
-          "package": "pkg::metrics::domain",
-          "abstractness": 0.0,
-          "instability": 0.5,
-          "distance": 0.5,
-          "nodes_count": 1
-        },
-        {
-          "package": "pkg::metrics::nlp",
-          "abstractness": 0.0,
-          "instability": 0.5,
-          "distance": 0.5,
-          "nodes_count": 1
-        },
-        {
-          "package": "pkg::metrics::basic",
+          "package": "pkg::template::template",
           "abstractness": 0.0,
           "instability": 0.5,
           "distance": 0.5,
@@ -107,7 +86,14 @@
           "nodes_count": 1
         },
         {
-          "package": "pkg::analyzer::analyzer_test",
+          "package": "pkg::trend::trend_test",
+          "abstractness": 0.0,
+          "instability": 0.5,
+          "distance": 0.5,
+          "nodes_count": 1
+        },
+        {
+          "package": "pkg::trend::trend",
           "abstractness": 0.0,
           "instability": 0.5,
           "distance": 0.5,
@@ -121,7 +107,21 @@
           "nodes_count": 1
         },
         {
-          "package": "pkg::trend::trend",
+          "package": "pkg::analyzer::analyzer_test",
+          "abstractness": 0.0,
+          "instability": 0.5,
+          "distance": 0.5,
+          "nodes_count": 1
+        },
+        {
+          "package": "pkg::metrics::nlp",
+          "abstractness": 0.0,
+          "instability": 0.5,
+          "distance": 0.5,
+          "nodes_count": 1
+        },
+        {
+          "package": "pkg::metrics::domain",
           "abstractness": 0.0,
           "instability": 0.5,
           "distance": 0.5,
@@ -149,15 +149,11 @@
       "threshold": 0.1,
       "low_clustering_nodes": [
         {
-          "node": "pkg::abtest::abtest",
-          "coefficient": 0.0
-        },
-        {
           "node": "pkg::router::router",
           "coefficient": 0.0
         },
         {
-          "node": "pkg::analyzer::analyzer",
+          "node": "pkg::abtest::abtest",
           "coefficient": 0.0
         },
         {
@@ -169,7 +165,19 @@
           "coefficient": 0.0
         },
         {
+          "node": "pkg::analyzer::analyzer",
+          "coefficient": 0.0
+        },
+        {
           "node": "cmd::promptlint::main",
+          "coefficient": 0.0
+        },
+        {
+          "node": "pkg/metrics",
+          "coefficient": 0.0
+        },
+        {
+          "node": "pkg/analyzer",
           "coefficient": 0.0
         },
         {
@@ -178,14 +186,6 @@
         },
         {
           "node": "pkg/router",
-          "coefficient": 0.0
-        },
-        {
-          "node": "pkg/analyzer",
-          "coefficient": 0.0
-        },
-        {
-          "node": "pkg/metrics",
           "coefficient": 0.0
         }
       ],
@@ -205,10 +205,10 @@
       "description": "Критические узлы (удаление разбивает граф)",
       "status": "WARNING",
       "articulation_points": [
-        "pkg::analyzer::analyzer",
-        "pkg/metrics",
         "cmd::promptlint::main",
-        "pkg/analyzer"
+        "pkg::analyzer::analyzer",
+        "pkg/analyzer",
+        "pkg/metrics"
       ],
       "count": 4,
       "recommendation": "Уменьшить зависимость от критических узлов"
@@ -219,20 +219,20 @@
       "status": "INFO",
       "bridges": [
         {
-          "from": "pkg::analyzer::analyzer",
-          "to": "pkg/score"
+          "from": "pkg::score::score",
+          "to": "pkg/metrics"
         },
         {
           "from": "pkg::middleware::middleware",
           "to": "pkg/analyzer"
         },
         {
-          "from": "pkg::telemetry::telemetry",
-          "to": "pkg/analyzer"
+          "from": "pkg::analyzer::analyzer",
+          "to": "pkg/score"
         },
         {
-          "from": "pkg::score::score",
-          "to": "pkg/metrics"
+          "from": "pkg::telemetry::telemetry",
+          "to": "pkg/analyzer"
         },
         {
           "from": "cmd::promptlint::main",

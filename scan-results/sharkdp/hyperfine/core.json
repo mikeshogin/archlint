@@ -32,13 +32,13 @@
       "threshold": 10,
       "violations": [
         {
-          "node": "src::benchmark",
-          "fan_out": 13,
+          "node": "src::export",
+          "fan_out": 15,
           "threshold": 10
         },
         {
-          "node": "src::export",
-          "fan_out": 15,
+          "node": "src::benchmark",
+          "fan_out": 13,
           "threshold": 10
         },
         {
@@ -57,20 +57,6 @@
       "ce_threshold": 10,
       "violations": [
         {
-          "node": "src::benchmark",
-          "afferent_coupling": 7,
-          "efferent_coupling": 13,
-          "ca_threshold": 10,
-          "ce_threshold": 10
-        },
-        {
-          "node": "src::util",
-          "afferent_coupling": 18,
-          "efferent_coupling": 5,
-          "ca_threshold": 10,
-          "ce_threshold": 10
-        },
-        {
           "node": "src::export",
           "afferent_coupling": 5,
           "efferent_coupling": 15,
@@ -78,9 +64,23 @@
           "ce_threshold": 10
         },
         {
+          "node": "src::benchmark",
+          "afferent_coupling": 7,
+          "efferent_coupling": 13,
+          "ca_threshold": 10,
+          "ce_threshold": 10
+        },
+        {
           "node": "src::main",
           "afferent_coupling": 0,
           "efferent_coupling": 11,
+          "ca_threshold": 10,
+          "ce_threshold": 10
+        },
+        {
+          "node": "src::util",
+          "afferent_coupling": 18,
+          "efferent_coupling": 5,
           "ca_threshold": 10,
           "ce_threshold": 10
         }
@@ -93,7 +93,7 @@
       "status": "ERROR",
       "most_unstable": [
         {
-          "node": "src::parameter::range_step",
+          "node": "src::output::warnings",
           "instability": 1.0,
           "ca": 0,
           "ce": 3
@@ -105,45 +105,45 @@
           "ce": 1
         },
         {
-          "node": "src::output::warnings",
-          "instability": 1.0,
-          "ca": 0,
-          "ce": 3
-        },
-        {
           "node": "src::output::progress_bar",
           "instability": 1.0,
           "ca": 0,
           "ce": 1
         },
         {
-          "node": "src::benchmark::timing_result",
+          "node": "src::export::json",
           "instability": 1.0,
           "ca": 0,
-          "ce": 1
+          "ce": 4
+        },
+        {
+          "node": "src::export::tests",
+          "instability": 1.0,
+          "ca": 0,
+          "ce": 4
         }
       ],
       "most_stable": [
         {
-          "node": "nix",
+          "node": "min_max",
           "instability": 0.0,
           "ca": 1,
           "ce": 0
         },
         {
-          "node": "windows_sys",
-          "instability": 0.0,
-          "ca": 2,
-          "ce": 0
-        },
-        {
-          "node": "libc",
+          "node": "number",
           "instability": 0.0,
           "ca": 1,
           "ce": 0
         },
         {
-          "node": "once_cell",
+          "node": "randomized_environment_offset",
+          "instability": 0.0,
+          "ca": 1,
+          "ce": 0
+        },
+        {
+          "node": "units",
           "instability": 0.0,
           "ca": 1,
           "ce": 0
@@ -231,16 +231,16 @@
           "out_degree": 5
         },
         {
-          "node": "src::benchmark",
-          "total_degree": 20,
-          "in_degree": 7,
-          "out_degree": 13
-        },
-        {
           "node": "src::export",
           "total_degree": 20,
           "in_degree": 5,
           "out_degree": 15
+        },
+        {
+          "node": "src::benchmark",
+          "total_degree": 20,
+          "in_degree": 7,
+          "out_degree": 13
         },
         {
           "node": "src::options",
@@ -262,13 +262,13 @@
       "description": "Компоненты без связей (возможно мертвый код)",
       "status": "WARNING",
       "orphans": [
+        "build",
         "src::parameter::tokenize",
-        "src::util::number",
         "src::util::randomized_environment_offset",
         "src::util::units",
-        "src::util::min_max",
         "src::util::exit_code",
-        "build",
+        "src::util::number",
+        "src::util::min_max",
         "tests::common"
       ],
       "orphans_count": 8

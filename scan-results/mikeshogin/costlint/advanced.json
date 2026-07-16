@@ -93,6 +93,20 @@
           "nodes_count": 1
         },
         {
+          "package": "pkg::counter::counter",
+          "abstractness": 0.0,
+          "instability": 0.5,
+          "distance": 0.5,
+          "nodes_count": 1
+        },
+        {
+          "package": "pkg::counter::tiktoken",
+          "abstractness": 0.0,
+          "instability": 0.5,
+          "distance": 0.5,
+          "nodes_count": 1
+        },
+        {
           "package": "pkg::perf::perf",
           "abstractness": 0.0,
           "instability": 0.5,
@@ -107,20 +121,6 @@
           "nodes_count": 1
         },
         {
-          "package": "pkg::counter::tiktoken",
-          "abstractness": 0.0,
-          "instability": 0.5,
-          "distance": 0.5,
-          "nodes_count": 1
-        },
-        {
-          "package": "pkg::counter::counter",
-          "abstractness": 0.0,
-          "instability": 0.5,
-          "distance": 0.5,
-          "nodes_count": 1
-        },
-        {
           "package": "pkg::cache::cache",
           "abstractness": 0.0,
           "instability": 0.5,
@@ -128,7 +128,7 @@
           "nodes_count": 1
         },
         {
-          "package": "pkg::ab::ab",
+          "package": "pkg::feature::feature",
           "abstractness": 0.0,
           "instability": 1.0,
           "distance": 0.0,
@@ -177,11 +177,11 @@
           "coefficient": 0.0
         },
         {
-          "node": "pkg/counter",
+          "node": "pkg/telemetry",
           "coefficient": 0.0
         },
         {
-          "node": "pkg/telemetry",
+          "node": "pkg/counter",
           "coefficient": 0.0
         }
       ],
@@ -214,7 +214,7 @@
       "status": "INFO",
       "bridges": [
         {
-          "from": "pkg::ab::ab",
+          "from": "pkg::feature::feature",
           "to": "pkg/pricing"
         },
         {
@@ -222,16 +222,16 @@
           "to": "pkg/pricing"
         },
         {
+          "from": "pkg::daily::daily",
+          "to": "pkg/telemetry"
+        },
+        {
           "from": "pkg::budget::budget",
           "to": "pkg/pricing"
         },
         {
-          "from": "pkg::feature::feature",
+          "from": "pkg::ab::ab",
           "to": "pkg/pricing"
-        },
-        {
-          "from": "pkg::daily::daily",
-          "to": "pkg/telemetry"
         },
         {
           "from": "cmd::costlint::main",
@@ -290,11 +290,11 @@
       "central_nodes": [],
       "peripheral_nodes": [
         {
-          "node": "pkg/counter",
+          "node": "pkg/telemetry",
           "closeness": 0.087
         },
         {
-          "node": "pkg/telemetry",
+          "node": "pkg/counter",
           "closeness": 0.087
         },
         {
@@ -326,7 +326,7 @@
           "closeness": 0.043
         },
         {
-          "node": "pkg::ab::ab",
+          "node": "pkg::pricing::subscription",
           "closeness": 0.0
         }
       ],
@@ -350,11 +350,11 @@
           "eigenvector": 0.84
         },
         {
-          "node": "pkg/counter",
+          "node": "pkg/telemetry",
           "eigenvector": 0.28
         },
         {
-          "node": "pkg/telemetry",
+          "node": "pkg/counter",
           "eigenvector": 0.28
         },
         {
@@ -476,11 +476,11 @@
           "impact": 6
         },
         {
-          "node": "pkg/counter",
+          "node": "pkg/telemetry",
           "impact": 2
         },
         {
-          "node": "pkg/telemetry",
+          "node": "pkg/counter",
           "impact": 2
         },
         {

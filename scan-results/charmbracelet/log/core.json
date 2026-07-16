@@ -44,13 +44,7 @@
       "status": "PASSED",
       "most_unstable": [
         {
-          "node": "formatter",
-          "instability": 0.5,
-          "ca": 0,
-          "ce": 0
-        },
-        {
-          "node": "logger_121_test",
+          "node": "level",
           "instability": 0.5,
           "ca": 0,
           "ce": 0
@@ -62,13 +56,19 @@
           "ce": 0
         },
         {
-          "node": "json_test",
+          "node": "stdlog",
           "instability": 0.5,
           "ca": 0,
           "ce": 0
         },
         {
-          "node": "logfmt_test",
+          "node": "logger_no121",
+          "instability": 0.5,
+          "ca": 0,
+          "ce": 0
+        },
+        {
+          "node": "logger_121",
           "instability": 0.5,
           "ca": 0,
           "ce": 0
@@ -76,31 +76,31 @@
       ],
       "most_stable": [
         {
-          "node": "examples::styles::styles",
-          "instability": 0.5,
-          "ca": 0,
-          "ce": 0
-        },
-        {
           "node": "examples::error::error",
           "instability": 0.5,
           "ca": 0,
           "ce": 0
         },
         {
-          "node": "examples::temperature::temperature",
+          "node": "examples::format::format",
           "instability": 0.5,
           "ca": 0,
           "ce": 0
         },
         {
-          "node": "stdlog_test",
+          "node": "examples::app::app",
           "instability": 0.5,
           "ca": 0,
           "ce": 0
         },
         {
-          "node": "logger_test",
+          "node": "doc",
+          "instability": 0.5,
+          "ca": 0,
+          "ce": 0
+        },
+        {
+          "node": "json_test",
           "instability": 0.5,
           "ca": 0,
           "ce": 0
@@ -174,26 +174,26 @@
       "description": "Компоненты без связей (возможно мертвый код)",
       "status": "WARNING",
       "orphans": [
-        "formatter",
-        "logger_121_test",
-        "text",
-        "json_test",
-        "logfmt_test",
-        "context_test",
-        "level_test",
-        "json",
-        "options_test",
-        "pkg",
-        "context",
-        "logfmt",
-        "doc",
-        "stdlog",
-        "logger_121",
-        "pkg_test",
-        "options",
         "level",
+        "text",
+        "stdlog",
+        "logger_no121",
+        "logger_121",
+        "formatter",
+        "pkg_test",
+        "text_test",
+        "level_test",
+        "context",
+        "styles",
+        "logger_test",
+        "stdlog_test",
+        "pkg",
+        "context_test",
+        "options_test",
+        "logfmt_test",
+        "logfmt",
         "logger",
-        "text_test"
+        "options"
       ],
       "orphans_count": 37
     },
