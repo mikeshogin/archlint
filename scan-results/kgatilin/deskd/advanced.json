@@ -629,110 +629,110 @@
           "component": "tests",
           "impact_radius": 124,
           "sample_dependents": [
-            "src::app::adapters::web::audit",
-            "src::app::adapters::web::view::cost",
-            "src::app::config_reload",
-            "src::app::alerts",
-            "src::app::adapters::web::routes::sse"
+            "src::app::graph",
+            "src::app::commands::session",
+            "src::app::adapters::web::routes::cost_feed",
+            "src::app::context_size",
+            "src::app::commands::bus"
           ]
         },
         {
           "component": "task",
           "impact_radius": 95,
           "sample_dependents": [
-            "src::app::adapters::web::view::cost",
-            "src::app::config_reload",
-            "src::app::alerts",
-            "src::app::adapters::web::routes::sse",
-            "src::app::adapters::web::data"
+            "src::domain::workitem",
+            "src::app::commands::session",
+            "src::ports::bus",
+            "src::app::context_size",
+            "src::app::commands::bus"
           ]
         },
         {
           "component": "context",
           "impact_radius": 94,
           "sample_dependents": [
-            "src::app::adapters::web::view::cost",
-            "src::app::config_reload",
-            "src::app::alerts",
-            "src::app::adapters::web::routes::sse",
-            "src::app::adapters::web::data"
+            "src::domain::workitem",
+            "src::app::commands::session",
+            "src::ports::bus",
+            "src::app::context_size",
+            "src::app::commands::bus"
           ]
         },
         {
           "component": "agent",
           "impact_radius": 93,
           "sample_dependents": [
-            "src::app::adapters::web::view::cost",
-            "src::app::config_reload",
-            "src::app::alerts",
-            "src::app::adapters::web::routes::sse",
-            "src::app::adapters::web::data"
+            "src::domain::workitem",
+            "src::app::commands::session",
+            "src::ports::bus",
+            "src::app::context_size",
+            "src::app::commands::bus"
           ]
         },
         {
           "component": "message",
           "impact_radius": 92,
           "sample_dependents": [
-            "src::app::adapters::web::view::cost",
-            "src::app::config_reload",
-            "src::app::alerts",
-            "src::app::adapters::web::routes::sse",
-            "src::app::adapters::web::data"
+            "src::domain::workitem",
+            "src::app::commands::session",
+            "src::ports::bus",
+            "src::app::context_size",
+            "src::app::commands::bus"
           ]
         },
         {
           "component": "statemachine",
           "impact_radius": 92,
           "sample_dependents": [
-            "src::app::adapters::web::view::cost",
-            "src::app::config_reload",
-            "src::app::alerts",
-            "src::app::adapters::web::routes::sse",
-            "src::app::adapters::web::data"
+            "src::domain::workitem",
+            "src::app::commands::session",
+            "src::ports::bus",
+            "src::app::context_size",
+            "src::app::commands::bus"
           ]
         },
         {
           "component": "bus",
           "impact_radius": 74,
           "sample_dependents": [
-            "src::app::adapters::web::view::cost",
-            "src::app::config_reload",
-            "src::app::adapters::web::routes::sse",
-            "src::app::adapters::web::data",
-            "src::app::context"
+            "src::app::adapters::web::routes::cost_feed",
+            "src::app::commands::session",
+            "src::app::context_size",
+            "src::app::commands::bus",
+            "src::infra::diag"
           ]
         },
         {
           "component": "events",
           "impact_radius": 61,
           "sample_dependents": [
-            "src::app::adapters::web::view::cost",
-            "src::app::config_reload",
-            "src::app::bus",
-            "src::app::alerts",
-            "src::infra::dto::bus"
+            "src::domain::workitem",
+            "src::app::adapters::web::routes::cost_feed",
+            "src::ports::bus",
+            "src::app::commands::dashboard",
+            "src::app::commands::bus"
           ]
         },
         {
           "component": "config_types",
           "impact_radius": 60,
           "sample_dependents": [
-            "src::app::adapters::web::view::cost",
-            "src::app::config_reload",
-            "src::app::bus",
-            "src::app::alerts",
-            "src::infra::dto::bus"
+            "src::domain::workitem",
+            "src::app::adapters::web::routes::cost_feed",
+            "src::ports::bus",
+            "src::app::commands::dashboard",
+            "src::app::commands::bus"
           ]
         },
         {
           "component": "workitem",
           "impact_radius": 60,
           "sample_dependents": [
-            "src::app::adapters::web::view::cost",
-            "src::app::config_reload",
-            "src::app::bus",
-            "src::app::alerts",
-            "src::infra::dto::bus"
+            "src::domain::workitem",
+            "src::app::adapters::web::routes::cost_feed",
+            "src::ports::bus",
+            "src::app::commands::dashboard",
+            "src::app::commands::bus"
           ]
         }
       ],

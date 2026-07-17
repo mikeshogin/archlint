@@ -24,15 +24,15 @@
           "package": "src::export",
           "domains_count": 15,
           "domains": [
-            "markup",
-            "asciidoc",
-            "csv",
-            "src::options",
             "orgmode",
             "json",
-            "src::markdown",
+            "src::orgmode",
+            "src::options",
             "src::json",
             "src::util",
+            "src::benchmark",
+            "csv",
+            "markdown",
             "src::asciidoc"
           ]
         },
@@ -40,55 +40,55 @@
           "package": "src::benchmark",
           "domains_count": 12,
           "domains": [
-            "src::command",
+            "relative_speed",
+            "benchmark_result",
+            "executor",
             "src::options",
             "src::outlier_detection",
-            "relative_speed",
-            "src::parameter",
-            "benchmark_result",
-            "src::output",
+            "src::command",
             "src::util",
-            "scheduler",
-            "timing_result"
+            "src::executor",
+            "src::parameter",
+            "scheduler"
           ]
         },
         {
           "package": "src::main",
           "domains_count": 11,
           "domains": [
-            "benchmark",
-            "options",
-            "error",
-            "outlier_detection",
-            "timer",
             "export",
-            "parameter",
+            "command",
             "cli",
             "util",
-            "output"
+            "parameter",
+            "error",
+            "outlier_detection",
+            "output",
+            "timer",
+            "options"
           ]
         },
         {
           "package": "src::timer",
           "domains_count": 6,
           "domains": [
-            "windows_timer",
+            "unix_timer",
             "windows_sys",
-            "wall_clock_timer",
+            "windows_timer",
             "src::util",
             "nix",
-            "unix_timer"
+            "wall_clock_timer"
           ]
         },
         {
           "package": "src::benchmark::executor",
           "domains_count": 6,
           "domains": [
-            "src::command",
-            "src::options",
-            "src::timing_result",
-            "src::util",
             "src::output",
+            "src::options",
+            "src::command",
+            "src::util",
+            "src::timing_result",
             "src::timer"
           ]
         },
@@ -96,11 +96,11 @@
           "package": "src::benchmark::scheduler",
           "domains_count": 6,
           "domains": [
-            "src::command",
-            "src::options",
             "src::benchmark_result",
-            "src::export",
+            "src::options",
+            "src::command",
             "src::cli",
+            "src::export",
             "src::executor"
           ]
         },
@@ -110,40 +110,40 @@
           "domains": [
             "src::options",
             "src::util",
-            "src::output",
+            "src::benchmark",
             "src::Exporter",
-            "src::benchmark"
+            "src::output"
           ]
         },
         {
           "package": "src::util",
           "domains_count": 5,
           "domains": [
-            "min_max",
-            "exit_code",
-            "randomized_environment_offset",
+            "units",
             "number",
-            "units"
+            "randomized_environment_offset",
+            "min_max",
+            "exit_code"
           ]
         },
         {
           "package": "src::export::json",
           "domains_count": 4,
           "domains": [
-            "src::benchmark",
-            "src::options",
+            "src::util",
             "src::Exporter",
-            "src::util"
+            "src::options",
+            "src::benchmark"
           ]
         },
         {
           "package": "src::export::tests",
           "domains_count": 4,
           "domains": [
-            "src::benchmark",
-            "src::export",
+            "src::util",
             "src::Exporter",
-            "src::util"
+            "src::export",
+            "src::benchmark"
           ]
         }
       ],
