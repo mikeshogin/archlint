@@ -24,39 +24,39 @@
           "package": "src::main",
           "domains_count": 30,
           "domains": [
-            "buffer",
-            "src::printer",
-            "src::utils",
-            "printer",
-            "download",
-            "content_disposition",
-            "network_interface",
-            "utils",
+            "netrc",
+            "formatting",
             "generation",
-            "to_curl"
+            "src::buffer",
+            "nested_json",
+            "cli",
+            "src::request_items",
+            "redacted",
+            "utils",
+            "decoder"
           ]
         },
         {
           "package": "tests::cases",
           "domains_count": 6,
           "domains": [
-            "xml",
+            "auth_message_signature",
+            "unix_socket",
             "compress_request_body",
             "download",
             "logging",
-            "unix_socket",
-            "auth_message_signature"
+            "xml"
           ]
         },
         {
           "package": "src::auth",
           "domains_count": 5,
           "domains": [
-            "src::cli",
+            "tests",
             "src::middleware",
             "src::utils",
-            "tests",
-            "src::netrc"
+            "src::netrc",
+            "src::cli"
           ]
         },
         {
@@ -64,20 +64,20 @@
           "domains_count": 5,
           "domains": [
             "RequestItem",
+            "tests",
             "src::nested_json",
-            "src::cli",
             "src::utils",
-            "tests"
+            "src::cli"
           ]
         },
         {
           "package": "src::cli",
           "domains_count": 5,
           "domains": [
-            "src::redacted",
-            "src::utils",
-            "src::buffer",
             "tests",
+            "src::redacted",
+            "src::buffer",
+            "src::utils",
             "src::request_items"
           ]
         },
@@ -85,20 +85,20 @@
           "package": "src::nested_json",
           "domains_count": 4,
           "domains": [
-            "src::utils",
-            "tests",
             "PathAction",
-            "Token"
+            "tests",
+            "Token",
+            "src::utils"
           ]
         },
         {
           "package": "src::to_curl",
           "domains_count": 4,
           "domains": [
-            "src::request_items",
-            "src::utils",
             "tests",
-            "src::cli"
+            "src::cli",
+            "src::request_items",
+            "src::utils"
           ]
         },
         {
@@ -106,19 +106,19 @@
           "domains_count": 4,
           "domains": [
             "src::content_disposition",
-            "src::utils",
             "tests",
-            "src::decoder"
+            "src::decoder",
+            "src::utils"
           ]
         },
         {
           "package": "src::redirect",
           "domains_count": 4,
           "domains": [
-            "src::utils",
             "tests",
             "src::cli",
-            "src::middleware"
+            "src::middleware",
+            "src::utils"
           ]
         }
       ],

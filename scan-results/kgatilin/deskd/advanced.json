@@ -629,110 +629,110 @@
           "component": "tests",
           "impact_radius": 124,
           "sample_dependents": [
-            "src::app::graph",
-            "src::app::commands::session",
-            "src::app::adapters::web::routes::cost_feed",
-            "src::app::context_size",
-            "src::app::commands::bus"
+            "src::app::adapters::web::data_chart",
+            "src::app::transcript_extractor::cursors",
+            "src::app::mcp",
+            "src::app::adapters::web::view::cards",
+            "src::app::jsonrpc"
           ]
         },
         {
           "component": "task",
           "impact_radius": 95,
           "sample_dependents": [
-            "src::domain::workitem",
-            "src::app::commands::session",
-            "src::ports::bus",
-            "src::app::context_size",
-            "src::app::commands::bus"
+            "src::app::adapters::web::data_chart",
+            "src::app::mcp",
+            "src::app::adapters::web::view::cards",
+            "src::app::timeout_sweep",
+            "src::infra::task_store"
           ]
         },
         {
           "component": "context",
           "impact_radius": 94,
           "sample_dependents": [
-            "src::domain::workitem",
-            "src::app::commands::session",
-            "src::ports::bus",
-            "src::app::context_size",
-            "src::app::commands::bus"
+            "src::app::adapters::web::data_chart",
+            "src::app::mcp",
+            "src::app::adapters::web::view::cards",
+            "src::app::timeout_sweep",
+            "src::infra::task_store"
           ]
         },
         {
           "component": "agent",
           "impact_radius": 93,
           "sample_dependents": [
-            "src::domain::workitem",
-            "src::app::commands::session",
-            "src::ports::bus",
-            "src::app::context_size",
-            "src::app::commands::bus"
+            "src::app::adapters::web::data_chart",
+            "src::app::mcp",
+            "src::app::adapters::web::view::cards",
+            "src::app::timeout_sweep",
+            "src::infra::task_store"
           ]
         },
         {
           "component": "message",
           "impact_radius": 92,
           "sample_dependents": [
-            "src::domain::workitem",
-            "src::app::commands::session",
-            "src::ports::bus",
-            "src::app::context_size",
-            "src::app::commands::bus"
+            "src::app::adapters::web::data_chart",
+            "src::app::mcp",
+            "src::app::adapters::web::view::cards",
+            "src::app::timeout_sweep",
+            "src::infra::task_store"
           ]
         },
         {
           "component": "statemachine",
           "impact_radius": 92,
           "sample_dependents": [
-            "src::domain::workitem",
-            "src::app::commands::session",
-            "src::ports::bus",
-            "src::app::context_size",
-            "src::app::commands::bus"
+            "src::app::adapters::web::data_chart",
+            "src::app::mcp",
+            "src::app::adapters::web::view::cards",
+            "src::app::timeout_sweep",
+            "src::infra::task_store"
           ]
         },
         {
           "component": "bus",
           "impact_radius": 74,
           "sample_dependents": [
-            "src::app::adapters::web::routes::cost_feed",
-            "src::app::commands::session",
-            "src::app::context_size",
-            "src::app::commands::bus",
-            "src::infra::diag"
+            "src::app::mcp",
+            "src::app::adapters::web::data_chart",
+            "src::app::adapters::web::view::cards",
+            "src::app::timeout_sweep",
+            "src::app::a2a_server"
           ]
         },
         {
           "component": "events",
           "impact_radius": 61,
           "sample_dependents": [
-            "src::domain::workitem",
-            "src::app::adapters::web::routes::cost_feed",
-            "src::ports::bus",
-            "src::app::commands::dashboard",
-            "src::app::commands::bus"
+            "src::app::mcp",
+            "src::infra::dto::config",
+            "src::app::adapters::web::state",
+            "src::app::timeout_sweep",
+            "src::infra::task_store"
           ]
         },
         {
           "component": "config_types",
           "impact_radius": 60,
           "sample_dependents": [
-            "src::domain::workitem",
-            "src::app::adapters::web::routes::cost_feed",
-            "src::ports::bus",
-            "src::app::commands::dashboard",
-            "src::app::commands::bus"
+            "src::app::mcp",
+            "src::infra::dto::config",
+            "src::app::adapters::web::state",
+            "src::app::timeout_sweep",
+            "src::infra::task_store"
           ]
         },
         {
           "component": "workitem",
           "impact_radius": 60,
           "sample_dependents": [
-            "src::domain::workitem",
-            "src::app::adapters::web::routes::cost_feed",
-            "src::ports::bus",
-            "src::app::commands::dashboard",
-            "src::app::commands::bus"
+            "src::app::mcp",
+            "src::infra::dto::config",
+            "src::app::adapters::web::state",
+            "src::app::timeout_sweep",
+            "src::infra::task_store"
           ]
         }
       ],
