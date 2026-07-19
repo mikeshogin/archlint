@@ -629,110 +629,110 @@
           "component": "tests",
           "impact_radius": 124,
           "sample_dependents": [
-            "src::app::adapters::web::data_chart",
-            "src::app::transcript_extractor::cursors",
-            "src::app::mcp",
-            "src::app::adapters::web::view::cards",
-            "src::app::jsonrpc"
+            "src::app::mcp_service",
+            "src::infra::memory_bus",
+            "src::app::tmux_launcher",
+            "src::app::transcript_extractor::parser",
+            "src::app::adapters::web::routes::static_assets"
           ]
         },
         {
           "component": "task",
           "impact_radius": 95,
           "sample_dependents": [
-            "src::app::adapters::web::data_chart",
-            "src::app::mcp",
-            "src::app::adapters::web::view::cards",
-            "src::app::timeout_sweep",
-            "src::infra::task_store"
+            "src::app::mcp_service",
+            "src::infra::memory_bus",
+            "src::domain::workitem",
+            "src::ports::bus",
+            "src::app::config_changeset"
           ]
         },
         {
           "component": "context",
           "impact_radius": 94,
           "sample_dependents": [
-            "src::app::adapters::web::data_chart",
-            "src::app::mcp",
-            "src::app::adapters::web::view::cards",
-            "src::app::timeout_sweep",
-            "src::infra::task_store"
+            "src::app::mcp_service",
+            "src::infra::memory_bus",
+            "src::domain::workitem",
+            "src::ports::bus",
+            "src::app::config_changeset"
           ]
         },
         {
           "component": "agent",
           "impact_radius": 93,
           "sample_dependents": [
-            "src::app::adapters::web::data_chart",
-            "src::app::mcp",
-            "src::app::adapters::web::view::cards",
-            "src::app::timeout_sweep",
-            "src::infra::task_store"
+            "src::app::mcp_service",
+            "src::infra::memory_bus",
+            "src::domain::workitem",
+            "src::ports::bus",
+            "src::app::config_changeset"
           ]
         },
         {
           "component": "message",
           "impact_radius": 92,
           "sample_dependents": [
-            "src::app::adapters::web::data_chart",
-            "src::app::mcp",
-            "src::app::adapters::web::view::cards",
-            "src::app::timeout_sweep",
-            "src::infra::task_store"
+            "src::app::mcp_service",
+            "src::infra::memory_bus",
+            "src::domain::workitem",
+            "src::ports::bus",
+            "src::app::config_changeset"
           ]
         },
         {
           "component": "statemachine",
           "impact_radius": 92,
           "sample_dependents": [
-            "src::app::adapters::web::data_chart",
-            "src::app::mcp",
-            "src::app::adapters::web::view::cards",
-            "src::app::timeout_sweep",
-            "src::infra::task_store"
+            "src::app::mcp_service",
+            "src::infra::memory_bus",
+            "src::domain::workitem",
+            "src::ports::bus",
+            "src::app::config_changeset"
           ]
         },
         {
           "component": "bus",
           "impact_radius": 74,
           "sample_dependents": [
-            "src::app::mcp",
-            "src::app::adapters::web::data_chart",
-            "src::app::adapters::web::view::cards",
-            "src::app::timeout_sweep",
-            "src::app::a2a_server"
+            "src::app::mcp_service",
+            "src::infra::memory_bus",
+            "src::app::commands::a2a",
+            "src::infra::unix_bus",
+            "src::app::commands::dashboard"
           ]
         },
         {
           "component": "events",
           "impact_radius": 61,
           "sample_dependents": [
-            "src::app::mcp",
-            "src::infra::dto::config",
-            "src::app::adapters::web::state",
-            "src::app::timeout_sweep",
-            "src::infra::task_store"
+            "src::app::mcp_service",
+            "src::infra::memory_bus",
+            "src::app::worker",
+            "src::app::transcript_extractor",
+            "src::domain::workitem"
           ]
         },
         {
           "component": "config_types",
           "impact_radius": 60,
           "sample_dependents": [
-            "src::app::mcp",
-            "src::infra::dto::config",
-            "src::app::adapters::web::state",
-            "src::app::timeout_sweep",
-            "src::infra::task_store"
+            "src::app::mcp_service",
+            "src::infra::memory_bus",
+            "src::app::worker",
+            "src::domain::workitem",
+            "src::infra::context_store"
           ]
         },
         {
           "component": "workitem",
           "impact_radius": 60,
           "sample_dependents": [
-            "src::app::mcp",
-            "src::infra::dto::config",
-            "src::app::adapters::web::state",
-            "src::app::timeout_sweep",
-            "src::infra::task_store"
+            "src::app::mcp_service",
+            "src::infra::memory_bus",
+            "src::app::worker",
+            "src::domain::workitem",
+            "src::infra::context_store"
           ]
         }
       ],
