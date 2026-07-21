@@ -41,7 +41,7 @@
       "status": "PASSED",
       "modularity": 0.578,
       "threshold": 0.3,
-      "communities_count": 29
+      "communities_count": 30
     },
     {
       "name": "abstractness",
@@ -629,110 +629,110 @@
           "component": "tests",
           "impact_radius": 124,
           "sample_dependents": [
-            "src::app::commands::dashboard",
-            "src::domain::agent",
+            "src::infra::task_store",
+            "src::infra::context_store",
             "src::app::graph",
-            "src::app::adapters::telegram",
-            "src::app::transcript_extractor::patterns"
+            "src::app::adapters::web::audit",
+            "src::app::adapters::web::routes::github_webhook"
           ]
         },
         {
           "component": "task",
           "impact_radius": 95,
           "sample_dependents": [
-            "src::app::commands::dashboard",
-            "src::app::commands::task",
-            "src::app::message",
-            "src::app::agent_process",
-            "src::app::adapters::web::routes::logout"
+            "src::infra::task_store",
+            "src::infra::context_store",
+            "src::app::adapters::web::routes::github_webhook",
+            "src::app::session_discover",
+            "src::infra::dto::bus"
           ]
         },
         {
           "component": "context",
           "impact_radius": 94,
           "sample_dependents": [
-            "src::app::commands::dashboard",
-            "src::app::commands::task",
-            "src::app::message",
-            "src::app::agent_process",
-            "src::app::adapters::web::routes::logout"
+            "src::infra::task_store",
+            "src::infra::context_store",
+            "src::app::adapters::web::routes::github_webhook",
+            "src::app::session_discover",
+            "src::infra::dto::bus"
           ]
         },
         {
           "component": "agent",
           "impact_radius": 93,
           "sample_dependents": [
-            "src::app::commands::dashboard",
-            "src::app::commands::task",
-            "src::app::message",
-            "src::app::agent_process",
-            "src::app::adapters::web::routes::logout"
+            "src::infra::task_store",
+            "src::infra::context_store",
+            "src::app::adapters::web::routes::github_webhook",
+            "src::app::session_discover",
+            "src::infra::dto::bus"
           ]
         },
         {
           "component": "message",
           "impact_radius": 92,
           "sample_dependents": [
-            "src::app::commands::dashboard",
-            "src::app::commands::task",
-            "src::app::message",
-            "src::app::agent_process",
-            "src::app::adapters::web::routes::logout"
+            "src::infra::task_store",
+            "src::infra::context_store",
+            "src::app::adapters::web::routes::github_webhook",
+            "src::app::session_discover",
+            "src::infra::dto::bus"
           ]
         },
         {
           "component": "statemachine",
           "impact_radius": 92,
           "sample_dependents": [
-            "src::app::commands::dashboard",
-            "src::app::commands::task",
-            "src::app::message",
-            "src::app::agent_process",
-            "src::app::adapters::web::routes::logout"
+            "src::infra::task_store",
+            "src::infra::context_store",
+            "src::app::adapters::web::routes::github_webhook",
+            "src::app::session_discover",
+            "src::infra::dto::bus"
           ]
         },
         {
           "component": "bus",
           "impact_radius": 74,
           "sample_dependents": [
-            "src::app::commands::dashboard",
-            "src::app::commands::task",
-            "src::app::agent_process",
-            "src::app::adapters::web::routes::logout",
-            "src::app::adapters::telegram"
+            "src::infra::context_store",
+            "src::app::session_discover",
+            "src::infra::dto::bus",
+            "src::app::timeout_sweep",
+            "src::infra::unix_bus"
           ]
         },
         {
           "component": "events",
           "impact_radius": 61,
           "sample_dependents": [
-            "src::app::commands::dashboard",
-            "src::app::commands::schedule",
-            "src::app::message",
-            "src::infra::dto::bus",
-            "src::app::agent_process"
+            "src::infra::task_store",
+            "src::app::process_builder",
+            "src::infra::context_store",
+            "src::app::commands::reload",
+            "src::app::mcp_service"
           ]
         },
         {
           "component": "config_types",
           "impact_radius": 60,
           "sample_dependents": [
-            "src::app::commands::dashboard",
-            "src::app::commands::schedule",
-            "src::app::message",
-            "src::infra::dto::bus",
-            "src::app::agent_process"
+            "src::infra::task_store",
+            "src::app::process_builder",
+            "src::infra::context_store",
+            "src::app::commands::reload",
+            "src::app::mcp_service"
           ]
         },
         {
           "component": "workitem",
           "impact_radius": 60,
           "sample_dependents": [
-            "src::app::commands::dashboard",
-            "src::app::commands::schedule",
-            "src::app::message",
-            "src::infra::dto::bus",
-            "src::app::agent_process"
+            "src::infra::task_store",
+            "src::app::process_builder",
+            "src::infra::context_store",
+            "src::app::commands::reload",
+            "src::app::mcp_service"
           ]
         }
       ],
