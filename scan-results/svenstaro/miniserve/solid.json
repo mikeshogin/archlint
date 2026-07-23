@@ -24,61 +24,61 @@
           "package": "src::main",
           "domains_count": 17,
           "domains": [
-            "consts",
-            "src::args",
-            "src::file_op",
+            "file_op",
             "archive",
+            "src::errors",
             "errors",
             "src::config",
-            "file_utils",
-            "src::errors",
-            "args",
-            "listing"
+            "pipe",
+            "src::webdav_fs",
+            "src::args",
+            "listing",
+            "consts"
           ]
         },
         {
           "package": "src::args",
           "domains_count": 7,
           "domains": [
-            "src::auth",
             "tests",
             "AuthParseError",
             "RequiredAuthPassword",
+            "src::auth",
             "src::listing",
-            "auth",
-            "src::renderer"
+            "src::renderer",
+            "auth"
           ]
         },
         {
           "package": "src::listing",
           "domains_count": 6,
           "domains": [
-            "src::auth",
-            "src::percent_encode_sets",
             "src::errors",
+            "src::percent_encode_sets",
+            "percent_encode_sets",
             "src::archive",
-            "src::renderer",
-            "percent_encode_sets"
-          ]
-        },
-        {
-          "package": "src::renderer",
-          "domains_count": 4,
-          "domains": [
             "src::auth",
-            "src::listing",
-            "src::consts",
-            "tests"
+            "src::renderer"
           ]
         },
         {
           "package": "tests::navigation",
           "domains_count": 4,
           "domains": [
-            "utils",
             "tests::utils",
             "fixtures",
-            "tests::fixtures"
+            "tests::fixtures",
+            "utils"
+          ]
+        },
+        {
+          "package": "src::renderer",
+          "domains_count": 4,
+          "domains": [
+            "src::consts",
+            "src::listing",
+            "tests",
+            "src::auth"
           ]
         }
       ],

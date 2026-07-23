@@ -20,8 +20,8 @@
       "status": "FAILED",
       "cycles": [
         [
-          "src::renderer",
-          "src::listing"
+          "src::listing",
+          "src::renderer"
         ]
       ],
       "cycles_count": 1
@@ -70,25 +70,13 @@
       "status": "PASSED",
       "most_unstable": [
         {
-          "node": "src::main",
-          "instability": 1.0,
-          "ca": 0,
-          "ce": 17
-        },
-        {
           "node": "tests::archive",
           "instability": 1.0,
           "ca": 0,
           "ce": 2
         },
         {
-          "node": "tests::paste",
-          "instability": 1.0,
-          "ca": 0,
-          "ce": 2
-        },
-        {
-          "node": "tests::auth",
+          "node": "tests::auth_file",
           "instability": 1.0,
           "ca": 0,
           "ce": 2
@@ -98,35 +86,47 @@
           "instability": 1.0,
           "ca": 0,
           "ce": 2
+        },
+        {
+          "node": "tests::upload_files",
+          "instability": 1.0,
+          "ca": 0,
+          "ce": 2
+        },
+        {
+          "node": "tests::bind",
+          "instability": 1.0,
+          "ca": 0,
+          "ce": 2
         }
       ],
       "most_stable": [
         {
-          "node": "src::percent_encode_sets",
+          "node": "file_utils",
           "instability": 0.0,
           "ca": 1,
           "ce": 0
         },
         {
-          "node": "percent_encode_sets",
+          "node": "listing",
           "instability": 0.0,
           "ca": 1,
           "ce": 0
         },
         {
-          "node": "fixtures",
-          "instability": 0.0,
-          "ca": 18,
-          "ce": 0
-        },
-        {
-          "node": "utils",
+          "node": "pipe",
           "instability": 0.0,
           "ca": 1,
           "ce": 0
         },
         {
-          "node": "fake_tty",
+          "node": "renderer",
+          "instability": 0.0,
+          "ca": 1,
+          "ce": 0
+        },
+        {
+          "node": "webdav_fs",
           "instability": 0.0,
           "ca": 1,
           "ce": 0
@@ -224,8 +224,8 @@
       "total_sccs": 52,
       "problematic_sccs": [
         [
-          "src::renderer",
-          "src::listing"
+          "src::listing",
+          "src::renderer"
         ]
       ],
       "problematic_count": 1

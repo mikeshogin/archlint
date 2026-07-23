@@ -44,7 +44,13 @@
       "status": "PASSED",
       "most_unstable": [
         {
-          "node": "pkg::feature::feature",
+          "node": "cmd::costlint::main",
+          "instability": 1.0,
+          "ca": 0,
+          "ce": 10
+        },
+        {
+          "node": "pkg::daily::daily",
           "instability": 1.0,
           "ca": 0,
           "ce": 1
@@ -56,13 +62,7 @@
           "ce": 1
         },
         {
-          "node": "pkg::daily::daily",
-          "instability": 1.0,
-          "ca": 0,
-          "ce": 1
-        },
-        {
-          "node": "pkg::budget::budget",
+          "node": "pkg::ab::ab",
           "instability": 1.0,
           "ca": 0,
           "ce": 1
@@ -76,18 +76,6 @@
       ],
       "most_stable": [
         {
-          "node": "pkg/cache",
-          "instability": 0.0,
-          "ca": 1,
-          "ce": 0
-        },
-        {
-          "node": "pkg/daily",
-          "instability": 0.0,
-          "ca": 1,
-          "ce": 0
-        },
-        {
           "node": "pkg/feature",
           "instability": 0.0,
           "ca": 1,
@@ -100,9 +88,21 @@
           "ce": 0
         },
         {
+          "node": "pkg/pricing",
+          "instability": 0.0,
+          "ca": 6,
+          "ce": 0
+        },
+        {
           "node": "pkg/reporter",
           "instability": 0.0,
           "ca": 1,
+          "ce": 0
+        },
+        {
+          "node": "pkg/telemetry",
+          "instability": 0.0,
+          "ca": 2,
           "ce": 0
         }
       ],
@@ -174,13 +174,13 @@
       "description": "Компоненты без связей (возможно мертвый код)",
       "status": "WARNING",
       "orphans": [
+        "pkg::telemetry::telemetry",
         "pkg::pricing::subscription",
         "pkg::pricing::pricing",
-        "pkg::counter::counter",
+        "pkg::cache::cache",
         "pkg::counter::tiktoken",
-        "pkg::perf::perf",
-        "pkg::telemetry::telemetry",
-        "pkg::cache::cache"
+        "pkg::counter::counter",
+        "pkg::perf::perf"
       ],
       "orphans_count": 7
     },
