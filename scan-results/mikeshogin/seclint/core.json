@@ -44,22 +44,16 @@
       "status": "PASSED",
       "most_unstable": [
         {
-          "node": "cmd::seclint::main",
-          "instability": 1.0,
-          "ca": 0,
-          "ce": 5
-        },
-        {
           "node": "pkg::classifier::classifier",
           "instability": 1.0,
           "ca": 0,
           "ce": 3
         },
         {
-          "node": "pkg::classifier::classifier_test",
-          "instability": 0.5,
+          "node": "cmd::seclint::main",
+          "instability": 1.0,
           "ca": 0,
-          "ce": 0
+          "ce": 5
         },
         {
           "node": "pkg::threat::threat",
@@ -69,6 +63,12 @@
         },
         {
           "node": "pkg::threat::threat_test",
+          "instability": 0.5,
+          "ca": 0,
+          "ce": 0
+        },
+        {
+          "node": "pkg::config::config_test",
           "instability": 0.5,
           "ca": 0,
           "ce": 0
@@ -82,27 +82,27 @@
           "ce": 0
         },
         {
-          "node": "pkg/classifier",
-          "instability": 0.0,
-          "ca": 1,
-          "ce": 0
-        },
-        {
           "node": "pkg/config",
           "instability": 0.0,
           "ca": 2,
           "ce": 0
         },
         {
-          "node": "pkg/report",
+          "node": "pkg/threat",
+          "instability": 0.0,
+          "ca": 2,
+          "ce": 0
+        },
+        {
+          "node": "pkg/classifier",
           "instability": 0.0,
           "ca": 1,
           "ce": 0
         },
         {
-          "node": "pkg/threat",
+          "node": "pkg/report",
           "instability": 0.0,
-          "ca": 2,
+          "ca": 1,
           "ce": 0
         }
       ],
@@ -174,12 +174,12 @@
       "description": "Компоненты без связей (возможно мертвый код)",
       "status": "WARNING",
       "orphans": [
-        "pkg::classifier::classifier_test",
         "pkg::threat::threat",
         "pkg::threat::threat_test",
-        "pkg::audit::audit",
         "pkg::config::config_test",
         "pkg::config::config",
+        "pkg::classifier::classifier_test",
+        "pkg::audit::audit",
         "pkg::report::report_test",
         "pkg::report::report"
       ],
@@ -200,8 +200,8 @@
       "depth": 1,
       "max_depth": 10,
       "longest_path": [
-        "cmd::seclint::main",
-        "pkg/classifier"
+        "pkg::classifier::classifier",
+        "pkg/audit"
       ]
     },
     {

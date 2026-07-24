@@ -44,10 +44,10 @@
       "status": "PASSED",
       "most_unstable": [
         {
-          "node": "cmd::promptlint::main",
+          "node": "pkg::score::score",
           "instability": 1.0,
           "ca": 0,
-          "ce": 9
+          "ce": 1
         },
         {
           "node": "pkg::router::router",
@@ -62,19 +62,37 @@
           "ce": 2
         },
         {
-          "node": "pkg::telemetry::telemetry",
+          "node": "pkg::middleware::middleware",
           "instability": 1.0,
           "ca": 0,
           "ce": 1
         },
         {
-          "node": "pkg::score::score",
+          "node": "pkg::server::server",
           "instability": 1.0,
           "ca": 0,
-          "ce": 1
+          "ce": 3
         }
       ],
       "most_stable": [
+        {
+          "node": "pkg/abtest",
+          "instability": 0.0,
+          "ca": 1,
+          "ce": 0
+        },
+        {
+          "node": "pkg/perf",
+          "instability": 0.0,
+          "ca": 1,
+          "ce": 0
+        },
+        {
+          "node": "pkg/server",
+          "instability": 0.0,
+          "ca": 1,
+          "ce": 0
+        },
         {
           "node": "pkg/template",
           "instability": 0.0,
@@ -83,24 +101,6 @@
         },
         {
           "node": "pkg/trend",
-          "instability": 0.0,
-          "ca": 1,
-          "ce": 0
-        },
-        {
-          "node": "pkg/validator",
-          "instability": 0.0,
-          "ca": 3,
-          "ce": 0
-        },
-        {
-          "node": "pkg/metrics",
-          "instability": 0.0,
-          "ca": 3,
-          "ce": 0
-        },
-        {
-          "node": "pkg/score",
           "instability": 0.0,
           "ca": 1,
           "ce": 0
@@ -174,13 +174,13 @@
       "description": "Компоненты без связей (возможно мертвый код)",
       "status": "WARNING",
       "orphans": [
-        "pkg::validator::validator",
-        "pkg::template::template",
         "pkg::template::template_test",
+        "pkg::template::template",
+        "pkg::validator::validator",
         "pkg::trend::trend_test",
         "pkg::trend::trend",
-        "pkg::analyzer::analyzer_test",
         "pkg::config::config",
+        "pkg::analyzer::analyzer_test",
         "pkg::metrics::nlp",
         "pkg::metrics::domain",
         "pkg::metrics::basic"
@@ -202,8 +202,8 @@
       "depth": 1,
       "max_depth": 10,
       "longest_path": [
-        "cmd::promptlint::main",
-        "pkg/abtest"
+        "pkg::score::score",
+        "pkg/metrics"
       ]
     },
     {

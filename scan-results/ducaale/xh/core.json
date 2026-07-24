@@ -70,63 +70,63 @@
       "status": "ERROR",
       "most_unstable": [
         {
-          "node": "tests::cases",
+          "node": "src::generation",
           "instability": 1.0,
           "ca": 0,
-          "ce": 6
+          "ce": 2
         },
         {
-          "node": "tests::cases::logging",
+          "node": "src::to_curl",
+          "instability": 1.0,
+          "ca": 0,
+          "ce": 4
+        },
+        {
+          "node": "src::message_signature",
           "instability": 1.0,
           "ca": 0,
           "ce": 1
         },
         {
-          "node": "tests::cases::unix_socket",
+          "node": "src::main",
           "instability": 1.0,
           "ca": 0,
-          "ce": 1
+          "ce": 30
         },
         {
-          "node": "tests::cases::xml",
+          "node": "src::formatting::palette",
           "instability": 1.0,
           "ca": 0,
-          "ce": 1
-        },
-        {
-          "node": "tests::cases::download",
-          "instability": 1.0,
-          "ca": 0,
-          "ce": 1
+          "ce": 2
         }
       ],
       "most_stable": [
         {
-          "node": "request_items",
+          "node": "unix_socket",
           "instability": 0.0,
           "ca": 1,
           "ce": 0
         },
         {
-          "node": "session",
+          "node": "xml",
           "instability": 0.0,
           "ca": 1,
           "ce": 0
         },
         {
-          "node": "to_curl",
+          "node": "cases",
           "instability": 0.0,
           "ca": 1,
           "ce": 0
         },
         {
-          "node": "utils",
+          "node": "server",
           "instability": 0.0,
           "ca": 1,
           "ce": 0
         },
         {
-          "node": "network_interface",
+          "node": "prelude",
           "instability": 0.0,
           "ca": 1,
           "ce": 0
@@ -234,10 +234,10 @@
       "description": "Компоненты без связей (возможно мертвый код)",
       "status": "WARNING",
       "orphans": [
-        "tests::cases::auth_message_signature",
-        "tests::server",
+        "build",
         "src::error_reporting",
-        "build"
+        "tests::cases::auth_message_signature",
+        "tests::server"
       ],
       "orphans_count": 4
     },

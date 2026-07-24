@@ -40,16 +40,6 @@
           "threshold": 10
         },
         {
-          "node": "internal::twirptest::service_test",
-          "fan_out": 19,
-          "threshold": 10
-        },
-        {
-          "node": "_tools::src::golang.org::x::tools::go::internal::cgo::cgo",
-          "fan_out": 12,
-          "threshold": 10
-        },
-        {
           "node": "_tools::src::golang.org::x::tools::go::buildutil::util",
           "fan_out": 11,
           "threshold": 10
@@ -60,8 +50,8 @@
           "threshold": 10
         },
         {
-          "node": "_tools::src::github.com::kisielk::errcheck::internal::errcheck::errcheck",
-          "fan_out": 13,
+          "node": "_tools::src::golang.org::x::tools::go::internal::cgo::cgo",
+          "fan_out": 12,
           "threshold": 10
         },
         {
@@ -70,18 +60,28 @@
           "threshold": 10
         },
         {
-          "node": "_tools::src::google.golang.org::protobuf::internal::filedesc::desc",
+          "node": "_tools::src::google.golang.org::protobuf::encoding::prototext::encode",
+          "fan_out": 15,
+          "threshold": 10
+        },
+        {
+          "node": "_tools::src::google.golang.org::protobuf::encoding::prototext::decode",
+          "fan_out": 13,
+          "threshold": 10
+        },
+        {
+          "node": "_tools::src::google.golang.org::protobuf::cmd::protoc-gen-go::internal_gengo::main",
+          "fan_out": 17,
+          "threshold": 10
+        },
+        {
+          "node": "_tools::src::google.golang.org::protobuf::internal::impl::validate",
           "fan_out": 13,
           "threshold": 10
         },
         {
           "node": "_tools::src::google.golang.org::protobuf::internal::impl::legacy_message",
           "fan_out": 11,
-          "threshold": 10
-        },
-        {
-          "node": "_tools::src::google.golang.org::protobuf::internal::impl::validate",
-          "fan_out": 13,
           "threshold": 10
         }
       ],
@@ -94,20 +94,6 @@
       "ca_threshold": 10,
       "ce_threshold": 10,
       "violations": [
-        {
-          "node": "protoc-gen-twirp::generator",
-          "afferent_coupling": 0,
-          "efferent_coupling": 18,
-          "ca_threshold": 10,
-          "ce_threshold": 10
-        },
-        {
-          "node": "internal::twirptest::service_test",
-          "afferent_coupling": 0,
-          "efferent_coupling": 19,
-          "ca_threshold": 10,
-          "ce_threshold": 10
-        },
         {
           "node": "errors",
           "afferent_coupling": 46,
@@ -123,9 +109,9 @@
           "ce_threshold": 10
         },
         {
-          "node": "_tools::src::golang.org::x::tools::go::internal::cgo::cgo",
+          "node": "protoc-gen-twirp::generator",
           "afferent_coupling": 0,
-          "efferent_coupling": 12,
+          "efferent_coupling": 18,
           "ca_threshold": 10,
           "ce_threshold": 10
         },
@@ -144,9 +130,9 @@
           "ce_threshold": 10
         },
         {
-          "node": "_tools::src::github.com::kisielk::errcheck::internal::errcheck::errcheck",
+          "node": "_tools::src::golang.org::x::tools::go::internal::cgo::cgo",
           "afferent_coupling": 0,
-          "efferent_coupling": 13,
+          "efferent_coupling": 12,
           "ca_threshold": 10,
           "ce_threshold": 10
         },
@@ -158,9 +144,23 @@
           "ce_threshold": 10
         },
         {
-          "node": "_tools::src::google.golang.org::protobuf::internal::filedesc::desc",
+          "node": "_tools::src::google.golang.org::protobuf::encoding::prototext::encode",
+          "afferent_coupling": 0,
+          "efferent_coupling": 15,
+          "ca_threshold": 10,
+          "ce_threshold": 10
+        },
+        {
+          "node": "_tools::src::google.golang.org::protobuf::encoding::prototext::decode",
           "afferent_coupling": 0,
           "efferent_coupling": 13,
+          "ca_threshold": 10,
+          "ce_threshold": 10
+        },
+        {
+          "node": "_tools::src::google.golang.org::protobuf::cmd::protoc-gen-go::internal_gengo::main",
+          "afferent_coupling": 0,
+          "efferent_coupling": 17,
           "ca_threshold": 10,
           "ce_threshold": 10
         }
@@ -173,63 +173,63 @@
       "status": "PASSED",
       "most_unstable": [
         {
-          "node": "client_options",
-          "instability": 1.0,
-          "ca": 0,
-          "ce": 3
-        },
-        {
-          "node": "clientcompat::internal::clientcompat::clientcompat.pb",
+          "node": "client_options_test",
           "instability": 1.0,
           "ca": 0,
           "ce": 4
+        },
+        {
+          "node": "vendor_test",
+          "instability": 1.0,
+          "ca": 0,
+          "ce": 4
+        },
+        {
+          "node": "ctxsetters::ctxsetters",
+          "instability": 1.0,
+          "ca": 0,
+          "ce": 4
+        },
+        {
+          "node": "server_options_test",
+          "instability": 1.0,
+          "ca": 0,
+          "ce": 3
         },
         {
           "node": "clientcompat::clientcompat",
           "instability": 1.0,
           "ca": 0,
           "ce": 2
-        },
-        {
-          "node": "clientcompat::run",
-          "instability": 1.0,
-          "ca": 0,
-          "ce": 6
-        },
-        {
-          "node": "clientcompat::gocompat::gocompat",
-          "instability": 1.0,
-          "ca": 0,
-          "ce": 8
         }
       ],
       "most_stable": [
         {
-          "node": "protogen",
-          "instability": 0.0,
-          "ca": 5,
-          "ce": 0
-        },
-        {
-          "node": "version",
-          "instability": 0.0,
-          "ca": 3,
-          "ce": 0
-        },
-        {
-          "node": "internal_gengo",
+          "node": "no_package_name",
           "instability": 0.0,
           "ca": 1,
           "ce": 0
         },
         {
-          "node": "set",
+          "node": "tls",
           "instability": 0.0,
           "ca": 1,
           "ce": 0
         },
         {
-          "node": "filetype",
+          "node": "protojson",
+          "instability": 0.0,
+          "ca": 1,
+          "ce": 0
+        },
+        {
+          "node": "descriptors",
+          "instability": 0.0,
+          "ca": 1,
+          "ce": 0
+        },
+        {
+          "node": "twirptest",
           "instability": 0.0,
           "ca": 1,
           "ce": 0
@@ -366,24 +366,24 @@
       "orphans": [
         "clientcompat::gen",
         "clientcompat::internal::clientcompat::clientcompat.twirp",
-        "internal::contextkeys::keys",
-        "internal::twirptest::importable::gen",
-        "internal::twirptest::importable::importable.twirp",
-        "internal::twirptest::importable::compile_test",
-        "internal::twirptest::gen",
-        "internal::twirptest::no_package_name::gen",
-        "internal::twirptest::no_package_name::no_package_name.twirp",
-        "internal::twirptest::service.twirp",
-        "internal::twirptest::snake_case_names::gen",
-        "internal::twirptest::snake_case_names::compile_test",
-        "internal::twirptest::snake_case_names::snake_case_names.twirp",
-        "internal::twirptest::empty_service::empty_service.twirp",
-        "internal::twirptest::empty_service::gen",
-        "internal::twirptest::empty_service::compile_test",
-        "internal::twirptest::importmapping::gen",
-        "internal::twirptest::importmapping::compile_test",
-        "internal::twirptest::importmapping::x::x.twirp",
-        "internal::twirptest::no_package_name_importer::gen"
+        "example::gen",
+        "example::service.twirp",
+        "_tools::src::golang.org::x::tools::go::buildutil::tags",
+        "_tools::src::golang.org::x::tools::go::ast::astutil::util",
+        "_tools::src::golang.org::x::tools::go::loader::doc",
+        "_tools::src::google.golang.org::protobuf::runtime::protoiface::legacy",
+        "_tools::src::google.golang.org::protobuf::reflect::protoreflect::type",
+        "_tools::src::google.golang.org::protobuf::reflect::protoreflect::value",
+        "_tools::src::google.golang.org::protobuf::reflect::protoreflect::source_gen",
+        "_tools::src::google.golang.org::protobuf::reflect::protoreflect::value_pure",
+        "_tools::src::google.golang.org::protobuf::proto::wrappers",
+        "_tools::src::google.golang.org::protobuf::proto::doc",
+        "_tools::src::google.golang.org::protobuf::encoding::prototext::doc",
+        "_tools::src::google.golang.org::protobuf::internal::set::ints",
+        "_tools::src::google.golang.org::protobuf::internal::errors::is_go112",
+        "_tools::src::google.golang.org::protobuf::internal::errors::is_go113",
+        "_tools::src::google.golang.org::protobuf::internal::impl::merge_gen",
+        "_tools::src::google.golang.org::protobuf::internal::impl::codec_unsafe"
       ],
       "orphans_count": 81
     },
