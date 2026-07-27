@@ -41,7 +41,7 @@
       "status": "PASSED",
       "modularity": 0.578,
       "threshold": 0.3,
-      "communities_count": 30
+      "communities_count": 29
     },
     {
       "name": "abstractness",
@@ -631,110 +631,110 @@
           "component": "tests",
           "impact_radius": 124,
           "sample_dependents": [
-            "src::app::config_reload",
-            "src::infra::paths",
-            "src::app::mcp_service",
-            "src::app::adapters::web::view",
-            "src::app::a2a_server"
+            "src::app::adapters",
+            "src::app::adapters::web::dispatch",
+            "src::main",
+            "src::app::adapters::federation::frame",
+            "src::infra::dto::instance"
           ]
         },
         {
           "component": "task",
           "impact_radius": 95,
           "sample_dependents": [
-            "src::app::config_reload",
-            "src::app::mcp_service",
-            "src::app::adapters::web::view",
-            "src::app::a2a_server",
-            "src::app::commands::a2a"
+            "src::app::adapters",
+            "src::infra::dto::instance",
+            "src::app::agent_registry",
+            "src::app::workflow",
+            "src::app::adapters::web::data_cost"
           ]
         },
         {
           "component": "context",
           "impact_radius": 94,
           "sample_dependents": [
-            "src::app::config_reload",
-            "src::app::mcp_service",
-            "src::app::a2a_server",
-            "src::app::commands::a2a",
-            "src::app::adapters::web::panel"
+            "src::app::adapters",
+            "src::infra::dto::instance",
+            "src::app::agent_registry",
+            "src::app::workflow",
+            "src::app::adapters::web::data_cost"
           ]
         },
         {
           "component": "agent",
           "impact_radius": 93,
           "sample_dependents": [
-            "src::app::config_reload",
-            "src::app::mcp_service",
-            "src::app::a2a_server",
-            "src::app::commands::a2a",
-            "src::app::adapters::web::panel"
+            "src::app::adapters",
+            "src::infra::dto::instance",
+            "src::app::agent_registry",
+            "src::app::workflow",
+            "src::app::adapters::web::data_cost"
           ]
         },
         {
           "component": "message",
           "impact_radius": 92,
           "sample_dependents": [
-            "src::app::config_reload",
-            "src::app::mcp_service",
-            "src::app::a2a_server",
-            "src::app::commands::a2a",
-            "src::app::adapters::web::panel"
+            "src::app::adapters",
+            "src::infra::dto::instance",
+            "src::app::agent_registry",
+            "src::app::workflow",
+            "src::app::adapters::web::data_cost"
           ]
         },
         {
           "component": "statemachine",
           "impact_radius": 92,
           "sample_dependents": [
-            "src::app::config_reload",
-            "src::app::mcp_service",
-            "src::app::a2a_server",
-            "src::app::commands::a2a",
-            "src::app::adapters::web::panel"
+            "src::app::adapters",
+            "src::infra::dto::instance",
+            "src::app::agent_registry",
+            "src::app::workflow",
+            "src::app::adapters::web::data_cost"
           ]
         },
         {
           "component": "bus",
           "impact_radius": 74,
           "sample_dependents": [
-            "src::app::config_reload",
-            "src::app::mcp_service",
-            "src::app::a2a_server",
-            "src::app::commands::a2a",
-            "src::app::adapters::web::panel"
+            "src::app::adapters::federation::frame",
+            "src::app::workflow",
+            "src::app::adapters::web::data_cost",
+            "src::infra::dto::bus",
+            "src::app::commands::usage"
           ]
         },
         {
           "component": "events",
           "impact_radius": 61,
           "sample_dependents": [
-            "src::app::serve",
-            "src::app::mcp",
-            "src::app::config_reload",
-            "src::app::mcp_service",
-            "src::infra::dto::context"
+            "src::app::timeout_sweep",
+            "src::app::adapters::web::routes::cost_feed",
+            "src::app::adapters",
+            "src::app::context",
+            "src::app::config_changeset"
           ]
         },
         {
           "component": "config_types",
           "impact_radius": 60,
           "sample_dependents": [
-            "src::app::serve",
-            "src::app::mcp",
-            "src::app::config_reload",
-            "src::app::mcp_service",
-            "src::infra::dto::context"
+            "src::app::timeout_sweep",
+            "src::app::adapters::web::routes::cost_feed",
+            "src::app::adapters",
+            "src::app::context",
+            "src::app::config_changeset"
           ]
         },
         {
           "component": "workitem",
           "impact_radius": 60,
           "sample_dependents": [
-            "src::app::serve",
-            "src::app::mcp",
-            "src::app::config_reload",
-            "src::app::mcp_service",
-            "src::infra::dto::context"
+            "src::app::timeout_sweep",
+            "src::app::adapters::web::routes::cost_feed",
+            "src::app::adapters",
+            "src::app::context",
+            "src::app::config_changeset"
           ]
         }
       ],
