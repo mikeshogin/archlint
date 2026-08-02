@@ -39,9 +39,9 @@
       "name": "modularity",
       "description": "Модульность графа должна быть >= 0.3",
       "status": "PASSED",
-      "modularity": 0.577,
+      "modularity": 0.578,
       "threshold": 0.3,
-      "communities_count": 29
+      "communities_count": 30
     },
     {
       "name": "abstractness",
@@ -631,110 +631,110 @@
           "component": "tests",
           "impact_radius": 124,
           "sample_dependents": [
-            "src::app::adapters::discord",
-            "src::infra::agent_file",
-            "src::app::adapters::web::view::cards",
-            "src::infra::memory_bus",
-            "src::app::alerts"
+            "src::app::adapters::web::templates",
+            "src::config",
+            "src::app::adapters::web::panel",
+            "src::app::adapters::web::view::detail",
+            "src::app::commands::tui"
           ]
         },
         {
           "component": "task",
           "impact_radius": 95,
           "sample_dependents": [
-            "src::app::adapters::web::routes::dashboard",
-            "src::app::adapters::discord",
-            "src::infra::agent_file",
-            "src::app::adapters::web::view::cards",
-            "src::infra::memory_bus"
+            "src::config",
+            "src::app::adapters::web::panel",
+            "src::app::adapters::web::view::detail",
+            "src::app::commands::tui",
+            "src::app::adapters::web::view::cost"
           ]
         },
         {
           "component": "context",
           "impact_radius": 94,
           "sample_dependents": [
-            "src::app::adapters::web::routes::dashboard",
-            "src::app::adapters::discord",
-            "src::infra::agent_file",
-            "src::app::adapters::web::view::cards",
-            "src::infra::memory_bus"
+            "src::config",
+            "src::app::adapters::web::panel",
+            "src::app::adapters::web::view::detail",
+            "src::app::commands::tui",
+            "src::app::adapters::web::view::cost"
           ]
         },
         {
           "component": "agent",
           "impact_radius": 93,
           "sample_dependents": [
-            "src::app::adapters::web::routes::dashboard",
-            "src::app::adapters::discord",
-            "src::infra::agent_file",
-            "src::app::adapters::web::view::cards",
-            "src::infra::memory_bus"
+            "src::config",
+            "src::app::adapters::web::panel",
+            "src::app::adapters::web::view::detail",
+            "src::app::commands::tui",
+            "src::app::adapters::web::view::cost"
           ]
         },
         {
           "component": "message",
           "impact_radius": 92,
           "sample_dependents": [
-            "src::app::adapters::web::routes::dashboard",
-            "src::app::adapters::discord",
-            "src::infra::agent_file",
-            "src::app::adapters::web::view::cards",
-            "src::infra::memory_bus"
+            "src::config",
+            "src::app::adapters::web::panel",
+            "src::app::adapters::web::view::detail",
+            "src::app::commands::tui",
+            "src::app::adapters::web::view::cost"
           ]
         },
         {
           "component": "statemachine",
           "impact_radius": 92,
           "sample_dependents": [
-            "src::app::adapters::web::routes::dashboard",
-            "src::app::adapters::discord",
-            "src::infra::agent_file",
-            "src::app::adapters::web::view::cards",
-            "src::infra::memory_bus"
+            "src::config",
+            "src::app::adapters::web::panel",
+            "src::app::adapters::web::view::detail",
+            "src::app::commands::tui",
+            "src::app::adapters::web::view::cost"
           ]
         },
         {
           "component": "bus",
           "impact_radius": 74,
           "sample_dependents": [
-            "src::app::adapters::web::routes::dashboard",
-            "src::app::adapters::web::view::cards",
-            "src::infra::memory_bus",
-            "src::app::commands",
-            "src::app::commands::doctor"
+            "src::app::adapters::web::panel",
+            "src::app::adapters::web::view::detail",
+            "src::app::adapters::web::view::cost",
+            "src::app::adapters::web::state",
+            "src::infra::dto"
           ]
         },
         {
           "component": "events",
           "impact_radius": 61,
           "sample_dependents": [
-            "src::app::process_builder",
+            "src::app::config_changeset",
             "src::config",
-            "src::app::agent_registry",
-            "src::app::schedule",
-            "src::app::adapters::discord"
+            "src::app::commands::tui",
+            "src::app::adapters::web::view::cost",
+            "src::app::adapters::web::state"
           ]
         },
         {
           "component": "config_types",
           "impact_radius": 60,
           "sample_dependents": [
-            "src::app::process_builder",
+            "src::app::config_changeset",
             "src::config",
-            "src::app::agent_registry",
-            "src::app::schedule",
-            "src::app::adapters::discord"
+            "src::app::commands::tui",
+            "src::app::adapters::web::view::cost",
+            "src::app::adapters::web::state"
           ]
         },
         {
           "component": "workitem",
           "impact_radius": 60,
           "sample_dependents": [
-            "src::app::process_builder",
+            "src::app::config_changeset",
             "src::config",
-            "src::app::agent_registry",
-            "src::app::schedule",
-            "src::app::adapters::discord"
+            "src::app::commands::tui",
+            "src::app::adapters::web::view::cost",
+            "src::app::adapters::web::state"
           ]
         }
       ],
