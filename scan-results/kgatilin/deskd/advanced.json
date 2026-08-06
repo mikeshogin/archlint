@@ -39,7 +39,7 @@
       "name": "modularity",
       "description": "Модульность графа должна быть >= 0.3",
       "status": "PASSED",
-      "modularity": 0.577,
+      "modularity": 0.578,
       "threshold": 0.3,
       "communities_count": 29
     },
@@ -631,110 +631,110 @@
           "component": "tests",
           "impact_radius": 124,
           "sample_dependents": [
-            "src::app::adapters::web::data_chart",
-            "src::app::adapters::federation::registry",
-            "src::app::timeout_sweep",
-            "src::app::adapters::telegram",
-            "src::app::adapters::web::routes::login"
+            "src::app::adapters::discord",
+            "src::app::metrics",
+            "src::app::commands::schedule",
+            "src::app::a2a",
+            "src::app::commands::tui"
           ]
         },
         {
           "component": "task",
           "impact_radius": 95,
           "sample_dependents": [
-            "src::app::adapters::web::data_chart",
-            "src::app::timeout_sweep",
-            "src::ports::store",
-            "src::app::adapters::web::routes::login",
-            "src::app::adapters::telegram"
+            "src::app::adapters::discord",
+            "src::app::commands::schedule",
+            "src::app::metrics",
+            "src::app::a2a",
+            "src::app::commands::tui"
           ]
         },
         {
           "component": "context",
           "impact_radius": 94,
           "sample_dependents": [
-            "src::app::adapters::web::data_chart",
-            "src::app::timeout_sweep",
-            "src::ports::store",
-            "src::app::adapters::web::routes::login",
-            "src::app::adapters::telegram"
+            "src::app::adapters::discord",
+            "src::app::commands::schedule",
+            "src::app::metrics",
+            "src::app::a2a",
+            "src::app::commands::tui"
           ]
         },
         {
           "component": "agent",
           "impact_radius": 93,
           "sample_dependents": [
-            "src::app::adapters::web::data_chart",
-            "src::app::timeout_sweep",
-            "src::ports::store",
-            "src::app::adapters::web::routes::login",
-            "src::app::adapters::telegram"
+            "src::app::adapters::discord",
+            "src::app::commands::schedule",
+            "src::app::metrics",
+            "src::app::a2a",
+            "src::app::commands::tui"
           ]
         },
         {
           "component": "message",
           "impact_radius": 92,
           "sample_dependents": [
-            "src::app::adapters::web::data_chart",
-            "src::app::timeout_sweep",
-            "src::ports::store",
-            "src::app::adapters::web::routes::login",
-            "src::app::adapters::telegram"
+            "src::app::adapters::discord",
+            "src::app::commands::schedule",
+            "src::app::metrics",
+            "src::app::a2a",
+            "src::app::commands::tui"
           ]
         },
         {
           "component": "statemachine",
           "impact_radius": 92,
           "sample_dependents": [
-            "src::app::adapters::web::data_chart",
-            "src::app::timeout_sweep",
-            "src::ports::store",
-            "src::app::adapters::web::routes::login",
-            "src::app::adapters::telegram"
+            "src::app::adapters::discord",
+            "src::app::commands::schedule",
+            "src::app::metrics",
+            "src::app::a2a",
+            "src::app::commands::tui"
           ]
         },
         {
           "component": "bus",
           "impact_radius": 74,
           "sample_dependents": [
-            "src::app::adapters::web::data_chart",
-            "src::app::timeout_sweep",
-            "src::app::adapters::telegram",
+            "src::app::metrics",
+            "src::app::commands::schedule",
             "src::app::adapters::web::routes::login",
-            "src::app::metrics"
+            "src::app::agent_process",
+            "src::infra::memory_store"
           ]
         },
         {
           "component": "events",
           "impact_radius": 61,
           "sample_dependents": [
-            "src::app::alerts",
-            "src::app::timeout_sweep",
-            "src::ports::store",
-            "src::app::adapters::telegram",
-            "src::app::metrics"
+            "src::app::mcp",
+            "src::app::adapters::web::routes::cost_feed",
+            "src::app::context",
+            "src::app::adapters::web::routes::cost",
+            "src::app::adapters::discord"
           ]
         },
         {
           "component": "config_types",
           "impact_radius": 60,
           "sample_dependents": [
-            "src::app::alerts",
-            "src::app::timeout_sweep",
-            "src::ports::store",
-            "src::app::adapters::telegram",
-            "src::app::metrics"
+            "src::app::mcp",
+            "src::app::adapters::web::routes::cost_feed",
+            "src::app::context",
+            "src::app::adapters::web::routes::cost",
+            "src::app::adapters::discord"
           ]
         },
         {
           "component": "workitem",
           "impact_radius": 60,
           "sample_dependents": [
-            "src::app::alerts",
-            "src::app::timeout_sweep",
-            "src::ports::store",
-            "src::app::adapters::telegram",
-            "src::app::metrics"
+            "src::app::mcp",
+            "src::app::adapters::web::routes::cost_feed",
+            "src::app::context",
+            "src::app::adapters::web::routes::cost",
+            "src::app::adapters::discord"
           ]
         }
       ],
