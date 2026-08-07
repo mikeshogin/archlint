@@ -24,61 +24,61 @@
           "package": "src::main",
           "domains_count": 17,
           "domains": [
-            "pipe",
-            "webdav_fs",
-            "src::config",
-            "src::errors",
-            "src::webdav_fs",
-            "auth",
-            "renderer",
             "archive",
-            "file_op",
-            "args"
+            "listing",
+            "src::args",
+            "file_utils",
+            "src::errors",
+            "src::config",
+            "src::webdav_fs",
+            "errors",
+            "consts",
+            "config"
           ]
         },
         {
           "package": "src::args",
           "domains_count": 7,
           "domains": [
-            "src::listing",
-            "auth",
             "RequiredAuthPassword",
             "src::auth",
             "AuthParseError",
+            "src::renderer",
+            "src::listing",
             "tests",
-            "src::renderer"
+            "auth"
           ]
         },
         {
           "package": "src::listing",
           "domains_count": 6,
           "domains": [
-            "src::archive",
-            "src::errors",
-            "percent_encode_sets",
             "src::auth",
+            "src::archive",
+            "src::renderer",
             "src::percent_encode_sets",
-            "src::renderer"
-          ]
-        },
-        {
-          "package": "tests::navigation",
-          "domains_count": 4,
-          "domains": [
-            "tests::fixtures",
-            "fixtures",
-            "tests::utils",
-            "utils"
+            "src::errors",
+            "percent_encode_sets"
           ]
         },
         {
           "package": "src::renderer",
           "domains_count": 4,
           "domains": [
-            "src::auth",
             "tests",
-            "src::consts",
-            "src::listing"
+            "src::listing",
+            "src::auth",
+            "src::consts"
+          ]
+        },
+        {
+          "package": "tests::navigation",
+          "domains_count": 4,
+          "domains": [
+            "fixtures",
+            "tests::fixtures",
+            "tests::utils",
+            "utils"
           ]
         }
       ],

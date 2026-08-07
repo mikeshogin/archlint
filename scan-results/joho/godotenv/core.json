@@ -50,25 +50,25 @@
           "ce": 0
         },
         {
-          "node": "cmd::godotenv::cmd",
-          "instability": 0.5,
-          "ca": 0,
-          "ce": 0
-        },
-        {
           "node": "autoload::autoload",
           "instability": 0.5,
           "ca": 0,
           "ce": 0
         },
         {
-          "node": "godotenv_test",
+          "node": "cmd::godotenv::cmd",
           "instability": 0.5,
           "ca": 0,
           "ce": 0
         },
         {
           "node": "godotenv",
+          "instability": 0.5,
+          "ca": 0,
+          "ce": 0
+        },
+        {
+          "node": "godotenv_test",
           "instability": 0.5,
           "ca": 0,
           "ce": 0
@@ -144,10 +144,10 @@
       "status": "WARNING",
       "orphans": [
         "parser",
-        "cmd::godotenv::cmd",
         "autoload::autoload",
-        "godotenv_test",
-        "godotenv"
+        "cmd::godotenv::cmd",
+        "godotenv",
+        "godotenv_test"
       ],
       "orphans_count": 5
     },

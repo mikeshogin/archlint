@@ -70,31 +70,31 @@
       "status": "PASSED",
       "most_unstable": [
         {
+          "node": "src::main",
+          "instability": 1.0,
+          "ca": 0,
+          "ce": 17
+        },
+        {
           "node": "tests::archive",
           "instability": 1.0,
           "ca": 0,
           "ce": 2
         },
         {
-          "node": "tests::auth_file",
+          "node": "tests::raw",
           "instability": 1.0,
           "ca": 0,
           "ce": 2
         },
         {
-          "node": "tests::create_directories",
+          "node": "tests::readme",
           "instability": 1.0,
           "ca": 0,
           "ce": 2
         },
         {
-          "node": "tests::upload_files",
-          "instability": 1.0,
-          "ca": 0,
-          "ce": 2
-        },
-        {
-          "node": "tests::bind",
+          "node": "tests::header",
           "instability": 1.0,
           "ca": 0,
           "ce": 2
@@ -102,31 +102,31 @@
       ],
       "most_stable": [
         {
-          "node": "file_utils",
+          "node": "src::percent_encode_sets",
           "instability": 0.0,
           "ca": 1,
           "ce": 0
         },
         {
-          "node": "listing",
+          "node": "percent_encode_sets",
           "instability": 0.0,
           "ca": 1,
           "ce": 0
         },
         {
-          "node": "pipe",
+          "node": "fixtures",
+          "instability": 0.0,
+          "ca": 18,
+          "ce": 0
+        },
+        {
+          "node": "utils",
           "instability": 0.0,
           "ca": 1,
           "ce": 0
         },
         {
-          "node": "renderer",
-          "instability": 0.0,
-          "ca": 1,
-          "ce": 0
-        },
-        {
-          "node": "webdav_fs",
+          "node": "fake_tty",
           "instability": 0.0,
           "ca": 1,
           "ce": 0

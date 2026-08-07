@@ -44,45 +44,7 @@
       "status": "PASSED",
       "most_unstable": [
         {
-          "node": "styles",
-          "instability": 0.5,
-          "ca": 0,
-          "ce": 0
-        },
-        {
           "node": "json",
-          "instability": 0.5,
-          "ca": 0,
-          "ce": 0
-        },
-        {
-          "node": "text_test",
-          "instability": 0.5,
-          "ca": 0,
-          "ce": 0
-        },
-        {
-          "node": "json_test",
-          "instability": 0.5,
-          "ca": 0,
-          "ce": 0
-        },
-        {
-          "node": "text",
-          "instability": 0.5,
-          "ca": 0,
-          "ce": 0
-        }
-      ],
-      "most_stable": [
-        {
-          "node": "pkg_test",
-          "instability": 0.5,
-          "ca": 0,
-          "ce": 0
-        },
-        {
-          "node": "options_test",
           "instability": 0.5,
           "ca": 0,
           "ce": 0
@@ -94,13 +56,51 @@
           "ce": 0
         },
         {
+          "node": "context",
+          "instability": 0.5,
+          "ca": 0,
+          "ce": 0
+        },
+        {
+          "node": "options_test",
+          "instability": 0.5,
+          "ca": 0,
+          "ce": 0
+        },
+        {
+          "node": "context_test",
+          "instability": 0.5,
+          "ca": 0,
+          "ce": 0
+        }
+      ],
+      "most_stable": [
+        {
+          "node": "level",
+          "instability": 0.5,
+          "ca": 0,
+          "ce": 0
+        },
+        {
+          "node": "json_test",
+          "instability": 0.5,
+          "ca": 0,
+          "ce": 0
+        },
+        {
+          "node": "styles",
+          "instability": 0.5,
+          "ca": 0,
+          "ce": 0
+        },
+        {
           "node": "options",
           "instability": 0.5,
           "ca": 0,
           "ce": 0
         },
         {
-          "node": "doc",
+          "node": "pkg_test",
           "instability": 0.5,
           "ca": 0,
           "ce": 0
@@ -174,26 +174,26 @@
       "description": "Компоненты без связей (возможно мертвый код)",
       "status": "WARNING",
       "orphans": [
-        "styles",
         "json",
-        "text_test",
-        "json_test",
-        "text",
-        "logger_121_test",
-        "examples::error::error",
-        "examples::cookie::cookie",
-        "examples::oven::oven",
-        "examples::batch2::batch2",
-        "examples::format::format",
-        "examples::styles::styles",
+        "pkg",
+        "context",
+        "options_test",
+        "context_test",
+        "doc",
+        "logfmt",
+        "logger_no121",
         "examples::slog::main",
-        "examples::app::app",
+        "examples::error::error",
         "examples::temperature::temperature",
-        "examples::options::options",
-        "examples::log::log",
         "examples::new::new",
-        "examples::chocolate-chips::chocolate-chips",
-        "stdlog_test"
+        "examples::styles::styles",
+        "examples::cookie::cookie",
+        "examples::batch2::batch2",
+        "examples::app::app",
+        "examples::log::log",
+        "examples::format::format",
+        "examples::options::options",
+        "examples::chocolate-chips::chocolate-chips"
       ],
       "orphans_count": 37
     },

@@ -50,19 +50,13 @@
           "ce": 9
         },
         {
-          "node": "pkg::router::router",
-          "instability": 1.0,
-          "ca": 0,
-          "ce": 2
-        },
-        {
           "node": "pkg::abtest::abtest",
           "instability": 1.0,
           "ca": 0,
           "ce": 2
         },
         {
-          "node": "pkg::telemetry::telemetry",
+          "node": "pkg::middleware::middleware",
           "instability": 1.0,
           "ca": 0,
           "ce": 1
@@ -72,6 +66,12 @@
           "instability": 1.0,
           "ca": 0,
           "ce": 1
+        },
+        {
+          "node": "pkg::server::server",
+          "instability": 1.0,
+          "ca": 0,
+          "ce": 3
         }
       ],
       "most_stable": [
@@ -174,16 +174,16 @@
       "description": "Компоненты без связей (возможно мертвый код)",
       "status": "WARNING",
       "orphans": [
-        "pkg::validator::validator",
         "pkg::template::template",
         "pkg::template::template_test",
-        "pkg::trend::trend_test",
+        "pkg::metrics::domain",
+        "pkg::metrics::basic",
+        "pkg::metrics::nlp",
         "pkg::trend::trend",
+        "pkg::trend::trend_test",
         "pkg::analyzer::analyzer_test",
         "pkg::config::config",
-        "pkg::metrics::nlp",
-        "pkg::metrics::domain",
-        "pkg::metrics::basic"
+        "pkg::validator::validator"
       ],
       "orphans_count": 10
     },

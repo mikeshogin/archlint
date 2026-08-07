@@ -44,25 +44,25 @@
       "status": "PASSED",
       "most_unstable": [
         {
-          "node": "color",
-          "instability": 0.5,
-          "ca": 0,
-          "ce": 0
-        },
-        {
           "node": "color_test",
           "instability": 0.5,
           "ca": 0,
           "ce": 0
         },
         {
-          "node": "color_windows",
+          "node": "doc",
           "instability": 0.5,
           "ca": 0,
           "ce": 0
         },
         {
-          "node": "doc",
+          "node": "color",
+          "instability": 0.5,
+          "ca": 0,
+          "ce": 0
+        },
+        {
+          "node": "color_windows",
           "instability": 0.5,
           "ca": 0,
           "ce": 0
@@ -137,10 +137,10 @@
       "description": "Компоненты без связей (возможно мертвый код)",
       "status": "WARNING",
       "orphans": [
-        "color",
         "color_test",
-        "color_windows",
-        "doc"
+        "doc",
+        "color",
+        "color_windows"
       ],
       "orphans_count": 4
     },
