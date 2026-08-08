@@ -33,6 +33,11 @@
           "threshold": 10
         },
         {
+          "node": "src::app::commands",
+          "fan_out": 19,
+          "threshold": 10
+        },
+        {
           "node": "src::app::adapters::web",
           "fan_out": 18,
           "threshold": 10
@@ -40,11 +45,6 @@
         {
           "node": "src::app::adapters::web::routes",
           "fan_out": 16,
-          "threshold": 10
-        },
-        {
-          "node": "src::app::commands",
-          "fan_out": 19,
           "threshold": 10
         },
         {
@@ -70,13 +70,6 @@
           "ce_threshold": 10
         },
         {
-          "node": "src::config",
-          "afferent_coupling": 34,
-          "efferent_coupling": 3,
-          "ca_threshold": 10,
-          "ce_threshold": 10
-        },
-        {
           "node": "src::ports",
           "afferent_coupling": 21,
           "efferent_coupling": 4,
@@ -84,9 +77,23 @@
           "ce_threshold": 10
         },
         {
+          "node": "src::config",
+          "afferent_coupling": 34,
+          "efferent_coupling": 3,
+          "ca_threshold": 10,
+          "ce_threshold": 10
+        },
+        {
           "node": "src::app",
           "afferent_coupling": 57,
           "efferent_coupling": 47,
+          "ca_threshold": 10,
+          "ce_threshold": 10
+        },
+        {
+          "node": "src::app::commands",
+          "afferent_coupling": 0,
+          "efferent_coupling": 19,
           "ca_threshold": 10,
           "ce_threshold": 10
         },
@@ -101,13 +108,6 @@
           "node": "src::app::adapters::web::routes",
           "afferent_coupling": 0,
           "efferent_coupling": 16,
-          "ca_threshold": 10,
-          "ce_threshold": 10
-        },
-        {
-          "node": "src::app::commands",
-          "afferent_coupling": 0,
-          "efferent_coupling": 19,
           "ca_threshold": 10,
           "ce_threshold": 10
         },
@@ -134,31 +134,31 @@
       "status": "ERROR",
       "most_unstable": [
         {
-          "node": "src::domain::workitem",
+          "node": "tests::add_persistent_agent_lifecycle",
           "instability": 1.0,
           "ca": 0,
           "ce": 1
         },
         {
-          "node": "src::domain::events",
+          "node": "tests::web_dashboard",
           "instability": 1.0,
           "ca": 0,
           "ce": 1
         },
         {
-          "node": "src::domain::statemachine",
+          "node": "tests::web_agent_detail",
           "instability": 1.0,
           "ca": 0,
           "ce": 1
         },
         {
-          "node": "src::domain::task",
+          "node": "tests::bus_integration",
           "instability": 1.0,
           "ca": 0,
           "ce": 1
         },
         {
-          "node": "src::domain::agent",
+          "node": "tests::systemd_unit_persistent",
           "instability": 1.0,
           "ca": 0,
           "ce": 1
@@ -334,19 +334,19 @@
       "description": "Компоненты без связей (возможно мертвый код)",
       "status": "WARNING",
       "orphans": [
-        "build",
-        "src::domain::message",
-        "src::ports::executor",
-        "src::app::adapters::web::routes::health",
-        "src::app::adapters::web::middleware::headers",
-        "src::app::commands::restart",
-        "src::app::cli",
-        "tests::schedule_to_worker",
-        "tests::mcp_channel_subprocess",
         "tests::crash_recovery",
         "tests::agent_state_mcp",
+        "tests::schedule_to_worker",
+        "tests::mcp_channel_subprocess",
         "tests::diag_publish",
-        "tests::agent_lifecycle"
+        "tests::agent_lifecycle",
+        "src::domain::message",
+        "src::ports::executor",
+        "src::app::commands::restart",
+        "src::app::adapters::web::middleware::headers",
+        "src::app::adapters::web::routes::health",
+        "src::app::cli",
+        "build"
       ],
       "orphans_count": 13
     },
@@ -365,7 +365,7 @@
       "depth": 3,
       "max_depth": 10,
       "longest_path": [
-        "src::app::mcp_tools",
+        "src::app::mcp_service",
         "src::config",
         "src::domain",
         "agent"

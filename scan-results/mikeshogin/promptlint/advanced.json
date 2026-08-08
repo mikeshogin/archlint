@@ -65,6 +65,13 @@
           "issue": "Зона боли: конкретный и стабильный"
         },
         {
+          "package": "pkg::validator::validator",
+          "abstractness": 0.0,
+          "instability": 0.5,
+          "distance": 0.5,
+          "nodes_count": 1
+        },
+        {
           "package": "pkg::template::template",
           "abstractness": 0.0,
           "instability": 0.5,
@@ -79,21 +86,7 @@
           "nodes_count": 1
         },
         {
-          "package": "pkg::metrics::domain",
-          "abstractness": 0.0,
-          "instability": 0.5,
-          "distance": 0.5,
-          "nodes_count": 1
-        },
-        {
-          "package": "pkg::metrics::basic",
-          "abstractness": 0.0,
-          "instability": 0.5,
-          "distance": 0.5,
-          "nodes_count": 1
-        },
-        {
-          "package": "pkg::metrics::nlp",
+          "package": "pkg::trend::trend_test",
           "abstractness": 0.0,
           "instability": 0.5,
           "distance": 0.5,
@@ -101,13 +94,6 @@
         },
         {
           "package": "pkg::trend::trend",
-          "abstractness": 0.0,
-          "instability": 0.5,
-          "distance": 0.5,
-          "nodes_count": 1
-        },
-        {
-          "package": "pkg::trend::trend_test",
           "abstractness": 0.0,
           "instability": 0.5,
           "distance": 0.5,
@@ -122,6 +108,20 @@
         },
         {
           "package": "pkg::config::config",
+          "abstractness": 0.0,
+          "instability": 0.5,
+          "distance": 0.5,
+          "nodes_count": 1
+        },
+        {
+          "package": "pkg::metrics::nlp",
+          "abstractness": 0.0,
+          "instability": 0.5,
+          "distance": 0.5,
+          "nodes_count": 1
+        },
+        {
+          "package": "pkg::metrics::domain",
           "abstractness": 0.0,
           "instability": 0.5,
           "distance": 0.5,
@@ -153,6 +153,10 @@
           "coefficient": 0.0
         },
         {
+          "node": "pkg::router::router",
+          "coefficient": 0.0
+        },
+        {
           "node": "pkg::abtest::abtest",
           "coefficient": 0.0
         },
@@ -166,10 +170,6 @@
         },
         {
           "node": "pkg::perf::perf",
-          "coefficient": 0.0
-        },
-        {
-          "node": "pkg::router::router",
           "coefficient": 0.0
         },
         {
@@ -205,9 +205,9 @@
       "description": "Критические узлы (удаление разбивает граф)",
       "status": "WARNING",
       "articulation_points": [
-        "pkg/analyzer",
         "pkg/metrics",
         "pkg::analyzer::analyzer",
+        "pkg/analyzer",
         "cmd::promptlint::main"
       ],
       "count": 4,
@@ -239,7 +239,7 @@
           "to": "pkg/trend"
         },
         {
-          "from": "pkg::middleware::middleware",
+          "from": "pkg::telemetry::telemetry",
           "to": "pkg/analyzer"
         },
         {
@@ -247,7 +247,7 @@
           "to": "pkg/metrics"
         },
         {
-          "from": "pkg::telemetry::telemetry",
+          "from": "pkg::middleware::middleware",
           "to": "pkg/analyzer"
         },
         {

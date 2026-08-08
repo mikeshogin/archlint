@@ -79,14 +79,7 @@
           "issue": "Зона боли: конкретный и стабильный"
         },
         {
-          "package": "pkg::counter::counter",
-          "abstractness": 0.0,
-          "instability": 0.5,
-          "distance": 0.5,
-          "nodes_count": 1
-        },
-        {
-          "package": "pkg::counter::tiktoken",
+          "package": "pkg::telemetry::telemetry",
           "abstractness": 0.0,
           "instability": 0.5,
           "distance": 0.5,
@@ -107,7 +100,21 @@
           "nodes_count": 1
         },
         {
-          "package": "pkg::telemetry::telemetry",
+          "package": "pkg::cache::cache",
+          "abstractness": 0.0,
+          "instability": 0.5,
+          "distance": 0.5,
+          "nodes_count": 1
+        },
+        {
+          "package": "pkg::counter::tiktoken",
+          "abstractness": 0.0,
+          "instability": 0.5,
+          "distance": 0.5,
+          "nodes_count": 1
+        },
+        {
+          "package": "pkg::counter::counter",
           "abstractness": 0.0,
           "instability": 0.5,
           "distance": 0.5,
@@ -115,13 +122,6 @@
         },
         {
           "package": "pkg::perf::perf",
-          "abstractness": 0.0,
-          "instability": 0.5,
-          "distance": 0.5,
-          "nodes_count": 1
-        },
-        {
-          "package": "pkg::cache::cache",
           "abstractness": 0.0,
           "instability": 0.5,
           "distance": 0.5,
@@ -246,6 +246,10 @@
           "to": "pkg/telemetry"
         },
         {
+          "from": "pkg::daily::daily",
+          "to": "pkg/telemetry"
+        },
+        {
           "from": "pkg::reporter::reporter",
           "to": "pkg/pricing"
         },
@@ -256,10 +260,6 @@
         {
           "from": "pkg::feature::feature",
           "to": "pkg/pricing"
-        },
-        {
-          "from": "pkg::daily::daily",
-          "to": "pkg/telemetry"
         },
         {
           "from": "pkg::budget::budget",

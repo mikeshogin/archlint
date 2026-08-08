@@ -24,61 +24,61 @@
           "package": "src::main",
           "domains_count": 17,
           "domains": [
-            "archive",
-            "listing",
-            "src::args",
-            "file_utils",
-            "src::errors",
-            "src::config",
-            "src::webdav_fs",
-            "errors",
             "consts",
-            "config"
+            "webdav_fs",
+            "errors",
+            "pipe",
+            "file_utils",
+            "auth",
+            "archive",
+            "src::file_op",
+            "file_op",
+            "src::errors"
           ]
         },
         {
           "package": "src::args",
           "domains_count": 7,
           "domains": [
-            "RequiredAuthPassword",
-            "src::auth",
-            "AuthParseError",
             "src::renderer",
+            "AuthParseError",
+            "auth",
+            "RequiredAuthPassword",
             "src::listing",
             "tests",
-            "auth"
+            "src::auth"
           ]
         },
         {
           "package": "src::listing",
           "domains_count": 6,
           "domains": [
-            "src::auth",
-            "src::archive",
             "src::renderer",
-            "src::percent_encode_sets",
             "src::errors",
-            "percent_encode_sets"
-          ]
-        },
-        {
-          "package": "src::renderer",
-          "domains_count": 4,
-          "domains": [
-            "tests",
-            "src::listing",
             "src::auth",
-            "src::consts"
+            "percent_encode_sets",
+            "src::percent_encode_sets",
+            "src::archive"
           ]
         },
         {
           "package": "tests::navigation",
           "domains_count": 4,
           "domains": [
-            "fixtures",
-            "tests::fixtures",
             "tests::utils",
-            "utils"
+            "fixtures",
+            "utils",
+            "tests::fixtures"
+          ]
+        },
+        {
+          "package": "src::renderer",
+          "domains_count": 4,
+          "domains": [
+            "src::listing",
+            "tests",
+            "src::auth",
+            "src::consts"
           ]
         }
       ],

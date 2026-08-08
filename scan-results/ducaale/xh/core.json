@@ -48,16 +48,16 @@
       "ce_threshold": 10,
       "violations": [
         {
-          "node": "src::main",
-          "afferent_coupling": 0,
-          "efferent_coupling": 30,
+          "node": "src::utils",
+          "afferent_coupling": 13,
+          "efferent_coupling": 1,
           "ca_threshold": 10,
           "ce_threshold": 10
         },
         {
-          "node": "src::utils",
-          "afferent_coupling": 13,
-          "efferent_coupling": 1,
+          "node": "src::main",
+          "afferent_coupling": 0,
+          "efferent_coupling": 30,
           "ca_threshold": 10,
           "ce_threshold": 10
         }
@@ -70,63 +70,63 @@
       "status": "ERROR",
       "most_unstable": [
         {
-          "node": "src::generation",
+          "node": "tests::cases",
           "instability": 1.0,
           "ca": 0,
-          "ce": 2
+          "ce": 6
         },
         {
-          "node": "src::redirect",
+          "node": "tests::cases::logging",
           "instability": 1.0,
           "ca": 0,
-          "ce": 4
+          "ce": 1
         },
         {
-          "node": "src::main",
+          "node": "tests::cases::unix_socket",
           "instability": 1.0,
           "ca": 0,
-          "ce": 30
+          "ce": 1
         },
         {
-          "node": "src::formatting::headers",
+          "node": "tests::cases::xml",
           "instability": 1.0,
           "ca": 0,
-          "ce": 2
+          "ce": 1
         },
         {
-          "node": "src::formatting::palette",
+          "node": "tests::cases::download",
           "instability": 1.0,
           "ca": 0,
-          "ce": 2
+          "ce": 1
         }
       ],
       "most_stable": [
         {
-          "node": "unix_socket",
+          "node": "request_items",
           "instability": 0.0,
           "ca": 1,
           "ce": 0
         },
         {
-          "node": "xml",
+          "node": "session",
           "instability": 0.0,
           "ca": 1,
           "ce": 0
         },
         {
-          "node": "cases",
+          "node": "to_curl",
           "instability": 0.0,
           "ca": 1,
           "ce": 0
         },
         {
-          "node": "server",
+          "node": "utils",
           "instability": 0.0,
           "ca": 1,
           "ce": 0
         },
         {
-          "node": "prelude",
+          "node": "network_interface",
           "instability": 0.0,
           "ca": 1,
           "ce": 0
@@ -134,17 +134,17 @@
       ],
       "violations": [
         {
-          "from": "src::cli",
-          "to": "src::request_items",
-          "from_instability": 0.455,
-          "to_instability": 0.625,
-          "issue": "Зависимость направлена к менее стабильному компоненту"
-        },
-        {
           "from": "src::request_items",
           "to": "src::nested_json",
           "from_instability": 0.625,
           "to_instability": 0.8,
+          "issue": "Зависимость направлена к менее стабильному компоненту"
+        },
+        {
+          "from": "src::cli",
+          "to": "src::request_items",
+          "from_instability": 0.455,
+          "to_instability": 0.625,
           "issue": "Зависимость направлена к менее стабильному компоненту"
         }
       ],
@@ -234,10 +234,10 @@
       "description": "Компоненты без связей (возможно мертвый код)",
       "status": "WARNING",
       "orphans": [
-        "build",
-        "src::error_reporting",
+        "tests::cases::auth_message_signature",
         "tests::server",
-        "tests::cases::auth_message_signature"
+        "src::error_reporting",
+        "build"
       ],
       "orphans_count": 4
     },

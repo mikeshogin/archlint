@@ -54,6 +54,13 @@
       "status": "PASSED",
       "packages": [
         {
+          "package": "styles",
+          "abstractness": 0.0,
+          "instability": 0.5,
+          "distance": 0.5,
+          "nodes_count": 1
+        },
+        {
           "package": "json",
           "abstractness": 0.0,
           "instability": 0.5,
@@ -61,56 +68,28 @@
           "nodes_count": 1
         },
         {
-          "package": "pkg",
+          "package": "text_test",
           "abstractness": 0.0,
           "instability": 0.5,
           "distance": 0.5,
           "nodes_count": 1
         },
         {
-          "package": "context",
+          "package": "json_test",
           "abstractness": 0.0,
           "instability": 0.5,
           "distance": 0.5,
           "nodes_count": 1
         },
         {
-          "package": "options_test",
+          "package": "text",
           "abstractness": 0.0,
           "instability": 0.5,
           "distance": 0.5,
           "nodes_count": 1
         },
         {
-          "package": "context_test",
-          "abstractness": 0.0,
-          "instability": 0.5,
-          "distance": 0.5,
-          "nodes_count": 1
-        },
-        {
-          "package": "doc",
-          "abstractness": 0.0,
-          "instability": 0.5,
-          "distance": 0.5,
-          "nodes_count": 1
-        },
-        {
-          "package": "logfmt",
-          "abstractness": 0.0,
-          "instability": 0.5,
-          "distance": 0.5,
-          "nodes_count": 1
-        },
-        {
-          "package": "logger_no121",
-          "abstractness": 0.0,
-          "instability": 0.5,
-          "distance": 0.5,
-          "nodes_count": 1
-        },
-        {
-          "package": "examples::slog::main",
+          "package": "logger_121_test",
           "abstractness": 0.0,
           "instability": 0.5,
           "distance": 0.5,
@@ -118,6 +97,27 @@
         },
         {
           "package": "examples::error::error",
+          "abstractness": 0.0,
+          "instability": 0.5,
+          "distance": 0.5,
+          "nodes_count": 1
+        },
+        {
+          "package": "examples::cookie::cookie",
+          "abstractness": 0.0,
+          "instability": 0.5,
+          "distance": 0.5,
+          "nodes_count": 1
+        },
+        {
+          "package": "examples::oven::oven",
+          "abstractness": 0.0,
+          "instability": 0.5,
+          "distance": 0.5,
+          "nodes_count": 1
+        },
+        {
+          "package": "examples::batch2::batch2",
           "abstractness": 0.0,
           "instability": 0.5,
           "distance": 0.5,
@@ -183,43 +183,43 @@
       "central_nodes": [],
       "peripheral_nodes": [
         {
+          "node": "styles",
+          "closeness": 0.0
+        },
+        {
           "node": "json",
           "closeness": 0.0
         },
         {
-          "node": "pkg",
+          "node": "text_test",
           "closeness": 0.0
         },
         {
-          "node": "context",
+          "node": "json_test",
           "closeness": 0.0
         },
         {
-          "node": "options_test",
+          "node": "text",
           "closeness": 0.0
         },
         {
-          "node": "context_test",
-          "closeness": 0.0
-        },
-        {
-          "node": "doc",
-          "closeness": 0.0
-        },
-        {
-          "node": "logfmt",
-          "closeness": 0.0
-        },
-        {
-          "node": "logger_no121",
-          "closeness": 0.0
-        },
-        {
-          "node": "examples::slog::main",
+          "node": "logger_121_test",
           "closeness": 0.0
         },
         {
           "node": "examples::error::error",
+          "closeness": 0.0
+        },
+        {
+          "node": "examples::cookie::cookie",
+          "closeness": 0.0
+        },
+        {
+          "node": "examples::oven::oven",
+          "closeness": 0.0
+        },
+        {
+          "node": "examples::batch2::batch2",
           "closeness": 0.0
         }
       ],
@@ -234,23 +234,23 @@
       "influential_count": 0,
       "top_5": [
         {
+          "node": "styles",
+          "eigenvector": 0.164
+        },
+        {
           "node": "json",
           "eigenvector": 0.164
         },
         {
-          "node": "pkg",
+          "node": "text_test",
           "eigenvector": 0.164
         },
         {
-          "node": "context",
+          "node": "json_test",
           "eigenvector": 0.164
         },
         {
-          "node": "options_test",
-          "eigenvector": 0.164
-        },
-        {
-          "node": "context_test",
+          "node": "text",
           "eigenvector": 0.164
         }
       ]
@@ -340,23 +340,23 @@
       "max_impact": 0,
       "top_impact": [
         {
+          "node": "styles",
+          "impact": 0
+        },
+        {
           "node": "json",
           "impact": 0
         },
         {
-          "node": "pkg",
+          "node": "text_test",
           "impact": 0
         },
         {
-          "node": "context",
+          "node": "json_test",
           "impact": 0
         },
         {
-          "node": "options_test",
-          "impact": 0
-        },
-        {
-          "node": "context_test",
+          "node": "text",
           "impact": 0
         }
       ],
