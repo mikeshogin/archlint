@@ -39,9 +39,9 @@
       "name": "modularity",
       "description": "Модульность графа должна быть >= 0.3",
       "status": "PASSED",
-      "modularity": 0.578,
+      "modularity": 0.577,
       "threshold": 0.3,
-      "communities_count": 30
+      "communities_count": 29
     },
     {
       "name": "abstractness",
@@ -631,110 +631,110 @@
           "component": "tests",
           "impact_radius": 124,
           "sample_dependents": [
-            "src::app::transcript_extractor::parser",
-            "src::app::transcript_extractor::event_store",
-            "src::app::adapters::web::data",
-            "src::app::adapters::web::data_cost",
-            "src::main"
+            "src::app::graph",
+            "src::app::adapters::telegram",
+            "src::app::agent_provisioning",
+            "src::app::adapters::web::auth::magic_link",
+            "src::app::adapters::web::templates"
           ]
         },
         {
           "component": "task",
           "impact_radius": 95,
           "sample_dependents": [
-            "src::app::adapters::web::data",
-            "src::app::adapters::web::data_cost",
-            "src::app::adapters::web::panel",
-            "src::domain",
-            "src::app::adapters::federation::hub"
+            "src::app::adapters::telegram",
+            "src::domain::workitem",
+            "src::app::commands::task",
+            "src::app::commands::doctor",
+            "src::app::adapters::web::routes"
           ]
         },
         {
           "component": "context",
           "impact_radius": 94,
           "sample_dependents": [
-            "src::app::adapters::web::data",
-            "src::app::adapters::web::data_cost",
-            "src::app::adapters::web::panel",
-            "src::domain",
-            "src::app::adapters::federation::hub"
+            "src::app::adapters::telegram",
+            "src::domain::workitem",
+            "src::app::commands::task",
+            "src::app::commands::doctor",
+            "src::app::adapters::web::routes"
           ]
         },
         {
           "component": "agent",
           "impact_radius": 93,
           "sample_dependents": [
-            "src::app::adapters::web::data",
-            "src::app::adapters::web::data_cost",
-            "src::app::adapters::web::panel",
-            "src::domain",
-            "src::app::adapters::federation::hub"
+            "src::app::adapters::telegram",
+            "src::domain::workitem",
+            "src::app::commands::task",
+            "src::app::commands::doctor",
+            "src::app::adapters::web::routes"
           ]
         },
         {
           "component": "message",
           "impact_radius": 92,
           "sample_dependents": [
-            "src::app::adapters::web::data",
-            "src::app::adapters::web::data_cost",
-            "src::app::adapters::web::panel",
-            "src::domain",
-            "src::app::adapters::federation::hub"
+            "src::app::adapters::telegram",
+            "src::domain::workitem",
+            "src::app::commands::task",
+            "src::app::commands::doctor",
+            "src::app::adapters::web::routes"
           ]
         },
         {
           "component": "statemachine",
           "impact_radius": 92,
           "sample_dependents": [
-            "src::app::adapters::web::data",
-            "src::app::adapters::web::data_cost",
-            "src::app::adapters::web::panel",
-            "src::domain",
-            "src::app::adapters::federation::hub"
+            "src::app::adapters::telegram",
+            "src::domain::workitem",
+            "src::app::commands::task",
+            "src::app::commands::doctor",
+            "src::app::adapters::web::routes"
           ]
         },
         {
           "component": "bus",
           "impact_radius": 74,
           "sample_dependents": [
-            "src::app::adapters::web::data",
-            "src::app::adapters::web::data_cost",
-            "src::app::adapters::web::panel",
-            "src::app::adapters::federation::hub",
-            "src::app::adapters::web::view::log"
+            "src::app::adapters::telegram",
+            "src::app::commands::task",
+            "src::app::commands::doctor",
+            "src::app::adapters::web::routes",
+            "src::app::timeout_sweep"
           ]
         },
         {
           "component": "events",
           "impact_radius": 61,
           "sample_dependents": [
-            "src::app::adapters::web::data",
-            "src::app::adapters::web::data_cost",
-            "src::app::commands::bus",
-            "src::infra::memory_store",
-            "src::app::commands::dashboard"
+            "src::ports::bus",
+            "src::app::worker",
+            "src::app::adapters::web::state",
+            "src::app::acp",
+            "src::infra::dto::config"
           ]
         },
         {
           "component": "config_types",
           "impact_radius": 60,
           "sample_dependents": [
-            "src::app::adapters::web::data",
-            "src::app::adapters::web::data_cost",
-            "src::app::commands::bus",
-            "src::infra::memory_store",
-            "src::app::commands::dashboard"
+            "src::ports::bus",
+            "src::app::worker",
+            "src::app::adapters::web::state",
+            "src::app::acp",
+            "src::infra::dto::config"
           ]
         },
         {
           "component": "workitem",
           "impact_radius": 60,
           "sample_dependents": [
-            "src::app::adapters::web::data",
-            "src::app::adapters::web::data_cost",
-            "src::app::commands::bus",
-            "src::infra::memory_store",
-            "src::app::commands::dashboard"
+            "src::ports::bus",
+            "src::app::worker",
+            "src::app::adapters::web::state",
+            "src::app::acp",
+            "src::infra::dto::config"
           ]
         }
       ],
