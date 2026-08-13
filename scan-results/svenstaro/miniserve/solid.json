@@ -24,41 +24,41 @@
           "package": "src::main",
           "domains_count": 17,
           "domains": [
-            "errors",
-            "auth",
             "archive",
-            "file_utils",
-            "pipe",
-            "webdav_fs",
-            "src::config",
-            "src::webdav_fs",
             "args",
-            "src::args"
+            "src::webdav_fs",
+            "src::config",
+            "consts",
+            "renderer",
+            "file_op",
+            "auth",
+            "src::args",
+            "src::file_op"
           ]
         },
         {
           "package": "src::args",
           "domains_count": 7,
           "domains": [
+            "tests",
             "auth",
             "src::renderer",
-            "src::auth",
-            "tests",
-            "src::listing",
+            "RequiredAuthPassword",
             "AuthParseError",
-            "RequiredAuthPassword"
+            "src::listing",
+            "src::auth"
           ]
         },
         {
           "package": "src::listing",
           "domains_count": 6,
           "domains": [
-            "src::archive",
-            "percent_encode_sets",
-            "src::auth",
-            "src::renderer",
             "src::percent_encode_sets",
-            "src::errors"
+            "src::renderer",
+            "src::auth",
+            "percent_encode_sets",
+            "src::errors",
+            "src::archive"
           ]
         },
         {
@@ -66,19 +66,19 @@
           "domains_count": 4,
           "domains": [
             "fixtures",
-            "tests::utils",
             "tests::fixtures",
-            "utils"
+            "utils",
+            "tests::utils"
           ]
         },
         {
           "package": "src::renderer",
           "domains_count": 4,
           "domains": [
-            "tests",
+            "src::listing",
             "src::auth",
             "src::consts",
-            "src::listing"
+            "tests"
           ]
         }
       ],
