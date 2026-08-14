@@ -25,70 +25,70 @@
           "domains_count": 30,
           "domains": [
             "to_curl",
-            "utils",
-            "buffer",
-            "cli",
-            "request_items",
-            "middleware",
-            "src::utils",
-            "error_reporting",
-            "src::buffer",
-            "message_signature"
+            "src::cli",
+            "src::request_items",
+            "src::middleware",
+            "message_signature",
+            "download",
+            "src::printer",
+            "decoder",
+            "auth",
+            "content_disposition"
           ]
         },
         {
           "package": "tests::cases",
           "domains_count": 6,
           "domains": [
-            "logging",
-            "compress_request_body",
-            "auth_message_signature",
-            "download",
+            "unix_socket",
             "xml",
-            "unix_socket"
+            "download",
+            "auth_message_signature",
+            "compress_request_body",
+            "logging"
           ]
         },
         {
           "package": "src::request_items",
           "domains_count": 5,
           "domains": [
-            "src::utils",
             "src::cli",
             "RequestItem",
+            "tests",
             "src::nested_json",
-            "tests"
+            "src::utils"
           ]
         },
         {
           "package": "src::auth",
           "domains_count": 5,
           "domains": [
-            "src::utils",
-            "src::cli",
             "src::netrc",
+            "src::cli",
+            "src::middleware",
             "tests",
-            "src::middleware"
+            "src::utils"
           ]
         },
         {
           "package": "src::cli",
           "domains_count": 5,
           "domains": [
-            "src::utils",
-            "src::buffer",
-            "src::redacted",
             "src::request_items",
-            "tests"
+            "src::buffer",
+            "tests",
+            "src::redacted",
+            "src::utils"
           ]
         },
         {
           "package": "src::to_curl",
           "domains_count": 4,
           "domains": [
-            "src::utils",
             "src::request_items",
+            "tests",
             "src::cli",
-            "tests"
+            "src::utils"
           ]
         },
         {
@@ -96,18 +96,18 @@
           "domains_count": 4,
           "domains": [
             "Token",
+            "tests",
             "src::utils",
-            "PathAction",
-            "tests"
+            "PathAction"
           ]
         },
         {
           "package": "src::redirect",
           "domains_count": 4,
           "domains": [
-            "src::utils",
-            "src::cli",
             "tests",
+            "src::cli",
+            "src::utils",
             "src::middleware"
           ]
         },
@@ -115,10 +115,10 @@
           "package": "src::download",
           "domains_count": 4,
           "domains": [
-            "src::decoder",
+            "tests",
             "src::content_disposition",
-            "src::utils",
-            "tests"
+            "src::decoder",
+            "src::utils"
           ]
         }
       ],
