@@ -54,42 +54,21 @@
       "status": "PASSED",
       "packages": [
         {
-          "package": "styles",
+          "package": "stdlog",
           "abstractness": 0.0,
           "instability": 0.5,
           "distance": 0.5,
           "nodes_count": 1
         },
         {
-          "package": "json",
+          "package": "examples::app::app",
           "abstractness": 0.0,
           "instability": 0.5,
           "distance": 0.5,
           "nodes_count": 1
         },
         {
-          "package": "text_test",
-          "abstractness": 0.0,
-          "instability": 0.5,
-          "distance": 0.5,
-          "nodes_count": 1
-        },
-        {
-          "package": "json_test",
-          "abstractness": 0.0,
-          "instability": 0.5,
-          "distance": 0.5,
-          "nodes_count": 1
-        },
-        {
-          "package": "text",
-          "abstractness": 0.0,
-          "instability": 0.5,
-          "distance": 0.5,
-          "nodes_count": 1
-        },
-        {
-          "package": "logger_121_test",
+          "package": "examples::chocolate-chips::chocolate-chips",
           "abstractness": 0.0,
           "instability": 0.5,
           "distance": 0.5,
@@ -103,7 +82,28 @@
           "nodes_count": 1
         },
         {
-          "package": "examples::cookie::cookie",
+          "package": "examples::temperature::temperature",
+          "abstractness": 0.0,
+          "instability": 0.5,
+          "distance": 0.5,
+          "nodes_count": 1
+        },
+        {
+          "package": "examples::styles::styles",
+          "abstractness": 0.0,
+          "instability": 0.5,
+          "distance": 0.5,
+          "nodes_count": 1
+        },
+        {
+          "package": "examples::log::log",
+          "abstractness": 0.0,
+          "instability": 0.5,
+          "distance": 0.5,
+          "nodes_count": 1
+        },
+        {
+          "package": "examples::batch2::batch2",
           "abstractness": 0.0,
           "instability": 0.5,
           "distance": 0.5,
@@ -117,7 +117,7 @@
           "nodes_count": 1
         },
         {
-          "package": "examples::batch2::batch2",
+          "package": "examples::options::options",
           "abstractness": 0.0,
           "instability": 0.5,
           "distance": 0.5,
@@ -183,27 +183,15 @@
       "central_nodes": [],
       "peripheral_nodes": [
         {
-          "node": "styles",
+          "node": "stdlog",
           "closeness": 0.0
         },
         {
-          "node": "json",
+          "node": "examples::app::app",
           "closeness": 0.0
         },
         {
-          "node": "text_test",
-          "closeness": 0.0
-        },
-        {
-          "node": "json_test",
-          "closeness": 0.0
-        },
-        {
-          "node": "text",
-          "closeness": 0.0
-        },
-        {
-          "node": "logger_121_test",
+          "node": "examples::chocolate-chips::chocolate-chips",
           "closeness": 0.0
         },
         {
@@ -211,7 +199,19 @@
           "closeness": 0.0
         },
         {
-          "node": "examples::cookie::cookie",
+          "node": "examples::temperature::temperature",
+          "closeness": 0.0
+        },
+        {
+          "node": "examples::styles::styles",
+          "closeness": 0.0
+        },
+        {
+          "node": "examples::log::log",
+          "closeness": 0.0
+        },
+        {
+          "node": "examples::batch2::batch2",
           "closeness": 0.0
         },
         {
@@ -219,7 +219,7 @@
           "closeness": 0.0
         },
         {
-          "node": "examples::batch2::batch2",
+          "node": "examples::options::options",
           "closeness": 0.0
         }
       ],
@@ -234,23 +234,23 @@
       "influential_count": 0,
       "top_5": [
         {
-          "node": "styles",
+          "node": "stdlog",
           "eigenvector": 0.164
         },
         {
-          "node": "json",
+          "node": "examples::app::app",
           "eigenvector": 0.164
         },
         {
-          "node": "text_test",
+          "node": "examples::chocolate-chips::chocolate-chips",
           "eigenvector": 0.164
         },
         {
-          "node": "json_test",
+          "node": "examples::error::error",
           "eigenvector": 0.164
         },
         {
-          "node": "text",
+          "node": "examples::temperature::temperature",
           "eigenvector": 0.164
         }
       ]
@@ -340,23 +340,23 @@
       "max_impact": 0,
       "top_impact": [
         {
-          "node": "styles",
+          "node": "stdlog",
           "impact": 0
         },
         {
-          "node": "json",
+          "node": "examples::app::app",
           "impact": 0
         },
         {
-          "node": "text_test",
+          "node": "examples::chocolate-chips::chocolate-chips",
           "impact": 0
         },
         {
-          "node": "json_test",
+          "node": "examples::error::error",
           "impact": 0
         },
         {
-          "node": "text",
+          "node": "examples::temperature::temperature",
           "impact": 0
         }
       ],

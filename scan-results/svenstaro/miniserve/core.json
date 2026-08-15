@@ -20,8 +20,8 @@
       "status": "FAILED",
       "cycles": [
         [
-          "src::renderer",
-          "src::listing"
+          "src::listing",
+          "src::renderer"
         ]
       ],
       "cycles_count": 1
@@ -70,7 +70,13 @@
       "status": "PASSED",
       "most_unstable": [
         {
-          "node": "tests::archive",
+          "node": "src::main",
+          "instability": 1.0,
+          "ca": 0,
+          "ce": 17
+        },
+        {
+          "node": "tests::upload_files",
           "instability": 1.0,
           "ca": 0,
           "ce": 2
@@ -82,13 +88,7 @@
           "ce": 2
         },
         {
-          "node": "tests::create_directories",
-          "instability": 1.0,
-          "ca": 0,
-          "ce": 2
-        },
-        {
-          "node": "tests::upload_files",
+          "node": "tests::auth",
           "instability": 1.0,
           "ca": 0,
           "ce": 2
@@ -102,24 +102,6 @@
       ],
       "most_stable": [
         {
-          "node": "file_utils",
-          "instability": 0.0,
-          "ca": 1,
-          "ce": 0
-        },
-        {
-          "node": "listing",
-          "instability": 0.0,
-          "ca": 1,
-          "ce": 0
-        },
-        {
-          "node": "pipe",
-          "instability": 0.0,
-          "ca": 1,
-          "ce": 0
-        },
-        {
           "node": "renderer",
           "instability": 0.0,
           "ca": 1,
@@ -127,6 +109,24 @@
         },
         {
           "node": "webdav_fs",
+          "instability": 0.0,
+          "ca": 1,
+          "ce": 0
+        },
+        {
+          "node": "fixtures",
+          "instability": 0.0,
+          "ca": 18,
+          "ce": 0
+        },
+        {
+          "node": "utils",
+          "instability": 0.0,
+          "ca": 1,
+          "ce": 0
+        },
+        {
+          "node": "fake_tty",
           "instability": 0.0,
           "ca": 1,
           "ce": 0
@@ -224,8 +224,8 @@
       "total_sccs": 52,
       "problematic_sccs": [
         [
-          "src::renderer",
-          "src::listing"
+          "src::listing",
+          "src::renderer"
         ]
       ],
       "problematic_count": 1
