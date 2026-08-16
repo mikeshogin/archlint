@@ -39,9 +39,9 @@
       "name": "modularity",
       "description": "Модульность графа должна быть >= 0.3",
       "status": "PASSED",
-      "modularity": 0.577,
+      "modularity": 0.578,
       "threshold": 0.3,
-      "communities_count": 29
+      "communities_count": 30
     },
     {
       "name": "abstractness",
@@ -629,110 +629,110 @@
           "component": "tests",
           "impact_radius": 124,
           "sample_dependents": [
-            "src::app::tasklog",
-            "src::app::adapters::telegram",
-            "src::app::transcript_extractor::event_store",
-            "src::app::mcp_protocol",
-            "src::app::adapters::web::routes::static_assets"
+            "src::app::serve",
+            "src::app::adapters::federation::registry",
+            "src::app::adapters::web::view::chart",
+            "src::app::a2a_jwt",
+            "src::app::adapters::web::audit"
           ]
         },
         {
           "component": "task",
           "impact_radius": 95,
           "sample_dependents": [
-            "src::app::bus",
-            "src::app::adapters::telegram",
-            "src::domain::workitem",
-            "src::app::adapters::web",
-            "src::app::adapters::web::routes::agent_log"
+            "src::app::serve",
+            "src::infra::dto",
+            "src::app::adapters::web::view::chart",
+            "src::infra::memory_bus",
+            "src::app::adapters::discord"
           ]
         },
         {
           "component": "context",
           "impact_radius": 94,
           "sample_dependents": [
-            "src::app::bus",
-            "src::app::adapters::telegram",
-            "src::domain::workitem",
-            "src::app::adapters::web",
-            "src::app::adapters::web::routes::agent_log"
+            "src::app::serve",
+            "src::infra::dto",
+            "src::app::adapters::web::view::chart",
+            "src::infra::memory_bus",
+            "src::app::adapters::discord"
           ]
         },
         {
           "component": "agent",
           "impact_radius": 93,
           "sample_dependents": [
-            "src::app::bus",
-            "src::app::adapters::telegram",
-            "src::domain::workitem",
-            "src::app::adapters::web",
-            "src::app::adapters::web::routes::agent_log"
+            "src::app::serve",
+            "src::app::adapters::web::view::chart",
+            "src::infra::memory_bus",
+            "src::app::adapters::discord",
+            "src::config"
           ]
         },
         {
           "component": "message",
           "impact_radius": 92,
           "sample_dependents": [
-            "src::app::bus",
-            "src::app::adapters::telegram",
-            "src::domain::workitem",
-            "src::app::adapters::web",
-            "src::app::adapters::web::routes::agent_log"
+            "src::app::serve",
+            "src::app::adapters::web::view::chart",
+            "src::infra::memory_bus",
+            "src::app::adapters::discord",
+            "src::config"
           ]
         },
         {
           "component": "statemachine",
           "impact_radius": 92,
           "sample_dependents": [
-            "src::app::bus",
-            "src::app::adapters::telegram",
-            "src::domain::workitem",
-            "src::app::adapters::web",
-            "src::app::adapters::web::routes::agent_log"
+            "src::app::serve",
+            "src::app::adapters::web::view::chart",
+            "src::infra::memory_bus",
+            "src::app::adapters::discord",
+            "src::config"
           ]
         },
         {
           "component": "bus",
           "impact_radius": 74,
           "sample_dependents": [
-            "src::app::bus",
-            "src::app::adapters::telegram",
-            "src::app::mcp_protocol",
-            "src::app::adapters::web",
-            "src::app::adapters::web::panel"
+            "src::app::serve",
+            "src::infra::dto",
+            "src::app::adapters::web::view::chart",
+            "src::infra::memory_bus",
+            "src::app::mcp_protocol"
           ]
         },
         {
           "component": "events",
           "impact_radius": 61,
           "sample_dependents": [
-            "src::app::bus",
-            "src::app::adapters::telegram",
-            "src::domain::workitem",
-            "src::app::a2a",
-            "src::infra::dto::bus"
+            "src::app::serve",
+            "src::app::schedule",
+            "src::infra::memory_bus",
+            "src::infra::dto::config",
+            "src::app::adapters::discord"
           ]
         },
         {
           "component": "config_types",
           "impact_radius": 60,
           "sample_dependents": [
-            "src::app::bus",
-            "src::app::adapters::telegram",
-            "src::domain::workitem",
-            "src::app::a2a",
-            "src::infra::dto::bus"
+            "src::app::serve",
+            "src::app::schedule",
+            "src::infra::memory_bus",
+            "src::infra::dto::config",
+            "src::app::adapters::discord"
           ]
         },
         {
           "component": "workitem",
           "impact_radius": 60,
           "sample_dependents": [
-            "src::app::bus",
-            "src::app::adapters::telegram",
-            "src::domain::workitem",
-            "src::app::a2a",
-            "src::infra::dto::bus"
+            "src::app::serve",
+            "src::app::schedule",
+            "src::infra::memory_bus",
+            "src::infra::dto::config",
+            "src::app::adapters::discord"
           ]
         }
       ],

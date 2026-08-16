@@ -24,48 +24,48 @@
           "package": "src::export",
           "domains_count": 15,
           "domains": [
-            "src::util",
-            "markup",
-            "orgmode",
-            "src::asciidoc",
-            "tests",
-            "src::benchmark",
-            "src::markdown",
-            "csv",
+            "src::csv",
+            "markdown",
+            "asciidoc",
             "src::json",
-            "json"
+            "src::benchmark",
+            "markup",
+            "src::markdown",
+            "src::asciidoc",
+            "json",
+            "src::options"
           ]
         },
         {
           "package": "src::benchmark",
           "domains_count": 12,
           "domains": [
-            "executor",
-            "src::command",
-            "timing_result",
-            "src::parameter",
             "scheduler",
             "src::output",
-            "src::executor",
-            "benchmark_result",
             "src::outlier_detection",
-            "src::options"
+            "src::parameter",
+            "src::executor",
+            "relative_speed",
+            "timing_result",
+            "benchmark_result",
+            "src::options",
+            "src::command"
           ]
         },
         {
           "package": "src::main",
           "domains_count": 11,
           "domains": [
-            "util",
-            "options",
-            "outlier_detection",
             "error",
-            "command",
-            "parameter",
-            "output",
             "benchmark",
+            "output",
+            "cli",
             "export",
-            "cli"
+            "command",
+            "util",
+            "parameter",
+            "options",
+            "timer"
           ]
         },
         {
@@ -73,10 +73,10 @@
           "domains_count": 6,
           "domains": [
             "wall_clock_timer",
-            "windows_timer",
-            "nix",
-            "unix_timer",
             "windows_sys",
+            "nix",
+            "windows_timer",
+            "unix_timer",
             "src::util"
           ]
         },
@@ -84,11 +84,11 @@
           "package": "src::benchmark::executor",
           "domains_count": 6,
           "domains": [
-            "src::command",
-            "src::options",
-            "src::timing_result",
             "src::output",
             "src::timer",
+            "src::options",
+            "src::command",
+            "src::timing_result",
             "src::util"
           ]
         },
@@ -96,20 +96,20 @@
           "package": "src::benchmark::scheduler",
           "domains_count": 6,
           "domains": [
-            "src::export",
-            "src::command",
             "src::benchmark_result",
             "src::executor",
+            "src::export",
             "src::options",
-            "src::cli"
+            "src::cli",
+            "src::command"
           ]
         },
         {
           "package": "src::export::markup",
           "domains_count": 5,
           "domains": [
-            "src::benchmark",
             "src::output",
+            "src::benchmark",
             "src::Exporter",
             "src::options",
             "src::util"
@@ -119,31 +119,31 @@
           "package": "src::util",
           "domains_count": 5,
           "domains": [
-            "exit_code",
             "randomized_environment_offset",
-            "number",
             "min_max",
-            "units"
+            "units",
+            "number",
+            "exit_code"
           ]
         },
         {
           "package": "src::export::json",
           "domains_count": 4,
           "domains": [
-            "src::util",
             "src::benchmark",
             "src::Exporter",
-            "src::options"
+            "src::options",
+            "src::util"
           ]
         },
         {
           "package": "src::export::csv",
           "domains_count": 4,
           "domains": [
-            "src::util",
             "src::benchmark",
             "src::Exporter",
-            "src::options"
+            "src::options",
+            "src::util"
           ]
         }
       ],

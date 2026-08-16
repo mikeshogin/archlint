@@ -34,7 +34,7 @@
       "name": "modularity",
       "description": "Модульность графа должна быть >= 0.3",
       "status": "PASSED",
-      "modularity": 0.575,
+      "modularity": 0.574,
       "threshold": 0.3,
       "communities_count": 15
     },
@@ -617,66 +617,66 @@
           "component": "exit_code",
           "impact_radius": 25,
           "sample_dependents": [
-            "src::export",
+            "src::benchmark::benchmark_result",
+            "src::export::markup",
+            "src::timer::windows_timer",
             "src::util",
-            "src::benchmark",
-            "src::export::tests",
-            "src::output::format"
+            "src::export"
           ]
         },
         {
           "component": "min_max",
           "impact_radius": 25,
           "sample_dependents": [
-            "src::export",
+            "src::benchmark::benchmark_result",
+            "src::export::markup",
+            "src::timer::windows_timer",
             "src::util",
-            "src::benchmark",
-            "src::export::tests",
-            "src::output::format"
+            "src::export"
           ]
         },
         {
           "component": "number",
           "impact_radius": 25,
           "sample_dependents": [
-            "src::export",
+            "src::benchmark::benchmark_result",
+            "src::export::markup",
+            "src::timer::windows_timer",
             "src::util",
-            "src::benchmark",
-            "src::export::tests",
-            "src::output::format"
+            "src::export"
           ]
         },
         {
           "component": "randomized_environment_offset",
           "impact_radius": 25,
           "sample_dependents": [
-            "src::export",
+            "src::benchmark::benchmark_result",
+            "src::export::markup",
+            "src::timer::windows_timer",
             "src::util",
-            "src::benchmark",
-            "src::export::tests",
-            "src::output::format"
+            "src::export"
           ]
         },
         {
           "component": "units",
           "impact_radius": 25,
           "sample_dependents": [
-            "src::export",
+            "src::benchmark::benchmark_result",
+            "src::export::markup",
+            "src::timer::windows_timer",
             "src::util",
-            "src::benchmark",
-            "src::export::tests",
-            "src::output::format"
+            "src::export"
           ]
         },
         {
           "component": "src::util",
           "impact_radius": 24,
           "sample_dependents": [
-            "src::export",
-            "src::benchmark",
-            "src::export::tests",
-            "src::output::format",
-            "src::export::json"
+            "src::benchmark::benchmark_result",
+            "src::export::markup",
+            "src::benchmark::scheduler",
+            "src::timer::windows_timer",
+            "src::export"
           ]
         }
       ],
