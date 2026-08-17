@@ -629,110 +629,110 @@
           "component": "tests",
           "impact_radius": 124,
           "sample_dependents": [
-            "src::app::serve",
-            "src::app::adapters::federation::registry",
-            "src::app::adapters::web::view::chart",
-            "src::app::a2a_jwt",
-            "src::app::adapters::web::audit"
+            "src::app::adapters::web::audit",
+            "src::app::adapters::web::view::cost",
+            "src::bin::session2graph",
+            "src::app::commands::usage",
+            "src::app::config_remotes"
           ]
         },
         {
           "component": "task",
           "impact_radius": 95,
           "sample_dependents": [
-            "src::app::serve",
-            "src::infra::dto",
-            "src::app::adapters::web::view::chart",
-            "src::infra::memory_bus",
-            "src::app::adapters::discord"
+            "src::app::commands::graph",
+            "src::app::adapters::web::view::cost",
+            "src::app::commands::usage",
+            "src::app::message",
+            "src::app::mcp_service"
           ]
         },
         {
           "component": "context",
           "impact_radius": 94,
           "sample_dependents": [
-            "src::app::serve",
-            "src::infra::dto",
-            "src::app::adapters::web::view::chart",
-            "src::infra::memory_bus",
-            "src::app::adapters::discord"
+            "src::app::commands::graph",
+            "src::app::adapters::web::view::cost",
+            "src::app::commands::usage",
+            "src::app::message",
+            "src::app::mcp_service"
           ]
         },
         {
           "component": "agent",
           "impact_radius": 93,
           "sample_dependents": [
-            "src::app::serve",
-            "src::app::adapters::web::view::chart",
-            "src::infra::memory_bus",
-            "src::app::adapters::discord",
-            "src::config"
+            "src::app::commands::graph",
+            "src::app::adapters::web::view::cost",
+            "src::app::commands::usage",
+            "src::app::message",
+            "src::app::mcp_service"
           ]
         },
         {
           "component": "message",
           "impact_radius": 92,
           "sample_dependents": [
-            "src::app::serve",
-            "src::app::adapters::web::view::chart",
-            "src::infra::memory_bus",
-            "src::app::adapters::discord",
-            "src::config"
+            "src::app::commands::graph",
+            "src::app::adapters::web::view::cost",
+            "src::app::commands::usage",
+            "src::app::message",
+            "src::app::mcp_service"
           ]
         },
         {
           "component": "statemachine",
           "impact_radius": 92,
           "sample_dependents": [
-            "src::app::serve",
-            "src::app::adapters::web::view::chart",
-            "src::infra::memory_bus",
-            "src::app::adapters::discord",
-            "src::config"
+            "src::app::commands::graph",
+            "src::app::adapters::web::view::cost",
+            "src::app::commands::usage",
+            "src::app::message",
+            "src::app::mcp_service"
           ]
         },
         {
           "component": "bus",
           "impact_radius": 74,
           "sample_dependents": [
-            "src::app::serve",
-            "src::infra::dto",
-            "src::app::adapters::web::view::chart",
-            "src::infra::memory_bus",
-            "src::app::mcp_protocol"
+            "src::app::commands::graph",
+            "src::app::commands::usage",
+            "src::app::adapters::web::view::cost",
+            "src::app::mcp_service",
+            "src::app::adapters::web::routes::logout"
           ]
         },
         {
           "component": "events",
           "impact_radius": 61,
           "sample_dependents": [
-            "src::app::serve",
-            "src::app::schedule",
-            "src::infra::memory_bus",
-            "src::infra::dto::config",
-            "src::app::adapters::discord"
+            "src::app::mcp_tools",
+            "src::app::adapters::web::view::cost",
+            "src::app::message",
+            "src::infra::agent_file",
+            "src::app::mcp_service"
           ]
         },
         {
           "component": "config_types",
           "impact_radius": 60,
           "sample_dependents": [
-            "src::app::serve",
-            "src::app::schedule",
-            "src::infra::memory_bus",
-            "src::infra::dto::config",
-            "src::app::adapters::discord"
+            "src::app::mcp_tools",
+            "src::app::adapters::web::view::cost",
+            "src::app::message",
+            "src::infra::agent_file",
+            "src::app::mcp_service"
           ]
         },
         {
           "component": "workitem",
           "impact_radius": 60,
           "sample_dependents": [
-            "src::app::serve",
-            "src::app::schedule",
-            "src::infra::memory_bus",
-            "src::infra::dto::config",
-            "src::app::adapters::discord"
+            "src::app::mcp_tools",
+            "src::app::adapters::web::view::cost",
+            "src::app::message",
+            "src::infra::agent_file",
+            "src::app::mcp_service"
           ]
         }
       ],
