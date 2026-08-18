@@ -39,9 +39,9 @@
       "name": "modularity",
       "description": "Модульность графа должна быть >= 0.3",
       "status": "PASSED",
-      "modularity": 0.578,
+      "modularity": 0.577,
       "threshold": 0.3,
-      "communities_count": 30
+      "communities_count": 29
     },
     {
       "name": "abstractness",
@@ -629,110 +629,110 @@
           "component": "tests",
           "impact_radius": 124,
           "sample_dependents": [
-            "src::app::adapters::web::audit",
-            "src::app::adapters::web::view::cost",
-            "src::bin::session2graph",
-            "src::app::commands::usage",
-            "src::app::config_remotes"
+            "src::app::adapters::web::view::breadcrumb",
+            "src::app::process_builder",
+            "src::app::transcript_extractor::parser",
+            "src::app::adapters::web::data_log",
+            "src::domain::context"
           ]
         },
         {
           "component": "task",
           "impact_radius": 95,
           "sample_dependents": [
-            "src::app::commands::graph",
-            "src::app::adapters::web::view::cost",
-            "src::app::commands::usage",
-            "src::app::message",
-            "src::app::mcp_service"
+            "src::app::commands::task",
+            "src::app::agent_process",
+            "src::app::process_builder",
+            "src::infra::sm_store",
+            "src::ports::bus_wire"
           ]
         },
         {
           "component": "context",
           "impact_radius": 94,
           "sample_dependents": [
-            "src::app::commands::graph",
-            "src::app::adapters::web::view::cost",
-            "src::app::commands::usage",
-            "src::app::message",
-            "src::app::mcp_service"
+            "src::app::commands::task",
+            "src::app::agent_process",
+            "src::app::process_builder",
+            "src::infra::sm_store",
+            "src::ports::bus_wire"
           ]
         },
         {
           "component": "agent",
           "impact_radius": 93,
           "sample_dependents": [
-            "src::app::commands::graph",
-            "src::app::adapters::web::view::cost",
-            "src::app::commands::usage",
-            "src::app::message",
-            "src::app::mcp_service"
+            "src::app::commands::task",
+            "src::app::agent_process",
+            "src::app::process_builder",
+            "src::infra::sm_store",
+            "src::ports::bus_wire"
           ]
         },
         {
           "component": "message",
           "impact_radius": 92,
           "sample_dependents": [
-            "src::app::commands::graph",
-            "src::app::adapters::web::view::cost",
-            "src::app::commands::usage",
-            "src::app::message",
-            "src::app::mcp_service"
+            "src::app::commands::task",
+            "src::app::agent_process",
+            "src::app::process_builder",
+            "src::infra::sm_store",
+            "src::ports::bus_wire"
           ]
         },
         {
           "component": "statemachine",
           "impact_radius": 92,
           "sample_dependents": [
-            "src::app::commands::graph",
-            "src::app::adapters::web::view::cost",
-            "src::app::commands::usage",
-            "src::app::message",
-            "src::app::mcp_service"
+            "src::app::commands::task",
+            "src::app::agent_process",
+            "src::app::process_builder",
+            "src::infra::sm_store",
+            "src::ports::bus_wire"
           ]
         },
         {
           "component": "bus",
           "impact_radius": 74,
           "sample_dependents": [
-            "src::app::commands::graph",
-            "src::app::commands::usage",
-            "src::app::adapters::web::view::cost",
-            "src::app::mcp_service",
-            "src::app::adapters::web::routes::logout"
+            "src::app::commands::task",
+            "src::app::agent_process",
+            "src::app::adapters::web::routes::dashboard",
+            "src::app::mcp",
+            "src::app::adapters::web::routes::agent_detail"
           ]
         },
         {
           "component": "events",
           "impact_radius": 61,
           "sample_dependents": [
-            "src::app::mcp_tools",
-            "src::app::adapters::web::view::cost",
-            "src::app::message",
-            "src::infra::agent_file",
-            "src::app::mcp_service"
+            "src::app::commands::sm",
+            "src::app::agent_process",
+            "src::app::process_builder",
+            "src::domain",
+            "src::infra::sm_store"
           ]
         },
         {
           "component": "config_types",
           "impact_radius": 60,
           "sample_dependents": [
-            "src::app::mcp_tools",
-            "src::app::adapters::web::view::cost",
-            "src::app::message",
-            "src::infra::agent_file",
-            "src::app::mcp_service"
+            "src::app::commands::sm",
+            "src::app::agent_process",
+            "src::app::process_builder",
+            "src::domain",
+            "src::infra::sm_store"
           ]
         },
         {
           "component": "workitem",
           "impact_radius": 60,
           "sample_dependents": [
-            "src::app::mcp_tools",
-            "src::app::adapters::web::view::cost",
-            "src::app::message",
-            "src::infra::agent_file",
-            "src::app::mcp_service"
+            "src::app::commands::sm",
+            "src::app::agent_process",
+            "src::app::process_builder",
+            "src::domain",
+            "src::infra::sm_store"
           ]
         }
       ],
