@@ -39,9 +39,9 @@
       "name": "modularity",
       "description": "Модульность графа должна быть >= 0.3",
       "status": "PASSED",
-      "modularity": 0.577,
+      "modularity": 0.578,
       "threshold": 0.3,
-      "communities_count": 29
+      "communities_count": 30
     },
     {
       "name": "abstractness",
@@ -629,77 +629,77 @@
           "component": "tests",
           "impact_radius": 124,
           "sample_dependents": [
-            "src::app::adapters::web::routes::login",
             "src::app::serve",
-            "src::app::adapters::federation::peer",
-            "src::app::config_remotes",
-            "src::app::adapters"
+            "src::domain::events",
+            "src::app::adapters::web::view::chart",
+            "src::app::adapters::web::auth::magic_link",
+            "src::app::reload_state"
           ]
         },
         {
           "component": "task",
           "impact_radius": 95,
           "sample_dependents": [
-            "src::app::adapters::web::routes::login",
             "src::app::serve",
-            "src::app::adapters::federation::peer",
-            "src::app::adapters",
-            "src::app::adapters::web::view::strip"
+            "src::app::adapters::web::view::chart",
+            "src::app::adapters::web::view",
+            "src::app::session_discover",
+            "src::app::adapters::web::routes::agent_detail"
           ]
         },
         {
           "component": "context",
           "impact_radius": 94,
           "sample_dependents": [
-            "src::app::adapters::web::routes::login",
             "src::app::serve",
-            "src::app::adapters::federation::peer",
-            "src::app::adapters",
-            "src::app::adapters::web::view::strip"
+            "src::app::adapters::web::view::chart",
+            "src::app::session_discover",
+            "src::app::adapters::web::routes::agent_detail",
+            "src::app::config_changeset"
           ]
         },
         {
           "component": "agent",
           "impact_radius": 93,
           "sample_dependents": [
-            "src::app::adapters::web::routes::login",
             "src::app::serve",
-            "src::app::adapters::federation::peer",
-            "src::app::adapters",
-            "src::app::adapters::web::view::strip"
+            "src::app::adapters::web::view::chart",
+            "src::app::session_discover",
+            "src::app::adapters::web::routes::agent_detail",
+            "src::app::config_changeset"
           ]
         },
         {
           "component": "message",
           "impact_radius": 92,
           "sample_dependents": [
-            "src::app::adapters::web::routes::login",
             "src::app::serve",
-            "src::app::adapters::federation::peer",
-            "src::app::adapters",
-            "src::app::adapters::web::view::strip"
+            "src::app::adapters::web::view::chart",
+            "src::app::session_discover",
+            "src::app::adapters::web::routes::agent_detail",
+            "src::app::config_changeset"
           ]
         },
         {
           "component": "statemachine",
           "impact_radius": 92,
           "sample_dependents": [
-            "src::app::adapters::web::routes::login",
             "src::app::serve",
-            "src::app::adapters::federation::peer",
-            "src::app::adapters",
-            "src::app::adapters::web::view::strip"
+            "src::app::adapters::web::view::chart",
+            "src::app::session_discover",
+            "src::app::adapters::web::routes::agent_detail",
+            "src::app::config_changeset"
           ]
         },
         {
           "component": "bus",
           "impact_radius": 74,
           "sample_dependents": [
-            "src::app::adapters::web::routes::login",
             "src::app::serve",
-            "src::app::adapters::federation::peer",
-            "src::app::adapters::web::view::strip",
-            "src::app::commands::schedule"
+            "src::app::adapters::web::view::chart",
+            "src::app::adapters::federation::frame",
+            "src::app::session_discover",
+            "src::app::adapters::web::routes::agent_detail"
           ]
         },
         {
@@ -707,10 +707,10 @@
           "impact_radius": 61,
           "sample_dependents": [
             "src::app::serve",
-            "src::app::commands::agent",
-            "src::app::adapters",
-            "src::app::timeout_sweep",
-            "src::infra::agent_file"
+            "src::app::transcript_extractor",
+            "src::app::commands::remind",
+            "src::infra::sm_store",
+            "src::app::adapters::discord"
           ]
         },
         {
@@ -718,10 +718,10 @@
           "impact_radius": 60,
           "sample_dependents": [
             "src::app::serve",
-            "src::app::commands::agent",
-            "src::app::adapters",
-            "src::app::timeout_sweep",
-            "src::infra::agent_file"
+            "src::app::commands::remind",
+            "src::infra::sm_store",
+            "src::app::adapters::discord",
+            "src::app::bus"
           ]
         },
         {
@@ -729,10 +729,10 @@
           "impact_radius": 60,
           "sample_dependents": [
             "src::app::serve",
-            "src::app::commands::agent",
-            "src::app::adapters",
-            "src::app::timeout_sweep",
-            "src::infra::agent_file"
+            "src::app::commands::remind",
+            "src::infra::sm_store",
+            "src::app::adapters::discord",
+            "src::app::bus"
           ]
         }
       ],
