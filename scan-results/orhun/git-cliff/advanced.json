@@ -11,7 +11,7 @@
   },
   "graph": {
     "nodes": 105,
-    "edges": 207
+    "edges": 208
   },
   "checks": [
     {
@@ -34,7 +34,7 @@
       "name": "modularity",
       "description": "Модульность графа должна быть >= 0.3",
       "status": "PASSED",
-      "modularity": 0.516,
+      "modularity": 0.512,
       "threshold": 0.3,
       "communities_count": 6
     },
@@ -243,7 +243,7 @@
           "coefficient": 0.0
         }
       ],
-      "low_clustering_count": 55
+      "low_clustering_count": 56
     },
     {
       "name": "edge_density",
@@ -251,7 +251,7 @@
       "status": "PASSED",
       "density": 0.019,
       "nodes": 105,
-      "edges": 207,
+      "edges": 208,
       "max_possible_edges": 10920
     },
     {
@@ -360,15 +360,15 @@
           "to": "git-cliff-core::process"
         },
         {
-          "from": "git-cliff-core::src::changelog",
-          "to": "git-cliff-core::template"
-        },
-        {
           "from": "git-cliff-core::src::tag",
           "to": "test"
+        },
+        {
+          "from": "git-cliff-core::src::lib",
+          "to": "changelog"
         }
       ],
-      "count": 51
+      "count": 50
     },
     {
       "name": "graph_diameter",
@@ -381,7 +381,7 @@
       "name": "avg_path_length",
       "description": "Средняя длина пути <= 5.0",
       "status": "PASSED",
-      "avg_path_length": 4.567,
+      "avg_path_length": 4.563,
       "threshold": 5.0
     },
     {
@@ -449,7 +449,7 @@
         },
         {
           "node": "git-cliff-core::config",
-          "eigenvector": 0.359
+          "eigenvector": 0.358
         },
         {
           "node": "serde",
@@ -468,7 +468,7 @@
         },
         {
           "node": "git-cliff-core::config",
-          "eigenvector": 0.359
+          "eigenvector": 0.358
         },
         {
           "node": "serde",
@@ -487,8 +487,8 @@
       "max_k_core": 5,
       "threshold": 5,
       "core_distribution": {
-        "1": 50,
-        "2": 23,
+        "1": 49,
+        "2": 24,
         "3": 7,
         "4": 1,
         "5": 24
@@ -525,19 +525,19 @@
       "threshold": 4,
       "large_cliques": [],
       "large_cliques_count": 0,
-      "total_cliques": 207
+      "total_cliques": 208
     },
     {
       "name": "degree_distribution",
       "description": "Распределение степеней узлов",
       "status": "INFO",
-      "mean_degree": 3.94,
-      "std_degree": 4.19,
+      "mean_degree": 3.96,
+      "std_degree": 4.21,
       "max_degree": 17,
       "min_degree": 1,
       "distribution": {
-        "1": 50,
-        "2": 9,
+        "1": 49,
+        "2": 10,
         "3": 11,
         "4": 3,
         "5": 3,
@@ -546,7 +546,8 @@
         "8": 3,
         "9": 6,
         "10": 1,
-        "11": 5,
+        "11": 4,
+        "12": 1,
         "13": 1,
         "14": 1,
         "16": 1,
@@ -559,7 +560,7 @@
       "name": "dependency_entropy",
       "description": "Энтропия распределения зависимостей",
       "status": "PASSED",
-      "entropy": 4.626,
+      "entropy": 4.623,
       "max_entropy": 6.714,
       "normalized_entropy": 0.689
     },
@@ -567,7 +568,7 @@
       "name": "gini_coefficient",
       "description": "Коэффициент Джини <= 0.6",
       "status": "PASSED",
-      "gini": 0.519,
+      "gini": 0.518,
       "threshold": 0.6,
       "interpretation": "Неравномерно"
     },
@@ -579,29 +580,29 @@
         {
           "node": "git-cliff-core::src::lib",
           "degree": 17,
-          "z_score": 3.11
+          "z_score": 3.1
         },
         {
           "node": "git-cliff-core::error",
           "degree": 17,
-          "z_score": 3.11
+          "z_score": 3.1
         },
         {
           "node": "test",
           "degree": 17,
-          "z_score": 3.11
+          "z_score": 3.1
         }
       ],
       "outliers_count": 3,
-      "mean_degree": 3.94,
-      "std_degree": 4.19,
+      "mean_degree": 3.96,
+      "std_degree": 4.21,
       "z_threshold": 3.0
     },
     {
       "name": "algebraic_connectivity",
       "description": "Алгебраическая связность >= 0.1",
       "status": "WARNING",
-      "algebraic_connectivity": 0.027,
+      "algebraic_connectivity": 0.0271,
       "threshold": 0.1,
       "interpretation": "Слабо связан",
       "issue": "Слабая связность - граф легко разбить"
@@ -627,7 +628,7 @@
       "description": "Радиус изменений <= 20 компонентов",
       "status": "PASSED",
       "threshold": 20,
-      "avg_impact": 1.97,
+      "avg_impact": 1.98,
       "max_impact": 17,
       "top_impact": [
         {
