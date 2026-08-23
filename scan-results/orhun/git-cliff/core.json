@@ -11,7 +11,7 @@
   },
   "graph": {
     "nodes": 105,
-    "edges": 208
+    "edges": 211
   },
   "checks": [
     {
@@ -137,7 +137,7 @@
         },
         {
           "node": "test",
-          "afferent_coupling": 17,
+          "afferent_coupling": 18,
           "efferent_coupling": 0,
           "ca_threshold": 10,
           "ce_threshold": 10
@@ -275,6 +275,12 @@
       "threshold": 10,
       "hubs": [
         {
+          "node": "test",
+          "total_degree": 18,
+          "in_degree": 18,
+          "out_degree": 0
+        },
+        {
           "node": "git-cliff-core::src::lib",
           "total_degree": 17,
           "in_degree": 0,
@@ -282,12 +288,6 @@
         },
         {
           "node": "git-cliff-core::error",
-          "total_degree": 17,
-          "in_degree": 17,
-          "out_degree": 0
-        },
-        {
-          "node": "test",
           "total_degree": 17,
           "in_degree": 17,
           "out_degree": 0
