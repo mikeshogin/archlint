@@ -41,7 +41,7 @@
       "status": "PASSED",
       "modularity": 0.578,
       "threshold": 0.3,
-      "communities_count": 30
+      "communities_count": 29
     },
     {
       "name": "abstractness",
@@ -629,110 +629,110 @@
           "component": "tests",
           "impact_radius": 124,
           "sample_dependents": [
-            "src::infra::context_store",
-            "src::app::transcript_extractor::parser",
-            "src::main",
-            "src::app::transcript_extractor::events",
-            "src::app::config_remotes"
+            "src::app::commands",
+            "src::app::unified_inbox",
+            "src::app::adapters::web::data_cost",
+            "src::app::adapters",
+            "src::app::adapters::web::routes::github_webhook"
           ]
         },
         {
           "component": "task",
           "impact_radius": 95,
           "sample_dependents": [
+            "src::app::commands",
+            "src::app::adapters::web::data_cost",
             "src::app::adapters::web::routes::dashboard",
-            "src::infra::context_store",
-            "src::app::commands::context",
-            "src::app",
-            "src::app::config_changeset"
+            "src::app::adapters::web::routes::github_webhook",
+            "src::app::adapters"
           ]
         },
         {
           "component": "context",
           "impact_radius": 94,
           "sample_dependents": [
+            "src::app::commands",
+            "src::app::adapters::web::data_cost",
             "src::app::adapters::web::routes::dashboard",
-            "src::infra::context_store",
-            "src::app::commands::context",
-            "src::app",
-            "src::app::config_changeset"
+            "src::app::adapters::web::routes::github_webhook",
+            "src::app::adapters"
           ]
         },
         {
           "component": "agent",
           "impact_radius": 93,
           "sample_dependents": [
+            "src::app::commands",
+            "src::app::adapters::web::data_cost",
             "src::app::adapters::web::routes::dashboard",
-            "src::infra::context_store",
-            "src::app::commands::context",
-            "src::app",
-            "src::app::config_changeset"
+            "src::app::adapters::web::routes::github_webhook",
+            "src::app::adapters"
           ]
         },
         {
           "component": "message",
           "impact_radius": 92,
           "sample_dependents": [
+            "src::app::adapters::web::data_cost",
             "src::app::adapters::web::routes::dashboard",
-            "src::infra::context_store",
-            "src::app::commands::context",
-            "src::app",
-            "src::app::config_changeset"
+            "src::app::adapters::web::routes::github_webhook",
+            "src::app::adapters",
+            "src::app::adapters::web::routes"
           ]
         },
         {
           "component": "statemachine",
           "impact_radius": 92,
           "sample_dependents": [
+            "src::app::adapters::web::data_cost",
             "src::app::adapters::web::routes::dashboard",
-            "src::infra::context_store",
-            "src::app::commands::context",
-            "src::app",
-            "src::app::config_changeset"
+            "src::app::adapters::web::routes::github_webhook",
+            "src::app::adapters",
+            "src::app::adapters::web::routes"
           ]
         },
         {
           "component": "bus",
           "impact_radius": 74,
           "sample_dependents": [
+            "src::app::commands",
+            "src::app::adapters::web::data_cost",
             "src::app::adapters::web::routes::dashboard",
-            "src::infra::context_store",
-            "src::app::commands::context",
-            "src::app",
-            "src::app::agent"
+            "src::app::adapters::web::routes",
+            "src::app::adapters::web::view::cost"
           ]
         },
         {
           "component": "events",
           "impact_radius": 61,
           "sample_dependents": [
-            "src::app::alerts",
-            "src::infra::context_store",
-            "src::app::commands::remind",
-            "src::app::commands::sm",
-            "src::infra::sm_store"
+            "src::app::adapters::web::routes::cost_feed",
+            "src::app::adapters::web::data_cost",
+            "src::app::adapters",
+            "src::app::adapters::web::routes::github_webhook",
+            "src::app::bus"
           ]
         },
         {
           "component": "config_types",
           "impact_radius": 60,
           "sample_dependents": [
-            "src::app::alerts",
-            "src::infra::context_store",
-            "src::app::commands::remind",
-            "src::app::commands::sm",
-            "src::infra::sm_store"
+            "src::app::adapters::web::routes::cost_feed",
+            "src::app::adapters::web::data_cost",
+            "src::app::adapters",
+            "src::app::adapters::web::routes::github_webhook",
+            "src::app::bus"
           ]
         },
         {
           "component": "workitem",
           "impact_radius": 60,
           "sample_dependents": [
-            "src::app::alerts",
-            "src::infra::context_store",
-            "src::app::commands::remind",
-            "src::app::commands::sm",
-            "src::infra::sm_store"
+            "src::app::adapters::web::routes::cost_feed",
+            "src::app::adapters::web::data_cost",
+            "src::app::adapters",
+            "src::app::adapters::web::routes::github_webhook",
+            "src::app::bus"
           ]
         }
       ],
