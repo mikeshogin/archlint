@@ -24,95 +24,95 @@
           "package": "git-cliff-core::src::lib",
           "domains_count": 17,
           "domains": [
-            "tag",
-            "contributor",
-            "command",
-            "remote",
-            "error",
-            "repo",
-            "commit",
+            "tracing_indicatif",
             "tracing",
+            "contributor",
+            "repo",
+            "changelog",
+            "remote",
             "release",
-            "statistics"
+            "statistics",
+            "summary",
+            "process"
           ]
         },
         {
           "package": "git-cliff-core::src::remote",
           "domains_count": 16,
           "domains": [
-            "git-cliff-core::error",
-            "secrecy",
-            "dyn_clone",
-            "http_cache_reqwest",
-            "gitea",
-            "reqwest",
+            "gitlab",
             "etcetera",
+            "secrecy",
+            "bitbucket",
+            "serde",
+            "git-cliff-core::contributor",
+            "time",
             "reqwest_middleware",
             "git-cliff-core::config",
-            "git-cliff-core::contributor"
+            "git-cliff-core::error"
           ]
         },
         {
           "package": "git-cliff-core::src::config",
           "domains_count": 12,
           "domains": [
-            "test",
-            "git-cliff-core::error",
-            "temp_dir",
+            "etcetera",
             "secrecy",
-            "glob",
-            "git-cliff-core::embed",
-            "serde_pattern",
+            "regex",
             "pretty_assertions",
-            "serde",
-            "regex"
+            "git-cliff-core::error",
+            "test",
+            "temp_dir",
+            "serde_pattern",
+            "glob",
+            "git-cliff-core::embed"
           ]
         },
         {
           "package": "git-cliff-core::src::template",
           "domains_count": 11,
           "domains": [
-            "test",
-            "git-cliff-core::error",
             "git-cliff-core::commit",
             "serde_json",
             "git-cliff-core::release",
             "semver",
             "indexmap",
-            "git-cliff-core::config",
             "tera",
-            "serde"
+            "regex",
+            "git-cliff-core::config",
+            "git-cliff-core::error",
+            "test"
           ]
         },
         {
           "package": "git-cliff-core::src::repo",
           "domains_count": 11,
           "domains": [
-            "test",
-            "git-cliff-core::error",
             "git-cliff-core::commit",
-            "temp_dir",
-            "git2",
+            "git-cliff-core::tag",
             "url",
             "indexmap",
-            "glob",
+            "regex",
             "git-cliff-core::config",
-            "git-cliff-core::tag"
+            "git-cliff-core::error",
+            "test",
+            "temp_dir",
+            "git2"
           ]
         },
         {
           "package": "git-cliff-core::src::changelog",
           "domains_count": 11,
           "domains": [
-            "test",
-            "git-cliff-core::remote",
-            "git-cliff-core::error",
             "git-cliff-core::commit",
             "git-cliff-core::release",
-            "git-cliff-core::config",
-            "regex",
             "git-cliff-core::template",
             "pretty_assertions",
+            "git-cliff-core::config",
+            "regex",
+            "git-cliff-core::error",
+            "git-cliff-core::remote",
+            "test",
             "git-cliff-core::summary"
           ]
         },
@@ -120,15 +120,15 @@
           "package": "git-cliff-core::src::release",
           "domains_count": 11,
           "domains": [
-            "test",
-            "git-cliff-core::remote",
-            "git-cliff-core::error",
             "git-cliff-core::commit",
             "serde_json",
-            "git-cliff-core::statistics",
             "semver",
+            "pretty_assertions",
             "git-cliff-core::config",
+            "git-cliff-core::error",
             "next_version",
+            "test",
+            "git-cliff-core::remote",
             "serde"
           ]
         },
@@ -136,45 +136,45 @@
           "package": "git-cliff-core::src::remote::github",
           "domains_count": 9,
           "domains": [
+            "pretty_assertions",
+            "git-cliff-core::config",
+            "async_stream",
+            "reqwest_middleware",
+            "git-cliff-core::error",
             "test",
             "git-cliff-core::remote",
-            "git-cliff-core::error",
-            "async_stream",
             "futures",
-            "git-cliff-core::config",
-            "reqwest_middleware",
-            "serde",
-            "pretty_assertions"
+            "serde"
           ]
         },
         {
           "package": "git-cliff-core::src::remote::bitbucket",
           "domains_count": 9,
           "domains": [
+            "pretty_assertions",
+            "git-cliff-core::config",
+            "async_stream",
+            "reqwest_middleware",
+            "git-cliff-core::error",
             "test",
             "git-cliff-core::remote",
-            "git-cliff-core::error",
-            "async_stream",
             "futures",
-            "git-cliff-core::config",
-            "reqwest_middleware",
-            "serde",
-            "pretty_assertions"
+            "serde"
           ]
         },
         {
           "package": "git-cliff-core::src::remote::gitea",
           "domains_count": 9,
           "domains": [
+            "pretty_assertions",
+            "git-cliff-core::config",
+            "async_stream",
+            "reqwest_middleware",
+            "git-cliff-core::error",
             "test",
             "git-cliff-core::remote",
-            "git-cliff-core::error",
-            "async_stream",
             "futures",
-            "git-cliff-core::config",
-            "reqwest_middleware",
-            "serde",
-            "pretty_assertions"
+            "serde"
           ]
         }
       ],
