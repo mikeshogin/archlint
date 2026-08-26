@@ -24,15 +24,15 @@
           "package": "src::export",
           "domains_count": 15,
           "domains": [
+            "tests",
             "src::json",
-            "json",
             "asciidoc",
-            "src::markdown",
-            "src::csv",
+            "json",
             "src::options",
-            "src::benchmark",
-            "markdown",
-            "markup",
+            "src::markdown",
+            "orgmode",
+            "src::asciidoc",
+            "csv",
             "src::orgmode"
           ]
         },
@@ -41,42 +41,42 @@
           "domains_count": 12,
           "domains": [
             "benchmark_result",
-            "timing_result",
-            "src::executor",
+            "src::outlier_detection",
+            "relative_speed",
             "src::command",
-            "src::options",
             "scheduler",
             "src::parameter",
-            "src::outlier_detection",
-            "src::output",
-            "relative_speed"
+            "src::options",
+            "src::executor",
+            "timing_result",
+            "src::output"
           ]
         },
         {
           "package": "src::main",
           "domains_count": 11,
           "domains": [
+            "util",
             "error",
+            "outlier_detection",
+            "output",
+            "benchmark",
+            "parameter",
             "timer",
             "options",
-            "cli",
-            "output",
             "command",
-            "export",
-            "util",
-            "parameter",
-            "outlier_detection"
+            "export"
           ]
         },
         {
           "package": "src::timer",
           "domains_count": 6,
           "domains": [
-            "nix",
-            "windows_sys",
-            "unix_timer",
             "windows_timer",
+            "nix",
+            "unix_timer",
             "wall_clock_timer",
+            "windows_sys",
             "src::util"
           ]
         },
@@ -85,10 +85,10 @@
           "domains_count": 6,
           "domains": [
             "src::command",
-            "src::options",
-            "src::timing_result",
-            "src::output",
             "src::timer",
+            "src::timing_result",
+            "src::options",
+            "src::output",
             "src::util"
           ]
         },
@@ -96,11 +96,11 @@
           "package": "src::benchmark::scheduler",
           "domains_count": 6,
           "domains": [
-            "src::executor",
             "src::export",
             "src::command",
-            "src::options",
             "src::benchmark_result",
+            "src::executor",
+            "src::options",
             "src::cli"
           ]
         },
@@ -108,10 +108,10 @@
           "package": "src::export::markup",
           "domains_count": 5,
           "domains": [
-            "src::Exporter",
             "src::options",
-            "src::benchmark",
+            "src::Exporter",
             "src::output",
+            "src::benchmark",
             "src::util"
           ]
         },
@@ -121,9 +121,9 @@
           "domains": [
             "units",
             "number",
+            "exit_code",
             "randomized_environment_offset",
-            "min_max",
-            "exit_code"
+            "min_max"
           ]
         },
         {
