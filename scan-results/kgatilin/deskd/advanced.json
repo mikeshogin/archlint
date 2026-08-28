@@ -39,9 +39,9 @@
       "name": "modularity",
       "description": "Модульность графа должна быть >= 0.3",
       "status": "PASSED",
-      "modularity": 0.577,
+      "modularity": 0.578,
       "threshold": 0.3,
-      "communities_count": 28
+      "communities_count": 30
     },
     {
       "name": "abstractness",
@@ -629,110 +629,110 @@
           "component": "tests",
           "impact_radius": 124,
           "sample_dependents": [
-            "src::app::adapters::discord",
-            "src::app::adapters::web::routes::agent_detail",
-            "src::app::adapters::federation::glob",
-            "src::main",
-            "src::app::adapters::web::templates"
+            "src::app::scope",
+            "src::app::commands::remind",
+            "src::infra::dto::task",
+            "src::app::adapters::web::view::chart",
+            "src::app::context_size"
           ]
         },
         {
           "component": "task",
           "impact_radius": 95,
           "sample_dependents": [
-            "src::app::adapters::discord",
-            "src::app::adapters::web::routes::agent_detail",
-            "src::app::adapters::web::view::cost",
-            "src::app::adapters::web::data_chart",
-            "src::app::a2a"
+            "src::app::commands::remind",
+            "src::app::commands::task",
+            "src::infra::dto::task",
+            "src::app::adapters::web::view::chart",
+            "src::app::context_size"
           ]
         },
         {
           "component": "context",
           "impact_radius": 94,
           "sample_dependents": [
-            "src::app::adapters::discord",
-            "src::app::adapters::web::routes::agent_detail",
-            "src::app::adapters::web::view::cost",
-            "src::app::adapters::web::data_chart",
-            "src::app::a2a"
+            "src::app::commands::remind",
+            "src::app::commands::task",
+            "src::infra::dto::task",
+            "src::app::adapters::web::view::chart",
+            "src::app::context_size"
           ]
         },
         {
           "component": "agent",
           "impact_radius": 93,
           "sample_dependents": [
-            "src::app::adapters::discord",
-            "src::app::adapters::web::routes::agent_detail",
-            "src::app::adapters::web::view::cost",
-            "src::app::adapters::web::data_chart",
-            "src::app::a2a"
+            "src::app::commands::remind",
+            "src::app::commands::task",
+            "src::infra::dto::task",
+            "src::app::adapters::web::view::chart",
+            "src::app::context_size"
           ]
         },
         {
           "component": "message",
           "impact_radius": 92,
           "sample_dependents": [
-            "src::app::adapters::discord",
-            "src::app::adapters::web::routes::agent_detail",
-            "src::app::adapters::web::view::cost",
-            "src::app::adapters::web::data_chart",
-            "src::app::a2a"
+            "src::app::commands::remind",
+            "src::app::commands::task",
+            "src::infra::dto::task",
+            "src::app::adapters::web::view::chart",
+            "src::app::context_size"
           ]
         },
         {
           "component": "statemachine",
           "impact_radius": 92,
           "sample_dependents": [
-            "src::app::adapters::discord",
-            "src::app::adapters::web::routes::agent_detail",
-            "src::app::adapters::web::view::cost",
-            "src::app::adapters::web::data_chart",
-            "src::app::a2a"
+            "src::app::commands::remind",
+            "src::app::commands::task",
+            "src::infra::dto::task",
+            "src::app::adapters::web::view::chart",
+            "src::app::context_size"
           ]
         },
         {
           "component": "bus",
           "impact_radius": 74,
           "sample_dependents": [
-            "src::app::adapters::web::routes::agent_detail",
-            "src::app::adapters::web::view::cost",
-            "src::app::adapters::web::data_chart",
-            "src::infra::context_store",
-            "src::app::doctor"
+            "src::app::commands::task",
+            "src::app::adapters::web::view::chart",
+            "src::app::context_size",
+            "src::app::serve",
+            "src::infra::dto"
           ]
         },
         {
           "component": "events",
           "impact_radius": 61,
           "sample_dependents": [
-            "src::app::adapters::discord",
+            "src::app::context",
             "src::app::worker",
-            "src::app::config_reload",
-            "src::app::adapters::web::view::cost",
-            "src::app::commands::reload"
+            "src::app::commands::remind",
+            "src::app::bus",
+            "src::infra::dto::task"
           ]
         },
         {
           "component": "config_types",
           "impact_radius": 60,
           "sample_dependents": [
-            "src::app::adapters::discord",
+            "src::app::context",
             "src::app::worker",
-            "src::app::config_reload",
-            "src::app::adapters::web::view::cost",
-            "src::app::commands::reload"
+            "src::app::commands::remind",
+            "src::app::bus",
+            "src::infra::dto::task"
           ]
         },
         {
           "component": "workitem",
           "impact_radius": 60,
           "sample_dependents": [
-            "src::app::adapters::discord",
+            "src::app::context",
             "src::app::worker",
-            "src::app::config_reload",
-            "src::app::adapters::web::view::cost",
-            "src::app::commands::reload"
+            "src::app::commands::remind",
+            "src::app::bus",
+            "src::infra::dto::task"
           ]
         }
       ],
