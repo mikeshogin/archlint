@@ -629,110 +629,110 @@
           "component": "tests",
           "impact_radius": 124,
           "sample_dependents": [
-            "src::app::agent_registry",
-            "src::app::commands::bus",
-            "src::infra::dto::bus",
-            "src::app::adapters::web",
-            "src::app::adapters::federation::registry"
+            "src::app::adapters::web::data",
+            "src::app::adapters::web::auth::session",
+            "src::app::schedule",
+            "src::app::adapters::web::view::breadcrumb",
+            "src::app::mcp_tools"
           ]
         },
         {
           "component": "task",
           "impact_radius": 95,
           "sample_dependents": [
-            "src::app::adapters::web::routes::dashboard",
-            "src::app::agent_registry",
-            "src::app::commands::bus",
-            "src::app::adapters::web",
-            "src::ports::store"
+            "src::app::adapters::web::data",
+            "src::app::schedule",
+            "src::app::mcp_tools",
+            "src::app::adapters::web::routes::sse",
+            "src::app::bus_api"
           ]
         },
         {
           "component": "context",
           "impact_radius": 94,
           "sample_dependents": [
-            "src::app::adapters::web::routes::dashboard",
-            "src::app::agent_registry",
-            "src::app::commands::bus",
-            "src::app::adapters::web",
-            "src::ports::store"
+            "src::app::adapters::web::data",
+            "src::app::schedule",
+            "src::app::mcp_tools",
+            "src::app::adapters::web::routes::sse",
+            "src::app::bus_api"
           ]
         },
         {
           "component": "agent",
           "impact_radius": 93,
           "sample_dependents": [
-            "src::app::adapters::web::routes::dashboard",
-            "src::app::agent_registry",
-            "src::app::commands::bus",
-            "src::app::adapters::web",
-            "src::ports::store"
+            "src::app::adapters::web::data",
+            "src::app::schedule",
+            "src::app::mcp_tools",
+            "src::app::adapters::web::routes::sse",
+            "src::app::bus_api"
           ]
         },
         {
           "component": "message",
           "impact_radius": 92,
           "sample_dependents": [
-            "src::app::adapters::web::routes::dashboard",
-            "src::app::agent_registry",
-            "src::app::commands::bus",
-            "src::app::adapters::web",
-            "src::ports::store"
+            "src::app::adapters::web::data",
+            "src::app::schedule",
+            "src::app::mcp_tools",
+            "src::app::adapters::web::routes::sse",
+            "src::app::bus_api"
           ]
         },
         {
           "component": "statemachine",
           "impact_radius": 92,
           "sample_dependents": [
-            "src::app::adapters::web::routes::dashboard",
-            "src::app::agent_registry",
-            "src::app::commands::bus",
-            "src::app::adapters::web",
-            "src::ports::store"
+            "src::app::adapters::web::data",
+            "src::app::schedule",
+            "src::app::mcp_tools",
+            "src::app::adapters::web::routes::sse",
+            "src::app::bus_api"
           ]
         },
         {
           "component": "bus",
           "impact_radius": 74,
           "sample_dependents": [
-            "src::app::adapters::web::routes::dashboard",
-            "src::app::commands::bus",
-            "src::app::adapters::web",
-            "src::infra::dto::bus",
-            "src::app::mcp"
+            "src::app::adapters::web::data",
+            "src::app::schedule",
+            "src::app::mcp_tools",
+            "src::app::adapters::web::routes::sse",
+            "src::app::bus_api"
           ]
         },
         {
           "component": "events",
           "impact_radius": 61,
           "sample_dependents": [
-            "src::app::agent_registry",
-            "src::app::commands::bus",
-            "src::infra::sm_store",
-            "src::ports::store",
-            "src::infra::dto::bus"
+            "src::app::adapters::web::data",
+            "src::app::agent_process",
+            "src::app::mcp_service",
+            "src::app::alerts",
+            "src::app::transcript_extractor"
           ]
         },
         {
           "component": "config_types",
           "impact_radius": 60,
           "sample_dependents": [
-            "src::app::agent_registry",
-            "src::app::commands::bus",
-            "src::infra::sm_store",
-            "src::ports::store",
-            "src::infra::dto::bus"
+            "src::app::adapters::web::data",
+            "src::app::agent_process",
+            "src::app::mcp_service",
+            "src::app::alerts",
+            "src::app::schedule"
           ]
         },
         {
           "component": "workitem",
           "impact_radius": 60,
           "sample_dependents": [
-            "src::app::agent_registry",
-            "src::app::commands::bus",
-            "src::infra::sm_store",
-            "src::ports::store",
-            "src::infra::dto::bus"
+            "src::app::adapters::web::data",
+            "src::app::agent_process",
+            "src::app::mcp_service",
+            "src::app::alerts",
+            "src::app::schedule"
           ]
         }
       ],

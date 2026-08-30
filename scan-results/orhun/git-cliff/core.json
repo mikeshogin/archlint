@@ -11,7 +11,7 @@
   },
   "graph": {
     "nodes": 105,
-    "edges": 211
+    "edges": 212
   },
   "checks": [
     {
@@ -49,7 +49,7 @@
         },
         {
           "node": "git-cliff-core::src::changelog",
-          "fan_out": 11,
+          "fan_out": 12,
           "threshold": 10
         },
         {
@@ -103,7 +103,7 @@
         {
           "node": "git-cliff-core::src::changelog",
           "afferent_coupling": 0,
-          "efferent_coupling": 11,
+          "efferent_coupling": 12,
           "ca_threshold": 10,
           "ce_threshold": 10
         },
@@ -311,6 +311,12 @@
           "out_degree": 12
         },
         {
+          "node": "git-cliff-core::src::changelog",
+          "total_degree": 12,
+          "in_degree": 0,
+          "out_degree": 12
+        },
+        {
           "node": "git-cliff-core::src::template",
           "total_degree": 11,
           "in_degree": 0,
@@ -318,12 +324,6 @@
         },
         {
           "node": "git-cliff-core::src::repo",
-          "total_degree": 11,
-          "in_degree": 0,
-          "out_degree": 11
-        },
-        {
-          "node": "git-cliff-core::src::changelog",
           "total_degree": 11,
           "in_degree": 0,
           "out_degree": 11

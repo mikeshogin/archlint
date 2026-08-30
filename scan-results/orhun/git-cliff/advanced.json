@@ -11,7 +11,7 @@
   },
   "graph": {
     "nodes": 105,
-    "edges": 211
+    "edges": 212
   },
   "checks": [
     {
@@ -243,15 +243,15 @@
           "coefficient": 0.0
         }
       ],
-      "low_clustering_count": 56
+      "low_clustering_count": 57
     },
     {
       "name": "edge_density",
       "description": "Плотность графа между 0.01 и 0.3",
       "status": "PASSED",
-      "density": 0.0193,
+      "density": 0.0194,
       "nodes": 105,
-      "edges": 211,
+      "edges": 212,
       "max_possible_edges": 10920
     },
     {
@@ -333,10 +333,6 @@
         },
         {
           "from": "git-cliff-core::src::config",
-          "to": "git-cliff-core::embed"
-        },
-        {
-          "from": "git-cliff-core::src::config",
           "to": "serde_pattern"
         },
         {
@@ -366,9 +362,13 @@
         {
           "from": "git-cliff-core::src::lib",
           "to": "changelog"
+        },
+        {
+          "from": "git-cliff-core::src::lib",
+          "to": "command"
         }
       ],
-      "count": 50
+      "count": 49
     },
     {
       "name": "graph_diameter",
@@ -381,7 +381,7 @@
       "name": "avg_path_length",
       "description": "Средняя длина пути <= 5.0",
       "status": "PASSED",
-      "avg_path_length": 4.559,
+      "avg_path_length": 4.556,
       "threshold": 5.0
     },
     {
@@ -441,11 +441,11 @@
       "influential_nodes": [
         {
           "node": "test",
-          "eigenvector": 0.453
+          "eigenvector": 0.452
         },
         {
           "node": "git-cliff-core::error",
-          "eigenvector": 0.428
+          "eigenvector": 0.427
         },
         {
           "node": "git-cliff-core::config",
@@ -460,11 +460,11 @@
       "top_5": [
         {
           "node": "test",
-          "eigenvector": 0.453
+          "eigenvector": 0.452
         },
         {
           "node": "git-cliff-core::error",
-          "eigenvector": 0.428
+          "eigenvector": 0.427
         },
         {
           "node": "git-cliff-core::config",
@@ -476,7 +476,7 @@
         },
         {
           "node": "pretty_assertions",
-          "eigenvector": 0.252
+          "eigenvector": 0.251
         }
       ]
     },
@@ -487,8 +487,8 @@
       "max_k_core": 6,
       "threshold": 5,
       "core_distribution": {
-        "1": 49,
-        "2": 22,
+        "1": 48,
+        "2": 23,
         "3": 9,
         "4": 1,
         "5": 12,
@@ -526,19 +526,19 @@
       "threshold": 4,
       "large_cliques": [],
       "large_cliques_count": 0,
-      "total_cliques": 211
+      "total_cliques": 212
     },
     {
       "name": "degree_distribution",
       "description": "Распределение степеней узлов",
       "status": "INFO",
-      "mean_degree": 4.02,
-      "std_degree": 4.25,
+      "mean_degree": 4.04,
+      "std_degree": 4.26,
       "max_degree": 18,
       "min_degree": 1,
       "distribution": {
-        "1": 49,
-        "2": 9,
+        "1": 48,
+        "2": 10,
         "3": 11,
         "4": 3,
         "5": 4,
@@ -547,8 +547,8 @@
         "8": 2,
         "9": 7,
         "10": 1,
-        "11": 4,
-        "12": 1,
+        "11": 3,
+        "12": 2,
         "13": 1,
         "14": 1,
         "16": 1,
@@ -562,7 +562,7 @@
       "name": "dependency_entropy",
       "description": "Энтропия распределения зависимостей",
       "status": "PASSED",
-      "entropy": 4.634,
+      "entropy": 4.632,
       "max_entropy": 6.714,
       "normalized_entropy": 0.69
     },
@@ -582,22 +582,22 @@
         {
           "node": "test",
           "degree": 18,
-          "z_score": 3.29
+          "z_score": 3.28
         },
         {
           "node": "git-cliff-core::src::lib",
           "degree": 17,
-          "z_score": 3.05
+          "z_score": 3.04
         },
         {
           "node": "git-cliff-core::error",
           "degree": 17,
-          "z_score": 3.05
+          "z_score": 3.04
         }
       ],
       "outliers_count": 3,
-      "mean_degree": 4.02,
-      "std_degree": 4.25,
+      "mean_degree": 4.04,
+      "std_degree": 4.26,
       "z_threshold": 3.0
     },
     {
@@ -630,7 +630,7 @@
       "description": "Радиус изменений <= 20 компонентов",
       "status": "PASSED",
       "threshold": 20,
-      "avg_impact": 2.01,
+      "avg_impact": 2.02,
       "max_impact": 18,
       "top_impact": [
         {
