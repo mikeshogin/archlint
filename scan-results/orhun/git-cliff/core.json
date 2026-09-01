@@ -10,8 +10,8 @@
     "errors": 2
   },
   "graph": {
-    "nodes": 105,
-    "edges": 212
+    "nodes": 110,
+    "edges": 218
   },
   "checks": [
     {
@@ -34,7 +34,7 @@
         },
         {
           "node": "git-cliff-core::src::remote",
-          "fan_out": 16,
+          "fan_out": 17,
           "threshold": 10
         },
         {
@@ -54,7 +54,7 @@
         },
         {
           "node": "git-cliff-core::src::lib",
-          "fan_out": 17,
+          "fan_out": 18,
           "threshold": 10
         },
         {
@@ -82,7 +82,7 @@
         {
           "node": "git-cliff-core::src::remote",
           "afferent_coupling": 0,
-          "efferent_coupling": 16,
+          "efferent_coupling": 17,
           "ca_threshold": 10,
           "ce_threshold": 10
         },
@@ -110,7 +110,7 @@
         {
           "node": "git-cliff-core::src::lib",
           "afferent_coupling": 0,
-          "efferent_coupling": 17,
+          "efferent_coupling": 18,
           "ca_threshold": 10,
           "ce_threshold": 10
         },
@@ -130,14 +130,14 @@
         },
         {
           "node": "git-cliff-core::error",
-          "afferent_coupling": 17,
+          "afferent_coupling": 18,
           "efferent_coupling": 0,
           "ca_threshold": 10,
           "ce_threshold": 10
         },
         {
           "node": "test",
-          "afferent_coupling": 18,
+          "afferent_coupling": 19,
           "efferent_coupling": 0,
           "ca_threshold": 10,
           "ce_threshold": 10
@@ -276,27 +276,27 @@
       "hubs": [
         {
           "node": "test",
+          "total_degree": 19,
+          "in_degree": 19,
+          "out_degree": 0
+        },
+        {
+          "node": "git-cliff-core::src::lib",
+          "total_degree": 18,
+          "in_degree": 0,
+          "out_degree": 18
+        },
+        {
+          "node": "git-cliff-core::error",
           "total_degree": 18,
           "in_degree": 18,
           "out_degree": 0
         },
         {
-          "node": "git-cliff-core::src::lib",
+          "node": "git-cliff-core::src::remote",
           "total_degree": 17,
           "in_degree": 0,
           "out_degree": 17
-        },
-        {
-          "node": "git-cliff-core::error",
-          "total_degree": 17,
-          "in_degree": 17,
-          "out_degree": 0
-        },
-        {
-          "node": "git-cliff-core::src::remote",
-          "total_degree": 16,
-          "in_degree": 0,
-          "out_degree": 16
         },
         {
           "node": "git-cliff-core::config",
@@ -348,7 +348,7 @@
       "name": "strongly_connected_components",
       "description": "Группы с взаимными зависимостями (размер > 1)",
       "status": "PASSED",
-      "total_sccs": 105,
+      "total_sccs": 110,
       "problematic_sccs": [],
       "problematic_count": 0
     },

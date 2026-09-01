@@ -10,8 +10,8 @@
     "errors": 0
   },
   "graph": {
-    "nodes": 105,
-    "edges": 212
+    "nodes": 110,
+    "edges": 218
   },
   "checks": [
     {
@@ -34,7 +34,7 @@
       "name": "modularity",
       "description": "Модульность графа должна быть >= 0.3",
       "status": "PASSED",
-      "modularity": 0.505,
+      "modularity": 0.516,
       "threshold": 0.3,
       "communities_count": 6
     },
@@ -44,8 +44,8 @@
       "status": "WARNING",
       "abstractness": 0.0,
       "abstract_count": 0,
-      "concrete_count": 105,
-      "total_count": 105,
+      "concrete_count": 110,
+      "total_count": 110,
       "min_threshold": 0.1,
       "max_threshold": 0.8,
       "issue": "Слишком мало абстракций (< 0.1)"
@@ -193,7 +193,7 @@
           "issue": "Зона боли: конкретный и стабильный"
         }
       ],
-      "violations_count": 67
+      "violations_count": 71
     },
     {
       "name": "clustering_coefficient",
@@ -243,16 +243,16 @@
           "coefficient": 0.0
         }
       ],
-      "low_clustering_count": 57
+      "low_clustering_count": 58
     },
     {
       "name": "edge_density",
       "description": "Плотность графа между 0.01 и 0.3",
       "status": "PASSED",
-      "density": 0.0194,
-      "nodes": 105,
-      "edges": 212,
-      "max_possible_edges": 10920
+      "density": 0.0182,
+      "nodes": 110,
+      "edges": 218,
+      "max_possible_edges": 11990
     },
     {
       "name": "articulation_points",
@@ -265,6 +265,7 @@
         "git-cliff-core::src::statistics",
         "git-cliff-core::src::embed",
         "test",
+        "git-cliff-core::src::markdown",
         "git-cliff-core::src::error",
         "git-cliff-core::src::release",
         "git-cliff-core::src::changelog",
@@ -279,7 +280,7 @@
         "git-cliff-core::src::repo",
         "git-cliff-core::src::template"
       ],
-      "count": 19,
+      "count": 20,
       "recommendation": "Уменьшить зависимость от критических узлов"
     },
     {
@@ -310,6 +311,10 @@
         {
           "from": "git-cliff-core::src::remote",
           "to": "azure_devops"
+        },
+        {
+          "from": "git-cliff-core::src::remote",
+          "to": "cacache"
         },
         {
           "from": "git-cliff-core::src::remote",
@@ -362,13 +367,9 @@
         {
           "from": "git-cliff-core::src::lib",
           "to": "changelog"
-        },
-        {
-          "from": "git-cliff-core::src::lib",
-          "to": "command"
         }
       ],
-      "count": 49
+      "count": 53
     },
     {
       "name": "graph_diameter",
@@ -381,7 +382,7 @@
       "name": "avg_path_length",
       "description": "Средняя длина пути <= 5.0",
       "status": "PASSED",
-      "avg_path_length": 4.556,
+      "avg_path_length": 4.611,
       "threshold": 5.0
     },
     {
@@ -392,46 +393,46 @@
       "peripheral_nodes": [
         {
           "node": "test",
-          "closeness": 0.173
+          "closeness": 0.174
         },
         {
           "node": "git-cliff-core::error",
-          "closeness": 0.163
+          "closeness": 0.165
         },
         {
           "node": "git-cliff-core::config",
-          "closeness": 0.135
+          "closeness": 0.128
         },
         {
           "node": "serde",
-          "closeness": 0.125
+          "closeness": 0.119
         },
         {
           "node": "pretty_assertions",
-          "closeness": 0.096
+          "closeness": 0.092
         },
         {
           "node": "regex",
-          "closeness": 0.087
+          "closeness": 0.083
         },
         {
           "node": "git-cliff-core::remote",
-          "closeness": 0.067
+          "closeness": 0.064
         },
         {
           "node": "git_cliff_core",
-          "closeness": 0.067
+          "closeness": 0.064
         },
         {
           "node": "git-cliff-core::commit",
-          "closeness": 0.058
+          "closeness": 0.055
         },
         {
           "node": "reqwest_middleware",
-          "closeness": 0.058
+          "closeness": 0.055
         }
       ],
-      "avg_closeness": 0.019
+      "avg_closeness": 0.018
     },
     {
       "name": "eigenvector_centrality",
@@ -441,42 +442,42 @@
       "influential_nodes": [
         {
           "node": "test",
-          "eigenvector": 0.452
+          "eigenvector": 0.466
         },
         {
           "node": "git-cliff-core::error",
-          "eigenvector": 0.427
+          "eigenvector": 0.442
         },
         {
           "node": "git-cliff-core::config",
-          "eigenvector": 0.352
+          "eigenvector": 0.344
         },
         {
           "node": "serde",
-          "eigenvector": 0.327
+          "eigenvector": 0.319
         }
       ],
       "influential_count": 4,
       "top_5": [
         {
           "node": "test",
-          "eigenvector": 0.452
+          "eigenvector": 0.466
         },
         {
           "node": "git-cliff-core::error",
-          "eigenvector": 0.427
+          "eigenvector": 0.442
         },
         {
           "node": "git-cliff-core::config",
-          "eigenvector": 0.352
+          "eigenvector": 0.344
         },
         {
           "node": "serde",
-          "eigenvector": 0.327
+          "eigenvector": 0.319
         },
         {
           "node": "pretty_assertions",
-          "eigenvector": 0.251
+          "eigenvector": 0.246
         }
       ]
     },
@@ -487,8 +488,8 @@
       "max_k_core": 6,
       "threshold": 5,
       "core_distribution": {
-        "1": 48,
-        "2": 23,
+        "1": 52,
+        "2": 24,
         "3": 9,
         "4": 1,
         "5": 12,
@@ -526,21 +527,21 @@
       "threshold": 4,
       "large_cliques": [],
       "large_cliques_count": 0,
-      "total_cliques": 212
+      "total_cliques": 218
     },
     {
       "name": "degree_distribution",
       "description": "Распределение степеней узлов",
       "status": "INFO",
-      "mean_degree": 4.04,
-      "std_degree": 4.26,
-      "max_degree": 18,
+      "mean_degree": 3.96,
+      "std_degree": 4.32,
+      "max_degree": 19,
       "min_degree": 1,
       "distribution": {
-        "1": 48,
+        "1": 52,
         "2": 10,
         "3": 11,
-        "4": 3,
+        "4": 4,
         "5": 4,
         "6": 6,
         "7": 2,
@@ -551,9 +552,9 @@
         "12": 2,
         "13": 1,
         "14": 1,
-        "16": 1,
-        "17": 2,
-        "18": 1
+        "17": 1,
+        "18": 2,
+        "19": 1
       },
       "is_scale_free": true,
       "interpretation": "Scale-free сеть (hub-dominated)"
@@ -562,15 +563,15 @@
       "name": "dependency_entropy",
       "description": "Энтропия распределения зависимостей",
       "status": "PASSED",
-      "entropy": 4.632,
-      "max_entropy": 6.714,
-      "normalized_entropy": 0.69
+      "entropy": 4.67,
+      "max_entropy": 6.781,
+      "normalized_entropy": 0.689
     },
     {
       "name": "gini_coefficient",
       "description": "Коэффициент Джини <= 0.6",
       "status": "PASSED",
-      "gini": 0.518,
+      "gini": 0.524,
       "threshold": 0.6,
       "interpretation": "Неравномерно"
     },
@@ -581,30 +582,35 @@
       "outliers": [
         {
           "node": "test",
-          "degree": 18,
-          "z_score": 3.28
+          "degree": 19,
+          "z_score": 3.48
         },
         {
           "node": "git-cliff-core::src::lib",
-          "degree": 17,
-          "z_score": 3.04
+          "degree": 18,
+          "z_score": 3.25
         },
         {
           "node": "git-cliff-core::error",
+          "degree": 18,
+          "z_score": 3.25
+        },
+        {
+          "node": "git-cliff-core::src::remote",
           "degree": 17,
-          "z_score": 3.04
+          "z_score": 3.02
         }
       ],
-      "outliers_count": 3,
-      "mean_degree": 4.04,
-      "std_degree": 4.26,
+      "outliers_count": 4,
+      "mean_degree": 3.96,
+      "std_degree": 4.32,
       "z_threshold": 3.0
     },
     {
       "name": "algebraic_connectivity",
       "description": "Алгебраическая связность >= 0.1",
       "status": "WARNING",
-      "algebraic_connectivity": 0.0271,
+      "algebraic_connectivity": 0.0256,
       "threshold": 0.1,
       "interpretation": "Слабо связан",
       "issue": "Слабая связность - граф легко разбить"
@@ -614,7 +620,7 @@
       "description": "Спектральный радиус матрицы смежности",
       "status": "INFO",
       "spectral_radius": 0.0,
-      "max_degree": 18,
+      "max_degree": 19,
       "interpretation": "Коррелирует с максимальной степенью"
     },
     {
@@ -630,16 +636,16 @@
       "description": "Радиус изменений <= 20 компонентов",
       "status": "PASSED",
       "threshold": 20,
-      "avg_impact": 2.02,
-      "max_impact": 18,
+      "avg_impact": 1.98,
+      "max_impact": 19,
       "top_impact": [
         {
           "node": "test",
-          "impact": 18
+          "impact": 19
         },
         {
           "node": "git-cliff-core::error",
-          "impact": 17
+          "impact": 18
         },
         {
           "node": "git-cliff-core::config",
@@ -706,13 +712,20 @@
       "violations": [
         {
           "component": "git-cliff-core::src::lib",
+          "complexity": 54.0,
+          "in_degree": 0,
+          "out_degree": 18,
+          "betweenness": 0.0
+        },
+        {
+          "component": "git-cliff-core::src::remote",
           "complexity": 51.0,
           "in_degree": 0,
           "out_degree": 17,
           "betweenness": 0.0
         }
       ],
-      "violations_count": 1
+      "violations_count": 2
     }
   ]
 }
