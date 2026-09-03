@@ -629,110 +629,110 @@
           "component": "tests",
           "impact_radius": 124,
           "sample_dependents": [
-            "src::app::graph",
-            "src::app::agent_components",
-            "src::bin::session2graph",
+            "src::app::context",
+            "src::app::adapters::discord",
             "src::app::commands",
-            "src::app::a2a_server"
+            "src::app::adapters::telegram::attachments",
+            "src::app::serve"
           ]
         },
         {
           "component": "task",
           "impact_radius": 95,
           "sample_dependents": [
+            "src::app::context",
+            "src::app::adapters::discord",
             "src::app::commands",
-            "src::app::a2a_server",
-            "src::app::commands::schedule",
-            "src::app::commands::reload",
-            "src::app::adapters::web::panel"
+            "src::infra::dto",
+            "src::app::serve"
           ]
         },
         {
           "component": "context",
           "impact_radius": 94,
           "sample_dependents": [
+            "src::app::context",
+            "src::app::adapters::discord",
             "src::app::commands",
-            "src::app::a2a_server",
-            "src::app::commands::schedule",
-            "src::app::commands::reload",
-            "src::app::adapters::web::panel"
+            "src::infra::dto",
+            "src::app::serve"
           ]
         },
         {
           "component": "agent",
           "impact_radius": 93,
           "sample_dependents": [
+            "src::app::context",
+            "src::app::adapters::discord",
             "src::app::commands",
-            "src::app::a2a_server",
-            "src::app::commands::schedule",
-            "src::app::commands::reload",
-            "src::app::adapters::web::panel"
+            "src::app::serve",
+            "src::app::adapters::web"
           ]
         },
         {
           "component": "message",
           "impact_radius": 92,
           "sample_dependents": [
-            "src::app::a2a_server",
-            "src::app::commands::schedule",
-            "src::app::commands::reload",
-            "src::app::adapters::web::panel",
-            "src::app::adapters::federation::hub"
+            "src::app::context",
+            "src::app::adapters::discord",
+            "src::app::serve",
+            "src::app::adapters::web",
+            "src::app::session_discover"
           ]
         },
         {
           "component": "statemachine",
           "impact_radius": 92,
           "sample_dependents": [
-            "src::app::a2a_server",
-            "src::app::commands::schedule",
-            "src::app::commands::reload",
-            "src::app::adapters::web::panel",
-            "src::app::adapters::federation::hub"
+            "src::app::context",
+            "src::app::adapters::discord",
+            "src::app::serve",
+            "src::app::adapters::web",
+            "src::app::session_discover"
           ]
         },
         {
           "component": "bus",
           "impact_radius": 74,
           "sample_dependents": [
+            "src::app::context",
             "src::app::commands",
-            "src::app::a2a_server",
-            "src::app::commands::schedule",
-            "src::app::agent",
-            "src::app::adapters::web::panel"
+            "src::infra::dto",
+            "src::app::session_discover",
+            "src::app::serve"
           ]
         },
         {
           "component": "events",
           "impact_radius": 61,
           "sample_dependents": [
-            "src::app::mcp_tools",
-            "src::app::commands::schedule",
+            "src::app::context",
+            "src::app::adapters::discord",
             "src::app::commands::reload",
-            "src::app::config_reload",
-            "src::ports::bus_wire"
+            "src::app::serve",
+            "src::config"
           ]
         },
         {
           "component": "config_types",
           "impact_radius": 60,
           "sample_dependents": [
-            "src::app::mcp_tools",
-            "src::app::commands::schedule",
+            "src::app::context",
+            "src::app::adapters::discord",
             "src::app::commands::reload",
-            "src::app::config_reload",
-            "src::ports::bus_wire"
+            "src::app::serve",
+            "src::config"
           ]
         },
         {
           "component": "workitem",
           "impact_radius": 60,
           "sample_dependents": [
-            "src::app::mcp_tools",
-            "src::app::commands::schedule",
+            "src::app::context",
+            "src::app::adapters::discord",
             "src::app::commands::reload",
-            "src::app::config_reload",
-            "src::ports::bus_wire"
+            "src::app::serve",
+            "src::config"
           ]
         }
       ],
