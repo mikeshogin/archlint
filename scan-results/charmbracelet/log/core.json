@@ -44,39 +44,13 @@
       "status": "PASSED",
       "most_unstable": [
         {
-          "node": "stdlog",
+          "node": "text_test",
           "instability": 0.5,
           "ca": 0,
           "ce": 0
         },
         {
-          "node": "examples::app::app",
-          "instability": 0.5,
-          "ca": 0,
-          "ce": 0
-        },
-        {
-          "node": "examples::chocolate-chips::chocolate-chips",
-          "instability": 0.5,
-          "ca": 0,
-          "ce": 0
-        },
-        {
-          "node": "examples::error::error",
-          "instability": 0.5,
-          "ca": 0,
-          "ce": 0
-        },
-        {
-          "node": "examples::temperature::temperature",
-          "instability": 0.5,
-          "ca": 0,
-          "ce": 0
-        }
-      ],
-      "most_stable": [
-        {
-          "node": "json_test",
+          "node": "pkg_test",
           "instability": 0.5,
           "ca": 0,
           "ce": 0
@@ -88,19 +62,45 @@
           "ce": 0
         },
         {
-          "node": "styles",
+          "node": "logger_121_test",
           "instability": 0.5,
           "ca": 0,
           "ce": 0
         },
         {
-          "node": "options",
+          "node": "logger_test",
+          "instability": 0.5,
+          "ca": 0,
+          "ce": 0
+        }
+      ],
+      "most_stable": [
+        {
+          "node": "level_test",
           "instability": 0.5,
           "ca": 0,
           "ce": 0
         },
         {
-          "node": "level",
+          "node": "stdlog_test",
+          "instability": 0.5,
+          "ca": 0,
+          "ce": 0
+        },
+        {
+          "node": "logfmt",
+          "instability": 0.5,
+          "ca": 0,
+          "ce": 0
+        },
+        {
+          "node": "pkg",
+          "instability": 0.5,
+          "ca": 0,
+          "ce": 0
+        },
+        {
+          "node": "context_test",
           "instability": 0.5,
           "ca": 0,
           "ce": 0
@@ -174,26 +174,26 @@
       "description": "Компоненты без связей (возможно мертвый код)",
       "status": "WARNING",
       "orphans": [
-        "stdlog",
-        "examples::app::app",
-        "examples::chocolate-chips::chocolate-chips",
-        "examples::error::error",
-        "examples::temperature::temperature",
-        "examples::styles::styles",
-        "examples::log::log",
-        "examples::batch2::batch2",
-        "examples::oven::oven",
-        "examples::options::options",
-        "examples::new::new",
-        "examples::format::format",
+        "text_test",
+        "pkg_test",
+        "logger",
+        "logger_121_test",
+        "logger_test",
+        "json",
+        "doc",
+        "context",
+        "logger_no121",
         "examples::cookie::cookie",
         "examples::slog::main",
-        "level_test",
-        "options_test",
-        "logger_no121",
-        "json",
-        "logger_121",
-        "logfmt"
+        "examples::log::log",
+        "examples::new::new",
+        "examples::options::options",
+        "examples::format::format",
+        "examples::oven::oven",
+        "examples::app::app",
+        "examples::chocolate-chips::chocolate-chips",
+        "examples::batch2::batch2",
+        "examples::temperature::temperature"
       ],
       "orphans_count": 37
     },

@@ -79,7 +79,7 @@
           "issue": "Зона боли: конкретный и стабильный"
         },
         {
-          "package": "pkg::perf::perf",
+          "package": "pkg::cache::cache",
           "abstractness": 0.0,
           "instability": 0.5,
           "distance": 0.5,
@@ -100,21 +100,7 @@
           "nodes_count": 1
         },
         {
-          "package": "pkg::cache::cache",
-          "abstractness": 0.0,
-          "instability": 0.5,
-          "distance": 0.5,
-          "nodes_count": 1
-        },
-        {
-          "package": "pkg::pricing::subscription",
-          "abstractness": 0.0,
-          "instability": 0.5,
-          "distance": 0.5,
-          "nodes_count": 1
-        },
-        {
-          "package": "pkg::pricing::pricing",
+          "package": "pkg::perf::perf",
           "abstractness": 0.0,
           "instability": 0.5,
           "distance": 0.5,
@@ -128,7 +114,21 @@
           "nodes_count": 1
         },
         {
-          "package": "pkg::daily::daily",
+          "package": "pkg::pricing::pricing",
+          "abstractness": 0.0,
+          "instability": 0.5,
+          "distance": 0.5,
+          "nodes_count": 1
+        },
+        {
+          "package": "pkg::pricing::subscription",
+          "abstractness": 0.0,
+          "instability": 0.5,
+          "distance": 0.5,
+          "nodes_count": 1
+        },
+        {
+          "package": "cmd::costlint::main",
           "abstractness": 0.0,
           "instability": 1.0,
           "distance": 0.0,
@@ -165,15 +165,11 @@
       "threshold": 0.1,
       "low_clustering_nodes": [
         {
-          "node": "pkg::predict::predict",
-          "coefficient": 0.0
-        },
-        {
           "node": "cmd::costlint::main",
           "coefficient": 0.0
         },
         {
-          "node": "pkg/telemetry",
+          "node": "pkg::predict::predict",
           "coefficient": 0.0
         },
         {
@@ -182,6 +178,10 @@
         },
         {
           "node": "pkg/pricing",
+          "coefficient": 0.0
+        },
+        {
+          "node": "pkg/telemetry",
           "coefficient": 0.0
         }
       ],
@@ -201,9 +201,9 @@
       "description": "Критические узлы (удаление разбивает граф)",
       "status": "WARNING",
       "articulation_points": [
-        "cmd::costlint::main",
         "pkg/pricing",
-        "pkg/telemetry"
+        "pkg/telemetry",
+        "cmd::costlint::main"
       ],
       "count": 3,
       "recommendation": "Уменьшить зависимость от критических узлов"
@@ -213,26 +213,6 @@
       "description": "Критические рёбра (удаление разбивает граф)",
       "status": "INFO",
       "bridges": [
-        {
-          "from": "pkg::daily::daily",
-          "to": "pkg/telemetry"
-        },
-        {
-          "from": "pkg::budget::budget",
-          "to": "pkg/pricing"
-        },
-        {
-          "from": "pkg::reporter::reporter",
-          "to": "pkg/pricing"
-        },
-        {
-          "from": "pkg::ab::ab",
-          "to": "pkg/pricing"
-        },
-        {
-          "from": "pkg::feature::feature",
-          "to": "pkg/pricing"
-        },
         {
           "from": "cmd::costlint::main",
           "to": "pkg/ab"
@@ -264,6 +244,26 @@
         {
           "from": "cmd::costlint::main",
           "to": "pkg/telemetry"
+        },
+        {
+          "from": "pkg::feature::feature",
+          "to": "pkg/pricing"
+        },
+        {
+          "from": "pkg::budget::budget",
+          "to": "pkg/pricing"
+        },
+        {
+          "from": "pkg::reporter::reporter",
+          "to": "pkg/pricing"
+        },
+        {
+          "from": "pkg::ab::ab",
+          "to": "pkg/pricing"
+        },
+        {
+          "from": "pkg::daily::daily",
+          "to": "pkg/telemetry"
         }
       ],
       "count": 13
@@ -290,11 +290,11 @@
       "central_nodes": [],
       "peripheral_nodes": [
         {
-          "node": "pkg/telemetry",
+          "node": "pkg/counter",
           "closeness": 0.087
         },
         {
-          "node": "pkg/counter",
+          "node": "pkg/telemetry",
           "closeness": 0.087
         },
         {
@@ -326,7 +326,7 @@
           "closeness": 0.043
         },
         {
-          "node": "pkg::daily::daily",
+          "node": "cmd::costlint::main",
           "closeness": 0.0
         }
       ],
@@ -350,11 +350,11 @@
           "eigenvector": 0.84
         },
         {
-          "node": "pkg/telemetry",
+          "node": "pkg/counter",
           "eigenvector": 0.28
         },
         {
-          "node": "pkg/counter",
+          "node": "pkg/telemetry",
           "eigenvector": 0.28
         },
         {
@@ -476,11 +476,11 @@
           "impact": 6
         },
         {
-          "node": "pkg/telemetry",
+          "node": "pkg/counter",
           "impact": 2
         },
         {
-          "node": "pkg/counter",
+          "node": "pkg/telemetry",
           "impact": 2
         },
         {

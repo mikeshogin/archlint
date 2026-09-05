@@ -20,8 +20,8 @@
       "status": "FAILED",
       "cycles": [
         [
-          "src::cli",
-          "src::request_items"
+          "src::request_items",
+          "src::cli"
         ]
       ],
       "cycles_count": 1
@@ -70,31 +70,31 @@
       "status": "ERROR",
       "most_unstable": [
         {
-          "node": "src::to_curl",
+          "node": "tests::cases::compress_request_body",
           "instability": 1.0,
           "ca": 0,
-          "ce": 4
+          "ce": 1
         },
         {
-          "node": "src::generation",
+          "node": "tests::cases",
           "instability": 1.0,
           "ca": 0,
-          "ce": 2
+          "ce": 6
         },
         {
-          "node": "src::formatting::headers",
+          "node": "tests::cases::unix_socket",
           "instability": 1.0,
           "ca": 0,
-          "ce": 2
+          "ce": 1
         },
         {
-          "node": "src::formatting::palette",
+          "node": "tests::cases::download",
           "instability": 1.0,
           "ca": 0,
-          "ce": 2
+          "ce": 1
         },
         {
-          "node": "src::message_signature",
+          "node": "tests::cases::logging",
           "instability": 1.0,
           "ca": 0,
           "ce": 1
@@ -102,31 +102,31 @@
       ],
       "most_stable": [
         {
-          "node": "unix_socket",
+          "node": "network_interface",
           "instability": 0.0,
           "ca": 1,
           "ce": 0
         },
         {
-          "node": "xml",
+          "node": "RequestItem",
           "instability": 0.0,
           "ca": 1,
           "ce": 0
         },
         {
-          "node": "cases",
+          "node": "imp",
           "instability": 0.0,
           "ca": 1,
           "ce": 0
         },
         {
-          "node": "server",
+          "node": "PathAction",
           "instability": 0.0,
           "ca": 1,
           "ce": 0
         },
         {
-          "node": "prelude",
+          "node": "Token",
           "instability": 0.0,
           "ca": 1,
           "ce": 0
@@ -134,17 +134,17 @@
       ],
       "violations": [
         {
-          "from": "src::request_items",
-          "to": "src::nested_json",
-          "from_instability": 0.625,
-          "to_instability": 0.8,
-          "issue": "Зависимость направлена к менее стабильному компоненту"
-        },
-        {
           "from": "src::cli",
           "to": "src::request_items",
           "from_instability": 0.455,
           "to_instability": 0.625,
+          "issue": "Зависимость направлена к менее стабильному компоненту"
+        },
+        {
+          "from": "src::request_items",
+          "to": "src::nested_json",
+          "from_instability": 0.625,
+          "to_instability": 0.8,
           "issue": "Зависимость направлена к менее стабильному компоненту"
         }
       ],
@@ -234,10 +234,10 @@
       "description": "Компоненты без связей (возможно мертвый код)",
       "status": "WARNING",
       "orphans": [
-        "build",
-        "src::error_reporting",
         "tests::cases::auth_message_signature",
-        "tests::server"
+        "tests::server",
+        "build",
+        "src::error_reporting"
       ],
       "orphans_count": 4
     },
@@ -248,8 +248,8 @@
       "total_sccs": 70,
       "problematic_sccs": [
         [
-          "src::cli",
-          "src::request_items"
+          "src::request_items",
+          "src::cli"
         ]
       ],
       "problematic_count": 1

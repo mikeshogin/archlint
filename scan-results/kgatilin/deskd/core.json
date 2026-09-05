@@ -38,13 +38,13 @@
           "threshold": 10
         },
         {
-          "node": "src::app::adapters::web",
-          "fan_out": 18,
+          "node": "src::app::adapters::web::routes",
+          "fan_out": 16,
           "threshold": 10
         },
         {
-          "node": "src::app::adapters::web::routes",
-          "fan_out": 16,
+          "node": "src::app::adapters::web",
+          "fan_out": 18,
           "threshold": 10
         },
         {
@@ -63,6 +63,13 @@
       "ce_threshold": 10,
       "violations": [
         {
+          "node": "src::domain",
+          "afferent_coupling": 30,
+          "efferent_coupling": 8,
+          "ca_threshold": 10,
+          "ce_threshold": 10
+        },
+        {
           "node": "src::app",
           "afferent_coupling": 57,
           "efferent_coupling": 47,
@@ -77,13 +84,6 @@
           "ce_threshold": 10
         },
         {
-          "node": "src::app::adapters::web",
-          "afferent_coupling": 0,
-          "efferent_coupling": 18,
-          "ca_threshold": 10,
-          "ce_threshold": 10
-        },
-        {
           "node": "src::app::adapters::web::routes",
           "afferent_coupling": 0,
           "efferent_coupling": 16,
@@ -91,16 +91,9 @@
           "ce_threshold": 10
         },
         {
-          "node": "src::domain",
-          "afferent_coupling": 30,
-          "efferent_coupling": 8,
-          "ca_threshold": 10,
-          "ce_threshold": 10
-        },
-        {
-          "node": "src::config",
-          "afferent_coupling": 34,
-          "efferent_coupling": 3,
+          "node": "src::app::adapters::web",
+          "afferent_coupling": 0,
+          "efferent_coupling": 18,
           "ca_threshold": 10,
           "ce_threshold": 10
         },
@@ -108,6 +101,13 @@
           "node": "src::ports",
           "afferent_coupling": 21,
           "efferent_coupling": 4,
+          "ca_threshold": 10,
+          "ce_threshold": 10
+        },
+        {
+          "node": "src::config",
+          "afferent_coupling": 34,
+          "efferent_coupling": 3,
           "ca_threshold": 10,
           "ce_threshold": 10
         },
@@ -134,37 +134,43 @@
       "status": "ERROR",
       "most_unstable": [
         {
-          "node": "src::app::bus",
-          "instability": 1.0,
-          "ca": 0,
-          "ce": 3
-        },
-        {
-          "node": "src::app::agent_registry",
-          "instability": 1.0,
-          "ca": 0,
-          "ce": 4
-        },
-        {
-          "node": "src::app::mcp_service",
-          "instability": 1.0,
-          "ca": 0,
-          "ce": 5
-        },
-        {
-          "node": "src::app::config_watcher",
+          "node": "tests::federation_forward",
           "instability": 1.0,
           "ca": 0,
           "ce": 1
         },
         {
-          "node": "src::app::statemachine",
+          "node": "tests::web_panel",
+          "instability": 1.0,
+          "ca": 0,
+          "ce": 1
+        },
+        {
+          "node": "tests::launch_mode_serve",
+          "instability": 1.0,
+          "ca": 0,
+          "ce": 1
+        },
+        {
+          "node": "tests::web_dashboard_chart",
+          "instability": 1.0,
+          "ca": 0,
+          "ce": 1
+        },
+        {
+          "node": "tests::recurring_reminders",
           "instability": 1.0,
           "ca": 0,
           "ce": 1
         }
       ],
       "most_stable": [
+        {
+          "node": "paths",
+          "instability": 0.0,
+          "ca": 1,
+          "ce": 0
+        },
         {
           "node": "sm_store",
           "instability": 0.0,
@@ -187,12 +193,6 @@
           "node": "src::__diag_details",
           "instability": 0.0,
           "ca": 1,
-          "ce": 0
-        },
-        {
-          "node": "deskd",
-          "instability": 0.0,
-          "ca": 17,
           "ce": 0
         }
       ],
@@ -334,19 +334,19 @@
       "description": "Компоненты без связей (возможно мертвый код)",
       "status": "WARNING",
       "orphans": [
-        "build",
-        "src::app::commands::restart",
-        "src::app::adapters::web::middleware::headers",
-        "src::app::adapters::web::routes::health",
-        "src::app::cli",
-        "src::domain::message",
-        "src::ports::executor",
         "tests::crash_recovery",
-        "tests::schedule_to_worker",
-        "tests::diag_publish",
-        "tests::mcp_channel_subprocess",
         "tests::agent_lifecycle",
-        "tests::agent_state_mcp"
+        "tests::mcp_channel_subprocess",
+        "tests::agent_state_mcp",
+        "tests::diag_publish",
+        "tests::schedule_to_worker",
+        "build",
+        "src::domain::message",
+        "src::app::cli",
+        "src::app::commands::restart",
+        "src::app::adapters::web::routes::health",
+        "src::app::adapters::web::middleware::headers",
+        "src::ports::executor"
       ],
       "orphans_count": 13
     },
@@ -365,7 +365,7 @@
       "depth": 3,
       "max_depth": 10,
       "longest_path": [
-        "src::app::agent_registry",
+        "src::app::bus_api",
         "src::config",
         "src::domain",
         "agent"

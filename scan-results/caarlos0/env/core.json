@@ -44,18 +44,6 @@
       "status": "PASSED",
       "most_unstable": [
         {
-          "node": "example_test",
-          "instability": 0.5,
-          "ca": 0,
-          "ce": 0
-        },
-        {
-          "node": "env_tomap",
-          "instability": 0.5,
-          "ca": 0,
-          "ce": 0
-        },
-        {
           "node": "env_tomap_windows_test",
           "instability": 0.5,
           "ca": 0,
@@ -68,7 +56,19 @@
           "ce": 0
         },
         {
+          "node": "env_tomap",
+          "instability": 0.5,
+          "ca": 0,
+          "ce": 0
+        },
+        {
           "node": "env_tomap_windows",
+          "instability": 0.5,
+          "ca": 0,
+          "ce": 0
+        },
+        {
+          "node": "env",
           "instability": 0.5,
           "ca": 0,
           "ce": 0
@@ -76,13 +76,13 @@
       ],
       "most_stable": [
         {
-          "node": "error",
+          "node": "env_tomap_windows",
           "instability": 0.5,
           "ca": 0,
           "ce": 0
         },
         {
-          "node": "env_tomap_windows",
+          "node": "env",
           "instability": 0.5,
           "ca": 0,
           "ce": 0
@@ -94,7 +94,7 @@
           "ce": 0
         },
         {
-          "node": "env",
+          "node": "example_test",
           "instability": 0.5,
           "ca": 0,
           "ce": 0
@@ -174,13 +174,13 @@
       "description": "Компоненты без связей (возможно мертвый код)",
       "status": "WARNING",
       "orphans": [
-        "example_test",
-        "env_tomap",
         "env_tomap_windows_test",
         "error",
+        "env_tomap",
         "env_tomap_windows",
-        "env_test",
         "env",
+        "env_test",
+        "example_test",
         "env_tomap_test"
       ],
       "orphans_count": 8

@@ -70,7 +70,7 @@
           "issue": "Зона боли: конкретный и стабильный"
         },
         {
-          "package": "src::types",
+          "package": "src::error",
           "abstractness": 0.0,
           "instability": 0.0,
           "distance": 1.0,
@@ -79,7 +79,7 @@
           "issue": "Зона боли: конкретный и стабильный"
         },
         {
-          "package": "src::error",
+          "package": "src::types",
           "abstractness": 0.0,
           "instability": 0.0,
           "distance": 1.0,
@@ -162,15 +162,6 @@
           "issue": "Зона боли: конкретный и стабильный"
         },
         {
-          "package": "src::types",
-          "abstractness": 0.0,
-          "instability": 0.0,
-          "distance": 1.0,
-          "nodes_count": 1,
-          "zone": "pain",
-          "issue": "Зона боли: конкретный и стабильный"
-        },
-        {
           "package": "src::util",
           "abstractness": 0.0,
           "instability": 0.333,
@@ -179,6 +170,15 @@
         },
         {
           "package": "src::error",
+          "abstractness": 0.0,
+          "instability": 0.0,
+          "distance": 1.0,
+          "nodes_count": 1,
+          "zone": "pain",
+          "issue": "Зона боли: конкретный и стабильный"
+        },
+        {
+          "package": "src::types",
           "abstractness": 0.0,
           "instability": 0.0,
           "distance": 1.0,
@@ -206,12 +206,12 @@
       "threshold": 0.1,
       "low_clustering_nodes": [
         {
-          "node": "src::types",
-          "coefficient": 0.0
-        },
-        {
           "node": "src::main",
           "coefficient": 0.073
+        },
+        {
+          "node": "src::types",
+          "coefficient": 0.0
         }
       ],
       "low_clustering_count": 2
@@ -230,9 +230,9 @@
       "description": "Критические узлы (удаление разбивает граф)",
       "status": "WARNING",
       "articulation_points": [
-        "src::theme",
         "src::filetypes",
-        "src::main"
+        "src::main",
+        "src::theme"
       ],
       "count": 3,
       "recommendation": "Уменьшить зависимость от критических узлов"
@@ -311,11 +311,11 @@
           "closeness": 0.178
         },
         {
-          "node": "src::types",
+          "node": "src::util",
           "closeness": 0.125
         },
         {
-          "node": "src::util",
+          "node": "src::types",
           "closeness": 0.125
         },
         {
@@ -383,11 +383,11 @@
           "eigenvector": 0.577
         },
         {
-          "node": "src::types",
+          "node": "src::util",
           "eigenvector": 0.0
         },
         {
-          "node": "src::util",
+          "node": "src::types",
           "eigenvector": 0.0
         }
       ]
@@ -493,11 +493,11 @@
           "impact": 4
         },
         {
-          "node": "src::types",
+          "node": "src::util",
           "impact": 3
         },
         {
-          "node": "src::util",
+          "node": "src::types",
           "impact": 3
         },
         {

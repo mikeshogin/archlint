@@ -44,22 +44,22 @@
       "status": "PASSED",
       "most_unstable": [
         {
-          "node": "pkg::score::score",
+          "node": "cmd::promptlint::main",
           "instability": 1.0,
           "ca": 0,
-          "ce": 1
+          "ce": 9
         },
         {
-          "node": "pkg::perf::perf",
+          "node": "pkg::router::router",
           "instability": 1.0,
           "ca": 0,
-          "ce": 4
+          "ce": 2
         },
         {
-          "node": "pkg::middleware::middleware",
+          "node": "pkg::analyzer::analyzer",
           "instability": 1.0,
           "ca": 0,
-          "ce": 1
+          "ce": 3
         },
         {
           "node": "pkg::abtest::abtest",
@@ -68,31 +68,13 @@
           "ce": 2
         },
         {
-          "node": "pkg::router::router",
+          "node": "pkg::perf::perf",
           "instability": 1.0,
           "ca": 0,
-          "ce": 2
+          "ce": 4
         }
       ],
       "most_stable": [
-        {
-          "node": "pkg/abtest",
-          "instability": 0.0,
-          "ca": 1,
-          "ce": 0
-        },
-        {
-          "node": "pkg/perf",
-          "instability": 0.0,
-          "ca": 1,
-          "ce": 0
-        },
-        {
-          "node": "pkg/server",
-          "instability": 0.0,
-          "ca": 1,
-          "ce": 0
-        },
         {
           "node": "pkg/template",
           "instability": 0.0,
@@ -101,6 +83,24 @@
         },
         {
           "node": "pkg/trend",
+          "instability": 0.0,
+          "ca": 1,
+          "ce": 0
+        },
+        {
+          "node": "pkg/validator",
+          "instability": 0.0,
+          "ca": 3,
+          "ce": 0
+        },
+        {
+          "node": "pkg/metrics",
+          "instability": 0.0,
+          "ca": 3,
+          "ce": 0
+        },
+        {
+          "node": "pkg/score",
           "instability": 0.0,
           "ca": 1,
           "ce": 0
@@ -174,16 +174,16 @@
       "description": "Компоненты без связей (возможно мертвый код)",
       "status": "WARNING",
       "orphans": [
-        "pkg::trend::trend",
-        "pkg::trend::trend_test",
+        "pkg::analyzer::analyzer_test",
         "pkg::template::template",
         "pkg::template::template_test",
-        "pkg::analyzer::analyzer_test",
-        "pkg::validator::validator",
+        "pkg::config::config",
         "pkg::metrics::nlp",
         "pkg::metrics::domain",
         "pkg::metrics::basic",
-        "pkg::config::config"
+        "pkg::trend::trend",
+        "pkg::trend::trend_test",
+        "pkg::validator::validator"
       ],
       "orphans_count": 10
     },
@@ -202,8 +202,8 @@
       "depth": 1,
       "max_depth": 10,
       "longest_path": [
-        "pkg::score::score",
-        "pkg/metrics"
+        "cmd::promptlint::main",
+        "pkg/abtest"
       ]
     },
     {
