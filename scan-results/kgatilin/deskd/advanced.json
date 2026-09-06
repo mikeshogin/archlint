@@ -39,7 +39,7 @@
       "name": "modularity",
       "description": "Модульность графа должна быть >= 0.3",
       "status": "PASSED",
-      "modularity": 0.579,
+      "modularity": 0.578,
       "threshold": 0.3,
       "communities_count": 30
     },
@@ -629,110 +629,110 @@
           "component": "tests",
           "impact_radius": 124,
           "sample_dependents": [
-            "src::domain::agent",
-            "src::app::a2a_server",
+            "src::app::doctor",
             "src::infra::dto::instance",
-            "src::app::commands::bus",
-            "src::infra::memory_store"
+            "src::app::adapters::discord",
+            "src::app::adapters::web::transcript_view",
+            "src::domain::statemachine"
           ]
         },
         {
           "component": "task",
           "impact_radius": 95,
           "sample_dependents": [
-            "src::app::a2a_server",
+            "src::app::doctor",
             "src::infra::dto::instance",
-            "src::app::commands::bus",
-            "src::infra::memory_store",
-            "src::app::commands::reload"
+            "src::app::adapters::discord",
+            "src::app::bus_api",
+            "src::app::mcp"
           ]
         },
         {
           "component": "context",
           "impact_radius": 94,
           "sample_dependents": [
-            "src::app::a2a_server",
+            "src::app::doctor",
             "src::infra::dto::instance",
-            "src::app::commands::bus",
-            "src::infra::memory_store",
-            "src::app::commands::reload"
+            "src::app::adapters::discord",
+            "src::app::bus_api",
+            "src::app::mcp"
           ]
         },
         {
           "component": "agent",
           "impact_radius": 93,
           "sample_dependents": [
-            "src::app::a2a_server",
+            "src::app::doctor",
             "src::infra::dto::instance",
-            "src::app::commands::bus",
-            "src::infra::memory_store",
-            "src::app::commands::reload"
+            "src::app::adapters::discord",
+            "src::app::bus_api",
+            "src::app::mcp"
           ]
         },
         {
           "component": "message",
           "impact_radius": 92,
           "sample_dependents": [
-            "src::app::a2a_server",
+            "src::app::doctor",
             "src::infra::dto::instance",
-            "src::app::commands::bus",
-            "src::infra::memory_store",
-            "src::app::commands::reload"
+            "src::app::adapters::discord",
+            "src::app::bus_api",
+            "src::app::mcp"
           ]
         },
         {
           "component": "statemachine",
           "impact_radius": 92,
           "sample_dependents": [
-            "src::app::a2a_server",
+            "src::app::doctor",
             "src::infra::dto::instance",
-            "src::app::commands::bus",
-            "src::infra::memory_store",
-            "src::app::commands::reload"
+            "src::app::adapters::discord",
+            "src::app::bus_api",
+            "src::app::mcp"
           ]
         },
         {
           "component": "bus",
           "impact_radius": 74,
           "sample_dependents": [
-            "src::app::a2a_server",
-            "src::app::commands::bus",
-            "src::infra::memory_store",
-            "src::app::commands::schedule",
-            "src::app::mcp_protocol"
+            "src::app::doctor",
+            "src::app::bus_api",
+            "src::app::mcp",
+            "src::app::commands::graph",
+            "src::app::session_discover"
           ]
         },
         {
           "component": "events",
           "impact_radius": 61,
           "sample_dependents": [
-            "src::app::adapters::web::data_cost",
+            "src::app::bus",
             "src::infra::dto::instance",
-            "src::app::commands::bus",
-            "src::app::adapters::telegram",
-            "src::infra::memory_store"
+            "src::app::adapters::discord",
+            "src::app::adapters::web",
+            "src::app::transcript_extractor"
           ]
         },
         {
           "component": "config_types",
           "impact_radius": 60,
           "sample_dependents": [
-            "src::app::adapters::web::data_cost",
+            "src::app::bus",
             "src::infra::dto::instance",
-            "src::app::commands::bus",
-            "src::app::adapters::telegram",
-            "src::infra::memory_store"
+            "src::app::adapters::discord",
+            "src::app::adapters::web",
+            "src::infra::bus_server"
           ]
         },
         {
           "component": "workitem",
           "impact_radius": 60,
           "sample_dependents": [
-            "src::app::adapters::web::data_cost",
+            "src::app::bus",
             "src::infra::dto::instance",
-            "src::app::commands::bus",
-            "src::app::adapters::telegram",
-            "src::infra::memory_store"
+            "src::app::adapters::discord",
+            "src::app::adapters::web",
+            "src::infra::bus_server"
           ]
         }
       ],
