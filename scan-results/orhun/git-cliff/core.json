@@ -10,8 +10,8 @@
     "errors": 2
   },
   "graph": {
-    "nodes": 110,
-    "edges": 218
+    "nodes": 113,
+    "edges": 224
   },
   "checks": [
     {
@@ -122,6 +122,13 @@
           "ce_threshold": 10
         },
         {
+          "node": "pretty_assertions",
+          "afferent_coupling": 11,
+          "efferent_coupling": 0,
+          "ca_threshold": 10,
+          "ce_threshold": 10
+        },
+        {
           "node": "git-cliff-core::error",
           "afferent_coupling": 18,
           "efferent_coupling": 0,
@@ -134,16 +141,9 @@
           "efferent_coupling": 0,
           "ca_threshold": 10,
           "ce_threshold": 10
-        },
-        {
-          "node": "git-cliff-core::config",
-          "afferent_coupling": 14,
-          "efferent_coupling": 0,
-          "ca_threshold": 10,
-          "ce_threshold": 10
         }
       ],
-      "violations_count": 10
+      "violations_count": 11
     },
     {
       "name": "instability",
@@ -163,6 +163,12 @@
           "ce": 8
         },
         {
+          "node": "git-cliff::src::config_path",
+          "instability": 1.0,
+          "ca": 0,
+          "ce": 4
+        },
+        {
           "node": "git-cliff::src::profiler",
           "instability": 1.0,
           "ca": 0,
@@ -170,12 +176,6 @@
         },
         {
           "node": "git-cliff::src::logger",
-          "instability": 1.0,
-          "ca": 0,
-          "ce": 6
-        },
-        {
-          "node": "git-cliff::src::lib",
           "instability": 1.0,
           "ca": 0,
           "ce": 6
@@ -335,7 +335,7 @@
           "out_degree": 11
         }
       ],
-      "hubs_count": 10
+      "hubs_count": 11
     },
     {
       "name": "orphan_nodes",
@@ -348,7 +348,7 @@
       "name": "strongly_connected_components",
       "description": "Группы с взаимными зависимостями (размер > 1)",
       "status": "PASSED",
-      "total_sccs": 110,
+      "total_sccs": 113,
       "problematic_sccs": [],
       "problematic_count": 0
     },
@@ -360,7 +360,7 @@
       "max_depth": 10,
       "longest_path": [
         "git-cliff::src::args",
-        "tests"
+        "serial_test"
       ]
     },
     {

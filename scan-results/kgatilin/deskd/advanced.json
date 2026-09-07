@@ -629,110 +629,110 @@
           "component": "tests",
           "impact_radius": 124,
           "sample_dependents": [
-            "src::app::doctor",
-            "src::infra::dto::instance",
-            "src::app::adapters::discord",
-            "src::app::adapters::web::transcript_view",
-            "src::domain::statemachine"
+            "src::app::adapters::web::data_log",
+            "src::app::adapters::web::view::detail",
+            "src::app::adapters::web::data_cost",
+            "src::app::adapters::web::routes::agent_detail",
+            "src::config"
           ]
         },
         {
           "component": "task",
           "impact_radius": 95,
           "sample_dependents": [
-            "src::app::doctor",
-            "src::infra::dto::instance",
-            "src::app::adapters::discord",
-            "src::app::bus_api",
-            "src::app::mcp"
+            "src::app::adapters::web::view::detail",
+            "src::app::adapters::web::data_cost",
+            "src::app::adapters::web::routes::agent_detail",
+            "src::config",
+            "src::app::adapters::web::routes::github_webhook"
           ]
         },
         {
           "component": "context",
           "impact_radius": 94,
           "sample_dependents": [
-            "src::app::doctor",
-            "src::infra::dto::instance",
-            "src::app::adapters::discord",
-            "src::app::bus_api",
-            "src::app::mcp"
+            "src::app::adapters::web::view::detail",
+            "src::app::adapters::web::data_cost",
+            "src::app::adapters::web::routes::agent_detail",
+            "src::config",
+            "src::app::adapters::web::routes::github_webhook"
           ]
         },
         {
           "component": "agent",
           "impact_radius": 93,
           "sample_dependents": [
-            "src::app::doctor",
-            "src::infra::dto::instance",
-            "src::app::adapters::discord",
-            "src::app::bus_api",
-            "src::app::mcp"
+            "src::app::adapters::web::view::detail",
+            "src::app::adapters::web::data_cost",
+            "src::app::adapters::web::routes::agent_detail",
+            "src::config",
+            "src::app::adapters::web::routes::github_webhook"
           ]
         },
         {
           "component": "message",
           "impact_radius": 92,
           "sample_dependents": [
-            "src::app::doctor",
-            "src::infra::dto::instance",
-            "src::app::adapters::discord",
-            "src::app::bus_api",
-            "src::app::mcp"
+            "src::app::adapters::web::view::detail",
+            "src::app::adapters::web::data_cost",
+            "src::app::adapters::web::routes::agent_detail",
+            "src::config",
+            "src::app::adapters::web::routes::github_webhook"
           ]
         },
         {
           "component": "statemachine",
           "impact_radius": 92,
           "sample_dependents": [
-            "src::app::doctor",
-            "src::infra::dto::instance",
-            "src::app::adapters::discord",
-            "src::app::bus_api",
-            "src::app::mcp"
+            "src::app::adapters::web::view::detail",
+            "src::app::adapters::web::data_cost",
+            "src::app::adapters::web::routes::agent_detail",
+            "src::config",
+            "src::app::adapters::web::routes::github_webhook"
           ]
         },
         {
           "component": "bus",
           "impact_radius": 74,
           "sample_dependents": [
-            "src::app::doctor",
-            "src::app::bus_api",
-            "src::app::mcp",
-            "src::app::commands::graph",
-            "src::app::session_discover"
+            "src::app::adapters::web::view::detail",
+            "src::app::adapters::web::data_cost",
+            "src::app::adapters::web::routes::agent_detail",
+            "src::app::agent",
+            "src::app::bus"
           ]
         },
         {
           "component": "events",
           "impact_radius": 61,
           "sample_dependents": [
-            "src::app::bus",
-            "src::infra::dto::instance",
-            "src::app::adapters::discord",
-            "src::app::adapters::web",
-            "src::app::transcript_extractor"
+            "src::app::process_builder",
+            "src::app::adapters::web::data_cost",
+            "src::app::adapters",
+            "src::infra::context_store",
+            "src::config"
           ]
         },
         {
           "component": "config_types",
           "impact_radius": 60,
           "sample_dependents": [
-            "src::app::bus",
-            "src::infra::dto::instance",
-            "src::app::adapters::discord",
-            "src::app::adapters::web",
-            "src::infra::bus_server"
+            "src::app::process_builder",
+            "src::app::adapters::web::data_cost",
+            "src::app::adapters",
+            "src::infra::context_store",
+            "src::config"
           ]
         },
         {
           "component": "workitem",
           "impact_radius": 60,
           "sample_dependents": [
-            "src::app::bus",
-            "src::infra::dto::instance",
-            "src::app::adapters::discord",
-            "src::app::adapters::web",
-            "src::infra::bus_server"
+            "src::app::process_builder",
+            "src::app::adapters::web::data_cost",
+            "src::app::adapters",
+            "src::infra::context_store",
+            "src::config"
           ]
         }
       ],
