@@ -24,61 +24,61 @@
           "package": "src::main",
           "domains_count": 17,
           "domains": [
-            "file_utils",
-            "src::errors",
-            "src::webdav_fs",
-            "args",
-            "listing",
-            "errors",
-            "webdav_fs",
-            "pipe",
+            "archive",
+            "auth",
             "src::config",
-            "consts"
+            "file_op",
+            "listing",
+            "webdav_fs",
+            "src::file_op",
+            "src::args",
+            "config",
+            "pipe"
           ]
         },
         {
           "package": "src::args",
           "domains_count": 7,
           "domains": [
+            "src::listing",
+            "auth",
             "AuthParseError",
             "src::auth",
-            "src::listing",
+            "tests",
             "RequiredAuthPassword",
-            "src::renderer",
-            "auth",
-            "tests"
+            "src::renderer"
           ]
         },
         {
           "package": "src::listing",
           "domains_count": 6,
           "domains": [
-            "src::errors",
             "src::auth",
-            "src::archive",
-            "src::renderer",
             "src::percent_encode_sets",
-            "percent_encode_sets"
+            "src::archive",
+            "src::errors",
+            "percent_encode_sets",
+            "src::renderer"
           ]
         },
         {
           "package": "tests::navigation",
           "domains_count": 4,
           "domains": [
-            "utils",
-            "fixtures",
             "tests::utils",
-            "tests::fixtures"
+            "fixtures",
+            "tests::fixtures",
+            "utils"
           ]
         },
         {
           "package": "src::renderer",
           "domains_count": 4,
           "domains": [
-            "src::listing",
             "src::auth",
-            "src::consts",
-            "tests"
+            "src::listing",
+            "tests",
+            "src::consts"
           ]
         }
       ],

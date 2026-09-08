@@ -629,110 +629,110 @@
           "component": "tests",
           "impact_radius": 124,
           "sample_dependents": [
-            "src::app::adapters::web::data_log",
-            "src::app::adapters::web::view::detail",
-            "src::app::adapters::web::data_cost",
-            "src::app::adapters::web::routes::agent_detail",
-            "src::config"
+            "src::app::worker",
+            "src::app::adapters::web::view::task",
+            "src::app::workflow",
+            "src::infra::agent_file",
+            "src::app::session_discover"
           ]
         },
         {
           "component": "task",
           "impact_radius": 95,
           "sample_dependents": [
-            "src::app::adapters::web::view::detail",
-            "src::app::adapters::web::data_cost",
-            "src::app::adapters::web::routes::agent_detail",
-            "src::config",
-            "src::app::adapters::web::routes::github_webhook"
+            "src::app::worker",
+            "src::app::adapters::web::view::task",
+            "src::app::workflow",
+            "src::infra::agent_file",
+            "src::app::session_discover"
           ]
         },
         {
           "component": "context",
           "impact_radius": 94,
           "sample_dependents": [
-            "src::app::adapters::web::view::detail",
-            "src::app::adapters::web::data_cost",
-            "src::app::adapters::web::routes::agent_detail",
-            "src::config",
-            "src::app::adapters::web::routes::github_webhook"
+            "src::app::worker",
+            "src::app::adapters::web::view::task",
+            "src::app::workflow",
+            "src::infra::agent_file",
+            "src::app::session_discover"
           ]
         },
         {
           "component": "agent",
           "impact_radius": 93,
           "sample_dependents": [
-            "src::app::adapters::web::view::detail",
-            "src::app::adapters::web::data_cost",
-            "src::app::adapters::web::routes::agent_detail",
-            "src::config",
-            "src::app::adapters::web::routes::github_webhook"
+            "src::app::worker",
+            "src::app::adapters::web::view::task",
+            "src::app::workflow",
+            "src::infra::agent_file",
+            "src::app::session_discover"
           ]
         },
         {
           "component": "message",
           "impact_radius": 92,
           "sample_dependents": [
-            "src::app::adapters::web::view::detail",
-            "src::app::adapters::web::data_cost",
-            "src::app::adapters::web::routes::agent_detail",
-            "src::config",
-            "src::app::adapters::web::routes::github_webhook"
+            "src::app::worker",
+            "src::app::adapters::web::view::task",
+            "src::app::workflow",
+            "src::infra::agent_file",
+            "src::app::session_discover"
           ]
         },
         {
           "component": "statemachine",
           "impact_radius": 92,
           "sample_dependents": [
-            "src::app::adapters::web::view::detail",
-            "src::app::adapters::web::data_cost",
-            "src::app::adapters::web::routes::agent_detail",
-            "src::config",
-            "src::app::adapters::web::routes::github_webhook"
+            "src::app::worker",
+            "src::app::adapters::web::view::task",
+            "src::app::workflow",
+            "src::infra::agent_file",
+            "src::app::session_discover"
           ]
         },
         {
           "component": "bus",
           "impact_radius": 74,
           "sample_dependents": [
-            "src::app::adapters::web::view::detail",
-            "src::app::adapters::web::data_cost",
-            "src::app::adapters::web::routes::agent_detail",
-            "src::app::agent",
-            "src::app::bus"
+            "src::app::worker",
+            "src::infra::unix_bus",
+            "src::app::adapters::web::view::task",
+            "src::app::workflow",
+            "src::app::session_discover"
           ]
         },
         {
           "component": "events",
           "impact_radius": 61,
           "sample_dependents": [
-            "src::app::process_builder",
-            "src::app::adapters::web::data_cost",
-            "src::app::adapters",
+            "src::app::worker",
             "src::infra::context_store",
-            "src::config"
+            "src::app::commands::remind",
+            "src::ports::bus",
+            "src::app::workflow"
           ]
         },
         {
           "component": "config_types",
           "impact_radius": 60,
           "sample_dependents": [
-            "src::app::process_builder",
-            "src::app::adapters::web::data_cost",
-            "src::app::adapters",
+            "src::app::worker",
             "src::infra::context_store",
-            "src::config"
+            "src::app::commands::remind",
+            "src::ports::bus",
+            "src::app::workflow"
           ]
         },
         {
           "component": "workitem",
           "impact_radius": 60,
           "sample_dependents": [
-            "src::app::process_builder",
-            "src::app::adapters::web::data_cost",
-            "src::app::adapters",
+            "src::app::worker",
             "src::infra::context_store",
-            "src::config"
+            "src::app::commands::remind",
+            "src::ports::bus",
+            "src::app::workflow"
           ]
         }
       ],
