@@ -24,50 +24,50 @@
           "package": "src::main",
           "domains_count": 17,
           "domains": [
-            "src::args",
-            "src::errors",
-            "pipe",
-            "archive",
-            "webdav_fs",
-            "src::webdav_fs",
-            "errors",
-            "listing",
             "file_utils",
-            "auth"
+            "file_op",
+            "args",
+            "listing",
+            "archive",
+            "auth",
+            "errors",
+            "pipe",
+            "renderer",
+            "src::webdav_fs"
           ]
         },
         {
           "package": "src::args",
           "domains_count": 7,
           "domains": [
-            "src::renderer",
-            "tests",
-            "RequiredAuthPassword",
             "AuthParseError",
-            "auth",
             "src::auth",
-            "src::listing"
+            "tests",
+            "auth",
+            "src::listing",
+            "RequiredAuthPassword",
+            "src::renderer"
           ]
         },
         {
           "package": "src::listing",
           "domains_count": 6,
           "domains": [
-            "src::errors",
-            "src::renderer",
-            "src::archive",
-            "percent_encode_sets",
+            "src::auth",
             "src::percent_encode_sets",
-            "src::auth"
+            "src::archive",
+            "src::errors",
+            "percent_encode_sets",
+            "src::renderer"
           ]
         },
         {
           "package": "tests::navigation",
           "domains_count": 4,
           "domains": [
-            "fixtures",
-            "tests::utils",
             "utils",
+            "tests::utils",
+            "fixtures",
             "tests::fixtures"
           ]
         },
@@ -75,9 +75,9 @@
           "package": "src::renderer",
           "domains_count": 4,
           "domains": [
-            "tests",
             "src::listing",
             "src::consts",
+            "tests",
             "src::auth"
           ]
         }
