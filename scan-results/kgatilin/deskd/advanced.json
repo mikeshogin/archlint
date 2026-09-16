@@ -41,7 +41,7 @@
       "status": "PASSED",
       "modularity": 0.578,
       "threshold": 0.3,
-      "communities_count": 30
+      "communities_count": 29
     },
     {
       "name": "abstractness",
@@ -629,110 +629,110 @@
           "component": "tests",
           "impact_radius": 124,
           "sample_dependents": [
-            "src::app::adapters::web::routes::agent_task",
-            "src::app::adapters::federation::routing",
-            "src::app::commands::sm",
-            "src::app::transcript_extractor::cursors",
-            "src::app::adapters::web::routes"
+            "src::app::adapters::web::view::cards",
+            "src::app::bus_api",
+            "src::app::adapters::web::view::task",
+            "src::app::agent_components",
+            "src::app::adapters::federation::forward"
           ]
         },
         {
           "component": "task",
           "impact_radius": 95,
           "sample_dependents": [
+            "src::app::adapters::web::view::cards",
             "src::ports::bus_wire",
-            "src::app::commands::sm",
-            "src::app::adapters::web::routes::agent_task",
-            "src::app::adapters::web::routes::panel",
-            "src::app::adapters::web::routes"
+            "src::app::bus_api",
+            "src::app::adapters::web::view::task",
+            "src::domain::workitem"
           ]
         },
         {
           "component": "context",
           "impact_radius": 94,
           "sample_dependents": [
+            "src::app::adapters::web::view::cards",
             "src::ports::bus_wire",
-            "src::app::commands::sm",
-            "src::app::adapters::web::routes::agent_task",
-            "src::app::adapters::web::routes::panel",
-            "src::app::adapters::web::routes"
+            "src::app::bus_api",
+            "src::app::adapters::web::view::task",
+            "src::domain::workitem"
           ]
         },
         {
           "component": "agent",
           "impact_radius": 93,
           "sample_dependents": [
+            "src::app::adapters::web::view::cards",
             "src::ports::bus_wire",
-            "src::app::commands::sm",
-            "src::app::adapters::web::routes::agent_task",
-            "src::app::adapters::web::routes::panel",
-            "src::app::adapters::web::routes"
+            "src::app::bus_api",
+            "src::app::adapters::web::view::task",
+            "src::domain::workitem"
           ]
         },
         {
           "component": "message",
           "impact_radius": 92,
           "sample_dependents": [
+            "src::app::adapters::web::view::cards",
             "src::ports::bus_wire",
-            "src::app::commands::sm",
-            "src::app::adapters::web::routes::agent_task",
-            "src::app::adapters::web::routes::panel",
-            "src::app::adapters::web::routes"
+            "src::app::bus_api",
+            "src::app::adapters::web::view::task",
+            "src::domain::workitem"
           ]
         },
         {
           "component": "statemachine",
           "impact_radius": 92,
           "sample_dependents": [
+            "src::app::adapters::web::view::cards",
             "src::ports::bus_wire",
-            "src::app::commands::sm",
-            "src::app::adapters::web::routes::agent_task",
-            "src::app::adapters::web::routes::panel",
-            "src::app::adapters::web::routes"
+            "src::app::bus_api",
+            "src::app::adapters::web::view::task",
+            "src::domain::workitem"
           ]
         },
         {
           "component": "bus",
           "impact_radius": 74,
           "sample_dependents": [
-            "src::app::adapters::web::routes::agent_task",
-            "src::app::commands::sm",
-            "src::app::adapters::web::routes::panel",
-            "src::app::workflow",
-            "src::app::adapters::web::routes"
+            "src::app::adapters::web::view::cards",
+            "src::app::bus_api",
+            "src::app::adapters::web::view::task",
+            "src::app::adapters::federation::forward",
+            "src::app::session_discover"
           ]
         },
         {
           "component": "events",
           "impact_radius": 61,
           "sample_dependents": [
-            "src::app::process_builder",
+            "src::infra::memory_store",
             "src::ports::bus_wire",
-            "src::app::commands::sm",
-            "src::app::workflow",
-            "src::domain"
+            "src::app::bus_api",
+            "src::config",
+            "src::domain::workitem"
           ]
         },
         {
           "component": "config_types",
           "impact_radius": 60,
           "sample_dependents": [
-            "src::app::process_builder",
+            "src::infra::memory_store",
             "src::ports::bus_wire",
-            "src::app::commands::sm",
-            "src::app::workflow",
-            "src::domain"
+            "src::app::bus_api",
+            "src::config",
+            "src::domain::workitem"
           ]
         },
         {
           "component": "workitem",
           "impact_radius": 60,
           "sample_dependents": [
-            "src::app::process_builder",
+            "src::infra::memory_store",
             "src::ports::bus_wire",
-            "src::app::commands::sm",
-            "src::app::workflow",
-            "src::domain"
+            "src::app::bus_api",
+            "src::config",
+            "src::domain::workitem"
           ]
         }
       ],
