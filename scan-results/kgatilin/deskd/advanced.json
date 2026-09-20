@@ -41,7 +41,7 @@
       "status": "PASSED",
       "modularity": 0.578,
       "threshold": 0.3,
-      "communities_count": 29
+      "communities_count": 30
     },
     {
       "name": "abstractness",
@@ -629,110 +629,110 @@
           "component": "tests",
           "impact_radius": 124,
           "sample_dependents": [
-            "src::app::process_builder",
-            "src::app::alerts",
-            "src::infra::dto::task",
-            "src::app::adapters::web::view::breadcrumb",
-            "src::app::adapters::web::data"
+            "src::app::adapters::web::middleware::rate_limit",
+            "src::app::config_remotes",
+            "src::app::timeout_sweep",
+            "src::app::doctor",
+            "src::app::adapters::web::routes::login"
           ]
         },
         {
           "component": "task",
           "impact_radius": 95,
           "sample_dependents": [
-            "src::app::process_builder",
-            "src::app::alerts",
-            "src::domain::workitem",
-            "src::infra::dto::task",
-            "src::app::adapters::web::routes::panel"
+            "src::ports::bus",
+            "src::ports::bus_wire",
+            "src::app::commands::doctor",
+            "src::domain",
+            "src::app::timeout_sweep"
           ]
         },
         {
           "component": "context",
           "impact_radius": 94,
           "sample_dependents": [
-            "src::app::process_builder",
-            "src::app::alerts",
-            "src::domain::workitem",
-            "src::infra::dto::task",
-            "src::app::adapters::web::routes::panel"
+            "src::ports::bus",
+            "src::ports::bus_wire",
+            "src::app::commands::doctor",
+            "src::domain",
+            "src::app::timeout_sweep"
           ]
         },
         {
           "component": "agent",
           "impact_radius": 93,
           "sample_dependents": [
-            "src::app::process_builder",
-            "src::app::alerts",
-            "src::domain::workitem",
-            "src::infra::dto::task",
-            "src::app::adapters::web::routes::panel"
+            "src::ports::bus",
+            "src::ports::bus_wire",
+            "src::app::commands::doctor",
+            "src::domain",
+            "src::app::timeout_sweep"
           ]
         },
         {
           "component": "message",
           "impact_radius": 92,
           "sample_dependents": [
-            "src::app::process_builder",
-            "src::app::alerts",
-            "src::domain::workitem",
-            "src::infra::dto::task",
-            "src::app::adapters::web::routes::panel"
+            "src::ports::bus",
+            "src::ports::bus_wire",
+            "src::app::commands::doctor",
+            "src::domain",
+            "src::app::timeout_sweep"
           ]
         },
         {
           "component": "statemachine",
           "impact_radius": 92,
           "sample_dependents": [
-            "src::app::process_builder",
-            "src::app::alerts",
-            "src::domain::workitem",
-            "src::infra::dto::task",
-            "src::app::adapters::web::routes::panel"
+            "src::ports::bus",
+            "src::ports::bus_wire",
+            "src::app::commands::doctor",
+            "src::domain",
+            "src::app::timeout_sweep"
           ]
         },
         {
           "component": "bus",
           "impact_radius": 74,
           "sample_dependents": [
-            "src::app::adapters::web::routes::panel",
-            "src::app::adapters::web::data",
-            "src::app::mcp",
-            "src::app::commands::a2a",
-            "src::app::adapters::federation::forward"
+            "src::app::commands::doctor",
+            "src::app::timeout_sweep",
+            "src::app::bus",
+            "src::app::doctor",
+            "src::app::adapters::web::routes::login"
           ]
         },
         {
           "component": "events",
           "impact_radius": 61,
           "sample_dependents": [
-            "src::app::process_builder",
+            "src::ports::bus",
             "src::ports::bus_wire",
-            "src::infra::task_store",
-            "src::domain::workitem",
-            "src::app::alerts"
+            "src::ports::store",
+            "src::domain",
+            "src::app::timeout_sweep"
           ]
         },
         {
           "component": "config_types",
           "impact_radius": 60,
           "sample_dependents": [
-            "src::app::process_builder",
+            "src::ports::bus",
             "src::ports::bus_wire",
-            "src::infra::task_store",
-            "src::domain::workitem",
-            "src::app::alerts"
+            "src::ports::store",
+            "src::domain",
+            "src::app::timeout_sweep"
           ]
         },
         {
           "component": "workitem",
           "impact_radius": 60,
           "sample_dependents": [
-            "src::app::process_builder",
+            "src::ports::bus",
             "src::ports::bus_wire",
-            "src::infra::task_store",
-            "src::domain::workitem",
-            "src::app::alerts"
+            "src::ports::store",
+            "src::domain",
+            "src::app::timeout_sweep"
           ]
         }
       ],

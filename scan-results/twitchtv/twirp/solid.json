@@ -24,110 +24,110 @@
           "package": "_tools::src::google.golang.org::protobuf::compiler::protogen::protogen",
           "domains_count": 24,
           "domains": [
-            "bufio",
-            "genid",
-            "printer",
-            "protoreflect",
-            "fmt",
-            "strings",
+            "sort",
+            "ast",
             "bytes",
-            "strs",
-            "parser",
-            "proto"
+            "fmt",
+            "protoreflect",
+            "protodesc",
+            "printer",
+            "genid",
+            "filepath",
+            "path"
           ]
         },
         {
           "package": "internal::twirptest::service_test",
           "domains_count": 19,
           "domains": [
-            "reflect",
-            "log",
-            "twirp",
-            "regexp",
-            "errors",
-            "fmt",
-            "strings",
+            "time",
             "bytes",
-            "http",
-            "protojson"
+            "fmt",
+            "httptest",
+            "protojson",
+            "twirp",
+            "errors",
+            "os",
+            "io",
+            "tls"
           ]
         },
         {
           "package": "protoc-gen-twirp::generator",
           "domains_count": 18,
           "domains": [
-            "strconv",
-            "bufio",
-            "errors",
-            "stringutils",
-            "fmt",
+            "printer",
+            "parser",
+            "pluginpb",
             "strings",
-            "bytes",
+            "sort",
+            "gen",
+            "typemap",
             "gzip",
-            "token",
-            "path"
+            "strconv",
+            "errors"
           ]
         },
         {
           "package": "_tools::src::google.golang.org::protobuf::cmd::protoc-gen-go::internal_gengo::main",
           "domains_count": 17,
           "domains": [
-            "tag",
-            "strconv",
             "utf8",
-            "version",
-            "fmt",
+            "parser",
             "math",
+            "protoimpl",
+            "pluginpb",
             "strings",
-            "descriptorpb",
-            "token",
-            "genid"
+            "genid",
+            "strconv",
+            "ast",
+            "unicode"
           ]
         },
         {
           "package": "_tools::src::google.golang.org::protobuf::encoding::prototext::encode",
           "domains_count": 15,
           "domains": [
-            "strconv",
-            "messageset",
-            "order",
-            "utf8",
-            "protoregistry",
-            "errors",
-            "fmt",
-            "protowire",
+            "text",
             "genid",
-            "flags"
+            "protoregistry",
+            "messageset",
+            "protowire",
+            "strconv",
+            "flags",
+            "order",
+            "fmt",
+            "utf8"
           ]
         },
         {
           "package": "_tools::src::golang.org::x::tools::go::loader::loader",
           "domains_count": 15,
           "domains": [
-            "sync",
-            "cgo",
-            "filepath",
-            "errors",
+            "parser",
             "os",
-            "fmt",
+            "time",
+            "cgo",
+            "sync",
             "strings",
-            "token",
+            "sort",
             "build",
-            "astutil"
+            "ast",
+            "filepath"
           ]
         },
         {
           "package": "_tools::src::google.golang.org::protobuf::encoding::prototext::decode",
           "domains_count": 13,
           "domains": [
-            "messageset",
+            "text",
+            "genid",
             "protoregistry",
-            "utf8",
-            "errors",
+            "messageset",
+            "flags",
             "set",
             "fmt",
-            "genid",
-            "flags",
+            "utf8",
             "strs",
             "protoreflect"
           ]
@@ -136,15 +136,15 @@
           "package": "_tools::src::google.golang.org::protobuf::internal::filedesc::desc",
           "domains_count": 13,
           "domains": [
-            "sync",
-            "messageset",
-            "protoregistry",
-            "fmt",
-            "bytes",
             "atomic",
-            "defval",
+            "descfmt",
+            "sync",
             "genid",
-            "strs",
+            "protoregistry",
+            "messageset",
+            "defval",
+            "bytes",
+            "fmt",
             "protoreflect"
           ]
         },
@@ -152,32 +152,32 @@
           "package": "_tools::src::google.golang.org::protobuf::internal::impl::validate",
           "domains_count": 13,
           "domains": [
-            "bits",
             "reflect",
-            "messageset",
-            "utf8",
-            "protoregistry",
-            "fmt",
             "math",
-            "protowire",
+            "protoregistry",
             "genid",
-            "flags"
+            "protoiface",
+            "messageset",
+            "protowire",
+            "flags",
+            "fmt",
+            "utf8"
           ]
         },
         {
           "package": "_tools::src::github.com::kisielk::errcheck::internal::errcheck::errcheck",
           "domains_count": 13,
           "domains": [
-            "sync",
-            "loader",
-            "regexp",
-            "bufio",
-            "errors",
             "os",
-            "fmt",
+            "sync",
             "strings",
+            "sort",
+            "build",
+            "ast",
+            "loader",
+            "fmt",
             "token",
-            "build"
+            "types"
           ]
         }
       ],
