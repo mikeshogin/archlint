@@ -1,13 +1,13 @@
 {
-  "status": "WARNING",
+  "status": "ERROR",
   "summary": {
     "total_checks": 29,
     "passed": 17,
     "failed": 0,
     "warnings": 2,
     "info": 8,
-    "skipped": 2,
-    "errors": 0
+    "skipped": 1,
+    "errors": 1
   },
   "graph": {
     "nodes": 5,
@@ -53,9 +53,11 @@
     },
     {
       "name": "modularity",
-      "description": "Модульность графа",
-      "status": "SKIP",
-      "reason": "Граф не содержит достаточно связей для вычисления модульности"
+      "description": "Модульность графа должна быть >= 0.3",
+      "status": "ERROR",
+      "modularity": 0,
+      "threshold": 0.3,
+      "communities_count": 5
     },
     {
       "name": "abstractness",
