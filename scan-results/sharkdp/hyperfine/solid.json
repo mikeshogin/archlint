@@ -24,48 +24,48 @@
           "package": "src::export",
           "domains_count": 15,
           "domains": [
-            "src::benchmark",
-            "csv",
-            "orgmode",
             "src::asciidoc",
-            "src::markdown",
-            "src::json",
-            "src::orgmode",
-            "tests",
             "src::options",
-            "src::csv"
+            "csv",
+            "src::markdown",
+            "orgmode",
+            "markup",
+            "src::json",
+            "json",
+            "src::csv",
+            "markdown"
           ]
         },
         {
           "package": "src::benchmark",
           "domains_count": 12,
           "domains": [
-            "benchmark_result",
-            "executor",
-            "src::outlier_detection",
             "src::command",
-            "timing_result",
             "src::options",
-            "src::util",
-            "scheduler",
-            "src::output",
-            "relative_speed"
+            "relative_speed",
+            "src::parameter",
+            "src::outlier_detection",
+            "benchmark_result",
+            "timing_result",
+            "src::executor",
+            "executor",
+            "scheduler"
           ]
         },
         {
           "package": "src::main",
           "domains_count": 11,
           "domains": [
-            "cli",
-            "options",
-            "error",
-            "parameter",
+            "export",
             "benchmark",
-            "util",
-            "timer",
-            "command",
+            "outlier_detection",
+            "error",
             "output",
-            "export"
+            "options",
+            "parameter",
+            "command",
+            "timer",
+            "cli"
           ]
         },
         {
@@ -73,11 +73,11 @@
           "domains_count": 6,
           "domains": [
             "src::command",
-            "src::benchmark_result",
             "src::options",
+            "src::benchmark_result",
             "src::executor",
-            "src::cli",
-            "src::export"
+            "src::export",
+            "src::cli"
           ]
         },
         {
@@ -85,33 +85,33 @@
           "domains_count": 6,
           "domains": [
             "src::command",
-            "src::timing_result",
-            "src::util",
             "src::options",
-            "src::output",
-            "src::timer"
+            "src::timing_result",
+            "src::timer",
+            "src::util",
+            "src::output"
           ]
         },
         {
           "package": "src::timer",
           "domains_count": 6,
           "domains": [
-            "nix",
-            "src::util",
-            "windows_timer",
             "windows_sys",
             "unix_timer",
-            "wall_clock_timer"
+            "wall_clock_timer",
+            "nix",
+            "windows_timer",
+            "src::util"
           ]
         },
         {
           "package": "src::export::markup",
           "domains_count": 5,
           "domains": [
-            "src::benchmark",
             "src::Exporter",
-            "src::util",
             "src::options",
+            "src::benchmark",
+            "src::util",
             "src::output"
           ]
         },
@@ -119,9 +119,9 @@
           "package": "src::util",
           "domains_count": 5,
           "domains": [
+            "units",
             "number",
             "min_max",
-            "units",
             "randomized_environment_offset",
             "exit_code"
           ]
@@ -132,8 +132,8 @@
           "domains": [
             "src::benchmark",
             "src::Exporter",
-            "src::util",
-            "src::export"
+            "src::export",
+            "src::util"
           ]
         },
         {
@@ -142,8 +142,8 @@
           "domains": [
             "src::benchmark",
             "src::Exporter",
-            "src::util",
-            "src::options"
+            "src::options",
+            "src::util"
           ]
         }
       ],

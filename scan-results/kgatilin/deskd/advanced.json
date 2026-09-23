@@ -39,9 +39,9 @@
       "name": "modularity",
       "description": "Модульность графа должна быть >= 0.3",
       "status": "PASSED",
-      "modularity": 0.577,
+      "modularity": 0.578,
       "threshold": 0.3,
-      "communities_count": 29
+      "communities_count": 30
     },
     {
       "name": "abstractness",
@@ -629,110 +629,110 @@
           "component": "tests",
           "impact_radius": 124,
           "sample_dependents": [
-            "src::infra::dto::task",
-            "src::app::adapters::web::view::detail",
-            "src::app::jsonrpc",
-            "src::domain::events",
-            "src::infra::dto::config"
+            "src::app::commands::a2a",
+            "src::infra::memory_store",
+            "src::app::adapters::telegram",
+            "src::domain::statemachine",
+            "src::app::adapters::web::routes::agent_task"
           ]
         },
         {
           "component": "task",
           "impact_radius": 95,
           "sample_dependents": [
-            "src::infra::dto::task",
-            "src::app::adapters::web::view::detail",
-            "src::ports::bus_wire",
-            "src::infra::dto",
-            "src::infra::dto::config"
+            "src::app::commands::a2a",
+            "src::app::adapters::web::routes::agent_log",
+            "src::infra::memory_store",
+            "src::app::adapters::telegram",
+            "src::app::adapters::web::routes::agent_task"
           ]
         },
         {
           "component": "context",
           "impact_radius": 94,
           "sample_dependents": [
-            "src::infra::dto::task",
-            "src::app::adapters::web::view::detail",
-            "src::ports::bus_wire",
-            "src::infra::dto",
-            "src::infra::dto::config"
+            "src::app::commands::a2a",
+            "src::app::adapters::web::routes::agent_log",
+            "src::infra::memory_store",
+            "src::app::adapters::telegram",
+            "src::app::adapters::web::routes::agent_task"
           ]
         },
         {
           "component": "agent",
           "impact_radius": 93,
           "sample_dependents": [
-            "src::infra::dto::task",
-            "src::app::adapters::web::view::detail",
-            "src::ports::bus_wire",
-            "src::infra::dto::config",
-            "src::app::adapters::web::panel"
+            "src::app::commands::a2a",
+            "src::app::adapters::web::routes::agent_log",
+            "src::infra::memory_store",
+            "src::app::adapters::telegram",
+            "src::app::adapters::web::routes::agent_task"
           ]
         },
         {
           "component": "message",
           "impact_radius": 92,
           "sample_dependents": [
-            "src::infra::dto::task",
-            "src::app::adapters::web::view::detail",
-            "src::ports::bus_wire",
-            "src::infra::dto::config",
-            "src::app::adapters::web::panel"
+            "src::app::commands::a2a",
+            "src::app::adapters::web::routes::agent_log",
+            "src::infra::memory_store",
+            "src::app::adapters::telegram",
+            "src::app::adapters::web::routes::agent_task"
           ]
         },
         {
           "component": "statemachine",
           "impact_radius": 92,
           "sample_dependents": [
-            "src::infra::dto::task",
-            "src::app::adapters::web::view::detail",
-            "src::ports::bus_wire",
-            "src::infra::dto::config",
-            "src::app::adapters::web::panel"
+            "src::app::commands::a2a",
+            "src::app::adapters::web::routes::agent_log",
+            "src::infra::memory_store",
+            "src::app::adapters::telegram",
+            "src::app::adapters::web::routes::agent_task"
           ]
         },
         {
           "component": "bus",
           "impact_radius": 74,
           "sample_dependents": [
-            "src::app::adapters::web::view::detail",
-            "src::infra::dto",
-            "src::app::adapters::web::panel",
-            "src::app::doctor",
-            "src::infra::context_store"
+            "src::app::commands::a2a",
+            "src::app::adapters::web::routes::agent_log",
+            "src::infra::memory_store",
+            "src::app::adapters::telegram",
+            "src::app::adapters::web::routes::agent_task"
           ]
         },
         {
           "component": "events",
           "impact_radius": 61,
           "sample_dependents": [
-            "src::app::workflow",
-            "src::ports::bus_wire",
-            "src::infra::dto::task",
             "src::app::commands::a2a",
-            "src::infra::dto::config"
+            "src::infra::memory_store",
+            "src::app::commands::schedule",
+            "src::app::adapters::telegram",
+            "src::app::a2a"
           ]
         },
         {
           "component": "config_types",
           "impact_radius": 60,
           "sample_dependents": [
-            "src::app::workflow",
-            "src::ports::bus_wire",
-            "src::infra::dto::task",
             "src::app::commands::a2a",
-            "src::infra::dto::config"
+            "src::infra::memory_store",
+            "src::app::commands::schedule",
+            "src::app::adapters::telegram",
+            "src::app::a2a"
           ]
         },
         {
           "component": "workitem",
           "impact_radius": 60,
           "sample_dependents": [
-            "src::app::workflow",
-            "src::ports::bus_wire",
-            "src::infra::dto::task",
             "src::app::commands::a2a",
-            "src::infra::dto::config"
+            "src::infra::memory_store",
+            "src::app::commands::schedule",
+            "src::app::adapters::telegram",
+            "src::app::a2a"
           ]
         }
       ],
