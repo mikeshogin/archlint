@@ -29,7 +29,15 @@
       "threshold": 0.1,
       "critical_components": [
         {
+          "node": "parser",
+          "pagerank": 0.2
+        },
+        {
           "node": "autoload::autoload",
+          "pagerank": 0.2
+        },
+        {
+          "node": "godotenv",
           "pagerank": 0.2
         },
         {
@@ -38,14 +46,6 @@
         },
         {
           "node": "cmd::godotenv::cmd",
-          "pagerank": 0.2
-        },
-        {
-          "node": "parser",
-          "pagerank": 0.2
-        },
-        {
-          "node": "godotenv",
           "pagerank": 0.2
         }
       ],
@@ -77,7 +77,21 @@
       "status": "PASSED",
       "packages": [
         {
+          "package": "parser",
+          "abstractness": 0.0,
+          "instability": 0.5,
+          "distance": 0.5,
+          "nodes_count": 1
+        },
+        {
           "package": "autoload::autoload",
+          "abstractness": 0.0,
+          "instability": 0.5,
+          "distance": 0.5,
+          "nodes_count": 1
+        },
+        {
+          "package": "godotenv",
           "abstractness": 0.0,
           "instability": 0.5,
           "distance": 0.5,
@@ -92,20 +106,6 @@
         },
         {
           "package": "cmd::godotenv::cmd",
-          "abstractness": 0.0,
-          "instability": 0.5,
-          "distance": 0.5,
-          "nodes_count": 1
-        },
-        {
-          "package": "parser",
-          "abstractness": 0.0,
-          "instability": 0.5,
-          "distance": 0.5,
-          "nodes_count": 1
-        },
-        {
-          "package": "godotenv",
           "abstractness": 0.0,
           "instability": 0.5,
           "distance": 0.5,
@@ -171,7 +171,15 @@
       "central_nodes": [],
       "peripheral_nodes": [
         {
+          "node": "parser",
+          "closeness": 0.0
+        },
+        {
           "node": "autoload::autoload",
+          "closeness": 0.0
+        },
+        {
+          "node": "godotenv",
           "closeness": 0.0
         },
         {
@@ -180,14 +188,6 @@
         },
         {
           "node": "cmd::godotenv::cmd",
-          "closeness": 0.0
-        },
-        {
-          "node": "parser",
-          "closeness": 0.0
-        },
-        {
-          "node": "godotenv",
           "closeness": 0.0
         }
       ],
@@ -200,7 +200,15 @@
       "threshold": 0.3,
       "influential_nodes": [
         {
+          "node": "parser",
+          "eigenvector": 0.447
+        },
+        {
           "node": "autoload::autoload",
+          "eigenvector": 0.447
+        },
+        {
+          "node": "godotenv",
           "eigenvector": 0.447
         },
         {
@@ -209,21 +217,21 @@
         },
         {
           "node": "cmd::godotenv::cmd",
-          "eigenvector": 0.447
-        },
-        {
-          "node": "parser",
-          "eigenvector": 0.447
-        },
-        {
-          "node": "godotenv",
           "eigenvector": 0.447
         }
       ],
       "influential_count": 5,
       "top_5": [
         {
+          "node": "parser",
+          "eigenvector": 0.447
+        },
+        {
           "node": "autoload::autoload",
+          "eigenvector": 0.447
+        },
+        {
+          "node": "godotenv",
           "eigenvector": 0.447
         },
         {
@@ -232,14 +240,6 @@
         },
         {
           "node": "cmd::godotenv::cmd",
-          "eigenvector": 0.447
-        },
-        {
-          "node": "parser",
-          "eigenvector": 0.447
-        },
-        {
-          "node": "godotenv",
           "eigenvector": 0.447
         }
       ]
@@ -329,7 +329,15 @@
       "max_impact": 0,
       "top_impact": [
         {
+          "node": "parser",
+          "impact": 0
+        },
+        {
           "node": "autoload::autoload",
+          "impact": 0
+        },
+        {
+          "node": "godotenv",
           "impact": 0
         },
         {
@@ -338,14 +346,6 @@
         },
         {
           "node": "cmd::godotenv::cmd",
-          "impact": 0
-        },
-        {
-          "node": "parser",
-          "impact": 0
-        },
-        {
-          "node": "godotenv",
           "impact": 0
         }
       ],

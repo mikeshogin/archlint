@@ -44,7 +44,19 @@
       "status": "PASSED",
       "most_unstable": [
         {
+          "node": "parser",
+          "instability": 0.5,
+          "ca": 0,
+          "ce": 0
+        },
+        {
           "node": "autoload::autoload",
+          "instability": 0.5,
+          "ca": 0,
+          "ce": 0
+        },
+        {
+          "node": "godotenv",
           "instability": 0.5,
           "ca": 0,
           "ce": 0
@@ -57,18 +69,6 @@
         },
         {
           "node": "cmd::godotenv::cmd",
-          "instability": 0.5,
-          "ca": 0,
-          "ce": 0
-        },
-        {
-          "node": "parser",
-          "instability": 0.5,
-          "ca": 0,
-          "ce": 0
-        },
-        {
-          "node": "godotenv",
           "instability": 0.5,
           "ca": 0,
           "ce": 0
@@ -143,11 +143,11 @@
       "description": "Компоненты без связей (возможно мертвый код)",
       "status": "WARNING",
       "orphans": [
-        "autoload::autoload",
-        "godotenv_test",
-        "cmd::godotenv::cmd",
         "parser",
-        "godotenv"
+        "autoload::autoload",
+        "godotenv",
+        "godotenv_test",
+        "cmd::godotenv::cmd"
       ],
       "orphans_count": 5
     },

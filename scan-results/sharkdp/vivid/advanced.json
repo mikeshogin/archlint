@@ -88,24 +88,6 @@
           "issue": "Зона боли: конкретный и стабильный"
         },
         {
-          "package": "src::Theme",
-          "abstractness": 0.0,
-          "instability": 0.0,
-          "distance": 1.0,
-          "nodes_count": 1,
-          "zone": "pain",
-          "issue": "Зона боли: конкретный и стабильный"
-        },
-        {
-          "package": "src::FileTypes",
-          "abstractness": 0.0,
-          "instability": 0.0,
-          "distance": 1.0,
-          "nodes_count": 1,
-          "zone": "pain",
-          "issue": "Зона боли: конкретный и стабильный"
-        },
-        {
           "package": "color",
           "abstractness": 0.0,
           "instability": 0.0,
@@ -149,11 +131,38 @@
           "nodes_count": 1,
           "zone": "pain",
           "issue": "Зона боли: конкретный и стабильный"
+        },
+        {
+          "package": "types",
+          "abstractness": 0.0,
+          "instability": 0.0,
+          "distance": 1.0,
+          "nodes_count": 1,
+          "zone": "pain",
+          "issue": "Зона боли: конкретный и стабильный"
+        },
+        {
+          "package": "util",
+          "abstractness": 0.0,
+          "instability": 0.0,
+          "distance": 1.0,
+          "nodes_count": 1,
+          "zone": "pain",
+          "issue": "Зона боли: конкретный и стабильный"
         }
       ],
       "violations": [
         {
           "package": "src::font_style",
+          "abstractness": 0.0,
+          "instability": 0.0,
+          "distance": 1.0,
+          "nodes_count": 1,
+          "zone": "pain",
+          "issue": "Зона боли: конкретный и стабильный"
+        },
+        {
+          "package": "src::error",
           "abstractness": 0.0,
           "instability": 0.0,
           "distance": 1.0,
@@ -169,15 +178,6 @@
           "nodes_count": 1
         },
         {
-          "package": "src::error",
-          "abstractness": 0.0,
-          "instability": 0.0,
-          "distance": 1.0,
-          "nodes_count": 1,
-          "zone": "pain",
-          "issue": "Зона боли: конкретный и стабильный"
-        },
-        {
           "package": "src::types",
           "abstractness": 0.0,
           "instability": 0.0,
@@ -187,7 +187,7 @@
           "issue": "Зона боли: конкретный и стабильный"
         },
         {
-          "package": "src::Theme",
+          "package": "color",
           "abstractness": 0.0,
           "instability": 0.0,
           "distance": 1.0,
@@ -230,8 +230,8 @@
       "description": "Критические узлы (удаление разбивает граф)",
       "status": "WARNING",
       "articulation_points": [
-        "src::filetypes",
         "src::main",
+        "src::filetypes",
         "src::theme"
       ],
       "count": 3,
@@ -243,16 +243,8 @@
       "status": "INFO",
       "bridges": [
         {
-          "from": "src::theme",
-          "to": "src::font_style"
-        },
-        {
-          "from": "src::theme",
-          "to": "src::Theme"
-        },
-        {
-          "from": "src::filetypes",
-          "to": "src::FileTypes"
+          "from": "src::font_style",
+          "to": "src::theme"
         },
         {
           "from": "src::main",
@@ -281,6 +273,14 @@
         {
           "from": "src::main",
           "to": "util"
+        },
+        {
+          "from": "src::filetypes",
+          "to": "src::FileTypes"
+        },
+        {
+          "from": "src::theme",
+          "to": "src::Theme"
         }
       ],
       "count": 10
@@ -327,19 +327,19 @@
           "closeness": 0.074
         },
         {
-          "node": "src::Theme",
-          "closeness": 0.074
-        },
-        {
           "node": "src::FileTypes",
           "closeness": 0.074
         },
         {
-          "node": "src::theme",
-          "closeness": 0.056
+          "node": "src::Theme",
+          "closeness": 0.074
         },
         {
           "node": "src::filetypes",
+          "closeness": 0.056
+        },
+        {
+          "node": "src::theme",
           "closeness": 0.056
         },
         {
@@ -501,7 +501,7 @@
           "impact": 3
         },
         {
-          "node": "src::color",
+          "node": "src::font_style",
           "impact": 2
         }
       ],

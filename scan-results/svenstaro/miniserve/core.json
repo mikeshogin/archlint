@@ -20,8 +20,8 @@
       "status": "FAILED",
       "cycles": [
         [
-          "src::renderer",
-          "src::listing"
+          "src::listing",
+          "src::renderer"
         ]
       ],
       "cycles_count": 1
@@ -70,19 +70,19 @@
       "status": "PASSED",
       "most_unstable": [
         {
+          "node": "tests::cli",
+          "instability": 1.0,
+          "ca": 0,
+          "ce": 2
+        },
+        {
+          "node": "tests::qrcode",
+          "instability": 1.0,
+          "ca": 0,
+          "ce": 3
+        },
+        {
           "node": "tests::create_directories",
-          "instability": 1.0,
-          "ca": 0,
-          "ce": 2
-        },
-        {
-          "node": "tests::bind",
-          "instability": 1.0,
-          "ca": 0,
-          "ce": 2
-        },
-        {
-          "node": "tests::header",
           "instability": 1.0,
           "ca": 0,
           "ce": 2
@@ -94,7 +94,7 @@
           "ce": 2
         },
         {
-          "node": "tests::webdav",
+          "node": "tests::auth_file",
           "instability": 1.0,
           "ca": 0,
           "ce": 2
@@ -102,21 +102,21 @@
       ],
       "most_stable": [
         {
-          "node": "pipe",
+          "node": "AuthParseError",
           "instability": 0.0,
           "ca": 1,
           "ce": 0
         },
         {
-          "node": "renderer",
+          "node": "tests",
           "instability": 0.0,
-          "ca": 1,
+          "ca": 4,
           "ce": 0
         },
         {
-          "node": "webdav_fs",
+          "node": "RequiredAuthPassword",
           "instability": 0.0,
-          "ca": 1,
+          "ca": 2,
           "ce": 0
         },
         {
@@ -224,8 +224,8 @@
       "total_sccs": 52,
       "problematic_sccs": [
         [
-          "src::renderer",
-          "src::listing"
+          "src::listing",
+          "src::renderer"
         ]
       ],
       "problematic_count": 1

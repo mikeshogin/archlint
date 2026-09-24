@@ -79,6 +79,33 @@
           "issue": "Зона боли: конкретный и стабильный"
         },
         {
+          "package": "cases",
+          "abstractness": 0.0,
+          "instability": 0.0,
+          "distance": 1.0,
+          "nodes_count": 1,
+          "zone": "pain",
+          "issue": "Зона боли: конкретный и стабильный"
+        },
+        {
+          "package": "server",
+          "abstractness": 0.0,
+          "instability": 0.0,
+          "distance": 1.0,
+          "nodes_count": 1,
+          "zone": "pain",
+          "issue": "Зона боли: конкретный и стабильный"
+        },
+        {
+          "package": "prelude",
+          "abstractness": 0.0,
+          "instability": 0.0,
+          "distance": 1.0,
+          "nodes_count": 1,
+          "zone": "pain",
+          "issue": "Зона боли: конкретный и стабильный"
+        },
+        {
           "package": "auth_message_signature",
           "abstractness": 0.0,
           "instability": 0.0,
@@ -122,44 +149,15 @@
           "nodes_count": 1,
           "zone": "pain",
           "issue": "Зона боли: конкретный и стабильный"
-        },
-        {
-          "package": "xml",
-          "abstractness": 0.0,
-          "instability": 0.0,
-          "distance": 1.0,
-          "nodes_count": 1,
-          "zone": "pain",
-          "issue": "Зона боли: конкретный и стабильный"
-        },
-        {
-          "package": "cases",
-          "abstractness": 0.0,
-          "instability": 0.0,
-          "distance": 1.0,
-          "nodes_count": 1,
-          "zone": "pain",
-          "issue": "Зона боли: конкретный и стабильный"
-        },
-        {
-          "package": "server",
-          "abstractness": 0.0,
-          "instability": 0.0,
-          "distance": 1.0,
-          "nodes_count": 1,
-          "zone": "pain",
-          "issue": "Зона боли: конкретный и стабильный"
         }
       ],
       "violations": [
         {
-          "package": "src::utils",
+          "package": "src::cli",
           "abstractness": 0.0,
-          "instability": 0.071,
-          "distance": 0.929,
-          "nodes_count": 1,
-          "zone": "pain",
-          "issue": "Зона боли: конкретный и стабильный"
+          "instability": 0.455,
+          "distance": 0.545,
+          "nodes_count": 1
         },
         {
           "package": "src::middleware",
@@ -180,14 +178,16 @@
           "issue": "Зона боли: конкретный и стабильный"
         },
         {
-          "package": "src::cli",
+          "package": "src::utils",
           "abstractness": 0.0,
-          "instability": 0.455,
-          "distance": 0.545,
-          "nodes_count": 1
+          "instability": 0.071,
+          "distance": 0.929,
+          "nodes_count": 1,
+          "zone": "pain",
+          "issue": "Зона боли: конкретный и стабильный"
         },
         {
-          "package": "auth_message_signature",
+          "package": "cases",
           "abstractness": 0.0,
           "instability": 0.0,
           "distance": 1.0,
@@ -206,12 +206,16 @@
       "threshold": 0.1,
       "low_clustering_nodes": [
         {
+          "node": "tests::cli",
+          "coefficient": 0.0
+        },
+        {
           "node": "tests::cases",
           "coefficient": 0.0
         },
         {
-          "node": "tests::cli",
-          "coefficient": 0.0
+          "node": "src::main",
+          "coefficient": 0.028
         },
         {
           "node": "src::formatting::palette",
@@ -220,10 +224,6 @@
         {
           "node": "src::formatting",
           "coefficient": 0.0
-        },
-        {
-          "node": "src::main",
-          "coefficient": 0.028
         },
         {
           "node": "tests::prelude",
@@ -250,19 +250,19 @@
       "description": "Критические узлы (удаление разбивает граф)",
       "status": "WARNING",
       "articulation_points": [
+        "tests::cli",
         "tests::prelude",
         "src::main",
-        "src::nested_json",
-        "tests",
         "src::formatting::palette",
         "src::formatting",
         "src::printer",
-        "src::request_items",
+        "tests",
         "src::buffer",
+        "src::nested_json",
+        "src::request_items",
         "src::cli",
         "download",
-        "tests::cases",
-        "tests::cli"
+        "tests::cases"
       ],
       "count": 13,
       "recommendation": "Уменьшить зависимость от критических узлов"
@@ -273,7 +273,31 @@
       "status": "INFO",
       "bridges": [
         {
-          "from": "tests::cases::compress_request_body",
+          "from": "tests::cli",
+          "to": "cases"
+        },
+        {
+          "from": "tests::cli",
+          "to": "server"
+        },
+        {
+          "from": "tests::cli",
+          "to": "prelude"
+        },
+        {
+          "from": "tests::cases::logging",
+          "to": "tests::prelude"
+        },
+        {
+          "from": "tests::cases::xml",
+          "to": "tests::prelude"
+        },
+        {
+          "from": "tests::cases::unix_socket",
+          "to": "tests::prelude"
+        },
+        {
+          "from": "tests::cases::download",
           "to": "tests::prelude"
         },
         {
@@ -301,56 +325,32 @@
           "to": "xml"
         },
         {
-          "from": "tests::cases::unix_socket",
+          "from": "tests::cases::compress_request_body",
           "to": "tests::prelude"
         },
         {
-          "from": "tests::cases::download",
-          "to": "tests::prelude"
+          "from": "src::request_items",
+          "to": "RequestItem"
         },
         {
-          "from": "tests::cases::logging",
-          "to": "tests::prelude"
+          "from": "src::cli",
+          "to": "src::redacted"
         },
         {
-          "from": "tests::cases::xml",
-          "to": "tests::prelude"
+          "from": "src::buffer",
+          "to": "imp"
         },
         {
-          "from": "tests::cli",
-          "to": "cases"
+          "from": "src::main",
+          "to": "auth"
         },
         {
-          "from": "tests::cli",
-          "to": "server"
+          "from": "src::main",
+          "to": "buffer"
         },
         {
-          "from": "tests::cli",
-          "to": "prelude"
-        },
-        {
-          "from": "src::message_signature",
-          "to": "tests"
-        },
-        {
-          "from": "src::formatting::palette",
-          "to": "util"
-        },
-        {
-          "from": "src::formatting::palette",
-          "to": "src::formatting"
-        },
-        {
-          "from": "src::formatting",
-          "to": "headers"
-        },
-        {
-          "from": "src::formatting",
-          "to": "palette"
-        },
-        {
-          "from": "src::formatting",
-          "to": "src::printer"
+          "from": "src::main",
+          "to": "cli"
         }
       ],
       "count": 46
@@ -482,11 +482,11 @@
       "threshold": 4,
       "large_cliques": [
         [
-          "src::to_curl",
-          "src::request_items",
-          "src::utils",
           "tests",
-          "src::cli"
+          "src::utils",
+          "src::cli",
+          "src::to_curl",
+          "src::request_items"
         ]
       ],
       "large_cliques_count": 1,
