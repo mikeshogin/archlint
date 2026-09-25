@@ -629,87 +629,87 @@
           "component": "tests",
           "impact_radius": 124,
           "sample_dependents": [
-            "src::app::transcript_extractor::patterns",
-            "src::app::adapters::web::auth::session",
-            "src::app::doctor",
-            "src::infra::memory_store",
-            "src::app::adapters::web::event_query"
+            "src::app::adapters::web::view::log",
+            "src::app::adapters::web::data_cost",
+            "src::app::commands::schedule",
+            "src::app::adapters::web::data",
+            "src::app::agent_registry"
           ]
         },
         {
           "component": "task",
           "impact_radius": 95,
           "sample_dependents": [
-            "src::app::adapters::web::routes::logout",
-            "src::app::doctor",
-            "src::infra::memory_store",
-            "src::app::adapters::web::event_query",
-            "src::app::adapters::web::data_cost"
+            "src::app::adapters::web::view::log",
+            "src::app::adapters::web::data_cost",
+            "src::app::commands::schedule",
+            "src::app::adapters::web::data",
+            "src::app::agent_registry"
           ]
         },
         {
           "component": "context",
           "impact_radius": 94,
           "sample_dependents": [
-            "src::app::adapters::web::routes::logout",
-            "src::app::doctor",
-            "src::infra::memory_store",
-            "src::app::adapters::web::event_query",
-            "src::app::adapters::web::data_cost"
+            "src::app::adapters::web::view::log",
+            "src::app::adapters::web::data_cost",
+            "src::app::commands::schedule",
+            "src::app::adapters::web::data",
+            "src::app::agent_registry"
           ]
         },
         {
           "component": "agent",
           "impact_radius": 93,
           "sample_dependents": [
-            "src::app::adapters::web::routes::logout",
-            "src::app::doctor",
-            "src::infra::memory_store",
-            "src::app::adapters::web::event_query",
-            "src::app::adapters::web::data_cost"
+            "src::app::adapters::web::view::log",
+            "src::app::adapters::web::data_cost",
+            "src::app::commands::schedule",
+            "src::app::adapters::web::data",
+            "src::app::agent_registry"
           ]
         },
         {
           "component": "message",
           "impact_radius": 92,
           "sample_dependents": [
-            "src::app::adapters::web::routes::logout",
-            "src::app::doctor",
-            "src::infra::memory_store",
-            "src::app::adapters::web::event_query",
-            "src::app::adapters::web::data_cost"
+            "src::app::adapters::web::view::log",
+            "src::app::adapters::web::data_cost",
+            "src::app::commands::schedule",
+            "src::app::adapters::web::data",
+            "src::app::agent_registry"
           ]
         },
         {
           "component": "statemachine",
           "impact_radius": 92,
           "sample_dependents": [
-            "src::app::adapters::web::routes::logout",
-            "src::app::doctor",
-            "src::infra::memory_store",
-            "src::app::adapters::web::event_query",
-            "src::app::adapters::web::data_cost"
+            "src::app::adapters::web::view::log",
+            "src::app::adapters::web::data_cost",
+            "src::app::commands::schedule",
+            "src::app::adapters::web::data",
+            "src::app::agent_registry"
           ]
         },
         {
           "component": "bus",
           "impact_radius": 74,
           "sample_dependents": [
-            "src::app::adapters::web::routes::logout",
-            "src::app::doctor",
-            "src::infra::memory_store",
-            "src::app::adapters::web::event_query",
-            "src::app::adapters::web::data_cost"
+            "src::app::adapters::web::view::log",
+            "src::app::adapters::web::data_cost",
+            "src::app::commands::schedule",
+            "src::app::adapters::web::data",
+            "src::app::schedule"
           ]
         },
         {
           "component": "events",
           "impact_radius": 61,
           "sample_dependents": [
-            "src::infra::memory_store",
+            "src::app::commands::schedule",
             "src::app::adapters::web::data_cost",
-            "src::infra::dto::instance",
-            "src::app::mcp_tools",
+            "src::app::commands::a2a",
+            "src::app::adapters::web::data",
             "src::app::commands::sm"
           ]
         },
@@ -717,10 +717,10 @@
           "component": "config_types",
           "impact_radius": 60,
           "sample_dependents": [
-            "src::infra::memory_store",
+            "src::app::commands::schedule",
             "src::app::adapters::web::data_cost",
-            "src::infra::dto::instance",
-            "src::app::mcp_tools",
+            "src::app::commands::a2a",
+            "src::app::adapters::web::data",
             "src::app::commands::sm"
           ]
         },
@@ -728,10 +728,10 @@
           "component": "workitem",
           "impact_radius": 60,
           "sample_dependents": [
-            "src::infra::memory_store",
+            "src::app::commands::schedule",
             "src::app::adapters::web::data_cost",
-            "src::infra::dto::instance",
-            "src::app::mcp_tools",
+            "src::app::commands::a2a",
+            "src::app::adapters::web::data",
             "src::app::commands::sm"
           ]
         }
