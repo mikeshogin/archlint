@@ -629,110 +629,110 @@
           "component": "tests",
           "impact_radius": 124,
           "sample_dependents": [
-            "src::app::adapters::web::templates",
-            "src::app::commands::remind",
-            "src::app::adapters::web::routes",
-            "src::app::adapters::web::transcript_view",
-            "src::app::adapters::web::middleware::rate_limit"
+            "src::app::workflow",
+            "src::app::worker",
+            "src::app::commands",
+            "src::app::tmux_launcher",
+            "src::app::commands::a2a"
           ]
         },
         {
           "component": "task",
           "impact_radius": 95,
           "sample_dependents": [
-            "src::app::commands::graph",
-            "src::app::commands::remind",
-            "src::app::adapters::web::routes",
-            "src::app::commands::tui",
-            "src::infra::task_store"
+            "src::app::workflow",
+            "src::app::commands",
+            "src::app::worker",
+            "src::app::adapters::web::routes::panel",
+            "src::app::commands::a2a"
           ]
         },
         {
           "component": "context",
           "impact_radius": 94,
           "sample_dependents": [
-            "src::app::commands::graph",
-            "src::app::commands::remind",
-            "src::app::adapters::web::routes",
-            "src::app::commands::tui",
-            "src::infra::task_store"
+            "src::app::workflow",
+            "src::app::commands",
+            "src::app::worker",
+            "src::app::adapters::web::routes::panel",
+            "src::app::commands::a2a"
           ]
         },
         {
           "component": "agent",
           "impact_radius": 93,
           "sample_dependents": [
-            "src::app::commands::graph",
-            "src::app::commands::remind",
-            "src::app::adapters::web::routes",
-            "src::app::commands::tui",
-            "src::infra::task_store"
+            "src::app::workflow",
+            "src::app::commands",
+            "src::app::worker",
+            "src::app::adapters::web::routes::panel",
+            "src::app::commands::a2a"
           ]
         },
         {
           "component": "message",
           "impact_radius": 92,
           "sample_dependents": [
-            "src::app::commands::graph",
-            "src::app::commands::remind",
-            "src::app::adapters::web::routes",
-            "src::app::commands::tui",
-            "src::infra::task_store"
+            "src::app::workflow",
+            "src::app::worker",
+            "src::app::adapters::web::routes::panel",
+            "src::app::commands::a2a",
+            "src::app::commands::sm"
           ]
         },
         {
           "component": "statemachine",
           "impact_radius": 92,
           "sample_dependents": [
-            "src::app::commands::graph",
-            "src::app::commands::remind",
-            "src::app::adapters::web::routes",
-            "src::app::commands::tui",
-            "src::infra::task_store"
+            "src::app::workflow",
+            "src::app::worker",
+            "src::app::adapters::web::routes::panel",
+            "src::app::commands::a2a",
+            "src::app::commands::sm"
           ]
         },
         {
           "component": "bus",
           "impact_radius": 74,
           "sample_dependents": [
-            "src::app::commands::graph",
-            "src::app::adapters::web::routes",
-            "src::app::timeout_sweep",
-            "src::infra::context_store",
-            "src::app::adapters::web::data_chart"
+            "src::app::workflow",
+            "src::app::commands",
+            "src::app::worker",
+            "src::app::adapters::web::routes::panel",
+            "src::app::commands::a2a"
           ]
         },
         {
           "component": "events",
           "impact_radius": 61,
           "sample_dependents": [
-            "src::app::metrics",
-            "src::app::commands::remind",
-            "src::app::a2a",
-            "src::infra::task_store",
-            "src::app::commands::tui"
+            "src::app::context",
+            "src::app::workflow",
+            "src::app::adapters::web::data_cost",
+            "src::app::worker",
+            "src::app::commands::a2a"
           ]
         },
         {
           "component": "config_types",
           "impact_radius": 60,
           "sample_dependents": [
-            "src::app::metrics",
-            "src::app::commands::remind",
-            "src::app::a2a",
-            "src::infra::task_store",
-            "src::app::commands::tui"
+            "src::app::context",
+            "src::app::workflow",
+            "src::app::adapters::web::data_cost",
+            "src::app::worker",
+            "src::app::commands::a2a"
           ]
         },
         {
           "component": "workitem",
           "impact_radius": 60,
           "sample_dependents": [
-            "src::app::metrics",
-            "src::app::commands::remind",
-            "src::app::a2a",
-            "src::infra::task_store",
-            "src::app::commands::tui"
+            "src::app::context",
+            "src::app::workflow",
+            "src::app::adapters::web::data_cost",
+            "src::app::worker",
+            "src::app::commands::a2a"
           ]
         }
       ],
