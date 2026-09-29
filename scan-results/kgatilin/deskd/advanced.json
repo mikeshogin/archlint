@@ -629,110 +629,110 @@
           "component": "tests",
           "impact_radius": 124,
           "sample_dependents": [
-            "src::app::workflow",
-            "src::app::worker",
-            "src::app::commands",
-            "src::app::tmux_launcher",
-            "src::app::commands::a2a"
+            "src::infra::sm_store",
+            "src::infra::dto::task",
+            "src::app::adapters::federation::hub",
+            "src::app::config_remotes",
+            "src::app::adapters::federation::forward"
           ]
         },
         {
           "component": "task",
           "impact_radius": 95,
           "sample_dependents": [
-            "src::app::workflow",
-            "src::app::commands",
-            "src::app::worker",
-            "src::app::adapters::web::routes::panel",
-            "src::app::commands::a2a"
+            "src::infra::sm_store",
+            "src::infra::dto::task",
+            "src::app::adapters::federation::hub",
+            "src::ports::bus",
+            "src::app::context"
           ]
         },
         {
           "component": "context",
           "impact_radius": 94,
           "sample_dependents": [
-            "src::app::workflow",
-            "src::app::commands",
-            "src::app::worker",
-            "src::app::adapters::web::routes::panel",
-            "src::app::commands::a2a"
+            "src::infra::sm_store",
+            "src::infra::dto::task",
+            "src::app::adapters::federation::hub",
+            "src::ports::bus",
+            "src::app::context"
           ]
         },
         {
           "component": "agent",
           "impact_radius": 93,
           "sample_dependents": [
-            "src::app::workflow",
-            "src::app::commands",
-            "src::app::worker",
-            "src::app::adapters::web::routes::panel",
-            "src::app::commands::a2a"
+            "src::infra::sm_store",
+            "src::infra::dto::task",
+            "src::app::adapters::federation::hub",
+            "src::ports::bus",
+            "src::app::context"
           ]
         },
         {
           "component": "message",
           "impact_radius": 92,
           "sample_dependents": [
-            "src::app::workflow",
-            "src::app::worker",
-            "src::app::adapters::web::routes::panel",
-            "src::app::commands::a2a",
-            "src::app::commands::sm"
+            "src::infra::sm_store",
+            "src::infra::dto::task",
+            "src::app::adapters::federation::hub",
+            "src::ports::bus",
+            "src::app::context"
           ]
         },
         {
           "component": "statemachine",
           "impact_radius": 92,
           "sample_dependents": [
-            "src::app::workflow",
-            "src::app::worker",
-            "src::app::adapters::web::routes::panel",
-            "src::app::commands::a2a",
-            "src::app::commands::sm"
+            "src::infra::sm_store",
+            "src::infra::dto::task",
+            "src::app::adapters::federation::hub",
+            "src::ports::bus",
+            "src::app::context"
           ]
         },
         {
           "component": "bus",
           "impact_radius": 74,
           "sample_dependents": [
-            "src::app::workflow",
-            "src::app::commands",
-            "src::app::worker",
-            "src::app::adapters::web::routes::panel",
-            "src::app::commands::a2a"
+            "src::app::adapters::federation::hub",
+            "src::app::context",
+            "src::app::adapters::federation::forward",
+            "src::app::adapters::web::routes::login",
+            "src::app::commands::schedule"
           ]
         },
         {
           "component": "events",
           "impact_radius": 61,
           "sample_dependents": [
+            "src::infra::memory_store",
+            "src::infra::sm_store",
+            "src::infra::dto::task",
             "src::app::context",
-            "src::app::workflow",
-            "src::app::adapters::web::data_cost",
-            "src::app::worker",
-            "src::app::commands::a2a"
+            "src::ports::bus"
           ]
         },
         {
           "component": "config_types",
           "impact_radius": 60,
           "sample_dependents": [
+            "src::infra::memory_store",
+            "src::infra::sm_store",
+            "src::infra::dto::task",
             "src::app::context",
-            "src::app::workflow",
-            "src::app::adapters::web::data_cost",
-            "src::app::worker",
-            "src::app::commands::a2a"
+            "src::ports::bus"
           ]
         },
         {
           "component": "workitem",
           "impact_radius": 60,
           "sample_dependents": [
+            "src::infra::memory_store",
+            "src::infra::sm_store",
+            "src::infra::dto::task",
             "src::app::context",
-            "src::app::workflow",
-            "src::app::adapters::web::data_cost",
-            "src::app::worker",
-            "src::app::commands::a2a"
+            "src::ports::bus"
           ]
         }
       ],
