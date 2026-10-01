@@ -24,27 +24,27 @@
           "package": "src::main",
           "domains_count": 17,
           "domains": [
-            "src::errors",
             "src::webdav_fs",
-            "archive",
-            "renderer",
-            "src::file_op",
-            "src::config",
-            "args",
             "errors",
             "pipe",
-            "src::args"
+            "file_utils",
+            "src::file_op",
+            "renderer",
+            "src::errors",
+            "config",
+            "archive",
+            "args"
           ]
         },
         {
           "package": "src::args",
           "domains_count": 7,
           "domains": [
-            "src::listing",
-            "tests",
             "AuthParseError",
+            "src::listing",
             "src::auth",
             "RequiredAuthPassword",
+            "tests",
             "src::renderer",
             "auth"
           ]
@@ -53,12 +53,12 @@
           "package": "src::listing",
           "domains_count": 6,
           "domains": [
+            "src::archive",
+            "src::percent_encode_sets",
             "src::errors",
             "src::auth",
-            "src::percent_encode_sets",
-            "percent_encode_sets",
             "src::renderer",
-            "src::archive"
+            "percent_encode_sets"
           ]
         },
         {
@@ -66,18 +66,18 @@
           "domains_count": 4,
           "domains": [
             "utils",
+            "fixtures",
             "tests::fixtures",
-            "tests::utils",
-            "fixtures"
+            "tests::utils"
           ]
         },
         {
           "package": "src::renderer",
           "domains_count": 4,
           "domains": [
-            "src::listing",
             "tests",
             "src::consts",
+            "src::listing",
             "src::auth"
           ]
         }
