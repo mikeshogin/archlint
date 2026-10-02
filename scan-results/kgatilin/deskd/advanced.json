@@ -39,9 +39,9 @@
       "name": "modularity",
       "description": "Модульность графа должна быть >= 0.3",
       "status": "PASSED",
-      "modularity": 0.577,
+      "modularity": 0.578,
       "threshold": 0.3,
-      "communities_count": 29
+      "communities_count": 30
     },
     {
       "name": "abstractness",
@@ -629,110 +629,110 @@
           "component": "tests",
           "impact_radius": 124,
           "sample_dependents": [
-            "src::app::adapters::federation::registry",
-            "src::app::adapters::web::auth::magic_link",
-            "src::domain::agent",
-            "src::infra::memory_bus",
-            "src::infra::memory_store"
+            "src::app::reload_state",
+            "src::app::workflow",
+            "src::app::adapters::web::routes::cost_feed",
+            "src::app::commands::dashboard",
+            "src::app::transcript_extractor::event_store"
           ]
         },
         {
           "component": "task",
           "impact_radius": 95,
           "sample_dependents": [
-            "src::app::commands::task",
-            "src::infra::memory_bus",
+            "src::app::workflow",
+            "src::app::adapters::web::routes::cost_feed",
+            "src::app::commands::dashboard",
             "src::app::message",
-            "src::infra::memory_store",
-            "src::app::adapters::discord"
+            "src::app::adapters::web::view::strip"
           ]
         },
         {
           "component": "context",
           "impact_radius": 94,
           "sample_dependents": [
-            "src::app::commands::task",
-            "src::infra::memory_bus",
+            "src::app::workflow",
+            "src::app::adapters::web::routes::cost_feed",
+            "src::app::commands::dashboard",
             "src::app::message",
-            "src::infra::memory_store",
-            "src::app::adapters::discord"
+            "src::app::adapters::web::view::strip"
           ]
         },
         {
           "component": "agent",
           "impact_radius": 93,
           "sample_dependents": [
-            "src::app::commands::task",
-            "src::infra::memory_bus",
+            "src::app::workflow",
+            "src::app::adapters::web::routes::cost_feed",
+            "src::app::commands::dashboard",
             "src::app::message",
-            "src::infra::memory_store",
-            "src::app::adapters::discord"
+            "src::app::adapters::web::view::strip"
           ]
         },
         {
           "component": "message",
           "impact_radius": 92,
           "sample_dependents": [
-            "src::app::commands::task",
-            "src::infra::memory_bus",
+            "src::app::workflow",
+            "src::app::adapters::web::routes::cost_feed",
+            "src::app::commands::dashboard",
             "src::app::message",
-            "src::infra::memory_store",
-            "src::app::adapters::discord"
+            "src::app::adapters::web::view::strip"
           ]
         },
         {
           "component": "statemachine",
           "impact_radius": 92,
           "sample_dependents": [
-            "src::app::commands::task",
-            "src::infra::memory_bus",
+            "src::app::workflow",
+            "src::app::adapters::web::routes::cost_feed",
+            "src::app::commands::dashboard",
             "src::app::message",
-            "src::infra::memory_store",
-            "src::app::adapters::discord"
+            "src::app::adapters::web::view::strip"
           ]
         },
         {
           "component": "bus",
           "impact_radius": 74,
           "sample_dependents": [
-            "src::app::commands::task",
-            "src::infra::memory_bus",
-            "src::infra::memory_store",
-            "src::app::mcp",
-            "src::app::a2a_server"
+            "src::app::workflow",
+            "src::app::adapters::web::routes::cost_feed",
+            "src::app::commands::dashboard",
+            "src::app::adapters::web::view::strip",
+            "src::app::session_discover"
           ]
         },
         {
           "component": "events",
           "impact_radius": 61,
           "sample_dependents": [
-            "src::app::acp",
-            "src::app::alerts",
-            "src::infra::agent_file",
-            "src::infra::memory_bus",
-            "src::app::commands::sm"
+            "src::app::workflow",
+            "src::app::adapters::web::routes::cost_feed",
+            "src::app::commands::dashboard",
+            "src::app::message",
+            "src::domain::workitem"
           ]
         },
         {
           "component": "config_types",
           "impact_radius": 60,
           "sample_dependents": [
-            "src::app::acp",
-            "src::app::alerts",
-            "src::infra::agent_file",
-            "src::infra::memory_bus",
-            "src::app::commands::sm"
+            "src::app::workflow",
+            "src::app::adapters::web::routes::cost_feed",
+            "src::app::commands::dashboard",
+            "src::app::message",
+            "src::domain::workitem"
           ]
         },
         {
           "component": "workitem",
           "impact_radius": 60,
           "sample_dependents": [
-            "src::app::acp",
-            "src::app::alerts",
-            "src::infra::agent_file",
-            "src::infra::memory_bus",
-            "src::app::commands::sm"
+            "src::app::workflow",
+            "src::app::adapters::web::routes::cost_feed",
+            "src::app::commands::dashboard",
+            "src::app::message",
+            "src::domain::workitem"
           ]
         }
       ],
