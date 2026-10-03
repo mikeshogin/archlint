@@ -11,7 +11,7 @@
   },
   "graph": {
     "nodes": 92,
-    "edges": 116
+    "edges": 118
   },
   "checks": [
     {
@@ -34,9 +34,9 @@
       "name": "modularity",
       "description": "Модульность графа должна быть >= 0.3",
       "status": "PASSED",
-      "modularity": 0.575,
+      "modularity": 0.569,
       "threshold": 0.3,
-      "communities_count": 15
+      "communities_count": 16
     },
     {
       "name": "abstractness",
@@ -198,7 +198,7 @@
       "name": "clustering_coefficient",
       "description": "Средний коэффициент кластеризации >= 0.1",
       "status": "WARNING",
-      "avg_clustering": 0.059,
+      "avg_clustering": 0.06,
       "threshold": 0.1,
       "low_clustering_nodes": [
         {
@@ -215,7 +215,7 @@
         },
         {
           "node": "src::export",
-          "coefficient": 0.032
+          "coefficient": 0.038
         },
         {
           "node": "src::main",
@@ -224,10 +224,6 @@
         {
           "node": "src::error",
           "coefficient": 0.0
-        },
-        {
-          "node": "src::output",
-          "coefficient": 0.095
         },
         {
           "node": "src::timer::windows_timer",
@@ -240,17 +236,21 @@
         {
           "node": "src::parameter::range_step",
           "coefficient": 0.0
+        },
+        {
+          "node": "src::util",
+          "coefficient": 0.063
         }
       ],
-      "low_clustering_count": 18
+      "low_clustering_count": 17
     },
     {
       "name": "edge_density",
       "description": "Плотность графа между 0.01 и 0.3",
       "status": "PASSED",
-      "density": 0.0139,
+      "density": 0.0141,
       "nodes": 92,
-      "edges": 116,
+      "edges": 118,
       "max_possible_edges": 8372
     },
     {
@@ -261,13 +261,13 @@
         "common",
         "src::benchmark_result",
         "src::benchmark::scheduler",
+        "src::export",
         "src::output",
         "src::parameter",
         "src::timer::unix_timer",
         "src::timer",
         "src::timer::windows_timer",
         "src::benchmark::executor",
-        "src::export",
         "src::util",
         "src::options",
         "src::benchmark",
@@ -347,15 +347,15 @@
         },
         {
           "from": "src::main",
+          "to": "error"
+        },
+        {
+          "from": "src::main",
           "to": "export"
         },
         {
           "from": "src::main",
           "to": "options"
-        },
-        {
-          "from": "src::main",
-          "to": "error"
         },
         {
           "from": "src::main",
@@ -375,7 +375,7 @@
       "name": "avg_path_length",
       "description": "Средняя длина пути <= 5.0",
       "status": "PASSED",
-      "avg_path_length": 2.91,
+      "avg_path_length": 2.868,
       "threshold": 5.0,
       "note": "Вычислено для наибольшей связной компоненты"
     },
@@ -410,6 +410,10 @@
           "closeness": 0.103
         },
         {
+          "node": "src::output",
+          "closeness": 0.088
+        },
+        {
           "node": "src::command",
           "closeness": 0.08
         },
@@ -420,10 +424,6 @@
         {
           "node": "src::parameter",
           "closeness": 0.077
-        },
-        {
-          "node": "src::error",
-          "closeness": 0.075
         }
       ],
       "avg_closeness": 0.032
@@ -496,14 +496,14 @@
       "threshold": 4,
       "large_cliques": [],
       "large_cliques_count": 0,
-      "total_cliques": 101
+      "total_cliques": 103
     },
     {
       "name": "degree_distribution",
       "description": "Распределение степеней узлов",
       "status": "INFO",
-      "mean_degree": 2.52,
-      "std_degree": 3.98,
+      "mean_degree": 2.57,
+      "std_degree": 4.07,
       "max_degree": 23,
       "min_degree": 0,
       "distribution": {
@@ -513,11 +513,13 @@
         "3": 5,
         "4": 4,
         "5": 2,
-        "6": 3,
+        "6": 2,
         "7": 1,
         "8": 1,
+        "9": 1,
         "11": 2,
-        "20": 2,
+        "20": 1,
+        "21": 1,
         "23": 1
       },
       "is_scale_free": true,
@@ -527,15 +529,15 @@
       "name": "dependency_entropy",
       "description": "Энтропия распределения зависимостей",
       "status": "PASSED",
-      "entropy": 4.446,
+      "entropy": 4.431,
       "max_entropy": 6.524,
-      "normalized_entropy": 0.682
+      "normalized_entropy": 0.679
     },
     {
       "name": "gini_coefficient",
       "description": "Коэффициент Джини <= 0.6",
       "status": "PASSED",
-      "gini": 0.569,
+      "gini": 0.574,
       "threshold": 0.6,
       "interpretation": "Неравномерно"
     },
@@ -547,22 +549,22 @@
         {
           "node": "src::util",
           "degree": 23,
-          "z_score": 5.14
+          "z_score": 5.02
         },
         {
           "node": "src::export",
-          "degree": 20,
-          "z_score": 4.39
+          "degree": 21,
+          "z_score": 4.53
         },
         {
           "node": "src::benchmark",
           "degree": 20,
-          "z_score": 4.39
+          "z_score": 4.28
         }
       ],
       "outliers_count": 3,
-      "mean_degree": 2.52,
-      "std_degree": 3.98,
+      "mean_degree": 2.57,
+      "std_degree": 4.07,
       "z_threshold": 3.0
     },
     {
@@ -621,66 +623,66 @@
           "component": "exit_code",
           "impact_radius": 25,
           "sample_dependents": [
-            "src::parameter",
-            "src::export::orgmode",
-            "src::export::markup",
-            "src::benchmark::scheduler",
-            "src::options"
+            "src::parameter::range_step",
+            "src::command",
+            "src::export::json",
+            "src::export",
+            "src::parameter"
           ]
         },
         {
           "component": "min_max",
           "impact_radius": 25,
           "sample_dependents": [
-            "src::parameter",
-            "src::export::orgmode",
-            "src::export::markup",
-            "src::benchmark::scheduler",
-            "src::options"
+            "src::parameter::range_step",
+            "src::command",
+            "src::export::json",
+            "src::export",
+            "src::parameter"
           ]
         },
         {
           "component": "number",
           "impact_radius": 25,
           "sample_dependents": [
-            "src::parameter",
-            "src::export::orgmode",
-            "src::export::markup",
-            "src::benchmark::scheduler",
-            "src::options"
+            "src::parameter::range_step",
+            "src::command",
+            "src::export::json",
+            "src::export",
+            "src::parameter"
           ]
         },
         {
           "component": "randomized_environment_offset",
           "impact_radius": 25,
           "sample_dependents": [
-            "src::parameter",
-            "src::export::orgmode",
-            "src::export::markup",
-            "src::benchmark::scheduler",
-            "src::options"
+            "src::parameter::range_step",
+            "src::command",
+            "src::export::json",
+            "src::export",
+            "src::parameter"
           ]
         },
         {
           "component": "units",
           "impact_radius": 25,
           "sample_dependents": [
-            "src::parameter",
-            "src::export::orgmode",
-            "src::export::markup",
-            "src::benchmark::scheduler",
-            "src::options"
+            "src::parameter::range_step",
+            "src::command",
+            "src::export::json",
+            "src::export",
+            "src::parameter"
           ]
         },
         {
           "component": "src::util",
           "impact_radius": 24,
           "sample_dependents": [
-            "src::parameter",
-            "src::export::orgmode",
-            "src::export::markup",
-            "src::benchmark::scheduler",
-            "src::options"
+            "src::parameter::range_step",
+            "src::command",
+            "src::export::json",
+            "src::export",
+            "src::parameter"
           ]
         }
       ],
@@ -706,9 +708,16 @@
           "out_degree": 5,
           "total_degree": 23,
           "hotspot_score": 1.15
+        },
+        {
+          "component": "src::export",
+          "in_degree": 5,
+          "out_degree": 16,
+          "total_degree": 21,
+          "hotspot_score": 1.05
         }
       ],
-      "hotspots_count": 1
+      "hotspots_count": 2
     },
     {
       "name": "deprecated_usage",
@@ -751,17 +760,17 @@
       "violations": [
         {
           "component": "src::export",
-          "complexity": 56.83,
+          "complexity": 59.81,
           "in_degree": 5,
-          "out_degree": 15,
+          "out_degree": 16,
           "betweenness": 0.018
         },
         {
           "component": "src::benchmark",
-          "complexity": 54.73,
+          "complexity": 54.47,
           "in_degree": 7,
           "out_degree": 13,
-          "betweenness": 0.017
+          "betweenness": 0.015
         },
         {
           "component": "src::util",

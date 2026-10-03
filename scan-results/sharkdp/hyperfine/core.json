@@ -11,7 +11,7 @@
   },
   "graph": {
     "nodes": 92,
-    "edges": 116
+    "edges": 118
   },
   "checks": [
     {
@@ -33,7 +33,7 @@
       "violations": [
         {
           "node": "src::export",
-          "fan_out": 15,
+          "fan_out": 16,
           "threshold": 10
         },
         {
@@ -59,7 +59,7 @@
         {
           "node": "src::export",
           "afferent_coupling": 5,
-          "efferent_coupling": 15,
+          "efferent_coupling": 16,
           "ca_threshold": 10,
           "ce_threshold": 10
         },
@@ -232,9 +232,9 @@
         },
         {
           "node": "src::export",
-          "total_degree": 20,
+          "total_degree": 21,
           "in_degree": 5,
-          "out_degree": 15
+          "out_degree": 16
         },
         {
           "node": "src::benchmark",
