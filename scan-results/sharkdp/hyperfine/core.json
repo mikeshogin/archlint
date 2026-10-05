@@ -10,7 +10,7 @@
     "errors": 3
   },
   "graph": {
-    "nodes": 92,
+    "nodes": 91,
     "edges": 118
   },
   "checks": [
@@ -38,12 +38,12 @@
         },
         {
           "node": "src::main",
-          "fan_out": 11,
+          "fan_out": 12,
           "threshold": 10
         },
         {
           "node": "src::benchmark",
-          "fan_out": 13,
+          "fan_out": 14,
           "threshold": 10
         }
       ],
@@ -66,21 +66,21 @@
         {
           "node": "src::main",
           "afferent_coupling": 0,
-          "efferent_coupling": 11,
+          "efferent_coupling": 12,
           "ca_threshold": 10,
           "ce_threshold": 10
         },
         {
           "node": "src::benchmark",
-          "afferent_coupling": 7,
-          "efferent_coupling": 13,
+          "afferent_coupling": 8,
+          "efferent_coupling": 14,
           "ca_threshold": 10,
           "ce_threshold": 10
         },
         {
-          "node": "src::util",
-          "afferent_coupling": 18,
-          "efferent_coupling": 5,
+          "node": "src::quantity",
+          "afferent_coupling": 15,
+          "efferent_coupling": 2,
           "ca_threshold": 10,
           "ce_threshold": 10
         }
@@ -125,13 +125,19 @@
       ],
       "most_stable": [
         {
-          "node": "exit_code",
+          "node": "range_step",
           "instability": 0.0,
           "ca": 1,
           "ce": 0
         },
         {
-          "node": "min_max",
+          "node": "tokenize",
+          "instability": 0.0,
+          "ca": 1,
+          "ce": 0
+        },
+        {
+          "node": "exit_code",
           "instability": 0.0,
           "ca": 1,
           "ce": 0
@@ -144,12 +150,6 @@
         },
         {
           "node": "randomized_environment_offset",
-          "instability": 0.0,
-          "ca": 1,
-          "ce": 0
-        },
-        {
-          "node": "units",
           "instability": 0.0,
           "ca": 1,
           "ce": 0
@@ -225,10 +225,10 @@
       "threshold": 10,
       "hubs": [
         {
-          "node": "src::util",
-          "total_degree": 23,
-          "in_degree": 18,
-          "out_degree": 5
+          "node": "src::benchmark",
+          "total_degree": 22,
+          "in_degree": 8,
+          "out_degree": 14
         },
         {
           "node": "src::export",
@@ -237,21 +237,21 @@
           "out_degree": 16
         },
         {
-          "node": "src::benchmark",
-          "total_degree": 20,
-          "in_degree": 7,
-          "out_degree": 13
+          "node": "src::quantity",
+          "total_degree": 17,
+          "in_degree": 15,
+          "out_degree": 2
         },
         {
           "node": "src::main",
-          "total_degree": 11,
+          "total_degree": 12,
           "in_degree": 0,
-          "out_degree": 11
+          "out_degree": 12
         },
         {
           "node": "src::options",
-          "total_degree": 11,
-          "in_degree": 8,
+          "total_degree": 12,
+          "in_degree": 9,
           "out_degree": 3
         }
       ],
@@ -264,12 +264,12 @@
       "orphans": [
         "build",
         "tests::common",
+        "src::benchmark::benchmark_result",
+        "src::quantity::units",
         "src::parameter::tokenize",
-        "src::util::min_max",
         "src::util::randomized_environment_offset",
         "src::util::number",
-        "src::util::exit_code",
-        "src::util::units"
+        "src::util::exit_code"
       ],
       "orphans_count": 8
     },
@@ -277,7 +277,7 @@
       "name": "strongly_connected_components",
       "description": "Группы с взаимными зависимостями (размер > 1)",
       "status": "PASSED",
-      "total_sccs": 92,
+      "total_sccs": 91,
       "problematic_sccs": [],
       "problematic_count": 0
     },
