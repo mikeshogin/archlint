@@ -2,16 +2,16 @@
   "status": "ERROR",
   "summary": {
     "total_checks": 29,
-    "passed": 13,
+    "passed": 14,
     "failed": 0,
     "warnings": 6,
-    "info": 7,
+    "info": 6,
     "skipped": 0,
     "errors": 3
   },
   "graph": {
-    "nodes": 91,
-    "edges": 118
+    "nodes": 97,
+    "edges": 127
   },
   "checks": [
     {
@@ -34,18 +34,18 @@
       "name": "modularity",
       "description": "Модульность графа должна быть >= 0.3",
       "status": "PASSED",
-      "modularity": 0.58,
+      "modularity": 0.576,
       "threshold": 0.3,
-      "communities_count": 15
+      "communities_count": 14
     },
     {
       "name": "abstractness",
       "description": "Абстрактность должна быть между 0.1 и 0.8",
       "status": "PASSED",
-      "abstractness": 0.11,
-      "abstract_count": 10,
-      "concrete_count": 81,
-      "total_count": 91,
+      "abstractness": 0.113,
+      "abstract_count": 11,
+      "concrete_count": 86,
+      "total_count": 97,
       "min_threshold": 0.1,
       "max_threshold": 0.8
     },
@@ -136,7 +136,7 @@
           "issue": "Зона боли: конкретный и стабильный"
         },
         {
-          "package": "src::markup",
+          "package": "metadata",
           "abstractness": 0.0,
           "instability": 0.0,
           "distance": 1.0,
@@ -192,13 +192,13 @@
           "issue": "Зона бесполезности: абстрактный и нестабильный"
         }
       ],
-      "violations_count": 61
+      "violations_count": 64
     },
     {
       "name": "clustering_coefficient",
       "description": "Средний коэффициент кластеризации >= 0.1",
       "status": "WARNING",
-      "avg_clustering": 0.071,
+      "avg_clustering": 0.081,
       "threshold": 0.1,
       "low_clustering_nodes": [
         {
@@ -226,32 +226,32 @@
           "coefficient": 0.0
         },
         {
-          "node": "src::benchmark::relative_speed",
+          "node": "src::benchmark::measurement",
           "coefficient": 0.0
-        },
-        {
-          "node": "src::benchmark::executor",
-          "coefficient": 0.095
         },
         {
           "node": "src::benchmark",
+          "coefficient": 0.083
+        },
+        {
+          "node": "src::quantity",
           "coefficient": 0.089
         },
         {
-          "node": "src::quantity::statistics",
+          "node": "src::timer::windows_timer",
           "coefficient": 0.0
         }
       ],
-      "low_clustering_count": 21
+      "low_clustering_count": 20
     },
     {
       "name": "edge_density",
       "description": "Плотность графа между 0.01 и 0.3",
       "status": "PASSED",
-      "density": 0.0144,
-      "nodes": 91,
-      "edges": 118,
-      "max_possible_edges": 8190
+      "density": 0.0136,
+      "nodes": 97,
+      "edges": 127,
+      "max_possible_edges": 9312
     },
     {
       "name": "articulation_points",
@@ -260,18 +260,19 @@
       "articulation_points": [
         "common",
         "src::export",
+        "tests",
         "src::parameter",
         "src::output",
         "src::timer",
         "src::timer::windows_timer",
-        "src::benchmark::executor",
         "src::util",
         "src::quantity",
-        "src::benchmark",
         "src::options",
+        "src::export::json",
+        "src::benchmark",
         "src::main"
       ],
-      "count": 12,
+      "count": 13,
       "recommendation": "Уменьшить зависимость от критических узлов"
     },
     {
@@ -286,6 +287,10 @@
         {
           "from": "tests::integration_tests",
           "to": "common"
+        },
+        {
+          "from": "src::export::json",
+          "to": "metadata"
         },
         {
           "from": "src::export",
@@ -354,26 +359,22 @@
         {
           "from": "src::main",
           "to": "options"
-        },
-        {
-          "from": "src::main",
-          "to": "outlier_detection"
         }
       ],
-      "count": 49
+      "count": 55
     },
     {
       "name": "graph_diameter",
       "description": "Диаметр графа",
       "status": "INFO",
       "diameter": "infinity",
-      "reason": "Граф не связан (11 компонент)"
+      "reason": "Граф не связан (10 компонент)"
     },
     {
       "name": "avg_path_length",
       "description": "Средняя длина пути <= 5.0",
       "status": "PASSED",
-      "avg_path_length": 2.874,
+      "avg_path_length": 2.941,
       "threshold": 5.0,
       "note": "Вычислено для наибольшей связной компоненты"
     },
@@ -385,91 +386,74 @@
       "peripheral_nodes": [
         {
           "node": "src::quantity",
-          "closeness": 0.185
+          "closeness": 0.197
+        },
+        {
+          "node": "src::benchmark",
+          "closeness": 0.133
         },
         {
           "node": "src::options",
+          "closeness": 0.121
+        },
+        {
+          "node": "si",
           "closeness": 0.119
         },
         {
           "node": "units",
-          "closeness": 0.113
+          "closeness": 0.119
         },
         {
           "node": "statistics",
-          "closeness": 0.113
-        },
-        {
-          "node": "src::benchmark",
-          "closeness": 0.094
-        },
-        {
-          "node": "src::util",
-          "closeness": 0.093
+          "closeness": 0.119
         },
         {
           "node": "src::command",
-          "closeness": 0.092
-        },
-        {
-          "node": "src::parameter",
-          "closeness": 0.087
+          "closeness": 0.102
         },
         {
           "node": "src::output",
-          "closeness": 0.085
+          "closeness": 0.1
         },
         {
-          "node": "src::error",
-          "closeness": 0.085
+          "node": "src::parameter",
+          "closeness": 0.099
+        },
+        {
+          "node": "src::util",
+          "closeness": 0.087
         }
       ],
-      "avg_closeness": 0.032
+      "avg_closeness": 0.034
     },
     {
       "name": "eigenvector_centrality",
       "description": "Влиятельность узлов",
-      "status": "INFO",
+      "status": "PASSED",
       "threshold": 0.3,
-      "influential_nodes": [
-        {
-          "node": "src::util",
-          "eigenvector": 0.339
-        },
-        {
-          "node": "exit_code",
-          "eigenvector": 0.339
-        },
-        {
-          "node": "number",
-          "eigenvector": 0.339
-        },
-        {
-          "node": "randomized_environment_offset",
-          "eigenvector": 0.339
-        }
-      ],
-      "influential_count": 4,
+      "influential_nodes": [],
+      "influential_count": 0,
       "top_5": [
         {
-          "node": "src::util",
-          "eigenvector": 0.339
-        },
-        {
-          "node": "exit_code",
-          "eigenvector": 0.339
-        },
-        {
-          "node": "number",
-          "eigenvector": 0.339
-        },
-        {
-          "node": "randomized_environment_offset",
-          "eigenvector": 0.339
-        },
-        {
           "node": "src::quantity",
-          "eigenvector": 0.254
+          "eigenvector": 0.274
+        },
+        {
+          "node": "src::parameter",
+          "eigenvector": 0.274
+        },
+        {
+          "node": "si",
+          "eigenvector": 0.274
+        },
+        {
+          "node": "units",
+          "eigenvector": 0.274
+        },
+        {
+          "node": "statistics",
+          "eigenvector": 0.274
         }
       ]
     },
@@ -486,29 +470,31 @@
       "threshold": 4,
       "large_cliques": [],
       "large_cliques_count": 0,
-      "total_cliques": 103
+      "total_cliques": 107
     },
     {
       "name": "degree_distribution",
       "description": "Распределение степеней узлов",
       "status": "INFO",
-      "mean_degree": 2.59,
-      "std_degree": 3.92,
-      "max_degree": 22,
+      "mean_degree": 2.62,
+      "std_degree": 4.17,
+      "max_degree": 26,
       "min_degree": 0,
       "distribution": {
-        "0": 8,
-        "1": 49,
+        "0": 7,
+        "1": 55,
         "2": 13,
-        "3": 4,
-        "4": 5,
-        "5": 1,
+        "3": 5,
+        "4": 4,
+        "5": 2,
         "6": 2,
-        "7": 4,
-        "12": 2,
-        "17": 1,
+        "7": 3,
+        "9": 1,
+        "11": 1,
+        "12": 1,
+        "20": 1,
         "21": 1,
-        "22": 1
+        "26": 1
       },
       "is_scale_free": true,
       "interpretation": "Scale-free сеть (hub-dominated)"
@@ -517,15 +503,15 @@
       "name": "dependency_entropy",
       "description": "Энтропия распределения зависимостей",
       "status": "PASSED",
-      "entropy": 4.434,
-      "max_entropy": 6.508,
-      "normalized_entropy": 0.681
+      "entropy": 4.6,
+      "max_entropy": 6.6,
+      "normalized_entropy": 0.697
     },
     {
       "name": "gini_coefficient",
       "description": "Коэффициент Джини <= 0.6",
       "status": "PASSED",
-      "gini": 0.567,
+      "gini": 0.566,
       "threshold": 0.6,
       "interpretation": "Неравномерно"
     },
@@ -536,23 +522,23 @@
       "outliers": [
         {
           "node": "src::benchmark",
-          "degree": 22,
-          "z_score": 4.95
+          "degree": 26,
+          "z_score": 5.61
         },
         {
           "node": "src::export",
           "degree": 21,
-          "z_score": 4.69
+          "z_score": 4.41
         },
         {
           "node": "src::quantity",
-          "degree": 17,
-          "z_score": 3.67
+          "degree": 20,
+          "z_score": 4.17
         }
       ],
       "outliers_count": 3,
-      "mean_degree": 2.59,
-      "std_degree": 3.92,
+      "mean_degree": 2.62,
+      "std_degree": 4.17,
       "z_threshold": 3.0
     },
     {
@@ -566,7 +552,7 @@
       "description": "Спектральный радиус матрицы смежности",
       "status": "INFO",
       "spectral_radius": 1.0,
-      "max_degree": 22,
+      "max_degree": 26,
       "interpretation": "Коррелирует с максимальной степенью"
     },
     {
@@ -582,66 +568,143 @@
       "description": "Радиус изменений <= 20 компонентов",
       "status": "ERROR",
       "threshold": 20,
-      "avg_impact": 5.77,
-      "max_impact": 23,
+      "avg_impact": 6.65,
+      "max_impact": 26,
       "top_impact": [
         {
+          "node": "si",
+          "impact": 26
+        },
+        {
           "node": "units",
-          "impact": 23
+          "impact": 26
         },
         {
           "node": "statistics",
-          "impact": 23
+          "impact": 26
         },
         {
           "node": "src::quantity",
-          "impact": 22
+          "impact": 25
         },
         {
           "node": "exit_code",
-          "impact": 20
-        },
-        {
-          "node": "number",
-          "impact": 20
+          "impact": 24
         }
       ],
       "violations": [
         {
-          "component": "units",
-          "impact_radius": 23,
+          "component": "si",
+          "impact_radius": 26,
           "sample_dependents": [
-            "src::export::markup",
-            "src::benchmark::relative_speed",
-            "src::export::tests",
-            "src::quantity::statistics",
-            "src::quantity"
+            "src::output::warnings",
+            "src::export::json",
+            "src::timer",
+            "src::quantity::units",
+            "src::export::orgmode"
+          ]
+        },
+        {
+          "component": "units",
+          "impact_radius": 26,
+          "sample_dependents": [
+            "src::output::warnings",
+            "src::export::json",
+            "src::timer",
+            "src::quantity::units",
+            "src::export::orgmode"
           ]
         },
         {
           "component": "statistics",
-          "impact_radius": 23,
+          "impact_radius": 26,
           "sample_dependents": [
-            "src::export::markup",
-            "src::benchmark::relative_speed",
-            "src::export::tests",
-            "src::quantity::statistics",
-            "src::quantity"
+            "src::output::warnings",
+            "src::export::json",
+            "src::timer",
+            "src::quantity::units",
+            "src::export::orgmode"
           ]
         },
         {
           "component": "src::quantity",
-          "impact_radius": 22,
+          "impact_radius": 25,
           "sample_dependents": [
-            "src::export::markup",
-            "src::benchmark::relative_speed",
-            "src::export::tests",
-            "src::quantity::statistics",
-            "src::output::progress_bar"
+            "src::output::warnings",
+            "src::export::json",
+            "src::timer",
+            "src::quantity::units",
+            "src::export::orgmode"
+          ]
+        },
+        {
+          "component": "exit_code",
+          "impact_radius": 24,
+          "sample_dependents": [
+            "src::output::warnings",
+            "src::export::json",
+            "src::timer",
+            "src::export::orgmode",
+            "src::export::markdown"
+          ]
+        },
+        {
+          "component": "number",
+          "impact_radius": 24,
+          "sample_dependents": [
+            "src::output::warnings",
+            "src::export::json",
+            "src::timer",
+            "src::export::orgmode",
+            "src::export::markdown"
+          ]
+        },
+        {
+          "component": "randomized_environment_offset",
+          "impact_radius": 24,
+          "sample_dependents": [
+            "src::output::warnings",
+            "src::export::json",
+            "src::timer",
+            "src::export::orgmode",
+            "src::export::markdown"
+          ]
+        },
+        {
+          "component": "src::util",
+          "impact_radius": 23,
+          "sample_dependents": [
+            "src::output::warnings",
+            "src::export::json",
+            "src::timer",
+            "src::export::orgmode",
+            "src::export::markdown"
+          ]
+        },
+        {
+          "component": "range_step",
+          "impact_radius": 21,
+          "sample_dependents": [
+            "src::output::warnings",
+            "src::export::json",
+            "src::timer",
+            "src::export::orgmode",
+            "src::export::markdown"
+          ]
+        },
+        {
+          "component": "tokenize",
+          "impact_radius": 21,
+          "sample_dependents": [
+            "src::output::warnings",
+            "src::export::json",
+            "src::timer",
+            "src::export::orgmode",
+            "src::export::markdown"
           ]
         }
       ],
-      "violations_count": 3
+      "violations_count": 10
     },
     {
       "name": "blast_radius",
@@ -659,10 +722,10 @@
       "hotspots": [
         {
           "component": "src::benchmark",
-          "in_degree": 8,
-          "out_degree": 14,
-          "total_degree": 22,
-          "hotspot_score": 1.1
+          "in_degree": 13,
+          "out_degree": 13,
+          "total_degree": 26,
+          "hotspot_score": 1.3
         },
         {
           "component": "src::export",
@@ -715,17 +778,17 @@
       "violations": [
         {
           "component": "src::benchmark",
-          "complexity": 60.4,
-          "in_degree": 8,
-          "out_degree": 14,
-          "betweenness": 0.024
+          "complexity": 68.12,
+          "in_degree": 13,
+          "out_degree": 13,
+          "betweenness": 0.031
         },
         {
           "component": "src::export",
-          "complexity": 59.85,
+          "complexity": 59.64,
           "in_degree": 5,
           "out_degree": 16,
-          "betweenness": 0.018
+          "betweenness": 0.016
         }
       ],
       "violations_count": 2

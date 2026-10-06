@@ -10,8 +10,8 @@
     "errors": 0
   },
   "graph": {
-    "nodes": 91,
-    "edges": 118
+    "nodes": 97,
+    "edges": 127
   },
   "checks": [
     {
@@ -24,60 +24,74 @@
           "package": "src::export",
           "domains_count": 16,
           "domains": [
-            "tests",
-            "src::benchmark",
-            "src::markdown",
-            "csv",
-            "src::orgmode",
+            "orgmode",
+            "json",
+            "src::quantity",
+            "markup",
             "src::output",
-            "src::csv",
-            "asciidoc",
             "src::json",
-            "src::asciidoc"
-          ]
-        },
-        {
-          "package": "src::benchmark",
-          "domains_count": 13,
-          "domains": [
-            "executor",
-            "benchmark_result",
-            "src::executor",
-            "src::parameter",
-            "src::outlier_detection",
-            "relative_speed",
-            "src::output",
-            "src::util",
-            "measurement",
-            "src::command"
+            "csv",
+            "src::csv",
+            "src::asciidoc",
+            "src::options"
           ]
         },
         {
           "package": "src::main",
           "domains_count": 12,
           "domains": [
-            "options",
-            "outlier_detection",
-            "export",
-            "quantity",
-            "benchmark",
+            "command",
             "parameter",
-            "util",
+            "outlier_detection",
+            "options",
             "timer",
+            "benchmark",
             "output",
+            "error",
+            "quantity",
             "cli"
+          ]
+        },
+        {
+          "package": "src::benchmark",
+          "domains_count": 12,
+          "domains": [
+            "src::command",
+            "src::quantity",
+            "src::output",
+            "src::parameter",
+            "relative_speed",
+            "benchmark_result",
+            "executor",
+            "src::outlier_detection",
+            "src::executor",
+            "measurement"
+          ]
+        },
+        {
+          "package": "src::timer",
+          "domains_count": 8,
+          "domains": [
+            "nix",
+            "wall_clock_timer",
+            "linux_counters",
+            "windows_timer",
+            "windows_sys",
+            "macos_counters",
+            "src::benchmark",
+            "unix_timer"
           ]
         },
         {
           "package": "src::benchmark::scheduler",
           "domains_count": 7,
           "domains": [
-            "src::export",
-            "src::executor",
-            "src::cli",
-            "src::output",
-            "src::benchmark_result",
             "src::command",
+            "src::export",
+            "src::output",
+            "src::cli",
+            "src::executor",
+            "src::benchmark_result",
             "src::options"
           ]
         },
@@ -85,45 +99,34 @@
           "package": "src::benchmark::executor",
           "domains_count": 7,
           "domains": [
-            "src::output",
-            "src::timer",
-            "src::util",
             "src::command",
-            "src::options",
-            "src::measurement",
-            "src::quantity"
+            "src::quantity",
+            "src::timer",
+            "src::output",
+            "src::util",
+            "src::benchmark",
+            "src::options"
           ]
         },
         {
-          "package": "src::timer",
-          "domains_count": 6,
+          "package": "src::export::json",
+          "domains_count": 5,
           "domains": [
+            "metadata",
+            "src::quantity",
+            "src::Exporter",
             "src::benchmark",
-            "windows_timer",
-            "unix_timer",
-            "wall_clock_timer",
-            "windows_sys",
-            "nix"
+            "src::options"
           ]
         },
         {
           "package": "src::export::tests",
           "domains_count": 4,
           "domains": [
+            "src::quantity",
             "src::benchmark",
             "src::export",
-            "src::Exporter",
-            "src::quantity"
-          ]
-        },
-        {
-          "package": "src::export::json",
-          "domains_count": 4,
-          "domains": [
-            "src::options",
-            "src::benchmark",
-            "src::Exporter",
-            "src::quantity"
+            "src::Exporter"
           ]
         },
         {
@@ -132,18 +135,18 @@
           "domains": [
             "src::options",
             "src::benchmark",
-            "src::Exporter",
-            "src::quantity"
+            "src::quantity",
+            "src::Exporter"
           ]
         },
         {
           "package": "src::export::markup",
           "domains_count": 4,
           "domains": [
-            "src::benchmark",
-            "src::options",
             "src::Exporter",
-            "src::quantity"
+            "src::options",
+            "src::quantity",
+            "src::benchmark"
           ]
         }
       ],
@@ -153,11 +156,11 @@
       "name": "open_closed",
       "description": "Соотношение абстракций >= 20% (OCP)",
       "status": "WARNING",
-      "abstractions": 10,
-      "implementations": 81,
-      "ratio": 0.11,
+      "abstractions": 11,
+      "implementations": 86,
+      "ratio": 0.113,
       "threshold": 0.2,
-      "issue": "Низкое соотношение абстракций (10.99%) - плохая расширяемость"
+      "issue": "Низкое соотношение абстракций (11.34%) - плохая расширяемость"
     },
     {
       "name": "liskov_substitution",

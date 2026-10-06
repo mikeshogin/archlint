@@ -10,8 +10,8 @@
     "errors": 3
   },
   "graph": {
-    "nodes": 91,
-    "edges": 118
+    "nodes": 97,
+    "edges": 127
   },
   "checks": [
     {
@@ -43,7 +43,7 @@
         },
         {
           "node": "src::benchmark",
-          "fan_out": 14,
+          "fan_out": 13,
           "threshold": 10
         }
       ],
@@ -72,15 +72,15 @@
         },
         {
           "node": "src::benchmark",
-          "afferent_coupling": 8,
-          "efferent_coupling": 14,
+          "afferent_coupling": 13,
+          "efferent_coupling": 13,
           "ca_threshold": 10,
           "ce_threshold": 10
         },
         {
           "node": "src::quantity",
-          "afferent_coupling": 15,
-          "efferent_coupling": 2,
+          "afferent_coupling": 17,
+          "efferent_coupling": 3,
           "ca_threshold": 10,
           "ce_threshold": 10
         }
@@ -114,7 +114,7 @@
           "node": "src::export::json",
           "instability": 1.0,
           "ca": 0,
-          "ce": 4
+          "ce": 5
         },
         {
           "node": "src::export::csv",
@@ -226,9 +226,9 @@
       "hubs": [
         {
           "node": "src::benchmark",
-          "total_degree": 22,
-          "in_degree": 8,
-          "out_degree": 14
+          "total_degree": 26,
+          "in_degree": 13,
+          "out_degree": 13
         },
         {
           "node": "src::export",
@@ -238,9 +238,9 @@
         },
         {
           "node": "src::quantity",
-          "total_degree": 17,
-          "in_degree": 15,
-          "out_degree": 2
+          "total_degree": 20,
+          "in_degree": 17,
+          "out_degree": 3
         },
         {
           "node": "src::main",
@@ -250,8 +250,8 @@
         },
         {
           "node": "src::options",
-          "total_degree": 12,
-          "in_degree": 9,
+          "total_degree": 11,
+          "in_degree": 8,
           "out_degree": 3
         }
       ],
@@ -264,20 +264,19 @@
       "orphans": [
         "build",
         "tests::common",
-        "src::benchmark::benchmark_result",
-        "src::quantity::units",
+        "src::export::json::metadata",
         "src::parameter::tokenize",
         "src::util::randomized_environment_offset",
         "src::util::number",
         "src::util::exit_code"
       ],
-      "orphans_count": 8
+      "orphans_count": 7
     },
     {
       "name": "strongly_connected_components",
       "description": "Группы с взаимными зависимостями (размер > 1)",
       "status": "PASSED",
-      "total_sccs": 91,
+      "total_sccs": 97,
       "problematic_sccs": [],
       "problematic_count": 0
     },
