@@ -1,171 +1,42 @@
 {
-  "status": "FAILED",
+  "status": "WARNING",
   "summary": {
     "total_checks": 11,
-    "passed": 5,
-    "failed": 1,
-    "warnings": 2,
+    "passed": 10,
+    "failed": 0,
+    "warnings": 1,
     "info": 0,
-    "skipped": 1,
-    "errors": 2
+    "skipped": 0,
+    "errors": 0
   },
   "graph": {
-    "nodes": 376,
-    "edges": 1029
+    "nodes": 116,
+    "edges": 20
   },
   "checks": [
     {
       "name": "dag_check",
       "description": "Граф должен быть ациклическим (без циклических зависимостей)",
-      "status": "FAILED",
-      "cycles": [
-        [
-          "errors"
-        ],
-        [
-          "context"
-        ]
-      ],
-      "cycles_count": 2
+      "status": "PASSED",
+      "cycles": [],
+      "cycles_count": 0
     },
     {
       "name": "max_fan_out",
       "description": "Компонент не должен зависеть от более чем 10 других",
-      "status": "ERROR",
+      "status": "PASSED",
       "threshold": 10,
-      "violations": [
-        {
-          "node": "protoc-gen-twirp::generator",
-          "fan_out": 18,
-          "threshold": 10
-        },
-        {
-          "node": "_tools::src::golang.org::x::tools::go::loader::loader",
-          "fan_out": 15,
-          "threshold": 10
-        },
-        {
-          "node": "_tools::src::golang.org::x::tools::go::buildutil::util",
-          "fan_out": 11,
-          "threshold": 10
-        },
-        {
-          "node": "_tools::src::golang.org::x::tools::go::internal::cgo::cgo",
-          "fan_out": 12,
-          "threshold": 10
-        },
-        {
-          "node": "_tools::src::google.golang.org::protobuf::compiler::protogen::protogen",
-          "fan_out": 24,
-          "threshold": 10
-        },
-        {
-          "node": "_tools::src::google.golang.org::protobuf::encoding::prototext::encode",
-          "fan_out": 15,
-          "threshold": 10
-        },
-        {
-          "node": "_tools::src::google.golang.org::protobuf::encoding::prototext::decode",
-          "fan_out": 13,
-          "threshold": 10
-        },
-        {
-          "node": "_tools::src::google.golang.org::protobuf::cmd::protoc-gen-go::internal_gengo::main",
-          "fan_out": 17,
-          "threshold": 10
-        },
-        {
-          "node": "_tools::src::google.golang.org::protobuf::internal::filedesc::desc",
-          "fan_out": 13,
-          "threshold": 10
-        },
-        {
-          "node": "_tools::src::google.golang.org::protobuf::internal::impl::validate",
-          "fan_out": 13,
-          "threshold": 10
-        }
-      ],
-      "violations_count": 13
+      "violations": [],
+      "violations_count": 0
     },
     {
       "name": "coupling",
       "description": "Ca <= 10, Ce <= 10",
-      "status": "ERROR",
+      "status": "PASSED",
       "ca_threshold": 10,
       "ce_threshold": 10,
-      "violations": [
-        {
-          "node": "protoc-gen-twirp::generator",
-          "afferent_coupling": 0,
-          "efferent_coupling": 18,
-          "ca_threshold": 10,
-          "ce_threshold": 10
-        },
-        {
-          "node": "errors",
-          "afferent_coupling": 46,
-          "efferent_coupling": 5,
-          "ca_threshold": 10,
-          "ce_threshold": 10
-        },
-        {
-          "node": "_tools::src::golang.org::x::tools::go::loader::loader",
-          "afferent_coupling": 0,
-          "efferent_coupling": 15,
-          "ca_threshold": 10,
-          "ce_threshold": 10
-        },
-        {
-          "node": "_tools::src::golang.org::x::tools::go::buildutil::util",
-          "afferent_coupling": 0,
-          "efferent_coupling": 11,
-          "ca_threshold": 10,
-          "ce_threshold": 10
-        },
-        {
-          "node": "_tools::src::golang.org::x::tools::go::internal::cgo::cgo",
-          "afferent_coupling": 0,
-          "efferent_coupling": 12,
-          "ca_threshold": 10,
-          "ce_threshold": 10
-        },
-        {
-          "node": "_tools::src::google.golang.org::protobuf::compiler::protogen::protogen",
-          "afferent_coupling": 0,
-          "efferent_coupling": 24,
-          "ca_threshold": 10,
-          "ce_threshold": 10
-        },
-        {
-          "node": "_tools::src::google.golang.org::protobuf::encoding::prototext::encode",
-          "afferent_coupling": 0,
-          "efferent_coupling": 15,
-          "ca_threshold": 10,
-          "ce_threshold": 10
-        },
-        {
-          "node": "_tools::src::google.golang.org::protobuf::encoding::prototext::decode",
-          "afferent_coupling": 0,
-          "efferent_coupling": 13,
-          "ca_threshold": 10,
-          "ce_threshold": 10
-        },
-        {
-          "node": "_tools::src::google.golang.org::protobuf::cmd::protoc-gen-go::internal_gengo::main",
-          "afferent_coupling": 0,
-          "efferent_coupling": 17,
-          "ca_threshold": 10,
-          "ce_threshold": 10
-        },
-        {
-          "node": "_tools::src::google.golang.org::protobuf::internal::filedesc::desc",
-          "afferent_coupling": 0,
-          "efferent_coupling": 13,
-          "ca_threshold": 10,
-          "ce_threshold": 10
-        }
-      ],
-      "violations_count": 46
+      "violations": [],
+      "violations_count": 0
     },
     {
       "name": "instability",
@@ -173,63 +44,63 @@
       "status": "PASSED",
       "most_unstable": [
         {
-          "node": "vendor_test",
-          "instability": 1.0,
-          "ca": 0,
-          "ce": 4
-        },
-        {
-          "node": "interceptors",
+          "node": "ctxsetters::ctxsetters",
           "instability": 1.0,
           "ca": 0,
           "ce": 1
         },
         {
-          "node": "license_test",
-          "instability": 1.0,
-          "ca": 0,
-          "ce": 7
-        },
-        {
-          "node": "server_options_test",
+          "node": "protoc-gen-twirp::generator",
           "instability": 1.0,
           "ca": 0,
           "ce": 3
         },
         {
-          "node": "client_options",
+          "node": "protoc-gen-twirp::go_naming",
           "instability": 1.0,
           "ca": 0,
-          "ce": 3
+          "ce": 1
+        },
+        {
+          "node": "protoc-gen-twirp::main",
+          "instability": 1.0,
+          "ca": 0,
+          "ce": 1
+        },
+        {
+          "node": "example::cmd::server::main",
+          "instability": 1.0,
+          "ca": 0,
+          "ce": 2
         }
       ],
       "most_stable": [
         {
-          "node": "descriptors",
+          "node": "clientcompat/internal/clientcompat",
+          "instability": 0.0,
+          "ca": 4,
+          "ce": 0
+        },
+        {
+          "node": "internal/twirptest/importable",
           "instability": 0.0,
           "ca": 1,
           "ce": 0
         },
         {
-          "node": "y",
+          "node": "internal/descriptors",
           "instability": 0.0,
           "ca": 1,
           "ce": 0
         },
         {
-          "node": "no_package_name",
+          "node": "internal/twirptest/importmapping/y",
           "instability": 0.0,
           "ca": 1,
           "ce": 0
         },
         {
-          "node": "assert",
-          "instability": 0.0,
-          "ca": 1,
-          "ce": 0
-        },
-        {
-          "node": "require",
+          "node": "internal/twirptest/no_package_name",
           "instability": 0.0,
           "ca": 1,
           "ce": 0
@@ -293,113 +164,57 @@
     {
       "name": "hub_nodes",
       "description": "Компоненты с > 10 связей (потенциальные God Objects)",
-      "status": "WARNING",
+      "status": "PASSED",
       "threshold": 10,
-      "hubs": [
-        {
-          "node": "protoreflect",
-          "total_degree": 100,
-          "in_degree": 100,
-          "out_degree": 0
-        },
-        {
-          "node": "fmt",
-          "total_degree": 71,
-          "in_degree": 71,
-          "out_degree": 0
-        },
-        {
-          "node": "reflect",
-          "total_degree": 55,
-          "in_degree": 55,
-          "out_degree": 0
-        },
-        {
-          "node": "errors",
-          "total_degree": 51,
-          "in_degree": 46,
-          "out_degree": 5
-        },
-        {
-          "node": "strings",
-          "total_degree": 47,
-          "in_degree": 47,
-          "out_degree": 0
-        },
-        {
-          "node": "sync",
-          "total_degree": 37,
-          "in_degree": 37,
-          "out_degree": 0
-        },
-        {
-          "node": "os",
-          "total_degree": 34,
-          "in_degree": 34,
-          "out_degree": 0
-        },
-        {
-          "node": "protowire",
-          "total_degree": 27,
-          "in_degree": 27,
-          "out_degree": 0
-        },
-        {
-          "node": "context",
-          "total_degree": 26,
-          "in_degree": 22,
-          "out_degree": 4
-        },
-        {
-          "node": "_tools::src::google.golang.org::protobuf::compiler::protogen::protogen",
-          "total_degree": 24,
-          "in_degree": 0,
-          "out_degree": 24
-        }
-      ],
-      "hubs_count": 46
+      "hubs": [],
+      "hubs_count": 0
     },
     {
       "name": "orphan_nodes",
       "description": "Компоненты без связей (возможно мертвый код)",
       "status": "WARNING",
       "orphans": [
+        "vendor_test",
+        "interceptors",
+        "license_test",
+        "server_options_test",
+        "client_options",
+        "protoc-gen-twirp::command_line",
+        "protoc-gen-twirp::command_line_test",
+        "protoc-gen-twirp::go_naming_test",
+        "protoc-gen-twirp::generator_test",
         "example::service.twirp",
         "example::gen",
+        "example::service.pb",
+        "example::cmd::server::statter",
+        "interceptors_test",
+        "client_options_test",
+        "errors_test",
+        "hooks::statsd::statsd",
+        "server_options",
         "clientcompat::gen",
-        "clientcompat::internal::clientcompat::clientcompat.twirp",
-        "_tools::src::golang.org::x::tools::go::loader::doc",
-        "_tools::src::golang.org::x::tools::go::ast::astutil::util",
-        "_tools::src::golang.org::x::tools::go::buildutil::tags",
-        "_tools::src::google.golang.org::protobuf::proto::wrappers",
-        "_tools::src::google.golang.org::protobuf::proto::doc",
-        "_tools::src::google.golang.org::protobuf::encoding::prototext::doc",
-        "_tools::src::google.golang.org::protobuf::runtime::protoiface::legacy",
-        "_tools::src::google.golang.org::protobuf::reflect::protoreflect::value_pure",
-        "_tools::src::google.golang.org::protobuf::reflect::protoreflect::value",
-        "_tools::src::google.golang.org::protobuf::reflect::protoreflect::source_gen",
-        "_tools::src::google.golang.org::protobuf::reflect::protoreflect::type",
-        "_tools::src::google.golang.org::protobuf::internal::pragma::pragma",
-        "_tools::src::google.golang.org::protobuf::internal::genid::goname",
-        "_tools::src::google.golang.org::protobuf::internal::genid::wrappers",
-        "_tools::src::google.golang.org::protobuf::internal::genid::doc",
-        "_tools::src::google.golang.org::protobuf::internal::genid::map_entry"
+        "clientcompat::internal::clientcompat::clientcompat.pb"
       ],
-      "orphans_count": 81
+      "orphans_count": 87
     },
     {
       "name": "strongly_connected_components",
       "description": "Группы с взаимными зависимостями (размер > 1)",
       "status": "PASSED",
-      "total_sccs": 376,
+      "total_sccs": 116,
       "problematic_sccs": [],
       "problematic_count": 0
     },
     {
       "name": "graph_depth",
-      "description": "Глубина графа зависимостей",
-      "status": "SKIP",
-      "reason": "Граф содержит циклы, невозможно вычислить глубину"
+      "description": "Глубина графа должна быть <= 10",
+      "status": "PASSED",
+      "depth": 1,
+      "max_depth": 10,
+      "longest_path": [
+        "protoc-gen-twirp::generator",
+        "internal/gen/typemap"
+      ]
     },
     {
       "name": "component_distance",

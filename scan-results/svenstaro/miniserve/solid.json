@@ -24,16 +24,16 @@
           "package": "src::main",
           "domains_count": 17,
           "domains": [
-            "src::config",
-            "auth",
-            "consts",
-            "file_utils",
-            "renderer",
-            "src::file_op",
-            "listing",
-            "src::args",
+            "archive",
             "file_op",
-            "src::webdav_fs"
+            "renderer",
+            "pipe",
+            "args",
+            "errors",
+            "src::config",
+            "file_utils",
+            "webdav_fs",
+            "listing"
           ]
         },
         {
@@ -41,12 +41,12 @@
           "domains_count": 7,
           "domains": [
             "src::listing",
-            "auth",
-            "src::auth",
-            "tests",
-            "RequiredAuthPassword",
             "src::renderer",
-            "AuthParseError"
+            "tests",
+            "AuthParseError",
+            "src::auth",
+            "RequiredAuthPassword",
+            "auth"
           ]
         },
         {
@@ -54,31 +54,31 @@
           "domains_count": 6,
           "domains": [
             "src::archive",
-            "src::percent_encode_sets",
             "percent_encode_sets",
-            "src::auth",
             "src::renderer",
-            "src::errors"
+            "src::auth",
+            "src::errors",
+            "src::percent_encode_sets"
           ]
         },
         {
           "package": "tests::navigation",
           "domains_count": 4,
           "domains": [
-            "tests::fixtures",
-            "fixtures",
+            "utils",
             "tests::utils",
-            "utils"
+            "tests::fixtures",
+            "fixtures"
           ]
         },
         {
           "package": "src::renderer",
           "domains_count": 4,
           "domains": [
-            "tests",
-            "src::consts",
             "src::auth",
-            "src::listing"
+            "src::listing",
+            "tests",
+            "src::consts"
           ]
         }
       ],
