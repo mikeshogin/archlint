@@ -10,8 +10,8 @@
     "errors": 4
   },
   "graph": {
-    "nodes": 98,
-    "edges": 131
+    "nodes": 100,
+    "edges": 133
   },
   "checks": [
     {
@@ -23,9 +23,9 @@
           "src::benchmark"
         ],
         [
-          "src::benchmark",
           "src::options",
-          "src::metric"
+          "src::metric",
+          "src::benchmark"
         ]
       ],
       "cycles_count": 2
@@ -43,7 +43,7 @@
         },
         {
           "node": "src::main",
-          "fan_out": 13,
+          "fan_out": 14,
           "threshold": 10
         },
         {
@@ -71,7 +71,7 @@
         {
           "node": "src::main",
           "afferent_coupling": 0,
-          "efferent_coupling": 13,
+          "efferent_coupling": 14,
           "ca_threshold": 10,
           "ce_threshold": 10
         },
@@ -256,16 +256,16 @@
           "out_degree": 15
         },
         {
+          "node": "src::main",
+          "total_degree": 14,
+          "in_degree": 0,
+          "out_degree": 14
+        },
+        {
           "node": "src::quantity",
           "total_degree": 14,
           "in_degree": 12,
           "out_degree": 2
-        },
-        {
-          "node": "src::main",
-          "total_degree": 13,
-          "in_degree": 0,
-          "out_degree": 13
         },
         {
           "node": "src::metric",
@@ -295,11 +295,11 @@
       "name": "strongly_connected_components",
       "description": "Группы с взаимными зависимостями (размер > 1)",
       "status": "ERROR",
-      "total_sccs": 96,
+      "total_sccs": 98,
       "problematic_sccs": [
         [
-          "src::benchmark",
           "src::options",
+          "src::benchmark",
           "src::metric"
         ]
       ],
