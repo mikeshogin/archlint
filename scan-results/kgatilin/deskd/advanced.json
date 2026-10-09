@@ -629,110 +629,110 @@
           "component": "tests",
           "impact_radius": 124,
           "sample_dependents": [
-            "src::app::tasklog",
-            "src::main",
-            "src::domain::task",
-            "src::infra::dto::config",
-            "src::app::commands::tui"
+            "src::app::adapters::web::routes::static_assets",
+            "src::infra::agent_file",
+            "src::infra::bus_server",
+            "src::app::adapters::federation::forward",
+            "src::app::a2a_server"
           ]
         },
         {
           "component": "task",
           "impact_radius": 95,
           "sample_dependents": [
-            "src::infra::dto::config",
-            "src::app::commands::tui",
+            "src::infra::agent_file",
             "src::infra::bus_server",
-            "src::app::agent_registry",
-            "src::app::a2a_server"
+            "src::app::a2a_server",
+            "src::app::mcp",
+            "src::infra::dto::bus"
           ]
         },
         {
           "component": "context",
           "impact_radius": 94,
           "sample_dependents": [
-            "src::infra::dto::config",
-            "src::app::commands::tui",
+            "src::infra::agent_file",
             "src::infra::bus_server",
-            "src::app::agent_registry",
-            "src::app::a2a_server"
+            "src::app::a2a_server",
+            "src::app::mcp",
+            "src::infra::dto::bus"
           ]
         },
         {
           "component": "agent",
           "impact_radius": 93,
           "sample_dependents": [
-            "src::infra::dto::config",
-            "src::app::commands::tui",
+            "src::infra::agent_file",
             "src::infra::bus_server",
-            "src::app::agent_registry",
-            "src::app::a2a_server"
+            "src::app::a2a_server",
+            "src::app::mcp",
+            "src::infra::dto::bus"
           ]
         },
         {
           "component": "message",
           "impact_radius": 92,
           "sample_dependents": [
-            "src::infra::dto::config",
-            "src::app::commands::tui",
+            "src::infra::agent_file",
             "src::infra::bus_server",
-            "src::app::agent_registry",
-            "src::app::a2a_server"
+            "src::app::a2a_server",
+            "src::app::mcp",
+            "src::infra::dto::bus"
           ]
         },
         {
           "component": "statemachine",
           "impact_radius": 92,
           "sample_dependents": [
-            "src::infra::dto::config",
-            "src::app::commands::tui",
+            "src::infra::agent_file",
             "src::infra::bus_server",
-            "src::app::agent_registry",
-            "src::app::a2a_server"
+            "src::app::a2a_server",
+            "src::app::mcp",
+            "src::infra::dto::bus"
           ]
         },
         {
           "component": "bus",
           "impact_radius": 74,
           "sample_dependents": [
-            "src::ports",
-            "src::app::adapters::web::view::task",
+            "src::app::adapters::federation::forward",
             "src::app::a2a_server",
-            "src::app::context",
-            "src::app::adapters::web::routes::login"
+            "src::app::mcp",
+            "src::infra::dto::bus",
+            "src::app::adapters::web::routes::metrics"
           ]
         },
         {
           "component": "events",
           "impact_radius": 61,
           "sample_dependents": [
-            "src::app::alerts",
             "src::app::adapters::web::data",
-            "src::app::commands::a2a",
-            "src::app::commands::schedule",
-            "src::infra::dto::config"
+            "src::infra::task_store",
+            "src::infra::bus_server",
+            "src::infra::agent_file",
+            "src::app::timeout_sweep"
           ]
         },
         {
           "component": "config_types",
           "impact_radius": 60,
           "sample_dependents": [
-            "src::app::alerts",
             "src::app::adapters::web::data",
-            "src::app::commands::a2a",
-            "src::app::commands::schedule",
-            "src::infra::dto::config"
+            "src::infra::task_store",
+            "src::infra::bus_server",
+            "src::infra::agent_file",
+            "src::app::timeout_sweep"
           ]
         },
         {
           "component": "workitem",
           "impact_radius": 60,
           "sample_dependents": [
-            "src::app::alerts",
             "src::app::adapters::web::data",
-            "src::app::commands::a2a",
-            "src::app::commands::schedule",
-            "src::infra::dto::config"
+            "src::infra::task_store",
+            "src::infra::bus_server",
+            "src::infra::agent_file",
+            "src::app::timeout_sweep"
           ]
         }
       ],

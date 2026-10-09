@@ -602,110 +602,110 @@
           "component": "si",
           "impact_radius": 26,
           "sample_dependents": [
-            "src::timer::unix_timer",
-            "src::options",
-            "src::metric",
-            "src::benchmark::scheduler",
-            "src::export::json"
+            "src::export::json",
+            "src::export::csv",
+            "src::output::warnings",
+            "src::timer",
+            "src::export::markup"
           ]
         },
         {
           "component": "statistics",
           "impact_radius": 26,
           "sample_dependents": [
-            "src::timer::unix_timer",
-            "src::options",
-            "src::metric",
-            "src::benchmark::scheduler",
-            "src::export::json"
+            "src::export::json",
+            "src::export::csv",
+            "src::output::warnings",
+            "src::timer",
+            "src::export::markup"
           ]
         },
         {
           "component": "src::quantity",
           "impact_radius": 25,
           "sample_dependents": [
-            "src::timer::unix_timer",
-            "src::options",
-            "src::metric",
-            "src::benchmark::scheduler",
-            "src::export::json"
+            "src::export::json",
+            "src::export::csv",
+            "src::output::warnings",
+            "src::timer",
+            "src::export::markup"
           ]
         },
         {
           "component": "exit_code",
           "impact_radius": 25,
           "sample_dependents": [
-            "src::options",
-            "src::metric",
-            "src::benchmark::scheduler",
+            "src::parameter::range_step",
             "src::export::json",
-            "src::util"
+            "src::export::csv",
+            "src::output::warnings",
+            "src::command"
           ]
         },
         {
           "component": "number",
           "impact_radius": 25,
           "sample_dependents": [
-            "src::options",
-            "src::metric",
-            "src::benchmark::scheduler",
+            "src::parameter::range_step",
             "src::export::json",
-            "src::util"
+            "src::export::csv",
+            "src::output::warnings",
+            "src::command"
           ]
         },
         {
           "component": "randomized_environment_offset",
           "impact_radius": 25,
           "sample_dependents": [
-            "src::options",
-            "src::metric",
-            "src::benchmark::scheduler",
+            "src::parameter::range_step",
             "src::export::json",
-            "src::util"
+            "src::export::csv",
+            "src::output::warnings",
+            "src::command"
           ]
         },
         {
           "component": "src::util",
           "impact_radius": 24,
           "sample_dependents": [
-            "src::options",
-            "src::metric",
-            "src::benchmark::scheduler",
+            "src::parameter::range_step",
             "src::export::json",
-            "src::export::orgmode"
+            "src::export::csv",
+            "src::output::warnings",
+            "src::command"
           ]
         },
         {
           "component": "tests",
           "impact_radius": 24,
           "sample_dependents": [
-            "src::options",
-            "src::metric",
-            "src::benchmark::scheduler",
+            "src::parameter::range_step",
             "src::export::json",
-            "src::export::orgmode"
+            "src::export::csv",
+            "src::output::warnings",
+            "src::export::markup"
           ]
         },
         {
           "component": "range_step",
           "impact_radius": 23,
           "sample_dependents": [
-            "src::options",
-            "src::metric",
-            "src::benchmark::scheduler",
             "src::export::json",
-            "src::export::orgmode"
+            "src::export::csv",
+            "src::output::warnings",
+            "src::command",
+            "src::export::markup"
           ]
         },
         {
           "component": "tokenize",
           "impact_radius": 23,
           "sample_dependents": [
-            "src::options",
-            "src::metric",
-            "src::benchmark::scheduler",
             "src::export::json",
-            "src::export::orgmode"
+            "src::export::csv",
+            "src::output::warnings",
+            "src::command",
+            "src::export::markup"
           ]
         }
       ],
