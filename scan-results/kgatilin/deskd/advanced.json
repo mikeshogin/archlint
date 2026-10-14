@@ -39,9 +39,9 @@
       "name": "modularity",
       "description": "Модульность графа должна быть >= 0.3",
       "status": "PASSED",
-      "modularity": 0.577,
+      "modularity": 0.578,
       "threshold": 0.3,
-      "communities_count": 29
+      "communities_count": 30
     },
     {
       "name": "abstractness",
@@ -629,110 +629,110 @@
           "component": "tests",
           "impact_radius": 124,
           "sample_dependents": [
-            "src::app::commands::remind",
-            "src::app::adapters::web::routes::sse",
-            "src::app::tasklog",
-            "src::app::adapters::web::view::detail",
-            "src::infra::dto::instance"
+            "src::app::adapters::federation::frame",
+            "src::app::config_watcher",
+            "src::app::tmux_launcher",
+            "src::infra::dto::instance",
+            "src::app::metrics"
           ]
         },
         {
           "component": "task",
           "impact_radius": 95,
           "sample_dependents": [
-            "src::app::commands::remind",
-            "src::app::adapters::web::routes::sse",
-            "src::app::adapters::web::view::detail",
             "src::infra::dto::instance",
-            "src::app::commands::tui"
+            "src::app::metrics",
+            "src::app",
+            "src::app::adapters::web::view::cards",
+            "src::infra::dto"
           ]
         },
         {
           "component": "context",
           "impact_radius": 94,
           "sample_dependents": [
-            "src::app::commands::remind",
-            "src::app::adapters::web::routes::sse",
-            "src::app::adapters::web::view::detail",
             "src::infra::dto::instance",
-            "src::app::commands::tui"
+            "src::app::metrics",
+            "src::app",
+            "src::app::adapters::web::view::cards",
+            "src::infra::dto"
           ]
         },
         {
           "component": "agent",
           "impact_radius": 93,
           "sample_dependents": [
-            "src::app::commands::remind",
-            "src::app::adapters::web::routes::sse",
-            "src::app::adapters::web::view::detail",
             "src::infra::dto::instance",
-            "src::app::commands::tui"
+            "src::app::metrics",
+            "src::app",
+            "src::app::adapters::web::view::cards",
+            "src::infra::sm_store"
           ]
         },
         {
           "component": "message",
           "impact_radius": 92,
           "sample_dependents": [
-            "src::app::commands::remind",
-            "src::app::adapters::web::routes::sse",
-            "src::app::adapters::web::view::detail",
             "src::infra::dto::instance",
-            "src::app::commands::tui"
+            "src::app::metrics",
+            "src::app",
+            "src::app::adapters::web::view::cards",
+            "src::infra::sm_store"
           ]
         },
         {
           "component": "statemachine",
           "impact_radius": 92,
           "sample_dependents": [
-            "src::app::commands::remind",
-            "src::app::adapters::web::routes::sse",
-            "src::app::adapters::web::view::detail",
             "src::infra::dto::instance",
-            "src::app::commands::tui"
+            "src::app::metrics",
+            "src::app",
+            "src::app::adapters::web::view::cards",
+            "src::infra::sm_store"
           ]
         },
         {
           "component": "bus",
           "impact_radius": 74,
           "sample_dependents": [
-            "src::app::adapters::web::routes::sse",
-            "src::app::adapters::web::view::detail",
-            "src::app::adapters::web::view::chart",
-            "src::infra::dto::bus",
-            "src::app::context"
+            "src::app::adapters::federation::frame",
+            "src::app::metrics",
+            "src::app",
+            "src::app::adapters::web::view::cards",
+            "src::infra::dto"
           ]
         },
         {
           "component": "events",
           "impact_radius": 61,
           "sample_dependents": [
-            "src::app::commands::remind",
-            "src::app::adapters::web::routes::cost",
-            "src::infra::sm_store",
-            "src::domain::workitem",
-            "src::app::agent_state"
+            "src::infra::dto::instance",
+            "src::infra::memory_bus",
+            "src::app::commands::reload",
+            "src::app::metrics",
+            "src::app::adapters::web"
           ]
         },
         {
           "component": "config_types",
           "impact_radius": 60,
           "sample_dependents": [
-            "src::app::commands::remind",
-            "src::app::adapters::web::routes::cost",
-            "src::infra::sm_store",
-            "src::domain::workitem",
-            "src::app::agent_state"
+            "src::infra::dto::instance",
+            "src::infra::memory_bus",
+            "src::app::commands::reload",
+            "src::app::metrics",
+            "src::app::adapters::web"
           ]
         },
         {
           "component": "workitem",
           "impact_radius": 60,
           "sample_dependents": [
-            "src::app::commands::remind",
-            "src::app::adapters::web::routes::cost",
-            "src::infra::sm_store",
-            "src::domain::workitem",
-            "src::app::agent_state"
+            "src::infra::dto::instance",
+            "src::infra::memory_bus",
+            "src::app::commands::reload",
+            "src::app::metrics",
+            "src::app::adapters::web"
           ]
         }
       ],
