@@ -82,39 +82,39 @@
           "ce": 1
         },
         {
+          "node": "tests::cases::compress_request_body",
+          "instability": 1.0,
+          "ca": 0,
+          "ce": 1
+        },
+        {
           "node": "tests::cases::xml",
           "instability": 1.0,
           "ca": 0,
           "ce": 1
         },
         {
-          "node": "tests::cases::unix_socket",
+          "node": "tests::cases",
           "instability": 1.0,
           "ca": 0,
-          "ce": 1
-        },
-        {
-          "node": "tests::cases::download",
-          "instability": 1.0,
-          "ca": 0,
-          "ce": 1
+          "ce": 6
         }
       ],
       "most_stable": [
         {
-          "node": "util",
+          "node": "utils",
           "instability": 0.0,
           "ca": 1,
           "ce": 0
         },
         {
-          "node": "headers",
+          "node": "network_interface",
           "instability": 0.0,
           "ca": 1,
           "ce": 0
         },
         {
-          "node": "palette",
+          "node": "RequestItem",
           "instability": 0.0,
           "ca": 1,
           "ce": 0
@@ -134,17 +134,17 @@
       ],
       "violations": [
         {
-          "from": "src::request_items",
-          "to": "src::nested_json",
-          "from_instability": 0.625,
-          "to_instability": 0.8,
-          "issue": "Зависимость направлена к менее стабильному компоненту"
-        },
-        {
           "from": "src::cli",
           "to": "src::request_items",
           "from_instability": 0.455,
           "to_instability": 0.625,
+          "issue": "Зависимость направлена к менее стабильному компоненту"
+        },
+        {
+          "from": "src::request_items",
+          "to": "src::nested_json",
+          "from_instability": 0.625,
+          "to_instability": 0.8,
           "issue": "Зависимость направлена к менее стабильному компоненту"
         }
       ],
@@ -235,8 +235,8 @@
       "status": "WARNING",
       "orphans": [
         "build",
-        "tests::cases::auth_message_signature",
         "tests::server",
+        "tests::cases::auth_message_signature",
         "src::error_reporting"
       ],
       "orphans_count": 4

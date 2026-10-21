@@ -28,8 +28,13 @@
       "threshold": 10,
       "violations": [
         {
-          "node": "src::infra",
-          "fan_out": 11,
+          "node": "src::app::commands",
+          "fan_out": 19,
+          "threshold": 10
+        },
+        {
+          "node": "src::app",
+          "fan_out": 47,
           "threshold": 10
         },
         {
@@ -43,13 +48,8 @@
           "threshold": 10
         },
         {
-          "node": "src::app::commands",
-          "fan_out": 19,
-          "threshold": 10
-        },
-        {
-          "node": "src::app",
-          "fan_out": 47,
+          "node": "src::infra",
+          "fan_out": 11,
           "threshold": 10
         }
       ],
@@ -63,16 +63,16 @@
       "ce_threshold": 10,
       "violations": [
         {
-          "node": "src::config",
-          "afferent_coupling": 34,
-          "efferent_coupling": 3,
+          "node": "src::app::commands",
+          "afferent_coupling": 0,
+          "efferent_coupling": 19,
           "ca_threshold": 10,
           "ce_threshold": 10
         },
         {
-          "node": "src::infra",
-          "afferent_coupling": 16,
-          "efferent_coupling": 11,
+          "node": "src::app",
+          "afferent_coupling": 57,
+          "efferent_coupling": 47,
           "ca_threshold": 10,
           "ce_threshold": 10
         },
@@ -91,16 +91,16 @@
           "ce_threshold": 10
         },
         {
-          "node": "src::app::commands",
-          "afferent_coupling": 0,
-          "efferent_coupling": 19,
+          "node": "src::domain",
+          "afferent_coupling": 30,
+          "efferent_coupling": 8,
           "ca_threshold": 10,
           "ce_threshold": 10
         },
         {
-          "node": "src::app",
-          "afferent_coupling": 57,
-          "efferent_coupling": 47,
+          "node": "src::infra",
+          "afferent_coupling": 16,
+          "efferent_coupling": 11,
           "ca_threshold": 10,
           "ce_threshold": 10
         },
@@ -112,9 +112,9 @@
           "ce_threshold": 10
         },
         {
-          "node": "src::domain",
-          "afferent_coupling": 30,
-          "efferent_coupling": 8,
+          "node": "src::config",
+          "afferent_coupling": 34,
+          "efferent_coupling": 3,
           "ca_threshold": 10,
           "ce_threshold": 10
         },
@@ -134,31 +134,31 @@
       "status": "ERROR",
       "most_unstable": [
         {
-          "node": "tests::reload_hot",
-          "instability": 1.0,
-          "ca": 0,
-          "ce": 1
-        },
-        {
           "node": "tests::web_dashboard",
           "instability": 1.0,
           "ca": 0,
           "ce": 1
         },
         {
-          "node": "tests::web_agent_detail",
+          "node": "tests::message_bus_trait",
           "instability": 1.0,
           "ca": 0,
           "ce": 1
         },
         {
-          "node": "tests::add_persistent_agent_lifecycle",
+          "node": "tests::reload_hot",
           "instability": 1.0,
           "ca": 0,
           "ce": 1
         },
         {
-          "node": "tests::bus_integration",
+          "node": "tests::web_adapter",
+          "instability": 1.0,
+          "ca": 0,
+          "ce": 1
+        },
+        {
+          "node": "tests::recurring_reminders",
           "instability": 1.0,
           "ca": 0,
           "ce": 1
@@ -166,31 +166,31 @@
       ],
       "most_stable": [
         {
-          "node": "test_support",
+          "node": "task_store",
           "instability": 0.0,
           "ca": 1,
           "ce": 0
         },
         {
-          "node": "src::agent",
+          "node": "unix_bus",
           "instability": 0.0,
           "ca": 1,
           "ce": 0
         },
         {
-          "node": "src::context",
+          "node": "bus_wire",
           "instability": 0.0,
           "ca": 1,
           "ce": 0
         },
         {
-          "node": "config_types",
+          "node": "executor",
           "instability": 0.0,
           "ca": 1,
           "ce": 0
         },
         {
-          "node": "workitem",
+          "node": "store",
           "instability": 0.0,
           "ca": 1,
           "ce": 0
@@ -335,18 +335,18 @@
       "status": "WARNING",
       "orphans": [
         "build",
-        "tests::agent_state_mcp",
         "tests::crash_recovery",
+        "tests::agent_state_mcp",
         "tests::mcp_channel_subprocess",
-        "tests::diag_publish",
         "tests::schedule_to_worker",
+        "tests::diag_publish",
         "tests::agent_lifecycle",
         "src::app::cli",
+        "src::app::commands::restart",
         "src::app::adapters::web::routes::health",
         "src::app::adapters::web::middleware::headers",
-        "src::app::commands::restart",
-        "src::ports::executor",
-        "src::domain::message"
+        "src::domain::message",
+        "src::ports::executor"
       ],
       "orphans_count": 13
     },
@@ -365,7 +365,7 @@
       "depth": 3,
       "max_depth": 10,
       "longest_path": [
-        "src::infra::agent_file",
+        "src::app::mcp_tools",
         "src::config",
         "src::domain",
         "agent"
