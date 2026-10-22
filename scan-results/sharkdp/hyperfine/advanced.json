@@ -600,10 +600,10 @@
           "component": "si",
           "impact_radius": 26,
           "sample_dependents": [
-            "src::benchmark::measurement",
-            "src::outlier_detection",
-            "src::timer::macos_counters",
-            "src::export::csv",
+            "src::benchmark::scheduler",
+            "src::timer",
+            "src::export::tests",
+            "src::export::asciidoc",
             "src::export::markup"
           ]
         },
@@ -611,10 +611,10 @@
           "component": "statistics",
           "impact_radius": 26,
           "sample_dependents": [
-            "src::benchmark::measurement",
-            "src::outlier_detection",
-            "src::timer::macos_counters",
-            "src::export::csv",
+            "src::benchmark::scheduler",
+            "src::timer",
+            "src::export::tests",
+            "src::export::asciidoc",
             "src::export::markup"
           ]
         },
@@ -622,10 +622,10 @@
           "component": "src::quantity",
           "impact_radius": 25,
           "sample_dependents": [
-            "src::benchmark::measurement",
-            "src::outlier_detection",
-            "src::timer::macos_counters",
-            "src::export::csv",
+            "src::benchmark::scheduler",
+            "src::timer",
+            "src::export::tests",
+            "src::export::asciidoc",
             "src::export::markup"
           ]
         },
@@ -633,10 +633,10 @@
           "component": "exit_code",
           "impact_radius": 25,
           "sample_dependents": [
-            "src::benchmark::measurement",
-            "src::timer::macos_counters",
-            "src::parameter::range_step",
-            "src::export::csv",
+            "src::benchmark::scheduler",
+            "src::timer",
+            "src::export::tests",
+            "src::export::asciidoc",
             "src::export::markup"
           ]
         },
@@ -644,10 +644,10 @@
           "component": "number",
           "impact_radius": 25,
           "sample_dependents": [
-            "src::benchmark::measurement",
-            "src::timer::macos_counters",
-            "src::parameter::range_step",
-            "src::export::csv",
+            "src::benchmark::scheduler",
+            "src::timer",
+            "src::export::tests",
+            "src::export::asciidoc",
             "src::export::markup"
           ]
         },
@@ -655,10 +655,10 @@
           "component": "randomized_environment_offset",
           "impact_radius": 25,
           "sample_dependents": [
-            "src::benchmark::measurement",
-            "src::timer::macos_counters",
-            "src::parameter::range_step",
-            "src::export::csv",
+            "src::benchmark::scheduler",
+            "src::timer",
+            "src::export::tests",
+            "src::export::asciidoc",
             "src::export::markup"
           ]
         },
@@ -666,10 +666,10 @@
           "component": "src::util",
           "impact_radius": 24,
           "sample_dependents": [
-            "src::benchmark::measurement",
-            "src::timer::macos_counters",
-            "src::parameter::range_step",
-            "src::export::csv",
+            "src::benchmark::scheduler",
+            "src::timer",
+            "src::export::tests",
+            "src::export::asciidoc",
             "src::export::markup"
           ]
         },
@@ -677,33 +677,33 @@
           "component": "tests",
           "impact_radius": 24,
           "sample_dependents": [
-            "src::benchmark::measurement",
-            "src::timer::macos_counters",
-            "src::parameter::range_step",
-            "src::export::csv",
-            "src::export::markup"
+            "src::benchmark::scheduler",
+            "src::timer",
+            "src::export::tests",
+            "src::export::asciidoc",
+            "src::quantity::statistics"
           ]
         },
         {
           "component": "range_step",
           "impact_radius": 23,
           "sample_dependents": [
-            "src::benchmark::measurement",
-            "src::timer::macos_counters",
-            "src::export::csv",
-            "src::export::markup",
-            "src::export::json"
+            "src::benchmark::scheduler",
+            "src::timer",
+            "src::export::tests",
+            "src::export::asciidoc",
+            "src::export::markup"
           ]
         },
         {
           "component": "tokenize",
           "impact_radius": 23,
           "sample_dependents": [
-            "src::benchmark::measurement",
-            "src::timer::macos_counters",
-            "src::export::csv",
-            "src::export::markup",
-            "src::export::json"
+            "src::benchmark::scheduler",
+            "src::timer",
+            "src::export::tests",
+            "src::export::asciidoc",
+            "src::export::markup"
           ]
         }
       ],
