@@ -61,7 +61,7 @@
       "status": "WARNING",
       "packages": [
         {
-          "package": "src::error",
+          "package": "src::font_style",
           "abstractness": 0.0,
           "instability": 0.0,
           "distance": 1.0,
@@ -70,7 +70,7 @@
           "issue": "Зона боли: конкретный и стабильный"
         },
         {
-          "package": "src::font_style",
+          "package": "src::error",
           "abstractness": 0.0,
           "instability": 0.0,
           "distance": 1.0,
@@ -153,6 +153,15 @@
       ],
       "violations": [
         {
+          "package": "src::font_style",
+          "abstractness": 0.0,
+          "instability": 0.0,
+          "distance": 1.0,
+          "nodes_count": 1,
+          "zone": "pain",
+          "issue": "Зона боли: конкретный и стабильный"
+        },
+        {
           "package": "src::error",
           "abstractness": 0.0,
           "instability": 0.0,
@@ -167,15 +176,6 @@
           "instability": 0.333,
           "distance": 0.667,
           "nodes_count": 1
-        },
-        {
-          "package": "src::font_style",
-          "abstractness": 0.0,
-          "instability": 0.0,
-          "distance": 1.0,
-          "nodes_count": 1,
-          "zone": "pain",
-          "issue": "Зона боли: конкретный и стабильный"
         },
         {
           "package": "src::types",
@@ -231,8 +231,8 @@
       "status": "WARNING",
       "articulation_points": [
         "src::main",
-        "src::theme",
-        "src::filetypes"
+        "src::filetypes",
+        "src::theme"
       ],
       "count": 3,
       "recommendation": "Уменьшить зависимость от критических узлов"

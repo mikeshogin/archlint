@@ -20,8 +20,8 @@
       "status": "FAILED",
       "cycles": [
         [
-          "src::listing",
-          "src::renderer"
+          "src::renderer",
+          "src::listing"
         ]
       ],
       "cycles_count": 1
@@ -70,31 +70,31 @@
       "status": "PASSED",
       "most_unstable": [
         {
-          "node": "tests::rm_files",
+          "node": "tests::cli",
           "instability": 1.0,
           "ca": 0,
           "ce": 2
         },
         {
-          "node": "tests::archive",
+          "node": "tests::qrcode",
+          "instability": 1.0,
+          "ca": 0,
+          "ce": 3
+        },
+        {
+          "node": "tests::create_directories",
           "instability": 1.0,
           "ca": 0,
           "ce": 2
         },
         {
-          "node": "tests::navigation",
-          "instability": 1.0,
-          "ca": 0,
-          "ce": 4
-        },
-        {
-          "node": "tests::tls",
+          "node": "tests::upload_files",
           "instability": 1.0,
           "ca": 0,
           "ce": 2
         },
         {
-          "node": "tests::paste",
+          "node": "tests::auth_file",
           "instability": 1.0,
           "ca": 0,
           "ce": 2
@@ -102,13 +102,7 @@
       ],
       "most_stable": [
         {
-          "node": "renderer",
-          "instability": 0.0,
-          "ca": 1,
-          "ce": 0
-        },
-        {
-          "node": "webdav_fs",
+          "node": "AuthParseError",
           "instability": 0.0,
           "ca": 1,
           "ce": 0
@@ -120,15 +114,21 @@
           "ce": 0
         },
         {
-          "node": "AuthParseError",
+          "node": "RequiredAuthPassword",
+          "instability": 0.0,
+          "ca": 2,
+          "ce": 0
+        },
+        {
+          "node": "src::percent_encode_sets",
           "instability": 0.0,
           "ca": 1,
           "ce": 0
         },
         {
-          "node": "RequiredAuthPassword",
+          "node": "percent_encode_sets",
           "instability": 0.0,
-          "ca": 2,
+          "ca": 1,
           "ce": 0
         }
       ],
@@ -224,8 +224,8 @@
       "total_sccs": 52,
       "problematic_sccs": [
         [
-          "src::listing",
-          "src::renderer"
+          "src::renderer",
+          "src::listing"
         ]
       ],
       "problematic_count": 1

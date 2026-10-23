@@ -44,13 +44,39 @@
       "status": "PASSED",
       "most_unstable": [
         {
-          "node": "env_test",
+          "node": "env_tomap",
           "instability": 0.5,
           "ca": 0,
           "ce": 0
         },
         {
-          "node": "env_tomap_windows",
+          "node": "env_tomap_test",
+          "instability": 0.5,
+          "ca": 0,
+          "ce": 0
+        },
+        {
+          "node": "env_tomap_windows_test",
+          "instability": 0.5,
+          "ca": 0,
+          "ce": 0
+        },
+        {
+          "node": "env",
+          "instability": 0.5,
+          "ca": 0,
+          "ce": 0
+        },
+        {
+          "node": "example_test",
+          "instability": 0.5,
+          "ca": 0,
+          "ce": 0
+        }
+      ],
+      "most_stable": [
+        {
+          "node": "env",
           "instability": 0.5,
           "ca": 0,
           "ce": 0
@@ -68,39 +94,13 @@
           "ce": 0
         },
         {
-          "node": "env",
-          "instability": 0.5,
-          "ca": 0,
-          "ce": 0
-        }
-      ],
-      "most_stable": [
-        {
-          "node": "error",
+          "node": "env_test",
           "instability": 0.5,
           "ca": 0,
           "ce": 0
         },
         {
-          "node": "env",
-          "instability": 0.5,
-          "ca": 0,
-          "ce": 0
-        },
-        {
-          "node": "env_tomap_windows_test",
-          "instability": 0.5,
-          "ca": 0,
-          "ce": 0
-        },
-        {
-          "node": "env_tomap_test",
-          "instability": 0.5,
-          "ca": 0,
-          "ce": 0
-        },
-        {
-          "node": "env_tomap",
+          "node": "env_tomap_windows",
           "instability": 0.5,
           "ca": 0,
           "ce": 0
@@ -174,14 +174,14 @@
       "description": "Компоненты без связей (возможно мертвый код)",
       "status": "WARNING",
       "orphans": [
-        "env_test",
-        "env_tomap_windows",
+        "env_tomap",
+        "env_tomap_test",
+        "env_tomap_windows_test",
+        "env",
         "example_test",
         "error",
-        "env",
-        "env_tomap_windows_test",
-        "env_tomap_test",
-        "env_tomap"
+        "env_test",
+        "env_tomap_windows"
       ],
       "orphans_count": 8
     },

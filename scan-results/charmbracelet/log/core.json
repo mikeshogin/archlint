@@ -44,19 +44,45 @@
       "status": "PASSED",
       "most_unstable": [
         {
-          "node": "options",
+          "node": "json",
           "instability": 0.5,
           "ca": 0,
           "ce": 0
         },
         {
-          "node": "logger_no121",
+          "node": "logger_121_test",
           "instability": 0.5,
           "ca": 0,
           "ce": 0
         },
         {
-          "node": "text",
+          "node": "examples::options::options",
+          "instability": 0.5,
+          "ca": 0,
+          "ce": 0
+        },
+        {
+          "node": "examples::batch2::batch2",
+          "instability": 0.5,
+          "ca": 0,
+          "ce": 0
+        },
+        {
+          "node": "examples::cookie::cookie",
+          "instability": 0.5,
+          "ca": 0,
+          "ce": 0
+        }
+      ],
+      "most_stable": [
+        {
+          "node": "options_test",
+          "instability": 0.5,
+          "ca": 0,
+          "ce": 0
+        },
+        {
+          "node": "context",
           "instability": 0.5,
           "ca": 0,
           "ce": 0
@@ -68,39 +94,13 @@
           "ce": 0
         },
         {
-          "node": "doc",
-          "instability": 0.5,
-          "ca": 0,
-          "ce": 0
-        }
-      ],
-      "most_stable": [
-        {
-          "node": "stdlog",
-          "instability": 0.5,
-          "ca": 0,
-          "ce": 0
-        },
-        {
-          "node": "context_test",
-          "instability": 0.5,
-          "ca": 0,
-          "ce": 0
-        },
-        {
           "node": "logger_test",
           "instability": 0.5,
           "ca": 0,
           "ce": 0
         },
         {
-          "node": "json_test",
-          "instability": 0.5,
-          "ca": 0,
-          "ce": 0
-        },
-        {
-          "node": "json",
+          "node": "level",
           "instability": 0.5,
           "ca": 0,
           "ce": 0
@@ -174,26 +174,26 @@
       "description": "Компоненты без связей (возможно мертвый код)",
       "status": "WARNING",
       "orphans": [
-        "options",
-        "logger_no121",
-        "text",
-        "logfmt",
-        "doc",
-        "styles",
-        "logger",
-        "stdlog_test",
-        "context",
-        "text_test",
-        "options_test",
-        "pkg",
-        "logger_121",
+        "json",
+        "logger_121_test",
+        "examples::options::options",
         "examples::batch2::batch2",
+        "examples::cookie::cookie",
         "examples::app::app",
         "examples::log::log",
-        "examples::cookie::cookie",
+        "examples::chocolate-chips::chocolate-chips",
+        "examples::new::new",
         "examples::styles::styles",
+        "examples::error::error",
+        "examples::oven::oven",
         "examples::format::format",
-        "examples::temperature::temperature"
+        "examples::slog::main",
+        "examples::temperature::temperature",
+        "formatter",
+        "options",
+        "logger",
+        "stdlog_test",
+        "pkg_test"
       ],
       "orphans_count": 37
     },

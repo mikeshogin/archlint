@@ -74,15 +74,6 @@
           "issue": "Зона боли: конкретный и стабильный"
         },
         {
-          "package": "src::file_op",
-          "abstractness": 0.0,
-          "instability": 0.0,
-          "distance": 1.0,
-          "nodes_count": 1,
-          "zone": "pain",
-          "issue": "Зона боли: конкретный и стабильный"
-        },
-        {
           "package": "src::webdav_fs",
           "abstractness": 0.0,
           "instability": 0.0,
@@ -101,7 +92,7 @@
           "issue": "Зона боли: конкретный и стабильный"
         },
         {
-          "package": "fixtures",
+          "package": "src::file_op",
           "abstractness": 0.0,
           "instability": 0.0,
           "distance": 1.0,
@@ -110,7 +101,7 @@
           "issue": "Зона боли: конкретный и стабильный"
         },
         {
-          "package": "utils",
+          "package": "fixtures",
           "abstractness": 0.0,
           "instability": 0.0,
           "distance": 1.0,
@@ -128,16 +119,7 @@
           "issue": "Зона боли: конкретный и стабильный"
         },
         {
-          "package": "src::percent_encode_sets",
-          "abstractness": 0.0,
-          "instability": 0.0,
-          "distance": 1.0,
-          "nodes_count": 1,
-          "zone": "pain",
-          "issue": "Зона боли: конкретный и стабильный"
-        },
-        {
-          "package": "percent_encode_sets",
+          "package": "utils",
           "abstractness": 0.0,
           "instability": 0.0,
           "distance": 1.0,
@@ -147,6 +129,24 @@
         },
         {
           "package": "archive",
+          "abstractness": 0.0,
+          "instability": 0.0,
+          "distance": 1.0,
+          "nodes_count": 1,
+          "zone": "pain",
+          "issue": "Зона боли: конкретный и стабильный"
+        },
+        {
+          "package": "args",
+          "abstractness": 0.0,
+          "instability": 0.0,
+          "distance": 1.0,
+          "nodes_count": 1,
+          "zone": "pain",
+          "issue": "Зона боли: конкретный и стабильный"
+        },
+        {
+          "package": "auth",
           "abstractness": 0.0,
           "instability": 0.0,
           "distance": 1.0,
@@ -166,15 +166,6 @@
           "issue": "Зона боли: конкретный и стабильный"
         },
         {
-          "package": "src::file_op",
-          "abstractness": 0.0,
-          "instability": 0.0,
-          "distance": 1.0,
-          "nodes_count": 1,
-          "zone": "pain",
-          "issue": "Зона боли: конкретный и стабильный"
-        },
-        {
           "package": "src::webdav_fs",
           "abstractness": 0.0,
           "instability": 0.0,
@@ -185,6 +176,15 @@
         },
         {
           "package": "src::errors",
+          "abstractness": 0.0,
+          "instability": 0.0,
+          "distance": 1.0,
+          "nodes_count": 1,
+          "zone": "pain",
+          "issue": "Зона боли: конкретный и стабильный"
+        },
+        {
+          "package": "src::file_op",
           "abstractness": 0.0,
           "instability": 0.0,
           "distance": 1.0,
@@ -212,35 +212,15 @@
       "threshold": 0.1,
       "low_clustering_nodes": [
         {
-          "node": "tests::rm_files",
+          "node": "tests::cli",
           "coefficient": 0.0
         },
         {
-          "node": "tests::archive",
+          "node": "tests::qrcode",
           "coefficient": 0.0
         },
         {
-          "node": "tests::navigation",
-          "coefficient": 0.0
-        },
-        {
-          "node": "tests::tls",
-          "coefficient": 0.0
-        },
-        {
-          "node": "tests::paste",
-          "coefficient": 0.0
-        },
-        {
-          "node": "tests::webdav",
-          "coefficient": 0.0
-        },
-        {
-          "node": "tests::upload_files",
-          "coefficient": 0.0
-        },
-        {
-          "node": "tests::bind",
+          "node": "tests::create_directories",
           "coefficient": 0.0
         },
         {
@@ -248,7 +228,27 @@
           "coefficient": 0.0
         },
         {
+          "node": "tests::upload_files",
+          "coefficient": 0.0
+        },
+        {
           "node": "tests::auth_file",
+          "coefficient": 0.0
+        },
+        {
+          "node": "tests::bind",
+          "coefficient": 0.0
+        },
+        {
+          "node": "tests::webdav",
+          "coefficient": 0.0
+        },
+        {
+          "node": "tests::paste",
+          "coefficient": 0.0
+        },
+        {
+          "node": "tests::raw",
           "coefficient": 0.0
         }
       ],
@@ -271,9 +271,9 @@
         "tests::navigation",
         "tests::qrcode",
         "src::main",
+        "src::listing",
         "src::renderer",
-        "src::args",
-        "src::listing"
+        "src::args"
       ],
       "count": 6,
       "recommendation": "Уменьшить зависимость от критических узлов"
@@ -284,28 +284,16 @@
       "status": "INFO",
       "bridges": [
         {
-          "from": "tests::navigation",
-          "to": "utils"
-        },
-        {
-          "from": "tests::navigation",
-          "to": "tests::utils"
-        },
-        {
           "from": "tests::qrcode",
           "to": "fake_tty"
         },
         {
-          "from": "src::listing",
-          "to": "src::percent_encode_sets"
+          "from": "tests::utils",
+          "to": "tests::navigation"
         },
         {
-          "from": "src::listing",
-          "to": "percent_encode_sets"
-        },
-        {
-          "from": "src::consts",
-          "to": "src::renderer"
+          "from": "tests::navigation",
+          "to": "utils"
         },
         {
           "from": "src::main",
@@ -360,8 +348,20 @@
           "to": "src::webdav_fs"
         },
         {
+          "from": "src::consts",
+          "to": "src::renderer"
+        },
+        {
           "from": "src::args",
           "to": "AuthParseError"
+        },
+        {
+          "from": "src::listing",
+          "to": "src::percent_encode_sets"
+        },
+        {
+          "from": "src::listing",
+          "to": "percent_encode_sets"
         }
       ],
       "count": 20
@@ -412,19 +412,19 @@
           "closeness": 0.043
         },
         {
-          "node": "src::archive",
-          "closeness": 0.038
-        },
-        {
           "node": "src::consts",
           "closeness": 0.038
         },
         {
-          "node": "src::percent_encode_sets",
+          "node": "src::archive",
           "closeness": 0.038
         },
         {
-          "node": "percent_encode_sets",
+          "node": "auth",
+          "closeness": 0.038
+        },
+        {
+          "node": "src::percent_encode_sets",
           "closeness": 0.038
         }
       ],

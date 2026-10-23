@@ -20,8 +20,8 @@
       "status": "FAILED",
       "cycles": [
         [
-          "src::request_items",
-          "src::cli"
+          "src::cli",
+          "src::request_items"
         ]
       ],
       "cycles_count": 1
@@ -82,39 +82,39 @@
           "ce": 1
         },
         {
-          "node": "tests::cases::compress_request_body",
-          "instability": 1.0,
-          "ca": 0,
-          "ce": 1
-        },
-        {
           "node": "tests::cases::xml",
           "instability": 1.0,
           "ca": 0,
           "ce": 1
         },
         {
-          "node": "tests::cases",
+          "node": "tests::cases::unix_socket",
           "instability": 1.0,
           "ca": 0,
-          "ce": 6
+          "ce": 1
+        },
+        {
+          "node": "tests::cases::download",
+          "instability": 1.0,
+          "ca": 0,
+          "ce": 1
         }
       ],
       "most_stable": [
         {
-          "node": "utils",
+          "node": "util",
           "instability": 0.0,
           "ca": 1,
           "ce": 0
         },
         {
-          "node": "network_interface",
+          "node": "headers",
           "instability": 0.0,
           "ca": 1,
           "ce": 0
         },
         {
-          "node": "RequestItem",
+          "node": "palette",
           "instability": 0.0,
           "ca": 1,
           "ce": 0
@@ -134,17 +134,17 @@
       ],
       "violations": [
         {
-          "from": "src::cli",
-          "to": "src::request_items",
-          "from_instability": 0.455,
-          "to_instability": 0.625,
-          "issue": "Зависимость направлена к менее стабильному компоненту"
-        },
-        {
           "from": "src::request_items",
           "to": "src::nested_json",
           "from_instability": 0.625,
           "to_instability": 0.8,
+          "issue": "Зависимость направлена к менее стабильному компоненту"
+        },
+        {
+          "from": "src::cli",
+          "to": "src::request_items",
+          "from_instability": 0.455,
+          "to_instability": 0.625,
           "issue": "Зависимость направлена к менее стабильному компоненту"
         }
       ],
@@ -235,8 +235,8 @@
       "status": "WARNING",
       "orphans": [
         "build",
-        "tests::server",
         "tests::cases::auth_message_signature",
+        "tests::server",
         "src::error_reporting"
       ],
       "orphans_count": 4
@@ -248,8 +248,8 @@
       "total_sccs": 70,
       "problematic_sccs": [
         [
-          "src::request_items",
-          "src::cli"
+          "src::cli",
+          "src::request_items"
         ]
       ],
       "problematic_count": 1

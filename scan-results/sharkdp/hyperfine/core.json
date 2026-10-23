@@ -76,16 +76,16 @@
           "ce_threshold": 10
         },
         {
-          "node": "src::quantity",
-          "afferent_coupling": 12,
-          "efferent_coupling": 2,
+          "node": "src::benchmark",
+          "afferent_coupling": 14,
+          "efferent_coupling": 12,
           "ca_threshold": 10,
           "ce_threshold": 10
         },
         {
-          "node": "src::benchmark",
-          "afferent_coupling": 14,
-          "efferent_coupling": 12,
+          "node": "src::quantity",
+          "afferent_coupling": 12,
+          "efferent_coupling": 2,
           "ca_threshold": 10,
           "ce_threshold": 10
         }
@@ -98,28 +98,28 @@
       "status": "ERROR",
       "most_unstable": [
         {
-          "node": "tests::integration_tests",
-          "instability": 1.0,
-          "ca": 0,
-          "ce": 1
-        },
-        {
           "node": "tests::execution_order_tests",
           "instability": 1.0,
           "ca": 0,
           "ce": 1
         },
         {
-          "node": "src::export::markup",
+          "node": "tests::integration_tests",
           "instability": 1.0,
           "ca": 0,
-          "ce": 3
+          "ce": 1
         },
         {
           "node": "src::export::tests",
           "instability": 1.0,
           "ca": 0,
           "ce": 5
+        },
+        {
+          "node": "src::export::json",
+          "instability": 1.0,
+          "ca": 0,
+          "ce": 4
         },
         {
           "node": "src::export::csv",
@@ -130,13 +130,13 @@
       ],
       "most_stable": [
         {
-          "node": "report",
+          "node": "range_step",
           "instability": 0.0,
           "ca": 1,
           "ce": 0
         },
         {
-          "node": "warnings",
+          "node": "tokenize",
           "instability": 0.0,
           "ca": 1,
           "ce": 0
@@ -162,17 +162,17 @@
       ],
       "violations": [
         {
-          "from": "src::metric",
-          "to": "src::benchmark",
-          "from_instability": 0.25,
-          "to_instability": 0.462,
-          "issue": "Зависимость направлена к менее стабильному компоненту"
-        },
-        {
           "from": "src::benchmark",
           "to": "src::parameter",
           "from_instability": 0.462,
           "to_instability": 0.6,
+          "issue": "Зависимость направлена к менее стабильному компоненту"
+        },
+        {
+          "from": "src::metric",
+          "to": "src::benchmark",
+          "from_instability": 0.25,
+          "to_instability": 0.462,
           "issue": "Зависимость направлена к менее стабильному компоненту"
         },
         {
@@ -299,8 +299,8 @@
       "problematic_sccs": [
         [
           "src::metric",
-          "src::benchmark",
-          "src::options"
+          "src::options",
+          "src::benchmark"
         ]
       ],
       "problematic_count": 1
