@@ -629,77 +629,77 @@
           "component": "tests",
           "impact_radius": 124,
           "sample_dependents": [
-            "src::app::adapters::telegram::attachments",
-            "src::app::context_size",
-            "src::app::schedule",
-            "src::app::mcp_tools",
-            "src::bin::session2graph"
+            "src::app::agent",
+            "src::app::adapters::web::view::detail",
+            "src::app::adapters::discord",
+            "src::app::adapters::web::state",
+            "src::domain::task"
           ]
         },
         {
           "component": "task",
           "impact_radius": 95,
           "sample_dependents": [
-            "src::app::context_size",
-            "src::app::schedule",
-            "src::app::mcp_tools",
-            "src::app::bus",
-            "src::app::adapters::web::routes::agent_task"
+            "src::app::adapters::web::routes::agent_log",
+            "src::app::adapters::web::view::detail",
+            "src::app::adapters::discord",
+            "src::app::adapters::web::state",
+            "src::infra::dto::bus"
           ]
         },
         {
           "component": "context",
           "impact_radius": 94,
           "sample_dependents": [
-            "src::app::context_size",
-            "src::app::schedule",
-            "src::app::mcp_tools",
-            "src::app::bus",
-            "src::app::adapters::web::routes::agent_task"
+            "src::app::adapters::web::routes::agent_log",
+            "src::app::adapters::web::view::detail",
+            "src::app::adapters::discord",
+            "src::app::adapters::web::state",
+            "src::infra::dto::bus"
           ]
         },
         {
           "component": "agent",
           "impact_radius": 93,
           "sample_dependents": [
-            "src::app::context_size",
-            "src::app::schedule",
-            "src::app::mcp_tools",
-            "src::app::bus",
-            "src::app::adapters::web::routes::agent_task"
+            "src::app::adapters::web::routes::agent_log",
+            "src::app::adapters::web::view::detail",
+            "src::app::adapters::discord",
+            "src::app::adapters::web::state",
+            "src::infra::dto::bus"
           ]
         },
         {
           "component": "message",
           "impact_radius": 92,
           "sample_dependents": [
-            "src::app::context_size",
-            "src::app::schedule",
-            "src::app::mcp_tools",
-            "src::app::bus",
-            "src::app::adapters::web::routes::agent_task"
+            "src::app::adapters::web::routes::agent_log",
+            "src::app::adapters::web::view::detail",
+            "src::app::adapters::discord",
+            "src::app::adapters::web::state",
+            "src::infra::dto::bus"
           ]
         },
         {
           "component": "statemachine",
           "impact_radius": 92,
           "sample_dependents": [
-            "src::app::context_size",
-            "src::app::schedule",
-            "src::app::mcp_tools",
-            "src::app::bus",
-            "src::app::adapters::web::routes::agent_task"
+            "src::app::adapters::web::routes::agent_log",
+            "src::app::adapters::web::view::detail",
+            "src::app::adapters::discord",
+            "src::app::adapters::web::state",
+            "src::infra::dto::bus"
           ]
         },
         {
           "component": "bus",
           "impact_radius": 74,
           "sample_dependents": [
-            "src::app::context_size",
-            "src::app::schedule",
-            "src::app::mcp_tools",
-            "src::app::bus",
-            "src::app::adapters::web::routes::agent_task"
+            "src::app::adapters::web::routes::agent_log",
+            "src::app::adapters::web::view::detail",
+            "src::app::agent",
+            "src::app::adapters::web::state",
+            "src::infra::dto::bus"
           ]
         },
         {
@@ -707,10 +707,10 @@
           "impact_radius": 61,
           "sample_dependents": [
             "src::app::commands::agent",
-            "src::domain::workitem",
             "src::app::adapters::discord",
-            "src::app::schedule",
-            "src::app::mcp_tools"
+            "src::app::acp",
+            "src::app::adapters::web::state",
+            "src::infra::bus_server"
           ]
         },
         {
@@ -718,10 +718,10 @@
           "impact_radius": 60,
           "sample_dependents": [
             "src::app::commands::agent",
-            "src::domain::workitem",
             "src::app::adapters::discord",
-            "src::app::schedule",
-            "src::app::mcp_tools"
+            "src::app::acp",
+            "src::app::adapters::web::state",
+            "src::infra::bus_server"
           ]
         },
         {
@@ -729,10 +729,10 @@
           "impact_radius": 60,
           "sample_dependents": [
             "src::app::commands::agent",
-            "src::domain::workitem",
             "src::app::adapters::discord",
-            "src::app::schedule",
-            "src::app::mcp_tools"
+            "src::app::acp",
+            "src::app::adapters::web::state",
+            "src::infra::bus_server"
           ]
         }
       ],
