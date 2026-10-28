@@ -603,10 +603,10 @@
           "impact_radius": 26,
           "sample_dependents": [
             "src::timer::macos_counters",
-            "src::metric",
-            "src::export",
-            "src::quantity",
-            "src::timer::linux_counters"
+            "src::output::report",
+            "src::output::progress_bar",
+            "src::benchmark::measurement",
+            "src::export::asciidoc"
           ]
         },
         {
@@ -614,10 +614,10 @@
           "impact_radius": 26,
           "sample_dependents": [
             "src::timer::macos_counters",
-            "src::metric",
-            "src::export",
-            "src::quantity",
-            "src::timer::linux_counters"
+            "src::output::report",
+            "src::output::progress_bar",
+            "src::benchmark::measurement",
+            "src::export::asciidoc"
           ]
         },
         {
@@ -625,54 +625,54 @@
           "impact_radius": 25,
           "sample_dependents": [
             "src::timer::macos_counters",
-            "src::metric",
-            "src::export",
-            "src::timer::linux_counters",
-            "src::export::csv"
+            "src::output::report",
+            "src::output::progress_bar",
+            "src::benchmark::measurement",
+            "src::export::asciidoc"
           ]
         },
         {
           "component": "exit_code",
           "impact_radius": 25,
           "sample_dependents": [
-            "src::parameter",
             "src::timer::macos_counters",
-            "src::metric",
-            "src::export",
-            "src::timer::linux_counters"
+            "src::util",
+            "src::output::report",
+            "src::output::progress_bar",
+            "src::benchmark::measurement"
           ]
         },
         {
           "component": "number",
           "impact_radius": 25,
           "sample_dependents": [
-            "src::parameter",
             "src::timer::macos_counters",
-            "src::metric",
-            "src::export",
-            "src::timer::linux_counters"
+            "src::util",
+            "src::output::report",
+            "src::output::progress_bar",
+            "src::benchmark::measurement"
           ]
         },
         {
           "component": "randomized_environment_offset",
           "impact_radius": 25,
           "sample_dependents": [
-            "src::parameter",
             "src::timer::macos_counters",
-            "src::metric",
-            "src::export",
-            "src::timer::linux_counters"
+            "src::util",
+            "src::output::report",
+            "src::output::progress_bar",
+            "src::benchmark::measurement"
           ]
         },
         {
           "component": "src::util",
           "impact_radius": 24,
           "sample_dependents": [
-            "src::parameter",
             "src::timer::macos_counters",
-            "src::metric",
-            "src::export",
-            "src::timer::linux_counters"
+            "src::output::report",
+            "src::output::progress_bar",
+            "src::benchmark::measurement",
+            "src::export::asciidoc"
           ]
         },
         {
@@ -680,32 +680,32 @@
           "impact_radius": 24,
           "sample_dependents": [
             "src::timer::macos_counters",
-            "src::metric",
-            "src::export",
-            "src::timer::linux_counters",
-            "src::export::csv"
+            "src::output::report",
+            "src::output::progress_bar",
+            "src::shell_syntax",
+            "src::benchmark::measurement"
           ]
         },
         {
           "component": "range_step",
           "impact_radius": 23,
           "sample_dependents": [
-            "src::parameter",
             "src::timer::macos_counters",
-            "src::metric",
-            "src::export",
-            "src::timer::linux_counters"
+            "src::output::report",
+            "src::output::progress_bar",
+            "src::export::asciidoc",
+            "src::benchmark::measurement"
           ]
         },
         {
           "component": "tokenize",
           "impact_radius": 23,
           "sample_dependents": [
-            "src::parameter",
             "src::timer::macos_counters",
-            "src::metric",
-            "src::export",
-            "src::timer::linux_counters"
+            "src::output::report",
+            "src::output::progress_bar",
+            "src::export::asciidoc",
+            "src::benchmark::measurement"
           ]
         }
       ],
