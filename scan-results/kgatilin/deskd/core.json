@@ -28,18 +28,8 @@
       "threshold": 10,
       "violations": [
         {
-          "node": "src::infra",
-          "fan_out": 11,
-          "threshold": 10
-        },
-        {
-          "node": "src::app::adapters::web::routes",
-          "fan_out": 16,
-          "threshold": 10
-        },
-        {
-          "node": "src::app::adapters::web",
-          "fan_out": 18,
+          "node": "src::app",
+          "fan_out": 47,
           "threshold": 10
         },
         {
@@ -48,8 +38,18 @@
           "threshold": 10
         },
         {
-          "node": "src::app",
-          "fan_out": 47,
+          "node": "src::app::adapters::web",
+          "fan_out": 18,
+          "threshold": 10
+        },
+        {
+          "node": "src::app::adapters::web::routes",
+          "fan_out": 16,
+          "threshold": 10
+        },
+        {
+          "node": "src::infra",
+          "fan_out": 11,
           "threshold": 10
         }
       ],
@@ -63,30 +63,9 @@
       "ce_threshold": 10,
       "violations": [
         {
-          "node": "src::config",
-          "afferent_coupling": 34,
-          "efferent_coupling": 3,
-          "ca_threshold": 10,
-          "ce_threshold": 10
-        },
-        {
-          "node": "src::infra",
-          "afferent_coupling": 16,
-          "efferent_coupling": 11,
-          "ca_threshold": 10,
-          "ce_threshold": 10
-        },
-        {
-          "node": "src::app::adapters::web::routes",
-          "afferent_coupling": 0,
-          "efferent_coupling": 16,
-          "ca_threshold": 10,
-          "ce_threshold": 10
-        },
-        {
-          "node": "src::app::adapters::web",
-          "afferent_coupling": 0,
-          "efferent_coupling": 18,
+          "node": "src::app",
+          "afferent_coupling": 57,
+          "efferent_coupling": 47,
           "ca_threshold": 10,
           "ce_threshold": 10
         },
@@ -98,9 +77,30 @@
           "ce_threshold": 10
         },
         {
-          "node": "src::app",
-          "afferent_coupling": 57,
-          "efferent_coupling": 47,
+          "node": "src::app::adapters::web",
+          "afferent_coupling": 0,
+          "efferent_coupling": 18,
+          "ca_threshold": 10,
+          "ce_threshold": 10
+        },
+        {
+          "node": "src::app::adapters::web::routes",
+          "afferent_coupling": 0,
+          "efferent_coupling": 16,
+          "ca_threshold": 10,
+          "ce_threshold": 10
+        },
+        {
+          "node": "src::config",
+          "afferent_coupling": 34,
+          "efferent_coupling": 3,
+          "ca_threshold": 10,
+          "ce_threshold": 10
+        },
+        {
+          "node": "src::domain",
+          "afferent_coupling": 30,
+          "efferent_coupling": 8,
           "ca_threshold": 10,
           "ce_threshold": 10
         },
@@ -112,9 +112,9 @@
           "ce_threshold": 10
         },
         {
-          "node": "src::domain",
-          "afferent_coupling": 30,
-          "efferent_coupling": 8,
+          "node": "src::infra",
+          "afferent_coupling": 16,
+          "efferent_coupling": 11,
           "ca_threshold": 10,
           "ce_threshold": 10
         },
@@ -134,63 +134,63 @@
       "status": "ERROR",
       "most_unstable": [
         {
-          "node": "tests::reload_hot",
+          "node": "src::bin::session2graph",
           "instability": 1.0,
           "ca": 0,
           "ce": 1
         },
         {
-          "node": "tests::web_dashboard",
+          "node": "src::app::task",
           "instability": 1.0,
           "ca": 0,
           "ce": 1
         },
         {
-          "node": "tests::web_agent_detail",
+          "node": "src::app::scope",
           "instability": 1.0,
           "ca": 0,
           "ce": 1
         },
         {
-          "node": "tests::add_persistent_agent_lifecycle",
+          "node": "src::app::unified_inbox",
           "instability": 1.0,
           "ca": 0,
           "ce": 1
         },
         {
-          "node": "tests::bus_integration",
+          "node": "src::app::agent",
           "instability": 1.0,
           "ca": 0,
-          "ce": 1
+          "ce": 5
         }
       ],
       "most_stable": [
         {
+          "node": "app",
+          "instability": 0.0,
+          "ca": 1,
+          "ce": 0
+        },
+        {
+          "node": "domain",
+          "instability": 0.0,
+          "ca": 1,
+          "ce": 0
+        },
+        {
+          "node": "infra",
+          "instability": 0.0,
+          "ca": 1,
+          "ce": 0
+        },
+        {
+          "node": "ports",
+          "instability": 0.0,
+          "ca": 1,
+          "ce": 0
+        },
+        {
           "node": "test_support",
-          "instability": 0.0,
-          "ca": 1,
-          "ce": 0
-        },
-        {
-          "node": "src::agent",
-          "instability": 0.0,
-          "ca": 1,
-          "ce": 0
-        },
-        {
-          "node": "src::context",
-          "instability": 0.0,
-          "ca": 1,
-          "ce": 0
-        },
-        {
-          "node": "config_types",
-          "instability": 0.0,
-          "ca": 1,
-          "ce": 0
-        },
-        {
-          "node": "workitem",
           "instability": 0.0,
           "ca": 1,
           "ce": 0
@@ -335,18 +335,18 @@
       "status": "WARNING",
       "orphans": [
         "build",
-        "tests::agent_state_mcp",
-        "tests::crash_recovery",
-        "tests::mcp_channel_subprocess",
-        "tests::diag_publish",
-        "tests::schedule_to_worker",
-        "tests::agent_lifecycle",
         "src::app::cli",
+        "src::app::commands::restart",
         "src::app::adapters::web::routes::health",
         "src::app::adapters::web::middleware::headers",
-        "src::app::commands::restart",
+        "src::domain::message",
         "src::ports::executor",
-        "src::domain::message"
+        "tests::agent_state_mcp",
+        "tests::crash_recovery",
+        "tests::agent_lifecycle",
+        "tests::diag_publish",
+        "tests::schedule_to_worker",
+        "tests::mcp_channel_subprocess"
       ],
       "orphans_count": 13
     },
@@ -365,7 +365,7 @@
       "depth": 3,
       "max_depth": 10,
       "longest_path": [
-        "src::infra::agent_file",
+        "src::app::bus_api",
         "src::config",
         "src::domain",
         "agent"

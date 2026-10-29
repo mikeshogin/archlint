@@ -44,16 +44,10 @@
       "status": "PASSED",
       "most_unstable": [
         {
-          "node": "pkg::score::score",
+          "node": "cmd::promptlint::main",
           "instability": 1.0,
           "ca": 0,
-          "ce": 1
-        },
-        {
-          "node": "pkg::router::router",
-          "instability": 1.0,
-          "ca": 0,
-          "ce": 2
+          "ce": 9
         },
         {
           "node": "pkg::telemetry::telemetry",
@@ -62,37 +56,25 @@
           "ce": 1
         },
         {
-          "node": "pkg::server::server",
+          "node": "pkg::perf::perf",
+          "instability": 1.0,
+          "ca": 0,
+          "ce": 4
+        },
+        {
+          "node": "pkg::analyzer::analyzer",
           "instability": 1.0,
           "ca": 0,
           "ce": 3
         },
         {
-          "node": "pkg::abtest::abtest",
+          "node": "pkg::router::router",
           "instability": 1.0,
           "ca": 0,
           "ce": 2
         }
       ],
       "most_stable": [
-        {
-          "node": "pkg/abtest",
-          "instability": 0.0,
-          "ca": 1,
-          "ce": 0
-        },
-        {
-          "node": "pkg/perf",
-          "instability": 0.0,
-          "ca": 1,
-          "ce": 0
-        },
-        {
-          "node": "pkg/server",
-          "instability": 0.0,
-          "ca": 1,
-          "ce": 0
-        },
         {
           "node": "pkg/template",
           "instability": 0.0,
@@ -101,6 +83,24 @@
         },
         {
           "node": "pkg/trend",
+          "instability": 0.0,
+          "ca": 1,
+          "ce": 0
+        },
+        {
+          "node": "pkg/validator",
+          "instability": 0.0,
+          "ca": 3,
+          "ce": 0
+        },
+        {
+          "node": "pkg/metrics",
+          "instability": 0.0,
+          "ca": 3,
+          "ce": 0
+        },
+        {
+          "node": "pkg/score",
           "instability": 0.0,
           "ca": 1,
           "ce": 0
@@ -174,16 +174,16 @@
       "description": "Компоненты без связей (возможно мертвый код)",
       "status": "WARNING",
       "orphans": [
-        "pkg::template::template_test",
-        "pkg::template::template",
-        "pkg::config::config",
         "pkg::validator::validator",
         "pkg::metrics::nlp",
         "pkg::metrics::basic",
         "pkg::metrics::domain",
         "pkg::analyzer::analyzer_test",
+        "pkg::trend::trend",
         "pkg::trend::trend_test",
-        "pkg::trend::trend"
+        "pkg::template::template_test",
+        "pkg::template::template",
+        "pkg::config::config"
       ],
       "orphans_count": 10
     },
@@ -202,8 +202,8 @@
       "depth": 1,
       "max_depth": 10,
       "longest_path": [
-        "pkg::score::score",
-        "pkg/metrics"
+        "cmd::promptlint::main",
+        "pkg/abtest"
       ]
     },
     {

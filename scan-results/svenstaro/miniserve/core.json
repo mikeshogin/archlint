@@ -70,25 +70,19 @@
       "status": "PASSED",
       "most_unstable": [
         {
-          "node": "tests::cli",
+          "node": "src::main",
+          "instability": 1.0,
+          "ca": 0,
+          "ce": 17
+        },
+        {
+          "node": "tests::paste",
           "instability": 1.0,
           "ca": 0,
           "ce": 2
         },
         {
-          "node": "tests::qrcode",
-          "instability": 1.0,
-          "ca": 0,
-          "ce": 3
-        },
-        {
-          "node": "tests::create_directories",
-          "instability": 1.0,
-          "ca": 0,
-          "ce": 2
-        },
-        {
-          "node": "tests::upload_files",
+          "node": "tests::archive",
           "instability": 1.0,
           "ca": 0,
           "ce": 2
@@ -98,27 +92,15 @@
           "instability": 1.0,
           "ca": 0,
           "ce": 2
+        },
+        {
+          "node": "tests::header",
+          "instability": 1.0,
+          "ca": 0,
+          "ce": 2
         }
       ],
       "most_stable": [
-        {
-          "node": "AuthParseError",
-          "instability": 0.0,
-          "ca": 1,
-          "ce": 0
-        },
-        {
-          "node": "tests",
-          "instability": 0.0,
-          "ca": 4,
-          "ce": 0
-        },
-        {
-          "node": "RequiredAuthPassword",
-          "instability": 0.0,
-          "ca": 2,
-          "ce": 0
-        },
         {
           "node": "src::percent_encode_sets",
           "instability": 0.0,
@@ -127,6 +109,24 @@
         },
         {
           "node": "percent_encode_sets",
+          "instability": 0.0,
+          "ca": 1,
+          "ce": 0
+        },
+        {
+          "node": "fixtures",
+          "instability": 0.0,
+          "ca": 18,
+          "ce": 0
+        },
+        {
+          "node": "utils",
+          "instability": 0.0,
+          "ca": 1,
+          "ce": 0
+        },
+        {
+          "node": "fake_tty",
           "instability": 0.0,
           "ca": 1,
           "ce": 0
