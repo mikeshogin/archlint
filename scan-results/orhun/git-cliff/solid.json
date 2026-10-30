@@ -24,158 +24,158 @@
           "package": "git-cliff-core::src::lib",
           "domains_count": 18,
           "domains": [
-            "release",
-            "statistics",
-            "tag",
-            "config",
-            "markdown",
-            "error",
-            "command",
-            "process",
+            "repo",
             "template",
-            "embed"
+            "contributor",
+            "changelog",
+            "embed",
+            "release",
+            "commit",
+            "remote",
+            "tracing",
+            "statistics"
           ]
         },
         {
           "package": "git-cliff-core::src::remote",
           "domains_count": 17,
           "domains": [
-            "bitbucket",
             "github",
+            "bitbucket",
+            "cacache",
+            "reqwest_middleware",
             "secrecy",
-            "git-cliff-core::config",
-            "etcetera",
-            "git-cliff-core::contributor",
             "gitlab",
-            "git-cliff-core::error",
+            "reqwest",
             "http_cache_reqwest",
-            "time"
+            "dyn_clone",
+            "git-cliff-core::config"
           ]
         },
         {
           "package": "git-cliff-core::src::config",
           "domains_count": 12,
           "domains": [
-            "git-cliff-core::error",
-            "etcetera",
-            "test",
-            "regex",
-            "git-cliff-core::embed",
             "git-cliff-core::template",
+            "secrecy",
             "glob",
+            "test",
+            "etcetera",
+            "serde",
             "serde_pattern",
-            "temp_dir",
-            "secrecy"
+            "pretty_assertions",
+            "regex",
+            "temp_dir"
           ]
         },
         {
           "package": "git-cliff-core::src::changelog",
           "domains_count": 12,
           "domains": [
-            "git-cliff-core::process",
-            "git-cliff-core::config",
-            "git-cliff-core::release",
             "git-cliff-core::summary",
-            "test",
-            "regex",
             "git-cliff-core::template",
+            "git-cliff-core::release",
             "git-cliff-core::remote",
-            "git-cliff-core::embed",
-            "git-cliff-core::commit"
+            "test",
+            "git-cliff-core::config",
+            "pretty_assertions",
+            "git-cliff-core::commit",
+            "regex",
+            "git-cliff-core::embed"
           ]
         },
         {
           "package": "git-cliff-core::src::repo",
           "domains_count": 11,
           "domains": [
-            "git-cliff-core::error",
-            "git-cliff-core::config",
-            "url",
-            "test",
-            "temp_dir",
-            "indexmap",
-            "regex",
             "glob",
+            "indexmap",
+            "test",
+            "git-cliff-core::config",
             "git-cliff-core::tag",
-            "git-cliff-core::commit"
+            "url",
+            "git-cliff-core::commit",
+            "regex",
+            "git2",
+            "temp_dir"
           ]
         },
         {
           "package": "git-cliff-core::src::release",
           "domains_count": 11,
           "domains": [
-            "git-cliff-core::config",
-            "semver",
-            "test",
             "git-cliff-core::statistics",
+            "semver",
             "git-cliff-core::remote",
-            "serde_json",
             "next_version",
-            "git-cliff-core::commit",
-            "git-cliff-core::error",
-            "pretty_assertions"
+            "serde_json",
+            "test",
+            "git-cliff-core::config",
+            "serde",
+            "pretty_assertions",
+            "git-cliff-core::commit"
           ]
         },
         {
           "package": "git-cliff-core::src::template",
           "domains_count": 11,
           "domains": [
-            "git-cliff-core::config",
             "git-cliff-core::release",
             "semver",
-            "test",
-            "indexmap",
-            "regex",
             "serde_json",
+            "indexmap",
+            "test",
+            "git-cliff-core::config",
+            "serde",
             "tera",
             "git-cliff-core::commit",
-            "git-cliff-core::error"
+            "regex"
           ]
         },
         {
           "package": "git-cliff::src::lib",
           "domains_count": 10,
           "domains": [
-            "args",
-            "tests",
-            "update_informer",
             "config_path",
-            "clap",
-            "logger",
             "glob",
+            "logger",
+            "tests",
             "temp_dir",
+            "pretty_assertions",
+            "clap",
             "git_cliff_core",
-            "pretty_assertions"
+            "args",
+            "update_informer"
           ]
         },
         {
           "package": "git-cliff-core::src::remote::github",
           "domains_count": 9,
           "domains": [
-            "git-cliff-core::config",
-            "test",
             "reqwest_middleware",
             "futures",
             "git-cliff-core::remote",
-            "git-cliff-core::error",
-            "pretty_assertions",
+            "test",
+            "async_stream",
+            "git-cliff-core::config",
             "serde",
-            "async_stream"
+            "pretty_assertions",
+            "git-cliff-core::error"
           ]
         },
         {
           "package": "git-cliff-core::src::remote::gitlab",
           "domains_count": 9,
           "domains": [
-            "git-cliff-core::config",
-            "test",
             "reqwest_middleware",
             "futures",
             "git-cliff-core::remote",
-            "git-cliff-core::error",
-            "pretty_assertions",
+            "test",
+            "async_stream",
+            "git-cliff-core::config",
             "serde",
-            "async_stream"
+            "pretty_assertions",
+            "git-cliff-core::error"
           ]
         }
       ],
