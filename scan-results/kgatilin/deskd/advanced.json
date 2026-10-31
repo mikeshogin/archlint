@@ -39,9 +39,9 @@
       "name": "modularity",
       "description": "Модульность графа должна быть >= 0.3",
       "status": "PASSED",
-      "modularity": 0.577,
+      "modularity": 0.578,
       "threshold": 0.3,
-      "communities_count": 29
+      "communities_count": 30
     },
     {
       "name": "abstractness",
@@ -629,110 +629,110 @@
           "component": "tests",
           "impact_radius": 124,
           "sample_dependents": [
-            "src::infra::memory_bus",
-            "src::app::commands::session",
-            "src::app::adapters::web::templates",
-            "src::app::agent_provisioning",
-            "src::app::adapters::web"
+            "src::app::adapters::web::routes::github_webhook",
+            "src::app::bus_api",
+            "src::app::adapters::web::view::task",
+            "src::app::commands::schedule",
+            "src::app::schedule"
           ]
         },
         {
           "component": "task",
           "impact_radius": 95,
           "sample_dependents": [
-            "src::app::adapters::web::routes::agent_log",
-            "src::infra::memory_bus",
-            "src::app::commands::session",
-            "src::app::commands::graph",
-            "src::app::adapters::web"
+            "src::app::adapters::web::routes::dashboard",
+            "src::app::adapters::web::routes::github_webhook",
+            "src::app::message",
+            "src::app::bus_api",
+            "src::app::adapters::web::view::task"
           ]
         },
         {
           "component": "context",
           "impact_radius": 94,
           "sample_dependents": [
-            "src::app::adapters::web::routes::agent_log",
-            "src::infra::memory_bus",
-            "src::app::commands::session",
-            "src::app::commands::graph",
-            "src::app::adapters::web"
+            "src::app::adapters::web::routes::dashboard",
+            "src::app::adapters::web::routes::github_webhook",
+            "src::app::message",
+            "src::app::bus_api",
+            "src::app::adapters::web::view::task"
           ]
         },
         {
           "component": "agent",
           "impact_radius": 93,
           "sample_dependents": [
-            "src::app::adapters::web::routes::agent_log",
-            "src::infra::memory_bus",
-            "src::app::commands::session",
-            "src::app::commands::graph",
-            "src::app::adapters::web"
+            "src::app::adapters::web::routes::dashboard",
+            "src::app::adapters::web::routes::github_webhook",
+            "src::app::message",
+            "src::app::bus_api",
+            "src::app::adapters::web::view::task"
           ]
         },
         {
           "component": "message",
           "impact_radius": 92,
           "sample_dependents": [
-            "src::app::adapters::web::routes::agent_log",
-            "src::infra::memory_bus",
-            "src::app::commands::session",
-            "src::app::commands::graph",
-            "src::app::adapters::web"
+            "src::app::adapters::web::routes::dashboard",
+            "src::app::adapters::web::routes::github_webhook",
+            "src::app::message",
+            "src::app::bus_api",
+            "src::app::adapters::web::view::task"
           ]
         },
         {
           "component": "statemachine",
           "impact_radius": 92,
           "sample_dependents": [
-            "src::app::adapters::web::routes::agent_log",
-            "src::infra::memory_bus",
-            "src::app::commands::session",
-            "src::app::commands::graph",
-            "src::app::adapters::web"
+            "src::app::adapters::web::routes::dashboard",
+            "src::app::adapters::web::routes::github_webhook",
+            "src::app::message",
+            "src::app::bus_api",
+            "src::app::adapters::web::view::task"
           ]
         },
         {
           "component": "bus",
           "impact_radius": 74,
           "sample_dependents": [
-            "src::app::adapters::web::routes::agent_log",
-            "src::infra::memory_bus",
-            "src::app::commands::session",
-            "src::app::commands::graph",
-            "src::app::adapters::web"
+            "src::app::adapters::web::routes::dashboard",
+            "src::app::bus_api",
+            "src::app::adapters::web::view::task",
+            "src::app::commands::schedule",
+            "src::app::schedule"
           ]
         },
         {
           "component": "events",
           "impact_radius": 61,
           "sample_dependents": [
-            "src::infra::memory_store",
-            "src::infra::memory_bus",
-            "src::app::config_reload",
-            "src::ports::bus",
-            "src::app::mcp_tools"
+            "src::infra::dto::bus",
+            "src::app::adapters::web::routes::github_webhook",
+            "src::app::message",
+            "src::app::bus_api",
+            "src::app::commands::schedule"
           ]
         },
         {
           "component": "config_types",
           "impact_radius": 60,
           "sample_dependents": [
-            "src::infra::memory_store",
-            "src::infra::memory_bus",
-            "src::app::config_reload",
-            "src::ports::bus",
-            "src::app::mcp_tools"
+            "src::infra::dto::bus",
+            "src::app::adapters::web::routes::github_webhook",
+            "src::app::message",
+            "src::app::bus_api",
+            "src::app::commands::schedule"
           ]
         },
         {
           "component": "workitem",
           "impact_radius": 60,
           "sample_dependents": [
-            "src::infra::memory_store",
-            "src::infra::memory_bus",
-            "src::app::config_reload",
-            "src::ports::bus",
-            "src::app::mcp_tools"
+            "src::infra::dto::bus",
+            "src::app::adapters::web::routes::github_webhook",
+            "src::app::message",
+            "src::app::bus_api",
+            "src::app::commands::schedule"
           ]
         }
       ],
