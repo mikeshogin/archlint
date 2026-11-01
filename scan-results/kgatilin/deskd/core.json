@@ -28,13 +28,13 @@
       "threshold": 10,
       "violations": [
         {
-          "node": "src::app",
-          "fan_out": 47,
+          "node": "src::app::commands",
+          "fan_out": 19,
           "threshold": 10
         },
         {
-          "node": "src::app::commands",
-          "fan_out": 19,
+          "node": "src::app::adapters::web::routes",
+          "fan_out": 16,
           "threshold": 10
         },
         {
@@ -43,8 +43,8 @@
           "threshold": 10
         },
         {
-          "node": "src::app::adapters::web::routes",
-          "fan_out": 16,
+          "node": "src::app",
+          "fan_out": 47,
           "threshold": 10
         },
         {
@@ -63,23 +63,9 @@
       "ce_threshold": 10,
       "violations": [
         {
-          "node": "src::app",
-          "afferent_coupling": 57,
-          "efferent_coupling": 47,
-          "ca_threshold": 10,
-          "ce_threshold": 10
-        },
-        {
           "node": "src::app::commands",
           "afferent_coupling": 0,
           "efferent_coupling": 19,
-          "ca_threshold": 10,
-          "ce_threshold": 10
-        },
-        {
-          "node": "src::app::adapters::web",
-          "afferent_coupling": 0,
-          "efferent_coupling": 18,
           "ca_threshold": 10,
           "ce_threshold": 10
         },
@@ -91,16 +77,23 @@
           "ce_threshold": 10
         },
         {
-          "node": "src::config",
-          "afferent_coupling": 34,
-          "efferent_coupling": 3,
+          "node": "src::app::adapters::web",
+          "afferent_coupling": 0,
+          "efferent_coupling": 18,
           "ca_threshold": 10,
           "ce_threshold": 10
         },
         {
-          "node": "src::domain",
-          "afferent_coupling": 30,
-          "efferent_coupling": 8,
+          "node": "src::app",
+          "afferent_coupling": 57,
+          "efferent_coupling": 47,
+          "ca_threshold": 10,
+          "ce_threshold": 10
+        },
+        {
+          "node": "src::config",
+          "afferent_coupling": 34,
+          "efferent_coupling": 3,
           "ca_threshold": 10,
           "ce_threshold": 10
         },
@@ -115,6 +108,13 @@
           "node": "src::infra",
           "afferent_coupling": 16,
           "efferent_coupling": 11,
+          "ca_threshold": 10,
+          "ce_threshold": 10
+        },
+        {
+          "node": "src::domain",
+          "afferent_coupling": 30,
+          "efferent_coupling": 8,
           "ca_threshold": 10,
           "ce_threshold": 10
         },
@@ -134,63 +134,63 @@
       "status": "ERROR",
       "most_unstable": [
         {
-          "node": "src::bin::session2graph",
+          "node": "src::lib",
+          "instability": 1.0,
+          "ca": 0,
+          "ce": 6
+        },
+        {
+          "node": "src::app::commands::sm",
+          "instability": 1.0,
+          "ca": 0,
+          "ce": 4
+        },
+        {
+          "node": "src::app::commands::bus",
+          "instability": 1.0,
+          "ca": 0,
+          "ce": 2
+        },
+        {
+          "node": "src::app::commands::doctor",
           "instability": 1.0,
           "ca": 0,
           "ce": 1
         },
         {
-          "node": "src::app::task",
+          "node": "src::app::commands::tui",
           "instability": 1.0,
           "ca": 0,
           "ce": 1
-        },
-        {
-          "node": "src::app::scope",
-          "instability": 1.0,
-          "ca": 0,
-          "ce": 1
-        },
-        {
-          "node": "src::app::unified_inbox",
-          "instability": 1.0,
-          "ca": 0,
-          "ce": 1
-        },
-        {
-          "node": "src::app::agent",
-          "instability": 1.0,
-          "ca": 0,
-          "ce": 5
         }
       ],
       "most_stable": [
         {
-          "node": "app",
+          "node": "src::__diag_details",
           "instability": 0.0,
           "ca": 1,
           "ce": 0
         },
         {
-          "node": "domain",
+          "node": "src::agent",
           "instability": 0.0,
           "ca": 1,
           "ce": 0
         },
         {
-          "node": "infra",
+          "node": "src::context",
           "instability": 0.0,
           "ca": 1,
           "ce": 0
         },
         {
-          "node": "ports",
+          "node": "config_types",
           "instability": 0.0,
           "ca": 1,
           "ce": 0
         },
         {
-          "node": "test_support",
+          "node": "workitem",
           "instability": 0.0,
           "ca": 1,
           "ce": 0
@@ -334,19 +334,19 @@
       "description": "Компоненты без связей (возможно мертвый код)",
       "status": "WARNING",
       "orphans": [
-        "build",
-        "src::app::cli",
         "src::app::commands::restart",
         "src::app::adapters::web::routes::health",
         "src::app::adapters::web::middleware::headers",
-        "src::domain::message",
+        "src::app::cli",
         "src::ports::executor",
+        "src::domain::message",
+        "build",
         "tests::agent_state_mcp",
         "tests::crash_recovery",
         "tests::agent_lifecycle",
-        "tests::diag_publish",
         "tests::schedule_to_worker",
-        "tests::mcp_channel_subprocess"
+        "tests::mcp_channel_subprocess",
+        "tests::diag_publish"
       ],
       "orphans_count": 13
     },
@@ -365,7 +365,7 @@
       "depth": 3,
       "max_depth": 10,
       "longest_path": [
-        "src::app::bus_api",
+        "src::app::commands::sm",
         "src::config",
         "src::domain",
         "agent"

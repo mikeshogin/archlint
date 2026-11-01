@@ -20,8 +20,8 @@
       "status": "FAILED",
       "cycles": [
         [
-          "src::renderer",
-          "src::listing"
+          "src::listing",
+          "src::renderer"
         ]
       ],
       "cycles_count": 1
@@ -76,19 +76,19 @@
           "ce": 17
         },
         {
-          "node": "tests::paste",
+          "node": "tests::readme",
           "instability": 1.0,
           "ca": 0,
           "ce": 2
         },
         {
-          "node": "tests::archive",
+          "node": "tests::create_directories",
           "instability": 1.0,
           "ca": 0,
           "ce": 2
         },
         {
-          "node": "tests::auth_file",
+          "node": "tests::upload_files",
           "instability": 1.0,
           "ca": 0,
           "ce": 2
@@ -102,15 +102,15 @@
       ],
       "most_stable": [
         {
-          "node": "src::percent_encode_sets",
+          "node": "AuthParseError",
           "instability": 0.0,
           "ca": 1,
           "ce": 0
         },
         {
-          "node": "percent_encode_sets",
+          "node": "RequiredAuthPassword",
           "instability": 0.0,
-          "ca": 1,
+          "ca": 2,
           "ce": 0
         },
         {
@@ -120,13 +120,13 @@
           "ce": 0
         },
         {
-          "node": "utils",
+          "node": "fake_tty",
           "instability": 0.0,
           "ca": 1,
           "ce": 0
         },
         {
-          "node": "fake_tty",
+          "node": "utils",
           "instability": 0.0,
           "ca": 1,
           "ce": 0
@@ -224,8 +224,8 @@
       "total_sccs": 52,
       "problematic_sccs": [
         [
-          "src::renderer",
-          "src::listing"
+          "src::listing",
+          "src::renderer"
         ]
       ],
       "problematic_count": 1

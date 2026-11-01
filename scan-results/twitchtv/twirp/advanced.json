@@ -34,7 +34,7 @@
       "name": "modularity",
       "description": "Модульность графа должна быть >= 0.3",
       "status": "PASSED",
-      "modularity": 0.446,
+      "modularity": 0.45,
       "threshold": 0.3,
       "communities_count": 87
     },
@@ -55,51 +55,6 @@
       "description": "D = |A + I - 1| должен быть близок к 0",
       "status": "WARNING",
       "packages": [
-        {
-          "package": "internal::twirptest::google_protobuf_imports::service",
-          "abstractness": 1.0,
-          "instability": 1.0,
-          "distance": 1.0,
-          "nodes_count": 2,
-          "zone": "uselessness",
-          "issue": "Зона бесполезности: абстрактный и нестабильный"
-        },
-        {
-          "package": "internal::twirptest::importmapping::x::x",
-          "abstractness": 1.0,
-          "instability": 1.0,
-          "distance": 1.0,
-          "nodes_count": 2,
-          "zone": "uselessness",
-          "issue": "Зона бесполезности: абстрактный и нестабильный"
-        },
-        {
-          "package": "internal::twirptest::importmapping::y::y",
-          "abstractness": 1.0,
-          "instability": 1.0,
-          "distance": 1.0,
-          "nodes_count": 1,
-          "zone": "uselessness",
-          "issue": "Зона бесполезности: абстрактный и нестабильный"
-        },
-        {
-          "package": "internal::twirptest::importer::importer",
-          "abstractness": 1.0,
-          "instability": 1.0,
-          "distance": 1.0,
-          "nodes_count": 2,
-          "zone": "uselessness",
-          "issue": "Зона бесполезности: абстрактный и нестабильный"
-        },
-        {
-          "package": "internal::twirptest::no_package_name_importer::no_package_name_importer",
-          "abstractness": 1.0,
-          "instability": 1.0,
-          "distance": 1.0,
-          "nodes_count": 2,
-          "zone": "uselessness",
-          "issue": "Зона бесполезности: абстрактный и нестабильный"
-        },
         {
           "package": "internal::twirptest::importable::importable",
           "abstractness": 1.0,
@@ -128,33 +83,22 @@
           "issue": "Зона бесполезности: абстрактный и нестабильный"
         },
         {
-          "package": "build",
-          "abstractness": 0.0,
-          "instability": 0.0,
+          "package": "internal::twirptest::importer::importer",
+          "abstractness": 1.0,
+          "instability": 1.0,
           "distance": 1.0,
-          "nodes_count": 1,
-          "zone": "pain",
-          "issue": "Зона боли: конкретный и стабильный"
+          "nodes_count": 2,
+          "zone": "uselessness",
+          "issue": "Зона бесполезности: абстрактный и нестабильный"
         },
         {
-          "package": "os",
-          "abstractness": 0.0,
-          "instability": 0.0,
+          "package": "internal::twirptest::no_package_name_importer::no_package_name_importer",
+          "abstractness": 1.0,
+          "instability": 1.0,
           "distance": 1.0,
-          "nodes_count": 1,
-          "zone": "pain",
-          "issue": "Зона боли: конкретный и стабильный"
-        }
-      ],
-      "violations": [
-        {
-          "package": "context",
-          "abstractness": 0.0,
-          "instability": 0.154,
-          "distance": 0.846,
-          "nodes_count": 1,
-          "zone": "pain",
-          "issue": "Зона боли: конкретный и стабильный"
+          "nodes_count": 2,
+          "zone": "uselessness",
+          "issue": "Зона бесполезности: абстрактный и нестабильный"
         },
         {
           "package": "internal::twirptest::google_protobuf_imports::service",
@@ -184,7 +128,63 @@
           "issue": "Зона бесполезности: абстрактный и нестабильный"
         },
         {
+          "package": "http",
+          "abstractness": 0.0,
+          "instability": 0.0,
+          "distance": 1.0,
+          "nodes_count": 1,
+          "zone": "pain",
+          "issue": "Зона боли: конкретный и стабильный"
+        },
+        {
+          "package": "reflect",
+          "abstractness": 0.0,
+          "instability": 0.0,
+          "distance": 1.0,
+          "nodes_count": 1,
+          "zone": "pain",
+          "issue": "Зона боли: конкретный и стабильный"
+        }
+      ],
+      "violations": [
+        {
+          "package": "internal::twirptest::importable::importable",
+          "abstractness": 1.0,
+          "instability": 1.0,
+          "distance": 1.0,
+          "nodes_count": 2,
+          "zone": "uselessness",
+          "issue": "Зона бесполезности: абстрактный и нестабильный"
+        },
+        {
+          "package": "internal::twirptest::importer_local::importer_local_msgdef",
+          "abstractness": 1.0,
+          "instability": 1.0,
+          "distance": 1.0,
+          "nodes_count": 1,
+          "zone": "uselessness",
+          "issue": "Зона бесполезности: абстрактный и нестабильный"
+        },
+        {
+          "package": "internal::twirptest::importer_local::importer_local",
+          "abstractness": 1.0,
+          "instability": 1.0,
+          "distance": 1.0,
+          "nodes_count": 2,
+          "zone": "uselessness",
+          "issue": "Зона бесполезности: абстрактный и нестабильный"
+        },
+        {
           "package": "internal::twirptest::importer::importer",
+          "abstractness": 1.0,
+          "instability": 1.0,
+          "distance": 1.0,
+          "nodes_count": 2,
+          "zone": "uselessness",
+          "issue": "Зона бесполезности: абстрактный и нестабильный"
+        },
+        {
+          "package": "internal::twirptest::no_package_name_importer::no_package_name_importer",
           "abstractness": 1.0,
           "instability": 1.0,
           "distance": 1.0,
@@ -203,44 +203,44 @@
       "threshold": 0.1,
       "low_clustering_nodes": [
         {
-          "node": "vendor_test",
+          "node": "internal::gen::main",
           "coefficient": 0.0
         },
         {
-          "node": "hooks::statsd::statsd_test",
+          "node": "internal::gen::stringutils::stringutils",
           "coefficient": 0.0
         },
         {
-          "node": "hooks::statsd::statsd",
+          "node": "internal::gen::logging",
           "coefficient": 0.0
         },
         {
-          "node": "protoc-gen-twirp::command_line",
+          "node": "internal::gen::typemap::typemap",
           "coefficient": 0.0
         },
         {
-          "node": "protoc-gen-twirp::go_naming_test",
+          "node": "internal::gen::typemap::typemap_test",
           "coefficient": 0.0
         },
         {
-          "node": "protoc-gen-twirp::command_line_test",
+          "node": "internal::gen::wrappers",
           "coefficient": 0.0
         },
         {
-          "node": "protoc-gen-twirp::go_naming",
+          "node": "internal::descriptors::descriptors",
           "coefficient": 0.0
         },
         {
-          "node": "protoc-gen-twirp::generator",
-          "coefficient": 0.013
-        },
-        {
-          "node": "protoc-gen-twirp::generator_test",
+          "node": "internal::twirptest::no_package_name::no_package_name.pb",
           "coefficient": 0.0
         },
         {
-          "node": "protoc-gen-twirp::main",
+          "node": "internal::twirptest::snake_case_names::snake_case_names.pb",
           "coefficient": 0.0
+        },
+        {
+          "node": "internal::twirptest::snake_case_names::compatibility_test",
+          "coefficient": 0.067
         }
       ],
       "low_clustering_count": 233
@@ -260,25 +260,25 @@
       "description": "Критические узлы (удаление разбивает граф)",
       "status": "WARNING",
       "articulation_points": [
-        "internal::gen::typemap::typemap_test",
-        "example::cmd::server::main",
         "internal::twirptest::service_test",
-        "internal::twirptest::importmapping::x::x.pb",
         "internal::twirptest::importer::importer.pb",
         "internal::twirptest::no_package_name_importer::no_package_name_importer.pb",
         "internal::twirptest::google_protobuf_imports::service.pb",
-        "_tools::src::github.com::kisielk::errcheck::internal::errcheck::errcheck",
-        "_tools::src::github.com::kisielk::errcheck::main",
-        "_tools::src::github.com::twitchtv::retool::tooldir",
+        "internal::twirptest::importmapping::x::x.pb",
+        "internal::twirptest::client_test",
+        "_tools::src::google.golang.org::protobuf::internal::encoding::text::decode_string",
+        "pragma",
+        "_tools::src::google.golang.org::protobuf::encoding::prototext::decode",
         "_tools::src::google.golang.org::protobuf::internal::detrand::rand",
         "_tools::src::google.golang.org::protobuf::internal::impl::legacy_export",
-        "_tools::src::google.golang.org::protobuf::cmd::protoc-gen-go::main",
-        "version",
+        "_tools::src::github.com::kisielk::errcheck::main",
+        "_tools::src::github.com::kisielk::errcheck::internal::errcheck::errcheck",
+        "hooks::statsd::statsd_test",
+        "example::cmd::server::main",
+        "_tools::src::golang.org::x::tools::go::loader::loader",
+        "_tools::src::golang.org::x::tools::go::loader::util",
         "_tools::src::google.golang.org::protobuf::runtime::protoimpl::impl",
-        "_tools::src::google.golang.org::protobuf::internal::encoding::text::decode_string",
-        "_tools::src::google.golang.org::protobuf::encoding::prototext::decode",
-        "_tools::src::google.golang.org::protobuf::compiler::protogen::protogen",
-        "pragma",
+        "strconv",
         "protoreflect"
       ],
       "count": 30,
@@ -290,52 +290,12 @@
       "status": "INFO",
       "bridges": [
         {
-          "from": "hooks::statsd::statsd_test",
-          "to": "twirptest"
-        },
-        {
-          "from": "protoc-gen-twirp::generator",
-          "to": "typemap"
-        },
-        {
-          "from": "example::cmd::server::main",
-          "to": "rand"
-        },
-        {
-          "from": "example::cmd::server::main",
-          "to": "statsd"
-        },
-        {
-          "from": "context",
-          "to": "interceptors"
-        },
-        {
           "from": "internal::gen::typemap::typemap_test",
           "to": "assert"
         },
         {
           "from": "internal::gen::typemap::typemap_test",
           "to": "require"
-        },
-        {
-          "from": "internal::twirptest::google_protobuf_imports::service.pb",
-          "to": "emptypb"
-        },
-        {
-          "from": "internal::twirptest::google_protobuf_imports::service.pb",
-          "to": "wrapperspb"
-        },
-        {
-          "from": "internal::twirptest::importmapping::x::x.pb",
-          "to": "y"
-        },
-        {
-          "from": "internal::twirptest::importer::importer.pb",
-          "to": "importable"
-        },
-        {
-          "from": "internal::twirptest::no_package_name_importer::no_package_name_importer.pb",
-          "to": "no_package_name"
         },
         {
           "from": "internal::twirptest::service_test",
@@ -350,24 +310,64 @@
           "to": "descriptors"
         },
         {
+          "from": "internal::twirptest::importer::importer.pb",
+          "to": "importable"
+        },
+        {
           "from": "internal::twirptest::client_test",
           "to": "url"
         },
         {
-          "from": "_tools::src::golang.org::x::tools::go::loader::util",
-          "to": "buildutil"
+          "from": "internal::twirptest::no_package_name_importer::no_package_name_importer.pb",
+          "to": "no_package_name"
         },
         {
-          "from": "_tools::src::golang.org::x::tools::go::loader::loader",
-          "to": "astutil"
+          "from": "internal::twirptest::google_protobuf_imports::service.pb",
+          "to": "emptypb"
         },
         {
-          "from": "_tools::src::golang.org::x::tools::go::loader::loader",
-          "to": "cgo"
+          "from": "internal::twirptest::google_protobuf_imports::service.pb",
+          "to": "wrapperspb"
         },
         {
-          "from": "_tools::src::google.golang.org::protobuf::runtime::protoimpl::impl",
-          "to": "filetype"
+          "from": "internal::twirptest::importmapping::x::x.pb",
+          "to": "y"
+        },
+        {
+          "from": "protoc-gen-twirp::generator",
+          "to": "typemap"
+        },
+        {
+          "from": "hooks::statsd::statsd_test",
+          "to": "twirptest"
+        },
+        {
+          "from": "interceptors",
+          "to": "context"
+        },
+        {
+          "from": "example::cmd::server::main",
+          "to": "rand"
+        },
+        {
+          "from": "example::cmd::server::main",
+          "to": "statsd"
+        },
+        {
+          "from": "_tools::src::google.golang.org::protobuf::internal::impl::legacy_export",
+          "to": "crc32"
+        },
+        {
+          "from": "_tools::src::google.golang.org::protobuf::internal::detrand::rand",
+          "to": "fnv"
+        },
+        {
+          "from": "_tools::src::google.golang.org::protobuf::internal::encoding::text::decode_string",
+          "to": "utf16"
+        },
+        {
+          "from": "_tools::src::google.golang.org::protobuf::internal::genid::field_mask_gen",
+          "to": "protoreflect"
         }
       ],
       "count": 50
@@ -660,110 +660,110 @@
           "component": "fmt",
           "impact_radius": 109,
           "sample_dependents": [
-            "_tools::src::github.com::twitchtv::retool::spec",
-            "protoc-gen-twirp::main",
+            "_tools::src::google.golang.org::protobuf::internal::impl::convert",
+            "server_options",
             "_tools::src::google.golang.org::protobuf::internal::encoding::text::decode_token",
-            "_tools::src::golang.org::x::tools::go::internal::cgo::cgo_pkgconfig",
-            "hooks::statsd::statsd_test"
+            "_tools::src::google.golang.org::protobuf::proto::merge",
+            "_tools::src::github.com::twitchtv::retool::print"
           ]
         },
         {
           "component": "protoreflect",
           "impact_radius": 100,
           "sample_dependents": [
-            "_tools::src::google.golang.org::protobuf::internal::genid::field_mask_gen",
-            "_tools::src::google.golang.org::protobuf::internal::genid::api_gen",
-            "internal::twirptest::service.pb",
-            "_tools::src::google.golang.org::protobuf::proto::size_gen",
-            "internal::twirptest::google_protobuf_imports::service.pb"
+            "_tools::src::google.golang.org::protobuf::proto::encode",
+            "_tools::src::google.golang.org::protobuf::internal::impl::convert",
+            "_tools::src::google.golang.org::protobuf::internal::filedesc::desc_lazy",
+            "internal::twirptest::importmapping::x::x.pb",
+            "internal::twirptest::no_package_name::no_package_name.pb"
           ]
         },
         {
           "component": "strconv",
           "impact_radius": 76,
           "sample_dependents": [
+            "server_options",
             "_tools::src::google.golang.org::protobuf::internal::encoding::text::decode_token",
-            "_tools::src::golang.org::x::tools::go::internal::cgo::cgo_pkgconfig",
-            "hooks::statsd::statsd_test",
-            "_tools::src::google.golang.org::protobuf::proto::checkinit",
-            "_tools::src::github.com::twitchtv::retool::tooldir"
+            "_tools::src::github.com::twitchtv::retool::print",
+            "clientcompat::run",
+            "_tools::src::google.golang.org::protobuf::cmd::protoc-gen-go::main"
           ]
         },
         {
           "component": "json",
           "impact_radius": 66,
           "sample_dependents": [
-            "_tools::src::github.com::twitchtv::retool::spec",
-            "_tools::src::golang.org::x::tools::go::internal::cgo::cgo_pkgconfig",
-            "hooks::statsd::statsd_test",
-            "_tools::src::google.golang.org::protobuf::proto::checkinit",
-            "_tools::src::github.com::twitchtv::retool::tooldir"
+            "server_options",
+            "_tools::src::github.com::twitchtv::retool::print",
+            "clientcompat::run",
+            "_tools::src::google.golang.org::protobuf::cmd::protoc-gen-go::main",
+            "example::cmd::client::main"
           ]
         },
         {
           "component": "http",
           "impact_radius": 64,
           "sample_dependents": [
-            "_tools::src::golang.org::x::tools::go::internal::cgo::cgo_pkgconfig",
-            "hooks::statsd::statsd_test",
-            "_tools::src::google.golang.org::protobuf::proto::checkinit",
-            "_tools::src::github.com::twitchtv::retool::tooldir",
-            "_tools::src::google.golang.org::protobuf::reflect::protodesc::desc"
+            "server_options",
+            "_tools::src::github.com::twitchtv::retool::print",
+            "clientcompat::run",
+            "example::cmd::client::main",
+            "_tools::src::google.golang.org::protobuf::cmd::protoc-gen-go::main"
           ]
         },
         {
           "component": "errors",
           "impact_radius": 63,
           "sample_dependents": [
-            "_tools::src::google.golang.org::protobuf::internal::filedesc::desc_list",
+            "server_options",
+            "clientcompat::clientcompat",
+            "_tools::src::google.golang.org::protobuf::encoding::prototext::encode",
             "internal::twirptest::json_serialization::json_serialization_test",
-            "_tools::src::google.golang.org::protobuf::internal::encoding::text::encode",
-            "_tools::src::golang.org::x::tools::go::internal::cgo::cgo_pkgconfig",
-            "_tools::src::github.com::twitchtv::retool::tool"
+            "_tools::src::google.golang.org::protobuf::encoding::protowire::wire"
           ]
         },
         {
           "component": "reflect",
           "impact_radius": 55,
           "sample_dependents": [
-            "_tools::src::google.golang.org::protobuf::internal::impl::pointer_unsafe",
-            "_tools::src::google.golang.org::protobuf::types::pluginpb::plugin.pb",
-            "_tools::src::golang.org::x::tools::go::ast::astutil::rewrite",
-            "internal::twirptest::service.pb",
-            "internal::twirptest::google_protobuf_imports::service.pb"
+            "internal::twirptest::importable::importable.pb",
+            "_tools::src::google.golang.org::protobuf::internal::impl::convert",
+            "_tools::src::google.golang.org::protobuf::internal::filedesc::desc_lazy",
+            "server_options",
+            "internal::twirptest::importmapping::x::x.pb"
           ]
         },
         {
           "component": "strings",
           "impact_radius": 47,
           "sample_dependents": [
-            "_tools::src::google.golang.org::protobuf::internal::encoding::text::encode",
             "_tools::src::google.golang.org::protobuf::internal::encoding::text::decode_token",
-            "_tools::src::golang.org::x::tools::go::internal::cgo::cgo_pkgconfig",
-            "_tools::src::github.com::twitchtv::retool::tool",
-            "_tools::src::github.com::twitchtv::retool::tooldir"
+            "_tools::src::golang.org::x::tools::go::buildutil::allpackages",
+            "_tools::src::google.golang.org::protobuf::internal::strs::strings",
+            "_tools::src::github.com::twitchtv::retool::clean",
+            "_tools::src::github.com::kisielk::gotool::match18"
           ]
         },
         {
           "component": "sync",
           "impact_radius": 37,
           "sample_dependents": [
-            "_tools::src::google.golang.org::protobuf::internal::filedesc::desc_list",
-            "_tools::src::google.golang.org::protobuf::types::pluginpb::plugin.pb",
-            "_tools::src::golang.org::x::tools::go::loader::util",
-            "internal::twirptest::service.pb",
-            "internal::twirptest::multiple::multiple2.pb"
+            "internal::twirptest::importable::importable.pb",
+            "_tools::src::google.golang.org::protobuf::internal::filedesc::desc_lazy",
+            "internal::twirptest::no_package_name::no_package_name.pb",
+            "_tools::src::golang.org::x::tools::go::buildutil::allpackages",
+            "_tools::src::google.golang.org::protobuf::types::descriptorpb::descriptor.pb"
           ]
         },
         {
           "component": "os",
           "impact_radius": 34,
           "sample_dependents": [
-            "_tools::src::github.com::twitchtv::retool::spec",
-            "protoc-gen-twirp::main",
-            "internal::gen::typemap::typemap_test",
-            "_tools::src::golang.org::x::tools::go::loader::util",
-            "_tools::src::github.com::twitchtv::retool::tool"
+            "_tools::src::golang.org::x::tools::go::buildutil::allpackages",
+            "_tools::src::github.com::twitchtv::retool::clean",
+            "_tools::src::github.com::kisielk::gotool::match18",
+            "_tools::src::github.com::twitchtv::retool::print",
+            "_tools::src::golang.org::x::tools::go::internal::cgo::cgo"
           ]
         }
       ],
@@ -861,16 +861,16 @@
       "description": "Отсутствие использования deprecated компонентов",
       "status": "PASSED",
       "deprecated_components": [
-        "_tools::src::google.golang.org::protobuf::internal::flags::proto_legacy_enable",
-        "_tools::src::google.golang.org::protobuf::internal::impl::legacy_file",
-        "_tools::src::google.golang.org::protobuf::runtime::protoiface::legacy",
-        "_tools::src::github.com::twitchtv::retool::tooldir",
-        "_tools::src::google.golang.org::protobuf::internal::impl::legacy_export",
-        "_tools::src::google.golang.org::protobuf::internal::impl::legacy_extension",
         "_tools::src::google.golang.org::protobuf::internal::impl::legacy_enum",
-        "_tools::src::google.golang.org::protobuf::internal::impl::legacy_message",
+        "_tools::src::google.golang.org::protobuf::internal::filedesc::placeholder",
         "_tools::src::google.golang.org::protobuf::internal::flags::proto_legacy_disable",
-        "_tools::src::google.golang.org::protobuf::internal::filedesc::placeholder"
+        "_tools::src::google.golang.org::protobuf::internal::impl::legacy_message",
+        "_tools::src::google.golang.org::protobuf::internal::flags::proto_legacy_enable",
+        "_tools::src::github.com::twitchtv::retool::tooldir",
+        "_tools::src::google.golang.org::protobuf::runtime::protoiface::legacy",
+        "_tools::src::google.golang.org::protobuf::internal::impl::legacy_file",
+        "_tools::src::google.golang.org::protobuf::internal::impl::legacy_export",
+        "_tools::src::google.golang.org::protobuf::internal::impl::legacy_extension"
       ],
       "deprecated_count": 10,
       "violations": [],

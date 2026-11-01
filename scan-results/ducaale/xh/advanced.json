@@ -39,9 +39,9 @@
       "name": "modularity",
       "description": "Модульность графа должна быть >= 0.3",
       "status": "PASSED",
-      "modularity": 0.53,
+      "modularity": 0.528,
       "threshold": 0.3,
-      "communities_count": 12
+      "communities_count": 11
     },
     {
       "name": "abstractness",
@@ -61,15 +61,6 @@
       "status": "WARNING",
       "packages": [
         {
-          "package": "src::middleware",
-          "abstractness": 0.0,
-          "instability": 0.0,
-          "distance": 1.0,
-          "nodes_count": 1,
-          "zone": "pain",
-          "issue": "Зона боли: конкретный и стабильный"
-        },
-        {
           "package": "src::redacted",
           "abstractness": 0.0,
           "instability": 0.0,
@@ -79,7 +70,7 @@
           "issue": "Зона боли: конкретный и стабильный"
         },
         {
-          "package": "imp",
+          "package": "src::middleware",
           "abstractness": 0.0,
           "instability": 0.0,
           "distance": 1.0,
@@ -115,25 +106,16 @@
           "issue": "Зона боли: конкретный и стабильный"
         },
         {
+          "package": "imp",
+          "abstractness": 0.0,
+          "instability": 0.0,
+          "distance": 1.0,
+          "nodes_count": 1,
+          "zone": "pain",
+          "issue": "Зона боли: конкретный и стабильный"
+        },
+        {
           "package": "RequestItem",
-          "abstractness": 0.0,
-          "instability": 0.0,
-          "distance": 1.0,
-          "nodes_count": 1,
-          "zone": "pain",
-          "issue": "Зона боли: конкретный и стабильный"
-        },
-        {
-          "package": "PathAction",
-          "abstractness": 0.0,
-          "instability": 0.0,
-          "distance": 1.0,
-          "nodes_count": 1,
-          "zone": "pain",
-          "issue": "Зона боли: конкретный и стабильный"
-        },
-        {
-          "package": "Token",
           "abstractness": 0.0,
           "instability": 0.0,
           "distance": 1.0,
@@ -149,11 +131,9 @@
           "nodes_count": 1,
           "zone": "pain",
           "issue": "Зона боли: конкретный и стабильный"
-        }
-      ],
-      "violations": [
+        },
         {
-          "package": "src::middleware",
+          "package": "buffer",
           "abstractness": 0.0,
           "instability": 0.0,
           "distance": 1.0,
@@ -162,7 +142,27 @@
           "issue": "Зона боли: конкретный и стабильный"
         },
         {
+          "package": "cli",
+          "abstractness": 0.0,
+          "instability": 0.0,
+          "distance": 1.0,
+          "nodes_count": 1,
+          "zone": "pain",
+          "issue": "Зона боли: конкретный и стабильный"
+        }
+      ],
+      "violations": [
+        {
           "package": "src::redacted",
+          "abstractness": 0.0,
+          "instability": 0.0,
+          "distance": 1.0,
+          "nodes_count": 1,
+          "zone": "pain",
+          "issue": "Зона боли: конкретный и стабильный"
+        },
+        {
+          "package": "src::middleware",
           "abstractness": 0.0,
           "instability": 0.0,
           "distance": 1.0,
@@ -187,7 +187,7 @@
           "nodes_count": 1
         },
         {
-          "package": "imp",
+          "package": "headers",
           "abstractness": 0.0,
           "instability": 0.0,
           "distance": 1.0,
@@ -250,17 +250,17 @@
       "description": "Критические узлы (удаление разбивает граф)",
       "status": "WARNING",
       "articulation_points": [
+        "src::formatting::palette",
+        "tests",
+        "src::nested_json",
+        "src::request_items",
         "src::main",
         "tests::cases",
         "download",
-        "src::nested_json",
-        "src::request_items",
-        "src::cli",
-        "src::formatting",
-        "src::formatting::palette",
-        "src::printer",
-        "tests",
         "src::buffer",
+        "src::cli",
+        "src::printer",
+        "src::formatting",
         "tests::prelude",
         "tests::cli"
       ],
@@ -272,14 +272,6 @@
       "description": "Критические рёбра (удаление разбивает граф)",
       "status": "INFO",
       "bridges": [
-        {
-          "from": "src::buffer",
-          "to": "imp"
-        },
-        {
-          "from": "src::printer",
-          "to": "src::formatting"
-        },
         {
           "from": "src::formatting",
           "to": "headers"
@@ -293,20 +285,28 @@
           "to": "src::formatting::palette"
         },
         {
+          "from": "src::formatting",
+          "to": "src::printer"
+        },
+        {
           "from": "src::formatting::palette",
           "to": "util"
         },
         {
+          "from": "src::message_signature",
+          "to": "tests"
+        },
+        {
+          "from": "src::buffer",
+          "to": "imp"
+        },
+        {
+          "from": "src::redacted",
+          "to": "src::cli"
+        },
+        {
           "from": "src::request_items",
           "to": "RequestItem"
-        },
-        {
-          "from": "src::nested_json",
-          "to": "PathAction"
-        },
-        {
-          "from": "src::nested_json",
-          "to": "Token"
         },
         {
           "from": "src::main",
@@ -405,11 +405,11 @@
           "closeness": 0.048
         },
         {
-          "node": "src::nested_json",
+          "node": "src::middleware",
           "closeness": 0.046
         },
         {
-          "node": "src::middleware",
+          "node": "src::nested_json",
           "closeness": 0.046
         },
         {
@@ -482,11 +482,11 @@
       "threshold": 4,
       "large_cliques": [
         [
-          "src::to_curl",
-          "src::request_items",
-          "src::cli",
           "tests",
-          "src::utils"
+          "src::utils",
+          "src::cli",
+          "src::request_items",
+          "src::to_curl"
         ]
       ],
       "large_cliques_count": 1,

@@ -88,7 +88,7 @@
           "issue": "Зона бесполезности: абстрактный и нестабильный"
         },
         {
-          "package": "src::agent_process",
+          "package": "app",
           "abstractness": 0.0,
           "instability": 0.0,
           "distance": 1.0,
@@ -97,7 +97,7 @@
           "issue": "Зона боли: конкретный и стабильный"
         },
         {
-          "package": "src::agent_registry",
+          "package": "config",
           "abstractness": 0.0,
           "instability": 0.0,
           "distance": 1.0,
@@ -106,7 +106,7 @@
           "issue": "Зона боли: конкретный и стабильный"
         },
         {
-          "package": "src::process_builder",
+          "package": "domain",
           "abstractness": 0.0,
           "instability": 0.0,
           "distance": 1.0,
@@ -115,7 +115,7 @@
           "issue": "Зона боли: конкретный и стабильный"
         },
         {
-          "package": "a2a",
+          "package": "infra",
           "abstractness": 0.0,
           "instability": 0.0,
           "distance": 1.0,
@@ -124,7 +124,7 @@
           "issue": "Зона боли: конкретный и стабильный"
         },
         {
-          "package": "a2a_jwt",
+          "package": "src::truncate",
           "abstractness": 0.0,
           "instability": 0.0,
           "distance": 1.0,
@@ -133,7 +133,7 @@
           "issue": "Зона боли: конкретный и стабильный"
         },
         {
-          "package": "a2a_server",
+          "package": "src::tasklog",
           "abstractness": 0.0,
           "instability": 0.0,
           "distance": 1.0,
@@ -142,7 +142,7 @@
           "issue": "Зона боли: конкретный и стабильный"
         },
         {
-          "package": "acp",
+          "package": "src::dashboard",
           "abstractness": 0.0,
           "instability": 0.0,
           "distance": 1.0,
@@ -169,13 +169,6 @@
           "issue": "Зона боли: конкретный и стабильный"
         },
         {
-          "package": "src::domain",
-          "abstractness": 0.0,
-          "instability": 0.211,
-          "distance": 0.789,
-          "nodes_count": 1
-        },
-        {
           "package": "src::ports::bus",
           "abstractness": 1.0,
           "instability": 1.0,
@@ -186,6 +179,15 @@
         },
         {
           "package": "src::ports::bus_wire",
+          "abstractness": 1.0,
+          "instability": 1.0,
+          "distance": 1.0,
+          "nodes_count": 1,
+          "zone": "uselessness",
+          "issue": "Зона бесполезности: абстрактный и нестабильный"
+        },
+        {
+          "package": "src::ports::store",
           "abstractness": 1.0,
           "instability": 1.0,
           "distance": 1.0,
@@ -204,43 +206,43 @@
       "threshold": 0.1,
       "low_clustering_nodes": [
         {
-          "node": "src::app::agent",
+          "node": "src::lib",
           "coefficient": 0.0
         },
         {
-          "node": "src::app::context",
+          "node": "src::app::commands::sm",
           "coefficient": 0.0
         },
         {
-          "node": "src::app::a2a_server",
+          "node": "src::app::commands::bus",
           "coefficient": 0.0
         },
         {
-          "node": "src::app::context_size",
+          "node": "src::app::commands::a2a",
           "coefficient": 0.0
         },
         {
-          "node": "src::app::worker",
+          "node": "src::app::commands::usage",
           "coefficient": 0.0
         },
         {
-          "node": "src::app::bus",
+          "node": "src::app::commands::schedule",
           "coefficient": 0.0
         },
         {
-          "node": "src::app",
+          "node": "src::app::commands::remind",
           "coefficient": 0.0
         },
         {
-          "node": "src::app::session_discover",
+          "node": "src::app::commands::task",
           "coefficient": 0.0
         },
         {
-          "node": "src::app::agent_process",
+          "node": "src::app::commands",
           "coefficient": 0.0
         },
         {
-          "node": "src::app::timeout_sweep",
+          "node": "src::app::commands::session",
           "coefficient": 0.0
         }
       ],
@@ -261,26 +263,26 @@
       "description": "Критические узлы (удаление разбивает граф)",
       "status": "WARNING",
       "articulation_points": [
-        "tests",
-        "src::app::agent",
-        "src::infra",
-        "src::app::transcript_extractor",
-        "src::app::mcp_service",
-        "src::app::commands::remind",
         "src::config",
-        "src::app::adapters::telegram",
-        "src::app::adapters",
-        "src::app::adapters::web",
-        "src::app::adapters::web::routes",
+        "src::app::commands::usage",
+        "src::infra",
+        "src::app::adapters::federation::peer",
+        "src::app::adapters::federation::hub",
+        "src::app::mcp_service",
+        "src::app::process_builder",
+        "src::app::agent",
+        "src::app::agent_process",
+        "src::ports",
+        "src::infra::diag",
+        "src::app::transcript_extractor",
+        "src::domain",
         "src::app::adapters::web::view",
-        "src::lib",
-        "config",
-        "src::infra::dto",
-        "src::app::commands",
-        "src::app::adapters::web::auth",
-        "session",
+        "src::app::adapters::web::routes",
+        "src::app::adapters::web",
         "src::app::adapters::web::routes::github_webhook",
-        "src::app::adapters::web::state"
+        "tests",
+        "src::app::adapters::web::view::detail",
+        "src::app::adapters::telegram"
       ],
       "count": 38,
       "recommendation": "Уменьшить зависимость от критических узлов"
@@ -291,84 +293,84 @@
       "status": "INFO",
       "bridges": [
         {
-          "from": "src::bin::session2graph",
-          "to": "tests"
+          "from": "src::lib",
+          "to": "app"
         },
         {
-          "from": "src::app::task",
-          "to": "src::infra"
+          "from": "src::lib",
+          "to": "config"
         },
         {
-          "from": "src::app::scope",
-          "to": "tests"
+          "from": "src::lib",
+          "to": "domain"
         },
         {
-          "from": "src::app::unified_inbox",
-          "to": "tests"
+          "from": "src::lib",
+          "to": "infra"
         },
         {
-          "from": "src::app::agent",
-          "to": "src::agent_process"
+          "from": "src::lib",
+          "to": "ports"
         },
         {
-          "from": "src::app::config_watcher",
-          "to": "tests"
+          "from": "src::lib",
+          "to": "test_support"
         },
         {
-          "from": "src::app::reload_state",
-          "to": "tests"
+          "from": "src::app::commands::doctor",
+          "to": "src::app"
         },
         {
-          "from": "src::app::tasklog",
-          "to": "tests"
+          "from": "src::app::commands::tui",
+          "to": "src::config"
         },
         {
-          "from": "src::app::message",
-          "to": "src::domain"
+          "from": "src::app::commands::usage",
+          "to": "src::tasklog"
         },
         {
-          "from": "src::app::config_remotes",
-          "to": "tests"
+          "from": "src::app::commands::status",
+          "to": "src::dashboard"
         },
         {
-          "from": "src::app::graph",
-          "to": "tests"
+          "from": "src::app::commands::remind",
+          "to": "src::config"
         },
         {
-          "from": "src::app",
-          "to": "a2a_jwt"
+          "from": "src::app::commands::remind",
+          "to": "src::parse_duration_secs"
         },
         {
-          "from": "src::app",
-          "to": "a2a_server"
+          "from": "src::app::commands::context",
+          "to": "src::app"
         },
         {
-          "from": "src::app",
-          "to": "acp"
+          "from": "src::app::commands::upgrade",
+          "to": "src::restart"
         },
         {
-          "from": "src::app",
-          "to": "adapters"
+          "from": "src::app::commands",
+          "to": "reload"
         },
         {
-          "from": "src::app",
-          "to": "agent_components"
+          "from": "src::app::commands",
+          "to": "remind"
         },
         {
-          "from": "src::app",
-          "to": "agent_process"
+          "from": "src::app::commands",
+          "to": "restart"
         },
         {
-          "from": "src::app",
-          "to": "agent_provisioning"
+          "from": "src::app::commands",
+          "to": "session"
         },
         {
-          "from": "src::app",
-          "to": "agent_registry"
+          "from": "src::app::commands",
+          "to": "sm"
         },
         {
-          "from": "src::app",
-          "to": "agent_state"
+          "from": "src::app::commands",
+          "to": "status"
         }
       ],
       "count": 220
@@ -629,110 +631,110 @@
           "component": "tests",
           "impact_radius": 124,
           "sample_dependents": [
-            "src::app::adapters::web::routes::github_webhook",
-            "src::app::bus_api",
-            "src::app::adapters::web::view::task",
-            "src::app::commands::schedule",
-            "src::app::schedule"
+            "src::app::context",
+            "src::app::adapters::web::routes::agent_detail",
+            "src::domain::agent",
+            "src::app::adapters::web::view::log",
+            "src::app::adapters::telegram"
           ]
         },
         {
           "component": "task",
           "impact_radius": 95,
           "sample_dependents": [
-            "src::app::adapters::web::routes::dashboard",
-            "src::app::adapters::web::routes::github_webhook",
-            "src::app::message",
-            "src::app::bus_api",
-            "src::app::adapters::web::view::task"
+            "src::app::context",
+            "src::app::adapters::web::routes::agent_detail",
+            "src::app::adapters::web::view::log",
+            "src::app::agent_process",
+            "src::app::adapters::telegram"
           ]
         },
         {
           "component": "context",
           "impact_radius": 94,
           "sample_dependents": [
-            "src::app::adapters::web::routes::dashboard",
-            "src::app::adapters::web::routes::github_webhook",
-            "src::app::message",
-            "src::app::bus_api",
-            "src::app::adapters::web::view::task"
+            "src::app::context",
+            "src::app::adapters::web::routes::agent_detail",
+            "src::app::adapters::web::view::log",
+            "src::app::agent_process",
+            "src::app::adapters::telegram"
           ]
         },
         {
           "component": "agent",
           "impact_radius": 93,
           "sample_dependents": [
-            "src::app::adapters::web::routes::dashboard",
-            "src::app::adapters::web::routes::github_webhook",
-            "src::app::message",
-            "src::app::bus_api",
-            "src::app::adapters::web::view::task"
+            "src::app::context",
+            "src::app::adapters::web::routes::agent_detail",
+            "src::app::adapters::web::view::log",
+            "src::app::agent_process",
+            "src::app::adapters::telegram"
           ]
         },
         {
           "component": "message",
           "impact_radius": 92,
           "sample_dependents": [
-            "src::app::adapters::web::routes::dashboard",
-            "src::app::adapters::web::routes::github_webhook",
-            "src::app::message",
-            "src::app::bus_api",
-            "src::app::adapters::web::view::task"
+            "src::app::context",
+            "src::app::adapters::web::routes::agent_detail",
+            "src::app::adapters::web::view::log",
+            "src::app::agent_process",
+            "src::app::adapters::telegram"
           ]
         },
         {
           "component": "statemachine",
           "impact_radius": 92,
           "sample_dependents": [
-            "src::app::adapters::web::routes::dashboard",
-            "src::app::adapters::web::routes::github_webhook",
-            "src::app::message",
-            "src::app::bus_api",
-            "src::app::adapters::web::view::task"
+            "src::app::context",
+            "src::app::adapters::web::routes::agent_detail",
+            "src::app::adapters::web::view::log",
+            "src::app::agent_process",
+            "src::app::adapters::telegram"
           ]
         },
         {
           "component": "bus",
           "impact_radius": 74,
           "sample_dependents": [
-            "src::app::adapters::web::routes::dashboard",
-            "src::app::bus_api",
-            "src::app::adapters::web::view::task",
-            "src::app::commands::schedule",
-            "src::app::schedule"
+            "src::app::context",
+            "src::app::adapters::web::routes::agent_detail",
+            "src::app::adapters::web::view::log",
+            "src::app::agent_process",
+            "src::app::adapters::telegram"
           ]
         },
         {
           "component": "events",
           "impact_radius": 61,
           "sample_dependents": [
-            "src::infra::dto::bus",
-            "src::app::adapters::web::routes::github_webhook",
-            "src::app::message",
-            "src::app::bus_api",
-            "src::app::commands::schedule"
+            "src::app::context",
+            "src::app::config_changeset",
+            "src::app::mcp",
+            "src::app::commands::a2a",
+            "src::app::worker"
           ]
         },
         {
           "component": "config_types",
           "impact_radius": 60,
           "sample_dependents": [
-            "src::infra::dto::bus",
-            "src::app::adapters::web::routes::github_webhook",
-            "src::app::message",
-            "src::app::bus_api",
-            "src::app::commands::schedule"
+            "src::app::context",
+            "src::app::config_changeset",
+            "src::app::mcp",
+            "src::app::commands::a2a",
+            "src::app::worker"
           ]
         },
         {
           "component": "workitem",
           "impact_radius": 60,
           "sample_dependents": [
-            "src::infra::dto::bus",
-            "src::app::adapters::web::routes::github_webhook",
-            "src::app::message",
-            "src::app::bus_api",
-            "src::app::commands::schedule"
+            "src::app::context",
+            "src::app::config_changeset",
+            "src::app::mcp",
+            "src::app::commands::a2a",
+            "src::app::worker"
           ]
         }
       ],

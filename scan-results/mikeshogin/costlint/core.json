@@ -50,6 +50,12 @@
           "ce": 10
         },
         {
+          "node": "pkg::daily::daily",
+          "instability": 1.0,
+          "ca": 0,
+          "ce": 1
+        },
+        {
           "node": "pkg::reporter::reporter",
           "instability": 1.0,
           "ca": 0,
@@ -57,12 +63,6 @@
         },
         {
           "node": "pkg::feature::feature",
-          "instability": 1.0,
-          "ca": 0,
-          "ce": 1
-        },
-        {
-          "node": "pkg::daily::daily",
           "instability": 1.0,
           "ca": 0,
           "ce": 1
@@ -174,13 +174,13 @@
       "description": "Компоненты без связей (возможно мертвый код)",
       "status": "WARNING",
       "orphans": [
-        "pkg::pricing::pricing",
         "pkg::pricing::subscription",
-        "pkg::telemetry::telemetry",
+        "pkg::pricing::pricing",
+        "pkg::cache::cache",
         "pkg::perf::perf",
-        "pkg::counter::counter",
+        "pkg::telemetry::telemetry",
         "pkg::counter::tiktoken",
-        "pkg::cache::cache"
+        "pkg::counter::counter"
       ],
       "orphans_count": 7
     },

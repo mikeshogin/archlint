@@ -65,7 +65,42 @@
           "issue": "Зона боли: конкретный и стабильный"
         },
         {
-          "package": "pkg::validator::validator",
+          "package": "pkg::template::template_test",
+          "abstractness": 0.0,
+          "instability": 0.5,
+          "distance": 0.5,
+          "nodes_count": 1
+        },
+        {
+          "package": "pkg::template::template",
+          "abstractness": 0.0,
+          "instability": 0.5,
+          "distance": 0.5,
+          "nodes_count": 1
+        },
+        {
+          "package": "pkg::trend::trend_test",
+          "abstractness": 0.0,
+          "instability": 0.5,
+          "distance": 0.5,
+          "nodes_count": 1
+        },
+        {
+          "package": "pkg::trend::trend",
+          "abstractness": 0.0,
+          "instability": 0.5,
+          "distance": 0.5,
+          "nodes_count": 1
+        },
+        {
+          "package": "pkg::config::config",
+          "abstractness": 0.0,
+          "instability": 0.5,
+          "distance": 0.5,
+          "nodes_count": 1
+        },
+        {
+          "package": "pkg::analyzer::analyzer_test",
           "abstractness": 0.0,
           "instability": 0.5,
           "distance": 0.5,
@@ -87,41 +122,6 @@
         },
         {
           "package": "pkg::metrics::domain",
-          "abstractness": 0.0,
-          "instability": 0.5,
-          "distance": 0.5,
-          "nodes_count": 1
-        },
-        {
-          "package": "pkg::analyzer::analyzer_test",
-          "abstractness": 0.0,
-          "instability": 0.5,
-          "distance": 0.5,
-          "nodes_count": 1
-        },
-        {
-          "package": "pkg::trend::trend",
-          "abstractness": 0.0,
-          "instability": 0.5,
-          "distance": 0.5,
-          "nodes_count": 1
-        },
-        {
-          "package": "pkg::trend::trend_test",
-          "abstractness": 0.0,
-          "instability": 0.5,
-          "distance": 0.5,
-          "nodes_count": 1
-        },
-        {
-          "package": "pkg::template::template_test",
-          "abstractness": 0.0,
-          "instability": 0.5,
-          "distance": 0.5,
-          "nodes_count": 1
-        },
-        {
-          "package": "pkg::template::template",
           "abstractness": 0.0,
           "instability": 0.5,
           "distance": 0.5,
@@ -153,11 +153,11 @@
           "coefficient": 0.0
         },
         {
-          "node": "pkg::perf::perf",
+          "node": "pkg::abtest::abtest",
           "coefficient": 0.0
         },
         {
-          "node": "pkg::analyzer::analyzer",
+          "node": "pkg::server::server",
           "coefficient": 0.0
         },
         {
@@ -165,11 +165,11 @@
           "coefficient": 0.0
         },
         {
-          "node": "pkg::abtest::abtest",
+          "node": "pkg::analyzer::analyzer",
           "coefficient": 0.0
         },
         {
-          "node": "pkg::server::server",
+          "node": "pkg::perf::perf",
           "coefficient": 0.0
         },
         {
@@ -205,9 +205,9 @@
       "description": "Критические узлы (удаление разбивает граф)",
       "status": "WARNING",
       "articulation_points": [
-        "pkg/analyzer",
-        "pkg::analyzer::analyzer",
         "pkg/metrics",
+        "pkg::analyzer::analyzer",
+        "pkg/analyzer",
         "cmd::promptlint::main"
       ],
       "count": 4,
@@ -239,20 +239,20 @@
           "to": "pkg/trend"
         },
         {
-          "from": "pkg::telemetry::telemetry",
-          "to": "pkg/analyzer"
-        },
-        {
           "from": "pkg::analyzer::analyzer",
           "to": "pkg/score"
         },
         {
-          "from": "pkg::score::score",
-          "to": "pkg/metrics"
-        },
-        {
           "from": "pkg::middleware::middleware",
           "to": "pkg/analyzer"
+        },
+        {
+          "from": "pkg::telemetry::telemetry",
+          "to": "pkg/analyzer"
+        },
+        {
+          "from": "pkg::score::score",
+          "to": "pkg/metrics"
         }
       ],
       "count": 9

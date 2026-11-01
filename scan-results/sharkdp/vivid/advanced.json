@@ -70,6 +70,15 @@
           "issue": "Зона боли: конкретный и стабильный"
         },
         {
+          "package": "src::font_style",
+          "abstractness": 0.0,
+          "instability": 0.0,
+          "distance": 1.0,
+          "nodes_count": 1,
+          "zone": "pain",
+          "issue": "Зона боли: конкретный и стабильный"
+        },
+        {
           "package": "src::error",
           "abstractness": 0.0,
           "instability": 0.0,
@@ -79,7 +88,7 @@
           "issue": "Зона боли: конкретный и стабильный"
         },
         {
-          "package": "src::font_style",
+          "package": "src::Theme",
           "abstractness": 0.0,
           "instability": 0.0,
           "distance": 1.0,
@@ -140,20 +149,27 @@
           "nodes_count": 1,
           "zone": "pain",
           "issue": "Зона боли: конкретный и стабильный"
-        },
+        }
+      ],
+      "violations": [
         {
-          "package": "util",
+          "package": "src::types",
           "abstractness": 0.0,
           "instability": 0.0,
           "distance": 1.0,
           "nodes_count": 1,
           "zone": "pain",
           "issue": "Зона боли: конкретный и стабильный"
-        }
-      ],
-      "violations": [
+        },
         {
-          "package": "src::types",
+          "package": "src::util",
+          "abstractness": 0.0,
+          "instability": 0.333,
+          "distance": 0.667,
+          "nodes_count": 1
+        },
+        {
+          "package": "src::font_style",
           "abstractness": 0.0,
           "instability": 0.0,
           "distance": 1.0,
@@ -171,23 +187,7 @@
           "issue": "Зона боли: конкретный и стабильный"
         },
         {
-          "package": "src::font_style",
-          "abstractness": 0.0,
-          "instability": 0.0,
-          "distance": 1.0,
-          "nodes_count": 1,
-          "zone": "pain",
-          "issue": "Зона боли: конкретный и стабильный"
-        },
-        {
-          "package": "src::util",
-          "abstractness": 0.0,
-          "instability": 0.333,
-          "distance": 0.667,
-          "nodes_count": 1
-        },
-        {
-          "package": "color",
+          "package": "src::Theme",
           "abstractness": 0.0,
           "instability": 0.0,
           "distance": 1.0,
@@ -230,9 +230,9 @@
       "description": "Критические узлы (удаление разбивает граф)",
       "status": "WARNING",
       "articulation_points": [
+        "src::theme",
         "src::main",
-        "src::filetypes",
-        "src::theme"
+        "src::filetypes"
       ],
       "count": 3,
       "recommendation": "Уменьшить зависимость от критических узлов"
@@ -242,6 +242,14 @@
       "description": "Критические рёбра (удаление разбивает граф)",
       "status": "INFO",
       "bridges": [
+        {
+          "from": "src::theme",
+          "to": "src::font_style"
+        },
+        {
+          "from": "src::theme",
+          "to": "src::Theme"
+        },
         {
           "from": "src::main",
           "to": "color"
@@ -269,14 +277,6 @@
         {
           "from": "src::main",
           "to": "util"
-        },
-        {
-          "from": "src::font_style",
-          "to": "src::theme"
-        },
-        {
-          "from": "src::theme",
-          "to": "src::Theme"
         },
         {
           "from": "src::filetypes",
