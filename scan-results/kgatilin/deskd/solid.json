@@ -24,150 +24,150 @@
           "package": "src::app",
           "domains_count": 47,
           "domains": [
-            "mcp_protocol",
-            "metrics",
-            "bus_api",
-            "agent_provisioning",
-            "cli",
-            "context",
-            "context_log",
-            "mcp_tools",
-            "message",
-            "agent_state"
+            "mcp",
+            "jsonrpc",
+            "adapters",
+            "a2a_jwt",
+            "config_watcher",
+            "worker",
+            "mcp_service",
+            "commands",
+            "bus",
+            "context_log"
           ]
         },
         {
           "package": "src::app::commands",
           "domains_count": 19,
           "domains": [
-            "context",
-            "status",
-            "usage",
-            "reload",
-            "agent",
-            "bus",
             "upgrade",
-            "schedule",
-            "tui",
-            "dashboard"
+            "remind",
+            "dashboard",
+            "status",
+            "sm",
+            "tests",
+            "bus",
+            "a2a",
+            "task",
+            "session"
           ]
         },
         {
           "package": "src::app::adapters::web",
           "domains_count": 18,
           "domains": [
-            "templates",
+            "panel",
             "auth",
-            "audit",
-            "data_log",
-            "dispatch",
-            "data_chart",
-            "state",
-            "view",
+            "data_cost",
+            "src::app",
+            "event_query",
             "routes",
-            "middleware"
+            "audit",
+            "src::config",
+            "dispatch",
+            "transcript_view"
           ]
         },
         {
           "package": "src::app::adapters::web::routes",
           "domains_count": 16,
           "domains": [
-            "github_webhook",
+            "agent_log",
+            "logout",
+            "panel",
             "agent_detail",
-            "metrics",
-            "health",
             "cost",
-            "agent_task",
+            "health",
+            "src::app",
             "login",
             "cost_feed",
-            "logout",
-            "panel"
+            "dashboard"
           ]
         },
         {
           "package": "src::infra",
           "domains_count": 11,
           "domains": [
-            "diag",
+            "agent_file",
+            "context_store",
+            "dto",
             "memory_bus",
             "memory_store",
+            "sm_store",
+            "unix_bus",
             "paths",
-            "agent_file",
-            "dto",
-            "task_store",
-            "context_store",
             "bus_server",
-            "unix_bus"
+            "task_store"
           ]
         },
         {
           "package": "src::app::adapters::web::view",
           "domains_count": 9,
           "domains": [
-            "strip",
-            "cards",
-            "tests",
-            "breadcrumb",
-            "cost",
             "detail",
+            "cost",
+            "task",
+            "strip",
             "chart",
+            "breadcrumb",
             "log",
-            "task"
+            "tests",
+            "cards"
           ]
         },
         {
           "package": "src::app::adapters::web::state",
           "domains_count": 8,
           "domains": [
-            "src::auth",
-            "src::routes",
-            "src::middleware",
+            "src::app",
             "src::config",
-            "src::dispatch",
             "src::data_cost",
+            "src::auth",
             "src::audit",
-            "src::app"
+            "src::dispatch",
+            "src::middleware",
+            "src::routes"
           ]
         },
         {
           "package": "src::app::adapters::federation",
           "domains_count": 8,
           "domains": [
+            "peer",
+            "preflight",
+            "forward",
+            "glob",
             "registry",
             "routing",
-            "glob",
             "frame",
-            "peer",
-            "forward",
-            "hub",
-            "preflight"
+            "hub"
           ]
         },
         {
           "package": "src::domain",
           "domains_count": 8,
           "domains": [
-            "workitem",
+            "events",
             "message",
             "context",
-            "events",
-            "statemachine",
             "agent",
+            "workitem",
+            "task",
             "config_types",
-            "task"
+            "statemachine"
           ]
         },
         {
           "package": "src::app::adapters::federation::hub",
           "domains_count": 7,
           "domains": [
-            "src::forward",
-            "src::preflight",
-            "src::frame",
             "src::registry",
+            "src::app",
+            "src::forward",
             "src::routing",
+            "src::preflight",
             "tests",
-            "src::app"
+            "src::frame"
           ]
         }
       ],
