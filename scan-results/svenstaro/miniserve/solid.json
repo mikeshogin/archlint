@@ -10,7 +10,7 @@
     "errors": 0
   },
   "graph": {
-    "nodes": 53,
+    "nodes": 54,
     "edges": 79
   },
   "checks": [
@@ -24,51 +24,51 @@
           "package": "src::main",
           "domains_count": 17,
           "domains": [
-            "src::webdav_fs",
+            "src::file_op",
             "renderer",
-            "listing",
-            "errors",
-            "archive",
-            "src::config",
-            "file_utils",
             "webdav_fs",
-            "args",
-            "pipe"
+            "auth",
+            "listing",
+            "file_op",
+            "config",
+            "pipe",
+            "src::webdav_fs",
+            "archive"
           ]
         },
         {
           "package": "src::args",
           "domains_count": 7,
           "domains": [
-            "AuthParseError",
-            "RequiredAuthPassword",
-            "src::auth",
-            "src::listing",
-            "auth",
             "src::renderer",
-            "tests"
+            "auth",
+            "RequiredAuthPassword",
+            "src::listing",
+            "src::auth",
+            "tests",
+            "AuthParseError"
           ]
         },
         {
           "package": "src::listing",
           "domains_count": 6,
           "domains": [
-            "src::auth",
-            "percent_encode_sets",
             "src::renderer",
+            "src::archive",
             "src::errors",
             "src::percent_encode_sets",
-            "src::archive"
+            "percent_encode_sets",
+            "src::auth"
           ]
         },
         {
           "package": "src::renderer",
           "domains_count": 4,
           "domains": [
-            "src::listing",
-            "tests",
+            "src::auth",
             "src::consts",
-            "src::auth"
+            "tests",
+            "src::listing"
           ]
         },
         {
@@ -76,8 +76,8 @@
           "domains_count": 4,
           "domains": [
             "tests::utils",
-            "tests::fixtures",
             "fixtures",
+            "tests::fixtures",
             "utils"
           ]
         }
@@ -89,7 +89,7 @@
       "description": "Соотношение абстракций >= 20% (OCP)",
       "status": "WARNING",
       "abstractions": 0,
-      "implementations": 53,
+      "implementations": 54,
       "ratio": 0.0,
       "threshold": 0.2,
       "issue": "Низкое соотношение абстракций (0.00%) - плохая расширяемость"

@@ -10,7 +10,7 @@
     "errors": 0
   },
   "graph": {
-    "nodes": 53,
+    "nodes": 54,
     "edges": 79
   },
   "checks": [
@@ -30,11 +30,11 @@
       "critical_components": [
         {
           "node": "tests::fixtures",
-          "pagerank": 0.107
+          "pagerank": 0.106
         },
         {
           "node": "fixtures",
-          "pagerank": 0.107
+          "pagerank": 0.106
         }
       ],
       "critical_count": 2
@@ -45,7 +45,7 @@
       "status": "PASSED",
       "modularity": 0.577,
       "threshold": 0.3,
-      "communities_count": 5
+      "communities_count": 6
     },
     {
       "name": "abstractness",
@@ -53,8 +53,8 @@
       "status": "WARNING",
       "abstractness": 0.0,
       "abstract_count": 0,
-      "concrete_count": 53,
-      "total_count": 53,
+      "concrete_count": 54,
+      "total_count": 54,
       "min_threshold": 0.1,
       "max_threshold": 0.8,
       "issue": "Слишком мало абстракций (< 0.1)"
@@ -208,7 +208,7 @@
       "name": "clustering_coefficient",
       "description": "Средний коэффициент кластеризации >= 0.1",
       "status": "WARNING",
-      "avg_clustering": 0.1,
+      "avg_clustering": 0.098,
       "threshold": 0.1,
       "low_clustering_nodes": [
         {
@@ -258,10 +258,10 @@
       "name": "edge_density",
       "description": "Плотность графа между 0.01 и 0.3",
       "status": "PASSED",
-      "density": 0.0287,
-      "nodes": 53,
+      "density": 0.0276,
+      "nodes": 54,
       "edges": 79,
-      "max_possible_edges": 2756
+      "max_possible_edges": 2862
     },
     {
       "name": "articulation_points",
@@ -371,7 +371,7 @@
       "description": "Диаметр графа",
       "status": "INFO",
       "diameter": "infinity",
-      "reason": "Граф не связан (3 компонент)"
+      "reason": "Граф не связан (4 компонент)"
     },
     {
       "name": "avg_path_length",
@@ -389,27 +389,27 @@
       "peripheral_nodes": [
         {
           "node": "tests",
-          "closeness": 0.094
+          "closeness": 0.092
         },
         {
           "node": "src::errors",
-          "closeness": 0.087
+          "closeness": 0.085
         },
         {
           "node": "src::auth",
-          "closeness": 0.062
-        },
-        {
-          "node": "RequiredAuthPassword",
           "closeness": 0.06
         },
         {
+          "node": "RequiredAuthPassword",
+          "closeness": 0.059
+        },
+        {
           "node": "src::listing",
-          "closeness": 0.043
+          "closeness": 0.042
         },
         {
           "node": "src::renderer",
-          "closeness": 0.043
+          "closeness": 0.042
         },
         {
           "node": "src::archive",
@@ -428,7 +428,7 @@
           "closeness": 0.038
         }
       ],
-      "avg_closeness": 0.032
+      "avg_closeness": 0.03
     },
     {
       "name": "eigenvector_centrality",
@@ -484,7 +484,7 @@
       "max_k_core": 3,
       "threshold": 5,
       "core_distribution": {
-        "0": 1,
+        "0": 2,
         "1": 20,
         "2": 27,
         "3": 5
@@ -500,18 +500,18 @@
       "threshold": 4,
       "large_cliques": [],
       "large_cliques_count": 0,
-      "total_cliques": 67
+      "total_cliques": 68
     },
     {
       "name": "degree_distribution",
       "description": "Распределение степеней узлов",
       "status": "INFO",
-      "mean_degree": 2.98,
-      "std_degree": 3.95,
+      "mean_degree": 2.93,
+      "std_degree": 3.93,
       "max_degree": 18,
       "min_degree": 0,
       "distribution": {
-        "0": 1,
+        "0": 2,
         "1": 20,
         "2": 21,
         "3": 1,
@@ -529,14 +529,14 @@
       "description": "Энтропия распределения зависимостей",
       "status": "PASSED",
       "entropy": 4.251,
-      "max_entropy": 5.728,
-      "normalized_entropy": 0.742
+      "max_entropy": 5.755,
+      "normalized_entropy": 0.739
     },
     {
       "name": "gini_coefficient",
       "description": "Коэффициент Джини <= 0.6",
       "status": "PASSED",
-      "gini": 0.501,
+      "gini": 0.51,
       "threshold": 0.6,
       "interpretation": "Неравномерно"
     },
@@ -548,22 +548,22 @@
         {
           "node": "tests::fixtures",
           "degree": 18,
-          "z_score": 3.8
+          "z_score": 3.83
         },
         {
           "node": "fixtures",
           "degree": 18,
-          "z_score": 3.8
+          "z_score": 3.83
         },
         {
           "node": "src::main",
           "degree": 17,
-          "z_score": 3.55
+          "z_score": 3.58
         }
       ],
       "outliers_count": 3,
-      "mean_degree": 2.98,
-      "std_degree": 3.95,
+      "mean_degree": 2.93,
+      "std_degree": 3.93,
       "z_threshold": 3.0
     },
     {
@@ -593,7 +593,7 @@
       "description": "Радиус изменений <= 20 компонентов",
       "status": "PASSED",
       "threshold": 20,
-      "avg_impact": 1.96,
+      "avg_impact": 1.93,
       "max_impact": 18,
       "top_impact": [
         {

@@ -10,7 +10,7 @@
     "errors": 3
   },
   "graph": {
-    "nodes": 53,
+    "nodes": 54,
     "edges": 79
   },
   "checks": [
@@ -20,8 +20,8 @@
       "status": "FAILED",
       "cycles": [
         [
-          "src::listing",
-          "src::renderer"
+          "src::renderer",
+          "src::listing"
         ]
       ],
       "cycles_count": 1
@@ -213,19 +213,20 @@
       "description": "Компоненты без связей (возможно мертвый код)",
       "status": "WARNING",
       "orphans": [
-        "src::pipe"
+        "src::pipe",
+        "build"
       ],
-      "orphans_count": 1
+      "orphans_count": 2
     },
     {
       "name": "strongly_connected_components",
       "description": "Группы с взаимными зависимостями (размер > 1)",
       "status": "ERROR",
-      "total_sccs": 52,
+      "total_sccs": 53,
       "problematic_sccs": [
         [
-          "src::listing",
-          "src::renderer"
+          "src::renderer",
+          "src::listing"
         ]
       ],
       "problematic_count": 1
