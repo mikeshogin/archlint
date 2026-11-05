@@ -62,36 +62,8 @@
           "nodes_count": 5
         },
         {
-          "package": "pkg::audit::audit",
+          "package": "pkg::classifier::classifier_test",
           "abstractness": 0.0,
-          "instability": 0.5,
-          "distance": 0.5,
-          "nodes_count": 1
-        },
-        {
-          "package": "pkg::config::config",
-          "abstractness": 0.0,
-          "instability": 0.5,
-          "distance": 0.5,
-          "nodes_count": 1
-        },
-        {
-          "package": "pkg::config::config_test",
-          "abstractness": 0.0,
-          "instability": 0.5,
-          "distance": 0.5,
-          "nodes_count": 1
-        },
-        {
-          "package": "pkg::report::report_test",
-          "abstractness": 1.0,
-          "instability": 0.5,
-          "distance": 0.5,
-          "nodes_count": 1
-        },
-        {
-          "package": "pkg::report::report",
-          "abstractness": 1.0,
           "instability": 0.5,
           "distance": 0.5,
           "nodes_count": 1
@@ -111,8 +83,36 @@
           "nodes_count": 1
         },
         {
-          "package": "pkg::classifier::classifier_test",
+          "package": "pkg::audit::audit",
           "abstractness": 0.0,
+          "instability": 0.5,
+          "distance": 0.5,
+          "nodes_count": 1
+        },
+        {
+          "package": "pkg::config::config_test",
+          "abstractness": 0.0,
+          "instability": 0.5,
+          "distance": 0.5,
+          "nodes_count": 1
+        },
+        {
+          "package": "pkg::config::config",
+          "abstractness": 0.0,
+          "instability": 0.5,
+          "distance": 0.5,
+          "nodes_count": 1
+        },
+        {
+          "package": "pkg::report::report",
+          "abstractness": 1.0,
+          "instability": 0.5,
+          "distance": 0.5,
+          "nodes_count": 1
+        },
+        {
+          "package": "pkg::report::report_test",
+          "abstractness": 1.0,
           "instability": 0.5,
           "distance": 0.5,
           "nodes_count": 1
@@ -247,19 +247,19 @@
           "closeness": 0.0
         },
         {
-          "node": "pkg::audit::audit",
+          "node": "pkg::classifier::classifier",
           "closeness": 0.0
         },
         {
-          "node": "pkg::config::config",
+          "node": "pkg::classifier::classifier_test",
           "closeness": 0.0
         },
         {
-          "node": "pkg::config::config_test",
+          "node": "pkg::threat::threat_test",
           "closeness": 0.0
         },
         {
-          "node": "pkg::report::report_test",
+          "node": "pkg::threat::threat",
           "closeness": 0.0
         }
       ],

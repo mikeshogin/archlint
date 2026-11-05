@@ -76,25 +76,25 @@
           "ce": 17
         },
         {
+          "node": "tests::auth",
+          "instability": 1.0,
+          "ca": 0,
+          "ce": 2
+        },
+        {
+          "node": "tests::serve_request",
+          "instability": 1.0,
+          "ca": 0,
+          "ce": 2
+        },
+        {
           "node": "tests::readme",
           "instability": 1.0,
           "ca": 0,
           "ce": 2
         },
         {
-          "node": "tests::create_directories",
-          "instability": 1.0,
-          "ca": 0,
-          "ce": 2
-        },
-        {
-          "node": "tests::upload_files",
-          "instability": 1.0,
-          "ca": 0,
-          "ce": 2
-        },
-        {
-          "node": "tests::header",
+          "node": "tests::rm_files",
           "instability": 1.0,
           "ca": 0,
           "ce": 2
@@ -102,15 +102,15 @@
       ],
       "most_stable": [
         {
-          "node": "AuthParseError",
+          "node": "renderer",
           "instability": 0.0,
           "ca": 1,
           "ce": 0
         },
         {
-          "node": "RequiredAuthPassword",
+          "node": "webdav_fs",
           "instability": 0.0,
-          "ca": 2,
+          "ca": 1,
           "ce": 0
         },
         {
@@ -120,13 +120,13 @@
           "ce": 0
         },
         {
-          "node": "fake_tty",
+          "node": "utils",
           "instability": 0.0,
           "ca": 1,
           "ce": 0
         },
         {
-          "node": "utils",
+          "node": "fake_tty",
           "instability": 0.0,
           "ca": 1,
           "ce": 0

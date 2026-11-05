@@ -23,9 +23,9 @@
           "src::benchmark"
         ],
         [
-          "src::metric",
           "src::benchmark",
-          "src::options"
+          "src::options",
+          "src::metric"
         ]
       ],
       "cycles_count": 2
@@ -42,13 +42,13 @@
           "threshold": 10
         },
         {
-          "node": "src::main",
-          "fan_out": 14,
+          "node": "src::benchmark",
+          "fan_out": 12,
           "threshold": 10
         },
         {
-          "node": "src::benchmark",
-          "fan_out": 12,
+          "node": "src::main",
+          "fan_out": 14,
           "threshold": 10
         }
       ],
@@ -69,9 +69,9 @@
           "ce_threshold": 10
         },
         {
-          "node": "src::quantity",
-          "afferent_coupling": 12,
-          "efferent_coupling": 2,
+          "node": "src::benchmark",
+          "afferent_coupling": 14,
+          "efferent_coupling": 12,
           "ca_threshold": 10,
           "ce_threshold": 10
         },
@@ -83,9 +83,9 @@
           "ce_threshold": 10
         },
         {
-          "node": "src::benchmark",
-          "afferent_coupling": 14,
-          "efferent_coupling": 12,
+          "node": "src::quantity",
+          "afferent_coupling": 12,
+          "efferent_coupling": 2,
           "ca_threshold": 10,
           "ce_threshold": 10
         }
@@ -98,57 +98,57 @@
       "status": "ERROR",
       "most_unstable": [
         {
-          "node": "src::export::orgmode",
+          "node": "src::timer::unix_timer",
           "instability": 1.0,
           "ca": 0,
-          "ce": 2
+          "ce": 1
         },
         {
-          "node": "src::export::json",
+          "node": "src::timer::macos_counters",
           "instability": 1.0,
           "ca": 0,
-          "ce": 4
+          "ce": 1
         },
         {
-          "node": "src::export::markdown",
+          "node": "src::timer::linux_counters",
           "instability": 1.0,
           "ca": 0,
-          "ce": 2
+          "ce": 1
         },
         {
-          "node": "src::export::csv",
+          "node": "src::timer::windows_timer",
           "instability": 1.0,
           "ca": 0,
-          "ce": 4
+          "ce": 3
         },
         {
-          "node": "src::export::asciidoc",
+          "node": "src::timer::wall_clock_timer",
           "instability": 1.0,
           "ca": 0,
-          "ce": 2
+          "ce": 1
         }
       ],
       "most_stable": [
         {
-          "node": "benchmark_result",
+          "node": "statistics",
           "instability": 0.0,
           "ca": 1,
           "ce": 0
         },
         {
-          "node": "executor",
+          "node": "progress_bar",
           "instability": 0.0,
           "ca": 1,
           "ce": 0
         },
         {
-          "node": "measurement",
+          "node": "report",
           "instability": 0.0,
           "ca": 1,
           "ce": 0
         },
         {
-          "node": "scheduler",
+          "node": "warnings",
           "instability": 0.0,
           "ca": 1,
           "ce": 0
@@ -162,6 +162,13 @@
       ],
       "violations": [
         {
+          "from": "src::benchmark",
+          "to": "src::parameter",
+          "from_instability": 0.462,
+          "to_instability": 0.6,
+          "issue": "Зависимость направлена к менее стабильному компоненту"
+        },
+        {
           "from": "src::metric",
           "to": "src::benchmark",
           "from_instability": 0.25,
@@ -172,13 +179,6 @@
           "from": "src::command",
           "to": "src::parameter",
           "from_instability": 0.333,
-          "to_instability": 0.6,
-          "issue": "Зависимость направлена к менее стабильному компоненту"
-        },
-        {
-          "from": "src::benchmark",
-          "to": "src::parameter",
-          "from_instability": 0.462,
           "to_instability": 0.6,
           "issue": "Зависимость направлена к менее стабильному компоненту"
         }
@@ -256,16 +256,16 @@
           "out_degree": 15
         },
         {
-          "node": "src::quantity",
-          "total_degree": 14,
-          "in_degree": 12,
-          "out_degree": 2
-        },
-        {
           "node": "src::main",
           "total_degree": 14,
           "in_degree": 0,
           "out_degree": 14
+        },
+        {
+          "node": "src::quantity",
+          "total_degree": 14,
+          "in_degree": 12,
+          "out_degree": 2
         },
         {
           "node": "src::metric",
@@ -281,11 +281,11 @@
       "description": "Компоненты без связей (возможно мертвый код)",
       "status": "WARNING",
       "orphans": [
+        "src::parameter::tokenize",
         "src::export::json::metadata",
         "src::util::exit_code",
-        "src::util::number",
         "src::util::randomized_environment_offset",
-        "src::parameter::tokenize",
+        "src::util::number",
         "build",
         "tests::common"
       ],
@@ -298,9 +298,9 @@
       "total_sccs": 98,
       "problematic_sccs": [
         [
+          "src::benchmark",
           "src::metric",
-          "src::options",
-          "src::benchmark"
+          "src::options"
         ]
       ],
       "problematic_count": 1

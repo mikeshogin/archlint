@@ -56,19 +56,19 @@
           "ce": 3
         },
         {
-          "node": "pkg::audit::audit",
+          "node": "pkg::classifier::classifier_test",
           "instability": 0.5,
           "ca": 0,
           "ce": 0
         },
         {
-          "node": "pkg::config::config",
+          "node": "pkg::threat::threat_test",
           "instability": 0.5,
           "ca": 0,
           "ce": 0
         },
         {
-          "node": "pkg::config::config_test",
+          "node": "pkg::threat::threat",
           "instability": 0.5,
           "ca": 0,
           "ce": 0
@@ -174,14 +174,14 @@
       "description": "Компоненты без связей (возможно мертвый код)",
       "status": "WARNING",
       "orphans": [
-        "pkg::audit::audit",
-        "pkg::config::config",
-        "pkg::config::config_test",
-        "pkg::report::report_test",
-        "pkg::report::report",
+        "pkg::classifier::classifier_test",
         "pkg::threat::threat_test",
         "pkg::threat::threat",
-        "pkg::classifier::classifier_test"
+        "pkg::audit::audit",
+        "pkg::config::config_test",
+        "pkg::config::config",
+        "pkg::report::report",
+        "pkg::report::report_test"
       ],
       "orphans_count": 8
     },

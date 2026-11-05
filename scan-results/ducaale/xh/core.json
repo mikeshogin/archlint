@@ -48,16 +48,16 @@
       "ce_threshold": 10,
       "violations": [
         {
-          "node": "src::main",
-          "afferent_coupling": 0,
-          "efferent_coupling": 30,
+          "node": "src::utils",
+          "afferent_coupling": 13,
+          "efferent_coupling": 1,
           "ca_threshold": 10,
           "ce_threshold": 10
         },
         {
-          "node": "src::utils",
-          "afferent_coupling": 13,
-          "efferent_coupling": 1,
+          "node": "src::main",
+          "afferent_coupling": 0,
+          "efferent_coupling": 30,
           "ca_threshold": 10,
           "ce_threshold": 10
         }
@@ -70,16 +70,16 @@
       "status": "ERROR",
       "most_unstable": [
         {
-          "node": "src::formatting::palette",
+          "node": "src::generation",
           "instability": 1.0,
           "ca": 0,
           "ce": 2
         },
         {
-          "node": "src::formatting::headers",
+          "node": "src::redirect",
           "instability": 1.0,
           "ca": 0,
-          "ce": 2
+          "ce": 4
         },
         {
           "node": "src::message_signature",
@@ -88,10 +88,10 @@
           "ce": 1
         },
         {
-          "node": "src::generation",
+          "node": "src::main",
           "instability": 1.0,
           "ca": 0,
-          "ce": 2
+          "ce": 30
         },
         {
           "node": "src::to_curl",

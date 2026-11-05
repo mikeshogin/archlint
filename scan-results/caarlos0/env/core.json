@@ -10,7 +10,7 @@
     "errors": 0
   },
   "graph": {
-    "nodes": 8,
+    "nodes": 9,
     "edges": 0
   },
   "checks": [
@@ -44,12 +44,6 @@
       "status": "PASSED",
       "most_unstable": [
         {
-          "node": "env",
-          "instability": 0.5,
-          "ca": 0,
-          "ce": 0
-        },
-        {
           "node": "env_tomap_windows",
           "instability": 0.5,
           "ca": 0,
@@ -62,13 +56,19 @@
           "ce": 0
         },
         {
-          "node": "env_tomap",
+          "node": "env_tomap_windows_test",
           "instability": 0.5,
           "ca": 0,
           "ce": 0
         },
         {
-          "node": "env_tomap_windows_test",
+          "node": "env",
+          "instability": 0.5,
+          "ca": 0,
+          "ce": 0
+        },
+        {
+          "node": "env_tomap_test",
           "instability": 0.5,
           "ca": 0,
           "ce": 0
@@ -76,19 +76,7 @@
       ],
       "most_stable": [
         {
-          "node": "env_tomap",
-          "instability": 0.5,
-          "ca": 0,
-          "ce": 0
-        },
-        {
-          "node": "env_tomap_windows_test",
-          "instability": 0.5,
-          "ca": 0,
-          "ce": 0
-        },
-        {
-          "node": "example_test",
+          "node": "env_tomap_test",
           "instability": 0.5,
           "ca": 0,
           "ce": 0
@@ -100,7 +88,19 @@
           "ce": 0
         },
         {
-          "node": "env_tomap_test",
+          "node": "example_test",
+          "instability": 0.5,
+          "ca": 0,
+          "ce": 0
+        },
+        {
+          "node": "slice_pointer_defaults_test",
+          "instability": 0.5,
+          "ca": 0,
+          "ce": 0
+        },
+        {
+          "node": "env_tomap",
           "instability": 0.5,
           "ca": 0,
           "ce": 0
@@ -174,22 +174,23 @@
       "description": "Компоненты без связей (возможно мертвый код)",
       "status": "WARNING",
       "orphans": [
-        "env",
         "env_tomap_windows",
         "error",
-        "env_tomap",
         "env_tomap_windows_test",
-        "example_test",
+        "env",
+        "env_tomap_test",
         "env_test",
-        "env_tomap_test"
+        "example_test",
+        "slice_pointer_defaults_test",
+        "env_tomap"
       ],
-      "orphans_count": 8
+      "orphans_count": 9
     },
     {
       "name": "strongly_connected_components",
       "description": "Группы с взаимными зависимостями (размер > 1)",
       "status": "PASSED",
-      "total_sccs": 8,
+      "total_sccs": 9,
       "problematic_sccs": [],
       "problematic_count": 0
     },

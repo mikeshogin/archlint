@@ -79,6 +79,27 @@
           "issue": "Зона боли: конкретный и стабильный"
         },
         {
+          "package": "pkg::perf::perf",
+          "abstractness": 0.0,
+          "instability": 0.5,
+          "distance": 0.5,
+          "nodes_count": 1
+        },
+        {
+          "package": "pkg::counter::tiktoken",
+          "abstractness": 0.0,
+          "instability": 0.5,
+          "distance": 0.5,
+          "nodes_count": 1
+        },
+        {
+          "package": "pkg::counter::counter",
+          "abstractness": 0.0,
+          "instability": 0.5,
+          "distance": 0.5,
+          "nodes_count": 1
+        },
+        {
           "package": "pkg::pricing::subscription",
           "abstractness": 0.0,
           "instability": 0.5,
@@ -100,28 +121,7 @@
           "nodes_count": 1
         },
         {
-          "package": "pkg::perf::perf",
-          "abstractness": 0.0,
-          "instability": 0.5,
-          "distance": 0.5,
-          "nodes_count": 1
-        },
-        {
           "package": "pkg::telemetry::telemetry",
-          "abstractness": 0.0,
-          "instability": 0.5,
-          "distance": 0.5,
-          "nodes_count": 1
-        },
-        {
-          "package": "pkg::counter::tiktoken",
-          "abstractness": 0.0,
-          "instability": 0.5,
-          "distance": 0.5,
-          "nodes_count": 1
-        },
-        {
-          "package": "pkg::counter::counter",
           "abstractness": 0.0,
           "instability": 0.5,
           "distance": 0.5,
@@ -246,11 +246,15 @@
           "to": "pkg/telemetry"
         },
         {
+          "from": "pkg::ab::ab",
+          "to": "pkg/pricing"
+        },
+        {
           "from": "pkg::daily::daily",
           "to": "pkg/telemetry"
         },
         {
-          "from": "pkg::reporter::reporter",
+          "from": "pkg::budget::budget",
           "to": "pkg/pricing"
         },
         {
@@ -258,11 +262,7 @@
           "to": "pkg/pricing"
         },
         {
-          "from": "pkg::budget::budget",
-          "to": "pkg/pricing"
-        },
-        {
-          "from": "pkg::ab::ab",
+          "from": "pkg::reporter::reporter",
           "to": "pkg/pricing"
         }
       ],

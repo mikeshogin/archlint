@@ -50,16 +50,10 @@
           "ce": 9
         },
         {
-          "node": "pkg::abtest::abtest",
+          "node": "pkg::perf::perf",
           "instability": 1.0,
           "ca": 0,
-          "ce": 2
-        },
-        {
-          "node": "pkg::server::server",
-          "instability": 1.0,
-          "ca": 0,
-          "ce": 3
+          "ce": 4
         },
         {
           "node": "pkg::router::router",
@@ -68,10 +62,16 @@
           "ce": 2
         },
         {
-          "node": "pkg::analyzer::analyzer",
+          "node": "pkg::abtest::abtest",
           "instability": 1.0,
           "ca": 0,
-          "ce": 3
+          "ce": 2
+        },
+        {
+          "node": "pkg::middleware::middleware",
+          "instability": 1.0,
+          "ca": 0,
+          "ce": 1
         }
       ],
       "most_stable": [
@@ -176,13 +176,13 @@
       "orphans": [
         "pkg::template::template_test",
         "pkg::template::template",
-        "pkg::trend::trend_test",
-        "pkg::trend::trend",
-        "pkg::config::config",
         "pkg::analyzer::analyzer_test",
         "pkg::metrics::nlp",
-        "pkg::metrics::basic",
         "pkg::metrics::domain",
+        "pkg::metrics::basic",
+        "pkg::trend::trend",
+        "pkg::trend::trend_test",
+        "pkg::config::config",
         "pkg::validator::validator"
       ],
       "orphans_count": 10
