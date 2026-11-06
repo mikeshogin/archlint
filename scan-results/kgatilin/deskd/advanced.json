@@ -629,110 +629,110 @@
           "component": "tests",
           "impact_radius": 124,
           "sample_dependents": [
-            "src::app::metrics",
-            "src::app::config_watcher",
-            "src::app::adapters",
+            "src::app::schedule",
+            "src::domain::task",
+            "src::app::scope",
             "src::app::context_size",
-            "src::app::commands::session"
+            "src::app::session_discover"
           ]
         },
         {
           "component": "task",
           "impact_radius": 95,
           "sample_dependents": [
-            "src::app::metrics",
-            "src::app::adapters",
-            "src::app::commands::context",
+            "src::app::schedule",
             "src::app::context_size",
-            "src::app"
+            "src::app::session_discover",
+            "src::app::adapters::web::routes::dashboard",
+            "src::app::worker"
           ]
         },
         {
           "component": "context",
           "impact_radius": 94,
           "sample_dependents": [
-            "src::app::metrics",
-            "src::app::adapters",
-            "src::app::commands::context",
+            "src::app::schedule",
             "src::app::context_size",
-            "src::app"
+            "src::app::session_discover",
+            "src::app::adapters::web::routes::dashboard",
+            "src::app::worker"
           ]
         },
         {
           "component": "agent",
           "impact_radius": 93,
           "sample_dependents": [
-            "src::app::metrics",
-            "src::app::adapters",
-            "src::app::commands::context",
+            "src::app::schedule",
             "src::app::context_size",
-            "src::app"
+            "src::app::session_discover",
+            "src::app::adapters::web::routes::dashboard",
+            "src::app::worker"
           ]
         },
         {
           "component": "message",
           "impact_radius": 92,
           "sample_dependents": [
-            "src::app::metrics",
-            "src::app::adapters",
-            "src::app::commands::context",
+            "src::app::schedule",
             "src::app::context_size",
-            "src::app"
+            "src::app::session_discover",
+            "src::app::adapters::web::routes::dashboard",
+            "src::app::worker"
           ]
         },
         {
           "component": "statemachine",
           "impact_radius": 92,
           "sample_dependents": [
-            "src::app::metrics",
-            "src::app::adapters",
-            "src::app::commands::context",
+            "src::app::schedule",
             "src::app::context_size",
-            "src::app"
+            "src::app::session_discover",
+            "src::app::adapters::web::routes::dashboard",
+            "src::app::worker"
           ]
         },
         {
           "component": "bus",
           "impact_radius": 74,
           "sample_dependents": [
-            "src::app::metrics",
-            "src::app::commands::context",
+            "src::app::schedule",
+            "src::infra::unix_bus",
+            "src::ports",
             "src::app::context_size",
-            "src::app",
-            "src::app::commands::session"
+            "src::app::session_discover"
           ]
         },
         {
           "component": "events",
           "impact_radius": 61,
           "sample_dependents": [
-            "src::app::metrics",
-            "src::app::adapters",
-            "src::domain",
-            "src::app::commands::tui",
-            "src::infra::context_store"
+            "src::app::workflow",
+            "src::app::schedule",
+            "src::ports::store",
+            "src::app::commands::agent",
+            "src::infra::dto::instance"
           ]
         },
         {
           "component": "config_types",
           "impact_radius": 60,
           "sample_dependents": [
-            "src::app::metrics",
-            "src::app::adapters",
-            "src::domain",
-            "src::app::commands::tui",
-            "src::infra::context_store"
+            "src::app::workflow",
+            "src::app::schedule",
+            "src::ports::store",
+            "src::app::commands::agent",
+            "src::infra::dto::instance"
           ]
         },
         {
           "component": "workitem",
           "impact_radius": 60,
           "sample_dependents": [
-            "src::app::metrics",
-            "src::app::adapters",
-            "src::domain",
-            "src::app::commands::tui",
-            "src::infra::context_store"
+            "src::app::workflow",
+            "src::app::schedule",
+            "src::ports::store",
+            "src::app::commands::agent",
+            "src::infra::dto::instance"
           ]
         }
       ],
