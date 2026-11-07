@@ -602,110 +602,110 @@
           "component": "si",
           "impact_radius": 26,
           "sample_dependents": [
-            "src::benchmark::executor",
-            "src::export::orgmode",
+            "src::timer::windows_timer",
             "src::timer::wall_clock_timer",
-            "src::benchmark::scheduler",
-            "src::benchmark"
+            "src::output::progress_bar",
+            "src::benchmark::measurement",
+            "src::outlier_detection"
           ]
         },
         {
           "component": "statistics",
           "impact_radius": 26,
           "sample_dependents": [
-            "src::benchmark::executor",
-            "src::export::orgmode",
+            "src::timer::windows_timer",
             "src::timer::wall_clock_timer",
-            "src::benchmark::scheduler",
-            "src::benchmark"
+            "src::output::progress_bar",
+            "src::benchmark::measurement",
+            "src::outlier_detection"
           ]
         },
         {
           "component": "src::quantity",
           "impact_radius": 25,
           "sample_dependents": [
-            "src::benchmark::executor",
-            "src::export::orgmode",
+            "src::timer::windows_timer",
             "src::timer::wall_clock_timer",
-            "src::benchmark::scheduler",
-            "src::benchmark"
+            "src::output::progress_bar",
+            "src::benchmark::measurement",
+            "src::outlier_detection"
           ]
         },
         {
           "component": "exit_code",
           "impact_radius": 25,
           "sample_dependents": [
-            "src::benchmark::executor",
-            "src::export::orgmode",
-            "src::benchmark::scheduler",
-            "src::benchmark",
-            "src::parameter::range_step"
+            "src::output::progress_bar",
+            "src::util",
+            "src::benchmark::measurement",
+            "src::timer::linux_counters",
+            "src::export::csv"
           ]
         },
         {
           "component": "number",
           "impact_radius": 25,
           "sample_dependents": [
-            "src::benchmark::executor",
-            "src::export::orgmode",
-            "src::benchmark::scheduler",
-            "src::benchmark",
-            "src::parameter::range_step"
+            "src::output::progress_bar",
+            "src::util",
+            "src::benchmark::measurement",
+            "src::timer::linux_counters",
+            "src::export::csv"
           ]
         },
         {
           "component": "randomized_environment_offset",
           "impact_radius": 25,
           "sample_dependents": [
-            "src::benchmark::executor",
-            "src::export::orgmode",
-            "src::benchmark::scheduler",
-            "src::benchmark",
-            "src::parameter::range_step"
+            "src::output::progress_bar",
+            "src::util",
+            "src::benchmark::measurement",
+            "src::timer::linux_counters",
+            "src::export::csv"
           ]
         },
         {
           "component": "src::util",
           "impact_radius": 24,
           "sample_dependents": [
-            "src::benchmark::executor",
-            "src::export::orgmode",
-            "src::benchmark::scheduler",
-            "src::benchmark",
-            "src::parameter::range_step"
+            "src::output::progress_bar",
+            "src::benchmark::measurement",
+            "src::timer::linux_counters",
+            "src::export::csv",
+            "src::export::orgmode"
           ]
         },
         {
           "component": "tests",
           "impact_radius": 24,
           "sample_dependents": [
-            "src::benchmark::executor",
-            "src::export::orgmode",
-            "src::shell_syntax",
-            "src::benchmark::scheduler",
-            "src::benchmark"
+            "src::output::progress_bar",
+            "src::benchmark::measurement",
+            "src::timer::linux_counters",
+            "src::export::csv",
+            "src::export::orgmode"
           ]
         },
         {
           "component": "range_step",
           "impact_radius": 23,
           "sample_dependents": [
-            "src::benchmark::executor",
-            "src::export::orgmode",
-            "src::benchmark::scheduler",
-            "src::benchmark",
-            "src::export"
+            "src::output::progress_bar",
+            "src::benchmark::measurement",
+            "src::timer::linux_counters",
+            "src::export::csv",
+            "src::export::orgmode"
           ]
         },
         {
           "component": "tokenize",
           "impact_radius": 23,
           "sample_dependents": [
-            "src::benchmark::executor",
-            "src::export::orgmode",
-            "src::benchmark::scheduler",
-            "src::benchmark",
-            "src::export"
+            "src::output::progress_bar",
+            "src::benchmark::measurement",
+            "src::timer::linux_counters",
+            "src::export::csv",
+            "src::export::orgmode"
           ]
         }
       ],

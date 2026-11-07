@@ -39,9 +39,9 @@
       "name": "modularity",
       "description": "Модульность графа должна быть >= 0.3",
       "status": "PASSED",
-      "modularity": 0.578,
+      "modularity": 0.577,
       "threshold": 0.3,
-      "communities_count": 30
+      "communities_count": 29
     },
     {
       "name": "abstractness",
@@ -629,110 +629,110 @@
           "component": "tests",
           "impact_radius": 124,
           "sample_dependents": [
-            "src::app::schedule",
-            "src::domain::task",
-            "src::app::scope",
-            "src::app::context_size",
-            "src::app::session_discover"
+            "src::app::mcp_protocol",
+            "src::app::adapters::web::state",
+            "src::app::acp",
+            "src::infra::task_store",
+            "src::app::adapters::web::view::breadcrumb"
           ]
         },
         {
           "component": "task",
           "impact_radius": 95,
           "sample_dependents": [
-            "src::app::schedule",
-            "src::app::context_size",
-            "src::app::session_discover",
-            "src::app::adapters::web::routes::dashboard",
-            "src::app::worker"
+            "src::infra::dto",
+            "src::app::adapters::web::state",
+            "src::app::agent_process",
+            "src::infra::task_store",
+            "src::app::acp"
           ]
         },
         {
           "component": "context",
           "impact_radius": 94,
           "sample_dependents": [
-            "src::app::schedule",
-            "src::app::context_size",
-            "src::app::session_discover",
-            "src::app::adapters::web::routes::dashboard",
-            "src::app::worker"
+            "src::infra::dto",
+            "src::app::adapters::web::state",
+            "src::app::agent_process",
+            "src::infra::task_store",
+            "src::app::acp"
           ]
         },
         {
           "component": "agent",
           "impact_radius": 93,
           "sample_dependents": [
-            "src::app::schedule",
-            "src::app::context_size",
-            "src::app::session_discover",
-            "src::app::adapters::web::routes::dashboard",
-            "src::app::worker"
+            "src::app::adapters::web::state",
+            "src::app::agent_process",
+            "src::infra::task_store",
+            "src::app::acp",
+            "src::app::commands::graph"
           ]
         },
         {
           "component": "message",
           "impact_radius": 92,
           "sample_dependents": [
-            "src::app::schedule",
-            "src::app::context_size",
-            "src::app::session_discover",
-            "src::app::adapters::web::routes::dashboard",
-            "src::app::worker"
+            "src::app::adapters::web::state",
+            "src::app::agent_process",
+            "src::infra::task_store",
+            "src::app::acp",
+            "src::app::commands::graph"
           ]
         },
         {
           "component": "statemachine",
           "impact_radius": 92,
           "sample_dependents": [
-            "src::app::schedule",
-            "src::app::context_size",
-            "src::app::session_discover",
-            "src::app::adapters::web::routes::dashboard",
-            "src::app::worker"
+            "src::app::adapters::web::state",
+            "src::app::agent_process",
+            "src::infra::task_store",
+            "src::app::acp",
+            "src::app::commands::graph"
           ]
         },
         {
           "component": "bus",
           "impact_radius": 74,
           "sample_dependents": [
-            "src::app::schedule",
-            "src::infra::unix_bus",
+            "src::infra::dto",
+            "src::app::mcp_protocol",
             "src::ports",
-            "src::app::context_size",
-            "src::app::session_discover"
+            "src::app::agent_process",
+            "src::app::commands::graph"
           ]
         },
         {
           "component": "events",
           "impact_radius": 61,
           "sample_dependents": [
-            "src::app::workflow",
-            "src::app::schedule",
-            "src::ports::store",
-            "src::app::commands::agent",
-            "src::infra::dto::instance"
+            "src::app::adapters::web::state",
+            "src::infra::bus_server",
+            "src::infra::task_store",
+            "src::app::acp",
+            "src::app::agent_process"
           ]
         },
         {
           "component": "config_types",
           "impact_radius": 60,
           "sample_dependents": [
-            "src::app::workflow",
-            "src::app::schedule",
-            "src::ports::store",
-            "src::app::commands::agent",
-            "src::infra::dto::instance"
+            "src::app::adapters::web::state",
+            "src::infra::bus_server",
+            "src::infra::task_store",
+            "src::app::acp",
+            "src::app::agent_process"
           ]
         },
         {
           "component": "workitem",
           "impact_radius": 60,
           "sample_dependents": [
-            "src::app::workflow",
-            "src::app::schedule",
-            "src::ports::store",
-            "src::app::commands::agent",
-            "src::infra::dto::instance"
+            "src::app::adapters::web::state",
+            "src::infra::bus_server",
+            "src::infra::task_store",
+            "src::app::acp",
+            "src::app::agent_process"
           ]
         }
       ],
