@@ -34,9 +34,9 @@
       "name": "modularity",
       "description": "Модульность графа должна быть >= 0.3",
       "status": "PASSED",
-      "modularity": 0.597,
+      "modularity": 0.592,
       "threshold": 0.3,
-      "communities_count": 15
+      "communities_count": 14
     },
     {
       "name": "abstractness",
@@ -602,110 +602,110 @@
           "component": "si",
           "impact_radius": 26,
           "sample_dependents": [
+            "src::output::warnings",
             "src::timer::windows_timer",
-            "src::timer::wall_clock_timer",
+            "src::export::asciidoc",
             "src::output::progress_bar",
-            "src::benchmark::measurement",
-            "src::outlier_detection"
+            "src::benchmark::measurement"
           ]
         },
         {
           "component": "statistics",
           "impact_radius": 26,
           "sample_dependents": [
+            "src::output::warnings",
             "src::timer::windows_timer",
-            "src::timer::wall_clock_timer",
+            "src::export::asciidoc",
             "src::output::progress_bar",
-            "src::benchmark::measurement",
-            "src::outlier_detection"
+            "src::benchmark::measurement"
           ]
         },
         {
           "component": "src::quantity",
           "impact_radius": 25,
           "sample_dependents": [
+            "src::output::warnings",
             "src::timer::windows_timer",
-            "src::timer::wall_clock_timer",
+            "src::export::asciidoc",
             "src::output::progress_bar",
-            "src::benchmark::measurement",
-            "src::outlier_detection"
+            "src::benchmark::measurement"
           ]
         },
         {
           "component": "exit_code",
           "impact_radius": 25,
           "sample_dependents": [
+            "src::output::warnings",
+            "src::export::asciidoc",
             "src::output::progress_bar",
-            "src::util",
             "src::benchmark::measurement",
-            "src::timer::linux_counters",
-            "src::export::csv"
+            "src::parameter::range_step"
           ]
         },
         {
           "component": "number",
           "impact_radius": 25,
           "sample_dependents": [
+            "src::output::warnings",
+            "src::export::asciidoc",
             "src::output::progress_bar",
-            "src::util",
             "src::benchmark::measurement",
-            "src::timer::linux_counters",
-            "src::export::csv"
+            "src::parameter::range_step"
           ]
         },
         {
           "component": "randomized_environment_offset",
           "impact_radius": 25,
           "sample_dependents": [
+            "src::output::warnings",
+            "src::export::asciidoc",
             "src::output::progress_bar",
-            "src::util",
             "src::benchmark::measurement",
-            "src::timer::linux_counters",
-            "src::export::csv"
+            "src::parameter::range_step"
           ]
         },
         {
           "component": "src::util",
           "impact_radius": 24,
           "sample_dependents": [
+            "src::output::warnings",
+            "src::export::asciidoc",
             "src::output::progress_bar",
             "src::benchmark::measurement",
-            "src::timer::linux_counters",
-            "src::export::csv",
-            "src::export::orgmode"
+            "src::parameter::range_step"
           ]
         },
         {
           "component": "tests",
           "impact_radius": 24,
           "sample_dependents": [
+            "src::output::warnings",
+            "src::export::asciidoc",
             "src::output::progress_bar",
             "src::benchmark::measurement",
-            "src::timer::linux_counters",
-            "src::export::csv",
-            "src::export::orgmode"
+            "src::parameter::range_step"
           ]
         },
         {
           "component": "range_step",
           "impact_radius": 23,
           "sample_dependents": [
+            "src::output::warnings",
+            "src::export::asciidoc",
             "src::output::progress_bar",
             "src::benchmark::measurement",
-            "src::timer::linux_counters",
-            "src::export::csv",
-            "src::export::orgmode"
+            "src::benchmark::benchmark_result"
           ]
         },
         {
           "component": "tokenize",
           "impact_radius": 23,
           "sample_dependents": [
+            "src::output::warnings",
+            "src::export::asciidoc",
             "src::output::progress_bar",
             "src::benchmark::measurement",
-            "src::timer::linux_counters",
-            "src::export::csv",
-            "src::export::orgmode"
+            "src::benchmark::benchmark_result"
           ]
         }
       ],
