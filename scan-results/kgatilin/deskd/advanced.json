@@ -41,7 +41,7 @@
       "status": "PASSED",
       "modularity": 0.577,
       "threshold": 0.3,
-      "communities_count": 29
+      "communities_count": 28
     },
     {
       "name": "abstractness",
@@ -629,110 +629,110 @@
           "component": "tests",
           "impact_radius": 124,
           "sample_dependents": [
-            "src::app::commands::remind",
-            "src::app::jsonrpc",
-            "src::app::adapters::federation::registry",
-            "src::infra::bus_server",
-            "src::app::adapters::web::routes::cost"
+            "src::app::adapters::web::auth::magic_link",
+            "src::app::tasklog",
+            "src::app::agent_components",
+            "src::app::context",
+            "src::app::a2a_jwt"
           ]
         },
         {
           "component": "task",
           "impact_radius": 95,
           "sample_dependents": [
-            "src::app::adapters::web::routes::logout",
-            "src::app::commands::remind",
-            "src::app::adapters::web::routes::cost",
-            "src::infra::bus_server",
-            "src::app::mcp_service"
+            "src::app::context",
+            "src::app::adapters::web::view::cost",
+            "src::infra::dto::context",
+            "src::app::adapters::web::data_chart",
+            "src::app::commands::sm"
           ]
         },
         {
           "component": "context",
           "impact_radius": 94,
           "sample_dependents": [
-            "src::app::adapters::web::routes::logout",
-            "src::app::commands::remind",
-            "src::app::adapters::web::routes::cost",
-            "src::infra::bus_server",
-            "src::app::mcp_service"
+            "src::app::context",
+            "src::app::adapters::web::view::cost",
+            "src::infra::dto::context",
+            "src::app::adapters::web::data_chart",
+            "src::app::commands::sm"
           ]
         },
         {
           "component": "agent",
           "impact_radius": 93,
           "sample_dependents": [
-            "src::app::adapters::web::routes::logout",
-            "src::app::commands::remind",
-            "src::app::adapters::web::routes::cost",
-            "src::infra::bus_server",
-            "src::app::mcp_service"
+            "src::app::context",
+            "src::app::adapters::web::view::cost",
+            "src::infra::dto::context",
+            "src::app::adapters::web::data_chart",
+            "src::app::commands::sm"
           ]
         },
         {
           "component": "message",
           "impact_radius": 92,
           "sample_dependents": [
-            "src::app::adapters::web::routes::logout",
-            "src::app::commands::remind",
-            "src::app::adapters::web::routes::cost",
-            "src::infra::bus_server",
-            "src::app::mcp_service"
+            "src::app::context",
+            "src::app::adapters::web::view::cost",
+            "src::infra::dto::context",
+            "src::app::adapters::web::data_chart",
+            "src::app::commands::sm"
           ]
         },
         {
           "component": "statemachine",
           "impact_radius": 92,
           "sample_dependents": [
-            "src::app::adapters::web::routes::logout",
-            "src::app::commands::remind",
-            "src::app::adapters::web::routes::cost",
-            "src::infra::bus_server",
-            "src::app::mcp_service"
+            "src::app::context",
+            "src::app::adapters::web::view::cost",
+            "src::infra::dto::context",
+            "src::app::adapters::web::data_chart",
+            "src::app::commands::sm"
           ]
         },
         {
           "component": "bus",
           "impact_radius": 74,
           "sample_dependents": [
-            "src::app::adapters::web::routes::logout",
-            "src::app::adapters::web::routes::cost",
-            "src::app::mcp_service",
-            "src::app::adapters::web::view::task",
-            "src::app::commands::doctor"
+            "src::app::context",
+            "src::app::adapters::web::view::cost",
+            "src::app::adapters::web::data_chart",
+            "src::app::commands::sm",
+            "src::app::adapters::web::routes::panel"
           ]
         },
         {
           "component": "events",
           "impact_radius": 61,
           "sample_dependents": [
-            "src::app::process_builder",
-            "src::app::bus_api",
-            "src::infra::dto::task",
-            "src::infra::memory_bus",
-            "src::app::commands::remind"
+            "src::app::agent_process",
+            "src::app::context",
+            "src::app::adapters::web::data_cost",
+            "src::app::adapters::web::routes::cost_feed",
+            "src::infra::dto::context"
           ]
         },
         {
           "component": "config_types",
           "impact_radius": 60,
           "sample_dependents": [
-            "src::app::process_builder",
-            "src::app::bus_api",
-            "src::infra::dto::task",
-            "src::infra::memory_bus",
-            "src::app::commands::remind"
+            "src::app::agent_process",
+            "src::app::context",
+            "src::app::adapters::web::data_cost",
+            "src::app::adapters::web::routes::cost_feed",
+            "src::infra::dto::context"
           ]
         },
         {
           "component": "workitem",
           "impact_radius": 60,
           "sample_dependents": [
-            "src::app::process_builder",
-            "src::app::bus_api",
-            "src::infra::dto::task",
-            "src::infra::memory_bus",
-            "src::app::commands::remind"
+            "src::app::agent_process",
+            "src::app::context",
+            "src::app::adapters::web::data_cost",
+            "src::app::adapters::web::routes::cost_feed",
+            "src::infra::dto::context"
           ]
         }
       ],
