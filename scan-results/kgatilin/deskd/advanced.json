@@ -39,7 +39,7 @@
       "name": "modularity",
       "description": "Модульность графа должна быть >= 0.3",
       "status": "PASSED",
-      "modularity": 0.577,
+      "modularity": 0.578,
       "threshold": 0.3,
       "communities_count": 29
     },
@@ -629,110 +629,110 @@
           "component": "tests",
           "impact_radius": 124,
           "sample_dependents": [
-            "src::app::adapters::web::dispatch",
-            "src::app::serve",
-            "src::main",
-            "src::app::adapters::web::view::cost",
-            "src::app::adapters::web::routes::agent_detail"
+            "src::app::transcript_extractor::cursors",
+            "src::infra::paths",
+            "src::app::scope",
+            "src::app::a2a_server",
+            "src::app::commands::dashboard"
           ]
         },
         {
           "component": "task",
           "impact_radius": 95,
           "sample_dependents": [
-            "src::app::serve",
-            "src::ports::bus",
-            "src::app::adapters::web::view::cost",
-            "src::app::adapters::web::routes::agent_detail",
-            "src::app::message"
+            "src::app::a2a_server",
+            "src::app::commands::dashboard",
+            "src::app::adapters::web",
+            "src::infra::dto::context",
+            "src::app::worker"
           ]
         },
         {
           "component": "context",
           "impact_radius": 94,
           "sample_dependents": [
-            "src::app::serve",
-            "src::ports::bus",
-            "src::app::adapters::web::view::cost",
-            "src::app::adapters::web::routes::agent_detail",
-            "src::app::message"
+            "src::app::a2a_server",
+            "src::app::commands::dashboard",
+            "src::app::adapters::web",
+            "src::infra::dto::context",
+            "src::app::worker"
           ]
         },
         {
           "component": "agent",
           "impact_radius": 93,
           "sample_dependents": [
-            "src::app::serve",
-            "src::ports::bus",
-            "src::app::adapters::web::view::cost",
-            "src::app::adapters::web::routes::agent_detail",
-            "src::app::message"
+            "src::app::a2a_server",
+            "src::app::commands::dashboard",
+            "src::app::adapters::web",
+            "src::infra::dto::context",
+            "src::app::worker"
           ]
         },
         {
           "component": "message",
           "impact_radius": 92,
           "sample_dependents": [
-            "src::app::serve",
-            "src::ports::bus",
-            "src::app::adapters::web::view::cost",
-            "src::app::adapters::web::routes::agent_detail",
-            "src::app::message"
+            "src::app::a2a_server",
+            "src::app::commands::dashboard",
+            "src::app::adapters::web",
+            "src::infra::dto::context",
+            "src::app::worker"
           ]
         },
         {
           "component": "statemachine",
           "impact_radius": 92,
           "sample_dependents": [
-            "src::app::serve",
-            "src::ports::bus",
-            "src::app::adapters::web::view::cost",
-            "src::app::adapters::web::routes::agent_detail",
-            "src::app::message"
+            "src::app::a2a_server",
+            "src::app::commands::dashboard",
+            "src::app::adapters::web",
+            "src::infra::dto::context",
+            "src::app::worker"
           ]
         },
         {
           "component": "bus",
           "impact_radius": 74,
           "sample_dependents": [
-            "src::app::serve",
-            "src::app::adapters::web::view::cost",
-            "src::app::adapters::web::routes::agent_detail",
-            "src::app::adapters::web::event_query",
-            "src::app::adapters::web::view::cards"
+            "src::app::a2a_server",
+            "src::app::commands::dashboard",
+            "src::app::adapters::web",
+            "src::app::worker",
+            "src::app::agent_process"
           ]
         },
         {
           "component": "events",
           "impact_radius": 61,
           "sample_dependents": [
-            "src::domain::workitem",
-            "src::app::serve",
-            "src::app::schedule",
-            "src::ports::bus",
-            "src::ports::store"
+            "src::app::commands::tui",
+            "src::app::transcript_extractor",
+            "src::app::commands::dashboard",
+            "src::app::process_builder",
+            "src::app::adapters::web"
           ]
         },
         {
           "component": "config_types",
           "impact_radius": 60,
           "sample_dependents": [
-            "src::domain::workitem",
-            "src::app::serve",
-            "src::app::schedule",
-            "src::ports::bus",
-            "src::ports::store"
+            "src::app::commands::tui",
+            "src::app::commands::dashboard",
+            "src::app::process_builder",
+            "src::app::adapters::web",
+            "src::infra::memory_bus"
           ]
         },
         {
           "component": "workitem",
           "impact_radius": 60,
           "sample_dependents": [
-            "src::domain::workitem",
-            "src::app::serve",
-            "src::app::schedule",
-            "src::ports::bus",
-            "src::ports::store"
+            "src::app::commands::tui",
+            "src::app::commands::dashboard",
+            "src::app::process_builder",
+            "src::app::adapters::web",
+            "src::infra::memory_bus"
           ]
         }
       ],
