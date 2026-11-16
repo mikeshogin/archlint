@@ -70,7 +70,7 @@
           "issue": "Зона боли: конкретный и стабильный"
         },
         {
-          "package": "src::font_style",
+          "package": "src::error",
           "abstractness": 0.0,
           "instability": 0.0,
           "distance": 1.0,
@@ -79,7 +79,7 @@
           "issue": "Зона боли: конкретный и стабильный"
         },
         {
-          "package": "src::error",
+          "package": "src::font_style",
           "abstractness": 0.0,
           "instability": 0.0,
           "distance": 1.0,
@@ -153,14 +153,16 @@
       ],
       "violations": [
         {
-          "package": "src::util",
+          "package": "src::types",
           "abstractness": 0.0,
-          "instability": 0.333,
-          "distance": 0.667,
-          "nodes_count": 1
+          "instability": 0.0,
+          "distance": 1.0,
+          "nodes_count": 1,
+          "zone": "pain",
+          "issue": "Зона боли: конкретный и стабильный"
         },
         {
-          "package": "src::types",
+          "package": "src::error",
           "abstractness": 0.0,
           "instability": 0.0,
           "distance": 1.0,
@@ -178,13 +180,11 @@
           "issue": "Зона боли: конкретный и стабильный"
         },
         {
-          "package": "src::error",
+          "package": "src::util",
           "abstractness": 0.0,
-          "instability": 0.0,
-          "distance": 1.0,
-          "nodes_count": 1,
-          "zone": "pain",
-          "issue": "Зона боли: конкретный и стабильный"
+          "instability": 0.333,
+          "distance": 0.667,
+          "nodes_count": 1
         },
         {
           "package": "src::FileTypes",
@@ -275,8 +275,8 @@
           "to": "util"
         },
         {
-          "from": "src::font_style",
-          "to": "src::theme"
+          "from": "src::theme",
+          "to": "src::font_style"
         },
         {
           "from": "src::theme",
@@ -311,11 +311,11 @@
           "closeness": 0.178
         },
         {
-          "node": "src::util",
+          "node": "src::types",
           "closeness": 0.125
         },
         {
-          "node": "src::types",
+          "node": "src::util",
           "closeness": 0.125
         },
         {
@@ -383,11 +383,11 @@
           "eigenvector": 0.577
         },
         {
-          "node": "src::util",
+          "node": "src::types",
           "eigenvector": 0.0
         },
         {
-          "node": "src::types",
+          "node": "src::util",
           "eigenvector": 0.0
         }
       ]
@@ -493,15 +493,15 @@
           "impact": 4
         },
         {
-          "node": "src::util",
-          "impact": 3
-        },
-        {
           "node": "src::types",
           "impact": 3
         },
         {
-          "node": "src::font_style",
+          "node": "src::util",
+          "impact": 3
+        },
+        {
+          "node": "src::color",
           "impact": 2
         }
       ],

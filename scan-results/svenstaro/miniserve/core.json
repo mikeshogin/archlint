@@ -20,8 +20,8 @@
       "status": "FAILED",
       "cycles": [
         [
-          "src::renderer",
-          "src::listing"
+          "src::listing",
+          "src::renderer"
         ]
       ],
       "cycles_count": 1
@@ -76,19 +76,13 @@
           "ce": 17
         },
         {
-          "node": "tests::auth",
+          "node": "tests::upload_files",
           "instability": 1.0,
           "ca": 0,
           "ce": 2
         },
         {
-          "node": "tests::serve_request",
-          "instability": 1.0,
-          "ca": 0,
-          "ce": 2
-        },
-        {
-          "node": "tests::readme",
+          "node": "tests::bind",
           "instability": 1.0,
           "ca": 0,
           "ce": 2
@@ -98,19 +92,25 @@
           "instability": 1.0,
           "ca": 0,
           "ce": 2
+        },
+        {
+          "node": "tests::header",
+          "instability": 1.0,
+          "ca": 0,
+          "ce": 2
         }
       ],
       "most_stable": [
         {
-          "node": "renderer",
+          "node": "AuthParseError",
           "instability": 0.0,
           "ca": 1,
           "ce": 0
         },
         {
-          "node": "webdav_fs",
+          "node": "RequiredAuthPassword",
           "instability": 0.0,
-          "ca": 1,
+          "ca": 2,
           "ce": 0
         },
         {
@@ -120,13 +120,13 @@
           "ce": 0
         },
         {
-          "node": "utils",
+          "node": "fake_tty",
           "instability": 0.0,
           "ca": 1,
           "ce": 0
         },
         {
-          "node": "fake_tty",
+          "node": "utils",
           "instability": 0.0,
           "ca": 1,
           "ce": 0
@@ -213,8 +213,8 @@
       "description": "Компоненты без связей (возможно мертвый код)",
       "status": "WARNING",
       "orphans": [
-        "src::pipe",
-        "build"
+        "build",
+        "src::pipe"
       ],
       "orphans_count": 2
     },
@@ -225,8 +225,8 @@
       "total_sccs": 53,
       "problematic_sccs": [
         [
-          "src::renderer",
-          "src::listing"
+          "src::listing",
+          "src::renderer"
         ]
       ],
       "problematic_count": 1
