@@ -28,8 +28,13 @@
       "threshold": 10,
       "violations": [
         {
-          "node": "src::app",
-          "fan_out": 47,
+          "node": "src::infra",
+          "fan_out": 11,
+          "threshold": 10
+        },
+        {
+          "node": "src::app::commands",
+          "fan_out": 19,
           "threshold": 10
         },
         {
@@ -43,13 +48,8 @@
           "threshold": 10
         },
         {
-          "node": "src::app::commands",
-          "fan_out": 19,
-          "threshold": 10
-        },
-        {
-          "node": "src::infra",
-          "fan_out": 11,
+          "node": "src::app",
+          "fan_out": 47,
           "threshold": 10
         }
       ],
@@ -62,41 +62,6 @@
       "ca_threshold": 10,
       "ce_threshold": 10,
       "violations": [
-        {
-          "node": "src::app",
-          "afferent_coupling": 57,
-          "efferent_coupling": 47,
-          "ca_threshold": 10,
-          "ce_threshold": 10
-        },
-        {
-          "node": "src::app::adapters::web",
-          "afferent_coupling": 0,
-          "efferent_coupling": 18,
-          "ca_threshold": 10,
-          "ce_threshold": 10
-        },
-        {
-          "node": "src::app::adapters::web::routes",
-          "afferent_coupling": 0,
-          "efferent_coupling": 16,
-          "ca_threshold": 10,
-          "ce_threshold": 10
-        },
-        {
-          "node": "src::app::commands",
-          "afferent_coupling": 0,
-          "efferent_coupling": 19,
-          "ca_threshold": 10,
-          "ce_threshold": 10
-        },
-        {
-          "node": "src::ports",
-          "afferent_coupling": 21,
-          "efferent_coupling": 4,
-          "ca_threshold": 10,
-          "ce_threshold": 10
-        },
         {
           "node": "src::config",
           "afferent_coupling": 34,
@@ -119,6 +84,41 @@
           "ce_threshold": 10
         },
         {
+          "node": "src::ports",
+          "afferent_coupling": 21,
+          "efferent_coupling": 4,
+          "ca_threshold": 10,
+          "ce_threshold": 10
+        },
+        {
+          "node": "src::app::commands",
+          "afferent_coupling": 0,
+          "efferent_coupling": 19,
+          "ca_threshold": 10,
+          "ce_threshold": 10
+        },
+        {
+          "node": "src::app::adapters::web",
+          "afferent_coupling": 0,
+          "efferent_coupling": 18,
+          "ca_threshold": 10,
+          "ce_threshold": 10
+        },
+        {
+          "node": "src::app::adapters::web::routes",
+          "afferent_coupling": 0,
+          "efferent_coupling": 16,
+          "ca_threshold": 10,
+          "ce_threshold": 10
+        },
+        {
+          "node": "src::app",
+          "afferent_coupling": 57,
+          "efferent_coupling": 47,
+          "ca_threshold": 10,
+          "ce_threshold": 10
+        },
+        {
           "node": "deskd",
           "afferent_coupling": 17,
           "efferent_coupling": 0,
@@ -134,63 +134,63 @@
       "status": "ERROR",
       "most_unstable": [
         {
-          "node": "src::app::metrics",
+          "node": "src::lib",
           "instability": 1.0,
           "ca": 0,
-          "ce": 4
+          "ce": 6
         },
         {
-          "node": "src::app::mcp_tools",
+          "node": "src::infra::sm_store",
           "instability": 1.0,
           "ca": 0,
-          "ce": 5
+          "ce": 3
         },
         {
-          "node": "src::app::agent_state",
+          "node": "src::infra::dto::context",
+          "instability": 1.0,
+          "ca": 0,
+          "ce": 1
+        },
+        {
+          "node": "src::infra::dto::config",
           "instability": 1.0,
           "ca": 0,
           "ce": 2
         },
         {
-          "node": "src::app::session_discover",
+          "node": "src::infra::dto::bus",
           "instability": 1.0,
           "ca": 0,
-          "ce": 2
-        },
-        {
-          "node": "src::app::process_builder",
-          "instability": 1.0,
-          "ca": 0,
-          "ce": 5
+          "ce": 3
         }
       ],
       "most_stable": [
         {
-          "node": "src::__diag_details",
+          "node": "src::patterns",
           "instability": 0.0,
           "ca": 1,
           "ce": 0
         },
         {
-          "node": "config_types",
+          "node": "cursors",
           "instability": 0.0,
           "ca": 1,
           "ce": 0
         },
         {
-          "node": "workitem",
+          "node": "event_store",
           "instability": 0.0,
           "ca": 1,
           "ce": 0
         },
         {
-          "node": "src::agent",
+          "node": "parser",
           "instability": 0.0,
           "ca": 1,
           "ce": 0
         },
         {
-          "node": "src::context",
+          "node": "patterns",
           "instability": 0.0,
           "ca": 1,
           "ce": 0
@@ -334,19 +334,19 @@
       "description": "Компоненты без связей (возможно мертвый код)",
       "status": "WARNING",
       "orphans": [
-        "build",
-        "src::app::adapters::web::middleware::headers",
-        "src::app::adapters::web::routes::health",
+        "src::domain::message",
+        "src::ports::executor",
         "src::app::commands::restart",
         "src::app::cli",
-        "src::ports::executor",
-        "src::domain::message",
-        "tests::agent_lifecycle",
+        "src::app::adapters::web::middleware::headers",
+        "src::app::adapters::web::routes::health",
+        "build",
         "tests::agent_state_mcp",
+        "tests::crash_recovery",
         "tests::schedule_to_worker",
-        "tests::mcp_channel_subprocess",
         "tests::diag_publish",
-        "tests::crash_recovery"
+        "tests::agent_lifecycle",
+        "tests::mcp_channel_subprocess"
       ],
       "orphans_count": 13
     },
@@ -365,7 +365,7 @@
       "depth": 3,
       "max_depth": 10,
       "longest_path": [
-        "src::app::metrics",
+        "src::infra::agent_file",
         "src::config",
         "src::domain",
         "agent"

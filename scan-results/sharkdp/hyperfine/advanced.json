@@ -55,16 +55,7 @@
       "status": "WARNING",
       "packages": [
         {
-          "package": "src::error",
-          "abstractness": 0.0,
-          "instability": 0.0,
-          "distance": 1.0,
-          "nodes_count": 1,
-          "zone": "pain",
-          "issue": "Зона боли: конкретный и стабильный"
-        },
-        {
-          "package": "src::export::asciidoc",
+          "package": "src::export::json",
           "abstractness": 1.0,
           "instability": 1.0,
           "distance": 1.0,
@@ -91,7 +82,7 @@
           "issue": "Зона бесполезности: абстрактный и нестабильный"
         },
         {
-          "package": "src::export::json",
+          "package": "src::export::csv",
           "abstractness": 1.0,
           "instability": 1.0,
           "distance": 1.0,
@@ -100,7 +91,7 @@
           "issue": "Зона бесполезности: абстрактный и нестабильный"
         },
         {
-          "package": "src::export::csv",
+          "package": "src::export::asciidoc",
           "abstractness": 1.0,
           "instability": 1.0,
           "distance": 1.0,
@@ -118,15 +109,6 @@
           "issue": "Зона бесполезности: абстрактный и нестабильный"
         },
         {
-          "package": "src::output::report",
-          "abstractness": 1.0,
-          "instability": 1.0,
-          "distance": 1.0,
-          "nodes_count": 1,
-          "zone": "uselessness",
-          "issue": "Зона бесполезности: абстрактный и нестабильный"
-        },
-        {
           "package": "src::cli",
           "abstractness": 0.0,
           "instability": 0.0,
@@ -136,7 +118,25 @@
           "issue": "Зона боли: конкретный и стабильный"
         },
         {
-          "package": "exit_code",
+          "package": "src::error",
+          "abstractness": 0.0,
+          "instability": 0.0,
+          "distance": 1.0,
+          "nodes_count": 1,
+          "zone": "pain",
+          "issue": "Зона боли: конкретный и стабильный"
+        },
+        {
+          "package": "src::output::report",
+          "abstractness": 1.0,
+          "instability": 1.0,
+          "distance": 1.0,
+          "nodes_count": 1,
+          "zone": "uselessness",
+          "issue": "Зона бесполезности: абстрактный и нестабильный"
+        },
+        {
+          "package": "windows_sys",
           "abstractness": 0.0,
           "instability": 0.0,
           "distance": 1.0,
@@ -147,41 +147,49 @@
       ],
       "violations": [
         {
-          "package": "src::metric",
-          "abstractness": 0.0,
-          "instability": 0.25,
-          "distance": 0.75,
-          "nodes_count": 1
-        },
-        {
-          "package": "src::util",
-          "abstractness": 0.0,
-          "instability": 0.429,
-          "distance": 0.571,
-          "nodes_count": 1
-        },
-        {
-          "package": "src::outlier_detection",
-          "abstractness": 0.0,
-          "instability": 0.333,
-          "distance": 0.667,
-          "nodes_count": 1
-        },
-        {
-          "package": "src::quantity",
-          "abstractness": 0.0,
-          "instability": 0.143,
-          "distance": 0.857,
+          "package": "src::export::json",
+          "abstractness": 1.0,
+          "instability": 1.0,
+          "distance": 1.0,
           "nodes_count": 1,
-          "zone": "pain",
-          "issue": "Зона боли: конкретный и стабильный"
+          "zone": "uselessness",
+          "issue": "Зона бесполезности: абстрактный и нестабильный"
         },
         {
-          "package": "src::command",
-          "abstractness": 0.0,
-          "instability": 0.333,
-          "distance": 0.667,
-          "nodes_count": 1
+          "package": "src::export::orgmode",
+          "abstractness": 1.0,
+          "instability": 1.0,
+          "distance": 1.0,
+          "nodes_count": 1,
+          "zone": "uselessness",
+          "issue": "Зона бесполезности: абстрактный и нестабильный"
+        },
+        {
+          "package": "src::export::markup",
+          "abstractness": 1.0,
+          "instability": 1.0,
+          "distance": 1.0,
+          "nodes_count": 1,
+          "zone": "uselessness",
+          "issue": "Зона бесполезности: абстрактный и нестабильный"
+        },
+        {
+          "package": "src::export::csv",
+          "abstractness": 1.0,
+          "instability": 1.0,
+          "distance": 1.0,
+          "nodes_count": 1,
+          "zone": "uselessness",
+          "issue": "Зона бесполезности: абстрактный и нестабильный"
+        },
+        {
+          "package": "src::export::asciidoc",
+          "abstractness": 1.0,
+          "instability": 1.0,
+          "distance": 1.0,
+          "nodes_count": 1,
+          "zone": "uselessness",
+          "issue": "Зона бесполезности: абстрактный и нестабильный"
         }
       ],
       "violations_count": 68
@@ -194,7 +202,7 @@
       "threshold": 0.1,
       "low_clustering_nodes": [
         {
-          "node": "src::util",
+          "node": "src::timer::windows_timer",
           "coefficient": 0.0
         },
         {
@@ -202,23 +210,15 @@
           "coefficient": 0.028
         },
         {
-          "node": "src::timer::windows_timer",
-          "coefficient": 0.0
-        },
-        {
-          "node": "src::main",
-          "coefficient": 0.0
-        },
-        {
-          "node": "src::error",
-          "coefficient": 0.0
-        },
-        {
-          "node": "src::export::asciidoc",
+          "node": "src::parameter::range_step",
           "coefficient": 0.0
         },
         {
           "node": "src::export::orgmode",
+          "coefficient": 0.0
+        },
+        {
+          "node": "src::export::asciidoc",
           "coefficient": 0.0
         },
         {
@@ -230,7 +230,15 @@
           "coefficient": 0.0
         },
         {
-          "node": "src::parameter::range_step",
+          "node": "src::benchmark::scheduler",
+          "coefficient": 0.095
+        },
+        {
+          "node": "src::benchmark",
+          "coefficient": 0.087
+        },
+        {
+          "node": "src::main",
           "coefficient": 0.0
         }
       ],
@@ -251,17 +259,17 @@
       "status": "WARNING",
       "articulation_points": [
         "src::timer",
-        "src::timer::windows_timer",
-        "src::util",
-        "src::benchmark::scheduler",
-        "src::export",
-        "tests",
-        "src::options",
-        "src::output",
-        "src::export::json",
-        "src::parameter",
-        "src::quantity",
         "src::benchmark",
+        "src::export",
+        "src::benchmark::scheduler",
+        "src::output",
+        "src::parameter",
+        "src::util",
+        "src::options",
+        "tests",
+        "src::export::json",
+        "src::timer::windows_timer",
+        "src::quantity",
         "src::main",
         "common"
       ],
@@ -274,24 +282,20 @@
       "status": "INFO",
       "bridges": [
         {
-          "from": "src::shell_syntax",
-          "to": "tests"
-        },
-        {
-          "from": "src::util",
-          "to": "exit_code"
-        },
-        {
-          "from": "src::util",
-          "to": "number"
-        },
-        {
-          "from": "src::util",
-          "to": "randomized_environment_offset"
-        },
-        {
           "from": "src::timer::unix_timer",
           "to": "src::quantity"
+        },
+        {
+          "from": "src::timer::macos_counters",
+          "to": "src::benchmark"
+        },
+        {
+          "from": "src::timer::linux_counters",
+          "to": "src::benchmark"
+        },
+        {
+          "from": "src::timer::windows_timer",
+          "to": "once_cell"
         },
         {
           "from": "src::timer",
@@ -322,36 +326,40 @@
           "to": "src::quantity"
         },
         {
-          "from": "src::timer::macos_counters",
-          "to": "src::benchmark"
+          "from": "src::parameter",
+          "to": "range_step"
         },
         {
-          "from": "src::timer::linux_counters",
-          "to": "src::benchmark"
+          "from": "src::parameter",
+          "to": "tokenize"
         },
         {
-          "from": "src::timer::windows_timer",
-          "to": "once_cell"
+          "from": "src::export::json",
+          "to": "metadata"
         },
         {
-          "from": "src::main",
-          "to": "benchmark"
+          "from": "src::export",
+          "to": "asciidoc"
         },
         {
-          "from": "src::main",
-          "to": "cli"
+          "from": "src::export",
+          "to": "csv"
         },
         {
-          "from": "src::main",
-          "to": "command"
+          "from": "src::export",
+          "to": "json"
         },
         {
-          "from": "src::main",
-          "to": "error"
+          "from": "src::export",
+          "to": "markdown"
         },
         {
-          "from": "src::main",
-          "to": "export"
+          "from": "src::export",
+          "to": "markup"
+        },
+        {
+          "from": "src::export",
+          "to": "orgmode"
         }
       ],
       "count": 59
@@ -594,110 +602,110 @@
           "component": "si",
           "impact_radius": 26,
           "sample_dependents": [
+            "src::output::warnings",
             "src::timer::linux_counters",
-            "src::metric",
+            "src::benchmark::measurement",
             "src::output::progress_bar",
-            "src::export::csv",
-            "src::export::orgmode"
+            "src::export"
           ]
         },
         {
           "component": "statistics",
           "impact_radius": 26,
           "sample_dependents": [
+            "src::output::warnings",
             "src::timer::linux_counters",
-            "src::metric",
+            "src::benchmark::measurement",
             "src::output::progress_bar",
-            "src::export::csv",
-            "src::export::orgmode"
+            "src::export"
           ]
         },
         {
           "component": "src::quantity",
           "impact_radius": 25,
           "sample_dependents": [
+            "src::output::warnings",
             "src::timer::linux_counters",
-            "src::metric",
+            "src::benchmark::benchmark_result",
             "src::output::progress_bar",
-            "src::export::csv",
-            "src::export::orgmode"
+            "src::export"
           ]
         },
         {
           "component": "exit_code",
           "impact_radius": 25,
           "sample_dependents": [
-            "src::parameter",
+            "src::output::warnings",
             "src::timer::linux_counters",
-            "src::metric",
-            "src::output::progress_bar",
-            "src::export::csv"
+            "src::util",
+            "src::benchmark::benchmark_result",
+            "src::output::progress_bar"
           ]
         },
         {
           "component": "number",
           "impact_radius": 25,
           "sample_dependents": [
-            "src::parameter",
+            "src::output::warnings",
             "src::timer::linux_counters",
-            "src::metric",
-            "src::output::progress_bar",
-            "src::export::csv"
+            "src::util",
+            "src::benchmark::benchmark_result",
+            "src::output::progress_bar"
           ]
         },
         {
           "component": "randomized_environment_offset",
           "impact_radius": 25,
           "sample_dependents": [
-            "src::parameter",
+            "src::output::warnings",
             "src::timer::linux_counters",
-            "src::metric",
-            "src::output::progress_bar",
-            "src::export::csv"
+            "src::util",
+            "src::benchmark::benchmark_result",
+            "src::output::progress_bar"
           ]
         },
         {
           "component": "src::util",
           "impact_radius": 24,
           "sample_dependents": [
-            "src::parameter",
+            "src::output::warnings",
             "src::timer::linux_counters",
-            "src::metric",
+            "src::benchmark::benchmark_result",
             "src::output::progress_bar",
-            "src::export::csv"
+            "src::export"
           ]
         },
         {
           "component": "tests",
           "impact_radius": 24,
           "sample_dependents": [
+            "src::output::warnings",
             "src::timer::linux_counters",
-            "src::metric",
+            "src::benchmark::measurement",
             "src::output::progress_bar",
-            "src::export::csv",
-            "src::export::orgmode"
+            "src::export"
           ]
         },
         {
           "component": "range_step",
           "impact_radius": 23,
           "sample_dependents": [
-            "src::parameter",
+            "src::output::warnings",
             "src::timer::linux_counters",
-            "src::metric",
+            "src::benchmark::benchmark_result",
             "src::output::progress_bar",
-            "src::export::csv"
+            "src::export"
           ]
         },
         {
           "component": "tokenize",
           "impact_radius": 23,
           "sample_dependents": [
-            "src::parameter",
+            "src::output::warnings",
             "src::timer::linux_counters",
-            "src::metric",
+            "src::benchmark::benchmark_result",
             "src::output::progress_bar",
-            "src::export::csv"
+            "src::export"
           ]
         }
       ],

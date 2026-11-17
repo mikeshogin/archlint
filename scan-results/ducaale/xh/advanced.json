@@ -61,6 +61,15 @@
       "status": "WARNING",
       "packages": [
         {
+          "package": "src::redacted",
+          "abstractness": 0.0,
+          "instability": 0.0,
+          "distance": 1.0,
+          "nodes_count": 1,
+          "zone": "pain",
+          "issue": "Зона боли: конкретный и стабильный"
+        },
+        {
           "package": "src::middleware",
           "abstractness": 0.0,
           "instability": 0.0,
@@ -70,7 +79,7 @@
           "issue": "Зона боли: конкретный и стабильный"
         },
         {
-          "package": "src::redacted",
+          "package": "RequestItem",
           "abstractness": 0.0,
           "instability": 0.0,
           "distance": 1.0,
@@ -89,6 +98,15 @@
         },
         {
           "package": "Token",
+          "abstractness": 0.0,
+          "instability": 0.0,
+          "distance": 1.0,
+          "nodes_count": 1,
+          "zone": "pain",
+          "issue": "Зона боли: конкретный и стабильный"
+        },
+        {
+          "package": "imp",
           "abstractness": 0.0,
           "instability": 0.0,
           "distance": 1.0,
@@ -131,24 +149,6 @@
           "nodes_count": 1,
           "zone": "pain",
           "issue": "Зона боли: конкретный и стабильный"
-        },
-        {
-          "package": "decoder",
-          "abstractness": 0.0,
-          "instability": 0.0,
-          "distance": 1.0,
-          "nodes_count": 1,
-          "zone": "pain",
-          "issue": "Зона боли: конкретный и стабильный"
-        },
-        {
-          "package": "download",
-          "abstractness": 0.0,
-          "instability": 0.0,
-          "distance": 1.0,
-          "nodes_count": 1,
-          "zone": "pain",
-          "issue": "Зона боли: конкретный и стабильный"
         }
       ],
       "violations": [
@@ -162,7 +162,7 @@
           "issue": "Зона боли: конкретный и стабильный"
         },
         {
-          "package": "src::middleware",
+          "package": "src::redacted",
           "abstractness": 0.0,
           "instability": 0.0,
           "distance": 1.0,
@@ -171,7 +171,7 @@
           "issue": "Зона боли: конкретный и стабильный"
         },
         {
-          "package": "src::redacted",
+          "package": "src::middleware",
           "abstractness": 0.0,
           "instability": 0.0,
           "distance": 1.0,
@@ -187,7 +187,7 @@
           "nodes_count": 1
         },
         {
-          "package": "PathAction",
+          "package": "RequestItem",
           "abstractness": 0.0,
           "instability": 0.0,
           "distance": 1.0,
@@ -250,17 +250,17 @@
       "description": "Критические узлы (удаление разбивает граф)",
       "status": "WARNING",
       "articulation_points": [
-        "src::nested_json",
         "src::main",
         "tests::cases",
         "download",
         "src::buffer",
-        "src::cli",
+        "tests",
         "src::formatting::palette",
         "src::formatting",
         "src::printer",
+        "src::nested_json",
         "src::request_items",
-        "tests",
+        "src::cli",
         "tests::prelude",
         "tests::cli"
       ],
@@ -273,12 +273,32 @@
       "status": "INFO",
       "bridges": [
         {
+          "from": "src::request_items",
+          "to": "RequestItem"
+        },
+        {
           "from": "src::nested_json",
           "to": "PathAction"
         },
         {
           "from": "src::nested_json",
           "to": "Token"
+        },
+        {
+          "from": "src::redacted",
+          "to": "src::cli"
+        },
+        {
+          "from": "src::buffer",
+          "to": "imp"
+        },
+        {
+          "from": "src::message_signature",
+          "to": "tests"
+        },
+        {
+          "from": "src::printer",
+          "to": "src::formatting"
         },
         {
           "from": "src::main",
@@ -331,26 +351,6 @@
         {
           "from": "src::main",
           "to": "netrc"
-        },
-        {
-          "from": "src::main",
-          "to": "printer"
-        },
-        {
-          "from": "src::main",
-          "to": "redacted"
-        },
-        {
-          "from": "src::main",
-          "to": "redirect"
-        },
-        {
-          "from": "src::main",
-          "to": "request_items"
-        },
-        {
-          "from": "src::main",
-          "to": "session"
         }
       ],
       "count": 46
@@ -483,10 +483,10 @@
       "large_cliques": [
         [
           "src::to_curl",
-          "src::utils",
+          "tests",
           "src::request_items",
           "src::cli",
-          "tests"
+          "src::utils"
         ]
       ],
       "large_cliques_count": 1,

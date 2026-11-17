@@ -62,7 +62,7 @@
           "nodes_count": 5
         },
         {
-          "package": "pkg::threat::threat",
+          "package": "pkg::classifier::classifier_test",
           "abstractness": 0.0,
           "instability": 0.5,
           "distance": 0.5,
@@ -76,21 +76,7 @@
           "nodes_count": 1
         },
         {
-          "package": "pkg::config::config",
-          "abstractness": 0.0,
-          "instability": 0.5,
-          "distance": 0.5,
-          "nodes_count": 1
-        },
-        {
-          "package": "pkg::config::config_test",
-          "abstractness": 0.0,
-          "instability": 0.5,
-          "distance": 0.5,
-          "nodes_count": 1
-        },
-        {
-          "package": "pkg::classifier::classifier_test",
+          "package": "pkg::threat::threat",
           "abstractness": 0.0,
           "instability": 0.5,
           "distance": 0.5,
@@ -104,14 +90,28 @@
           "nodes_count": 1
         },
         {
-          "package": "pkg::report::report_test",
-          "abstractness": 1.0,
+          "package": "pkg::config::config_test",
+          "abstractness": 0.0,
+          "instability": 0.5,
+          "distance": 0.5,
+          "nodes_count": 1
+        },
+        {
+          "package": "pkg::config::config",
+          "abstractness": 0.0,
           "instability": 0.5,
           "distance": 0.5,
           "nodes_count": 1
         },
         {
           "package": "pkg::report::report",
+          "abstractness": 1.0,
+          "instability": 0.5,
+          "distance": 0.5,
+          "nodes_count": 1
+        },
+        {
+          "package": "pkg::report::report_test",
           "abstractness": 1.0,
           "instability": 0.5,
           "distance": 0.5,
@@ -247,7 +247,11 @@
           "closeness": 0.0
         },
         {
-          "node": "pkg::threat::threat",
+          "node": "pkg::classifier::classifier",
+          "closeness": 0.0
+        },
+        {
+          "node": "pkg::classifier::classifier_test",
           "closeness": 0.0
         },
         {
@@ -255,11 +259,7 @@
           "closeness": 0.0
         },
         {
-          "node": "pkg::config::config",
-          "closeness": 0.0
-        },
-        {
-          "node": "pkg::config::config_test",
+          "node": "pkg::threat::threat",
           "closeness": 0.0
         }
       ],

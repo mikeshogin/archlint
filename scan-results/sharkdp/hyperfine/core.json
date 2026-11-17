@@ -23,9 +23,9 @@
           "src::benchmark"
         ],
         [
+          "src::options",
           "src::metric",
-          "src::benchmark",
-          "src::options"
+          "src::benchmark"
         ]
       ],
       "cycles_count": 2
@@ -37,11 +37,6 @@
       "threshold": 10,
       "violations": [
         {
-          "node": "src::main",
-          "fan_out": 14,
-          "threshold": 10
-        },
-        {
           "node": "src::export",
           "fan_out": 15,
           "threshold": 10
@@ -49,6 +44,11 @@
         {
           "node": "src::benchmark",
           "fan_out": 12,
+          "threshold": 10
+        },
+        {
+          "node": "src::main",
+          "fan_out": 14,
           "threshold": 10
         }
       ],
@@ -62,20 +62,6 @@
       "ce_threshold": 10,
       "violations": [
         {
-          "node": "src::main",
-          "afferent_coupling": 0,
-          "efferent_coupling": 14,
-          "ca_threshold": 10,
-          "ce_threshold": 10
-        },
-        {
-          "node": "src::quantity",
-          "afferent_coupling": 12,
-          "efferent_coupling": 2,
-          "ca_threshold": 10,
-          "ce_threshold": 10
-        },
-        {
           "node": "src::export",
           "afferent_coupling": 5,
           "efferent_coupling": 15,
@@ -88,6 +74,20 @@
           "efferent_coupling": 12,
           "ca_threshold": 10,
           "ce_threshold": 10
+        },
+        {
+          "node": "src::main",
+          "afferent_coupling": 0,
+          "efferent_coupling": 14,
+          "ca_threshold": 10,
+          "ce_threshold": 10
+        },
+        {
+          "node": "src::quantity",
+          "afferent_coupling": 12,
+          "efferent_coupling": 2,
+          "ca_threshold": 10,
+          "ce_threshold": 10
         }
       ],
       "violations_count": 4
@@ -98,19 +98,7 @@
       "status": "ERROR",
       "most_unstable": [
         {
-          "node": "src::shell_syntax",
-          "instability": 1.0,
-          "ca": 0,
-          "ce": 1
-        },
-        {
           "node": "src::timer::unix_timer",
-          "instability": 1.0,
-          "ca": 0,
-          "ce": 1
-        },
-        {
-          "node": "src::timer::wall_clock_timer",
           "instability": 1.0,
           "ca": 0,
           "ce": 1
@@ -126,29 +114,41 @@
           "instability": 1.0,
           "ca": 0,
           "ce": 1
+        },
+        {
+          "node": "src::timer::windows_timer",
+          "instability": 1.0,
+          "ca": 0,
+          "ce": 3
+        },
+        {
+          "node": "src::timer::wall_clock_timer",
+          "instability": 1.0,
+          "ca": 0,
+          "ce": 1
         }
       ],
       "most_stable": [
         {
-          "node": "scheduler",
+          "node": "statistics",
           "instability": 0.0,
           "ca": 1,
           "ce": 0
         },
         {
-          "node": "src::executor",
-          "instability": 0.0,
-          "ca": 2,
-          "ce": 0
-        },
-        {
-          "node": "src::benchmark_result",
+          "node": "progress_bar",
           "instability": 0.0,
           "ca": 1,
           "ce": 0
         },
         {
-          "node": "src::Benchmark",
+          "node": "report",
+          "instability": 0.0,
+          "ca": 1,
+          "ce": 0
+        },
+        {
+          "node": "warnings",
           "instability": 0.0,
           "ca": 1,
           "ce": 0
@@ -162,6 +162,13 @@
       ],
       "violations": [
         {
+          "from": "src::benchmark",
+          "to": "src::parameter",
+          "from_instability": 0.462,
+          "to_instability": 0.6,
+          "issue": "Зависимость направлена к менее стабильному компоненту"
+        },
+        {
           "from": "src::metric",
           "to": "src::benchmark",
           "from_instability": 0.25,
@@ -172,13 +179,6 @@
           "from": "src::command",
           "to": "src::parameter",
           "from_instability": 0.333,
-          "to_instability": 0.6,
-          "issue": "Зависимость направлена к менее стабильному компоненту"
-        },
-        {
-          "from": "src::benchmark",
-          "to": "src::parameter",
-          "from_instability": 0.462,
           "to_instability": 0.6,
           "issue": "Зависимость направлена к менее стабильному компоненту"
         }
@@ -281,12 +281,12 @@
       "description": "Компоненты без связей (возможно мертвый код)",
       "status": "WARNING",
       "orphans": [
-        "build",
+        "src::parameter::tokenize",
+        "src::export::json::metadata",
+        "src::util::exit_code",
         "src::util::randomized_environment_offset",
         "src::util::number",
-        "src::util::exit_code",
-        "src::export::json::metadata",
-        "src::parameter::tokenize",
+        "build",
         "tests::common"
       ],
       "orphans_count": 7
@@ -298,8 +298,8 @@
       "total_sccs": 98,
       "problematic_sccs": [
         [
-          "src::metric",
           "src::options",
+          "src::metric",
           "src::benchmark"
         ]
       ],
