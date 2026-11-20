@@ -23,9 +23,9 @@
           "src::benchmark"
         ],
         [
-          "src::options",
           "src::metric",
-          "src::benchmark"
+          "src::benchmark",
+          "src::options"
         ]
       ],
       "cycles_count": 2
@@ -37,8 +37,8 @@
       "threshold": 10,
       "violations": [
         {
-          "node": "src::export",
-          "fan_out": 15,
+          "node": "src::main",
+          "fan_out": 14,
           "threshold": 10
         },
         {
@@ -47,8 +47,8 @@
           "threshold": 10
         },
         {
-          "node": "src::main",
-          "fan_out": 14,
+          "node": "src::export",
+          "fan_out": 15,
           "threshold": 10
         }
       ],
@@ -62,9 +62,9 @@
       "ce_threshold": 10,
       "violations": [
         {
-          "node": "src::export",
-          "afferent_coupling": 5,
-          "efferent_coupling": 15,
+          "node": "src::main",
+          "afferent_coupling": 0,
+          "efferent_coupling": 14,
           "ca_threshold": 10,
           "ce_threshold": 10
         },
@@ -76,9 +76,9 @@
           "ce_threshold": 10
         },
         {
-          "node": "src::main",
-          "afferent_coupling": 0,
-          "efferent_coupling": 14,
+          "node": "src::export",
+          "afferent_coupling": 5,
+          "efferent_coupling": 15,
           "ca_threshold": 10,
           "ce_threshold": 10
         },
@@ -98,7 +98,19 @@
       "status": "ERROR",
       "most_unstable": [
         {
-          "node": "src::timer::unix_timer",
+          "node": "tests::integration_tests",
+          "instability": 1.0,
+          "ca": 0,
+          "ce": 1
+        },
+        {
+          "node": "tests::execution_order_tests",
+          "instability": 1.0,
+          "ca": 0,
+          "ce": 1
+        },
+        {
+          "node": "src::timer::wall_clock_timer",
           "instability": 1.0,
           "ca": 0,
           "ce": 1
@@ -110,19 +122,7 @@
           "ce": 1
         },
         {
-          "node": "src::timer::linux_counters",
-          "instability": 1.0,
-          "ca": 0,
-          "ce": 1
-        },
-        {
-          "node": "src::timer::windows_timer",
-          "instability": 1.0,
-          "ca": 0,
-          "ce": 3
-        },
-        {
-          "node": "src::timer::wall_clock_timer",
+          "node": "src::timer::unix_timer",
           "instability": 1.0,
           "ca": 0,
           "ce": 1
@@ -130,33 +130,33 @@
       ],
       "most_stable": [
         {
+          "node": "src::markdown",
+          "instability": 0.0,
+          "ca": 1,
+          "ce": 0
+        },
+        {
+          "node": "src::orgmode",
+          "instability": 0.0,
+          "ca": 1,
+          "ce": 0
+        },
+        {
+          "node": "metadata",
+          "instability": 0.0,
+          "ca": 1,
+          "ce": 0
+        },
+        {
+          "node": "si",
+          "instability": 0.0,
+          "ca": 1,
+          "ce": 0
+        },
+        {
           "node": "statistics",
           "instability": 0.0,
           "ca": 1,
-          "ce": 0
-        },
-        {
-          "node": "progress_bar",
-          "instability": 0.0,
-          "ca": 1,
-          "ce": 0
-        },
-        {
-          "node": "report",
-          "instability": 0.0,
-          "ca": 1,
-          "ce": 0
-        },
-        {
-          "node": "warnings",
-          "instability": 0.0,
-          "ca": 1,
-          "ce": 0
-        },
-        {
-          "node": "common",
-          "instability": 0.0,
-          "ca": 2,
           "ce": 0
         }
       ],
@@ -281,13 +281,13 @@
       "description": "Компоненты без связей (возможно мертвый код)",
       "status": "WARNING",
       "orphans": [
+        "tests::common",
+        "src::util::randomized_environment_offset",
+        "src::util::exit_code",
+        "src::util::number",
         "src::parameter::tokenize",
         "src::export::json::metadata",
-        "src::util::exit_code",
-        "src::util::randomized_environment_offset",
-        "src::util::number",
-        "build",
-        "tests::common"
+        "build"
       ],
       "orphans_count": 7
     },
@@ -298,8 +298,8 @@
       "total_sccs": 98,
       "problematic_sccs": [
         [
-          "src::options",
           "src::metric",
+          "src::options",
           "src::benchmark"
         ]
       ],

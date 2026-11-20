@@ -24,16 +24,16 @@
           "package": "src::main",
           "domains_count": 17,
           "domains": [
-            "file_op",
+            "listing",
+            "src::file_op",
             "webdav_fs",
-            "errors",
-            "src::webdav_fs",
-            "consts",
+            "renderer",
             "args",
-            "src::config",
-            "archive",
+            "auth",
+            "pipe",
             "src::errors",
-            "renderer"
+            "src::webdav_fs",
+            "file_utils"
           ]
         },
         {
@@ -41,11 +41,11 @@
           "domains_count": 7,
           "domains": [
             "src::renderer",
-            "tests",
-            "src::auth",
             "auth",
-            "RequiredAuthPassword",
+            "tests",
             "src::listing",
+            "RequiredAuthPassword",
+            "src::auth",
             "AuthParseError"
           ]
         },
@@ -53,12 +53,22 @@
           "package": "src::listing",
           "domains_count": 6,
           "domains": [
+            "src::archive",
             "src::renderer",
             "src::percent_encode_sets",
             "src::errors",
             "src::auth",
-            "percent_encode_sets",
-            "src::archive"
+            "percent_encode_sets"
+          ]
+        },
+        {
+          "package": "tests::navigation",
+          "domains_count": 4,
+          "domains": [
+            "tests::fixtures",
+            "tests::utils",
+            "fixtures",
+            "utils"
           ]
         },
         {
@@ -66,19 +76,9 @@
           "domains_count": 4,
           "domains": [
             "src::consts",
-            "src::listing",
             "tests",
+            "src::listing",
             "src::auth"
-          ]
-        },
-        {
-          "package": "tests::navigation",
-          "domains_count": 4,
-          "domains": [
-            "fixtures",
-            "utils",
-            "tests::utils",
-            "tests::fixtures"
           ]
         }
       ],
