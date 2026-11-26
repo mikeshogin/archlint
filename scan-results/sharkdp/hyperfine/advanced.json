@@ -36,7 +36,7 @@
       "status": "PASSED",
       "modularity": 0.597,
       "threshold": 0.3,
-      "communities_count": 15
+      "communities_count": 14
     },
     {
       "name": "abstractness",
@@ -597,10 +597,10 @@
           "impact_radius": 26,
           "sample_dependents": [
             "src::benchmark::scheduler",
-            "src::export::markup",
             "src::export::markdown",
-            "src::timer::macos_counters",
-            "src::export::orgmode"
+            "src::export::asciidoc",
+            "src::outlier_detection",
+            "src::options"
           ]
         },
         {
@@ -608,10 +608,10 @@
           "impact_radius": 26,
           "sample_dependents": [
             "src::benchmark::scheduler",
-            "src::export::markup",
             "src::export::markdown",
-            "src::timer::macos_counters",
-            "src::export::orgmode"
+            "src::export::asciidoc",
+            "src::outlier_detection",
+            "src::options"
           ]
         },
         {
@@ -619,54 +619,54 @@
           "impact_radius": 25,
           "sample_dependents": [
             "src::benchmark::scheduler",
-            "src::export::markup",
             "src::export::markdown",
-            "src::timer::macos_counters",
-            "src::export::orgmode"
+            "src::export::asciidoc",
+            "src::outlier_detection",
+            "src::options"
           ]
         },
         {
           "component": "exit_code",
           "impact_radius": 25,
           "sample_dependents": [
-            "src::parameter",
             "src::benchmark::scheduler",
-            "src::export::markup",
             "src::export::markdown",
-            "src::timer::macos_counters"
+            "src::export::asciidoc",
+            "src::command",
+            "src::options"
           ]
         },
         {
           "component": "number",
           "impact_radius": 25,
           "sample_dependents": [
-            "src::parameter",
             "src::benchmark::scheduler",
-            "src::export::markup",
             "src::export::markdown",
-            "src::timer::macos_counters"
+            "src::export::asciidoc",
+            "src::command",
+            "src::options"
           ]
         },
         {
           "component": "randomized_environment_offset",
           "impact_radius": 25,
           "sample_dependents": [
-            "src::parameter",
             "src::benchmark::scheduler",
-            "src::export::markup",
             "src::export::markdown",
-            "src::timer::macos_counters"
+            "src::export::asciidoc",
+            "src::command",
+            "src::options"
           ]
         },
         {
           "component": "src::util",
           "impact_radius": 24,
           "sample_dependents": [
-            "src::parameter",
             "src::benchmark::scheduler",
-            "src::export::markup",
             "src::export::markdown",
-            "src::timer::macos_counters"
+            "src::export::asciidoc",
+            "src::command",
+            "src::options"
           ]
         },
         {
@@ -674,32 +674,32 @@
           "impact_radius": 24,
           "sample_dependents": [
             "src::benchmark::scheduler",
-            "src::export::markup",
             "src::export::markdown",
-            "src::timer::macos_counters",
-            "src::export::orgmode"
+            "src::export::asciidoc",
+            "src::options",
+            "src::benchmark::measurement"
           ]
         },
         {
           "component": "range_step",
           "impact_radius": 23,
           "sample_dependents": [
-            "src::parameter",
             "src::benchmark::scheduler",
-            "src::export::markup",
             "src::export::markdown",
-            "src::timer::macos_counters"
+            "src::export::asciidoc",
+            "src::command",
+            "src::options"
           ]
         },
         {
           "component": "tokenize",
           "impact_radius": 23,
           "sample_dependents": [
-            "src::parameter",
             "src::benchmark::scheduler",
-            "src::export::markup",
             "src::export::markdown",
-            "src::timer::macos_counters"
+            "src::export::asciidoc",
+            "src::command",
+            "src::options"
           ]
         }
       ],
